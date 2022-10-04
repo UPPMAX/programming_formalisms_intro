@@ -1,4 +1,4 @@
-.. _index:
+
 
 Introduction day to Programming formalism!
 ==========================================
