@@ -2,8 +2,21 @@
 
 ## Learning outcomes
 
-## Some practicals
+Today give overview and introduction
 
-## Schedule and content
+## What is the Purpose of Formalism in CS
 
-## The teachers 
+### Sharing
+
+## Development cycle
+
+## Source control
+
+## Reproducible research
+
+## Flowcharts
+
+## Concepts
+
+## Exercises
+
