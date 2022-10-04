@@ -11,18 +11,34 @@ Introduction day to Programming formalism
       - ability to produce more reusable scripts through modular programming and to 
       - enable a better understanding of how to evaluate a script or programs performance.
 
-   - We will cover an introduction to 
-   
-      - Algorithms and Data structures
-      - Programming Paradigms especially structured
-      - object oriented programming 
-    
-    - We will give a overview of other paradigms like functional programming. Modular development and (code) reusability, testing and optimisation.
-
-   - The modules will cover theory with bridging practical examples and applications to enhance the theoretical understanding of the principles.
 
 
 .. admonition:: Content
+
+   - We will cover an introduction to 
+   
+      - Algorithms and Data structures
+      - Programming Paradigms
+            - especially structured
+            - functional programming
+            - modular development
+            - code reusability
+            - testing
+            - optimisation.
+      - object oriented programming 
+    
+   - The modules will cover theory with bridging practical examples and applications to enhance the theoretical understanding of the principles.
+
+.. prereq::
+
+   -  A reasonably recent version of **Git is installed**
+   -  **Git should be configured prior to the course**
+   -  A `GitHub <https://github.com>`__ user account (but alternatives
+      exist, see below).
+   -  Being comfortable with the command line. 
+   -  Students should be familiar with using a **text editor** on their
+      system. Emacs and Vim are excellent choices if you know how to use
+      them but Nano or Notepad on Windows are sufficient.
 
 
 
