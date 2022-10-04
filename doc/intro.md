@@ -2,7 +2,9 @@
 
 ## Learning outcomes
 
-Today give overview and introduction
+“Turning scripters into computer scientists”
+Add theory to bolster already present practical skills
+
 
 ## Software development
 
