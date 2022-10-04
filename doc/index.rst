@@ -94,9 +94,9 @@ The teachers
 
 .. admonition:: Learning outcomes of course
 
-   You will be able to:
+   - You will be able to:
 
-     - understand the pros of ...
+      - understand the pros of having...
 
 
    
