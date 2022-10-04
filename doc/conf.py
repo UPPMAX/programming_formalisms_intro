@@ -30,13 +30,12 @@ release = '0.1'
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-extensions = ["myst_parser"]
-#    "sphinx_lesson",
-#    "sphinx.ext.githubpages",
-#    "sphinx_rtd_theme_ext_color_contrast",
-#    "sphinxemoji.sphinxemoji",
-#    'sphinx-prompt',
-#]
+extensions = ["sphinx_lesson",
+    "sphinx.ext.githubpages",
+    "sphinx_rtd_theme_ext_color_contrast",
+    "sphinxemoji.sphinxemoji",
+    'sphinx-prompt',
+]
 jupyter_execute_notebooks = "cache"
 
 myst_enable_extensions = [
@@ -51,7 +50,6 @@ myst_enable_extensions = [
     "substitution",
     "tasklist",
 ]
-
 source_suffix = ['.rst', '.md']
 
 # Add any paths that contain templates here, relative to this directory.
