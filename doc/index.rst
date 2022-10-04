@@ -75,6 +75,31 @@ Some practicals
    - We will use Git and Github as tools for version control and collaboration.
    
    
+Schedule
+--------------------
+
+- Day1 Intro (Björn Claremar)
+- Day2 Algorithms and data structures (MArcus Lundberg)
+- Day3-4 Paradigms: design patterns, modular code (Lars Eklund)
+- Day4 TDD, testing (Lars Eklund)
+- Day5 Optimization (Marcus Lundberg)
+
+
+The teachers 
+------------
+
+- Lars Eklund
+- Marcus Lundberg
+- Björn Claremar
+
+.. admonition:: Learning outcomes of course
+
+   You will be able to:
+
+     - understand the pros of ...
+
+
+   
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
