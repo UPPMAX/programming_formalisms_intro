@@ -21,6 +21,8 @@ Add theory to bolster already present practical skills
 
 ## Development cycle
 
+agile = characterized by the division of tasks into short phases of work and frequent reassessment and adaptation of plans.
+
 ## Flowcharts
 
 ## Source control
