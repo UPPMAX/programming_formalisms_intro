@@ -1,10 +1,22 @@
 # Introduction
 
-## Learning outcomes
+```{questions}
+- What is the Purpose of Formalism in Computer Science?
+- What is software development life cycle
+- There seem to be many concepts in this course. What do they mean?
 
 
+```
 
-## Software development
+```{objectives}
+- We'll give an introducton to the week
+- We'll give some introduction to concepts used in the course
+- We'll give some introduction to tools
+- We'll try to set up the mindset to find the rest of the week interesting and useful!
+```
+
+
+## What is software development?
 
 - Different types of software:
   - Your analysis of data
