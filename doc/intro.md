@@ -55,9 +55,49 @@ agile = characterized by the division of tasks into short phases of work and fre
   -	Each lab is new cycle: prototype --> RC --> Launch
   -	Risk driven
 
-More about life cycles in next session and tomorrow Tuesday
+More about life cycles in next session and Day 3
 
 ### Parts from the life cycle model in this course
+
+- Day1 Intro
+    - SDLC
+        - waterfall
+        - cont I and D:s
+    - planning: UML
+    - source control
+    - reproducibility
+        - personal use to general use
+        - dependencies
+        - platforms
+    - documentation
+   
+
+- Day2 Algorithms+data structures
+    - intro
+    - storing
+    - searching for things
+    - sorting
+    - BLAST
+    - exercises
+- Day3-4 Paradigms: design patterns, modular code
+    - How?
+    - Programming paradigms
+        - SDLC and the models for the development process
+        - overview
+    - Modular programming
+        - design patterns introduction to element of reusable software modules
+        - what is module
+        - common interface design
+- Day4 TDD, testing
+    - first look
+    - types of tests
+    - TDD in practice (afternoon 13:00-16:00)
+        - Testing in Python with pytest
+        - Automating testing with Github Actions
+        - Putting it all together
+        - "Advanced" topics
+- Day5 Optimization: halvdag...?
+
 
 - Analysis and design 
   - Unified Modelling language
