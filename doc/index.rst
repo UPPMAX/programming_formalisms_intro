@@ -1,6 +1,6 @@
 
-Introduction day to Programming formalism
-=========================================
+Introduction day to Programming formalisms
+==========================================
 
 .. admonition:: This course
    
@@ -102,13 +102,13 @@ The teachers
    
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
+   :caption: Lesson:
 
    intro.md
    swdc.md 
    flowcharts.md
-   reproducible.md
    sourcecontrol.md
+   reproducible.md
    summary.md
    
 .. toctree::
