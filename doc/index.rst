@@ -2,6 +2,10 @@
 Introduction day to Programming formalisms
 ==========================================
 
+- “Turning scripters into computer scientists”
+- Add theory to bolster already present practical skills
+
+
 .. admonition:: This course
    
    - This course aims to give life scientists, bioinformaticians, and other scientists with some experience in programming and scripting an understanding of the underlying principles of software development, design, and programming. 
