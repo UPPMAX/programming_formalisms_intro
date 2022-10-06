@@ -52,31 +52,39 @@ agile = characterized by the division of tasks into short phases of work and fre
   -	Risk analysis: build prototypes to identify risks
   -	Engineering: software implementation
   -	Evaluation: stakeholder review, feedback, plan next iteration
-  -	Each lab is new cycle: prototypeRCLaunch
+  -	Each lab is new cycle: prototype --> RC --> Launch
   -	Risk driven
 
+More about life cycles in next session and tomorrow Tuesday
 
-### Parts in course
+### Parts from the life cycle model in this course
 
-Analysis and design 
+- Analysis and design 
   - Unified Modelling language
-Development
+- Development
   - Algorithms
   - Optimization
     - Parallelism
-Test
+- Test
   - Tests and test-drive development
+- Development and maintenance
+  - documentation
 
+- Iterations
+  - source control
+  - reproducibility and sharing
 
 ## Unified Modelling language
 
 ## Source control
 
-## Reproducible research
+tool
+git
+branches
+
+## Reproducibility and sharing
 Discussion
 •	One-time usage to distributed package
-
-### Sharing
 
 ## Documentation
 
