@@ -18,32 +18,73 @@
 
 ## What is software development?
 
-- Different types of software:
-  - Your analysis of data
+- Different types of Scientific software:
+  - analysis of data
     - statistics
     - figures
+    - visualization
   - tools for process data
+    - refining data (formatting)
+    - bioinformatics
   - workflows
-  - modelling
-  - more? 
+  - modelling (mimic the reality)
+  - decision assistance
 
-## What is the Purpose of Formalism in Computer Science
+### Icebreaker
+What experience have you had?
+
+
 
 ## Development cycle
 
 agile = characterized by the division of tasks into short phases of work and frequent reassessment and adaptation of plans.
 
-## Flowcharts
+### Basic models
+- waterfall
+  1.	Requirements
+  2.	Analysis and design
+  3.	Development
+  4.	Test
+  5.	Development and maintenance
+
+- Spiral model: iterating waterfalls, quadrants
+  - Planning: reqs, identification: analysis
+  -	Risk analysis: build prototypes to identify risks
+  -	Engineering: software implementation
+  -	Evaluation: stakeholder review, feedback, plan next iteration
+  -	Each lab is new cycle: prototypeRCLaunch
+  -	Risk driven
+
+
+### Parts in course
+
+Analysis and design 
+  - Unified Modelling language
+Development
+  - Algorithms
+  - Optimization
+    - Parallelism
+Test
+  - Tests and test-drive development
+
+
+## Unified Modelling language
 
 ## Source control
 
 ## Reproducible research
+Discussion
+•	One-time usage to distributed package
+
 ### Sharing
+
+## Documentation
 
 
 ## Concepts
 
 ## Exercises
+
 ````{exercise} In-code-1: Comments
 Let's take a look at two example comments (comments in python start with `#`):
 
