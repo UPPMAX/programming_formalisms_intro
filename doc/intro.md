@@ -2,8 +2,6 @@
 
 ## Learning outcomes
 
-“Turning scripters into computer scientists”
-Add theory to bolster already present practical skills
 
 
 ## Software development
