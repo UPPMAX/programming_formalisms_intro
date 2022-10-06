@@ -79,7 +79,7 @@ Schedule
 --------------------
 
 - Day1 Intro (Björn Claremar)
-- Day2 Algorithms and data structures (MArcus Lundberg)
+- Day2 Algorithms and data structures (Marcus Lundberg)
 - Day3-4 Paradigms: design patterns, modular code (Lars Eklund)
 - Day4 TDD, testing (Lars Eklund)
 - Day5 Optimization (Marcus Lundberg)
@@ -105,10 +105,22 @@ The teachers
    :caption: Contents:
 
    intro.md
+   swdc.md 
+   flowcharts.md
+   reproducible.md
+   sourcecontrol.md
+   summary.md
+   
+.. toctree::
+   :maxdepth: 2
+   :caption: Reference:
 
-Indices and tables
-==================
+   concepts.md
+   exercises.md
 
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+#Indices and tables
+#==================
+#
+#* :ref:`genindex`
+#* :ref:`modindex`
+#* :ref:`search`
