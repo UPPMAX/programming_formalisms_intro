@@ -113,6 +113,7 @@ The teachers
    flowcharts.md
    sourcecontrol.md
    reproducible.md
+   documentation.md
    summary.md
    
 .. toctree::
