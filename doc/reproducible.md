@@ -1,7 +1,7 @@
 # Reproducible research
 
-links: https://nbis-reproducible-research.readthedocs.io/en/course_2104/git/
-NBIS: Making projects reproducib
+- https://nbis-reproducible-research.readthedocs.io/en/course_2104/git/
+- NBIS: Making projects reproducib
 
 ## GitHub
 
