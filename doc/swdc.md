@@ -9,7 +9,7 @@
 - Peer programming is QC/QA collab sharing
 - Pair programming is real-time development teqch to increase algorithm implementation, pass off, introduction
 - Agile development, the Agile manifest (Not a full process)
-- OOSE-like Rational Unifed Proces
+- OOSE-like Rational Unified Proces
 - TDD
 
 - development cycle?
