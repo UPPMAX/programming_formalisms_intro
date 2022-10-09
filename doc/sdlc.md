@@ -1,4 +1,4 @@
-# The software development cycle (SWDC)
+# The software development cycle (SDLC)
 
 - SDLC intro software development lifecycle 15 min
 
