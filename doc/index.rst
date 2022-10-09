@@ -109,7 +109,7 @@ The teachers
    :caption: Lesson:
 
    intro.md
-   swdc.md 
+   sdlc.md 
    flowcharts.md
    sourcecontrol.md
    reproducible.md
