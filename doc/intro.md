@@ -30,6 +30,16 @@
   - modelling (mimic the reality)
   - decision assistance
 
+ALT:
+  - computational
+    - simulations time-varying bahvour of a system
+  - analytical
+    - mathematical models of relationships among variables in a system 
+  - non-analytical/descritptive
+    - components and their relationships in as system    
+
+  
+
 ### Icebreaker
 What experience have you had?
 
@@ -114,7 +124,22 @@ More about life cycles in next session and Day 3
   - source control
   - reproducibility and sharing
 
+
+- **iterative methodologies**
+- **Agile**
+
+## Object oriented modelling
+
+- classes
+- objects
+- generalizations, associations
+
 ## Unified Modelling language
+
+- Key refernces
+  - UML 2.5
+  - UML distilled
+  - Applying UML and Patterns
 
 ## Source control
 
