@@ -11,13 +11,13 @@ Programming formalisms: Introduction day
       "From" -> "To";
    }
 
-.. uml:: 
-   
+.. uml::
+
    @startuml
    user -> (use PlantUML)
 
    note left of user
-      Hello!   
+      Hello!
    end note
    @enduml
 
