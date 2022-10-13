@@ -5,6 +5,11 @@ Programming formalisms: Introduction day
 - “Turning scripters into computer scientists”
 - Add theory to bolster already present practical skills
 
+.. graphviz::
+
+   digraph {
+      "From" -> "To";
+   }
 
 .. uml:: 
    
