@@ -6,6 +6,16 @@ Programming formalisms: Introduction day
 - Add theory to bolster already present practical skills
 
 
+.. uml:: 
+   
+   @startuml
+   user -> (use PlantUML)
+
+   note left of user
+      Hello!   
+   end note
+   @enduml
+
 .. admonition:: This course
    
    - This course aims to give life scientists, bioinformaticians, and other scientists with some experience in programming and scripting an understanding of the underlying principles of software development, design, and programming. 
