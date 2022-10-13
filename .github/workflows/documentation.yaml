@@ -7,6 +7,10 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-python@v2
+      # Install plantuml
+      - name: Install OS package dependencies
+        run: |
+          sudo apt install plantuml
       - name: Install dependencies
         run: |
           pip install -r requirements.txt
