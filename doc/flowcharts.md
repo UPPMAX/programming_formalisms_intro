@@ -17,7 +17,7 @@ paper or whiteboard --> digital toools
 https://en.wikipedia.org/wiki/List_of_Unified_Modeling_Language_tools
 
 ## Object orientation
-|class|
+:term:`class`
 
 ## Design
 
