@@ -10,9 +10,9 @@
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #
-import os
-import sys
-sys.path.insert(0, os.path.abspath('exts'))
+#import os
+#import sys
+#sys.path.insert(0, os.path.abspath('exts'))
 
 
 # -- Project information -----------------------------------------------------
@@ -38,7 +38,7 @@ extensions = ["sphinx_lesson",
     'sphinxcontrib.plantuml',
     'sphinx.ext.graphviz'
 ]
-plantuml = 'java -jar ../utils/plantuml.jar'
+#plantuml = 'java -jar ../utils/plantuml.jar'
 jupyter_execute_notebooks = "cache"
 
 myst_enable_extensions = [
