@@ -138,9 +138,9 @@ The teachers
    concepts.md
    exercises.md
 
-#Indices and tables
-#==================
-#
-#* :ref:`genindex`
-#* :ref:`modindex`
-#* :ref:`search`
+Indices and tables
+==================
+
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`
