@@ -37,6 +37,7 @@ extensions = ["sphinx_lesson",
     'sphinx-prompt',
     'sphinxcontrib.plantuml'
 ]
+plantuml = 'java -jar ../utils/plantuml.jar'
 jupyter_execute_notebooks = "cache"
 
 myst_enable_extensions = [
