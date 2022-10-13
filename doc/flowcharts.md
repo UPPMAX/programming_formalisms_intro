@@ -28,7 +28,7 @@ https://en.wikipedia.org/wiki/List_of_Unified_Modeling_Language_tools
 - Communication
 - Object
 
-```uml
+```{uml}
    
    @startuml
    user -> (use PlantUML)
