@@ -137,10 +137,10 @@ The teachers
 
    concepts.md
    exercises.md
+   * :ref:`genindex`
 
 Indices and tables
 ==================
 
 * :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+
