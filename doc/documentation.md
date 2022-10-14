@@ -8,21 +8,17 @@
 ```
 
 ```{Objectives}
-   - We will 
-
-
-````{Keypoints}
-
-    Documentation is part of the code and should be versionable.
-
-    Documentation (sources) should be tracked with the corresponding code in the same repository.
-
-    Use lightweight and standard markup languages such as reStructuredText or Markdown.
-````
+   - We will give an overview of different levels of documentation
+      - in-code
+      - README:s
+      - Full documentation/tutorials
+   - We will give examples where to deploy a documenation page.
+```
 
 
 ## In-code
 
+- Why and not how
 
 ### Docstrings
 A docstring is a structured comment associated to a segment of code (i.e. function or class)
@@ -78,6 +74,10 @@ README file should include:
 ## Deploy
 - Make use of free web platforms to put your full documentation!
 
+- GH-pages
+- ReadTheDocs
+
+- Input from you?
 
 ### Github pages
 - Easiest. everything is local to uithub
@@ -103,6 +103,6 @@ README file should include:
   - Documentation should be tracked with the corresponding code in the same repository.
   - Full documentation or tutorial
     - Make use of Sphinx to render standard markup languages like markdown or reStructuredText to HTML.
-  - 
+  - Deploy at GH-pages or ReadTheDocs
     
 ```` 
