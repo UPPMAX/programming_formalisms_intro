@@ -1,7 +1,7 @@
 # Source control
 ```{questions}
-  - Should research software and data be reproducible?
-  - Are they?
+  - Why should you use source/version control?
+  - 
 ```
 
 ```{Objectives}
