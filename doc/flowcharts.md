@@ -47,7 +47,12 @@ https://en.wikipedia.org/wiki/List_of_Unified_Modeling_Language_tools
    @endmindmap
 
 ```
-
+```markmap
+# Types of UML models
+## Structure
+## Behaviour
+### Interaction
+```
 
 ```{uml}
 
