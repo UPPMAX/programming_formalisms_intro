@@ -1,3 +1,12 @@
+   user -> (use PlantUML)
+
+   note left of user
+      Hello!
+   end note
+
+
+
+
 @startmindmap
 * Types of UML models
    ** Structure
