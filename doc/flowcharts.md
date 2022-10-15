@@ -38,7 +38,7 @@ https://en.wikipedia.org/wiki/List_of_Unified_Modeling_Language_tools
 
 ## Diagrams
 
-```markmap
+```{markmap}
 # Types of UML models
 ## Structure
 ## Behaviour
@@ -62,7 +62,7 @@ https://en.wikipedia.org/wiki/List_of_Unified_Modeling_Language_tools
    @enduml
 ```
 
-```uml
+```{uml}
 User -> Authenticator : request
 Authenticator -> User : respond <token>
 ```
