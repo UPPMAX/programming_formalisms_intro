@@ -1,4 +1,19 @@
 # Unified Modeling language
+
+```{questions}
+  - How to use UML?
+  - Can I learn it?
+```
+
+```{Objectives}
+   - We will give an overview of UML diagrams
+      - learn when to use
+      - learn basic notations
+      - Test with graphical interface
+      - Test with the script based plantUML
+```
+
+
 - UML is not a programming language. It's a graphical notation for drawing diagrams to visualize object oriented systems.
 -  UML includes over a dozen different types of structural and behavioral diagrams. 
 
@@ -40,6 +55,11 @@ https://en.wikipedia.org/wiki/List_of_Unified_Modeling_Language_tools
    @enduml
 ```
 
+```uml
+User -> Authenticator : request
+Authenticator -> User : respond <token>
+```
+
 ## Tools
 - Computer-Aided Software Engineering tools
   -	Modeling
@@ -54,4 +74,28 @@ https://en.wikipedia.org/wiki/List_of_Unified_Modeling_Language_tools
   -	http://www.plantuml.com/plantuml
 
 
+## Graphical tools
+
+## PlantUML
+
+
 ## Exercise
+
+
+## Summary
+
+````{Keypoints}
+  - UML is good several coditions
+    - Structural overviews
+    - Planning
+    - Problem solving
+    - Designing phase of programming
+  - The most important diagrams for software development are: 
+    - class
+    - sequence 
+    - aktivitetsdiagram
+  - There are plenty of tools out there
+    - some can produce code directly
+    - some are script-vased and well integrated in Markdown tools like Sphinx and HackMD
+      - perfect for sharing
+```` 
