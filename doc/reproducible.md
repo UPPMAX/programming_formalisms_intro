@@ -19,6 +19,69 @@
 - kort om workflow connecta med moduler!
 - Snakemake
 
+•	Directory structure: Different projects should have separate folders
+o	Readme file
+o	Data		(version controlled)(.gitignore)
+o	Processed data	intermediate
+o	Manus		
+o	Results		data, tables, figures (version controlled, git tags for manus version)
+o	Src		version controlled code
+	License 
+	Requirements.txt
+o	Doc
+	index
+o	software is reused in several projects it can make sense to put them in own repo
+•	Reproducible publications
+o	Git (overleaf, authorea), hackmd, manuscripts.io, google docs
+o	Scholarly output reproducible: rrtools, jupyter, binder, research compendia
+o	Reprohack
+Recording dependencies
+•	Reproducibility: We can control our code but how can we control dependencies?
+•	10-year challenge: Try to build/run your own code that you have created 10 (or less) years ago. Will your code from today work in 5 years if you don’t change it?
+•	Dependency hell: Different codes on the same environment can have conflicting dependencies.
+Conda, Anaconda, pip, Virtualenv, Pipenv, pyenv, Poetry, requirements.txt …
+•	Defining a specific set of dependencies, possibly with well defined versions
+•	Installing those dependencies mostly automatically
+•	Recording the versions for all dependencies
+•	Isolate environments
+o	On your computer for projects so they can use different software.
+o	Isolate environments on computers with many users (and allow self-installations)
+•	Using different Python/R versions per project
+•	Provide tools and services to share packages
+•	Python
+o	Pypi
+	pip freeze > requirements.txt
+	
+o	Conda: any language, also compiled code and libraries.
+	conda-forge is a GitHub organization containing repositories of conda recipes.
+	Export the requirements into requirements.txt with conda list --export > requirements.txt.
+	Export the full environment using conda env export > environment.yml, and compare the .yml file format to the .txt file format.
+o	Virtualenv
+o	Pipenv
+o	Poetry
+o	Pyenv
+o	Mamba (faster conda)
+•	R
+o	Packrat, jetpack, rsuite, renv, automagic, deplearning, devtools
+•	C/C+
+o	CMake
+o	Conan
+o	Conda
+•	Fortran
+o	Fortran package manager
+•	Julia
+o	Pkg.jl
+	designed around using isolated environments with independent sets of packages. Environments can either be local to a particular project or shared and selected by name.
+•	Semantic versioning: 
+Given a version number MAJOR.MINOR.PATCH, increment the:
+1.	MAJOR version when you make incompatible API changes
+2.	MINOR version when you add functionality in a backwards compatible manner
+3.	PATCH version when you make backwards compatible bug fixes
+Additional labels for pre-release and build metadata are available as extensions to the MAJOR.MINOR.PATCH format.
+
+
+
+
 
 ## GitHub
 
