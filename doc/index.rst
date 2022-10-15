@@ -11,15 +11,8 @@ Programming formalisms: Introduction day
       "From" -> "To";
    }
 
-.. uml::
+.. uml:: external.uml
 
-   @startmindmap
-   * root node
-    * some first level node
-     * second level node
-      * another second level node
-    * another first level node
-   @endmindmap
 
 .. uml::
 
