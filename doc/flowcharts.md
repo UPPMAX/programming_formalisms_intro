@@ -38,12 +38,33 @@ https://en.wikipedia.org/wiki/List_of_Unified_Modeling_Language_tools
 
 ## Diagrams
 
-```{markmap}
-# Types of UML models
-## Structure
-## Behaviour
-### Interaction
+```{uml}
+@startmindmap
+* Types of UML models
+** Structure
+** Behaviour
+*** Interaction
+@endmindmap
 ```
+
+
+```{uml}
+@startmindmap
+* Debian
+** Ubuntu
+*** Linux Mint
+*** Kubuntu
+*** Lubuntu
+*** KDE Neon
+** LMDE
+** SolydXK
+** SteamOS
+** Raspbian with a very long name
+*** <s>Raspmbc</s> => OSMC
+*** <s>Raspyfi</s> => Volumio
+@endmindmap
+```{uml}
+
 - Class
 -	Use case 
 - Activity
