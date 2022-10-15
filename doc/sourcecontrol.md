@@ -19,14 +19,37 @@
 ## Git
 links: https://nbis-reproducible-research.readthedocs.io/en/course_2104/git/
 
-## collaborative sharing (github)
+### Code along
 
-## Exercise
-Set up Git
+#### Create repo
+
+#### Staging files
+
+#### Commit
+
+#### Check status
+
+#### Exercise
+
+### Branching and merging
+
+#### Exercise
+Make changes 
+
+## Working remotely and sharing (github)
+
+### Create repository - code along
+Create a remote repository
+
+    Log in to your GitHub account and press the New button on the left:
+        Make sure you are listed as the owner
+        Add a repository name, e.g. git_tutorial
+        You can keep the repo private or make it public, as you wish
+        Skip including a README, a .gitignore and licence
 
 
 
-Keypoints
+```{Keypoints}
 
 
 
@@ -52,3 +75,4 @@ Keypoints
 
     We’ll properly learn how to use these in the Collaborative Git lesson.
 
+```
