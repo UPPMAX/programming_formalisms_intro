@@ -5,16 +5,14 @@ Programming formalisms: Introduction day
 - “Turning scripters into computer scientists”
 - Add theory to bolster already present practical skills
 
-.. graphviz::
+.. graphviz:: doc/external.dot
 
-   digraph {
-      "From" -> "To";
-   }
+
    
-.. graphviz:: ./external.gv
+.. graphviz:: doc/external.gv
 
 
-.. uml:: ./external.uml
+.. uml:: doc/external.uml
 
 
 .. uml:: 
