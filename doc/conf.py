@@ -85,14 +85,3 @@ html_theme = 'sphinx_rtd_theme'
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
 
-from os.path import basename, dirname, realpath
-
-html_context = {
-    "display_github": True,
-    "github_user": github_user,
-    # Auto-detect directory name.  This can break, but
-    # useful as a default.
-    "github_repo": github_repo_name or basename(dirname(realpath(__file__))),
-    "github_version": github_version,
-    "conf_py_path": conf_py_path,
-}
