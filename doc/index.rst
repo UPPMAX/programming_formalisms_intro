@@ -5,7 +5,7 @@ Programming formalisms: Introduction day
 - “Turning scripters into computer scientists”
 - Add theory to bolster already present practical skills
 
-.. graphviz:: doc/external.dot
+.. graphviz:: external.dot
 
 
    
