@@ -73,15 +73,16 @@ https://en.wikipedia.org/wiki/List_of_Unified_Modeling_Language_tools
 - Communication
 - Object
 
+
 ```{uml}
    
-   @startuml
-   user -> (use PlantUML)
+@startuml
+user -> (use PlantUML)
 
-   note left of user
-      Hello!   
-   end note
-   @enduml
+note left of user
+   Hello!   
+end note
+@enduml
 ```
 
 ```{uml}
