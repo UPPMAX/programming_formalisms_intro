@@ -11,6 +11,8 @@ jobs:
       - name: Install OS package dependencies
         run: |
           sudo apt install plantuml
+          sudo apt install npm
+          npm install markmap
       - name: Install dependencies
         run: |
           pip install -r requirements.txt
