@@ -39,19 +39,18 @@ https://en.wikipedia.org/wiki/List_of_Unified_Modeling_Language_tools
 ## Diagrams
 
 ```{uml}
-@startuml
-@startmindmap
-* Types of UML models
-** Structure
-** Behaviour
-*** Interaction
-@endmindmap
-@startuml
+   @startmindmap
+      * Types of UML models
+         ** Structure
+         ** Behaviour
+            *** Interaction
+   @endmindmap
+
 ```
 
 
 ```{uml}
-@startuml
+
 @startmindmap
 * Debian
 ** Ubuntu
