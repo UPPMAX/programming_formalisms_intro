@@ -11,10 +11,10 @@ Programming formalisms: Introduction day
       "From" -> "To";
    }
    
-.. graphviz:: external.gv
+.. graphviz:: ./external.gv
 
 
-.. uml:: external.uml
+.. uml:: ./external.uml
 
 
 .. uml:: 
