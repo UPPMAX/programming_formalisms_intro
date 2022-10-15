@@ -37,6 +37,13 @@ https://en.wikipedia.org/wiki/List_of_Unified_Modeling_Language_tools
 ## Design
 
 ## Diagrams
+
+```markmap
+# Types of UML models
+## Structure
+## Behaviour
+### Interaction
+```
 - Class
 -	Use case 
 - Activity
