@@ -39,16 +39,19 @@ https://en.wikipedia.org/wiki/List_of_Unified_Modeling_Language_tools
 ## Diagrams
 
 ```{uml}
+@startuml
 @startmindmap
 * Types of UML models
 ** Structure
 ** Behaviour
 *** Interaction
 @endmindmap
+@startuml
 ```
 
 
 ```{uml}
+@startuml
 @startmindmap
 * Debian
 ** Ubuntu
@@ -63,6 +66,7 @@ https://en.wikipedia.org/wiki/List_of_Unified_Modeling_Language_tools
 *** <s>Raspmbc</s> => OSMC
 *** <s>Raspyfi</s> => Volumio
 @endmindmap
+@enduml
 ```{uml}
 
 - Class
