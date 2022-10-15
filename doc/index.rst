@@ -12,7 +12,7 @@ Programming formalisms: Introduction day
 .. graphviz:: puml/external.dot
 
 
-.. uml:: external.uml
+.. uml:: puml/external.uml
 
 
 .. uml::
