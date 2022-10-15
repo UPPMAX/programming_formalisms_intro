@@ -14,6 +14,12 @@ Programming formalisms: Introduction day
 .. uml:: external.uml
 
 
+.. uml:: 
+   
+   @startmindmap
+   * root node
+   @endmindmap
+
 .. uml::
 
    @startuml
