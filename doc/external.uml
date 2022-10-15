@@ -1,6 +1,15 @@
 @startmindmap
-   * Types of UML models
-      ** Structure
-      ** Behaviour
-          *** Interaction
+* Types of UML models
+   ** Structure
+   ** Behaviour
+      *** Interaction
+@endmindmap
+
+
+@startmindmap
+* root node
+   * some first level node
+      * second level node
+      * another second level node
+   * another first level node
 @endmindmap
