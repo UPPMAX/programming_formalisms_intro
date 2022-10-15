@@ -10,15 +10,20 @@ Programming formalisms: Introduction day
    digraph {
       "From" -> "To";
    }
+   
+.. graphviz:: external.gv
+
 
 .. uml:: external.uml
 
 
 .. uml:: 
    
+   @startuml
    @startmindmap
    * root node
    @endmindmap
+   @enduml
 
 .. uml::
 
