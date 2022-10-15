@@ -1,8 +1,7 @@
 @startuml
-user -> (use PlantUML)
+Alice -> Bob: Authentication Request
+Bob --> Alice: Authentication Response
 
-note left of user
-   Hello!
-end note
+Alice -> Bob: Another authentication Request
+Alice <-- Bob: Another authentication Response
 @enduml
-
