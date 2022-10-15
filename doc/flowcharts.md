@@ -42,22 +42,7 @@ https://en.wikipedia.org/wiki/List_of_Unified_Modeling_Language_tools
 ```
 
 
-```{mindmap}
-
-@startmindmap
-* Debian
-** Ubuntu
-*** Linux Mint
-*** Kubuntu
-*** Lubuntu
-*** KDE Neon
-** LMDE
-** SolydXK
-** SteamOS
-** Raspbian with a very long name
-*** <s>Raspmbc</s> => OSMC
-*** <s>Raspyfi</s> => Volumio
-@endmindmap
+```{uml} puml/mindmap.uml
 ```
 
 
