@@ -9,19 +9,11 @@ Programming formalisms: Introduction day
 
 
    
-.. graphviz:: doc/external.gv
+.. graphviz:: puml/external.dot
 
 
-.. uml:: doc/external.uml
+.. uml:: external.uml
 
-
-.. uml:: 
-   
-   @startuml
-   @startmindmap
-   * root node
-   @endmindmap
-   @enduml
 
 .. uml::
 
