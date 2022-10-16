@@ -9,3 +9,15 @@ Topics
   - Day3-4 Paradigms: design patterns, modular code
   - Day4 Test-driven Development, testing
   - Day5 Optimization
+
+
+<div hidden>
+```
+@startuml firstDiagram
+
+Alice -> Bob: Hello
+Bob -> Alice: Hi!
+		
+@enduml
+```
+</div>
