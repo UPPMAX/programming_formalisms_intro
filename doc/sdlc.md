@@ -39,11 +39,11 @@
 8.	Change and configuration management
 
 ### Waterfall model
-01	Requirements
-02	Analysis and design
-03	Development
-04	Test
-05	Development and maintenance
+1.	Requirements
+2.	Analysis and design
+3.	Development
+4.	Test
+5.	Development and maintenance
 
 - Problem:  error is spreading
 - good approach for small and simple systems where the team knows the system and requirements very well. I
@@ -75,11 +75,11 @@
 - Shortcomings: customizable but heavy, prescriptive, lacking test-driven development
 
 - **Key takeaways**
-- RUP principles
-- Develop iteratively
-- Manage requirements, change
-- Continuously verify quality
-- Model visually, component-based architecture
+  - RUP principles
+  - Develop iteratively
+  - Manage requirements, change
+  - Continuously verify quality
+  - Model visually, component-based architecture
 
 ## Early Agile methods
 -	Dsdm: dynamic system development method
@@ -91,13 +91,13 @@
 - Lean
 - Kanban
 - Extreme Programming
-            - pair programming
-            - TDD
+  - pair programming
+  - TDD
 - Spotify
 - DevOps
   - continous Integration, development and deployment
   - **DevOps aims to extend fast and frequent software feature development approach to build an efficient delivery pipeline.**
- CMMI (Capability maturity model integration)
+- CMMI (Capability maturity model integration)
 - Six Sigma
 
 ## Conclusions
