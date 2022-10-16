@@ -40,7 +40,7 @@
 
 ```{graphviz}
 digraph {
-   "Plan" -> "Requirements" -> "Design" -> "Plan";
+   "Plan" -> "Requirements" -> "Design" -> "Develop" -> Test -> Release -> Certification -> Change -> "Plan";
 }
 ```
 
