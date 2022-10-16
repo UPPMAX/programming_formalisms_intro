@@ -62,6 +62,7 @@ Structure, Behaviour
 "UML diagrams" -> Behaviour
 Structure -> Class
 Behaviour -> "Use case", Interaction
+Interaction -> Sequence, Communication, Timing, "Interaction overview"
 }
 ```
 
