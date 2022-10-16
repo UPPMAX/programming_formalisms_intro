@@ -46,26 +46,18 @@ https://en.wikipedia.org/wiki/List_of_Unified_Modeling_Language_tools
 - Object
 - 
 
- ```{graphviz} external.dot
-
+```{graphviz} external.dot
+```
 
    
 ```{graphviz} puml/external.dot
-
+```
 
 ```{uml} puml/external.uml
-
-
-
-
-```{uml}
-@startuml
-* Debian
-** Ubuntu
-*** Linux Mint
-** LMDE
-@enduml
 ```
+
+
+
 
 ```{uml}
    
