@@ -54,7 +54,7 @@ https://en.wikipedia.org/wiki/List_of_Unified_Modeling_Language_tools
     -	Timing
     -	Interaction overview
 
-```graphviz
+```{graphviz}
 digraph{
 UML diagrams
 Structure, Behaviour
