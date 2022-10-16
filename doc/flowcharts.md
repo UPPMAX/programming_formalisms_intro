@@ -61,6 +61,7 @@ Structure, Behaviour
 "UML diagrams" -> Structure
 "UML diagrams" -> Behaviour
 Structure -> Class
+Behaviour -> "Use case"
 }
 ```
 
