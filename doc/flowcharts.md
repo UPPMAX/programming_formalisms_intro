@@ -58,8 +58,8 @@ https://en.wikipedia.org/wiki/List_of_Unified_Modeling_Language_tools
 digraph{
 "UML diagrams"
 Structure, Behaviour
-UML diagrams -> Structure
-UML diagrams -> Behaviour, A, B, C
+"UML diagrams" -> Structure
+"UML diagrams" -> Behaviour
 }
 ```
 
@@ -68,8 +68,11 @@ digraph{
 "UML diagrams"
 Structure, Behaviour, Class, Component,	Object,	Composite-structure,	Package,	deployment,	Behavior,	Use-case ,	Activity,	State-machine,	Interaction, Sequence,	Communication, Timing,	Interaction-overview
 
-UML diagrams -> Structure
-UML diagrams -> Behaviour
+"UML diagrams" -> Structure
+"UML diagrams" -> Behaviour
+Structure -> Class, Component,	Object,	Composite-structure,	Package,	deployment
+Behaviour -> Use-case ,	Activity,	State-machine,	Interaction
+Interaction -> Sequence,	Communication, Timing,	Interaction-overview
 }
 ```
 
