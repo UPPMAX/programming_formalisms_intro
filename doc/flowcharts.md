@@ -38,33 +38,33 @@ https://en.wikipedia.org/wiki/List_of_Unified_Modeling_Language_tools
 
 ## Diagrams
 
-.. graphviz:: external.dot
-
-
-   
-.. graphviz:: puml/external.dot
-
-
-.. uml:: puml/external.uml
-
-
 - Class
 -	Use case 
 - Activity
 - Sequence
 - Communication
 - Object
+- 
+
+ ```{graphviz} external.dot
+
+
+   
+```{graphviz} puml/external.dot
+
+
+```{uml} puml/external.uml
+
+
+
 
 ```{uml}
 @startuml
-
 * Debian
 ** Ubuntu
 *** Linux Mint
 ** LMDE
-
 @enduml
-
 ```
 
 ```{uml}
