@@ -56,10 +56,10 @@ https://en.wikipedia.org/wiki/List_of_Unified_Modeling_Language_tools
 
 ```{graphviz}
 digraph{
-"Enterprise"
-Kirk, Picard, Archer
-Enterprise -> Kirk
-Enterprise -> Original, A, B, C
+"UML diagrams"
+Structure, Behaviour
+UML diagrams -> Structure
+UML diagrams -> Behaviour, A, B, C
 }
 ```
 
