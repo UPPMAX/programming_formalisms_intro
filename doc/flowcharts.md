@@ -38,13 +38,103 @@ https://en.wikipedia.org/wiki/List_of_Unified_Modeling_Language_tools
 
 ## Diagrams
 
-- Class
--	Use case 
-- Activity
-- Sequence
-- Communication
-- Object
-- 
+### Class
+
+```{uml}
+@startuml
+abstract        abstract
+abstract class  "abstract class"
+annotation      annotation
+circle          circle
+()              circle_short_form
+class           class
+diamond         diamond
+<>              diamond_short_form
+entity          entity
+enum            enum
+interface       interface
+protocol        protocol
+struct          struct
+@enduml
+```
+
+###  Sequence
+
+```{uml}
+   
+@startuml
+user -> (use PlantUML)
+
+note left of user
+   Hello!   
+end note
+@enduml
+```
+
+
+### Activity
+```{uml}
+@startuml
+if( HAS AN
+OWNER AND IS OPEN) then(yes)
+ if (CAN I RESOLVE) then
+ if (waiting user input) then
+ elseif (condition D) then (yes)
+  :Text 4;
+else ()
+  :Text else;
+endif
+@stopuml
+```
+
+
+
+### Other
+#### Use case 
+
+```{uml}
+@startuml
+left to right direction
+actor Guest as g
+package Professional {
+  actor Chef as c
+  actor "Food Critic" as fc
+}
+package Restaurant {
+  usecase "Eat Food" as UC1
+  usecase "Pay for Food" as UC2
+  usecase "Drink" as UC3
+  usecase "Review" as UC4
+}
+fc --> UC4
+g --> UC1
+g --> UC2
+g --> UC3
+@enduml
+```
+
+
+#### Object
+
+```{uml}
+@startuml
+object Object01
+object Object02
+object Object03
+object Object04
+object Object05
+object Object06
+object Object07
+object Object08
+
+Object01 <|-- Object02
+Object03 *-- Object04
+Object05 o-- "4" Object06
+Object07 .. Object08 : some labels
+@enduml
+
+```
+#### GRAPHVIZ
 
 ```{graphviz} external.dot
 ```
@@ -59,16 +149,7 @@ https://en.wikipedia.org/wiki/List_of_Unified_Modeling_Language_tools
 
 
 
-```{uml}
-   
-@startuml
-user -> (use PlantUML)
 
-note left of user
-   Hello!   
-end note
-@enduml
-```
 
 ```{uml}
 User -> Authenticator : request
