@@ -70,13 +70,16 @@ Structure, Behaviour
 Class, Component,	Object,	Composite-structure,	Package,	deployment,	Behavior,	Use-case ,	Activity,	State-machine,	Interaction
 Sequence,	Communication, Timing,	Interaction-overview
 
+}
+```
+
 UML diagrams -> Structure
 UML diagrams -> Behaviour
 Structure -> Class, Component,	Object,	Composite-structure,	Package,	deployment
 Behaviour -> Use-case ,	Activity,	State-machine,	Interaction
 Interaction -> Sequence,	Communication, Timing,	Interaction-overview
-}
-```
+
+
 ### Class
 
 ```{uml}
