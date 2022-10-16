@@ -12,7 +12,7 @@
 #
 import os
 import sys
-sys.path.insert(0, os.path.abspath('exts'))
+#sys.path.insert(0, os.path.abspath('exts'))
 
 
 # -- Project information -----------------------------------------------------
@@ -38,7 +38,7 @@ extensions = ["sphinx_lesson",
     'sphinxcontrib.plantuml',
     'sphinx.ext.graphviz'
 ]
-plantuml = 'java -Djava.awt.headless=true -jar plantuml.jar'
+#plantuml = 'java -jar plantuml.jar'
 #plantuml = 'java -Djava.awt.headless=true -jar %s' % os.path.join(os.path.dirname(os.path.abspath(__file__)), "plantuml.jar")
 
 #plantuml = 'java -Djava.awt.headless=true -jar %s' % os.path.join(os.path.dirname(os.path.abspath(__file__)), "plantuml.jar")
