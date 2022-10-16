@@ -21,3 +21,5 @@ Bob -> Alice: Hi!
 @enduml
 ```
 </div>
+
+![](firstDiagram.svg)
