@@ -1,4 +1,4 @@
-# Unified Modeling language
+# Unified Modeling Language
 
 ```{questions}
   - How to use UML?
@@ -66,10 +66,10 @@ Enterprise -> Original, A, B, C
 ```{graphviz}
 digraph{
 "UML diagrams"
-Structure, Behaviour
-Class, Component,	Object,	Composite-structure,	Package,	deployment,	Behavior,	Use-case ,	Activity,	State-machine,	Interaction
-Sequence,	Communication, Timing,	Interaction-overview
+Structure, Behaviour, Class, Component,	Object,	Composite-structure,	Package,	deployment,	Behavior,	Use-case ,	Activity,	State-machine,	Interaction, Sequence,	Communication, Timing,	Interaction-overview
 
+UML diagrams -> Structure
+UML diagrams -> Behaviour
 }
 ```
 
