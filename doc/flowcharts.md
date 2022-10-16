@@ -60,7 +60,7 @@ digraph{
 Structure, Behaviour
 "UML diagrams" -> Structure
 "UML diagrams" -> Behaviour
-Structure -> Class
+Structure -> Class, Component,	Object,	Composite-structure,	Package,	Deployment
 Behaviour -> "Use case", Interaction
 Interaction -> Sequence, Communication, Timing, "Interaction overview"
 }
