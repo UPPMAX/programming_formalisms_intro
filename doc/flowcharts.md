@@ -38,13 +38,14 @@ https://en.wikipedia.org/wiki/List_of_Unified_Modeling_Language_tools
 
 ## Diagrams
 
-```{uml} puml/external.uml
-```
+.. graphviz:: external.dot
 
 
-```{uml} puml/mindmap.uml
-```
+   
+.. graphviz:: puml/external.dot
 
+
+.. uml:: puml/external.uml
 
 
 - Class
@@ -54,6 +55,17 @@ https://en.wikipedia.org/wiki/List_of_Unified_Modeling_Language_tools
 - Communication
 - Object
 
+```{uml}
+@startuml
+
+* Debian
+** Ubuntu
+*** Linux Mint
+** LMDE
+
+@enduml
+
+```
 
 ```{uml}
    
