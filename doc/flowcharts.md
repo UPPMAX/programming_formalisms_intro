@@ -56,6 +56,15 @@ https://en.wikipedia.org/wiki/List_of_Unified_Modeling_Language_tools
 
 ```{graphviz}
 digraph{
+"Enterprise"
+Kirk, Picard, Archer
+Enterprise -> Kirk
+Enterprise -> Original, A, B, C
+}
+```
+
+```{graphviz}
+digraph{
 UML diagrams
 Structure, Behaviour
 Class, Component,	Object,	Composite structure,	Package,	deployment,	Behavior,	Use case ,	Activity,	State machine,	Interaction within/outside system
@@ -68,7 +77,6 @@ Behaviour -> Use case ,	Activity,	State machine,	Interaction within/outside syst
 Interaction within/outside system -> Sequence,	Communication, Timing,	Interaction overview
 }
 ```
-
 ### Class
 
 ```{uml}
