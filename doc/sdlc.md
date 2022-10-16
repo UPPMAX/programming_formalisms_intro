@@ -27,6 +27,86 @@
   - code management plan!
   -	for project applications?
 
+## Key steps
+
+1.	Plan/initiate
+2.	Gather requirements
+3.	Design
+4.	Develop
+5.	Test/validate
+6.	Release/maintain
+7.	Certification/accreditation
+8.	Change and configuration management
+
+### Waterfall model
+01	Requirements
+02	Analysis and design
+03	Development
+04	Test
+05	Development and maintenance
+
+- Problem:  error is spreading
+- good approach for small and simple systems where the team knows the system and requirements very well. I
+
+## Iterative models
+### Spiral model: iterating waterfalls, quadrants
+- Planning: reqs, identification: analysis
+- Risk analysis: build prototypes to identify risks
+- Engineering: software implementation
+- Evaluation: stakeholder review, feedback, plan next iteration
+- Each lab is new cycle: prototypeRCLaunch
+- Risk driven
+
+### Rational unified process (RUP) 
+- created by IBM
+- Framework, pool of knowledge, customizable
+- Phases: Each containing 1 or more waterfall iterations
+  - Inception (lifecycle objectives milestone
+  - Elaboration (lifecycle architecture milestone)
+  - Construction (initial operational capability, milestone)
+  - Transition (production release milestone)
+- Disciplines
+  - Business modelling
+  - Requirements
+  - Analysis and design
+  - Implementation
+  - Test
+  - Deployment
+- Shortcomings: customizable but heavy, prescriptive, lacking test-driven development
+
+- **Key takeaways**
+- RUP principles
+- Develop iteratively
+- Manage requirements, change
+- Continuously verify quality
+- Model visually, component-based architecture
+
+## Early Agile methods
+-	Dsdm: dynamic system development method
+-	Feature-driven development (FDD)
+-	Crystal methods
+
+## Modern approaches
+- Scrum 
+- Lean
+- Kanban
+- Extreme Programming
+            - pair programming
+            - TDD
+- Spotify
+- DevOps
+  - continous Integration, development and deployment
+  - **DevOps aims to extend fast and frequent software feature development approach to build an efficient delivery pipeline.**
+ CMMI (Capability maturity model integration)
+- Six Sigma
+
+## Conclusions
+  - Each team unique requirements
+  - Try out agile practices that make the most sense
+  - Don’t be afraid of trial and error
+  - Continuous learning
+
+
 ## Discussion about steps?
 
 ```{keypoints}
