@@ -1,6 +1,6 @@
 # Summary
 
-You now have acquainted yourself with the tools you will use in thus course
+You now have acquainted yourself with the tools you will use in this course.
 These are also helpful in your development work.
 
 ## The development cycle
