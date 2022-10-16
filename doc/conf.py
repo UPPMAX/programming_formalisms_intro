@@ -38,7 +38,9 @@ extensions = ["sphinx_lesson",
     'sphinxcontrib.plantuml',
     'sphinx.ext.graphviz'
 ]
-plantuml = 'java -jar doc/plantuml-1.2022.8.jar'
+#plantuml = 'java -jar doc/plantuml-1.2022.8.jar'
+plantuml = 'java -Djava.awt.headless=true -jar %s' % os.path.join(os.path.dirname(os.path.abspath(__file__)), "plantuml.jar")
+
 #plantuml = 'java -Djava.awt.headless=true -jar %s' % os.path.join(os.path.dirname(os.path.abspath(__file__)), "plantuml.jar")
 
 jupyter_execute_notebooks = "cache"
