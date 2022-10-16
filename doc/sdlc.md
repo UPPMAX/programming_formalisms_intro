@@ -38,6 +38,12 @@
 7.	Certification/accreditation
 8.	Change and configuration management
 
+```{graphviz}
+digraph {
+   "Plan" -> "Requirements" -> "Design" -> "Plan";
+}
+```
+
 ### Waterfall model
 1.	Requirements
 2.	Analysis and design
