@@ -5,25 +5,6 @@ Programming formalisms: Introduction day
 - “Turning scripters into computer scientists”
 - Add theory to bolster already present practical skills
 
-.. graphviz:: external.dot
-
-
-   
-.. graphviz:: puml/external.dot
-
-
-.. uml:: puml/external.uml
-
-
-.. uml::
-
-   @startuml
-   user -> (use PlantUML)
-
-   note left of user
-      Hello!
-   end note
-   @enduml
 
 .. admonition:: This course
    
