@@ -1,5 +1,10 @@
 # Documentation
 
+```{instructor-note}
+- Lecture 15 min
+- Exercises 10 min
+```
+
 ```{discussion} Motivation: Why should we document code?
 
 - **Use the collaborative document**.
