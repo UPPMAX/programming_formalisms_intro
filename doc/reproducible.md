@@ -13,6 +13,13 @@
       - Full documentation/tutorials
    - We will give examples where to deploy a documenation page.
 ```
+
+```{instructor-note}
+- Lecture 15 min
+- Discussions 15 min
+```
+
+
 - https://nbis-reproducible-research.readthedocs.io/en/course_2104/git/
 - NBIS: Making projects reproducib
 
