@@ -1,7 +1,6 @@
 # Source control
 ```{questions}
   - Why should you use source/version control?
-  - 
 ```
 
 ```{Objectives}
@@ -10,6 +9,11 @@
       - work with the basic commands in git
       - go through branching and merging
       - present and use sharing online
+```
+
+```{instructor-note}
+- Lecture 15 min
+- Discussions 10 min
 ```
 
 ## Problems
