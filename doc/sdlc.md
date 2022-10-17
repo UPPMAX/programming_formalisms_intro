@@ -40,6 +40,7 @@
 
 ```{graphviz}
 digraph {
+   rankdir=LR;
    "Plan" -> "Requirements" -> "Design" -> "Develop" -> Test -> Release -> Certification -> Change -> "Plan";
 }
 ```
@@ -56,11 +57,12 @@ digraph {
 
 ## Iterative models
 ### Spiral model: iterating waterfalls, quadrants
+
 - Planning: reqs, identification: analysis
 - Risk analysis: build prototypes to identify risks
 - Engineering: software implementation
 - Evaluation: stakeholder review, feedback, plan next iteration
-- Each lab is new cycle: prototypeRCLaunch
+- Each lab is new cycle: prototype--> RC --> aunch
 - Risk driven
 
 ### Rational unified process (RUP) 
