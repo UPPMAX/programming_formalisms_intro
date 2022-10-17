@@ -15,6 +15,11 @@
 - We'll try to set up the mindset to find the rest of the week interesting and useful!
 ```
 
+```{instructor-note}
+- Lecture 15 min
+- Discussions 10 min
+```
+
 
 ## What is software development?
 
@@ -28,19 +33,12 @@
     - bioinformatics
   - workflows
   - modelling (mimic the reality)
+      - simulations time-varying bahvour of a system
+      - mathematical models of relationships among variables in a system 
   - decision assistance
 
-ALT:
-  - computational
-    - simulations time-varying bahvour of a system
-  - analytical
-    - mathematical models of relationships among variables in a system 
-  - non-analytical/descritptive
-    - components and their relationships in as system    
-
-  
-
 ### Icebreaker
+
 What experience have you had?
 
 
@@ -131,6 +129,9 @@ More about life cycles in next session and Day 3
 ## Object oriented modelling
 
 - classes
+
+{term}`class`
+
 - objects
 - generalizations, associations
 
