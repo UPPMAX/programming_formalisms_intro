@@ -36,9 +36,9 @@ Programming formalisms: Introduction day
 .. admonition:: Your expectations
 
    - Programming skills
-   - readable
-   - Reusable
-   - make tools that other people can also benefit from
+   - Readable code
+   - Reusable code
+   - Make tools that other people can also benefit from
    - Train logic
    - Optimize
    - Best practice
@@ -48,22 +48,47 @@ Programming formalisms: Introduction day
    - Object-oriented programming
    - Modular development
 
+.. solution:: Your expectations and content
 
-.. admonition:: Content
+   - Programming skills  *Algorithms
+   - Readable code
+   - Reusable code
+   - Make tools that other people can also benefit from
+   - Train logic
+   - Optimize
+   - Best practice
+   - Big-picture architecture of programs
+   - Classical training
+   - Package development
+   - Object-oriented programming
+   - Modular development
+
+.. admonition:: Content and expectations
 
    - We will cover an introduction to 
    
-      - Algorithms and Data structures
-      - Programming Paradigms
-            - especially structured
-            - functional programming
-            - modular development
-            - code reusability
-            - testing
-            - optimisation.
-      - object oriented programming 
+      - Algorithms and Data structures:    **Programming skills**, **Train logic**
+      - Programming Paradigms:    **Classical training**, **Big-picture architecture of programs**
+            - especially structured:    **Readable code**
+            - functional programming:    **Modular development**
+            - modular development:    **Modular development**
+            - code reusability:    **Reusable code**
+            - Object oriented programming:    **Modular development**, **Object-oriented programming**
+            - testing:    **Best practices**
+            - optimisation:    **Optimize**
+             
+      - Reproducible research:
+            - dependencies    **Package development**, **Make tools that other people can also benefit from**
+            - documentation    **Readable code**, **Make tools that other people can also benefit from**
+      - Tools:    **Best practice**
+            - UML:    **Best practice**
+            - git:    **Best practice**
+            - github:   **Make tools that other people can also benefit from**
+            
     
    - The modules will cover theory with bridging practical examples and applications to enhance the theoretical understanding of the principles.
+   
+   
 
 .. prereq::
 
@@ -73,8 +98,8 @@ Programming formalisms: Introduction day
       exist, see below).
    -  Being comfortable with the command line. 
    -  Students should be familiar with using a **text editor** on their
-      system. Emacs and Vim are excellent choices if you know how to use
-      them but Nano or Notepad on Windows are sufficient.
+      system. `Emacs` and `Vim` are excellent choices if you know how to use
+      them but `Nano` or `Notepad` on Windows are sufficient.
 
 Some practicals
 ----------------
@@ -82,17 +107,12 @@ Some practicals
 .. admonition:: Zoom
 
     - The course is run over Zoom. You should have gotten an email with the links
-        
-    - There will be a zoom for the lectures, a zoom for the HPC2N sessions, and a zoom for the UPPMAX sessions. 
-        - The exercises will be done in the separate sessions.
-   
+           
     - When you join the Zoom meeting, use your REAL NAME.
-    
-    - The lectures and demos will be recorded, but NOT the exercises. If you ask questions during the lectures, you may thus be recorded. If you do not wish to be recorded, then please keep your microphone muted and your camera off during lectures and write your questions in the Q/A document (see below about HackMD collaboration document).
     
     - Please MUTE your microphone when you are not speaking and use the “Raise hand” functionality under the “Participants” window during the lecture. Please do not clutter the Zoom chat. Behave politely!
 
-    - There may be breakout rooms used in the Zoom for the hands-ons. You will be randomly assigned to one of them.  
+    - There may be breakout rooms used in the Zoom for some of the exercises. You will be randomly assigned to one of them.  
     
     
 .. admonition:: Collabration document HackMD
@@ -119,8 +139,8 @@ Schedule
 
 - Day1 Intro (Björn Claremar)
 - Day2 Algorithms and data structures (Marcus Lundberg)
-- Day3-4 Paradigms: design patterns, modular code (Lars Eklund)
-- Day4 TDD, testing (Lars Eklund)
+- Day3-4 Paradigms: design patterns, modular code (Lars Eklund, Jon Ander Novella)
+- Day4 TDD, testing (Per Johansson, Matias Piqueras)
 - Day5 Optimization (Marcus Lundberg)
 
 
@@ -130,6 +150,10 @@ The teachers
 - Lars Eklund
 - Marcus Lundberg
 - Björn Claremar
+- Per Johansson
+- Jon Ander Novella
+- Matias Piqueras
+
 
 .. admonition:: Learning outcomes of course
 
