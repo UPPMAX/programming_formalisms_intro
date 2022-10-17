@@ -18,23 +18,35 @@ Programming formalisms: Introduction day
 
    - Math
    - Self-taught
-	- PDEs
-	- Molecular modelling with python and bash
-	- Bioinformatics
-	- Minor programming
-	- Data analysis/manipulation
-	- Machine learning
-	- Deep learning
-	- Thermo and fluid dynamics
-	- Computational science
-	- Digital image correlation
-	- Life science programming, not data background
-	- Pipelines and workflows
-	- software development for nuclear reactor analysis
+   - PDEs
+   - Molecular modelling with python and bash
+   - Bioinformatics
+   - Minor programming
+   - Data analysis/manipulation
+   - Machine learning
+   - Deep learning
+   - Thermo and fluid dynamics
+   - Computational science
+   - Digital image correlation
+   - Life science programming, not data background
+   - Pipelines and workflows
+   - software development for nuclear reactor analysis
 
 
 .. admonition:: Your expectations
 
+   - Programming skills
+   - readable
+   - Reusable
+   - make tools that other people can also benefit from
+   - Train logic
+   - Optimize
+   - Best practice
+   - Big-picture architecture of programs
+   - Classical training
+   - Package development
+   - Object-oriented programming
+   - Modular development
 
 
 .. admonition:: Content
