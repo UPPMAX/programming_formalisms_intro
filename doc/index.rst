@@ -48,21 +48,6 @@ Programming formalisms: Introduction day
    - Object-oriented programming
    - Modular development
 
-.. solution:: Your expectations and content
-
-   - Programming skills  *Algorithms
-   - Readable code
-   - Reusable code
-   - Make tools that other people can also benefit from
-   - Train logic
-   - Optimize
-   - Best practice
-   - Big-picture architecture of programs
-   - Classical training
-   - Package development
-   - Object-oriented programming
-   - Modular development
-
 .. admonition:: Content and expectations
 
    - We will cover an introduction to 
@@ -180,7 +165,7 @@ The teachers
    :caption: Reference:
 
    concepts.md
-   exercises.md
+   # exercises.md
    * :ref:`genindex`
 
 Indices and tables
