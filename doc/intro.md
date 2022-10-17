@@ -27,6 +27,13 @@
 - script
 - tool
 - model
+- ---
+- application software
+- User-written software: End-user development
+-----
+- scripting vs programming
+- Python is an interpreted language. Python uses an interpreter to translate and run its code. Hence Python is a scripting language.
+- Programs written in C++ are compiled and then the compiled code runs to generate the output. C++ is thus a programming language and not a scripting language, since scripting languages are directly interpreted at run time and no prior compilation of the code takes place.
 
 ## What is software development?
 
