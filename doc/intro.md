@@ -20,6 +20,13 @@
 - Discussions 10 min
 ```
 
+## What is software?
+
+### Some concepts
+- program
+- script
+- tool
+- model
 
 ## What is software development?
 
