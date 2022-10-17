@@ -1,4 +1,4 @@
-# Unified Modeling Language
+# Planning phase
 
 ```{questions}
   - How to use UML?
@@ -11,6 +11,11 @@
       - learn basic notations
       - Test with graphical interface
       - Test with the script based plantUML
+```
+
+```{instructor-note}
+- Lecture 15 min
+- Discussions 10 min
 ```
 
 
@@ -31,8 +36,8 @@ paper or whiteboard --> digital toools
 
 https://en.wikipedia.org/wiki/List_of_Unified_Modeling_Language_tools
 
-## Object orientation
-{term}`class`
+## Unified Modeling Language
+
 
 ## Design
 
