@@ -1,4 +1,4 @@
-# Source control
+# Source/version control
 ```{questions}
   - Why should you use source/version control?
 ```
