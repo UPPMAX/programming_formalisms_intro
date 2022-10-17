@@ -10,6 +10,11 @@
 - More on Wednesday!!
 ```
 
+```{instructor-note}
+- Lecture 15 min
+- Discussions 10 min
+```
+
 - SDLC intro software development lifecycle 15 min
 
 
