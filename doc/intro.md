@@ -35,6 +35,26 @@
 - Python is an interpreted language. Python uses an interpreter to translate and run its code. Hence Python is a scripting language.
 - Programs written in C++ are compiled and then the compiled code runs to generate the output. C++ is thus a programming language and not a scripting language, since scripting languages are directly interpreted at run time and no prior compilation of the code takes place.
 
+### Your programming background
+- Python	86%
+-	Bash		80%
+-	R		45%
+-	C++		14%
+-	C		12.5%
+-	FORTRAN	12.5%
+-	Julia 		5.5%
+-	JAVA		4%
+-	Perl		4%
+-	MATLAB	4 %
+-	HTML		4%
+-	Javascript	4 %
+-	Rest		1 person each
+  -	AWK
+  -	PHP
+  -	Groovy
+  -	SQL
+
+
 ## What is software development?
 
 - Different types of Scientific software:
