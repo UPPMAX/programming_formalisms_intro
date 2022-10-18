@@ -35,6 +35,10 @@
 - Python is an interpreted language. Python uses an interpreter to translate and run its code. Hence Python is a scripting language.
 - Programs written in C++ are compiled and then the compiled code runs to generate the output. C++ is thus a programming language and not a scripting language, since scripting languages are directly interpreted at run time and no prior compilation of the code takes place.
 
+```{Note}
+   We will use the word `program` for any code in this course!
+```
+
 ### Your programming background
 - Python	86%
 -	Bash		80%
@@ -101,11 +105,15 @@ More about life cycles in next session and Day 3
 
 ### Parts from the life cycle model in this course
 
-- Day1 Intro
+- **Day1** Intro
     - SDLC
         - waterfall
         - cont I and D:s
-    - planning: UML
+    - Analysis and design 
+      - Pseudocode and flowcharts
+        - Unified Modelling language
+      - Top-down / Bottom-up 
+
     - source control
     - reproducibility
         - personal use to general use
@@ -113,15 +121,14 @@ More about life cycles in next session and Day 3
         - platforms
     - documentation
    
-
-- Day2 Algorithms+data structures
+- **Day2** Algorithms+data structures
     - intro
     - storing
     - searching for things
     - sorting
     - BLAST
     - exercises
-- Day3-4 Paradigms: design patterns, modular code
+- **Day3-4** Paradigms: design patterns, modular code
     - How?
     - Programming paradigms
         - SDLC and the models for the development process
@@ -130,7 +137,7 @@ More about life cycles in next session and Day 3
         - design patterns introduction to element of reusable software modules
         - what is module
         - common interface design
-- Day4 TDD, testing
+- **Day4** TDD, testing
     - first look
     - types of tests
     - TDD in practice (afternoon 13:00-16:00)
@@ -138,11 +145,9 @@ More about life cycles in next session and Day 3
         - Automating testing with Github Actions
         - Putting it all together
         - "Advanced" topics
-- Day5 Optimization: halvdag...?
+- **Day5** Optimization: halvdag...?
 
 
-- Analysis and design 
-  - Unified Modelling language
 - Development
   - Algorithms
   - Optimization
@@ -169,18 +174,63 @@ More about life cycles in next session and Day 3
 - objects
 - generalizations, associations
 
-## Unified Modelling language
+### Languages
+- C++
+- Java
+- Python 
+- Julia
+- OO features
+  - Fortran 2003 
+  - MATLAB
+  - Perl
+  - PHP
+- OO object-based
+  - Javascript
 
-- Key refernces
-  - UML 2.5
-  - UML distilled
-  - Applying UML and Patterns
 
-## Source control
+## Planning: Analysis and design
+### Top-down
+1. Clearly state problem
+2. Define inputs and outputs
+3. Design the algorithm with `pseudocode`
+4. Turn the algorithm into specific language statements
+5. Test the resulting program
+### Pseudocode
 
-tool
-git
-branches
+Example
+
+algorithm ford-fulkerson is
+    input: Graph G with flow capacity c, 
+           source node s, 
+           sink node t
+    output: Flow f such that f is maximal from s to t
+
+    (Note that f(u,v) is the flow from node u to node v, and c(u,v) is the flow capacity from node u to node v)
+
+    for each edge (u, v) in GE do
+        f(u, v) ← 0
+        f(v, u) ← 0
+
+    while there exists a path p from s to t in the residual network Gf do
+        let cf be the flow capacity of the residual network Gf
+        cf(p) ← min{cf(u, v) | (u, v) in p}
+        for each edge (u, v) in p do
+            f(u, v) ←  f(u, v) + cf(p)
+            f(v, u) ← −f(u, v)
+
+    return f
+
+### Flowcharts or Unified Modeling Language
+
+```{uml}
+@startuml
+```
+
+## Source and version control
+
+- tool
+- git
+- branches
 
 ## Reproducibility and sharing
 Discussion
@@ -189,7 +239,5 @@ Discussion
 ## Documentation
 
 
-## Concepts
-
-## Exercises
+## Exercises/Discussion
 
