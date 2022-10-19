@@ -29,15 +29,10 @@
 A docstring is a structured comment associated to a segment of code (i.e. function or class)
 
 Good docstrings describe:
-
-    What the function does
-
-    What goes in (including the type of the input variables)
-
-    What goes out (including the return type)
-    
-    python example: help(<function name>)
-
+   - What the function does
+   - What goes in (including the type of the input variables)
+   - What goes out (including the return type)
+   - Python example: help(<function name>)
 
 ````{keypoints}
 - Comments should describe the why for your code not the what.
@@ -69,7 +64,7 @@ README file should include:
 
 - Make use of Spinx to render markdown or reStructuredText to HTML
 - Markdown easier, but rst have more possibilities.
-- With 
+-** With ...???**
 
 ````{keypoints}
   - Lightweight options for writing full documentation.
@@ -80,20 +75,24 @@ RST: https://myst-parser.readthedocs.io/en/latest/syntax/roles-and-directives.ht
 
 
 ## Deploy
-- Make use of free web platforms to put your full documentation!
+Make use of free web platforms to put your full documentation!
 
-- GH-pages
+- GitHub-pages (GH-pages)
 - ReadTheDocs
 
 - Input from you?
 
 ### Github pages
-- Easiest. everything is local to uithub
+- Easiest. everything is local to GitHub
+- This lesson material
 
 ### Read the Docs
 - Somewhat more possibilities, like having several versions of documentation to switch between.
+- Example
 
 ## Exercise
+
+   
 
 ````{Admonition} Read more
    `Code refinery <https://coderefinery.github.io/documentation/>`
