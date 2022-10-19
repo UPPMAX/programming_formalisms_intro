@@ -195,11 +195,13 @@ More about life cycles in next session and Day 3
 3. Design the algorithm with `pseudocode`
 4. Turn the algorithm into specific language statements
 5. Test the resulting program
+6. 
 ### Pseudocode
 
-Example
+**Example**
 
-algorithm ford-fulkerson is
+```{code}
+  algorithm ford-fulkerson is
     input: Graph G with flow capacity c, 
            source node s, 
            sink node t
@@ -219,11 +221,20 @@ algorithm ford-fulkerson is
             f(v, u) ← −f(u, v)
 
     return f
+```
 
 ### Flowcharts or Unified Modeling Language
 
 ```{uml}
 @startuml
+!theme amiga 
+(*)--> activity1
+if "stuff" then 
+-->[true] "action2"
+-r->(*)
+else 
+--> [false](*)
+@enduml
 ```
 
 ## Source and version control
