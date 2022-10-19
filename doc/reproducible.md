@@ -7,11 +7,13 @@
 
 ```{Objectives}
    - We will give an overview of 
-      - sharing code
       - recording dependencies
-      - README:s
-      - Full documentation/tutorials
-   - We will give examples where to deploy a documenation page.
+   - Get short intro to tools:
+       - Pip and PyPI
+       - Conda
+       - Environments
+       - Tools for other languages than Python
+    
 ```
 
 ```{instructor-note}
@@ -21,65 +23,72 @@
 
 
 - https://nbis-reproducible-research.readthedocs.io/en/course_2104/git/
-- NBIS: Making projects reproducib
+- NBIS: Making projects reproducible
 
 - kort om workflow connecta med moduler!
 - Snakemake
 
-•	Directory structure: Different projects should have separate folders
-o	Readme file
-o	Data		(version controlled)(.gitignore)
-o	Processed data	intermediate
-o	Manus		
-o	Results		data, tables, figures (version controlled, git tags for manus version)
-o	Src		version controlled code
-	License 
-	Requirements.txt
-o	Doc
-	index
-o	software is reused in several projects it can make sense to put them in own repo
-•	Reproducible publications
-o	Git (overleaf, authorea), hackmd, manuscripts.io, google docs
-o	Scholarly output reproducible: rrtools, jupyter, binder, research compendia
-o	Reprohack
-Recording dependencies
-•	Reproducibility: We can control our code but how can we control dependencies?
-•	10-year challenge: Try to build/run your own code that you have created 10 (or less) years ago. Will your code from today work in 5 years if you don’t change it?
-•	Dependency hell: Different codes on the same environment can have conflicting dependencies.
+## First things: order your files!
+
+- Directory structure: Different projects should have separate folders
+  - Readme file
+  - Data		(version controlled)(.gitignore)
+  - Processed data	intermediate
+  - Manuscript	
+  - Results		data, tables, figures (version controlled, git tags for manus version)
+  - Src		version controlled code
+    - License 
+    - Requirements.txt
+  - Doc
+    - index
+
+:Note: If software is reused in several projects it can make sense to put them in own repo
+
+## Reproducible publications
+- Git (overleaf, authorea), hackmd, manuscripts.io, google docs
+- Scholarly output reproducible: rrtools, jupyter, binder, research compendia
+- Reprohack
+
+## Recording dependencies
+-	Reproducibility: We can control our code but how can we control dependencies?
+-	10-year challenge: Try to build/run your own code that you have created 10 (or less) years ago. Will your code from today work in 5 years if you don’t change it?
+-	Dependency hell: Different codes on the same environment can have conflicting dependencies.
 Conda, Anaconda, pip, Virtualenv, Pipenv, pyenv, Poetry, requirements.txt …
-•	Defining a specific set of dependencies, possibly with well defined versions
-•	Installing those dependencies mostly automatically
-•	Recording the versions for all dependencies
-•	Isolate environments
-o	On your computer for projects so they can use different software.
-o	Isolate environments on computers with many users (and allow self-installations)
-•	Using different Python/R versions per project
-•	Provide tools and services to share packages
-•	Python
-o	Pypi
-	pip freeze > requirements.txt
-	
-o	Conda: any language, also compiled code and libraries.
-	conda-forge is a GitHub organization containing repositories of conda recipes.
-	Export the requirements into requirements.txt with conda list --export > requirements.txt.
-	Export the full environment using conda env export > environment.yml, and compare the .yml file format to the .txt file format.
-o	Virtualenv
-o	Pipenv
-o	Poetry
-o	Pyenv
-o	Mamba (faster conda)
-•	R
-o	Packrat, jetpack, rsuite, renv, automagic, deplearning, devtools
-•	C/C+
-o	CMake
-o	Conan
-o	Conda
-•	Fortran
-o	Fortran package manager
-•	Julia
-o	Pkg.jl
-	designed around using isolated environments with independent sets of packages. Environments can either be local to a particular project or shared and selected by name.
-•	Semantic versioning: 
+-	Defining a specific set of dependencies, possibly with well defined versions
+-	Installing those dependencies mostly automatically
+-	Recording the versions for all dependencies
+-	Isolated environments
+  -	On your computer for projects so they can use different software.
+  -	Isolate environments on computers with many users (and allow self-installations)
+-	Using different Python/R versions per project??
+
+
+### Provide tools and services to share packages
+- Python
+  -	PyPI
+    -pip freeze > requirements.txt
+  -	Conda: any language, also compiled code and libraries.
+    -	conda-forge is a GitHub organization containing repositories of conda recipes.
+	  - Export the requirements into requirements.txt with conda list --export > requirements.txt.
+	  - Export the full environment using conda env export > environment.yml, and compare the .yml file format to the .txt file format.
+  -	Virtualenv
+	- Pipenv
+	- Poetry
+	- Pyenv
+	- Mamba (faster conda)
+-	R
+  - Packrat, jetpack, rsuite, renv, automagic, deplearning, devtools
+-	C/C+
+	- CMake
+	- Conan
+	- Conda
+-	Fortran
+  - Fortran package manager
+- Julia
+  - Pkg.jl
+    -	designed around using isolated environments with independent sets of packages. Environments can either be local to a particular project or shared and selected by name.
+
+## Semantic versioning: 
 Given a version number MAJOR.MINOR.PATCH, increment the:
 1.	MAJOR version when you make incompatible API changes
 2.	MINOR version when you add functionality in a backwards compatible manner
@@ -87,18 +96,10 @@ Given a version number MAJOR.MINOR.PATCH, increment the:
 Additional labels for pre-release and build metadata are available as extensions to the MAJOR.MINOR.PATCH format.
 
 
-
-
-
-## GitHub
-
-## Organizing
-
 ## Recording dependencies
 
 - Jupyter?
-- requirements.txt
-- Conda
+
 - containers
   - Docker
   - Singularity
@@ -106,29 +107,32 @@ Additional labels for pre-release and build metadata are available as extensions
 
 ## Sharing
 
-“FAIR” is the current buzzword for data management. You may be asked about it in, for example, making data management plans for grants:
+```{Objectives}
+   - We will give an overview of 
+      - recording dependencies
+   - Get short intro to tools:
+       - Pip and PyPI
+       - Conda
+       - Environments
+       - Tools for other languages than Python    - Introduce reproducibility and sharing, licensing and citation
+     - Get into thinking about dependencies and solutions
+     - Get into choosing license, citation and DOI
+``` 
+
+### FAIR
+**“FAIR”** is the current buzzword for data management. You may be asked about it in, for example, making data management plans for grants:
 
 - Findable
-
-        Will anyone else know that your data exists?
-
-        Solutions: put it in a standard repository, or at least a description of the data. Get a digital object identifier (DOI).
-
+  - Will anyone else know that your data exists?
+  - Solutions: put it in a standard repository, or at least a description of the data. Get a digital object identifier (DOI).
 - Accessible
-
-        Once someone knows that the data exists, can they get it?
-
-        Usually solved by being in a repository, but for non-open data, may require more procedures.
-
+   - Once someone knows that the data exists, can they get it?
+   - Usually solved by being in a repository, but for non-open data, may require more procedures.
 - Interoperable
-
-        Is your data in a format that can be used by others, like csv instead of PDF?
-
-        Or better than csv. Example: 5-star open data
-
+   - Is your data in a format that can be used by others, like csv instead of PDF?
+   - Or better than csv. Example: 5-star open data
 - Reusable
-
-        Is there a license allowing others to re-use?
+   - Is there a license allowing others to re-use?
 
 
 ## Social coding
