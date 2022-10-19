@@ -189,6 +189,19 @@ More about life cycles in next session and Day 3
 
 
 ## Planning: Analysis and design
+
+```{note}
+- Planning step is to ...
+   - get an overview of the project/program.
+   - help planning writing the code
+   - identify parts needed
+- Can be devided into analysis and design
+- Analysis part is to state the problem and define inputs and outputs
+   - graphical tools like UML
+- Design phase to find out the specific algorithms needed
+   - pseudocode
+```
+
 ### Top-down
 1. Clearly state problem
 2. Define inputs and outputs
@@ -196,6 +209,20 @@ More about life cycles in next session and Day 3
 4. Turn the algorithm into specific language statements
 5. Test the resulting program
 6. 
+
+### Flowcharts or Unified Modeling Language
+
+```{uml}
+@startuml
+(*)--> activity1
+if "stuff" then 
+-->[true] "action2"
+-r->(*)
+else 
+--> [false](*)
+@enduml
+```
+
 ### Pseudocode
 
 **Example**
@@ -223,30 +250,35 @@ More about life cycles in next session and Day 3
     return f
 ```
 
-### Flowcharts or Unified Modeling Language
-
-```{uml}
-@startuml
-!theme amiga 
-(*)--> activity1
-if "stuff" then 
--->[true] "action2"
--r->(*)
-else 
---> [false](*)
-@enduml
+```{objectives}
+   - [Planning phase section](https://uppmax.github.io/programming_formalism_intro/flowcharts.html) aims to 
+     - Introduce flowcharts and UML expressions
+     - Get into UML coding with PlantUML
 ```
-
 ## Source and version control
 
 - tool
 - git
 - branches
 
+```{objectives}
+   - [Source and version control](https://uppmax.github.io/programming_formalism_intro/sourcecontrol.html) aims to 
+     - Introduce git and github
+     - Get into working with git
+     - Get into using GitHub as a remote repository
+```
+
 ## Reproducibility and sharing
 Discussion
-•	One-time usage to distributed package
+- One-time usage to distributed package
 
+```{objectives}
+   - [Reproducibility and sharing](https://uppmax.github.io/programming_formalism_intro/reproducible.html) aims to 
+     - Introduce reproducibility and sharing, licensing and citation
+     - Get into thinking about dependencies and solutions
+     - Get into working more with GitHub for collaboration
+     - Get into choosing license, citation and DOI
+```
 ## Documentation
 
 
