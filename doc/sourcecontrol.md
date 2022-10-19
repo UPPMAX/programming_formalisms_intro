@@ -16,7 +16,9 @@
 - Discussions 10 min
 ```
 
-## Problems
+## The essence of version control
+
+
 
 ## Tools
 
