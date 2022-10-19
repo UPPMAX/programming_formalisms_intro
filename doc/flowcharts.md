@@ -205,7 +205,9 @@ Authenticator -> User : respond <token>
 ```
 
 ## Tools
-- Computer-Aided Software Engineering tools
+
+### Computer-Aided Software Engineering tools
+
   -	Modeling
   - Code generation
   -	Reverse engineering
@@ -218,20 +220,31 @@ Authenticator -> User : respond <token>
   -	http://www.plantuml.com/plantuml
 
 
-## Graphical tools
 
-## PlantUML
+### PlantUML
+
+- [PlantUML web server](http://www.plantuml.com/plantuml/uml/SyfFKj2rKt3CoKnELR1Io4ZDoSa70000)
+
 
 ## Pseudocode
 
-- Pseudocode generally does not actually obey the syntax rules of any particular language; there is no systematic standard form. 
+- Pseudocode generally does not obey the syntax rules of any particular language
+   - there is no systematic standard form. 
 - Some writers borrow style and syntax from control structures from some conventional programming language, although this is discouraged.
-- Some syntax sources include Fortran, Pascal, BASIC, C, C++, Java, Lisp, and ALGOL. Variable declarations are typically omitted. 
+- Some syntax sources include Fortran, Pascal, BASIC, C, C++, Java, Lisp, and ALGOL. 
+- Variable declarations are typically omitted. 
 - Function calls and blocks of code, such as code contained within a loop, are often replaced by a one-line natural language sentence.
 
-Depending on the writer, pseudocode may therefore vary widely in style, from a near-exact imitation of a real programming language at one extreme, to a description approaching formatted prose at the other. 
+- Depending on the writer, pseudocode may therefore vary widely in style, 
+  - from a near-exact imitation of a real programming language at one extreme
+  - to a description approaching formatted prose at the other. 
 
-Common mathematical symbols
+### Mathematical style pseudocode
+- Used in numerical computation
+
+{{nowrap|Return <math>\sum_{k\in S} x_k</math>}}
+
+**Common mathematical symbols**
 
 |Type of operation |	Symbol |	Example |
 |------------------|---------|----------|
@@ -240,7 +253,7 @@ Common mathematical symbols
 |Arithmetic |	+, −, ×, /, mod 	| |
 |Floor/ceiling |	⌊, ⌋, ⌈, ⌉ |	a ← ⌊b⌋ + ⌈c⌉ | 
 |Logical |	**and, or** 	| |
-|Sums, products 	Σ Π |	h ← Σa∈A 1/a |
+|Sums, products | 	Σ Π |	h ← Σa∈A 1/a |
 
 
 ## Exercise
@@ -260,6 +273,9 @@ Common mathematical symbols
     - aktivitetsdiagram
   - There are plenty of tools out there
     - some can produce code directly
-    - some are script-vased and well integrated in Markdown tools like Sphinx and HackMD
+    - some are script-based and well integrated in Markdown tools like Sphinx and HackMD
       - perfect for sharing
+  - Pseudocode gives a more detailed description what you want the program to do.
+    - Can be highly personal or very language-like
+    - Some 
 ```` 
