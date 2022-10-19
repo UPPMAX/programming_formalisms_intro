@@ -256,7 +256,7 @@ stop
      - Introduce flowcharts and UML expressions
      - Get into UML coding with PlantUML
 ```
-## Source and version control
+## Source/version control and collaboration
 
 ###  The essence of version control
 Summarized from [Code refinery](https://coderefinery.github.io/git-intro/motivation/)
@@ -346,6 +346,17 @@ There are different types of remotes:
 - [Bitbucket](https://bitbucket.org) is yet another popular commercial site.
 - Another option is [NotABug](https://notabug.org)
 
+### Collaboration
+
+- Let's say that someone has given you access to a repository online and you want to contribute to it.
+- It is quite easy to make a copy and send a change back.
+- First, we do this a relatively simple way: get repository, make a change
+  locally, and send the change directly back.
+- Then, we make a "pull request" that allows a review.
+- Once we know how code review works, we will be able to propose changes
+  to repositories of others and review changes submitted by external
+  contributors.
+
 
 
 ```{objectives}
@@ -353,10 +364,23 @@ There are different types of remotes:
      - Introduce git and github
      - Get into working with git
      - Get into using GitHub as a remote repository
+     - Get into working more with GitHub for collaboration
+
 ```
 
-## Reproducibility and sharing
+## Reproducibility, collaboration and sharing
 
+### Reproducible research
+
+- Have you ever spent days trying to repeat the results that took you hours to do the first time last week?  - Or you have to do paper revisions, but you just can’t get the results to match up? Nothing is a worse feeling - either for you or for science itself.
+
+In this lesson we will discuss different methods and tools for better reproducibility in research software and data. We will demonstrate how version control, workflows, containers, and package managers can be used to record reproducible environments and computational steps.
+
+
+  
+  ### Sharing and licensing and citations
+  
+  
 ```{Discussion}
 - One-time usage to distributed package
 ```
@@ -365,7 +389,6 @@ There are different types of remotes:
    - [Reproducibility and sharing](https://uppmax.github.io/programming_formalism_intro/reproducible.html) aims to 
      - Introduce reproducibility and sharing, licensing and citation
      - Get into thinking about dependencies and solutions
-     - Get into working more with GitHub for collaboration
      - Get into choosing license, citation and DOI
 ```
 ## Documentation
