@@ -94,12 +94,12 @@ agile = characterized by the division of tasks into short phases of work and fre
   5.	Development and maintenance
 
 - Spiral model: iterating waterfalls, quadrants
-  - Planning: reqs, identification: analysis
+  -   Planning: reqs, identification: analysis
   -	Risk analysis: build prototypes to identify risks
   -	Engineering: software implementation
   -	Evaluation: stakeholder review, feedback, plan next iteration
-  -	Each lab is new cycle: prototype --> RC --> Launch
-  -	Risk driven
+  Each lab is new cycle: prototype --> RC --> Launch
+  Risk driven
 
 More about life cycles in next session and Day 3
 
@@ -214,12 +214,13 @@ More about life cycles in next session and Day 3
 
 ```{uml}
 @startuml
-(*)--> activity1
-if "stuff" then 
--->[true] "action2"
--r->(*)
-else 
---> [false](*)
+!theme superhero
+start
+if (stuff) then (true) 
+   :action 2;
+endif
+
+stop
 @enduml
 ```
 
@@ -269,8 +270,10 @@ else
 ```
 
 ## Reproducibility and sharing
-Discussion
+
+```{Discussion}
 - One-time usage to distributed package
+```
 
 ```{objectives}
    - [Reproducibility and sharing](https://uppmax.github.io/programming_formalism_intro/reproducible.html) aims to 
@@ -282,5 +285,30 @@ Discussion
 ## Documentation
 
 
-## Exercises/Discussion
+```{objectives}
+   - [Documentation](https://uppmax.github.io/programming_formalism_intro/documentation.html) aims to 
+     - Introduce motivation for documentation
+     - Get tips for in-code documentation
+     - Get tips for README files
+     - Get tips for full documentation and tutorials
+```
 
+## Summary of Introduction
+- Now after the overview you are ready to dig deeper in the topics and try it out yourself!
+
+```{Keypoints}
+- Software development is both series of steps: 
+     1.	Requirements
+     2.	Analysis and design
+     3.	Development
+     4.	Test
+     5.	Development and maintenance
+- ... and iteration of these
+- Planning for reproducibility, modularity and documentation should be started in the beginning
+- Tools for the developer
+  - Planning: UML and pseudocode
+  - Development iteration: git
+  - testing: test functions
+  - Collaboration: GitHub
+  - Documentation: READMEs and e.g. sphinx
+```
