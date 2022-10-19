@@ -1,4 +1,4 @@
-# Reproducible research
+# Reproducible research and sharing
 
 ```{questions}
   - Should research software and data be reproducible?
