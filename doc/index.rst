@@ -156,6 +156,7 @@ The teachers
    sdlc.md 
    flowcharts.md
    sourcecontrol.md
+   collab.md
    reproducible.md
    documentation.md
    summary.md
