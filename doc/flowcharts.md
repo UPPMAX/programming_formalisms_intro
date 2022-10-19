@@ -242,6 +242,12 @@ Authenticator -> User : respond <token>
 ### Mathematical style pseudocode
 - Used in numerical computation
 
+```{math}
+\sum_{k\in S} x_k
+```
+
+
+
 {{nowrap|Return <math>\sum_{k\in S} x_k</math>}}
 
 **Common mathematical symbols**
