@@ -346,7 +346,7 @@ There are different types of remotes:
 - [Bitbucket](https://bitbucket.org) is yet another popular commercial site.
 - Another option is [NotABug](https://notabug.org)
 
-### Collaboration
+## Collaboration
 
 - Let's say that someone has given you access to a repository online and you want to contribute to it.
 - It is quite easy to make a copy and send a change back.
@@ -360,15 +360,14 @@ There are different types of remotes:
 
 
 ```{objectives}
-   - [Source and version control](https://uppmax.github.io/programming_formalism_intro/sourcecontrol.html) aims to 
-     - Introduce git and github
-     - Get into working with git
-     - Get into using GitHub as a remote repository
+   - [Collaboration](https://uppmax.github.io/programming_formalism_intro/collab.html) aims to 
      - Get into working more with GitHub for collaboration
+     - Centralized workflow
+     - Forking
 
 ```
 
-## Reproducibility, collaboration and sharing
+## Reproducibility, deployment and sharing
 
 ### Reproducible research
 
@@ -377,8 +376,19 @@ There are different types of remotes:
 In this lesson we will discuss different methods and tools for better reproducibility in research software and data. We will demonstrate how version control, workflows, containers, and package managers can be used to record reproducible environments and computational steps.
 
 
+
+```{objectives}
+   - [Reproducibility and sharing](https://uppmax.github.io/programming_formalism_intro/reproducible.html) aims to 
+     - Get a short overview of recording dependencies
+     - Get short intro to tools:
+       - Pip and PyPI
+       - Conda
+       - Environments
+       - Tools for other langiages
+
+```
   
-  ### Sharing and licensing and citations
+ ### Sharing and licensing and citations
   
   
 ```{Discussion}
@@ -393,6 +403,20 @@ In this lesson we will discuss different methods and tools for better reproducib
 ```
 ## Documentation
 
+```{note} Documentation comes in different forms - what *is* documentation?
+
+  (This is adapted from: [What nobody tells you about documentation](https://www.divio.com/blog/documentation/))
+
+  - **Tutorials**: learning-oriented, allows the newcomer to get started
+  - **How-to guides**: goal-oriented, shows how to solve a specific problem
+  - **Explanation**: understanding-oriented, explains a concept
+  - **Reference**: information-oriented, describes the machinery
+
+  These are distinct. For an excellent discussion, please see [What nobody tells you about documentation](https://www.divio.com/blog/documentation/).
+```
+
+**There is no one size fits all**: often for small projects a `README.md` or
+`README.rst` can be enough (more about these formats later).
 
 ```{objectives}
    - [Documentation](https://uppmax.github.io/programming_formalism_intro/documentation.html) aims to 
