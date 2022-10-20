@@ -4,8 +4,6 @@
 - What is the Purpose of Formalism in Computer Science?
 - What is software development life cycle
 - There seem to be many concepts in this course. What do they mean?
-
-
 ```
 
 ```{objectives}
@@ -59,8 +57,6 @@
   -	SQL
 
 
-## What is software development?
-
 - Different types of Scientific software:
   - analysis of data
     - statistics
@@ -74,6 +70,23 @@
       - simulations time-varying bahvour of a system
       - mathematical models of relationships among variables in a system 
   - decision assistance
+
+### Functional vs. object oriented programming
+
+.. todo::
+   
+   mindset
+   info hiding
+   built in
+   - classes
+
+   {term}`class`
+
+  - objects
+  - generalizations, associations
+
+  - module (ett sätt att samla funktioner med likartade funktionalitet)
+
 
 ### Icebreaker
 
@@ -165,14 +178,7 @@ More about life cycles in next session and Day 3
 - **iterative methodologies**
 - **Agile**
 
-## Object oriented modelling
 
-- classes
-
-{term}`class`
-
-- objects
-- generalizations, associations
 
 ### Languages
 - C++
@@ -189,6 +195,17 @@ More about life cycles in next session and Day 3
 
 
 ## Planning: Analysis and design
+
+.. todo::
+  
+   - Analys
+     - Object
+     - (text document)
+   - design
+     - pseudocode
+     - objekt klasser (UML)
+     - funktioner/moduler
+
 
 ```{note}
 - Planning step is to ...
@@ -208,7 +225,7 @@ More about life cycles in next session and Day 3
 3. Design the algorithm with `pseudocode`
 4. Turn the algorithm into specific language statements
 5. Test the resulting program
-6. 
+
 
 ### Flowcharts or Unified Modeling Language
 
@@ -410,16 +427,22 @@ In this lesson we will discuss different methods and tools for better reproducib
 ```
 ## Documentation
 
+.. todo::
+
+   - projektdokumentation
+     - requirements funka på alla system eller vad programmet ska göra (publikt eller private)
+     - analys: pseudokod, uml
+     - riskanalysis
+
+
 ```{note} Documentation comes in different forms - what *is* documentation?
 
-  (This is adapted from: [What nobody tells you about documentation](https://www.divio.com/blog/documentation/))
 
   - **Tutorials**: learning-oriented, allows the newcomer to get started
   - **How-to guides**: goal-oriented, shows how to solve a specific problem
   - **Explanation**: understanding-oriented, explains a concept
   - **Reference**: information-oriented, describes the machinery
 
-  These are distinct. For an excellent discussion, please see [What nobody tells you about documentation](https://www.divio.com/blog/documentation/).
 ```
 
 **There is no one size fits all**: often for small projects a `README.md` or
