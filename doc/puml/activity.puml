@@ -1,11 +1,12 @@
 @startuml
-if( HAS AN
-OWNER AND IS OPEN) then(yes)
-if (CAN I RESOLVE) then
-if (waiting user input) then
-elseif (condition D) then (yes)
-:Text 4;
-else ()
-:Text else;
+start
+
+if (Graphviz installed?) then (yes)
+  :process all\ndiagrams;
+else (no)
+  :process only
+  __sequence__ and __activity__ diagrams;
 endif
-@stopuml
+
+stop
+@enduml
