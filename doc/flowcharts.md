@@ -54,6 +54,7 @@ https://en.wikipedia.org/wiki/List_of_Unified_Modeling_Language_tools
   - Composite structure
   - Package
   - Deployment
+
 -	Behavior
   - Use case 
   - Activity
@@ -63,6 +64,7 @@ https://en.wikipedia.org/wiki/List_of_Unified_Modeling_Language_tools
     -	Communication
     - Timing
     -	Interaction overview
+
 
 ```{graphviz}
 digraph{
