@@ -48,21 +48,21 @@ https://en.wikipedia.org/wiki/List_of_Unified_Modeling_Language_tools
 ## Diagrams
 
 -	Structure 
-   - Class
-   - Component
-   - Object
-   - Composite structure
-   - Package
-   - Deployment
+  - Class
+  - Component
+  - Object
+  - Composite structure
+  - Package
+  - Deployment
 -	Behavior
-   - Use case 
-   - Activity
-   - State machine
-   - Interaction within/outside system
-      - Sequence
-      -	Communication
-      - Timing
-      -	Interaction overview
+  - Use case 
+  - Activity
+  - State machine
+  - Interaction within/outside system
+    - Sequence
+    -	Communication
+    - Timing
+    -	Interaction overview
 
 ```{graphviz}
 digraph{
@@ -71,7 +71,7 @@ Structure, Behaviour
 "UML diagrams" -> Structure
 "UML diagrams" -> Behaviour
 Structure -> Class, Component,	Object
-Behaviour -> "Use case", Interaction
+Behaviour -> "Use case", Activity, Interaction
 Interaction -> Sequence, Communication, Timing, "Interaction overview"
 }
 ```
