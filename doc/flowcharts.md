@@ -43,21 +43,21 @@ https://en.wikipedia.org/wiki/List_of_Unified_Modeling_Language_tools
 
 ## Diagrams
 -	Structure 
-  -	Class
-  -	Component
-  -	Object
-  -	Composite structure
-  -	Package
-  -	deployment
+   -	Class
+   -	Component
+   -	Object
+   -	Composite structure
+   -	Package
+   -	deployment
 -	Behavior
-  -	Use case 
-  - Activity
-  - State machine
-  - Interaction within/outside system
-    - Sequence
-    -	Communication
-    -	Timing
-    -	Interaction overview
+   -	Use case 
+   - Activity
+   - State machine
+   - Interaction within/outside system
+      - Sequence
+      -	Communication
+      - Timing
+      -	Interaction overview
 
 ```{graphviz}
 digraph{
@@ -88,10 +88,13 @@ Interaction -> Sequence,	Communication, Timing,	Interaction-overview
 
 ### Class
 
-platnuml
+#### plantuml
+
 ```{plantuml} puml/class.puml
 ```
-uml
+
+#### uml
+
 ```{uml} puml/class.puml
 ```
 
@@ -112,7 +115,7 @@ end note
 
 
 ### Activity
-```{plantuml}
+```{uml}
 @startuml
 if( HAS AN
 OWNER AND IS OPEN) then(yes)
