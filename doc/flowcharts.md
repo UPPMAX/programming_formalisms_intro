@@ -17,6 +17,8 @@
 - Lecture 15 min
 - Discussions 10 min
 ```
+
+
 ## Analys step
 - Object
 - (text document)
@@ -24,9 +26,9 @@
 
 ## Design step
 
-- pseudocode
-- objects --> classes (UML)
-- functions and/or modules
+- Pseudocode
+- Objects --> classes (UML)
+- Functions and/or modules
 
 ## Unified Modeling Language
 
@@ -60,10 +62,9 @@ Then there are benefits with digital tools
 ### Graphical syntax
 
 
-
 ### Diagrams
 
--	Structure 
+- Structure
    - Class
    - Component
    - Object
@@ -71,8 +72,8 @@ Then there are benefits with digital tools
    - Package
    - Deployment
 
--	Behavior
-   - Use case 
+- Behavior
+   - Use case
    - Activity
    - State machine
    - Interaction within/outside system
