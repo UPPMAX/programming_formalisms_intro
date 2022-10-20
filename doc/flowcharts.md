@@ -1,7 +1,7 @@
 # Planning phase
 
 ```{questions}
-  - How to use UML?
+  - How to use UML and ?
   - Can I learn it?
 ```
 
@@ -17,26 +17,32 @@
 - Lecture 15 min
 - Discussions 10 min
 ```
+## Analys step
+- Object
+- (text document)
 
 
-- UML is not a programming language. It's a graphical notation for drawing diagrams to visualize object oriented systems.
--  UML includes over a dozen different types of structural and behavioral diagrams. 
+## Design step
 
-- caveats 
-  - UML has been marketed for many contexts.[24][31]
-  - It has been treated, at times, as a design silver bullet, which leads to problems. 
-  - UML misuse includes overuse (designing every part of the system with it, which is unnecessary) and assuming that novices can design with it.[32]
-  - It is considered a large language, with many constructs. Some people (including Jacobson) feel that UML's size hinders learning (and therefore, using) it
-
-class diagrams and use case diagrams 
-
- "These diagrams should be a quick, useful communication tool. A support system for your brain, not the other way around!"
- 
-paper or whiteboard --> digital toools 
-
-https://en.wikipedia.org/wiki/List_of_Unified_Modeling_Language_tools
+- pseudocode
+- objects --> classes (UML)
+- functions and/or modules
 
 ## Unified Modeling Language
+
+- UML is not a programming language. It's a graphical notation for drawing diagrams to visualize object oriented systems.
+- UML includes over a dozen different types of structural and behavioral diagrams. 
+- UML has been marketed for many contexts.
+
+- Some problems (Wikipedia):
+  - It has been treated, at times, as a design silver bullet, which leads to problems. 
+  - UML misuse includes overuse (designing every part of the system with it, which is unnecessary) and assuming that novices can design with it.
+  - It is considered a large language, with many constructs. Some people feel that UML's size hinders learning (and therefore, using) it.
+
+"These diagrams should be a quick, useful communication tool. A support system for your brain, not the other way around!"
+
+First iteration in planning can be paper or whiteboard 
+Then there are benefits with digital tools 
 
 
 ### Design
@@ -186,7 +192,10 @@ g --> UC3
 
 ## Tools
 
-### Computer-Aided Software Engineering tools
+https://en.wikipedia.org/wiki/List_of_Unified_Modeling_Language_tools
+
+
+
 
   -	Modeling
   - Code generation
@@ -199,12 +208,19 @@ g --> UC3
   -	Scripts rather than drawing tools
   -	http://www.plantuml.com/plantuml
 
-
-
 ### PlantUML
 
-- [PlantUML web server](http://www.plantuml.com/plantuml/uml/SyfFKj2rKt3CoKnELR1Io4ZDoSa70000)
+- PlantUML is an open-source tool allowing users to create diagrams from a plain text language. 
+- uses Graphviz software to lay out its diagrams
+- More info and examples at https://plantuml.com/
 
+#### Syntax
+- https://plantuml.com/
+
+#### Test yourself!
+
+- [PlantUML web server](http://www.plantuml.com/plantuml/uml/SyfFKj2rKt3CoKnELR1Io4ZDoSa70000)
+- Look at the source files of this 
 
 ## Pseudocode
 
@@ -242,6 +258,44 @@ g --> UC3
 |Sums, products | 	Σ Π |	h ← Σa∈A 1/a |
 
 
+### Examples
+
+
+#### 1
+If student's grade is greater than or equal to 60
+
+    Print "passed"
+
+else
+
+    Print "failed" 
+    
+#### 2
+
+Initialize total to zero
+
+Initialize counter to zero
+
+Input the first grade
+
+while the user has not as yet entered the sentinel
+
+    add this grade into the running total 
+
+    add one to the grade counter 
+
+    input the next grade (possibly the sentinel)
+
+if the counter is not equal to zero
+
+    set the average to the total divided by the counter
+
+    print the average 
+
+else
+
+    print 'no grades were entered' 
+    
 ## Exercise
 
 
