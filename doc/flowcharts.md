@@ -164,7 +164,7 @@ g --> UC3
 
 #### Object
 
-```{uml}
+```plantuml
 @startuml
 object Object01
 object Object02
@@ -180,8 +180,8 @@ Object03 *-- Object04
 Object05 o-- "4" Object06
 Object07 .. Object08 : some labels
 @enduml
-
 ```
+
 #### GRAPHVIZ
 
 ```{graphviz} external.dot
