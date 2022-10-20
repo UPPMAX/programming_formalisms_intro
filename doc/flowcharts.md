@@ -101,8 +101,6 @@ diamond         diamond
 entity          entity
 enum            enum
 interface       interface
-protocol        protocol
-struct          struct
 @enduml
 ```
 
