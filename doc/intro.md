@@ -73,7 +73,7 @@
 
 ### Functional vs. object oriented programming
 
-.. todo::
+```{todo}
    
    mindset
    info hiding
@@ -86,7 +86,7 @@
   - generalizations, associations
 
   - module (ett sätt att samla funktioner med likartade funktionalitet)
-
+```
 
 ### Icebreaker
 
@@ -196,7 +196,7 @@ More about life cycles in next session and Day 3
 
 ## Planning: Analysis and design
 
-.. todo::
+```{todo}
   
    - Analys
      - Object
@@ -205,7 +205,7 @@ More about life cycles in next session and Day 3
      - pseudocode
      - objekt klasser (UML)
      - funktioner/moduler
-
+```
 
 ```{note}
 - Planning step is to ...
@@ -427,13 +427,13 @@ In this lesson we will discuss different methods and tools for better reproducib
 ```
 ## Documentation
 
-.. todo::
+```{todo}
 
    - projektdokumentation
      - requirements funka på alla system eller vad programmet ska göra (publikt eller private)
      - analys: pseudokod, uml
      - riskanalysis
-
+```
 
 ```{note} Documentation comes in different forms - what *is* documentation?
 
