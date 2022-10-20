@@ -1,0 +1,15 @@
+@startuml
+ !theme amiga
+ class01 <|-- class02
+ class03 *-- class04
+ class05 o-- class06
+
+ class01- class03 : knows >
+ class class01 {
+    -var01 : Integer
+    Time : Date
+    #method01()
+    +get_var01()
+    {method}Without paranteces or Qualifiers
+ }
+@enduml
