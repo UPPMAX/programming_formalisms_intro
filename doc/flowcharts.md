@@ -115,18 +115,7 @@ end note
 
 
 ### Activity
-```{uml}
-@startuml
-if( HAS AN
-OWNER AND IS OPEN) then(yes)
-if (CAN I RESOLVE) then
-if (waiting user input) then
-elseif (condition D) then (yes)
-:Text 4;
-else ()
-:Text else;
-endif
-@stopuml
+```{uml} puml/activity.puml
 ```
 
 
@@ -158,22 +147,8 @@ g --> UC3
 
 #### Object
 
-```{plantuml}
-@startuml
-object Object01
-object Object02
-object Object03
-object Object04
-object Object05
-object Object06
-object Object07
-object Object08
+```{uml} puml/object.puml
 
-Object01 <|-- Object02
-Object03 *-- Object04
-Object05 o-- "4" Object06
-Object07 .. Object08 : some labels
-@enduml
 ```
 
 ```{uml} puml/external.uml
