@@ -164,7 +164,7 @@ g --> UC3
 
 #### Object
 
-```plantuml
+```{plantuml}
 @startuml
 object Object01
 object Object02
