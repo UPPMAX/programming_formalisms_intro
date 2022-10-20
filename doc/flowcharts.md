@@ -88,7 +88,7 @@ Interaction -> Sequence,	Communication, Timing,	Interaction-overview
 
 ### Class
 
-```{uml}
+```plantuml
 @startuml
 abstract        abstract
 abstract class  "abstract class"
