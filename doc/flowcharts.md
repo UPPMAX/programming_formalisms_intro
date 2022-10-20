@@ -39,31 +39,41 @@ https://en.wikipedia.org/wiki/List_of_Unified_Modeling_Language_tools
 ## Unified Modeling Language
 
 
-## Design
+### Design
+
+- A way to visualize a system's architectural blueprints in a diagram, including elements such as:
+  - any activities (jobs);
+  - individual components of the system;
+    - and how they can interact with other software components;
+  - how the system will run;
+  - how entities interact with others (components and interfaces);
+  - external user interface.
+
+- Although originally intended for object-oriented design documentation, UML has been extended to a larger set of design documentation,and been found useful in many contexts.
 
 ### Graphical syntax
 
 
 
-## Diagrams
+### Diagrams
 
 -	Structure 
-  - Class
-  - Component
-  - Object
-  - Composite structure
-  - Package
-  - Deployment
+   - Class
+   - Component
+   - Object
+   - Composite structure
+   - Package
+   - Deployment
 
 -	Behavior
-  - Use case 
-  - Activity
-  - State machine
-  - Interaction within/outside system
-    - Sequence
-    -	Communication
-    - Timing
-    -	Interaction overview
+   - Use case 
+   - Activity
+   - State machine
+   - Interaction within/outside system
+     - Sequence
+     - Communication
+     - Timing
+     - Interaction overview
 
 
 ```{graphviz}
@@ -72,7 +82,7 @@ digraph{
 Structure, Behaviour
 "UML diagrams" -> Structure
 "UML diagrams" -> Behaviour
-Structure -> Class, Component,	Object
+Structure -> Class, Component, Object, composite
 Behaviour -> "Use case", Activity, Interaction
 Interaction -> Sequence, Communication, Timing, "Interaction overview"
 }
