@@ -41,16 +41,21 @@ https://en.wikipedia.org/wiki/List_of_Unified_Modeling_Language_tools
 
 ## Design
 
+### Graphical syntax
+
+
+
 ## Diagrams
+
 -	Structure 
-   -	Class
-   -	Component
-   -	Object
-   -	Composite structure
-   -	Package
-   -	deployment
+   - Class
+   - Component
+   - Object
+   - Composite structure
+   - Package
+   - Deployment
 -	Behavior
-   -	Use case 
+   - Use case 
    - Activity
    - State machine
    - Interaction within/outside system
@@ -84,23 +89,12 @@ Interaction -> Sequence,	Communication, Timing,	Interaction-overview
 }
 ```
 
-
-
 ### Class
-
-#### plantuml
-
-```{plantuml} puml/class.puml
-```
-
-#### uml
 
 ```{uml} puml/class.puml
 ```
 
-
-
-###  Sequence
+### Sequence
 
 ```{uml}
    
@@ -113,11 +107,18 @@ end note
 @enduml
 ```
 
+```{uml} puml/external.uml
+```
+
+```{uml}
+User -> Authenticator : request
+Authenticator -> User : respond <token>
+```
+
 
 ### Activity
 ```{uml} puml/activity.puml
 ```
-
 
 
 ### Other
@@ -151,28 +152,24 @@ g --> UC3
 
 ```
 
-```{uml} puml/external.uml
+#### Component
+
+```{uml} puml/component.puml
+```
+#### Deployment
+
+```{uml} puml/deployment.puml
 ```
 
+#### State
 
-
-
-
-
-```{uml}
-User -> Authenticator : request
-Authenticator -> User : respond <token>
+```{uml} puml/state.puml
 ```
 
-#### GRAPHVIZ
+#### Timing
 
-```{graphviz} external.dot
+```{uml} puml/timing.puml
 ```
-
-   
-```{graphviz} puml/external.dot
-```
-
 
 
 ## Tools
@@ -246,8 +243,8 @@ Authenticator -> User : respond <token>
     - Designing phase of programming
   - The most important diagrams for software development are: 
     - class
-    - sequence 
-    - aktivitetsdiagram
+    - Sequence 
+    - Activity 
   - There are plenty of tools out there
     - some can produce code directly
     - some are script-based and well integrated in Markdown tools like Sphinx and HackMD
