@@ -119,16 +119,16 @@ end note
 
 
 ### Activity
-```{uml}
+```{plantuml}
 @startuml
 if( HAS AN
 OWNER AND IS OPEN) then(yes)
- if (CAN I RESOLVE) then
- if (waiting user input) then
- elseif (condition D) then (yes)
-  :Text 4;
+if (CAN I RESOLVE) then
+if (waiting user input) then
+elseif (condition D) then (yes)
+:Text 4;
 else ()
-  :Text else;
+:Text else;
 endif
 @stopuml
 ```
@@ -180,15 +180,6 @@ Object07 .. Object08 : some labels
 @enduml
 ```
 
-#### GRAPHVIZ
-
-```{graphviz} external.dot
-```
-
-   
-```{graphviz} puml/external.dot
-```
-
 ```{uml} puml/external.uml
 ```
 
@@ -201,6 +192,17 @@ Object07 .. Object08 : some labels
 User -> Authenticator : request
 Authenticator -> User : respond <token>
 ```
+
+#### GRAPHVIZ
+
+```{graphviz} external.dot
+```
+
+   
+```{graphviz} puml/external.dot
+```
+
+
 
 ## Tools
 
