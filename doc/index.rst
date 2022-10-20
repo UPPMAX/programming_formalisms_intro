@@ -65,10 +65,11 @@ Programming formalisms: Introduction day
       - Reproducible research:
             - dependencies    **Package development**, **Make tools that other people can also benefit from**
             - documentation    **Readable code**, **Make tools that other people can also benefit from**
-      - Tools:    **Best practice**
+      - Tools:    
             - UML:    **Best practice**
             - git:    **Best practice**
             - github:   **Make tools that other people can also benefit from**
+            - NBIS **best practices**: https://github.com/NBISweden/development-guidelines
             
     
    - The modules will cover theory with bridging practical examples and applications to enhance the theoretical understanding of the principles.
@@ -77,14 +78,7 @@ Programming formalisms: Introduction day
 
 .. prereq::
 
-   -  A reasonably recent version of **Git is installed**
-   -  **Git should be configured prior to the course**
-   -  A `GitHub <https://github.com>`__ user account (but alternatives
-      exist, see below).
-   -  Being comfortable with the command line. 
-   -  Students should be familiar with using a **text editor** on their
-      system. `Emacs` and `Vim` are excellent choices if you know how to use
-      them but `Nano` or `Notepad` on Windows are sufficient.
+   see the [setup.md file:](https://github.com/UPPMAX/programming_formalism/blob/main/setup.md)
 
 Some practicals
 ----------------
@@ -97,8 +91,16 @@ Some practicals
     
     - Please MUTE your microphone when you are not speaking and use the “Raise hand” functionality under the “Participants” window during the lecture. Please do not clutter the Zoom chat. Behave politely!
 
-    - There may be breakout rooms used in the Zoom for some of the exercises. You will be randomly assigned to one of them.  
+    - There will be breakout rooms used in the Zoom for some of the exercises. You will be randomly assigned to one of them the first day. The other days there will be defined groups.  
     
+    - Use **Zoom chat only**:
+      - in breakout rooms 
+      - for Zoom specific technical issues
+    
+.. warning:: 
+
+   - Lecture parts are recorded, so please be muted!
+   - Exercise sessions and breakout rooms are not recorded!
     
 .. admonition:: Collabration document HackMD
 
@@ -132,12 +134,19 @@ Schedule
 The teachers 
 ------------
 
-- Lars Eklund
-- Marcus Lundberg
-- Björn Claremar
-- Per Johansson
-- Jon Ander Novella
-- Matias Piqueras
+- [name= Lars Eklund], lars.eklund@uppmax.uu.se
+- [name= Björn Claremar], bjorn.claremar@uppmax.uu.se
+- [name=Marcus Lundberg],marcus.lundberg@uppmax.uu.se
+- [name= Matias Piqueras],matias.piqueras@uppmax.uu.se
+- [name=Per Johnsson],per.johnsson@nbis.se
+- [name=Jon Ander Novella],jon.novella@nbis.se
+
+
+
+.. warning:: First time course given
+
+   - This is a new course, and we can learn from its "growing pains". 
+   - Please give feedback in the end of the days on HackMD and after the course!
 
 
 .. admonition:: Learning outcomes of course
@@ -145,6 +154,14 @@ The teachers
    - You will be able to:
 
       - understand the pros of having...
+
+.. todo::
+
+   Concept
+   Analys och testverktyg
+   Bedöma /känsla för nivå av formalisering (projekt lämpar dig för)
+   Hitta info för att komma vidare på denna nivå
+
 
 
    
