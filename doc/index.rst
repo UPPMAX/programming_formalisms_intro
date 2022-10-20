@@ -114,6 +114,15 @@ Some practicals
         - don't focus too much on the formatting if you are new to "Markdown" language!
     
     - **Have a try with the Icebreaker question**
+    
+.. discussion:: Icebreaker
+
+   what..?
+
+.. todo::
+   
+   icebreaker question?
+
 
 .. admonition:: Exercises
 
