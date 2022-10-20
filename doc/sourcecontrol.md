@@ -37,11 +37,18 @@ links: https://nbis-reproducible-research.readthedocs.io/en/course_2104/git/
 
 #### Exercise
 
+
+
+
 ### Branching and merging
 
 #### Exercise
-Make changes 
-
+```{challenge} Make changes
+  - 
+```
+```{solution}
+6
+ ```
 ## Working remotely and sharing (github)
 
 ### Create repository - code along
