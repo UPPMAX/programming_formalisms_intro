@@ -16,10 +16,70 @@
 - Lecture 15 min
 ```
 
-- SDLC intro software development lifecycle 15 min
 
+## The waterfall model
 
-- A little deeper
+1.	Requirements
+2.	Analysis and design
+3.	Development
+4.	Test
+5.	Development and maintenance
+
+```{graphviz}
+digraph {
+   rankdir=LR;
+  "Requirements" -> "Analysis and design" -> "Development" -> Test -> "Development and maintenance";
+}
+
+- Good approach for **small and simple systems** where the team knows the system and **requirements very well**.
+- :warning:  Error is spreading 
+  - small mistakes in the beginning will have large impact on the end result. 
+    - e.g. bugs, architecture limiting extensions
+  - large costs economically and timely
+
+## Include iteration
+### Spiral model
+
+- Planning: reqs, identification: analysis
+- Risk analysis: build prototypes to identify risks
+- Engineering: software implementation
+- Evaluation: stakeholder review, feedback, plan next iteration
+- Each lab is new cycle: prototype--> RC --> launch
+- Risk driven
+
+IMAGE
+
+- **Disadvantages**
+  - Complexer than other SDLC models.
+  - Expensive: Spiral Model is **not suitable for small projects**
+  - Too much dependability on Risk Analysis
+  - Difficulty in time management: Number of phases is unknown at the start of the project
+
+### Rational unified process (RUP) 
+- created by IBM
+- Object-oriented software Engineering-like
+- Framework, pool of knowledge, customizable
+- **Phases**: Each containing **1 or more waterfall iterations**
+  - Inception (lifecycle objectives milestone)
+  - Elaboration (lifecycle architecture milestone)
+  - Construction (initial operational capability, milestone)
+  - Transition (production release milestone)
+- Disciplines
+  - Business modelling
+  - Requirements
+  - Analysis and design
+  - Implementation
+  - Test
+  - Deployment
+- Shortcomings: customizable but heavy, prescriptive, lacking test-driven developmen
+
+- **Key takeaways**
+  - RUP principles
+    - **Develop iteratively**
+    - Manage **requirements**, change
+    - **Continuously verify quality**
+    - **Model visually, component-based architecture**
+
 
 
 ```{todo}
@@ -30,20 +90,115 @@ Kostnad är en parameter också
 Scrum inte relevant för ej jättestora teams
 ```
 
+## Early Agile methods
+### [The Agile manifest](https://agilemanifesto.org/)
+**Values**
 
-- sorting out the concepts
-- Peer programming is QC/QA collab sharing
-- Pair programming is real-time development teqch to increase algorithm implementation, pass off, introduction
-- Agile development, the Agile manifest (Not a full process)
-- OOSE-like Rational Unified Proces
-- TDD
+```{admonition}
+**Individuals and interactions** over processes and tools
+**Working software** over comprehensive documentation
+**Customer collaboration** over contract negotiation
+**Responding to change** over following a plan
+```
 
-- development cycle?
-  - ex. maintenance
-  - code management plan!
-  -	for project applications?
+Or:
+"Agile = characterized by the division of tasks into short phases of work and frequent re-assessment and adaptation of plans."
 
-## Key steps
+### Some methods take aways
+#### Dynamic system development method (DSDM)
+- Timeboxing
+-	Moscow prioritization
+- Iterative and incremental approach
+
+#### Feature-driven development (FDD)
+- Feature teams
+- Parallel development
+- Tracking completion status (reporting, milestones, percentage completion)
+
+#### Crystal methods
+- People-centric
+- Frequent delivery
+- No one size fits all
+- Modern principles: automated tests, frequent integration
+
+### Modern approaches, key take-aways
+#### Scrum 
+- Business value-driven comprehensive framework
+- Scrum roles
+  - Owner (individual final authority): backlog (undone work)
+  - development team: self-organizing and cross-functional developers
+  - testers
+  - documenters
+  - DB admins 
+  - scrum master: agile coach, servant leader, removes barriers, coaches and convinces; does not manage
+- scrum workflow
+  - sprint planning->sprint->review->retrospective
+- Potentially shippable product increment each sprint
+
+#### Lean
+- **Minimize waste**, visualize production, look for bottlenecks, inefficiencies
+- Decide as late as possible
+  - Early in the process, what about change in technology, customers etc…?
+  - **Last responsible moment**: wait ‘til we have enough facts
+    - not make decisions based on preset timelines.
+- Deliver as fast as possible: small iterations are easier to manage
+
+#### Kanban
+- Visualize your work, limit work in progress
+
+#### Extreme Programming
+-	[https://www.agilealliance.org/glossary/xp](https://www.agilealliance.org/glossary/xp)
+-	Just In Time design
+
+```{admonition} Branching and merging is not listed as a core XP practice
+-	is generally not a favorable practice in Agile approaches. 
+-	Branching has the potential for creating technical debt if changes are not merged frequently. 
+-	The risks an be somewhat mitigated by merging frequently. 
+-	In any case, branching and merging .
+```
+
+##### Pair programming
+- Collaborate, continuous code inspection
+- real-time development technique to increase algorithm implementation
+
+##### Test-driven development
+- Write test
+- Write function to fail test
+- Write code to pass test
+
+#### Spotify
+- Culture
+  - Innovation: hackathons
+  - Learning from each other
+  - Failure-friendly culture
+  - (internal) code repositories, visible and open for other teams
+  - Minimize handoffs (help from other teams)
+  - Bureaucracy minimized
+
+
+#### DevOps
+- **Dev**elopers and testers
+- **Ops**: people working with release, servers, middleware, network, storage configs, monitoring techniques
+- DevOps aims to extend fast and frequent software feature development approach to build an efficient delivery pipeline.
+- **Continous**...
+  - **Integration**: Central repo
+  - **Development**: Ensuring stable product after every release
+  - **Deployment**: automating updates to production
+
+**And more...***
+
+
+
+
+
+
+
+
+
+
+
+## Key take aways
+### Basic steps
 
 1.	Plan/initiate
 2.	Gather requirements
@@ -61,70 +216,7 @@ digraph {
 }
 ```
 
-### Waterfall model
-1.	Requirements
-2.	Analysis and design
-3.	Development
-4.	Test
-5.	Development and maintenance
-
-- Problem:  error is spreading
-- good approach for small and simple systems where the team knows the system and requirements very well. I
-
-## Iterative models
-### Spiral model: iterating waterfalls, quadrants
-
-- Planning: reqs, identification: analysis
-- Risk analysis: build prototypes to identify risks
-- Engineering: software implementation
-- Evaluation: stakeholder review, feedback, plan next iteration
-- Each lab is new cycle: prototype--> RC --> aunch
-- Risk driven
-
-### Rational unified process (RUP) 
-- created by IBM
-- Framework, pool of knowledge, customizable
-- Phases: Each containing 1 or more waterfall iterations
-  - Inception (lifecycle objectives milestone
-  - Elaboration (lifecycle architecture milestone)
-  - Construction (initial operational capability, milestone)
-  - Transition (production release milestone)
-- Disciplines
-  - Business modelling
-  - Requirements
-  - Analysis and design
-  - Implementation
-  - Test
-  - Deployment
-- Shortcomings: customizable but heavy, prescriptive, lacking test-driven development
-
-- **Key takeaways**
-  - RUP principles
-  - Develop iteratively
-  - Manage requirements, change
-  - Continuously verify quality
-  - Model visually, component-based architecture
-
-## Early Agile methods
--	Dsdm: dynamic system development method
--	Feature-driven development (FDD)
--	Crystal methods
-
-## Modern approaches
-- Scrum 
-- Lean
-- Kanban
-- Extreme Programming
-  - pair programming
-  - TDD
-- Spotify
-- DevOps
-  - continous Integration, development and deployment
-  - **DevOps aims to extend fast and frequent software feature development approach to build an efficient delivery pipeline.**
-- CMMI (Capability maturity model integration)
-- Six Sigma
-
-## Conclusions
+### Conclusions
   - Each team unique requirements
   - Try out agile practices that make the most sense
   - Don’t be afraid of trial and error
