@@ -3,7 +3,6 @@ Programming formalisms: Introduction day
 ========================================
 
 .. adminition:: Course punchlines
-
    .. class:: center
    
       "Turning scripters into computer scientists”
