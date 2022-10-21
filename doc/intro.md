@@ -363,6 +363,9 @@ There are different types of remotes:
 - [Bitbucket](https://bitbucket.org) is yet another popular commercial site.
 - Another option is [NotABug](https://notabug.org)
 
+
+.. attention:: **Also workflows!**
+
 ```{objectives}
    - [Source and version control](https://uppmax.github.io/programming_formalism_intro/sourcecontrol.html) aims to
       - Introduce git and github
