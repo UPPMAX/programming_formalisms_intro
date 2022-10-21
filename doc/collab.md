@@ -1,6 +1,12 @@
 # Collaboration
 
-rent types of remotes:
+
+```{instructor-note}
+- Git Lecture+typealong 25 min
+
+```
+
+Different types of remotes:
 - If you have a server you can ssh to, you can use that as a remote.
 - [GitHub](https://github.com) is a popular, closed-source commercial site.
 - [GitLab](https://about.gitlab.com) is a popular, open-core
