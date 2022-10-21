@@ -14,8 +14,8 @@
 ```
 
 ```{instructor-note}
-- Lecture 15 min
-- Discussions 10 min
+- Lecture 25 min
+- Discussions 15 min
 ```
 
 ## What is software?
