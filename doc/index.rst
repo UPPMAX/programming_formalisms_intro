@@ -69,24 +69,24 @@ Programming formalisms — Introduction day
 
    - We will cover an introduction to 
    
-      - Algorithms and Data structures:    **Programming skills**, **Train logic**
-      - Programming Paradigms:    **Classical training**, **Big-picture architecture of programs**
-            - especially structured:    **Readable code**
-            - functional programming:    **Modular development**
-            - modular development:    **Modular development**
-            - code reusability:    **Reusable code**
-            - Object oriented programming:    **Modular development**, **Object-oriented programming**
-            - testing:    **Best practices**
-            - optimisation:    **Optimize**
+      - Algorithms and Data structures:    *Programming skills*, *Train logic*
+      - Programming Paradigms:    *Classical training**, **Big-picture architecture of programs*
+            - especially structured:    *Readable code*
+            - functional programming:    *Modular development*
+            - modular development:    *Modular development*
+            - code reusability:    *Reusable code*
+            - Object oriented programming:    *Modular development*, *Object-oriented programming**
+            - testing:    *Best practices*
+            - optimisation:    **Optimize*
              
       - Reproducible research:
-            - dependencies    **Package development**, **Make tools that other people can also benefit from**
-            - documentation    **Readable code**, **Make tools that other people can also benefit from**
-      - Tools:    
-            - UML:    **Best practice**
-            - git:    **Best practice**
-            - github:   **Make tools that other people can also benefit from**
-            - NBIS **best practices**: https://github.com/NBISweden/development-guidelines
+            - dependencies    *Package development*, *Make tools that other people can also benefit from*
+            - documentation    *Readable code*, *Make tools that other people can also benefit from*
+      - Tools:   
+            - UML:    *Best practice*
+            - git:    *Best practice*
+            - github:   *Make tools that other people can also benefit from*
+            - NBIS *best practices*: https://github.com/NBISweden/development-guidelines
             
     
    - The modules will cover theory with bridging practical examples and applications to enhance the theoretical understanding of the principles.
