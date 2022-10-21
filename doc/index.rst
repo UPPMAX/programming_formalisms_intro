@@ -2,7 +2,7 @@
 Programming formalisms — Introduction day
 ========================================
 
-.. attention:: Course punchlines
+.. admonition:: Course punchlines
    
     - "Turning scripters into computer scientists”
     - "Add theory to bolster already present practical skills"
@@ -27,8 +27,9 @@ Programming formalisms — Introduction day
  
  ---
 
-.. info:: Your background
+.. info:: 
 
+   **Your background**
    - Math
    - Self-taught
    - PDEs
@@ -46,8 +47,9 @@ Programming formalisms — Introduction day
    - software development for nuclear reactor analysis
 
 
-.. info:: Your expectations
+.. info:: 
 
+    **Your expectations**
    - Programming skills
    - Readable code
    - Reusable code
@@ -96,6 +98,9 @@ Programming formalisms — Introduction day
 Some practicals
 ----------------
         
+ZOOM
+====
+
 .. important:: Zoom
 
     - The course is run over Zoom. You should have gotten an email with the links
@@ -115,7 +120,9 @@ Some practicals
    - Lecture parts are recorded, so please be muted!
    - Exercise sessions and breakout rooms are not recorded!
     
-.. important:: Collabration document HackMD
+Collabration document HackMD
+============================
+.. info:: 
 
     - Use the HackMD page for the workshop with your questions.
      
@@ -146,26 +153,26 @@ Some practicals
 Schedule
 --------------------
 
-- Day1 Intro (Björn Claremar)
-- Day2 Algorithms and data structures (Marcus Lundberg)
-- Day3-4 Paradigms: design patterns, modular code (Lars Eklund, Jon Ander Novella)
-- Day4 TDD, testing (Per Johansson, Matias Piqueras)
-- Day5 Optimization (Marcus Lundberg)
+- Day1: Intro (Björn Claremar)
+- Day2: Algorithms and data structures (Marcus Lundberg)
+- Day3-4: Paradigms: design patterns, modular code (Lars Eklund, Jon Ander Novella)
+- Day4: Test-drive development, testing (Per Johansson, Matias Piqueras)
+- Day5: Optimization (Marcus Lundberg)
 
 
 The teachers 
 ------------
 
-- [name= Lars Eklund], lars.eklund@uppmax.uu.se
-- [name= Björn Claremar], bjorn.claremar@uppmax.uu.se
-- [name=Marcus Lundberg],marcus.lundberg@uppmax.uu.se
-- [name= Matias Piqueras],matias.piqueras@uppmax.uu.se
-- [name=Per Johnsson],per.johnsson@nbis.se
-- [name=Jon Ander Novella],jon.novella@nbis.se
+- Lars Eklund, lars.eklund@uppmax.uu.se
+- Björn Claremar, bjorn.claremar@uppmax.uu.se
+- Marcus Lundberg, marcus.lundberg@uppmax.uu.se
+- Jon Ander Novella, jon.novella@nbis.se
+- Per Johnsson, per.johnsson@nbis.se
+- Matias Piqueras, matias.piqueras@uppmax.uu.se
 
 
 
-.. warning:: First time course given
+.. warning:: **First time course given**
 
    - This is a new course, and we can learn from its "growing pains". 
    - Please give feedback in the end of the days on HackMD and after the course!
