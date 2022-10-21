@@ -34,14 +34,8 @@ This material is based on or inspired by the material from [NBIS](https://nbis-r
 
 ```{prereq}
 
-   -  A reasonably recent version of **Git is installed**
-      (`installation
-      instructions <https://coderefinery.github.io/installation/>`__).
-   -  **Git should be configured prior to the course**
-      following `our installation
-      instructions <https://coderefinery.github.io/installation/>`__.
-   -  A `GitHub <https://github.com>`__ user account (but alternatives
-      exist, see below).
+   -  **Git and GITHUB should be configured prior to the course**
+      following [https://coderefinery.github.io/installation](https://github.com/UPPMAX/programming_formalism/blob/main/setup.md)).
    -  Being comfortable with the command line. No expertise is required,
       but the lesson will be mostly taken from the command line.
    -  Students should be familiar with using a **text editor** on their
@@ -90,7 +84,7 @@ This material is based on or inspired by the material from [NBIS](https://nbis-r
    - Git BASH  
    - PowerShell
 
-´´´
+```
 
 If you haven't already configured Git, please follow the instructions in the
 [installation instructions](https://coderefinery.github.io/installation/shell-and-git/#configuration).
@@ -110,9 +104,9 @@ $ git config --list
 ## Type-along
 
 ### Create repository 
-We will create a repository (repo) called "Diagrams".
+We will create a repository (repo) called `Diagrams.
 
-Be sure you are in a directory like Programming_Formalisms or similar (to have track of your work)
+Be sure you are in a directory like "Programming_Formalisms" or similar (to have track of your work)
 
 One of the basic principles of Git is that it is **easy to create repositories**:
 ```console
@@ -122,6 +116,8 @@ $ git init
 ```
 
 That's it! With `git init` have now created an empty Git repository.
+
+#### Check status
 
 We will use `git status` a lot to check out what is going on:
 
@@ -193,14 +189,84 @@ stop
 
 #### Staging files
 
+
+As mentioned above, in Git you can always check the status of files in your repository using
+`git status`. It is always a safe command to run and in general a good idea to
+do when you are trying to figure out what to do next:
+
+```console
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        activity.puml
+        class.puml
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+```
+
+The two files are untracked in the repository (directory). You want to **add the files** (focus the camera)
+to the list of files tracked by Git. Git does not track
+any files automatically and you need make a conscious decision to add a file. Let's do what
+Git hints at and add the files:
+
+
+```console
+$ git add activity.puml
+$ git add class.puml
+$ git status
+
+On branch master
+
+Initial commit
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   activity.puml
+        new file:   class.puml
+```
+
+Now this change is *staged* and ready to be committed.
+
 #### Commit
 
-#### Check status
+Let us now commit the change to the repository:
 
+```console
+$ git commit -m "adding class and activity diagrams"
 
-#### Exercise
+[master (root-commit) 8adee34] adding class and activity diagrams
+ 2 files changed, 26 insertions(+)
+ create mode 100644 activity.puml
+ create mode 100644 class.puml
+```
 
+Right after we query the status to get this useful command into our muscle memory:
 
+```console
+$ git status
+
+On branch master
+nothing to commit, working tree clean
+
+```
+
+What does the `-m` flag mean? Let us check the help page for that command:
+
+```console
+$ git help commit
+```
+
+You should see a very long help page as the tool is very versatile (press q to quit).
+Do not worry about this now but keep in mind that you can always read the help files
+when in doubt. Searching online can also be useful, but choosing search terms
+to find relevant information takes some practice and discussions in some
+online threads may be confusing.
+Note that help pages also work when you don't have a network connection!
 
 
 ### Branching and merging
