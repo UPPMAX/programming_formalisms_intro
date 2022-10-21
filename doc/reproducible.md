@@ -149,6 +149,10 @@ Additional labels for pre-release and build metadata are available as extensions
     Software licenses matter. And this is what we will discuss in the next episode.
     
     
+```{info}
+More on Wednesday!
+```
+    
 
 ### Open source
 
