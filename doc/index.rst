@@ -5,8 +5,8 @@ Programming formalisms: Introduction day
 .. admonition:: Course punchlines
    :align: center
    
-      "Turning scripters into computer scientists”
-      "Add theory to bolster already present practical skills"
+    "Turning scripters into computer scientists”
+    "Add theory to bolster already present practical skills"
 
 
 .. admonition:: This course aims to 
