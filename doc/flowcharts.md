@@ -1,7 +1,7 @@
 # Planning phase
 
 ```{questions}
-  - How to use UML and ?
+  - How to use UML and Pseudocode?
   - Can I learn it?
 ```
 
