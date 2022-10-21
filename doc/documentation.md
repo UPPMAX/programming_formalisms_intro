@@ -1,8 +1,8 @@
 # Documentation
 
 ```{instructor-note}
-- Lecture 15 min
-- Exercises 10 min
+- Lecture 20 min
+- Exercises 25 min
 ```
 
 ```{discussion} Motivation: Why should we document code?
