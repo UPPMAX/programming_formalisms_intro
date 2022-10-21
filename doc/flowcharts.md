@@ -18,17 +18,43 @@
 - Exercises 30 min
 ```
 
+## The planning steps
+- get an overview of the project/program.
+- help planning writing the code
+- identify parts needed
 
-## Analys step
-- Object
-- (text document)
+Lifecycle steps, example
+1.	Plan/initiate
+2.	Gather requirements
+3.	Design
 
+or
+
+1. Analysis
+  - to state the problem and define inputs and outputs
+    - graphical tools like UML
+2. Design
+  - to find out the specific algorithms needed
+    - pseudocode
+
+## Analysis step
+- UML Diagrams
+  - Flowchart 
+- Object-orientation programming
+  - Identify objects
+- Functional programming
+  - Identify functions  
+- Text can also work here, describing the problem as a whole
 
 ## Design step
 
 - Pseudocode
-- Objects --> classes (UML)
-- Functions and/or modules
+- Object-orientation programming
+  - Identify classes that objects can belong to
+  - UML
+- Functional programming
+  - Identify algorithms 
+
 
 ## Unified Modeling Language
 
