@@ -19,6 +19,16 @@
 
 - A little deeper
 
+
+```{todo}
+Pair programming kommer testas
+Continuous integration, delivery, deployment
+Tests nivåer
+Kostnad är en parameter också
+Scrum inte relevant för ej jättestora teams
+```
+
+
 - sorting out the concepts
 - Peer programming is QC/QA collab sharing
 - Pair programming is real-time development teqch to increase algorithm implementation, pass off, introduction
