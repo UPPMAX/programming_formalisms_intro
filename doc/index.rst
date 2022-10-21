@@ -15,7 +15,8 @@ Programming formalisms — Introduction day
       - life scientists, 
       - bioinformaticians, 
       - and other scientists 
-      - ... with some experience in programming and scripting an understanding of the underlying principles of software development, design, and programming. 
+      ... with some experience in programming and scripting an understanding of the underlying principles of software development, design, and programming. 
+      
    - strengthen the understanding of:
       - more advanced programming concepts
       - ability to produce more reusable scripts through modular programming 
@@ -27,7 +28,7 @@ Programming formalisms — Introduction day
  
 
 
-.. info:: 
+.. note:: 
 
    **Your background**
    
@@ -48,7 +49,7 @@ Programming formalisms — Introduction day
    - software development for nuclear reactor analysis
 
 
-.. info:: 
+.. note:: 
 
     **Your expectations**
     
@@ -122,9 +123,10 @@ ZOOM
    - Lecture parts are recorded, so please be muted!
    - Exercise sessions and breakout rooms are not recorded!
     
-Collabration document HackMD
-============================
-.. info:: 
+Collaobration document HackMD
+=============================
+
+.. note:: 
 
     - Use the HackMD page for the workshop with your questions.
      
@@ -140,11 +142,6 @@ Collabration document HackMD
 .. discussion:: Icebreaker
 
    - Where do you work?
-   
-.. todo::
-   
-   icebreaker question?
-
 
 .. admonition:: Exercises
 
