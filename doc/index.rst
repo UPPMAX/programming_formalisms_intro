@@ -3,7 +3,7 @@ Programming formalisms: Introduction day
 ========================================
 
 .. adminition:: Course punchlines
-   .. class:: center
+   :align: center
    
       "Turning scripters into computer scientists”
       "Add theory to bolster already present practical skills"
