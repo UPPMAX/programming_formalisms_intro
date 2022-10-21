@@ -25,11 +25,12 @@ Programming formalisms — Introduction day
       - Git and Github
    - convince the benefits of sharing and social coding
  
- ---
+
 
 .. info:: 
 
    **Your background**
+   
    - Math
    - Self-taught
    - PDEs
@@ -50,6 +51,7 @@ Programming formalisms — Introduction day
 .. info:: 
 
     **Your expectations**
+    
    - Programming skills
    - Readable code
    - Reusable code
