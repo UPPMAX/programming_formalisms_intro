@@ -10,6 +10,8 @@
 - More on Wednesday!!
 ```
 
+
+
 ```{instructor-note}
 - Lecture 15 min
 ```
@@ -128,8 +130,9 @@ digraph {
   - Don’t be afraid of trial and error
   - Continuous learning
 
-
-## Discussion about steps?
+```{info}
+More on Wednesday
+```
 
 ```{keypoints}
 - Typical workflow:
