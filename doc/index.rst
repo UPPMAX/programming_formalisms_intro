@@ -129,6 +129,8 @@ Collaboration document HackMD
 .. note:: 
 
     - Use the HackMD page for the workshop with your questions.
+    - Tell us directly if it is too fast or you need clarification.
+       -  Either a helper will answer the question or the helper will pose the question to the teacher.
      
     - Depending on how many helpers there are we'll see how fast there are answers. 
         - Some answers may come after the workshop.
@@ -175,6 +177,7 @@ The teachers
 
    - This is a new course, and we can learn from its "growing pains". 
    - Please give feedback in the end of the days on HackMD and after the course!
+   - Tell us in HackMD directly if it is too fast or need clarification. 
 
 
 .. admonition:: Learning outcomes of course
