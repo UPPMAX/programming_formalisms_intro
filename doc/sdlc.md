@@ -56,22 +56,11 @@ IMAGE
   - Difficulty in time management: Number of phases is unknown at the start of the project
 
 ### Rational unified process (RUP) 
-- created by IBM
-- Object-oriented software Engineering-like
-- Framework, pool of knowledge, customizable
 - **Phases**: Each containing **1 or more waterfall iterations**
   - Inception (lifecycle objectives milestone)
   - Elaboration (lifecycle architecture milestone)
   - Construction (initial operational capability, milestone)
   - Transition (production release milestone)
-- Disciplines
-  - Business modelling
-  - Requirements
-  - Analysis and design
-  - Implementation
-  - Test
-  - Deployment
-- Shortcomings: customizable but heavy, prescriptive, lacking test-driven developmen
 
 - **Key takeaways**
   - RUP principles
@@ -79,18 +68,9 @@ IMAGE
     - Manage **requirements**, change
     - **Continuously verify quality**
     - **Model visually, component-based architecture**
+- Shortcomings: customizable but heavy, prescriptive, lacking test-driven developmen
 
-
-
-```{todo}
-Pair programming kommer testas
-Continuous integration, delivery, deployment
-Tests nivåer
-Kostnad är en parameter också
-Scrum inte relevant för ej jättestora teams
-```
-
-## Early Agile methods
+## Take aways from other methods 
 ### [The Agile manifest](https://agilemanifesto.org/)
 **Values**
 
@@ -104,29 +84,27 @@ Scrum inte relevant för ej jättestora teams
 Or:
 "Agile = characterized by the division of tasks into short phases of work and frequent re-assessment and adaptation of plans."
 
-### Some methods take aways
-#### Dynamic system development method (DSDM)
+### Dynamic system development method (DSDM)
 - Timeboxing
 -	Moscow prioritization
 - Iterative and incremental approach
 
-#### Feature-driven development (FDD)
+### Feature-driven development (FDD)
 - Feature teams
 - Parallel development
 - Tracking completion status (reporting, milestones, percentage completion)
 
-#### Crystal methods
+### Crystal methods
 - People-centric
 - Frequent delivery
-- No one size fits all
+- No "one size fits all"
 - Modern principles: automated tests, frequent integration
 
-### Modern approaches, key take-aways
-#### Scrum 
+### Scrum (For very large projects)
 - Business value-driven comprehensive framework
 - Scrum roles
-  - Owner (individual final authority): backlog (undone work)
-  - development team: self-organizing and cross-functional developers
+  - Owner 
+  - development team:
   - testers
   - documenters
   - DB admins 
@@ -134,19 +112,18 @@ Or:
 - scrum workflow
   - sprint planning->sprint->review->retrospective
 - Potentially shippable product increment each sprint
+- Suitable for very large projects
 
-#### Lean
+#### Lean 
 - **Minimize waste**, visualize production, look for bottlenecks, inefficiencies
-- Decide as late as possible
-  - Early in the process, what about change in technology, customers etc…?
-  - **Last responsible moment**: wait ‘til we have enough facts
+- **Last responsible moment**: wait ‘til we have enough facts
     - not make decisions based on preset timelines.
 - Deliver as fast as possible: small iterations are easier to manage
 
-#### Kanban
-- Visualize your work, limit work in progress
+### Kanban
+- Visualize your work, **limit work in progress**
 
-#### Extreme Programming
+### Extreme Programming
 -	[https://www.agilealliance.org/glossary/xp](https://www.agilealliance.org/glossary/xp)
 -	Just In Time design
 
@@ -161,12 +138,12 @@ Or:
 - Collaborate, continuous code inspection
 - real-time development technique to increase algorithm implementation
 
-##### Test-driven development
+#### Test-driven development
 - Write test
 - Write function to fail test
 - Write code to pass test
 
-#### Spotify
+### Spotify
 - Culture
   - Innovation: hackathons
   - Learning from each other
@@ -176,7 +153,7 @@ Or:
   - Bureaucracy minimized
 
 
-#### DevOps
+### DevOps
 - **Dev**elopers and testers
 - **Ops**: people working with release, servers, middleware, network, storage configs, monitoring techniques
 - DevOps aims to extend fast and frequent software feature development approach to build an efficient delivery pipeline.
@@ -186,16 +163,6 @@ Or:
   - **Deployment**: automating updates to production
 
 **And more...***
-
-
-
-
-
-
-
-
-
-
 
 ## Key take aways
 ### Basic steps
@@ -217,10 +184,9 @@ digraph {
 ```
 
 ### Conclusions
-  - Each team unique requirements
+  - Each team has unique requirements
   - Try out agile practices that make the most sense
   - Don’t be afraid of trial and error
-  - Continuous learning
 
 ```{info}
 More on Wednesday
