@@ -161,7 +161,7 @@ Or:
   - **Development**: Ensuring stable product after every release
   - **Deployment**: automating updates to production
 
-**And more...***
+**And more...**
 
 ## Key take aways
 ### Basic steps
