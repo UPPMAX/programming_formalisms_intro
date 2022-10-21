@@ -20,7 +20,7 @@ Answer in HackMD
 - Git Exercise 15 min
 - Github locally + type along 15
 ```
-This material is based on or inspired by the material from {NBIS](https://nbis-reproducible-research.readthedocs.io/en/course_2104/git/) and [CodeRefinery](https://coderefinery.github.io/git-intro/)
+This material is based on or inspired by the material from [NBIS](https://nbis-reproducible-research.readthedocs.io/en/course_2104/git/) and [CodeRefinery](https://coderefinery.github.io/git-intro/)
 
 
 
@@ -32,7 +32,7 @@ This material is based on or inspired by the material from {NBIS](https://nbis-r
 - In the separate collaborative Git lesson, we teach more use of remote repositories and good collaborative workflows. 
 
 
-.. prereq::
+```{prereq}
 
    -  A reasonably recent version of **Git is installed**
       (`installation
