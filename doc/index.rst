@@ -102,29 +102,29 @@ Some practicals
 ----------------
         
 ZOOM
-====
+++++
 
-.. important:: Zoom
+.. important::
 
     - The course is run over Zoom. You should have gotten an email with the links
            
     - When you join the Zoom meeting, use your REAL NAME.
     
-    - Please MUTE your microphone when you are not speaking and use the “Raise hand” functionality under the “Participants” window during the lecture. 
+    - Please MUTE your microphone when you are not speaking and use the “**Raise hand**” functionality under the “Participants” window during the lecture. 
     - Behave politely!
     - There will be breakout rooms used in the Zoom for some of the exercises. You will be randomly assigned to one of them the first day. The other days there will be defined groups.  
     
     - Use **Zoom chat only**:
-      - in breakout rooms 
-      - for Zoom specific technical issues
+       - in breakout rooms 
+       - for Zoom specific technical issues
     
 .. warning:: 
 
    - Lecture parts are recorded, so please be muted!
    - Exercise sessions and breakout rooms are not recorded!
     
-Collaobration document HackMD
-=============================
+Collaboration document HackMD
++++++++++++++++++++++++++++++
 
 .. note:: 
 
