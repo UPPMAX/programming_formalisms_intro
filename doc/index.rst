@@ -2,7 +2,7 @@
 Programming formalisms — Introduction day
 ========================================
 
-.. admonition:: Course punchlines
+.. attention:: Course punchlines
    
     - "Turning scripters into computer scientists”
     - "Add theory to bolster already present practical skills"
@@ -24,9 +24,10 @@ Programming formalisms — Introduction day
       - Unified Model Language
       - Git and Github
    - convince the benefits of sharing and social coding
-     
+ 
+ ---
 
-.. admonition:: Your background
+.. info:: Your background
 
    - Math
    - Self-taught
@@ -45,7 +46,7 @@ Programming formalisms — Introduction day
    - software development for nuclear reactor analysis
 
 
-.. admonition:: Your expectations
+.. info:: Your expectations
 
    - Programming skills
    - Readable code
@@ -95,7 +96,7 @@ Programming formalisms — Introduction day
 Some practicals
 ----------------
         
-.. admonition:: Zoom
+.. important:: Zoom
 
     - The course is run over Zoom. You should have gotten an email with the links
            
@@ -114,7 +115,7 @@ Some practicals
    - Lecture parts are recorded, so please be muted!
    - Exercise sessions and breakout rooms are not recorded!
     
-.. admonition:: Collabration document HackMD
+.. important:: Collabration document HackMD
 
     - Use the HackMD page for the workshop with your questions.
      
@@ -129,8 +130,8 @@ Some practicals
     
 .. discussion:: Icebreaker
 
-   what..?
-
+   - Where do you work?
+   
 .. todo::
    
    icebreaker question?
@@ -172,16 +173,17 @@ The teachers
 
 .. admonition:: Learning outcomes of course
 
-   - You will be able to:
-
-      - understand the pros of having...
-
-.. todo::
-
-   Concept
-   Analys och testverktyg
-   Bedöma /känsla för nivå av formalisering (projekt lämpar dig för)
-   Hitta info för att komma vidare på denna nivå
+   The particpants shall ...
+     - have an introductory understanding of formal algorithms and Algorithm design
+     - know some common data structures  and how to utilise it in our design
+     - be familiar with the object oriented paradigm
+     - have an overview of other design and development paradigms
+     - have a basic understanding of modular programming and modular design
+     - have an understanding of the software life cycle
+     - be familiar with common development practices and "best practices" of software development
+     - have an introductory understanding of Testing and test driven design
+     - have an introductory understanding of source control
+     - have an introduction to common concerns and practices in optimisation in development of software
 
 
 
