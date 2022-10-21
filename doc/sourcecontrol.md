@@ -47,6 +47,10 @@ This material is based on or inspired by the material from [NBIS](https://nbis-r
    -  Students should be familiar with using a **text editor** on their
       system. Emacs and Vim are excellent choices if you know how to use
       them but Nano or Notepad on Windows are sufficient.
+      
+```
+
+
 
 ### What is Git, and what is a Git repository?
 
@@ -76,6 +80,18 @@ This material is based on or inspired by the material from [NBIS](https://nbis-r
 
 ### Before we start we need to configure Git
 
+```{Attention}
+- Start your terminal of choice
+   - MAC terminal 
+   - iTerm
+   - WSL environment in
+     - MobaxTerm
+     - Visual Studio Code
+   - Git BASH  
+   - PowerShell
+
+´´´
+
 If you haven't already configured Git, please follow the instructions in the
 [installation instructions](https://coderefinery.github.io/installation/shell-and-git/#configuration).
 
@@ -93,11 +109,87 @@ $ git config --list
 
 ## Type-along
 
+### Create repository 
+We will create a repository (repo) called "Diagrams".
+
+Be sure you are in a directory like Programming_Formalisms or similar (to have track of your work)
+
+One of the basic principles of Git is that it is **easy to create repositories**:
+```console
+$ mkdir Diagrams
+$ cd Diagrams
+$ git init
+```
+
+That's it! With `git init` have now created an empty Git repository.
+
+We will use `git status` a lot to check out what is going on:
+
+```console
+$ git status
+
+On branch master
+
+No commits yet
+
+nothing to commit (create/copy files and use "git add" to track)
+```
+
+We will make sense of this information during this workshop.
 
 
-#### Create repo
+```{admonition} A new repository from an existing project on own computer or HPC user account.
 
-#### Git workflow
+- Say you’ve got an existing project that you want to start tracking with git.
+
+    - Go into the directory containing the project.
+    - Type `git init`.
+    - Type `git add` to add all of the relevant files.
+    - You’ll probably want to create a `.gitignore` file right away, to indicate all of the files you don’t want to track. Use `git add .gitignore`, too.
+    - Type `git commit`.
+
+```
+
+### Git everyday steps
+
+
+Let us now **create two files**.
+
+One file is called `class.puml` and contains:
+
+```shell
+@startuml
+ class01 <|-- class02
+ class03 *-- class04
+ class05 o-- class06
+
+ class01- class03 : knows >
+ class class01 {
+    -var01 : Integer
+    Time : Date
+    #method01()
+    +get_var01()
+    {method}Without paranteces or Qualifiers
+ }
+@enduml
+```
+
+The second file is called `activity.puml` and contains:
+
+```shell
+@startuml
+start
+
+if (Graphviz installed?) then (yes)
+  :process all\ndiagrams;
+else (no)
+  :process only
+  __sequence__ and __activity__ diagrams;
+endif
+
+stop
+@enduml
+```
 
 #### Staging files
 
