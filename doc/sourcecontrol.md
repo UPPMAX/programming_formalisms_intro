@@ -12,8 +12,9 @@
 ```
 
 ```{instructor-note}
-- Lecture 15 min
-- Discussions 10 min
+- Git Lecture+typealong 15 min
+- Git Exercise 15 min
+- Github locally + type along 15
 ```
 
 ## The essence of version control
@@ -29,11 +30,14 @@ links: https://nbis-reproducible-research.readthedocs.io/en/course_2104/git/
 
 #### Create repo
 
+#### Git workflow
+
 #### Staging files
 
 #### Commit
 
 #### Check status
+
 
 #### Exercise
 
@@ -51,7 +55,7 @@ links: https://nbis-reproducible-research.readthedocs.io/en/course_2104/git/
  ```
 ## Working remotely and sharing (github)
 
-### Create repository - code along
+### Create Create a remote repository
 Create a remote repository
 
     Log in to your GitHub account and press the New button on the left:
