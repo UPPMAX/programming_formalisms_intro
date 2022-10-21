@@ -300,6 +300,10 @@ else
 ## Exercise
 
 
+```{info}
+More on Wednesday!
+```
+
 ## Summary
 
 ````{Keypoints}
