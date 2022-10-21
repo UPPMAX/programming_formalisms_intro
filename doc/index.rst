@@ -2,17 +2,30 @@
 Programming formalisms: Introduction day
 ========================================
 
-- “Turning scripters into computer scientists”
-- Add theory to bolster already present practical skills
+.. adminition:: Course punchlines
 
-
-.. admonition:: This course
+   .. class:: center
    
-   - This course aims to give life scientists, bioinformaticians, and other scientists with some experience in programming and scripting an understanding of the underlying principles of software development, design, and programming. 
-   - The course aims to strengthen the understanding of:
+      "Turning scripters into computer scientists”
+      "Add theory to bolster already present practical skills"
+
+
+.. admonition:: This course aims to 
+   
+   - give...
+     - life scientists, 
+     - bioinformaticians, 
+     - and other scientists 
+     - ... with some experience in programming and scripting an understanding of the underlying principles of software development, design, and programming. 
+   - strengthen the understanding of:
       - more advanced programming concepts
-      - ability to produce more reusable scripts through modular programming and to 
+      - ability to produce more reusable scripts through modular programming 
       - enable a better understanding of how to evaluate a script or programs performance.
+   - encourage the use of software development tools, like:
+     - Unified Model Language
+     - Git and Github
+   - convince the benefits of sharing and social coding
+     
 
 .. admonition:: Your background
 
@@ -78,7 +91,7 @@ Programming formalisms: Introduction day
 
 .. prereq::
 
-   see the [setup.md file:](https://github.com/UPPMAX/programming_formalism/blob/main/setup.md)
+   See the [setup.md](https://github.com/UPPMAX/programming_formalism/blob/main/setup.md) file
 
 Some practicals
 ----------------
@@ -89,8 +102,8 @@ Some practicals
            
     - When you join the Zoom meeting, use your REAL NAME.
     
-    - Please MUTE your microphone when you are not speaking and use the “Raise hand” functionality under the “Participants” window during the lecture. Please do not clutter the Zoom chat. Behave politely!
-
+    - Please MUTE your microphone when you are not speaking and use the “Raise hand” functionality under the “Participants” window during the lecture. 
+    - Behave politely!
     - There will be breakout rooms used in the Zoom for some of the exercises. You will be randomly assigned to one of them the first day. The other days there will be defined groups.  
     
     - Use **Zoom chat only**:
