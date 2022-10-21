@@ -30,6 +30,7 @@ digraph {
    rankdir=LR;
   "Requirements" -> "Analysis and design" -> "Development" -> Test -> "Development and maintenance";
 }
+```
 
 - Good approach for **small and simple systems** where the team knows the system and **requirements very well**.
 - :warning:  Error is spreading 
@@ -40,12 +41,12 @@ digraph {
 ## Include iteration
 ### Spiral model
 
-- Planning: reqs, identification: analysis
-- Risk analysis: build prototypes to identify risks
-- Engineering: software implementation
-- Evaluation: stakeholder review, feedback, plan next iteration
-- Each lab is new cycle: prototype--> RC --> launch
-- Risk driven
+1. Planning: reqs, identification: analysis
+1. Risk analysis: build prototypes to identify risks
+1. Engineering: software implementation
+1. Evaluation: stakeholder review, feedback, plan next iteration
+1. Each lab is new cycle: prototype--> RC --> launch
+1. Risk driven
 
 IMAGE
 
@@ -68,7 +69,7 @@ IMAGE
     - Manage **requirements**, change
     - **Continuously verify quality**
     - **Model visually, component-based architecture**
-- Shortcomings: customizable but heavy, prescriptive, lacking test-driven developmen
+- Shortcomings: customizable but heavy, prescriptive, (lacking test-driven development)
 
 ## Take aways from other methods 
 ### [The Agile manifest](https://agilemanifesto.org/)
@@ -83,9 +84,16 @@ Customer collaboration** over contract negotiation
 Or:
 "Agile = characterized by the division of tasks into short phases of work and frequent re-assessment and adaptation of plans."
 
+**Most of the following models are Agile...**
+
 ### Dynamic system development method (DSDM)
 - Timeboxing
--	Moscow prioritization
+- MoSCoW prioritization: 
+   - must-have
+   - should-have
+   - could-have
+   - and won’t-have, or will not have right now. 
+     - Some companies also use the “W” in MoSCoW to mean “wish.”
 - Iterative and incremental approach
 
 ### Feature-driven development (FDD)
