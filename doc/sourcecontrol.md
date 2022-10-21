@@ -12,7 +12,7 @@
 ```
 
 ```{instructor-note}
-- Git Lecture+typealong 15 min
+- Git Lecture+typealong 25 min
 - Git Exercise 15 min
 - Github locally + type along 15
 ```
