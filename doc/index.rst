@@ -154,11 +154,11 @@ Collaboration document HackMD
 Schedule
 --------------------
 
-- Day1: Intro (Björn Claremar)
-- Day2: Algorithms and data structures (Marcus Lundberg)
-- Day3-4: Paradigms: design patterns, modular code (Lars Eklund, Jon Ander Novella)
-- Day4: Test-drive development, testing (Per Johansson, Matias Piqueras)
-- Day5: Optimization (Marcus Lundberg)
+- **Day1**: Intro (Björn Claremar)
+- **Day2**: Algorithms and data structures (Marcus Lundberg)
+- **Day3-4**: Paradigms: design patterns, modular code (Lars Eklund, Jon Ander Novella)
+- **Day4**: Test-drive development, testing (Per Johansson, Matias Piqueras)
+- **Day5**: Optimization (Marcus Lundberg)
 
 
 The teachers 
@@ -178,6 +178,7 @@ The teachers
    - This is a new course, and we can learn from its "growing pains". 
    - Please give feedback in the end of the days on HackMD and after the course!
    - Tell us in HackMD directly if it is too fast or need clarification. 
+   - Interaction with you via HackMD will benefit both you, your student mates and the teachers!
 
 
 .. admonition:: Learning outcomes of course
