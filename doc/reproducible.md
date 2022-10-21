@@ -138,57 +138,26 @@ Additional labels for pre-release and build metadata are available as extensions
 ## Social coding
 
 
->    Our work depends on outputs from others. Research of others depends on our outputs.
+-  Our work depends on outputs from others. Research of others depends on our outputs.
 
-    Whether you can share your output depends on how you obtained your input.
+- Whether you can share your output depends on how you obtained your input.
+- A repository that is private today might become public one day.
+- Sometimes “OTHERS” are you yourself in the future in a different group/job.
+- Software licenses matter. And this is what we will discuss in the next episode.
 
-    A repository that is private today might become public one day.
-
-    Sometimes “OTHERS” are you yourself in the future in a different group/job.
-
-    Software licenses matter. And this is what we will discuss in the next episode.
-    
-    
 ```{info}
 More on Wednesday!
 ```
     
-
-### Open source
-
-> Enable derivative work
-
-    Do not lock yourself out of own code
-
-    Attract developers who want to be able to show the coding work on their CVs
-
-    Tightly regulated domains require open source
-
-    Open-source software (OSS) can lead to more engagement from industry which may lead to more impact
-
-    If it’s not open, it is not likely to become standard
-    
-Types of things that can be reused:
-
-    Main libraries (e.g. NumPy, SciPy)
-
-    Special scientific libraries
-
-    Random code from website
-
-    Copying from Stack Overflow
-
-
-
 ## Licensing
 
-> You cannot ignore licensing: default is “no one can make copies or derivative works”.
+- You cannot ignore licensing: default is “no one can make copies or derivative works”.
 
-> License your code very early in the project: ideally develop publicly accessible open source code from day one.
+- License your code very early in the project: ideally develop publicly accessible open source code from day one.
 
-> Start with a README.md and a LICENSE file.
+- Start with a README.md and a LICENSE file.
 
-> Use GitHub recommendation or/and https://choosealicense.com/.
+- Use GitHub recommendation or/and https://choosealicense.com/.
 
 
 ### Licensing and ownership
