@@ -17,8 +17,8 @@
 ```
 
 ```{instructor-note}
-- Lecture 15 min
-- Discussions 15 min
+- Lecture 25 min
+- Exercises 25 min
 ```
 
 
