@@ -359,7 +359,7 @@ Date:   Fri Oct 21 23:37:31 2022 +0200
 - If the first characters of the hash are unique it is not necessary to type the entire hash.
 - `git log --stat` is nice to show which files have been modified.
 
-# Writing useful commit messages
+### Writing useful commit messages
 
 Using `git log --oneline` we understand that the first line of the commit message is very important.
 
@@ -556,9 +556,6 @@ To create a repository we either click the green button "New" (top left corner).
 
 Or if you see your profile page, there is a "+" menu (top right corner).
 ```
-
-Yet another way to create a new repository is to visit
-[https://github.com/new](https://github.com/new) directly.
 
 ---
 
