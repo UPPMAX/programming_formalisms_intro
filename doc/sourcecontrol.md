@@ -104,7 +104,7 @@ $ git config --list
 ## Type-along
 
 ### Create repository 
-We will create a repository (repo) called `Diagrams.
+We will create a repository (repo) called `Diagrams`.
 
 Be sure you are in a directory like "Programming_Formalisms" or similar (to have track of your work)
 
@@ -215,8 +215,7 @@ Git hints at and add the files:
 
 
 ```console
-$ git add activity.puml
-$ git add class.puml
+$ git add .    # < -- "." means all files
 $ git status
 
 On branch master
@@ -272,12 +271,67 @@ Note that help pages also work when you don't have a network connection!
 ### Branching and merging
 
 #### Exercise
-```{challenge} Make changes
-  - 
-```
-```{solution}
-6
- ```
+``````{challenge} Make changes (10 min)
+  Add the follwing lines to class.puml
+  
+ ```shell
+ class class02 {
+    -var02 : Float
+    Time : Date
+    #method01()
+    +get_var02()
+    {method}Without paranteces or Qualifiers
+ }
+
+  When you are done editing the files, try `git diff`:
+
+  ```console
+  $ git diff
+  ```
+
+  You will see (can you identify in there the two added lines?):
+
+```diff
+diff --git a/class.puml b/class.puml
+index 3b3fd07..2be3224 100644
+--- a/class.puml
++++ b/class.puml
+@@ -11,4 +11,12 @@
+     +get_var01()
+     {method}Without paranteces or Qualifiers
+  }
++
++ class class02 {
++    -var02 : Float
++    Time : Date
++    #method01()
++    +get_var02()
++    {method}Without paranteces or Qualifiers
++ }
+ @enduml
+
+Now first stage and then commit (what happens when we leave out the `-m` flag?):
+
+```console
+  $ git add class.puml     # <-- we can state exactly which file to stage as well
+  $ git commit                   # <-- we have left out -m "..."
+  ```
+
+  When you leave out the `-m` flag, Git should open an editor where you can edit
+  your commit message. This message will be associated and stored with the
+  changes you made. This message is your chance to explain what you've done and
+  convince others (and your future self) that the changes you made were
+  justified.  Write a message and save and close the file.
+
+  When you are done committing the changes, experiment with these commands:
+
+  ```console
+  $ git log
+  $ git log --stat
+  $ git log --oneline
+  ```
+``````
+
 ## Working remotely and sharing (github)
 
 ### Create Create a remote repository
