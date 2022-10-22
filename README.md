@@ -11,7 +11,7 @@ Topics
   - Day5 Optimization
 
 
-<div hidden>
+
 ```
 @startuml firstDiagram
 
@@ -20,6 +20,4 @@ Bob -> Alice: Hi!
 		
 @enduml
 ```
-</div>
 
-![](firstDiagram.svg)
