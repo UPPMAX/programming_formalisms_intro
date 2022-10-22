@@ -663,14 +663,14 @@ At this point only a brief demo - if you copy the SSH or HTTPS address, you can 
 (again adapt the "namespace/repository.git" part):
 
 ```console
-$ git clone git@github.com:<user>/<project>.git
+$ git clone git@github.com:<user>/project.git
 ```
 
-This creates a directory called "<project>" unless it already exists. You can also specify the target directory
+This creates a directory called "project" unless it already exists. You can also specify the target directory
 on your computer:
 
 ```console
-$ git clone git@github.com:<user>/<project>.git myproject
+$ git clone git@github.com:<user>/project.git myproject
 ```
 
 What just happened? **Think of cloning as downloading the `.git` part to your
