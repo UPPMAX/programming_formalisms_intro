@@ -267,9 +267,6 @@ to find relevant information takes some practice and discussions in some
 online threads may be confusing.
 Note that help pages also work when you don't have a network connection!
 
-
-### Branching and merging
-
 #### Exercise
 ``````{challenge} Make changes (10 min)
   Add the follwing lines to class.puml
@@ -332,6 +329,190 @@ Now first stage and then commit (what happens when we leave out the `-m` flag?):
   ```
 ``````
 
+## Git history and log
+
+If you haven't yet, please try now `git log`:
+
+```console
+$ git log
+
+commit ea73a8a9ef9bd5c0aee3f0868d0ebc8457e1f94b
+Author: Radovan Bast <bast@users.noreply.github.com>
+Date:   Wed Feb 9 10:12:39 2022 +0100
+
+    don't forget to enjoy
+
+commit 6316947beb2b7ffa0cc822370cfdd701050227a4
+Author: Radovan Bast <bast@users.noreply.github.com>
+Date:   Wed Feb 9 10:12:30 2022 +0100
+
+    add half an onion
+
+commit 03491ed253ffcee16772e35b1de4efd349711f05
+Author: Radovan Bast <bast@users.noreply.github.com>
+Date:   Wed Feb 9 10:11:30 2022 +0100
+
+    adding ingredients and instructions
+```
+
+- We can browse the development and access each state that we have committed.
+- The long hashes uniquely label a state of the code.
+- They are not just integers counting 1, 2, 3, 4, ... (why?).
+- Output is in reverse chronological order, i.e. **newest commits on top**.
+- We will use them when comparing versions and when going back in time.
+- `git log --oneline` only shows the first 7 characters of the commit hash and is good to get an overview.
+- If the first characters of the hash are unique it is not necessary to type the entire hash.
+- `git log --stat` is nice to show which files have been modified.
+
+# Writing useful commit messages
+
+Using `git log --oneline` we understand that the first line of the commit message is very important.
+
+Good example:
+```text
+increase threshold alpha to 2.0
+
+the motivation for this change is
+to enable ...
+...
+this is based on a discussion in #123
+```
+
+Convention: **one line summarizing the commit, then one empty line,
+then paragraph(s) with more details in free form, if necessary**.
+
+- **Why something was changed is more important than what has changed.**
+- Cross-reference to issues and discussions if possible/relevant.
+- Bad commit messages: "fix", "oops", "save work"
+- Bad examples: [http://whatthecommit.com](http://whatthecommit.com)
+- Write commit messages in English that will be understood
+  15 years from now by someone else than you. Or by your future you.
+- Many projects start out as projects "just for me" and end up to be successful projects
+  that are developed by 50 people over decades.
+- [Commits with multiple authors](https://help.github.com/articles/creating-a-commit-with-multiple-authors/) are possible.
+
+Good references:
+
+- ["My favourite Git commit"](https://fatbusinessman.com/2019/my-favourite-git-commit)
+- ["On commit messages"](https://who-t.blogspot.com/2009/12/on-commit-messages.html)
+- ["How to Write a Git Commit Message"](https://chris.beams.io/posts/git-commit/)
+
+```{note}
+A great way to learn how to write commit messages and to get inspired by their
+style choices: **browse repositories of codes that you use/like**:
+
+Some examples (but there are so many good examples):
+- [SciPy](https://github.com/scipy/scipy/commits/main)
+- [NumPy](https://github.com/numpy/numpy/commits/main)
+- [Pandas](https://github.com/pandas-dev/pandas/commits/main)
+- [Julia](https://github.com/JuliaLang/julia/commits/master)
+- [ggplot2](https://github.com/tidyverse/ggplot2/commits/main),
+  compare with their [release
+  notes](https://github.com/tidyverse/ggplot2/releases)
+- [Flask](https://github.com/pallets/flask/commits/main),
+  compare with their [release
+  notes](https://github.com/pallets/flask/blob/main/CHANGES.rst)
+
+When designing commit message styles consider also these:
+- How will you easily generate a changelog or release notes?
+- During code review, you can help each other improving commit messages.
+```
+
+But remember: it is better to make any commit, than no commit. Especially in small projects.
+**Let not the perfect be the enemy of the good enough**.
+
+
+(gitignore)=
+
+## Ignoring files and paths with .gitignore
+
+```{discussion}
+- Should we add and track all files in a project?
+- How about generated files?
+- Why is it considered a bad idea to commit compiled binaries to version control?
+- What types of generated files do you know?
+```
+
+Compiled and generated files are not
+committed to version control. There are many reasons for this:
+
+- Your code could be run on different platforms.
+- These files are automatically generated and thus do not contribute in any meaningful way.
+- The number of changes to track per source code change can increase quickly.
+- When tracking generated files you could see differences in the code although you haven't touched the code.
+
+For this we use `.gitignore` files. Example:
+
+```shell
+# ignore compiled python 2 files
+*.pyc
+# ignore compiled python 3 files
+__pycache__
+```
+
+An example taken from the [official Git documentation](https://git-scm.com/docs/gitignore):
+
+```shell
+# ignore objects and archives, anywhere in the tree.
+*.[oa]
+# ignore generated html files,
+*.html
+# except foo.html which is maintained by hand
+!foo.html
+# ignore everything under build directory
+build/
+```
+
+- `.gitignore` should be part of the repository because we want to make sure that all developers see the same behavior.
+- **All files should be either tracked or ignored**.
+- `.gitignore` uses something called a
+  [shell glob syntax](https://en.wikipedia.org/wiki/Glob_(programming)) for
+  determining file patterns to ignore. You can read more about the syntax in the
+  [documentation](https://git-scm.com/docs/gitignore).
+- You can have `.gitignore` files in lower level directories and they affect the paths
+  relatively.
+
+
+## Graphical user interfaces
+
+We have seen how to make commits directly via the GitHub website, and also via command line.
+But it is also possible to work from within a Git graphical user interface (GUI):
+
+- [GitHub Desktop](https://desktop.github.com)
+- [SourceTree](https://www.sourcetreeapp.com)
+- [List of third-party GUIs](https://git-scm.com/downloads/guis)
+
+
+## Branching and merging
+
+- A branch is a division unit of work, to be merged with other units of work.
+- A tag is a pointer to a moment in the history of a project.
+
+### Typical workflows
+
+There are two typical workflows:
+
+```console
+$ git checkout -b new-feature  # create branch, switch to it
+$ git commit                   # work, work, work, ..., and test
+$ git checkout master          # once feature is ready, switch to master
+$ git merge new-feature        # merge work to master
+$ git branch -d new-feature    # remove branch
+```
+
+Sometimes you have a wild idea which does not work.
+Or you want some throw-away branch for debugging:
+
+```console
+$ git checkout -b wild-idea    # create branch, switch to it, work, work, work ...
+$ git checkout master          # realize it was a bad idea, back to master
+$ git branch -D wild-idea      # it is gone, off to a new idea
+```
+
+No problem: we worked on a branch, branch is deleted, `master` is clean.
+https://coderefinery.github.io/git-intro/branches/
+
+
 ## Working remotely and sharing (github)
 
 ### Create Create a remote repository
@@ -346,6 +527,36 @@ Create a remote repository
 ### GH actions
 
 Just briefly
+
+## Summary
+
+Now we know how to save snapshots:
+
+```console
+$ git add <file(s)>
+$ git commit
+```
+
+And this is what we do as we program.
+
+Every state is then saved and later we will learn how to go back to these "checkpoints"
+and how to undo things.
+
+```console
+$ git init    # initialize new repository
+$ git add     # add files or stage file(s)
+$ git commit  # commit staged file(s)
+$ git status  # see what is going on
+$ git log     # see history
+$ git diff    # show unstaged/uncommitted modifications
+$ git show    # show the change for a specific commit
+$ git mv      # move tracked files
+$ git rm      # remove tracked files
+```
+
+Git is not ideal for large binary files
+(for this consider [http://git-annex.branchable.com](http://git-annex.branchable.com)).
+
 
 
 
