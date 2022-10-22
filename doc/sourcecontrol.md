@@ -483,6 +483,14 @@ But it is also possible to work from within a Git graphical user interface (GUI)
 - A branch is a division unit of work, to be merged with other units of work.
 - A tag is a pointer to a moment in the history of a project.
 
+```{figure} img/git-collaborative.svg
+:alt: Isolated tracks
+:width: 50%
+
+Isolated tracks of work.
+```
+
+
 ### Typical workflows
 
 There are two typical workflows:
