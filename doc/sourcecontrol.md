@@ -505,8 +505,10 @@ $ git branch -D wild-idea      # it is gone, off to a new idea
 ```
 
 No problem: we worked on a branch, branch is deleted, `master` is clean.
-https://coderefinery.github.io/git-intro/branches/
 
+```{note}
+[More about branches](https://coderefinery.github.io/git-intro/branches/)
+```
 
 ## Working remotely and sharing (github)
 
@@ -568,7 +570,7 @@ For the sake of this exercise **do not select**
 ```
 
 Once you click the green "Create repository", you will see a page similar to:
-```{figure} img/push_existing/created.png
+```{figure} img/push_existing.png
 :width: 100%
 :class: with-border
 ```
@@ -580,7 +582,7 @@ SSH address: click on the HTTPS and SSH buttons to see what happens.
 
 ---
 
-## Pushing our guacamole recipe repository to GitHub
+## Pushing our Formalisms repository to GitHub
 
 To push changes to the project please **select SSH**.
 For this to work [you will need your SSH keys configured](https://coderefinery.github.io/installation/ssh/).
@@ -631,18 +633,18 @@ fatal: Could not read from remote repository.
 Please make sure you have the correct access rights
 and the repository exists.
 ```
-if `ssh -T git@github.com` gives an error, this is the case.
+If `ssh -T git@github.com` gives an error, this is the case.
 
-- Hope you can **fix this in Lunch Break**. **Follow the rest by listening for now.**
 
 - [Generating a new SSH key and adding it to the ssh-agent](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
 - Approximate steps
-  - ```console
- ssh-keygen -t ed25519 -C "email address"
- eval "$(ssh-agent -s)"
- ssh-add ~/.ssh/id_ed25519
-  ```
-  - [Adding a new SSH key to your GitHub account](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account)
+```console
+ssh-keygen -t ed25519 -C "email address"
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_ed25519
+```
+- [Adding a new SSH key to your GitHub account](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account)
+- Hope you can **fix this in Lunch Break**. **Follow the rest by listening for now.**
 
 ``````
 
