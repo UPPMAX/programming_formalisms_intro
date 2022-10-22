@@ -10,14 +10,3 @@ Topics
   - Day4 Test-driven Development, testing
   - Day5 Optimization
 
-
-
-```
-@startuml firstDiagram
-
-Alice -> Bob: Hello
-Bob -> Alice: Hi!
-		
-@enduml
-```
-
