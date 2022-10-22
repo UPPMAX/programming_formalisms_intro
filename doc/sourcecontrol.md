@@ -624,7 +624,10 @@ branch 'main' set up to track 'origin/main'.
 
 ```
 
-``````{attention}
+``````{admonition} If you get errors
+---
+class: warning, dropdown
+---
 If you instead get something like the below, your SSH keys are not correctly configured. 
 ```text
 git@github.com: Permission denied (publickey).
