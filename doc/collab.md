@@ -6,7 +6,7 @@
 ```
 
 ```{instructor-note}
-- GitHub Lecture+typealong 25 min
+- GitHub Lecture+discussion 25 min
 
 ```
 
