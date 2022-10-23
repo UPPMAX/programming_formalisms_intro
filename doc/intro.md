@@ -47,7 +47,7 @@
 
 - Object-oriented (OO) programming is 
   - a mindset of mimicing the real-world as:
-  - enteties (`objects`) that are different 
+  - entities (`objects`) that are different 
   - or share attributes with each-other (within a `class`)
   - info-hiding mindset...
 - Functional programming is
@@ -127,15 +127,38 @@ What experience have you had?
   5.	Development and maintenance
 
 - Spiral model: iterating waterfalls, quadrants
-  -   Planning: reqs, identification: analysis
+  - Planning: reqs, identification: analysis
   -	Risk analysis: build prototypes to identify risks
   -	Engineering: software implementation
   -	Evaluation: stakeholder review, feedback, plan next iteration
   Each lab is new cycle: prototype --> RC --> Launch
   Risk driven
 
-- agile developing
-  - division of tasks into short phases of work and frequent reassessment and adaptation of plans.
+```{figure} img/spiral-1-1024x945.jpg
+:alt: Centralized layout
+:width: 50%
+```
+
+- Agile developing
+  - division of tasks into **short phases of work** and frequent **reassessment** and adaptation of plans.
+
+### Some common steps 
+
+-Planning
+  - analysis and design
+- Development
+  - source control
+  - Algorithms
+  - Optimization
+    - Parallelism
+- Test
+  - Tests 
+  - test-drive development
+- Development and maintenance
+  - documentation
+  - reproducibility and sharing
+- Iterations
+
 
 More about life cycles in next session and Day 3
 
@@ -143,18 +166,16 @@ More about life cycles in next session and Day 3
 
 - **Day1** Intro
     - SDLC
-        - waterfall
-        - cont I and D:s
-    - Analysis and design 
+    - Planning phase 
       - Pseudocode and flowcharts
-        - Unified Modelling language
-      - Top-down / Bottom-up 
-    - source control
-    - reproducibility
+    - Source/version control
+    - Collaboration
+    - Reproducible research and sharing
         - personal use to general use
         - dependencies
-        - platforms
-    - documentation
+        - sharing
+        - licensing
+    - Documentation
    
 - **Day2** Algorithms+data structures
     - intro
@@ -163,7 +184,7 @@ More about life cycles in next session and Day 3
     - sorting
     - BLAST
     - exercises
-- **Day3-4** Paradigms: design patterns, modular code
+- **Day3** Paradigms: design patterns, modular code
     - How?
     - Programming paradigms
         - SDLC and the models for the development process
@@ -175,48 +196,20 @@ More about life cycles in next session and Day 3
 - **Day4** TDD, testing
     - first look
     - types of tests
-    - TDD in practice (afternoon 13:00-16:00)
+    - TDD in practice (afternoon )
         - Testing in Python with pytest
         - Automating testing with Github Actions
         - Putting it all together
         - "Advanced" topics
-- **Day5** Optimization: halvdag...?
-
-
-- Development
-  - Algorithms
-  - Optimization
-    - Parallelism
-- Test
-  - Tests and test-drive development
-- Development and maintenance
-  - documentation
-
-- Iterations
-  - source control
-  - reproducibility and sharing
-
-
-- **iterative methodologies**
-- **Agile**
-
-
-
-
-
+- **Day5** Optimization
 
 ## Planning: Analysis and design
 
-```{todo}
-  
-   - Analys
-     - Object
-     - (text document)
-   - design
-     - pseudocode
-     - objekt klasser (UML)
-     - funktioner/moduler
+```{note}
+"If I had nine hours to chop down a tree, I'd spend the first six sharpening my axe.
+-	Modeling sharpens your axe since it helps you think about what you're going to build, how to seek feedback, and where to make improvements. It prepares you to build the real thing to reduce any potential risk of failure. "
 ```
+
 
 ```{note}
 - Planning step is to ...
@@ -226,17 +219,30 @@ More about life cycles in next session and Day 3
 - Can be devided into analysis and design
 - Analysis part is to state the problem and define inputs and outputs
    - graphical tools like UML
+   - text
+   - objects in OOP
 - Design phase to find out the specific algorithms needed
-   - pseudocode
+   - pseudocode+UML
+   - classes in OOP
+   - functions/modules in functional programming
+   
 ```
 
 ### Top-down
-1. Clearly state problem
+1. Clearly state whole problem
 2. Define inputs and outputs
 3. Design the algorithm with `pseudocode`
 4. Turn the algorithm into specific language statements
 5. Test the resulting program
 
+### Bottom-Up
+Start with parts first and develop a bigger organization with time.
+
+```{Discussion}
+How do you program? Put "o" on you choice
+- Top-down
+- Bottom-up
+```
 
 ### Flowcharts or Unified Modeling Language
 
@@ -395,8 +401,6 @@ There are different types of remotes:
   to repositories of others and review changes submitted by external
   contributors.
 
-
-
 ```{objectives}
    - [Collaboration](https://uppmax.github.io/programming_formalism_intro/collab.html) aims to 
      - Get into working more with GitHub for collaboration
@@ -405,15 +409,13 @@ There are different types of remotes:
      - Contributing to other's projects
 ```
 
-## Reproducibility, deployment and sharing
+## Reproducibility and sharing
 
 ### Reproducible research
 
 - Have you ever spent days trying to repeat the results that took you hours to do the first time last week?  - Or you have to do paper revisions, but you just can’t get the results to match up? Nothing is a worse feeling - either for you or for science itself.
 
 In this lesson we will discuss different methods and tools for better reproducibility in research software and data. We will demonstrate how version control, workflows, containers, and package managers can be used to record reproducible environments and computational steps.
-
-
 
 ```{objectives}
    - [Reproducibility and sharing](https://uppmax.github.io/programming_formalism_intro/reproducible.html) aims to 
@@ -441,22 +443,16 @@ In this lesson we will discuss different methods and tools for better reproducib
 ```
 ## Documentation
 
-```{todo}
-
-   - projektdokumentation
-     - requirements funka på alla system eller vad programmet ska göra (publikt eller private)
-     - analys: pseudokod, uml
-     - riskanalysis
-```
-
 ```{note} Documentation comes in different forms - what *is* documentation?
-
-
   - **Tutorials**: learning-oriented, allows the newcomer to get started
   - **How-to guides**: goal-oriented, shows how to solve a specific problem
   - **Explanation**: understanding-oriented, explains a concept
   - **Reference**: information-oriented, describes the machinery
-
+  **Not to forget**
+  - Project documentation:
+    - requirements: what is the goal of the software, risks, platforms
+    the analysis: pseusocode and UML
+    - risk analysis
 ```
 
 **There is no one size fits all**: often for small projects a `README.md` or
@@ -485,7 +481,7 @@ In this lesson we will discuss different methods and tools for better reproducib
 - Tools for the developer
   - Planning: UML and pseudocode
   - Development iteration: git
-  - testing: test functions
-  - Collaboration: GitHub
+  - Testing: test functions (Covered on Thursday)
+  - Collaboration: GitHub, licenses, citation
   - Documentation: READMEs and e.g. sphinx
 ```
