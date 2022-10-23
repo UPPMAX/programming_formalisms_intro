@@ -21,7 +21,7 @@
 - For more background please confer 
   - [NBIS](https://nbis-reproducible-research.readthedocs.io/en/course_2104) 
   - [CodeRefinery](https://coderefinery.github.io/reproducible-research/)
-
+``` 
 
 ```{figure} img/repro-pyramid.png
 :alt: Reproducibility pyramid
@@ -63,11 +63,6 @@ Can you give some examples? What can we do about it?
 ```{note}
 If software is reused in several projects it can make sense to put them in own repo
 ```
-
-## Reproducible publications
-- Git (overleaf, authorea), hackmd, manuscripts.io, google docs
-- Scholarly output reproducible: rrtools, jupyter, binder, research compendia
-- Reprohack
 
 ## Recording dependencies
 -	**Reproducibility**: We can control our code but how can we control dependencies?
@@ -142,40 +137,6 @@ Additional labels for pre-release and build metadata are available as extensions
 <https://nehckl0.medium.com/semver-and-calver-2-popular-software-versioning-schemes-96be80efe36
 >
 ```
-
-## Sharing
-
-```{Objectives}
-   - We will give an overview of 
-      - recording dependencies
-   - Get short intro to tools:
-       - Pip and PyPI
-       - Conda
-       - Environments
-       - Tools for other languages than Python    - Introduce reproducibility and sharing, licensing and citation
-     - Get into thinking about dependencies and solutions
-     - Get into choosing license, citation and DOI
-``` 
-
-```{admonition} Read more
-
-[CodeRefinery](https://coderefinery.github.io/reproducible-research/sharing/)
-
-### FAIR
-**“FAIR”** is the current buzzword for data management. You may be asked about it in, for example, making data management plans for grants:
-
-- Findable
-  - Will anyone else know that your data exists?
-  - Solutions: put it in a standard repository, or at least a description of the data. Get a digital object identifier (DOI).
-- Accessible
-   - Once someone knows that the data exists, can they get it?
-   - Usually solved by being in a repository, but for non-open data, may require more procedures.
-- Interoperable
-   - Is your data in a format that can be used by others, like csv instead of PDF?
-   - Or better than csv. Example: 5-star open data
-- Reusable
-   - Is there a license allowing others to re-use?
-
 
 ## Recording computational steps
 
@@ -289,6 +250,48 @@ https://nbis-reproducible-research.readthedocs.io/en/course_2104/snakemake/
   - Snakemake is a comparatively simple and lightweight option to create transferable and scalable data analyses.
   - Sometimes a script is enough.
 ```
+
+## Reproducible publications
+- Git (overleaf, authorea), hackmd, manuscripts.io, google docs
+- Scholarly output reproducible: rrtools, jupyter, binder, research compendia
+- Reprohack
+
+
+## Sharing
+
+```{Objectives}
+   - We will give an overview of 
+      - recording dependencies
+   - Get short intro to tools:
+       - Pip and PyPI
+       - Conda
+       - Environments
+       - Tools for other languages than Python    - Introduce reproducibility and sharing, licensing and citation
+     - Get into thinking about dependencies and solutions
+     - Get into choosing license, citation and DOI
+``` 
+
+```{admonition} Read more
+
+[CodeRefinery](https://coderefinery.github.io/reproducible-research/sharing/)
+
+### FAIR
+**“FAIR”** is the current buzzword for data management. You may be asked about it in, for example, making data management plans for grants:
+
+- Findable
+  - Will anyone else know that your data exists?
+  - Solutions: put it in a standard repository, or at least a description of the data. Get a digital object identifier (DOI).
+- Accessible
+   - Once someone knows that the data exists, can they get it?
+   - Usually solved by being in a repository, but for non-open data, may require more procedures.
+- Interoperable
+   - Is your data in a format that can be used by others, like csv instead of PDF?
+   - Or better than csv. Example: 5-star open data
+- Reusable
+   - Is there a license allowing others to re-use?
+
+
+
 
 ## Social coding
 
