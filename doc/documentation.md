@@ -121,7 +121,7 @@ To convert between MD and RST (and many other formats):
   - Basically all Python projects use Sphinx but **Sphinx is not limited to Python**
   - [Read the docs](http://readthedocs.org)
     hosts public Sphinx documentation for free!
-  - Also hostable anywhere else, like Github pages.
+  - Also hostable anywhere else, like Github pages. **← this is what we use for this lesson 
   - API documentation possible
 
 - [Jekyll](https://jekyllrb.com)
@@ -135,17 +135,18 @@ To convert between MD and RST (and many other formats):
 - [GitBook](https://www.gitbook.com/)
 - [Hugo](https://gohugo.io)
 - [Hexo](https://hexo.io)
-- [Zola](https://www.getzola.org/) **<- this is what we use for our project website and workshop websites**
+- [Zola](https://www.getzola.org/) **← this is what CodeRefinery use for their project website and workshop websites**
 
 There are many more ...
 
 ## Deployment
                                         
 GitHub, GitLab, and Bitbucket make it possible to serve HTML pages:
-- [GitHub Pages](https://pages.github.com) (GH-pages)
+- [GitHub Pages](https://pages.github.com) (GH-pages) ← this is what we and CR use for some course material
+
 - [Bitbucket Pages](https://pages.bitbucket.io/)
 - [GitLab Pages](https://pages.gitlab.io)
-- [Read the docs](http://readthedocs.org)
+- [Read the docs](http://readthedocs.org) ← this is what NBIS use for some course material
 
 ### Github pages
 - Easiest. everything is local to GitHub
@@ -225,7 +226,7 @@ GitHub, GitLab, and Bitbucket make it possible to serve HTML pages:
    
 
 ````{Admonition} Read more
-   `Code refinery <https://coderefinery.github.io/documentation/>`
+   `CodeRefinery' <https://coderefinery.github.io/documentation/>`
 ````
 
 ## Summary
