@@ -16,9 +16,9 @@ Answer in HackMD
 ```
 
 ```{instructor-note}
-- Git Lecture+typealong 25 min
-- Git Exercise 15 min
-- Github locally + type along 15
+- Git Lecture + typealong 25 min
+- Git Exercise 10 min
+- Github locally + type along 15 min
 ```
 This material is based on or inspired by the material from [NBIS](https://nbis-reproducible-research.readthedocs.io/en/course_2104/git/) and [CodeRefinery](https://coderefinery.github.io/git-intro/)
 
