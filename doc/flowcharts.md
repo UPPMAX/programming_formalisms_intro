@@ -14,8 +14,7 @@
 ```
 
 ```{instructor-note}
-- Lecture 15 min
-- Exercises 30 min
+- Lecture + Discussions 30 min
 ```
 
 ## The planning steps
@@ -320,15 +319,26 @@ else
 
     print 'no grades were entered' 
     
-
 ```{info}
-More on Wednesday!
+More practicals about Pseudocode tomorrow!
+More practicals about UML this adfternoon!
 ```
+
+```{Discussion}
+In Breakout-rooms 6-8 people:
+- What are your impressions about
+  - UML?
+  - pseudocode?
+- Experiences?
+- Share in the end 1-3 inputs in HackMD
+```
+
+
 
 ## Summary
 
 ````{Keypoints}
-  - UML is good several coditions
+  - UML is good in several conditions
     - Structural overviews
     - Planning
     - Problem solving
