@@ -28,20 +28,6 @@
   - Users create this software themselves and often overlook how important it is.
   - Depending on how competently the user-written software has been integrated into default application packages, many users may not be aware of the distinction between the original packages, and what has been added by co-workers.
 
-### Different types of Scientific software:
-- analysis of data
-    - statistics
-    - figures
-    - visualization
-- tools for process data
-    - refining data (formatting)
-    - bioinformatics
-- workflows
-- modelling (mimic the reality)
-      - simulations time-varying bahvour of a system
-      - mathematical models of relationships among variables in a system 
-- decision assistance
-
 ### Some concepts
 - program
 - script
@@ -55,6 +41,40 @@
 
 ```{Note}
    We will not be very definite in the course in when to use scripting, program or tools 
+```
+
+### Functional vs. object-oriented programming
+
+- Object-oriented (OO) programming is 
+  - a mindset of mimicing the real-world as:
+  - enteties (`objects`) that are different 
+  - or share attributes with each-other (within a `class`)
+  - info-hiding mindset...
+- Functional programming is
+  - more classical as it is more focused on the algorithms
+  - keys are functions
+  - modules: a way to gather functions with similar functionality) 
+
+- Also other... 
+
+At its simplest, functional programming uses immutable data to tell the program exactly what to do. Object-oriented programming tells the program how to achieve results through objects altering the program's state. Both paradigms can be used to create elegant code.
+
+```{note} 
+More on Wednesday
+```
+- Object-oriented (built-in classes)
+  - C++
+  - Java
+  - Python
+  - Julia
+- OO features
+  - Fortran 2003 
+  - MATLAB
+  - Perl
+  - PHP
+- OO object-based (but not class-based)
+  - Javascript
+
 ```
 
 ### Your scripting/programming background (Oct 2022)
@@ -76,56 +96,26 @@
   - Groovy
   - SQL
 
-
-### Functional vs. object-oriented programming
-
-- Object-oriented (OO) programming is 
-  - a mindset of mimicing the real-world as enteties (objects) that are different or share attributes with each-other (within a class)
-  - info-hiding
-- Functional programming is
-  - more classical as it is more focused on the algorithms
-  - keys are functions
-  - modules: a way to gather functions with similar functionality) 
-
-- Also other... 
-
-At its simplest, functional programming uses immutable data to tell the program exactly what to do. Object-oriented programming tells the program how to achieve results through objects altering the program's state. Both paradigms can be used to create elegant code.
-
-```{note} 
-More on Wednesday
-```
-
-
-### Languages
-- Object-oriented (built-in classes)
-  - C++
-  - Java
-  - Python
-  - Julia
-- OO features
-  - Fortran 2003 
-  - MATLAB
-  - Perl
-  - PHP
-- OO object-based (but not class-based)
-  - Javascript
-
-
-```
-
-
-
-
-
-
+### Different types of Scientific software:
+- analysis of data
+    - statistics
+    - figures
+    - visualization
+- tools for process data
+    - refining data (formatting)
+    - bioinformatics
+- workflows
+- modelling (mimic the reality)
+      - simulations time-varying bahvour of a system
+      - mathematical models of relationships among variables in a system 
+- decision assistance
 
 ```{Discussion}
 What experience have you had?
+- Use HackMD
 ```
 
-## Development cycle
-
-agile = characterized by the division of tasks into short phases of work and frequent reassessment and adaptation of plans.
+## Software Development Life Cycle (SDLC)
 
 ### Basic models
 - waterfall
@@ -143,9 +133,12 @@ agile = characterized by the division of tasks into short phases of work and fre
   Each lab is new cycle: prototype --> RC --> Launch
   Risk driven
 
+- agile developing
+  - division of tasks into short phases of work and frequent reassessment and adaptation of plans.
+
 More about life cycles in next session and Day 3
 
-### Parts from the life cycle model in this course
+### Parts from the life cycle models in this course
 
 - **Day1** Intro
     - SDLC
@@ -155,7 +148,6 @@ More about life cycles in next session and Day 3
       - Pseudocode and flowcharts
         - Unified Modelling language
       - Top-down / Bottom-up 
-
     - source control
     - reproducibility
         - personal use to general use
