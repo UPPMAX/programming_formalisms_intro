@@ -43,6 +43,27 @@
    We will not be very definite in the course in when to use scripting, program or tools 
 ```
 
+### Outcome of a Program
+- Correct
+  - and flawless
+- Efficient
+  - Utilize the computer system's resources
+- Reusable
+  - Development costs
+  - Finished components
+  - Lower development costs
+  - Faster
+  - Higher quality
+  - Requires general
+  - packaging technology
+- Changeable
+  - Maintenance cost
+    - Fix errors, bugs
+    - Adapt to new requirements
+    - Independent modules
+    - Encapsulation/information hiding
+
+
 ### Functional vs. object-oriented programming
 
 - Object-oriented (OO) programming is 
