@@ -17,7 +17,7 @@
 - Ask for the emails in your group.
   - chat is perfect for this
 
-** You will work with a central repository **
+**You will work with a central repository**
 - Go to "Settings" (upper right) for your new Repo.
 ```{figure} img/teacher-settings.png
 :width: 100%
