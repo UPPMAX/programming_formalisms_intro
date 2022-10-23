@@ -115,13 +115,33 @@ If software is reused in several projects it can make sense to put them in own r
 [Python for scientific computing](https://aaltoscicomp.github.io/python-for-scicomp/
 
 
-## Semantic versioning: 
+## Versioning systems 
+
+### Semantic (SemVer)
 Given a version number MAJOR.MINOR.PATCH, increment the:
 1.	MAJOR version when you make incompatible API changes
 2.	MINOR version when you add functionality in a backwards compatible manner
 3.	PATCH version when you make backwards compatible bug fixes
 Additional labels for pre-release and build metadata are available as extensions to the MAJOR.MINOR.PATCH format.
 
+```{figure} img/SemVer.jpg
+:alt: Isolated tracks
+:width: 50%
+
+<https://nehckl0.medium.com/semver-and-calver-2-popular-software-versioning-schemes-96be80efe36
+>
+```
+
+
+### Calender ([CalVer](https://calver.org/))
+
+```{figure} img/CalVer.png
+:alt: Isolated tracks
+:width: 50%
+
+<https://nehckl0.medium.com/semver-and-calver-2-popular-software-versioning-schemes-96be80efe36
+>
+```
 
 ## Sharing
 
@@ -137,6 +157,10 @@ Additional labels for pre-release and build metadata are available as extensions
      - Get into choosing license, citation and DOI
 ``` 
 
+```{admonition} Read more
+
+[CodeRefinery](https://coderefinery.github.io/reproducible-research/sharing/)
+
 ### FAIR
 **“FAIR”** is the current buzzword for data management. You may be asked about it in, for example, making data management plans for grants:
 
@@ -151,6 +175,7 @@ Additional labels for pre-release and build metadata are available as extensions
    - Or better than csv. Example: 5-star open data
 - Reusable
    - Is there a license allowing others to re-use?
+
 
 ## Recording computational steps
 
