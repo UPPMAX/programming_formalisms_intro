@@ -219,12 +219,9 @@ g --> UC3
 
 ## Tools
 
-https://en.wikipedia.org/wiki/List_of_Unified_Modeling_Language_tools
+<https://en.wikipedia.org/wiki/List_of_Unified_Modeling_Language_tools>
 
-
-
-
-  -	Modeling
+- Modeling
   - Code generation
   -	Reverse engineering
   - Analyze code complexity
@@ -233,13 +230,13 @@ https://en.wikipedia.org/wiki/List_of_Unified_Modeling_Language_tools
   - Open-source
   -	Can be integrated with IDE:s, Java documentation, Word
   -	Scripts rather than drawing tools
-  -	http://www.plantuml.com/plantuml
+  -	<http://www.plantuml.com/plantuml>
 
 ### PlantUML
 
 - PlantUML is an open-source tool allowing users to create diagrams from a plain text language. 
 - uses Graphviz software to lay out its diagrams
-- More info and examples at https://plantuml.com/
+- More info and examples at <https://plantuml.com/>
 
 #### Syntax
 - https://plantuml.com/
@@ -247,7 +244,7 @@ https://en.wikipedia.org/wiki/List_of_Unified_Modeling_Language_tools
 #### Test yourself!
 
 - [PlantUML web server](http://www.plantuml.com/plantuml/uml/SyfFKj2rKt3CoKnELR1Io4ZDoSa70000)
-- Look at the source files of this 
+- Look at the source files of this material.
 
 ## Pseudocode
 
@@ -323,8 +320,6 @@ else
 
     print 'no grades were entered' 
     
-## Exercise
-
 
 ```{info}
 More on Wednesday!
@@ -339,7 +334,7 @@ More on Wednesday!
     - Problem solving
     - Designing phase of programming
   - The most important diagrams for software development are: 
-    - class
+    - Class
     - Sequence 
     - Activity 
   - There are plenty of tools out there
