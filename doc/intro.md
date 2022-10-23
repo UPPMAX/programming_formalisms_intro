@@ -62,6 +62,7 @@ At its simplest, functional programming uses immutable data to tell the program 
 ```{note} 
 More on Wednesday
 ```
+
 - Object-oriented (built-in classes)
   - C++
   - Java
@@ -75,7 +76,7 @@ More on Wednesday
 - OO object-based (but not class-based)
   - Javascript
 
-```
+
 
 ### Your scripting/programming background (Oct 2022)
 - Python	86%
