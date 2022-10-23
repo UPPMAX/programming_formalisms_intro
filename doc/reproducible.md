@@ -322,16 +322,47 @@ Arguments against [(from Wikipedia)](https://en.wikipedia.org/wiki/Open_science)
 More on Wednesday!
 ```
     
-### Licensing
+## Licensing
 [For more details](https://coderefinery.github.io/social-coding/licensing/#)
 
+### Copyright
+
+- Protects creative expression
+- Automatically created
+- **Derivative works** usually inherit copyright of the thing derived
+- Time frame: essentially forever (lifetime + X years)
+
+When can you use:
+- When there is a **license** saying you can
+- Limited other cases (private use, fair use: context dependent)
+- In practice: people do many things, but then can't share their
+  output if license does not allow it or is not clarified
+
+**When we write or use software then copyright, licenses, and derivative works are important concepts**
+
+
+### Derivative work: Changing, remixing, covering
+
+```{figure} img/rubik.jpg
+:alt: Images of Bob Marley and Mona Lisa made out of Rubik cubes
+:width: 60%
+
+Images of Bob Marley and Mona Lisa made out of Rubik cubes. 
+Is this derivative work? ["Distillery District 26"](https://www.flickr.com/photos/dgriebeling/3851273590) CC-BY.
+```
+
+### If you build on something, you form a derivative work
+
+- The original creator may have rights to what you make
+- The whole point of this talk is to make sure that **you can make and publish derivative works**
+  and **others can make and publish derivative works from you**
 - **You cannot ignore licensing**: default is “no one can make copies or derivative works”.
 - License your code very early in the project: ideally develop publicly accessible open source code from day one.
 - Start with a README.md and a LICENSE file.
 - Use GitHub recommendation or/and <https://choosealicense.com/>.
 
 
-#### Licensing and ownership
+### Licensing and ownership
 
 **Who can decide about or change a license?**
 - The copyright holder if a separate "Contributor License Agreement" is signed. Otherwise
@@ -369,7 +400,7 @@ More on Wednesday!
 - Open source does not mean public domain: software in the public domain has no owner
 - Open source does not mean non-commercial: plenty of companies produce and support it
 
-#### Taxonomy of software licenses
+### Taxonomy of software licenses
 **1. Custom/closed/proprietary**
 
 - Derivative work typically not possible
@@ -415,7 +446,7 @@ cakes"](https://cicero.xyz/v3/remark/0.14.0/github.com/coderefinery/social-codin
 Also covered on wednesday
 ```
 
-### Software Citation
+## Software Citation
 
 - Think the same as for a scientific paper
 
