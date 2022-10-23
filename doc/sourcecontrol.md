@@ -22,7 +22,10 @@ Answer in HackMD
 ```
 This material is based on or inspired by the material from [NBIS](https://nbis-reproducible-research.readthedocs.io/en/course_2104/git/) and [CodeRefinery](https://coderefinery.github.io/git-intro/)
 
-
+```{note}
+- We will cover the most basic things with Git such that you can use it this week.
+- For deeper understanding and hands-on on branching etcetera, please confer the course material of [NBIS](https://nbis-reproducible-research.readthedocs.io/en/course_2104/git/) and [CodeRefinery](https://coderefinery.github.io/git-intro/).
+```
 
 ## Git
 
