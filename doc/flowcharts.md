@@ -343,5 +343,4 @@ More on Wednesday!
       - perfect for sharing
   - Pseudocode gives a more detailed description what you want the program to do.
     - Can be highly personal or very language-like
-    - Some 
 ```` 
