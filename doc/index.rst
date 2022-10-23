@@ -71,14 +71,14 @@ Programming formalisms — Introduction day
    - We will cover an introduction to 
    
       - Algorithms and Data structures:    *Programming skills*, *Train logic*
-      - Programming Paradigms:    *Classical training**, **Big-picture architecture of programs*
+      - Programming Paradigms:    *Classical training*, *Big-picture architecture of programs*
             - especially structured:    *Readable code*
             - functional programming:    *Modular development*
             - modular development:    *Modular development*
             - code reusability:    *Reusable code*
-            - Object oriented programming:    *Modular development*, *Object-oriented programming**
+            - Object oriented programming:    *Modular development*, *Object-oriented programming*
             - testing:    *Best practices*
-            - optimisation:    **Optimize*
+            - optimisation:    *Optimize*
              
       - Reproducible research:
             - dependencies    *Package development*, *Make tools that other people can also benefit from*
@@ -184,16 +184,16 @@ The teachers
 .. admonition:: Learning outcomes of course
 
    The particpants shall ...
-     - have an introductory understanding of formal algorithms and Algorithm design
-     - know some common data structures  and how to utilise it in our design
-     - be familiar with the object oriented paradigm
-     - have an overview of other design and development paradigms
-     - have a basic understanding of modular programming and modular design
-     - have an understanding of the software life cycle
-     - be familiar with common development practices and "best practices" of software development
-     - have an introductory understanding of Testing and test driven design
-     - have an introductory understanding of source control
-     - have an introduction to common concerns and practices in optimisation in development of software
+     - have an introductory understanding of **formal algorithms and Algorithm design**
+     - have an introductory understanding of **Testing and test driven design**
+     - have an introductory understanding of **source control**
+     - have an introduction to common **concerns and practices in optimisation** in development of software
+     - be familiar with **common development practices** and "best practices" of software development
+     - be familiar with the **object oriented paradigm**
+     - have an overview of **other design and development paradigms**
+     - have a basic understanding of **modular programming and modular design**
+     - have an understanding of the **software life cycle**
+     - know some **common data structures** and how to utilise it in our design
 
 
 
