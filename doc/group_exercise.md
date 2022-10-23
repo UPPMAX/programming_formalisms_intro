@@ -6,10 +6,10 @@
 
 ```
 
-``````{challenge} Make some documentation about UML coding in PlantUML
+`````````{challenge} Make some documentation about UML coding in PlantUML
 
 ### Before start 
-- One of you in the group (perhaps one whos is familiar with this step) takes the responsibility to start a new Repository called by your group name/number (must start with a letter) in your Github account.
+- One of you in the group (perhaps one who is familiar with this step) takes the responsibility to start a new Repository called by your group name/number (must start with a letter) in your Github account.
   - add README.md
   - no .gitignore
   - no licence
@@ -48,15 +48,19 @@
     - 1 works with the declaration for the specific diagram and how to script it in PlantUML-
       - Get inspired byt the "Declaration... " and "Relations..." section for the actual diagram.
     - The other makes a full diagram connected to your work.
-    - You can test <http://www.plantuml.com/plantuml/uml/SyfFKj2rKt3CoKnELR1Io4ZDoSa70000>
+    - You can test at [PlantUML webserver](http://www.plantuml.com/plantuml/uml/SyfFKj2rKt3CoKnELR1Io4ZDoSa70000)
     - But results shall be given in Markdown.
       - Show both Code and rendered figure 
+        ``````text
         ```PlantUML
+        @startuml
         ...
+        @enduml
         ```
+        ``````
       - With the browser extensions for PlantUML these should be seen directly in preview.
 
-`````` 
+`````````
       
       
       
