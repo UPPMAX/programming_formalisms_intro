@@ -23,7 +23,15 @@
 
 ## In-code
 
-- Why and not how
+- Comments, function docstrings, ...
+- Advantages
+  - Good for programmers
+  - Version controlled alongside code
+  - Can be used to auto-generate documentation for functions/classes
+- Disadvantage
+  - Probably not enough for users
+
+**Why and not how**
 
 ### Docstrings
 A docstring is a structured comment associated to a segment of code (i.e. function or class)
@@ -41,6 +49,15 @@ Good docstrings describe:
 
 ## README files
 
+   - Advantage
+  - Versioned (goes with the code development)
+  - It is often good enough to have a `README.md` or `README.rst` along with your code/script
+- If you use README files, use either
+  [RST](http://docutils.sourceforge.net/rst.html) or
+  [Markdown](https://commonmark.org/help/)
+- A great guide to README files: [MakeaREADME](https://www.makeareadme.com/)
+
+   
 ````{keypoints}
 README file should include:
 
@@ -54,33 +71,81 @@ README file should include:
 
   - Recommended citation
 ````
+## reStructuredText and Markdown
 
-## Sphinx and Markdown/Restructured text
+- Two of the most popular lightweight markup languages.
+- reStructuredText (RST) has more features than Markdown but the choice is a matter of taste.
+- Markdown convenient for smaller documents,
+  but for larger and more complicated documents RST may be a better option.
+- There are (unfortunately) [many flavors of Markdown](https://github.com/jgm/CommonMark/wiki/Markdown-Flavors).
 
-```{discussion} This lesson is built with Sphinx
-- [Source code](https://raw.githubusercontent.com/coderefinery/documentation/main/content/sphinx.md)
-- Try to compare the source code and the result side by side
+```markdown
+# This is a section in Markdown   This is a section in RST
+                                  ========================
+
+## This is a subsection           This is a subsection
+                                  --------------------
+
+Nothing special needed for        Nothing special needed for
+a normal paragraph.               a normal paragraph.
+
+                                  ::
+
+    This is a code block          This is a code block
+
+
+**Bold** and *emphasized*.        **Bold** and *emphasized*.
+
+A list:                           A list:
+- this is an item                 - this is an item
+- another item                    - another item
+
+There is more: images,            There is more: images,
+tables, links, ...                tables, links, ...
 ```
+   
+Experiment with Markdown:
+- [Learn Markdown in 60 seconds](http://commonmark.org/help/)
+- [https://dillinger.io](http://dillinger.io)
+- [https://stackedit.io](https://stackedit.io)
 
-- Make use of Spinx to render markdown or reStructuredText to HTML
-- Markdown easier, but rst have more possibilities.
--** With ...???**
+To convert between MD and RST (and many other formats):
+- [Pandoc](https://pandoc.org/)
 
-````{keypoints}
-  - Lightweight options for writing full documentation.
-````
+## HTML static site generators
 
-RST: https://myst-parser.readthedocs.io/en/latest/syntax/roles-and-directives.html#directives-a-block-level-extension-point
+   There are many tools that can turn RST or Markdown into beautiful HTML pages:
 
+- [Sphinx](http://sphinx-doc.org) **← we will exercise this, this is how this lesson material is built**
+  - Generate HTML/PDF/LaTeX from RST and Markdown.
+  - Basically all Python projects use Sphinx but **Sphinx is not limited to Python**
+  - [Read the docs](http://readthedocs.org)
+    hosts public Sphinx documentation for free!
+  - Also hostable anywhere else, like Github pages.
+  - API documentation possible
 
+- [Jekyll](https://jekyllrb.com)
+  - Generates HTML from Markdown.
+  - GitHub supports this without adding extra build steps.
 
-## Deploy
-Make use of free web platforms to put your full documentation!
+- [pkgdown](https://pkgdown.r-lib.org/)
+  - Popular in the R community
 
-- GitHub-pages (GH-pages)
-- ReadTheDocs
+- [MkDocs](https://www.mkdocs.org/)
+- [GitBook](https://www.gitbook.com/)
+- [Hugo](https://gohugo.io)
+- [Hexo](https://hexo.io)
+- [Zola](https://www.getzola.org/) **<- this is what we use for our project website and workshop websites**
 
-- Input from you?
+There are many more ...
+
+## Deployment
+                                        
+GitHub, GitLab, and Bitbucket make it possible to serve HTML pages:
+- [GitHub Pages](https://pages.github.com) (GH-pages)
+- [Bitbucket Pages](https://pages.bitbucket.io/)
+- [GitLab Pages](https://pages.gitlab.io)
+- [Read the docs](http://readthedocs.org)
 
 ### Github pages
 - Easiest. everything is local to GitHub
@@ -89,9 +154,74 @@ Make use of free web platforms to put your full documentation!
 ### Read the Docs
 - Somewhat more possibilities, like having several versions of documentation to switch between.
 - Example
+                                      
+## Wikis
 
-## Exercise
+- Popular solutions (but many others exist):
+  - [MediaWiki](https://www.mediawiki.org)
+  - [Dokuwiki](https://www.dokuwiki.org)
+- Advantage
+  - Barrier to write and edit is low
+- Disadvantages
+  - Typically disconnected from source code repository (**reproducibility**)
+  - Difficult to serve multiple versions
+  - Difficult to check out a specific old version
+  - Typically needs to be hosted and maintained
 
+---
+
+## Other generators
+### LaTeX/PDF
+- Advantage
+  - Popular and familiar in the physics and mathematics community
+- Disadvantages
+  - PDF format is not ideal for copy-paste ability of examples
+  - Possible, but not trivial to automate rebuilding documentation after every Git push
+
+### Doxygen (C, C++, Java atc...)
+- Auto-generates API documentation
+- Documented directly in the source code
+  see [Doxygen Github Repo](https://github.com/doxygen/doxygen)
+- Can be deployed to GiHub/GitLab/Bitbucket Pages
+
+### For Fortran 
+- [Fortran Documenter (FORD)](https://github.com/Fortran-FOSS-Programmers/ford)
+
+### For Julia
+- [Franklin](https://franklinjl.org/): static site generator
+- [Documenter.jl](https://juliadocs.github.io/Documenter.jl/stable/)
+
+### [Quarto](https://quarto.org/) converts markdown to websites, pdfs, ebooks and many other things
+
+---
+
+## Demo These pages
+``````{challenge} Demo: Git repo -  Sphinx - GitHub - GitHub Actions - GH-pages
+                                        
+- We will go behind the scenes of this documentation.
+- You can do this checkout whenever you want.
+
+**The basic steps are:**
+(also presented [here](https://coderefinery.github.io/documentation/sphinx/)               
+- Start locally in repo with name describing the project
+- You can generate Sphinx documentation in an existing code project (may be a git repo)
+- Install python package: `sphinx`
+- `sphinx-quickstart` to generate directories and files
+- `index.rst` is first page and includes the Table of contents (TOC) to be seen in a menu and the *.md and/or *.rst files to make up your web pages.
+- `config.py`contains configurations like Sphinx extensions. (these python packages may have to be installed as well)
+- You can build locally and view results in a web browser
+---
+**To use GH-pages**
+- push to the GitHub remote wnd continue working from there.
+- Add the GitHub Action
+- Create a new file at `.github/workflows/documentation.yaml`
+- Enable GitHub Pages:
+  - Go to <https://github.com/<myuser>/word-count/settings/pages>
+  - In the “Source” section, choose “gh-pages” in the dropdown menu and click save 
+- That’s it! Your site should now be live on https://<myuser>.github.io/word-count/ (replace username).
+   
+**Everytime you commit the GH Actions will render your source code to html and deploy it to your new web page!**
+``````
    
 
 ````{Admonition} Read more
