@@ -305,11 +305,7 @@ Arguments against [(from Wikipedia)](https://en.wikipedia.org/wiki/Open_science)
 - Reusable
    - Is there a license allowing others to re-use?
 
-### Zenodo and DOI
 
-- Digital object identifiers (DOI) are the backbone of the academic reference and metrics system. 
-- CodeRefinery has an exercise to see how to make a GitHub repository citable by archiving it on the Zenodo archiving service. If you are interested,  have a look [here](https://coderefinery.github.io/reproducible-research/sharing/#exercise-connecting-repositories-to-zenodo)
-- For Services for sharing and collaboration on RESEARCH DATA, click [here](https://coderefinery.github.io/reproducible-research/sharing/#exercise-connecting-repositories-to-zenodo)
 
 
 ### Social coding
@@ -327,116 +323,137 @@ More on Wednesday!
 ```
     
 ### Licensing
+[For more details](https://coderefinery.github.io/social-coding/licensing/#)
 
-- You cannot ignore licensing: default is “no one can make copies or derivative works”.
-
+- **You cannot ignore licensing**: default is “no one can make copies or derivative works”.
 - License your code very early in the project: ideally develop publicly accessible open source code from day one.
-
 - Start with a README.md and a LICENSE file.
-
-- Use GitHub recommendation or/and https://choosealicense.com/.
+- Use GitHub recommendation or/and <https://choosealicense.com/>.
 
 
 #### Licensing and ownership
 
-Who can decide about or change a license?
+**Who can decide about or change a license?**
+- The copyright holder if a separate "Contributor License Agreement" is signed. Otherwise
+  copyright holder provided they secure express consent from all the contributors.
 
-    The copyright holder if a separate “Contributor License Agreement” is signed. Otherwise copyright holder provided they secure express consent from all the contributors.
+**Who owns the copyright for software you write?**
+- **Intellectual property depends on the country and the employer!**
+- So-called works made for hire.
 
-Who owns the copyright for software you write?
+**If you own your software:**
+- You can change the license.
+- You can dual-license (e.g. GPL for anyone, but you can pay for commercial non-GPL).
 
-    Intellectual property depends on the country and the employer!
+**If you do not own your software, you can:**
+- Request open-sourcing directly (preserves your rights!).
+- Request a transfer of ownership (check with your university).
 
-    So-called works made for hire.
+**If you accept contributions (pull requests), you may not be the only owner anymore!**
+- Clarify licensing strategy **before** - otherwise you won't have
+  all rights to your code.
+  
+### What is free software?
 
-If you own your software:
+#### Software freedom is the freedom to ...
 
-    You can change the license.
+- ... run the software for **any purpose**: new applications
+- ... **study** how the software works and to adapt it to your needs: new applications, less reinventing wheels
+- ... **redistribute** copies of the software: more users, more citations
+- ... **improve** the software and distribute your improvements to the public: fix bugs, new science
 
-    You can dual-license (e.g. GPL for anyone, but you can pay for commercial non-GPL).
+#### Typical confusion
 
-If you do not own your software, you can:
-
-    Request open-sourcing directly (preserves your rights!).
-
-    Request a transfer of ownership (check with your university).
-
-If you accept contributions (pull requests), you may not be the only owner anymore!
-
-    Clarify licensing strategy before - otherwise you won’t have all rights to your code.
-
+- Free software does not mean that software is for free
+- Open source license does not mean you need to share everything immediately (share main branch, put unpublished code on a fork)
+- Open source does not mean public domain: software in the public domain has no owner
+- Open source does not mean non-commercial: plenty of companies produce and support it
 
 #### Taxonomy of software licenses
+**1. Custom/closed/proprietary**
 
-1. Custom/closed/proprietary
+- Derivative work typically not possible
 
-    Derivative work typically not possible
+**2. Permissive (MIT, BSD, Apache)**
 
-2. Permissive (MIT, BSD, Apache)
+- Derivative work does not have to be shared
+- Permissive: gives the public permission to use, modify, and share, without any condition for downstream licensing
+- If the licenses of components are permissive, one may use any open license they want.
 
-    Derivative work does not have to be shared
+```{figure} img/MIT.png
+:alt: Permissions, conditions, and limitations of the MIT license
 
-    Permissive: gives the public permission to use, modify, and share, without any condition for downstream licensing
+Example: Permissions, conditions, and limitations of the MIT license. Unchanged from <https://choosealicense.com/>.
+```
 
-    If the licenses of components are permissive, one may use any open license they want.
+**3. Weak copyleft share-alike (LGPL, MPL)**
 
-Permissions, conditions, and limitations of the MIT license
+- Derivative work is free software but is limited to the component
 
-Example: Permissions, conditions, and limitations of the MIT license. Unchanged from https://choosealicense.com/.
+```{figure} img/GNU_LGPL_v3.png
+:alt: Permissions, conditions, and limitations of the LGPL license
 
-3. Weak copyleft share-alike (LGPL, MPL)
+Example: Permissions, conditions, and limitations of the LGPL license. Unchanged from <https://choosealicense.com/>.
+```
 
-    Derivative work is free software but is limited to the component
+**4. Strong copyleft share-alike (GPL, AGPL)**
 
-Permissions, conditions, and limitations of the LGPL license
+- Derivative work is free software and derivative work extends to the combined project
+- If the licenses of components are strong copyleft, one must use the same license
 
-Example: Permissions, conditions, and limitations of the LGPL license. Unchanged from https://choosealicense.com/.
+```{figure} img/GNU_GPL_v3.png
+:alt: Permissions, conditions, and limitations of the GPL license
 
-4. Strong copyleft share-alike (GPL, AGPL)
+Example: Permissions, conditions, and limitations of the GPL license. Unchanged from <https://choosealicense.com/>.
+```
 
-    Derivative work is free software and derivative work extends to the combined project
+If you would like to learn more about licenses, check out our slide deck ["Software licensing
+and open source explained with
+cakes"](https://cicero.xyz/v3/remark/0.14.0/github.com/coderefinery/social-coding/main/licensing-and-cakes.md/).
 
-    If the licenses of components are strong copyleft, one must use the same license
+```{note}
+Also covered on wednesday
+```
 
-Permissions, conditions, and limitations of the GPL license
+### Software Citation
 
-Example: Permissions, conditions, and limitations of the GPL license. Unchanged from https://choosealicense.com/.
+- Think the same as for a scientific paper
 
-If you would like to learn more about licenses, check out our slide deck “Software licensing and open source explained with cakes”.
+**Our practical recommendations**:
+- Get a [DOI](https://en.wikipedia.org/wiki/Digital_object_identifier) using [Zenodo](https://zenodo.org) or similar services.
+- Open source license can't demand citation, but it is required by science ethics anyway.
+- Make it as easy as possible! Clearly say what you want cited.
+- Make it easy for scripts and tools, use the [Citation File Format](https://citation-file-format.github.io).
+- [GitHub now supports CITATION.cff files](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-citation-files)
 
+This is an example of a simple `CITATION.cff` file:
+```yaml
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+  - family-names: Druskat
+    given-names: Stephan
+    orcid: https://orcid.org/0000-0003-4925-7248
+title: "My Research Software"
+version: 2.0.4
+doi: 10.5281/zenodo.1234
+date-released: 2021-08-11
+```
 
-### Citation
+Recommended format for software citation is to ensure the following information
+is provided as part of the reference [Katz, Chue Hong, Clark, 2021](https://doi.org/10.12688/f1000research.26932.2):
+- Creator
+- Title
+- Publication venue
+- Date
+- Identifier
+- Version
+- Type
 
-Think the same as for a scientific paper
-
-Our practical recommendations:
-
-    Get a DOI using Zenodo or similar services.
-
-    Open source license can’t demand citation, but it is required by science ethics anyway.
-
-    Make it as easy as possible! Clearly say what you want cited.
-
-    Make it easy for scripts and tools, use the Citation File Format.
-
-    GitHub now supports CITATION.cff files
-
-Recommended format for software citation is to ensure the following information is provided as part of the reference Katz, Chue Hong, Clark, 2021:
-
-    Creator
-
-    Title
-
-    Publication venue
-
-    Date
-
-    Identifier
-
-    Version
-
-    Type
     
+- Digital object identifiers (DOI) are the backbone of the academic reference and metrics system. 
+- CodeRefinery has an exercise to see how to make a GitHub repository citable by archiving it on the Zenodo archiving service. If you are interested,  have a look [here](https://coderefinery.github.io/reproducible-research/sharing/#exercise-connecting-repositories-to-zenodo)
+- For Services for sharing and collaboration on RESEARCH DATA, click [here](https://coderefinery.github.io/reproducible-research/sharing/#exercise-connecting-repositories-to-zenodo)
 
 
 ```{keypoints}
