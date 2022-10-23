@@ -9,7 +9,7 @@
 ```{objectives}
 - We'll give an introducton to the week
 - We'll give some introduction to concepts used in the course
-- We'll give some introduction to tools
+- We'll give some introduction to handy tools for the software developer
 - We'll try to set up the mindset to find the rest of the week interesting and useful!
 ```
 
@@ -19,80 +19,109 @@
 ```
 
 ## What is software?
+*Wikipedia*
+- set of computer programs and associated documentation and data.
+- This is in contrast to hardware, from which the system is built and which actually performs the work. 
+- Application software 
+  - Most users think of compilers, databases, and other "system software" as applications.
+- User-written software: End-user development
+  - Users create this software themselves and often overlook how important it is.
+  - Depending on how competently the user-written software has been integrated into default application packages, many users may not be aware of the distinction between the original packages, and what has been added by co-workers.
+
+### Different types of Scientific software:
+- analysis of data
+    - statistics
+    - figures
+    - visualization
+- tools for process data
+    - refining data (formatting)
+    - bioinformatics
+- workflows
+- modelling (mimic the reality)
+      - simulations time-varying bahvour of a system
+      - mathematical models of relationships among variables in a system 
+- decision assistance
 
 ### Some concepts
 - program
 - script
 - tool
 - model
-- ---
-- application software
-- User-written software: End-user development
------
+---
 - scripting vs programming
-- Python is an interpreted language. Python uses an interpreter to translate and run its code. Hence Python is a scripting language.
-- Programs written in C++ are compiled and then the compiled code runs to generate the output. C++ is thus a programming language and not a scripting language, since scripting languages are directly interpreted at run time and no prior compilation of the code takes place.
+  - **Python** is an **interpreted language**. Python uses an interpreter to translate and run its code. Hence Python is a **scripting language**.
+  - Programs written in **C++** are **compiled** and then the compiled code runs to generate the output. C++ is thus a **programming language** and not a scripting language, since scripting languages are directly interpreted at run time and no prior compilation of the code takes place.
+---
 
 ```{Note}
-   We will use the word `program` for any code in this course!
+   We will not be very definite in the course in when to use scripting, program or tools 
 ```
 
-### Your programming background
+### Your scripting/programming background (Oct 2022)
 - Python	86%
--	Bash		80%
--	R		45%
--	C++		14%
--	C		12.5%
--	FORTRAN	12.5%
--	Julia 		5.5%
--	JAVA		4%
--	Perl		4%
--	MATLAB	4 %
--	HTML		4%
--	Javascript	4 %
--	Rest		1 person each
-  -	AWK
-  -	PHP
-  -	Groovy
-  -	SQL
+- Bash		80%
+- R		42%
+- C++		14%
+- FORTRAN	14%
+- C		12%
+- Julia 		5%
+- JAVA		3.5%
+- Perl		3.5%
+- MATLAB	3.5 %
+- HTML		3.5%
+- Javascript	3.5 %
+- Rest		1 person each
+  - AWK
+  - PHP
+  - Groovy
+  - SQL
 
 
-- Different types of Scientific software:
-  - analysis of data
-    - statistics
-    - figures
-    - visualization
-  - tools for process data
-    - refining data (formatting)
-    - bioinformatics
-  - workflows
-  - modelling (mimic the reality)
-      - simulations time-varying bahvour of a system
-      - mathematical models of relationships among variables in a system 
-  - decision assistance
+### Functional vs. object-oriented programming
 
-### Functional vs. object oriented programming
+- Object-oriented (OO) programming is 
+  - a mindset of mimicing the real-world as enteties (objects) that are different or share attributes with each-other (within a class)
+  - info-hiding
+- Functional programming is
+  - more classical as it is more focused on the algorithms
+  - keys are functions
+  - modules: a way to gather functions with similar functionality) 
 
-```{todo}
-   
-   mindset
-   info hiding
-   built in
-   - classes
+- Also other... 
 
-   {term}`class`
+At its simplest, functional programming uses immutable data to tell the program exactly what to do. Object-oriented programming tells the program how to achieve results through objects altering the program's state. Both paradigms can be used to create elegant code.
 
-  - objects
-  - generalizations, associations
-
-  - module (ett sätt att samla funktioner med likartade funktionalitet)
+```{note} 
+More on Wednesday
 ```
 
-### Icebreaker
 
+### Languages
+- Object-oriented (built-in classes)
+  - C++
+  - Java
+  - Python
+  - Julia
+- OO features
+  - Fortran 2003 
+  - MATLAB
+  - Perl
+  - PHP
+- OO object-based (but not class-based)
+  - Javascript
+
+
+```
+
+
+
+
+
+
+
+```{Discussion}
 What experience have you had?
-
-
+```
 
 ## Development cycle
 
@@ -180,18 +209,7 @@ More about life cycles in next session and Day 3
 
 
 
-### Languages
-- C++
-- Java
-- Python 
-- Julia
-- OO features
-  - Fortran 2003 
-  - MATLAB
-  - Perl
-  - PHP
-- OO object-based
-  - Javascript
+
 
 
 ## Planning: Analysis and design
