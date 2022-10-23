@@ -209,6 +209,7 @@ The teachers
    collab.md
    reproducible.md
    documentation.md
+   group_exercise.md
    summary.md
    
 .. toctree::
