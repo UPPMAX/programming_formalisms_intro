@@ -5,7 +5,35 @@ These are also helpful in your development work.
 
 ## The development cycle
 
-## Designing phase with pseudocode and UML
+Typical workflow:
+
+    Requirements
+
+    Analysis and design
+
+    Development
+
+    Test
+
+    Development and maintenance
+
+Iteration!
+
+Important to identify problem in beginning and add for flexibility
+
+## Planning phase with pseudocode and UML
+
+- UML is good in several conditions
+- The most important diagrams for software development are:
+  -      Class
+  -      Sequence
+  -      Activity
+
+-  There are plenty of tools out there
+
+-   Pseudocode gives a more detailed description what you want the program to do.
+
+    - Can be highly personal or very language-like
 
 ## Git and Github
 - share your code
@@ -13,14 +41,27 @@ These are also helpful in your development work.
 
 ## Reproducibility
 
-## Documentation
+- Preserve the steps for re-generating published results.
 
-```{Main takeaways}
-  - Git and github (or similar) are good tools
-  - Design before coding
-  - Document
-  - Make reproducible
-```
+- Hundreds of workflow management tools exist.
+
+- Snakemake is a comparatively simple and lightweight option to create transferable and scalable data analyses.
+
+- Sometimes a script is enough.
+
+- Share your code! Eventually others will probably use it anyway.
+
+- Licence your software and do it early. Default is “no one can make copies or derivative works”.
+
+-  Get DOI or at least state how to cite your software
+
+## Documentation
+- Document in code, answering why, not how.
+
+- Make a README.txt for an overview of the software. 
+- Documentation should be tracked with the corresponding code in the same repository
+- Full documentation or tutorial
+- Deploy at GH-pages or ReadTheDocs
 
 ## Coming days
 - Algorithm and data structures
@@ -35,8 +76,3 @@ Does this sound like you? Read on...
 <https://nordic-rse.org/>
 ```
 
-
-https://nordic-rse.org/
-
-
-<https://nordic-rse.org/>
