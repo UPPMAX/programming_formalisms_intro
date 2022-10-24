@@ -1,6 +1,7 @@
 # Collaboration
 
 ```{discussion}
+**Optional**
 - Have you downloaded programs/tools from GitHub?
 - Have you uploaded your own programs/tools and believe that people are using your tool?
 ```
