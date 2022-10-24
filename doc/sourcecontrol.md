@@ -270,7 +270,7 @@ to find relevant information takes some practice and discussions in some
 online threads may be confusing.
 Note that help pages also work when you don't have a network connection!
 
-#### Exercise
+#### Exercise-optional
 ``````{challenge} Make changes (10 min)
   Add the follwing lines before the line "@enduml" to `class.puml`:
   
