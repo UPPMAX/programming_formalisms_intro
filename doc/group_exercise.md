@@ -60,6 +60,10 @@
         ``````
       - With the browser extensions for PlantUML these should be seen directly in preview.
 
+In the end collaborate to make 
+  - a README file
+  - a Licence file
+
 `````````
       
       
