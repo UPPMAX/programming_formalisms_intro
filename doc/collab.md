@@ -7,7 +7,7 @@
 ```
 
 ```{instructor-note}
-- GitHub Lecture+discussion 25 min
+- GitHub Lecture+discussion 15 min
 
 ```
 
