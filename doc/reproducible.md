@@ -12,8 +12,7 @@
 ```
 
 ```{instructor-note}
-- Lecture 25 min
-- Exercises 25 min
+- Lecture+discussions 25 min
 ```
 
 ```{note} 
@@ -134,7 +133,7 @@ Additional labels for pre-release and build metadata are available as extensions
     -	designed around using isolated environments with independent sets of packages. Environments can either be local to a particular project or shared and selected by name.
 
 ### Course advertisment
-[Python for scientific computing](https://aaltoscicomp.github.io/python-for-scicomp/
+[Python for scientific computing](https://aaltoscicomp.github.io/python-for-scicomp/)
 
 
 ## Recording computational steps
@@ -281,8 +280,7 @@ Arguments against [(from Wikipedia)](https://en.wikipedia.org/wiki/Open_science)
 - Increasing the scale of science will make verification of any discovery more difficult
 - Low-quality science
 
-```{figure} img/turing-way/36-data-research-cycle.jpg
-:alt: Research comic
+```{figure} img/36-data-research-cycle.jpg
 :width: 100%
 ```
 
