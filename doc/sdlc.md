@@ -53,7 +53,7 @@ IMAGE
 - **Disadvantages**
   - Complexer than other SDLC models.
   - Expensive: Spiral Model is **not suitable for small projects**
-  - Too much dependability on Risk Analysis
+  - **Too much dependability on Risk Analysis**
   - Difficulty in time management: Number of phases is unknown at the start of the project
 
 ### Rational unified process (RUP) 
@@ -65,6 +65,7 @@ IMAGE
 
 - **Key takeaways**
   - RUP principles
+    - Use cases
     - **Develop iteratively**
     - Manage **requirements**, change
     - **Continuously verify quality**
@@ -160,14 +161,22 @@ Or:
   - Bureaucracy minimized
 
 
-### DevOps
+### DevOps (Development Operations)
 - **Dev**elopers and testers
 - **Ops**: people working with release, servers, middleware, network, storage configs, monitoring techniques
 - DevOps aims to extend fast and frequent software feature development approach to build an efficient delivery pipeline.
+- Phases: development --> test --> stage --> production
+  -  development: unit testing (code)
+  -  test: integration testing (User-interface, web server, app server, backend)
+  -  stage: user acceptance 
+  -  production
 - **Continous**...
-  - **Integration**: Central repo
+  - **Integration**: Central repository
+    - development + test
   - **Development**: Ensuring stable product after every release
+    - development + test + stage
   - **Deployment**: automating updates to production
+    - development + test + stage + production
 
 **And more...**
 
