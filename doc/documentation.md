@@ -19,6 +19,35 @@
    - We will give examples where to deploy a documenation page.
 ```
 
+## Project dokumentation
+
+- Think that everything is worth to be part of documentation (like Github directory tree)
+- The parts from the software development cycle
+  - The planning parts
+      - Requirements: 
+        - what should the program deliver
+        - dependencies
+        - OS platforms
+      - Risk analysis
+      - Analysis: pseudo code and UML
+  - Source code
+    - with in-code deocumentation
+  - README
+  - (Full documentation)
+  - (Tutorial)
+
+**Recall a typical directory structure from last section**
+
+  - Readme file
+  - Data		(version controlled)(.gitignore)
+  - Processed data	intermediate
+  - Manuscript	
+  - Results		data, tables, figures (version controlled, git tags for manus version)
+  - Src		version controlled code
+    - License 
+    - Requirements.txt
+  - Doc
+    - index
 
 ## In-code
 
