@@ -450,9 +450,8 @@ Example: Permissions, conditions, and limitations of the GPL license. Unchanged 
 ```{image} ./img/Cc.logo.circle.svg.png
 :alt: Creative Commons
 :width: 100px
-:align: left
+:align: center
 ``` 
-<br/><br/><br/><br/><br/><br/><br/><br/>
 
 
 - Creative Commons licenses give everyone a standardized way to grant the public permission to use their creative work under copyright law.
