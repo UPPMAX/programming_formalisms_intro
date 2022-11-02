@@ -446,8 +446,11 @@ Example: Permissions, conditions, and limitations of the GPL license. Unchanged 
 ```
 
 ### Creative Commons licenses 
-![Creative Commons](./img/Cc.logo.circle.svg.png  =50x)
-
+```{image} ./img/Cc.logo.circle.svg.png
+:alt: Creative Commons
+:width: 50px
+:align: left
+``` 
 - Creative Commons licenses give everyone a standardized way to grant the public permission to use their creative work under copyright law.
 - From the reuser’s perspective, the presence of a Creative Commons license on a copyrighted work answers the question, “What can I do with this work?” 
 <https://creativecommons.org/about/cclicenses/>
@@ -455,7 +458,7 @@ Example: Permissions, conditions, and limitations of the GPL license. Unchanged 
 - For software, Creative Commons includes three free licenses created by other institutions: the BSD License, the GNU LGPL, and the GNU GPL. See above.
 
 - 4 rights:
-  - BY – Attribution - Credit must be given to the creator ![Cc-by](./img/Cc-by_new.svg.png =50x)
+  - BY – Attribution - Credit must be given to the creator <img src="./img/Cc-by_new.svg.png" alt="CC-by" width="50"/>
     - User may copy, distribute, display, perform and make derivative works and remixes based on it only if they give the author or licensor the credits
   - SA - Share alike - Allows remix culture ![Cc-sa](./img/Cc-sa.svg.png =50x)
     - distribute derivative works only under a license identical to ("not more restrictive than") the license that governs the original work.(Share alike)
