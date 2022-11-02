@@ -452,6 +452,7 @@ Example: Permissions, conditions, and limitations of the GPL license. Unchanged 
 :width: 100px
 :align: left
 ``` 
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 
 
 - Creative Commons licenses give everyone a standardized way to grant the public permission to use their creative work under copyright law.
@@ -460,32 +461,40 @@ Example: Permissions, conditions, and limitations of the GPL license. Unchanged 
 - More often used for images and text.
 - For software, Creative Commons includes three free licenses created by other institutions: the BSD License, the GNU LGPL, and the GNU GPL. See above.
 
-- 4 rights:
-  - BY – Attribution - Credit must be given to the creator
+#### 4 rights:
+- BY – Attribution - Credit must be given to the creator
+  - User may copy, distribute, display, perform and make derivative works and remixes based on it only if they give the author or licensor the credits  
   ```{image} ./img/Cc-by_new.svg.png
   :alt: CC-BY
   :width: 50px
+  :align: center
   ``` 
-     - User may copy, distribute, display, perform and make derivative works and remixes based on it only if they give the author or licensor the credits
-  - SA - Share alike - Allows remix culture 
+     
+- SA - Share alike - Allows remix culture 
+  - distribute derivative works only under a license identical to ("not more restrictive than") the license that governs the original work.(Share alike)
   ```{image} ./img/Cc-sa.svg.png
   :alt: CC-SA
   :width: 50px
+  :align: center
   ``` 
-     - distribute derivative works only under a license identical to ("not more restrictive than") the license that governs the original work.(Share alike)
-  - NC - Non-commercial 
+
+- NC - Non-commercial 
+  - Licensees may copy, distribute, display, perform the work and make derivative works and remixes based on it only for non-commercial purposes. 
   ```{image} ./img/113px-Cc-nc.svg.png
   :alt: CC-NC
   :width: 50px
+  :align: center
   ``` 
-     - Licensees may copy, distribute, display, perform the work and make derivative works and remixes based on it only for non-commercial purposes. 
-  - ND - No derivative work 
+  
+- ND - No derivative work 
+  - Licensees may copy, distribute, display and perform only verbatim copies of the work, not derivative works and remixes based on it. Since version 4.0, derivative works are allowed but must not be shared. 
   ```{image} ./img/Cc-nd.svg.png
   :alt: CC-ND
   :width: 50px
-  ``` 
-     - Licensees may copy, distribute, display and perform only verbatim copies of the work, not derivative works and remixes based on it. Since version 4.0, derivative works are allowed but must not be shared. 
-  - CC0 (aka CC Zero) - No attribution required
+  :align: center
+  ```
+  
+- CC0 (aka CC Zero) - No attribution required
     - not recommended to release software into the public domain because it lacks a patent grant.
 
 If you would like to learn more about licenses, check out our slide deck ["Software licensing
