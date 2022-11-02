@@ -266,6 +266,9 @@ published academic article (and possibly supplementary information).
 :width: 90%
 ```
 
+- **Open-source license** is a type of license for computer software and other products that allows the **source code, blueprint or design to be used, modified and/or shared under defined terms and conditions**.
+
+
 Arguments in favor [(from Wikipedia)](https://en.wikipedia.org/wiki/Open_science):
 - Open access publication of research reports and data allows for rigorous peer-review
 - Science is publicly funded so all results of the research should be publicly available
@@ -282,6 +285,8 @@ Arguments against [(from Wikipedia)](https://en.wikipedia.org/wiki/Open_science)
 
 ```{figure} img/36-data-research-cycle.jpg
 :width: 100%
+
+(This image was created by Scriberia for The Turing Way community and is used under a CC-BY licence. The image was obtained from https://zenodo.org/record/3332808.)
 ```
 
 ```{admonition} Read more
@@ -307,7 +312,6 @@ Arguments against [(from Wikipedia)](https://en.wikipedia.org/wiki/Open_science)
 
 
 ### Social coding
-
 
 -  Our work depends on outputs from others. Research of others depends on our outputs.
 
@@ -402,8 +406,6 @@ Is this derivative work? ["Distillery District 26"](https://www.flickr.com/photo
 
 - Copyleft is the legal technique of granting certain freedoms over copies of copyrighted works with the requirement that the same rights be preserved in derivative works.
 
-- open-source license is a type of license for computer software and other products that allows the source code, blueprint or design to be used, modified and/or shared under defined terms and conditions
-
 
 
 **1. Custom/closed/proprietary**
@@ -444,6 +446,8 @@ Example: Permissions, conditions, and limitations of the GPL license. Unchanged 
 ```
 
 ### Creative Commons licenses 
+![Cc-by](./img/Cc-by_new.svg.png)
+
 - Creative Commons licenses give everyone a standardized way to grant the public permission to use their creative work under copyright law.
 - From the reuser’s perspective, the presence of a Creative Commons license on a copyrighted work answers the question, “What can I do with this work?” 
 <https://creativecommons.org/about/cclicenses/>
