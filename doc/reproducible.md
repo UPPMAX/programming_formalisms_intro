@@ -462,34 +462,45 @@ Example: Permissions, conditions, and limitations of the GPL license. Unchanged 
 - For software, Creative Commons includes three free licenses created by other institutions: the BSD License, the GNU LGPL, and the GNU GPL. See above.
 
 #### 4 rights:
-- BY – Attribution - Credit must be given to the creator
-  - User may copy, distribute, display, perform and make derivative works and remixes based on it only if they give the author or licensor the credits  
+
   ```{image} ./img/Cc-by_new.svg.png
   :alt: CC-BY
   :width: 50px
   :align: center
   ``` 
+  
+- BY – Attribution - Credit must be given to the creator
+  - User may copy, distribute, display, perform and make derivative works and remixes based on it only if they give the author or licensor the credits  
      
-- SA - Share alike - Allows remix culture 
-  - distribute derivative works only under a license identical to ("not more restrictive than") the license that governs the original work.(Share alike)
   ```{image} ./img/Cc-sa.svg.png
   :alt: CC-SA
+  :width: 50px
+  :align: center
+  ``` 
+  
+- SA - Share alike - Allows remix culture 
+  - distribute derivative works only under a license identical to ("not more restrictive than") the license that governs the original work.(Share alike)
+
+  ```{image} ./img/113px-Cc-nc.svg.png
+  :alt: CC-NC
   :width: 50px
   :align: center
   ``` 
 
 - NC - Non-commercial 
   - Licensees may copy, distribute, display, perform the work and make derivative works and remixes based on it only for non-commercial purposes. 
-  ```{image} ./img/113px-Cc-nc.svg.png
-  :alt: CC-NC
-  :width: 50px
-  :align: center
-  ``` 
   
-- ND - No derivative work 
-  - Licensees may copy, distribute, display and perform only verbatim copies of the work, not derivative works and remixes based on it. Since version 4.0, derivative works are allowed but must not be shared. 
   ```{image} ./img/Cc-nd.svg.png
   :alt: CC-ND
+  :width: 50px
+  :align: center
+  ```
+
+- ND - No derivative work 
+  - Licensees may copy, distribute, display and perform only verbatim copies of the work, not derivative works and remixes based on it. Since version 4.0, derivative works are allowed but must not be shared. 
+  
+  ```{image} ./img/225px-Cc-zero.svg
+  :alt: CC0
   :width: 50px
   :align: center
   ```
