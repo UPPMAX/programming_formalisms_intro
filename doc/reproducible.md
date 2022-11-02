@@ -452,7 +452,7 @@ Example: Permissions, conditions, and limitations of the GPL license. Unchanged 
 :width: 100px
 :align: left
 ``` 
-<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/>
 
 
 - Creative Commons licenses give everyone a standardized way to grant the public permission to use their creative work under copyright law.
@@ -463,47 +463,47 @@ Example: Permissions, conditions, and limitations of the GPL license. Unchanged 
 
 #### 4 rights:
 
-  ```{image} ./img/Cc-by_new.svg.png
-  :alt: CC-BY
-  :width: 50px
-  :align: center
-  ``` 
+```{image} ./img/Cc-by_new.svg.png
+:alt: CC-BY
+:width: 50px
+:align: center
+``` 
   
 - BY – Attribution - Credit must be given to the creator
   - User may copy, distribute, display, perform and make derivative works and remixes based on it only if they give the author or licensor the credits  
      
-  ```{image} ./img/Cc-sa.svg.png
-  :alt: CC-SA
-  :width: 50px
-  :align: center
-  ``` 
+```{image} ./img/Cc-sa.svg.png
+:alt: CC-SA
+:width: 50px
+:align: center
+``` 
   
 - SA - Share alike - Allows remix culture 
   - distribute derivative works only under a license identical to ("not more restrictive than") the license that governs the original work.(Share alike)
 
-  ```{image} ./img/113px-Cc-nc.svg.png
-  :alt: CC-NC
-  :width: 50px
-  :align: center
-  ``` 
+```{image} ./img/113px-Cc-nc.svg.png
+:alt: CC-NC
+:width: 50px
+:align: center
+``` 
 
 - NC - Non-commercial 
   - Licensees may copy, distribute, display, perform the work and make derivative works and remixes based on it only for non-commercial purposes. 
   
-  ```{image} ./img/Cc-nd.svg.png
-  :alt: CC-ND
-  :width: 50px
-  :align: center
-  ```
+```{image} ./img/Cc-nd.svg.png
+:alt: CC-ND
+:width: 50px
+:align: center
+```
 
 - ND - No derivative work 
   - Licensees may copy, distribute, display and perform only verbatim copies of the work, not derivative works and remixes based on it. Since version 4.0, derivative works are allowed but must not be shared. 
   
-  ```{image} ./img/225px-Cc-zero.svg
-  :alt: CC0
-  :width: 50px
-  :align: center
-  ```
+```{image} ./img/225px-Cc-zero.svg.png
+:alt: CC0
+:width: 50px
+:align: center
+```
   
 - CC0 (aka CC Zero) - No attribution required
     - not recommended to release software into the public domain because it lacks a patent grant.
