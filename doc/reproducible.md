@@ -436,12 +436,32 @@ Example: Permissions, conditions, and limitations of the LGPL license. Unchanged
 Example: Permissions, conditions, and limitations of the GPL license. Unchanged from <https://choosealicense.com/>.
 ```
 
+### Creative Commons licenses 
+- Creative Commons licenses give everyone from individual creators to large institutions a standardized way to grant the public permission to use their creative work under copyright law.
+- From the reuser’s perspective, the presence of a Creative Commons license on a copyrighted work answers the question, “What can I do with this work?” 
+https://creativecommons.org/about/cclicenses/
+Clauses:
+- BY – Attribution - Credit must be given to the creator
+  - User may copy, distribute, display, perform and make derivative works and remixes based on it only if they give the author or licensor the credits
+- SA - Share alike - Allows remix culture
+  - distribute derivative works only under a license identical to ("not more restrictive than") the license that governs the original work.(Share alike)
+- NC - Non-commercial
+  - Licensees may copy, distribute, display, perform the work and make derivative works and remixes based on it only for non-commercial purposes. 
+- ND - No derivative work
+  - Licensees may copy, distribute, display and perform only verbatim copies of the work, not derivative works and remixes based on it. Since version 4.0, derivative works are allowed but must not be shared. 
+
+CC0 (aka CC Zero) - No attribution required
+  - not recommended to release software into the public domain because it lacks a patent grant.
+  - 
+- For software, Creative Commons includes three free licenses created by other institutions: the BSD License, the GNU LGPL, and the GNU GPL.[30]
+
+
 If you would like to learn more about licenses, check out our slide deck ["Software licensing
 and open source explained with
 cakes"](https://cicero.xyz/v3/remark/0.14.0/github.com/coderefinery/social-coding/main/licensing-and-cakes.md/).
 
 ```{note}
-Also covered on wednesday
+Also covered on Wednesday
 ```
 
 ## Software Citation
