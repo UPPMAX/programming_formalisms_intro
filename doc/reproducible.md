@@ -399,6 +399,13 @@ Is this derivative work? ["Distillery District 26"](https://www.flickr.com/photo
 - Open source does not mean non-commercial: plenty of companies produce and support it
 
 ### Taxonomy of software licenses
+
+- Copyleft is the legal technique of granting certain freedoms over copies of copyrighted works with the requirement that the same rights be preserved in derivative works.
+
+- open-source license is a type of license for computer software and other products that allows the source code, blueprint or design to be used, modified and/or shared under defined terms and conditions
+
+
+
 **1. Custom/closed/proprietary**
 
 - Derivative work typically not possible
@@ -437,6 +444,7 @@ Example: Permissions, conditions, and limitations of the GPL license. Unchanged 
 ```
 
 ### Creative Commons licenses 
+- More often used for images and text.
 - Creative Commons licenses give everyone from individual creators to large institutions a standardized way to grant the public permission to use their creative work under copyright law.
 - From the reuser’s perspective, the presence of a Creative Commons license on a copyrighted work answers the question, “What can I do with this work?” 
 https://creativecommons.org/about/cclicenses/
