@@ -18,7 +18,10 @@ Answer in HackMD
 ```{instructor-note}
 - Git Lecture + typealong 25 min
 - Git Exercise 10 min
+- Include branching?
 - Github locally + type along 15 min
+- Perhaps more time?? Maximum 60 min
+
 ```
 This material is based on or inspired by the material from [NBIS](https://nbis-reproducible-research.readthedocs.io/en/course_2104/git/) and [CodeRefinery](https://coderefinery.github.io/git-intro/)
 
