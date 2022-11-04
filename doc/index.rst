@@ -208,6 +208,7 @@ The teachers
    sourcecontrol.md
    collab.md
    reproducible.md
+   sharing.md
    documentation.md
    group_exercise.md
    summary.md
