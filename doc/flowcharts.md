@@ -11,6 +11,8 @@
       - learn basic notations
       - (Test with graphical interface)
       - (Test with the script based plantUML)
+   - We will see some examples of Pseudocode   
+   
 ```
 
 ```{instructor-note}
