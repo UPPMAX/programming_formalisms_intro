@@ -1,5 +1,9 @@
 # Summary
 
+```{instructor-note}
+- Summary 10 min
+```
+
 You now have acquainted yourself with the tools you will use in this course.
 These are also helpful in your development work.
 
