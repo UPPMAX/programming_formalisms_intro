@@ -8,6 +8,7 @@
 
 ```{instructor-note}
 - GitHub Lecture+discussion 15 min
+- Add exercise?
 
 ```
 
