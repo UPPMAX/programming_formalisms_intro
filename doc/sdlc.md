@@ -13,7 +13,8 @@
 
 
 ```{instructor-note}
-- Lecture 15 min
+- Lecture 25 min
+- Shorten to 15m
 ```
 
 
