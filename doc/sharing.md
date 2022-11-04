@@ -11,6 +11,7 @@
 - Lecture+discussions 15 min
 ```
 
+## Open science 
 
 The Open Science movement encourages researchers
 to share research output beyond the contents of a
