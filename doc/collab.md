@@ -6,6 +6,13 @@
 - Have you uploaded your own programs/tools and believe that people are using your tool?
 ```
 
+```{Objectives}
+   - We will give an overview Github
+      - centralized collaboratio
+      - Forked collaboration
+      - How to contribute
+```
+
 ```{instructor-note}
 - GitHub Lecture+discussion 15 min
 - Add exercise?
