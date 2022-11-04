@@ -13,7 +13,7 @@
 
 ```{instructor-note}
 - Lecture+discussions 25 min
-- More time required, 40?
+- More time required, 25?
 ```
 
 ```{note} 
