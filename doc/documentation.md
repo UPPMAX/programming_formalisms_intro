@@ -19,7 +19,7 @@
    - We will give examples where to deploy a documenation page.
 ```
 
-## Project dokumentation
+## Project documentation
 
 - Think that everything is worth to be part of documentation (like Github directory tree)
 - The parts from the software development cycle
@@ -260,6 +260,7 @@ GitHub, GitLab, and Bitbucket make it possible to serve HTML pages:
 ## Summary
 
 ````{Keypoints}
+  - Think that everything is worth to be part of documentation (like Github directory tree)
   - Document in code, answering why, not how.
   - Make a README.txt for an overview of the software. Make use of Markdown on Github for easier formatting. It should include:
     - Overview
@@ -268,7 +269,7 @@ GitHub, GitLab, and Bitbucket make it possible to serve HTML pages:
     - Licensing and how to cite
   - Documentation should be tracked with the corresponding code in the same repository.
   - Full documentation or tutorial
-    - Make use of Sphinx to render standard markup languages like markdown or reStructuredText to HTML.
-  - Deploy at GH-pages or ReadTheDocs
+    - Make use of Sphinx or MkDocs to render standard markup languages like markdown or reStructuredText to HTML.
+  - Deploy wat GH-pages or ReadTheDocs or other.
     
 ```` 
