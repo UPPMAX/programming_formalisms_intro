@@ -350,6 +350,7 @@ In Breakout-rooms 6-8 people:
     - Class
     - Sequence 
     - Activity 
+    - Use case
   - There are plenty of tools out there
     - some can produce code directly
     - some are script-based and well integrated in Markdown tools like Sphinx and HackMD
