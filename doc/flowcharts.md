@@ -9,12 +9,13 @@
    - We will give an overview of UML diagrams
       - learn when to use
       - learn basic notations
-      - Test with graphical interface
-      - Test with the script based plantUML
+      - (Test with graphical interface)
+      - (Test with the script based plantUML)
 ```
 
 ```{instructor-note}
-- Lecture + Discussions 30 min
+- Lecture + Discussions 45 min
+- Perhaps OK length
 ```
 
 ## The planning steps
