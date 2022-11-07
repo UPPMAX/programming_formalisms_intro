@@ -138,12 +138,30 @@ Interaction -> Sequence,	Communication, Timing,	Interaction-overview
 
 ### Class
 
-<---
 ```{uml} puml/class.puml
 ```
---->
+
+```console
+@startuml
+node foo
+foo --> bar : normal
+foo --> bar1 #line:red;line.bold;text:red  : red bold
+foo --> bar2 #green;line.dashed;text:green : green dashed 
+foo --> bar3 #blue;line.dotted;text:blue   : blue dotted
+@enduml
+```
 
 ```{uml}
+@startuml
+class Car
+
+Driver - Car : drives >
+Car *- Wheel : have 4 >
+Car -- Person : < owns
+@enduml
+```
+
+```console
 @startuml
 class Car
 
@@ -166,9 +184,55 @@ end note
 @enduml
 ```
 
+```console
+   
+@startuml
+user -> (use PlantUML)
+
+note left of user
+   Hello!   
+end note
+@enduml
+```
+
 ```{uml} puml/external.uml
 ```
+
+```console
+@startuml
+Alice -> Bob: Authentication Request
+Bob --> Alice: Authentication Response
+
+Alice -> Bob: Another authentication Request
+Alice <-- Bob: Another authentication Response
+@enduml
+```
+
 ```{uml}
+@startuml
+participant User
+
+User -> A: DoWork
+activate A
+
+A -> B: << createRequest >>
+activate B
+
+B -> C: DoWork
+activate C
+C --> B: WorkDone
+destroy C
+
+B --> A: RequestCreated
+deactivate B
+
+A -> User: Done
+deactivate A
+@enduml
+```
+
+
+```console
 @startuml
 participant User
 
@@ -193,6 +257,9 @@ deactivate A
 
 ### Activity
 
+```{uml} puml/activity.puml
+```
+
 ```console
 @startuml
 
@@ -209,10 +276,6 @@ stop
 
 @enduml
 ```
-
-```{uml} puml/activity.puml
-```
-
 
 ### Other
 #### Use case 
@@ -238,10 +301,34 @@ g --> UC3
 @enduml
 ```
 
+```console
+@startuml
+left to right direction
+actor Guest as g
+package Professional {
+  actor Chef as c
+  actor "Food Critic" as fc
+}
+package Restaurant {
+  usecase "Eat Food" as UC1
+  usecase "Pay for Food" as UC2
+  usecase "Drink" as UC3
+  usecase "Review" as UC4
+}
+fc --> UC4
+g --> UC1
+g --> UC2
+g --> UC3
+@enduml
+```
+
 
 #### Object
 
 ```{uml} puml/object.puml
+```
+
+```console
 
 ```
 
@@ -249,9 +336,24 @@ g --> UC3
 
 ```{uml} puml/component.puml
 ```
+
+```console
+
+```
+
 #### Deployment
 
 ```{uml} puml/deployment.puml
+```
+
+```console
+@startuml
+node foo
+foo --> bar : normal
+foo --> bar1 #line:red;line.bold;text:red  : red bold
+foo --> bar2 #green;line.dashed;text:green : green dashed 
+foo --> bar3 #blue;line.dotted;text:blue   : blue dotted
+@enduml
 ```
 
 #### State
@@ -259,11 +361,18 @@ g --> UC3
 ```{uml} puml/state.puml
 ```
 
+```console
+
+```
+
 #### Timing
 
 ```{uml} puml/timing.puml
 ```
 
+```console
+
+```
 
 ## Tools
 
