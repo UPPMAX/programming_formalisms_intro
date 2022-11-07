@@ -157,7 +157,7 @@ What experience have you had?
   Risk driven
 
 ```{figure} img/spiral-1-1024x945.jpg
-:alt: Centralized layout
+:alt: Spiral
 :width: 50%
 ```
 
@@ -402,7 +402,7 @@ There are different types of remotes:
 - Another option is [NotABug](https://notabug.org)
 
 
-```attention
+```{attention}
 **Also workflows!**
 ```
 
