@@ -86,6 +86,7 @@ class Elevator{
   void stop()
   void which_floor()
 }
+@enduml
 ```
 
 ```{uml}
