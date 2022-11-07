@@ -270,7 +270,6 @@ How do you program? Put "o" on you choice
 
 ```{uml}
 @startuml
-!theme superhero
 start
 if (stuff) then (true) 
    :action 2;
@@ -403,7 +402,9 @@ There are different types of remotes:
 - Another option is [NotABug](https://notabug.org)
 
 
-.. attention:: **Also workflows!**
+```attention
+**Also workflows!**
+```
 
 ```{objectives}
    - [Source and version control](https://uppmax.github.io/programming_formalism_intro/sourcecontrol.html) aims to
