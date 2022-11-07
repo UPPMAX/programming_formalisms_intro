@@ -85,6 +85,15 @@ class Elevator{
   void which_floor()
 }
 
+object elevator1{
+up
+2
+}
+object elevator2{
+rest
+5
+}
+
 @enduml
 
 ```
