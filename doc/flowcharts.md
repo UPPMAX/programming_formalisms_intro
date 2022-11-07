@@ -138,7 +138,19 @@ Interaction -> Sequence,	Communication, Timing,	Interaction-overview
 
 ### Class
 
+<---
 ```{uml} puml/class.puml
+```
+--->
+
+```{uml}
+@startuml
+class Car
+
+Driver - Car : drives >
+Car *- Wheel : have 4 >
+Car -- Person : < owns
+@enduml
 ```
 
 ### Sequence
@@ -156,12 +168,28 @@ end note
 
 ```{uml} puml/external.uml
 ```
-
 ```{uml}
-User -> Authenticator : request
-Authenticator -> User : respond <token>
-```
+@startuml
+participant User
 
+User -> A: DoWork
+activate A
+
+A -> B: << createRequest >>
+activate B
+
+B -> C: DoWork
+activate C
+C --> B: WorkDone
+destroy C
+
+B --> A: RequestCreated
+deactivate B
+
+A -> User: Done
+deactivate A
+@enduml
+```
 
 ### Activity
 ```{uml} puml/activity.puml
