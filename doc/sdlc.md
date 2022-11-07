@@ -49,7 +49,10 @@ digraph {
 1. Each lab is new cycle: prototype--> RC --> launch
 1. Risk driven
 
-IMAGE
+```{figure} img/spiral-1-1024x945.jpg
+:alt: spiral
+:width: 50%
+```
 
 - **Disadvantages**
   - Complexer than other SDLC models.
