@@ -67,11 +67,28 @@
 
 ### Functional vs. object-oriented programming
 
+#### Object oriented programming
 - Object-oriented (OO) programming is 
   - a mindset of mimicing the real-world as:
   - entities (`objects`) that are different 
   - or share attributes with each-other (within a `class`)
   - info-hiding mindset...
+
+```{uml}
+@startuml
+class Elevator{
+  direction : String
+  floor : Integer
+  
+  void goto_floor()
+  void stop()
+  void which_floor()
+}
+
+@enduml
+
+```
+
 - Functional programming is
   - more classical as it is more focused on the algorithms
   - keys are functions
