@@ -74,6 +74,8 @@
   - or share attributes with each-other (within a `class`)
   - info-hiding mindset...
 
+
+
 ```{uml}
 @startuml
 class Elevator{
@@ -84,14 +86,17 @@ class Elevator{
   void stop()
   void which_floor()
 }
+```
 
+```{uml}
+@startuml
 object elevator1{
-up
-2
+direction="up"
+floor=2
 }
 object elevator2{
-rest
-5
+direction="rest"
+floor=5
 }
 
 @enduml
