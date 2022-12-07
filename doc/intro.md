@@ -294,10 +294,14 @@ More about life cycles in next session and Day 3
 start
 :Clearly state whole problem;
 :Define inputs and outputs;
-:Design the algorithm with `pseudocode`;
+:Design the algorithm with `pseudocode`'
+  - Decomposition
+  - Stepwise refinement;
 :Turn the algorithm into specific language statements;
 :Test the resulting program;
+
 stop
+
 @enduml
 ```
 
