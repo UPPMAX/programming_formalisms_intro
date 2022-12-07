@@ -292,11 +292,11 @@ More about life cycles in next session and Day 3
 ```{uml}
 @startuml
 start
-Clearly state whole problem
-Define inputs and outputs
-Design the algorithm with `pseudocode`
-Turn the algorithm into specific language statements
-Test the resulting program
+"Clearly state whole problem"
+"Define inputs and outputs"
+"Design the algorithm with `pseudocode`"
+"Turn the algorithm into specific language statements"
+"Test the resulting program"
 stop
 @enduml
 ```
