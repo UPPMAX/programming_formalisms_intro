@@ -289,6 +289,19 @@ More about life cycles in next session and Day 3
 4. Turn the algorithm into specific language statements
 5. Test the resulting program
 
+```{uml}
+@startuml
+start
+Clearly state whole problem
+Define inputs and outputs
+Design the algorithm with `pseudocode`
+Turn the algorithm into specific language statements
+Test the resulting program
+stop
+@enduml
+```
+
+
 ### Bottom-Up
 Start with parts first and develop a bigger organization with time.
 
