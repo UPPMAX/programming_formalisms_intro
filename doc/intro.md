@@ -545,20 +545,27 @@ In this lesson we will discuss different methods and tools for better reproducib
 @startuml
 start
 :Unit testing of individual subtasks;
+-> subtasks validated sperately;
 repeat: Successive builds \n - adding subtasks to the program;
 backward:As many times as necessary;
 repeat while
+-> subtasks combined into program;
 repeat: Alpha release;
 backward:As many times as necessary;
 repeat while
+-> worst bugs fixed;
+
 repeat: Beta release;
 backward:As many times as necessary;
 repeat while
+-> minor bugs fixed;
 :Finished program;
 
 stop
 
 @enduml
+
+
 ```
 
 ## Summary of Introduction
