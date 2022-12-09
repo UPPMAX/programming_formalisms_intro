@@ -303,6 +303,21 @@ stop
 ```
 ### Syntax for algorithm flowchart
 
+Start and stop
+@startuml
+start
+stop
+@enduml
+
+@startuml
+start
+:Hello world;
+:This is defined on
+several **lines**;
+stop
+@enduml
+
+
 Computation
 
 Input output
