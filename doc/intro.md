@@ -548,8 +548,9 @@ start
 :Successive builds - adding subtasks to the program;
 :Alpha release;
 :Beta release;
+:Finished program;
 
-Finished program
+stop
 
 @enduml
 ```
