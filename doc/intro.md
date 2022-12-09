@@ -549,7 +549,11 @@ repeat: Successive builds \n - adding subtasks to the program;
 backward:As many times as necessary;
 repeat while
 repeat: Alpha release;
+backward:As many times as necessary;
+repeat while
 repeat: Beta release;
+backward:As many times as necessary;
+repeat while
 :Finished program;
 
 stop
