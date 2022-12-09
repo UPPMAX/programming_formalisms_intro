@@ -304,11 +304,15 @@ stop
 ### Syntax for algorithm flowchart
 
 Start and stop
+
+```{uml}
 @startuml
 start
 stop
 @enduml
+```
 
+```{uml}
 @startuml
 start
 :Hello world;
@@ -316,7 +320,7 @@ start
 several **lines**;
 stop
 @enduml
-
+```
 
 Computation
 
