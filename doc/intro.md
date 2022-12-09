@@ -548,7 +548,8 @@ start
 repeat
   :Successive builds
   adding subtasks to the program;
-repeat while is (as many times as necessary) 
+backward:As many times as necessary;
+repeat while
 :Alpha release;
 :Beta release;
 :Finished program;
