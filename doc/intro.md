@@ -194,25 +194,24 @@ What experience have you had?
 ```
 
 - Agile developing
-  - division of tasks into **short phases of work** and frequent **reassessment** and adaptation of plans.
+  - Division of tasks into **short phases of work** and frequent **reassessment** and adaptation of plans.
 
 ### Some common steps 
 
--Planning
-  - analysis and design
+- Planning
+  - Analysis and design
 - Development
-  - source control
+  - Source control
   - Algorithms
   - Optimization
     - Parallelism
 - Test
   - Tests 
-  - test-drive development
+  - Test-drive development
 - Development and maintenance
-  - documentation
-  - reproducibility and sharing
+  - Documentation
+  - Reproducibility and sharing
 - Iterations
-
 
 More about life cycles in next session and Day 3
 
@@ -225,10 +224,10 @@ More about life cycles in next session and Day 3
     - Source/version control
     - Collaboration
     - Reproducible research and sharing
-        - personal use to general use
-        - dependencies
-        - sharing
-        - licensing
+        - Personal use to general use
+        - Pependencies
+        - Sharing
+        - Licensing
     - Documentation
    
 - **Day2** Algorithms+data structures
@@ -384,7 +383,7 @@ Summarized from [Code refinery](https://coderefinery.github.io/git-intro/motivat
 - tool
 
 ###  Why version control
--  Roll-back functionality
+- Roll-back functionality
    - Mistakes happen - without recorded snapshots you cannot easily undo mistakes and **go back to a working version**.
 - Branching
   - Often you need to work on **several issues/features in one code** - without branching this can be messy and confusing.
@@ -537,6 +536,23 @@ In this lesson we will discuss different methods and tools for better reproducib
      - Get tips for README files
      - Get tips for full documentation and tutorials
 ```
+
+## Testing
+
+**Typical testing process**
+
+```{uml}
+@startuml
+start
+:Unit testing of individual subtasks;
+:Successive builds - adding subtasks to the program;
+:Alpha release;
+:Beta release;
+
+Finished program
+
+@enduml
+
 
 ## Summary of Introduction
 - Now after the overview you are ready to dig deeper in the topics and try it out yourself!
