@@ -548,8 +548,8 @@ start
 repeat: Successive builds \n - adding subtasks to the program;
 backward:As many times as necessary;
 repeat while
-:Alpha release;
-:Beta release;
+repeat: :Alpha release;
+repeat: :Beta release;
 :Finished program;
 
 stop
