@@ -545,7 +545,10 @@ In this lesson we will discuss different methods and tools for better reproducib
 @startuml
 start
 :Unit testing of individual subtasks;
-:Successive builds - adding subtasks to the program;
+repeat
+  :Successive builds
+  adding subtasks to the program;
+repeat while is (as many times as necessary) 
 :Alpha release;
 :Beta release;
 :Finished program;
