@@ -87,8 +87,27 @@ Then there are benefits with digital tools
 
 - Although originally intended for object-oriented design documentation, UML has been extended to a larger set of design documentation,and been found useful in many contexts.
 
-### Graphical syntax
-
+### Building blocks
+- Things
+  - Structural
+    - Class
+    - Interface
+    - collaboration
+    - use case   
+    - component
+    - node
+  - Behavioral (dynamic)
+    - interaction
+    - state machine 
+  - Grouping
+    - packaging  
+  - Annotational
+    - Note
+- Relationships
+  - Dependency
+  - association
+  - generalization
+  - realization
 
 ### Diagrams
 
@@ -261,7 +280,7 @@ deactivate A
 
 ### Activity
 
-A flowchart that shows the process and its correlating decisions, including an algorithm or a business process.
+A flowchart that shows the process and its correlating decisions, including an **algorithm**  or a business process.
 
 ```{uml} puml/activity.puml
 ```
@@ -282,7 +301,7 @@ stop
 
 @enduml
 ```
-### Syntax for algorithm 
+### Syntax for algorithm flowchart
 
 Computation
 
