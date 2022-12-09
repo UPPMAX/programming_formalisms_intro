@@ -138,6 +138,8 @@ Interaction -> Sequence,	Communication, Timing,	Interaction-overview
 
 ### Class
 
+ A diagram that shows the system classes and relationships between them.
+
 ```{uml} puml/class.puml
 ```
 
@@ -172,6 +174,8 @@ Car -- Person : < owns
 ```
 
 ### Sequence
+
+A diagram that shows the existence of Objects over time, and the Messages that pass between those Objects over time to carry out some behavior.
 
 ```{uml}
    
@@ -257,6 +261,8 @@ deactivate A
 
 ### Activity
 
+A flowchart that shows the process and its correlating decisions, including an algorithm or a business process.
+
 ```{uml} puml/activity.puml
 ```
 
@@ -276,9 +282,23 @@ stop
 
 @enduml
 ```
+### Syntax for algorithm 
+
+Computation
+
+Input output
+
+Choice
+
+
+Direction of program flow
+Iterarative or counting llop
+
 
 ### Other
 #### Use case 
+
+A diagram that shows relations between Actors and Use Cases.
 
 ```{uml}
 @startuml
@@ -325,6 +345,11 @@ g --> UC3
 
 #### Object
 
+Object diagrams are derived from class diagrams so object diagrams are dependent upon class diagrams.
+
+Object diagrams represent an instance of a class diagram. The basic concepts are similar for class diagrams and object diagrams. Object diagrams also represent the static view of a system but this static view is a snapshot of the system at a particular moment.
+
+
 ```{uml} puml/object.puml
 ```
 
@@ -334,6 +359,9 @@ g --> UC3
 
 #### Component
 
+A diagram that shows relations between various Components and Interfaces.
+
+
 ```{uml} puml/component.puml
 ```
 
@@ -342,6 +370,12 @@ g --> UC3
 ```
 
 #### Deployment
+
+A diagram that shows relations between various Processors.
+
+Deployment diagrams are used to visualize the topology of the physical components of a system, where the software components are deployed.
+
+Deployment diagrams are used to describe the static deployment view of a system. Deployment diagrams consist of nodes and their relationships.
 
 ```{uml} puml/deployment.puml
 ```
@@ -358,6 +392,8 @@ foo --> bar3 #blue;line.dotted;text:blue   : blue dotted
 
 #### State
 
+A diagram that shows States of a system or subsystem, Transitions between States, and the Events that cause the Transitions.
+
 ```{uml} puml/state.puml
 ```
 
@@ -366,6 +402,8 @@ foo --> bar3 #blue;line.dotted;text:blue   : blue dotted
 ```
 
 #### Timing
+
+show timing constraints of a system in a given time frame
 
 ```{uml} puml/timing.puml
 ```
