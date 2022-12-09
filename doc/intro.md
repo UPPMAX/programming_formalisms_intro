@@ -539,6 +539,11 @@ In this lesson we will discuss different methods and tools for better reproducib
 
 ## Testing
 
+Does it work for all legal input data sets??
+
+1. Unit testing 
+2. Integration tests
+
 **Typical testing process**
 
 ```{uml}
