@@ -1,5 +1,15 @@
 # Planning phase
 
+**TEST**
+
+```{mermaid}
+
+    sequenceDiagram
+      participant Alice
+      participant Bob
+      Alice->John: Hello John, how are you?
+```
+
 ```{questions}
   - How to use UML and Pseudocode?
   - Can I learn it?
