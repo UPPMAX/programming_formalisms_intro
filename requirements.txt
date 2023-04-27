@@ -8,4 +8,5 @@ sphinx_rtd_theme_ext_color_contrast
 myst_nb
 sphinxemoji
 sphinxcontrib-plantuml
-sphinxcontrib-mermaid
+#sphinxcontrib-mermaid
+sphinx-mermaid
