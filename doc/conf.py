@@ -37,7 +37,7 @@ extensions = ["sphinx_lesson",
     'sphinx-prompt',
     'sphinxcontrib.plantuml',
     'sphinx.ext.graphviz',
-    'sphinxcontrib.mermaid',
+    'sphinxmermaid',
 ]
 #plantuml = 'java -jar plantuml.jar'
 #plantuml = 'java -Djava.awt.headless=true -jar %s' % os.path.join(os.path.dirname(os.path.abspath(__file__)), "plantuml.jar")
