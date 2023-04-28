@@ -1,6 +1,6 @@
 
 Programming formalisms — Introduction day
-========================================
+=========================================
 
 .. admonition:: Course punchlines
    
