@@ -564,7 +564,7 @@ else
 
     print 'no grades were entered' 
     
-```{info}
+```{note}
 More practicals about Pseudocode tomorrow!
 More practicals about UML this adfternoon!
 ```
