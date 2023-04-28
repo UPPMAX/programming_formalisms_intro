@@ -44,7 +44,7 @@ extensions = ["sphinx_lesson",
 
 #plantuml = 'java -Djava.awt.headless=true -jar %s' % os.path.join(os.path.dirname(os.path.abspath(__file__)), "plantuml.jar")
 
-mermaid_output_format = 'png'
+mermaid_output_format = 'svg'
 mermaid_params = [
     "--theme",
     "forest",
