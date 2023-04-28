@@ -13,7 +13,7 @@ jobs:
           sudo apt install plantuml
           sudo apt 
           sudo apt install npm
-          npm install -g mermaid
+          npm install -g @mermaid-js/mermaid
           #npm install -g phantomjs
           npm install -g @mermaid-js/mermaid-cli
           #npm install markmap
