@@ -44,7 +44,7 @@ extensions = ["sphinx_lesson",
 
 #plantuml = 'java -Djava.awt.headless=true -jar %s' % os.path.join(os.path.dirname(os.path.abspath(__file__)), "plantuml.jar")
 
-mermaid_output_format = "raw"
+mermaid_output_format = 'png'
 mermaid_params = [
     "--theme",
     "forest",
@@ -53,6 +53,7 @@ mermaid_params = [
     "--backgroundColor",
     "transparent",
 ]
+
 jupyter_execute_notebooks = "cache"
 
 myst_enable_extensions = [
