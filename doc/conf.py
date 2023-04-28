@@ -18,7 +18,7 @@ import sys
 # -- Project information -----------------------------------------------------
 
 project = 'Programming formalism intro'
-copyright = '2022, UPPMAX'
+copyright = '2023, UPPMAX'
 author = 'UPPMAX'
 
 # The full version, including alpha/beta/rc tags
@@ -44,7 +44,7 @@ extensions = ["sphinx_lesson",
 
 #plantuml = 'java -Djava.awt.headless=true -jar %s' % os.path.join(os.path.dirname(os.path.abspath(__file__)), "plantuml.jar")
 
-mermaid_output_format = 'png'
+mermaid_output_format = 'raq'
 mermaid_params = [
     "--theme",
     "forest",
