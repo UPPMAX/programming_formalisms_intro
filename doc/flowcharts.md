@@ -2,7 +2,7 @@
 
 **TEST**
 
-```mermaid
+```{mermaid}
 
 sequenceDiagram
   participant Alice
