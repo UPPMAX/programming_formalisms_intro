@@ -212,11 +212,11 @@ The teachers
    documentation.md
    group_exercise.md
    summary.md
-   
+ 
 .. toctree::
    :maxdepth: 2
    :caption: Extra reading:
-   
+
    SDLC_models.md
 
 .. toctree::
