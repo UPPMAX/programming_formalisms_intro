@@ -11,11 +11,9 @@ Programming formalisms — Introduction day
 
 .. admonition:: This course aims to 
    
-   - give...
-      - life scientists, 
-      - bioinformaticians, 
-      - and other scientists 
-      ... with some experience in programming and scripting an understanding of the underlying principles of software development, design, and programming. 
+   - give bioinformaticians and other scientists
+       ... with some experience in programming and scripting 
+       - an understanding of the underlying principles of software development, design, and programming. 
       
    - strengthen the understanding of:
       - more advanced programming concepts
@@ -218,6 +216,12 @@ The teachers
    :caption: Extra reading:
 
    SDLC_models.md
+   UML_deeper.md
+   git_deeper.md
+   collab_deeper.md
+   reproducible_deeper.md
+   sharing_deeper.md
+   documentation_deeper.md
 
 .. toctree::
    :maxdepth: 2
