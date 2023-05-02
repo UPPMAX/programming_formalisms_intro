@@ -219,9 +219,6 @@ The teachers
    
    SDLC_models.md
 
-   concepts.md
-   # exercises.md
-   * :ref:`genindex`
 .. toctree::
    :maxdepth: 2
    :caption: Reference:
