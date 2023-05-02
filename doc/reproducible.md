@@ -1,4 +1,4 @@
-# Reproducible research and sharing
+# Reproducible research
 
 ```{Objectives}
    - We will give an overview of 
