@@ -204,10 +204,10 @@ The teachers
    sdlc.md 
    flowcharts.md
    sourcecontrol.md
-   collab.md
    reproducible.md
    sharing.md
    documentation.md
+   collab.md
    group_exercise.md
    summary.md
  
