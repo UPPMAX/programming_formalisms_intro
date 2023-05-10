@@ -21,7 +21,7 @@
 
 ## Project documentation
 
-- Think that everything is worth to be part of documentation (like Github directory tree)
+- Think that **everything is worth to be part of documentation** (like Github directory tree)
 - The parts from the software development cycle
   - The planning parts
       - Requirements: 
@@ -29,6 +29,7 @@
         - dependencies
         - OS platforms
       - Risk analysis
+  - Design documentation
       - Analysis: pseudo code and UML
   - Source code
     - with in-code deocumentation
