@@ -27,12 +27,12 @@ Different types of remotes:
   set up.
 - [Bitbucket](https://bitbucket.org) is yet another popular commercial site.
 - Another option is [NotABug](https://notabug.org)
--
   
 ## Github
 There are two more ways to create “copies” of repositories into your user space:
 
-    A repository can be marked as template and new repositories can be generated from it, like using a cookie-cutter. The newly created repository will start with a new history, only one commit, and not inherit the history of the template.
+- A repository can be marked as **template** and new repositories can be **generated** from it, like using a cookie-cutter. The newly created repository will start with a new history, only one commit, and not inherit the history of the template.
+- You can **import** a repository from another hosting service or web address. This will preserve the history of the imported project.
 
 ## Commits, branches, repositories, forks, clones
 
