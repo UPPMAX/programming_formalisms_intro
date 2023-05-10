@@ -104,10 +104,10 @@ Additional labels for pre-release and build metadata are available as extensions
 -	**Installing those dependencies** mostly automatically
 -	**Recording the versions** for all dependencies
 -	**Isolated environments**
-  -	On your computer for projects so they can use different software.
-  -	Isolate environments on computers with many users (and allow self-installations)
--	Using **different Python/R versions** per project??
-- Provide tools and services to **share packages**
+   -	On your computer for projects so they can use different software.
+   -	Isolate environments on computers with many users (and allow self-installations)
+   -	Using **different Python/R versions** per project??
+   -    Provide tools and services to **share packages**
 
 ### The tools
 - Python
@@ -153,19 +153,19 @@ Additional labels for pre-release and build metadata are available as extensions
 
 ### Graphical user interface (GUI)
 Imagine we have programmed a GUI with a nice interface with icons where you can select scripts and input files by clicking:
-- Click on counting script
-- Select book txt file
-- Give a name for the dat file
-- Click on a run symbol
-- Click on plotting script
-- Select book dat file
-- Give a name for the image file
-- Click on a run symbol
-- ...
-- Go to next book ...
-- Click on counting script
-- Select book txt file
-- ...
+1. Click on counting script
+1. Select book txt file
+1. Give a name for the dat file
+1. Click on a run symbol
+1. Click on plotting script
+1. Select book dat file
+1. Give a name for the image file
+1. Click on a run symbol
+1. ...
+1. Go to next book ...
+1. Click on counting script
+1. Select book txt file
+1. ...
 
 Disclaimer: not all GUIs behave this way - there exist very good GUI solutions which enable
 reproducibility and automation.
@@ -243,6 +243,27 @@ Discuss the pros and cons of these different approaches. Which are reproducible?
 <https://coderefinery.github.io/reproducible-research/workflow-management/>
 <https://nbis-reproducible-research.readthedocs.io/en/course_2104/snakemake/>
 ```
+## Containers
+
+Popular container implementations:
+
+- Docker
+
+- Singularity (popular on high-performance computing systems)
+
+- Apptainer (popular on high-performance computing systems, fork of Singularity)
+
+- podman
+
+They are to some extent interoperable:
+
+- podman is very close to Docker
+
+- Docker images can be converted to Singularity/Apptainer images
+
+- Singularity Python can convert Dockerfiles to Singularity definition files
+
+https://coderefinery.github.io/reproducible-research/environments
 
 ## Reproducible publications
 - Git (overleaf, authorea), hackmd, manuscripts.io, google docs
