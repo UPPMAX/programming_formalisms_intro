@@ -1,25 +1,6 @@
 # More about documentation
 
-# Documentation
 
-```{instructor-note}
-- Lecture 20.0 min
-```
-
-```{discussion} Motivation: Why should we document code?
-
-- **Use the collaborative document**.
-- Is project documentation important? Why?
-- How would you describe a useful documentation?
-```
-
-```{Objectives}
-   - We will give an overview of different levels of documentation
-      - in-code
-      - README:s
-      - Full documentation/tutorials
-   - We will give examples where to deploy a documenation page.
-```
 
 ## Project documentation
 
