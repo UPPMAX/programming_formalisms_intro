@@ -1,6 +1,5 @@
 # More about UML
 
-# Planning phase
 
 **TEST**
 
