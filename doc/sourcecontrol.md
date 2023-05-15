@@ -285,7 +285,7 @@ Note that help pages also work when you don't have a network connection!
     +get_var02()
     {method}Without parentheses or Qualifiers
  }
-
+```
   When you are done editing the files, try `git diff`:
 
   ```console
