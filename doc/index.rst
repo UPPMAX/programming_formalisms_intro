@@ -201,7 +201,7 @@ The teachers
    :caption: Lesson:
 
    intro.md
-   sdlc.md 
+   sdlc_tools.md 
    flowcharts.md
    sourcecontrol.md
    reproducible.md
