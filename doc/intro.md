@@ -175,14 +175,14 @@ What experience have you had?
 
 ``````{Admonition} Demo
 **Planet application**
-Make a program that simulates the Earth's change of orbit due to the interaction with other planets-
+- Make a program that simulates the Earth's change of orbit due to the interaction with other planets-
 
 - This was done in MATLAB with no thought of best practices, just trying to solve the problem!
 
-  ````{solution} Code
+````{solution} Code
 
-```code
-  %planet
+```Matlab
+%planet
 clear all
 close all
 %constants
