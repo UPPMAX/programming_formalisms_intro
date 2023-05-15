@@ -1,30 +1,6 @@
 # More about reproducible research
 
-# Reproducible research
 
-```{Objectives}
-   - We will give an overview of 
-      - recording dependencies
-   - Get short intro to tools:
-       - Pip and PyPI
-       - Conda
-       - Environments
-       - Tools for other languages than Python
-    
-```
-
-```{instructor-note}
-- Lecture+discussions 25 min
-- Sharing moved to own page
-- Time required, 20?
-```
-
-```{note} 
-- This is a summary.
-- For more background please confer 
-  - [NBIS](https://nbis-reproducible-research.readthedocs.io/en/course_2104) 
-  - [CodeRefinery](https://coderefinery.github.io/reproducible-research/)
-``` 
 
 ```{figure} img/repro-pyramid.png
 :alt: Reproducibility pyramid
