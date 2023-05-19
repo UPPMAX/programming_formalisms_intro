@@ -12,9 +12,9 @@ jobs:
         run: |
           sudo apt update
           sudo apt install plantuml
-          #sudo apt install npm
+          sudo apt install npm
           #npm install mermaid
-          #npm install -g @mermaid-js/mermaid-cli
+          npm install -g @mermaid-js/mermaid-cli
           #npm install markmap
       - name: Install dependencies
         run: |
