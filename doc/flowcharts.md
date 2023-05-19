@@ -1,16 +1,5 @@
 # Planning phase
 
-**TEST**
-
-```{mermaid}
-
-sequenceDiagram
-  participant Alice
-  participant Bob
-  Alice->John: Hello John, how are you?
-```
-
-
 ```{questions}
   - How to use UML and Pseudocode?
   - Can I learn it?
@@ -475,6 +464,12 @@ show timing constraints of a system in a given time frame
   -	Can be integrated with IDE:s, Java documentation, Word
   -	Scripts rather than drawing tools
   -	<http://www.plantuml.com/plantuml>
+- Mermaid
+  - Open-source
+  - Not as many diagrams
+  - renders in browser
+  - https://mermaid.js.org/
+
 
 ### PlantUML
 
