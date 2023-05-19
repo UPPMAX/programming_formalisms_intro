@@ -11,65 +11,6 @@ sequenceDiagram
   Alice->John: Hello John, how are you?
 ```
 
-
-```{questions}
-  - How to use UML and Pseudocode?
-  - Can I learn it?
-```
-
-```{Objectives}
-   - We will give an overview of UML diagrams
-      - learn when to use
-      - learn basic notations
-      - (Test with graphical interface)
-      - (Test with the script based plantUML)
-   - We will see some examples of Pseudocode   
-   
-```
-
-```{instructor-note}
-- Lecture + Discussions 45 min
-- Perhaps OK length
-```
-
-## The planning steps
-- get an overview of the project/program.
-- help planning writing the code
-- identify parts needed
-
-Lifecycle steps, example
-1.	Plan/initiate
-2.	Gather requirements
-3.	Design
-
-or
-
-1. Analysis
-  - to state the problem and define inputs and outputs
-    - graphical tools like UML
-2. Design
-  - to find out the specific algorithms needed
-    - pseudocode
-
-## Analysis step
-- UML Diagrams
-  - Flowchart 
-- Object-orientation programming
-  - Identify objects
-- Functional programming
-  - Identify functions  
-- Text can also work here, describing the problem as a whole
-
-## Design step
-
-- Pseudocode
-- Object-orientation programming
-  - Identify classes that objects can belong to
-  - UML
-- Functional programming
-  - Identify algorithms 
-
-
 ## Unified Modeling Language
 
 - UML is not a programming language. It's a graphical notation for drawing diagrams to visualize object oriented systems.
@@ -85,19 +26,6 @@ or
 
 First iteration in planning can be paper or whiteboard 
 Then there are benefits with digital tools 
-
-
-### Design
-
-- A way to visualize a system's architectural blueprints in a diagram, including elements such as:
-  - any activities (jobs);
-  - individual components of the system;
-    - and how they can interact with other software components;
-  - how the system will run;
-  - how entities interact with others (components and interfaces);
-  - external user interface.
-
-- Although originally intended for object-oriented design documentation, UML has been extended to a larger set of design documentation,and been found useful in many contexts.
 
 ### Building blocks
 - Things
@@ -334,6 +262,7 @@ stop
 @enduml
 ```
 
+````{admonition} What's this?
 Computation
 
 Input output
@@ -342,8 +271,8 @@ Choice
 
 
 Direction of program flow
-Iterarative or counting llop
-
+Iterative or counting loop
+````
 
 ### Other
 #### Use case 
@@ -404,6 +333,21 @@ Object diagrams represent an instance of a class diagram. The basic concepts are
 ```
 
 ```console
+@startuml
+object Object01
+object Object02
+object Object03
+object Object04
+object Object05
+object Object06
+object Object07
+object Object08
+
+Object01 <|-- Object02
+Object03 *-- Object04
+Object05 o-- "4" Object06
+Object07 .. Object08 : some labels
+@enduml
 
 ```
 
@@ -416,6 +360,21 @@ A diagram that shows relations between various Components and Interfaces.
 ```
 
 ```console
+@startuml
+package "Some Group" {
+  HTTP - [First Component]
+  [Another Component]
+}
+
+node "Other Groups" {
+  FTP - [Second Component]
+  [First Component] --> FTP
+}
+
+cloud {
+  [Example 1]
+}
+
 
 ```
 
@@ -448,7 +407,26 @@ A diagram that shows States of a system or subsystem, Transitions between States
 ```
 
 ```console
+@startuml
+scale 600 width
 
+[*] -> State1
+State1 --> State2 : Succeeded
+State1 --> [*] : Aborted
+State2 --> State3 : Succeeded
+State2 --> [*] : Aborted
+state State3 {
+  state "Accumulate Enough Data\nLong State Name" as long1
+  long1 : Just a test
+  [*] --> long1
+  long1 --> long1 : New Data
+  long1 --> ProcessData : Enough Data
+}
+State3 --> State3 : Failed
+State3 --> [*] : Succeeded / Save Result
+State3 --> [*] : Aborted
+
+@enduml
 ```
 
 #### Timing
@@ -459,29 +437,32 @@ show timing constraints of a system in a given time frame
 ```
 
 ```console
+@startuml
+robust "DNS Resolver" as DNS
+robust "Web Browser" as WB
+concise "Web User" as WU
 
+@0
+WU is Idle
+WB is Idle
+DNS is Idle
+
+@+100
+WU -> WB : URL
+WU is Waiting
+WB is Processing
+
+@+200
+WB is Waiting
+WB -> DNS@+50 : Resolve URL
+
+@+100
+DNS is Processing
+
+@+300
+DNS is Idle
+@enduml
 ```
-
-## Tools
-
-<https://en.wikipedia.org/wiki/List_of_Unified_Modeling_Language_tools>
-
-- Modeling
-  - Code generation
-  -	Reverse engineering
-  - Analyze code complexity
-  -	Other metrics
-- PlantUML
-  - Open-source
-  -	Can be integrated with IDE:s, Java documentation, Word
-  -	Scripts rather than drawing tools
-  -	<http://www.plantuml.com/plantuml>
-
-### PlantUML
-
-- PlantUML is an open-source tool allowing users to create diagrams from a plain text language. 
-- uses Graphviz software to lay out its diagrams
-- More info and examples at <https://plantuml.com/>
 
 #### Syntax
 - https://plantuml.com/
@@ -491,113 +472,3 @@ show timing constraints of a system in a given time frame
 - [PlantUML web server](http://www.plantuml.com/plantuml/uml/SyfFKj2rKt3CoKnELR1Io4ZDoSa70000)
 - Look at the source files of this material.
 
-## Pseudocode
-
-- Pseudocode generally does not obey the syntax rules of any particular language
-   - there is no systematic standard form. 
-- Some writers borrow style and syntax from control structures from some conventional programming language, although this is discouraged.
-- Some syntax sources include Fortran, Pascal, BASIC, C, C++, Java, Lisp, and ALGOL. 
-- Variable declarations are typically omitted. 
-- Function calls and blocks of code, such as code contained within a loop, are often replaced by a one-line natural language sentence.
-
-- Depending on the writer, pseudocode may therefore vary widely in style, 
-  - from a near-exact imitation of a real programming language at one extreme
-  - to a description approaching formatted prose at the other. 
-
-### Mathematical style pseudocode
-- Used in numerical computation
-
-```{math}
-\sum_{k\in S} x_k
-```
-
-
-
-{{nowrap|Return <math>\sum_{k\in S} x_k</math>}}
-
-**Common mathematical symbols**
-
-|Type of operation |	Symbol |	Example |
-|------------------|---------|----------|
-|Assignment |	← or := |	c ← 2πr, c := 2πr|
-|Comparison |	=, ≠, <, >, ≤, ≥ 	| |
-|Arithmetic |	+, −, ×, /, mod 	| |
-|Floor/ceiling |	⌊, ⌋, ⌈, ⌉ |	a ← ⌊b⌋ + ⌈c⌉ | 
-|Logical |	**and, or** 	| |
-|Sums, products | 	Σ Π |	h ← Σa∈A 1/a |
-
-
-### Examples
-
-
-#### 1
-If student's grade is greater than or equal to 60
-
-    Print "passed"
-
-else
-
-    Print "failed" 
-    
-#### 2
-
-Initialize total to zero
-
-Initialize counter to zero
-
-Input the first grade
-
-while the user has not as yet entered the sentinel
-
-    add this grade into the running total 
-
-    add one to the grade counter 
-
-    input the next grade (possibly the sentinel)
-
-if the counter is not equal to zero
-
-    set the average to the total divided by the counter
-
-    print the average 
-
-else
-
-    print 'no grades were entered' 
-    
-```{note}
-More practicals about Pseudocode tomorrow!
-More practicals about UML this adfternoon!
-```
-
-```{Discussion}
-In Breakout-rooms 6-8 people:
-- What are your impressions about
-  - UML?
-  - pseudocode?
-- Experiences?
-- Share in the end 1-3 inputs in HackMD
-```
-
-
-
-## Summary
-
-````{Keypoints}
-  - UML is good in several conditions
-    - Structural overviews
-    - Planning
-    - Problem solving
-    - Designing phase of programming
-  - The most important diagrams for software development are: 
-    - Class
-    - Sequence 
-    - Activity 
-    - Use case
-  - There are plenty of tools out there
-    - some can produce code directly
-    - some are script-based and well integrated in Markdown tools like Sphinx and HackMD
-      - perfect for sharing
-  - Pseudocode gives a more detailed description what you want the program to do.
-    - Can be highly personal or very language-like
-```` 
