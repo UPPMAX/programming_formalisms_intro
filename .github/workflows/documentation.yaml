@@ -10,6 +10,7 @@ jobs:
       # Install plantuml
       - name: Install OS package dependencies
         run: |
+          sudo apt update
           sudo apt install plantuml
           #sudo apt install npm
           #npm install mermaid
