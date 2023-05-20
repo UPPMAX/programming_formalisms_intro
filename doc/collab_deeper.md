@@ -12,28 +12,6 @@ Different types of remotes:
 - [Bitbucket](https://bitbucket.org) is yet another popular commercial site.
 - Another option is [NotABug](https://notabug.org)
   
-## Github
-There are two more ways to create “copies” of repositories into your user space:
-
-- A repository can be marked as **template** and new repositories can be **generated** from it, like using a cookie-cutter. The newly created repository will start with a new history, only one commit, and not inherit the history of the template.
-- You can **import** a repository from another hosting service or web address. This will preserve the history of the imported project.
-
-## Commits, branches, repositories, forks, clones
-
-- **repository**: The project, contains all data and history (commits, branches, tags).
-- **commit**: Snapshot of the project, gets a unique identifier (e.g. `c7f0e8bfc718be04525847fc7ac237f470add76e`).
-- **branch**: Independent development line, often we call the main development line `master` or `main`.
-- **tag**: A pointer to one commit, to be able to refer to it later. Like a [commemorative plaque](https://en.wikipedia.org/wiki/Commemorative_plaque)
-  that you attach to a particular commit (e.g. `phd-printed` or `paper-submitted`).
-- **cloning**: Copying the whole repository to your laptop - the first time. It is not necessary to download each file one by one.
-- **forking**: Taking a copy of a repository (which is typically not yours) - your
-  copy (fork) stays on GitHub and you can make changes to your copy.
-
-- `git clone` copies everything: all commits and all branches.
-- Branches on the remote appear as (read-only) local branches with a prefix, e.g. `origin/master`.
-- We synchronize commits between local and remote with `git fetch`/`git pull` and `git push`.
-- Repositories that are shared online often synchronize via pull requests or merge requests.
-- Repositories that are forked or cloned do not automatically synchronize themselves.
 
 ## Centralized workflow
 ```{figure} img/centralized.svg
@@ -84,7 +62,6 @@ remote refers to the fork.
 - Create a branch
 - Commit and push change
 - File a pull request or merge request
-
 
 ### If you observe an issue and have an idea how to fix it
 
