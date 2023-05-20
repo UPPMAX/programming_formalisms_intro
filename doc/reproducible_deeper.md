@@ -1,48 +1,6 @@
 # More about reproducible research
 
 
-
-```{figure} img/repro-pyramid.png
-:alt: Reproducibility pyramid
-:width: 100%
-```
-
-```{figure} img/turing-way/39-reproducible-replicable-robust-generalisable.jpg
-:alt: Reproducible, replicable, robust, generalisable
-:width: 100%
-```
-
-(This image was created by [Scriberia](http://www.scriberia.co.uk) for [The
-Turing Way](https://the-turing-way.netlify.com) community and is used under a
-CC-BY licence. The image was obtained from [https://zenodo.org/record/3332808](https://zenodo.org/record/3332808).)
-
-
-```{discussion} Discuss in HackMD, with your neighbors, or among all participants
-Computer programs are expected to produce the same
-output for the same inputs. Is
-that true for research software?
-
-Can you give some examples? What can we do about it?
-```
-
-
-## First things: order your files!
-
-- Directory structure: Different projects should have separate folders
-  - Readme file
-  - Data		(version controlled)(.gitignore)
-  - Processed data	intermediate
-  - Manuscript	
-  - Results		data, tables, figures (version controlled, git tags for manus version)
-  - Src		version controlled code
-    - License 
-    - Requirements.txt
-  - Doc
-    - index
-```{note}
-If software is reused in several projects it can make sense to put them in own repo
-```
-
 ## Versioning systems 
 
 ### Semantic (SemVer)
