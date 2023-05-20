@@ -208,7 +208,7 @@ The teachers
    sharing.md
    documentation.md
    collab.md
-   group_exercise.md
+   deploy.md
    summary.md
  
 .. toctree::
@@ -222,6 +222,7 @@ The teachers
    reproducible_deeper.md
    sharing_deeper.md
    documentation_deeper.md
+   deploy_deeper.md
 
 .. toctree::
    :maxdepth: 2
