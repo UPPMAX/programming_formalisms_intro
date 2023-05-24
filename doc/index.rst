@@ -156,7 +156,7 @@ https://uppmax.github.io/programming_formalisms/#schedule
 
 .. raw:: html
 
-    <iframe src="https://uppmax.github.io/programming_formalisms/#schedule"height="345px" width="100%"></iframe>
+    <iframe src="https://uppmax.github.io/programming_formalisms/#schedule"height="500px" width="100%"></iframe>
 
 
 .. admonition:: Learning outcomes of course
