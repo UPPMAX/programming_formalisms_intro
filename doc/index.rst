@@ -11,7 +11,7 @@ Programming formalisms — Introduction day
 
 .. admonition:: This course aims to 
    
-   - give bioinformaticians and other scientists
+   - give scientists
        ... with some experience in programming and scripting 
        - an understanding of the underlying principles of software development, design, and programming. 
       
@@ -24,45 +24,39 @@ Programming formalisms — Introduction day
       - Git and Github
    - convince the benefits of sharing and social coding
  
-
-
 .. note:: 
 
-   **Your background**
-   
-   - Math
-   - Self-taught
-   - PDEs
-   - Molecular modelling with python and bash
-   - Bioinformatics
-   - Minor programming
-   - Data analysis/manipulation
-   - Machine learning
-   - Deep learning
-   - Thermo and fluid dynamics
-   - Computational science
-   - Digital image correlation
-   - Life science programming, not data background
-   - Pipelines and workflows
-   - software development for nuclear reactor analysis
-
-
-.. note:: 
-
-    **Your expectations**
+.. admonition:: Your expectations
     
-   - Programming skills
-   - Readable code
-   - Reusable code
-   - Make tools that other people can also benefit from
-   - Train logic
-   - Optimize
-   - Best practice
-   - Big-picture architecture of programs
-   - Classical training
-   - Package development
-   - Object-oriented programming
-   - Modular development
+   - Optimisation/speed 8
+   - Structured/systematic 	7
+   - Reusable 5
+   - Testing 4
+   - Organise	3
+   - Modular 3
+   - Best practice 3
+   - Efficiency 3
+   - Team/collaboration 3
+   - Object 2
+   - Design 2
+   - Formalism 2
+   - Paradigm 2
+   - Bioinformatic tools 2
+   - Revision 1
+   - Advanced level 1
+   - Comprehensive intro 1
+   - Pair coding 1
+   - TDD 1
+   - Publish 1
+   - High quality 1
+   - Planning 1
+   - Reproducible 1
+   - Easy-to-use 1
+   - Readable 1
+   - Refine 1
+   - Functional 1
+
+
 
 .. admonition:: Content and expectations
 
