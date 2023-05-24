@@ -147,17 +147,23 @@ The teachers
 - Lars Eklund, lars.eklund@uppmax.uu.se
 - Björn Claremar, bjorn.claremar@uppmax.uu.se
 - Jon Ander Novella, jon.novella@nbis.se
-- Richèl Biderbeek,richel.bilderbeek@uppmax.uu.se 
+- Richèl Biderbeek, richel.bilderbeek@uppmax.uu.se 
    
 Schedule
---------------------
-
-https://uppmax.github.io/programming_formalisms/#schedule
+--------
 
 .. raw:: html
 
     <iframe src="https://uppmax.github.io/programming_formalisms/#schedule"height="500px" width="100%"></iframe>
 
+https://uppmax.github.io/programming_formalisms/#schedule
+
+Reflections at the end of day
+-----------------------------
+
+
+Learning outcomes
+-----------------
 
 .. admonition:: Learning outcomes of course
 
