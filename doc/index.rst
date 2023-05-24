@@ -154,7 +154,7 @@ Schedule
 
 .. raw:: html
 
-    <iframe src="https://uppmax.github.io/programming_formalisms/#schedule"height="500px" width="100%"></iframe>
+    <iframe src="https://uppmax.github.io/programming_formalisms/#schedule"height="600px" width="100%"></iframe>
 
 https://uppmax.github.io/programming_formalisms/#schedule
 
@@ -173,7 +173,7 @@ Learning outcomes
      - have an introductory understanding of **source control**
      - have an introduction to common **concerns and practices in optimisation** in development of software
      - be familiar with **common development practices** and "best practices" of software development
-     - be familiar with the **object oriented paradigm**
+     - be familiar with the **object-oriented paradigm**
      - have an overview of **other design and development paradigms**
      - have a basic understanding of **modular programming and modular design**
      - have an understanding of the **software life cycle**
