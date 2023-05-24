@@ -154,6 +154,10 @@ Schedule
 
 https://uppmax.github.io/programming_formalisms/#schedule
 
+.. raw:: html
+
+    <iframe src="https://uppmax.github.io/programming_formalisms/#schedule"></iframe>
+
 
 .. admonition:: Learning outcomes of course
 
