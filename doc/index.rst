@@ -63,7 +63,7 @@ Programming formalisms — Introduction day
 
    - We will cover an introduction to 
    
-      - Algorithms and Data structures:    *Programming skills*, *Train logic*
+      - **Algorithms and Data structures:    *Programming skills*, *Train logic***
       - Programming Paradigms:    *Classical training*, *Big-picture architecture of programs*
             - especially structured:    *Readable code*
             - functional programming:    *Modular development*
@@ -89,7 +89,7 @@ Programming formalisms — Introduction day
 
 .. prereq::
 
-   See the [setup.md](https://github.com/UPPMAX/programming_formalism/blob/main/setup.md) file
+   See the `setup.md <https://github.com/UPPMAX/programming_formalism/blob/main/setup.md>`_ file
 
 Some practicals
 ----------------
@@ -103,18 +103,18 @@ ZOOM
            
     - When you join the Zoom meeting, use your REAL NAME.
     
-    - Please MUTE your microphone when you are not speaking and use the “**Raise hand**” functionality under the “Participants” window during the lecture. 
+    - Please MUTE your microphone when you are not speaking and 
+    
+      - use the “**Raise hand**” functionality under the “Participants” window during the lecture. 
+    
     - Behave politely!
     - There will be breakout rooms used in the Zoom for some of the exercises. You will be randomly assigned to one of them the first day. The other days there will be defined groups.  
     
     - Use **Zoom chat only**:
+    
        - in breakout rooms 
        - for Zoom specific technical issues
     
-.. warning:: 
-
-   - Lecture parts are recorded, so please be muted!
-   - Exercise sessions and breakout rooms are not recorded!
     
 Collaboration document HackMD
 +++++++++++++++++++++++++++++
@@ -123,12 +123,15 @@ Collaboration document HackMD
 
     - Use the HackMD page for the workshop with your questions.
     - Tell us directly if it is too fast or you need clarification.
+    
        -  Either a helper will answer the question or the helper will pose the question to the teacher.
      
     - Depending on how many helpers there are we'll see how fast there are answers. 
+    
         - Some answers may come after the workshop.
  
     - Type in the left frame 
+    
         - "-" means new bullet and <tab> indents the level.
         - don't focus too much on the formatting if you are new to "Markdown" language!
     
@@ -138,40 +141,18 @@ Collaboration document HackMD
 
    - Where do you work?
 
-.. admonition:: Exercises
-
-   - Exercises will be mixed with group work and individual work.
-   - We will use Git and Github as tools for version control and collaboration.
-   
-   
-Schedule
---------------------
-
-- **Day1**: Intro (Björn Claremar)
-- **Day2**: Algorithms and data structures (Marcus Lundberg)
-- **Day3-4**: Paradigms: design patterns, modular code (Lars Eklund, Jon Ander Novella)
-- **Day4**: Test-drive development, testing (Per Johansson, Matias Piqueras)
-- **Day5**: Optimization (Marcus Lundberg)
-
-
 The teachers 
 ------------
 
 - Lars Eklund, lars.eklund@uppmax.uu.se
 - Björn Claremar, bjorn.claremar@uppmax.uu.se
-- Marcus Lundberg, marcus.lundberg@uppmax.uu.se
 - Jon Ander Novella, jon.novella@nbis.se
-- Per Johnsson, per.johnsson@nbis.se
-- Matias Piqueras, matias.piqueras@uppmax.uu.se
+- Richèl Biderbeek,richel.bilderbeek@uppmax.uu.se 
+   
+Schedule
+--------------------
 
-
-
-.. warning:: **First time course given**
-
-   - This is a new course, and we can learn from its "growing pains". 
-   - Please give feedback in the end of the days on HackMD and after the course!
-   - Tell us in HackMD directly if it is too fast or need clarification. 
-   - Interaction with you via HackMD will benefit both you, your student mates and the teachers!
+https://uppmax.github.io/programming_formalisms/#schedule
 
 
 .. admonition:: Learning outcomes of course
@@ -187,10 +168,7 @@ The teachers
      - have a basic understanding of **modular programming and modular design**
      - have an understanding of the **software life cycle**
      - know some **common data structures** and how to utilise it in our design
-
-
-
-   
+  
 .. toctree::
    :maxdepth: 2
    :caption: Lesson:
