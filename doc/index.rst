@@ -13,6 +13,7 @@ Programming formalisms — Introduction day
    
    - give scientists
        ... with some experience in programming and scripting 
+       
        - an understanding of the underlying principles of software development, design, and programming. 
       
    - strengthen the understanding of:
@@ -22,7 +23,7 @@ Programming formalisms — Introduction day
    - encourage the use of software development tools, like:
       - Unified Model Language
       - Git and Github
-   - convince the benefits of sharing and social coding
+   - **convince the benefits of sharing and social coding**
  
 .. note:: 
 
