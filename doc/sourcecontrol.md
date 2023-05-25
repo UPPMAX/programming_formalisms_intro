@@ -1,4 +1,4 @@
-# Source/version control (Git)
+# The iterations and Git
 ```{questions}
   - Why should you use source/version control?
 ```
