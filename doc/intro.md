@@ -134,25 +134,30 @@ More on Wednesday
 
 ### Your scripting/programming background 
 
-!!! To be changed
+1. Python 91%	(last year 86%)
+1. Bash	58	(80%)
+1. R	56	(42%)
+1. C++	12	(14%)
+1. MATLAB 7%	(3.5%)
+1. C	5%	(12%)
 
-- Python	86%
-- Bash		80%
-- R		42%
-- C++		14%
-- FORTRAN	14%
-- C		12%
-- Julia 		5%
-- JAVA		3.5%
-- Perl		3.5%
-- MATLAB	3.5 %
-- HTML		3.5%
-- Javascript	3.5 %
-- Rest		1 person each
-  - AWK
-  - PHP
-  - Groovy
-  - SQL
+- 1 person each
+  - FORTRAN	2% (14%)
+  - Javascript/JQuery	2% (3.5%)
+  - Perl	2%	(3.5%)
+  - Nim 2% (-)
+
+Not this  but last yeer
+
+  - Julia 0	(5%)
+  - HTML	0	(3.5%)
+  - JAVA	0	(3.5%)
+  - AWK 0 (1 person)
+  - PHP 0 (1 person)
+  - Groovy 0 (1 person)
+  - SQL 0 (1 person)
+
+
 
 ### Different types of Scientific software:
 - analysis of data
