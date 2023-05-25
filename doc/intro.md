@@ -359,7 +359,7 @@ plot(1:L/l,e)
   - Reproducibility and sharing
 - Iterations
 
-More about life cycles in next session and later this wwek
+More about life cycles in next session and later this week
 
 ## Summary of Introduction
 - Now after the overview you are ready to dig deeper in the topics and try it out yourself!
