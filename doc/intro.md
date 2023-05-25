@@ -25,7 +25,7 @@
 - This is in contrast to hardware, from which the system is built and which actually performs the work. 
 - Application software 
   - Most users think of compilers, databases, and other "system software" as applications.
-- User-written software: End-user development
+- **User-written software: End-user development**
   - Users create this software themselves and often overlook how important it is.
   - Depending on how competently the user-written software has been integrated into default application packages, many users may not be aware of the distinction between the original packages, and what has been added by co-workers.
 
@@ -45,19 +45,18 @@
 ```
 
 ### Outcome of a Program
-- Correct
+- **Correct**
   - and flawless
-- Efficient
+- **Efficient**
   - Utilize the computer system's resources
-- Reusable
+- **Reusable**
   - Development costs
   - Finished components
   - Lower development costs
   - Faster
   - Higher quality
-  - Requires general
   - packaging technology
-- Changeable
+- **Changeable**
   - Maintenance cost
     - Fix errors, bugs
     - Adapt to new requirements
@@ -73,8 +72,6 @@
   - entities (`objects`) that are different 
   - or share attributes with each-other (within a `class`)
   - info-hiding mindset...
-
-
 
 ```{uml}
 @startuml
@@ -104,14 +101,19 @@ floor=5
 
 ```
 
-- Functional programming is
+#### Functional programming
+
   - more classical as it is more focused on the algorithms
   - keys are functions
-  - modules: a way to gather functions with similar functionality) 
+  - modules: a way to gather functions with similar functionality
 
-- Also other... 
+```{admonition} To sum up
 
-At its simplest, functional programming uses immutable data to tell the program exactly what to do. Object-oriented programming tells the program how to achieve results through objects altering the program's state. Both paradigms can be used to create elegant code.
+- At its simplest, functional programming uses immutable data to tell the program exactly what to do. 
+- Object-oriented programming tells the program how to achieve results through objects altering the program's state. 
+- Both paradigms can be used to create elegant code.
+
+```
 
 ```{note} 
 More on Wednesday
@@ -132,7 +134,7 @@ More on Wednesday
 
 
 
-### Your scripting/programming background 
+```{discussion} Your scripting/programming background 
 
 1. Python 91%	(last year 86%)
 1. Bash	58	(80%)
@@ -157,7 +159,7 @@ Not this  but last yeer
   - Groovy 0 (1 person)
   - SQL 0 (1 person)
 
-
+```
 
 ### Different types of Scientific software:
 - analysis of data
