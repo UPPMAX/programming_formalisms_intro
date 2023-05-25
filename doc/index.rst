@@ -186,8 +186,9 @@ Learning outcomes
    intro.md
    sdlc_tools.md 
    flowcharts.md
-   reproducible.md 
-   documentation.md
+   startup.md
+   #reproducible.md 
+   #documentation.md
    sourcecontrol.md
    %sharing.md
    collab.md
