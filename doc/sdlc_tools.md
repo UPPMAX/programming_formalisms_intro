@@ -91,36 +91,46 @@ see the extra reading section: https://uppmax.github.io/programming_formalisms_i
   - Phases: development --> test --> stage --> production
   - **Continous**...
     - **Integration** **CI**: Central repository
-    - development + test
-  - **Development**: Ensuring stable product after every release
-    - development + test + stage
+      - development + test
+    - **Development** **CD**: Ensuring stable product after every release
+      - development + test + stage
   - **Deployment**: automating updates to production
-    - development + test + stage + production
+      - development + test + stage + production
 
-```
-
-### Conclusions
+```{admonition} Conclusion
   - Each team has unique requirements
   - Try out agile practices that make the most sense
   - Don’t be afraid of trial and error
-
-```{info}
-More on Wednesday
+  
+  More on Wednesday
 ```
 
-## The tools/concepts for Developing a pragramming project
+
+## The tools/concepts for Developing a programming project
 
 - Planning
   - Pseudocode
   - Unified Modelling Language
+- Testing
+  - different levels
 - Source/version control
   - Git etc
 - Collaboration
   - Github
-- Reproducibility
+- Reproducibility (for you and others)
+  - Dependencies
+  - (workflows)
+  - containers
 - Sharing
+  - open science
+  - citation
+  - licensing  
 - Documentation
-- Testing
+  - Tutorials
+  - How-to guides
+  - Explanation
+  - Reference 
+
 
 
 
