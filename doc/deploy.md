@@ -1,4 +1,4 @@
-# Deployment
+# Deploy and document for usage
 
 Make yor program or workflow work for others and yourself in the future
 
@@ -186,3 +186,74 @@ https://coderefinery.github.io/reproducible-research/environments
   - Snakemake is a comparatively simple and lightweight option to create transferable and scalable data analyses.
   - Sometimes a script is enough.
 ```
+# Documentation part 2
+
+## HTML static site generators
+
+   There are many tools that can turn RST or Markdown into beautiful HTML pages:
+
+- [Sphinx](http://sphinx-doc.org) **← we will exercise this, this is how this lesson material is built**
+  - Generate HTML/PDF/LaTeX from RST and Markdown.
+  - Basically all Python projects use Sphinx but **Sphinx is not limited to Python**
+  - [Read the docs](http://readthedocs.org)
+    hosts public Sphinx documentation for free!
+  - Also hostable anywhere else, like Github pages. **← this is what we use for this lesson 
+  - API documentation possible
+
+- [Jekyll](https://jekyllrb.com)
+  - Generates HTML from Markdown.
+  - GitHub supports this without adding extra build steps.
+
+- [pkgdown](https://pkgdown.r-lib.org/)
+  - Popular in the R community
+
+- [MkDocs](https://www.mkdocs.org/)
+- [GitBook](https://www.gitbook.com/)
+- [Hugo](https://gohugo.io)
+- [Hexo](https://hexo.io)
+- [Zola](https://www.getzola.org/) **← this is what CodeRefinery use for their project website and workshop websites**
+
+There are many more ...
+
+## Deployment
+                                        
+GitHub, GitLab, and Bitbucket make it possible to serve HTML pages:
+- [GitHub Pages](https://pages.github.com) (GH-pages) ← this is what we and CR use for some course material
+
+- [Bitbucket Pages](https://pages.bitbucket.io/)
+- [GitLab Pages](https://pages.gitlab.io)
+- [Read the docs](http://readthedocs.org) ← this is what NBIS use for some course material
+
+### Github pages
+- Easiest. everything is local to GitHub
+- This lesson material
+
+### Read the Docs
+- Somewhat more possibilities, like having several versions of documentation to switch between.
+- Example
+                                      
+## Wikis
+
+- Popular solutions (but many others exist):
+  - [MediaWiki](https://www.mediawiki.org)
+  - [Dokuwiki](https://www.dokuwiki.org)
+- Advantage
+  - Barrier to write and edit is low
+- Disadvantages
+  - Typically disconnected from source code repository (**reproducibility**)
+  - Difficult to serve multiple versions
+  - Difficult to check out a specific old version
+  - Typically needs to be hosted and maintained
+
+---
+
+## Demo These pages
+``````{challenge} Make Documentation
+                                        
+
+``````
+   
+
+````{Admonition} Read more
+   `CodeRefinery' <https://coderefinery.github.io/documentation/>`
+````
