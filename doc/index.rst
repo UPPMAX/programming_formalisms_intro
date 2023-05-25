@@ -193,7 +193,7 @@ Learning outcomes
    %sharing.md
    collab.md
    deploy.md
-   documentation2.md
+   #documentation2.md
    summary.md
  
 .. toctree::
