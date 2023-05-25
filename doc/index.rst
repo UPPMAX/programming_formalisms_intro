@@ -186,12 +186,13 @@ Learning outcomes
    intro.md
    sdlc_tools.md 
    flowcharts.md
-   sourcecontrol.md
-   reproducible.md
-   sharing.md
+   reproducible.md 
    documentation.md
+   sourcecontrol.md
+   %sharing.md
    collab.md
    deploy.md
+   documentation2.md
    summary.md
  
 .. toctree::
