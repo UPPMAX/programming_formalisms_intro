@@ -1,4 +1,4 @@
-# More about reproducible research
+# More about reproducibility
 
 
 ## Versioning systems 
