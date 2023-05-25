@@ -1,22 +1,21 @@
 # Software Development Lifecycle (SDLC) tools
 
 ```{questions}
-- What are the different SDLC:s
-- When to use which?
+- What are the key concepts and steps in the SDLC
+- What are the tools for a project?
+
 ```
 
 ```{objectives}
-- We will have an introduction to some the SDLC:s
-- More on Wednesday!!
+- We will have an introduction to some SDLC key features
+- We will get some theory of project tools and thinking.
 ```
 
 
 
 ```{instructor-note}
-- Lecture 25 min
-- Shorten to 15m
+- Lecture 45 min
 ```
-
 
 ## The waterfall model
 
@@ -74,7 +73,8 @@ digraph {
 **Most other models are Agile...**
 see the extra reading section: https://uppmax.github.io/programming_formalisms_intro/SDLC_models.html
 
-- Modern principles: automated tests, frequent integration
+- Modern principles: 
+  - automated tests, continuous integration
 - Deliver as fast as possible: small iterations are easier to manage
 - Extreme Programming
   - Pair programming
@@ -84,27 +84,12 @@ see the extra reading section: https://uppmax.github.io/programming_formalisms_i
     - Write test
     - Write function to fail test
    - Write code to pass test
-- DevOps (Development Operations)
-  - **Dev**elopers and testers
-  - **Ops**: people working with release, servers, network, storage configs etc...
-  - DevOps aims to extend fast and frequent software feature development 
-  - Phases: development --> test --> stage --> production
-  - **Continous**...
-    - **Integration** **CI**: Central repository
-      - development + test
-    - **Development** **CD**: Ensuring stable product after every release
-      - development + test + stage
-  - **Deployment**: automating updates to production
-      - development + test + stage + production
 
 ```{admonition} Conclusion
   - Each team has unique requirements
   - Try out agile practices that make the most sense
   - Don’t be afraid of trial and error
-  
-  More on Wednesday
 ```
-
 
 ## The tools/concepts for Developing a programming project
 
@@ -112,15 +97,15 @@ see the extra reading section: https://uppmax.github.io/programming_formalisms_i
   - Pseudocode
   - Unified Modelling Language
 - Testing
-  - different levels
+  - Different levels
 - Source/version control
   - Git etc
 - Collaboration
   - Github
 - Reproducibility (for you and others)
   - Dependencies
-  - (workflows)
-  - containers
+  - (Workflows)
+  - Containers (deployment)
 - Sharing
   - open science
   - citation
@@ -131,9 +116,6 @@ see the extra reading section: https://uppmax.github.io/programming_formalisms_i
   - Explanation
   - Reference 
 
-
-
-
 ## Planning: Analysis and design
 
 ```{note}
@@ -141,13 +123,13 @@ see the extra reading section: https://uppmax.github.io/programming_formalisms_i
 -	Modeling sharpens your axe since it helps you think about what you're going to build, how to seek feedback, and where to make improvements. It prepares you to build the real thing to reduce any potential risk of failure. "
 ```
 
-
 ```{note}
 - Planning step is to ...
    - get an overview of the project/program.
    - help planning writing the code
    - identify parts needed
-- Can be devided into analysis and design
+   - (risk analysis)
+- Can be divided into analysis and design
 - Analysis part is to state the problem and define inputs and outputs
    - graphical tools like UML
    - text
@@ -156,7 +138,6 @@ see the extra reading section: https://uppmax.github.io/programming_formalisms_i
    - pseudocode+UML
    - classes in OOP
    - functions/modules in functional programming
-   
 ```
 
 ### Top-down
@@ -242,7 +223,7 @@ stop
 Does it work for all legal input data sets??
 
 1. Unit testing 
-2. Integration tests
+2. Integration tests (test modeuls together as a whole)
 
 **Typical testing process**
 
@@ -270,6 +251,7 @@ stop
 
 @enduml
 
+```
 
 ```{note}
 
