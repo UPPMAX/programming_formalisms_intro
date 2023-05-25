@@ -100,12 +100,26 @@ floor=5
 @enduml
 
 ```
+#### Object orientation (OO) in some programming languages 
+- OO (built-in classes)
+  - C++
+  - Java
+  - Python
+  - Julia
+- OO features
+  - Fortran 2003-
+  - MATLAB
+  - Perl
+  - PHP
+- OO object-based (but not class-based)
+  - Javascript
 
 #### Functional programming
 
   - more classical as it is more focused on the algorithms
   - keys are functions
   - modules: a way to gather functions with similar functionality
+  - also to some extent info-hiding mindset
 
 ```{admonition} To sum up
 
@@ -118,21 +132,6 @@ floor=5
 ```{note} 
 More on Wednesday
 ```
-
-- Object-oriented (built-in classes)
-  - C++
-  - Java
-  - Python
-  - Julia
-- OO features
-  - Fortran 2003 
-  - MATLAB
-  - Perl
-  - PHP
-- OO object-based (but not class-based)
-  - Javascript
-
-
 
 ```{discussion} Your scripting/programming background 
 
@@ -149,7 +148,7 @@ More on Wednesday
   - Perl	2%	(3.5%)
   - Nim 2% (-)
 
-Not this  but last yeer
+Not this but last yeer
 
   - Julia 0	(5%)
   - HTML	0	(3.5%)
@@ -306,26 +305,33 @@ plot(1:L/l,e)
 ````  
 - What are the problems?
 - Discuss!
+  - readability?
+  - **Correct**?
+  - **Efficient**?
+  - **Reusable**?
+  - **Changeable**?
+    
 ``````
 
 
 ## Software Development Life Cycle (SDLC)
 
 ### Basic models
-- waterfall
+#### Waterfall
   1.	Requirements
   2.	Analysis and design
   3.	Development
   4.	Test
   5.	Development and maintenance
 
-- Spiral model: iterating waterfalls, quadrants
+#### Spiral model
+- iterating waterfalls, quadrants
   - Planning: reqs, identification: analysis
   -	Risk analysis: build prototypes to identify risks
   -	Engineering: software implementation
   -	Evaluation: stakeholder review, feedback, plan next iteration
-  Each lab is new cycle: prototype --> RC --> Launch
-  Risk driven
+- Each lab is new cycle: prototype --> RC --> Launch
+- Risk driven
 
 ```{figure} img/spiral-1-1024x945.jpg
 :alt: Spiral
@@ -342,63 +348,29 @@ plot(1:L/l,e)
 - Development
   - Source control
   - Algorithms
+  - In-code documentation
   - Optimization
     - Parallelism
 - Test
   - Tests 
-  - Test-drive development
+  - Test-driven development
 - Development and maintenance
   - Documentation
   - Reproducibility and sharing
 - Iterations
 
-More about life cycles in next session and Day 3
-
-### Parts from the life cycle models in this course
-
-- **Day1** Intro
-    - SDLC
-    - Planning phase 
-      - Pseudocode and flowcharts
-    - Source/version control
-    - Collaboration
-    - Reproducible research and sharing
-        - Personal use to general use
-        - Pependencies
-        - Sharing
-        - Licensing
-    - Documentation
-   
-- **Day2** Algorithms+data structures
-    - intro
-    - storing
-    - searching for things
-    - sorting
-    - BLAST
-    - exercises
-- **Day3** Paradigms: design patterns, modular code
-    - How?
-    - Programming paradigms
-        - SDLC and the models for the development process
-        - overview
-    - Modular programming
-        - design patterns introduction to element of reusable software modules
-        - what is module
-        - common interface design
-- **Day4** TDD, testing
-    - first look
-    - types of tests
-    - TDD in practice (afternoon )
-        - Testing in Python with pytest
-        - Automating testing with Github Actions
-        - Putting it all together
-        - "Advanced" topics
-- **Day5** Optimization
+More about life cycles in next session and later this wwek
 
 ## Summary of Introduction
 - Now after the overview you are ready to dig deeper in the topics and try it out yourself!
 
 ```{Keypoints}
+- A program shall be or have content/components that is:
+  - Correct
+  - Efficient
+  - Reusable
+  - Changeable
+
 - Software development is both series of steps: 
      1.	Requirements
      2.	Analysis and design
