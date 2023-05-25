@@ -34,7 +34,7 @@ digraph {
 ```
 
 - Good approach for **small and simple systems** where the team knows the system and **requirements very well**.
-- |:warning:|  Error is spreading 
+- :warning:  Error is spreading 
   - small mistakes in the beginning will have large impact on the end result. 
     - e.g. bugs, architecture limiting extensions
   - large costs economically and timely
@@ -55,29 +55,14 @@ digraph {
 ```
 
 - **Disadvantages**
-  - Complexer than other SDLC models.
   - Expensive: Spiral Model is **not suitable for small projects**
   - **Too much dependability on Risk Analysis**
-  - Difficulty in time management: Number of phases is unknown at the start of the project
 
-### Rational unified process (RUP) 
-- **Phases**: Each containing **1 or more waterfall iterations**
-  - Inception (lifecycle objectives milestone)
-  - Elaboration (lifecycle architecture milestone)
-  - Construction (initial operational capability, milestone)
-  - Transition (production release milestone)
-
-- **Key takeaways**
-  - RUP principles
-    - Use cases
-    - **Develop iteratively**
-    - Manage **requirements**, change
-    - **Continuously verify quality**
-    - **Model visually, component-based architecture**
-- Shortcomings: customizable but heavy, prescriptive, (lacking test-driven development)
 
 ## Take aways from other methods 
 ### [The Agile manifest](https://agilemanifesto.org/)
+
+"Agile = characterized by the division of tasks into short phases of work and frequent re-assessment and adaptation of plans."
 
 ```{admonition} Values
 - **Individuals and interactions** over processes and tools
@@ -86,16 +71,11 @@ digraph {
 - **Responding to change** over following a plan
 ```
 
-Or:
-"Agile = characterized by the division of tasks into short phases of work and frequent re-assessment and adaptation of plans."
-
 **Most other models are Agile...**
 see the extra reading section: https://uppmax.github.io/programming_formalisms_intro/SDLC_models.html
 
-- Parallel development
 - Modern principles: automated tests, frequent integration
 - Deliver as fast as possible: small iterations are easier to manage
-- Visualize your work, **limit work in progress**
 - Extreme Programming
   - Pair programming
     - Collaborate, continuous code inspection
@@ -110,32 +90,13 @@ see the extra reading section: https://uppmax.github.io/programming_formalisms_i
   - DevOps aims to extend fast and frequent software feature development 
   - Phases: development --> test --> stage --> production
   - **Continous**...
-    - **Integration**: Central repository
+    - **Integration** **CI**: Central repository
     - development + test
   - **Development**: Ensuring stable product after every release
     - development + test + stage
   - **Deployment**: automating updates to production
     - development + test + stage + production
 
-**And more...**
-
-## Key take aways
-### Basic steps
-
-1.	Plan/initiate
-2.	Gather requirements
-3.	Design
-4.	Develop
-5.	Test/validate
-6.	Release/maintain
-7.	Certification/accreditation
-8.	Change and configuration management
-
-```{graphviz}
-digraph {
-   rankdir=LR;
-   "Plan" -> "Requirements" -> "Design" -> "Develop" -> Test -> Release -> Certification -> Change -> "Plan";
-}
 ```
 
 ### Conclusions
@@ -146,6 +107,22 @@ digraph {
 ```{info}
 More on Wednesday
 ```
+
+## The tools/concepts for Developing a pragramming project
+
+- Planning
+  - Pseudocode
+  - Unified Modelling Language
+- Source/version control
+  - Git etc
+- Collaboration
+  - Github
+- Reproducibility
+- Sharing
+- Documentation
+- Testing
+
+
 
 ## Planning: Analysis and design
 
@@ -250,6 +227,45 @@ stop
      - Introduce flowcharts and UML expressions
      - Get into UML coding with PlantUML
 ```
+## Testing
+
+Does it work for all legal input data sets??
+
+1. Unit testing 
+2. Integration tests
+
+**Typical testing process**
+
+```{uml}
+@startuml
+start
+:Unit testing of individual subtasks;
+-> subtasks validated sperately;
+repeat: Successive builds \n - adding subtasks to the program;
+backward:As many times as necessary;
+repeat while
+-> subtasks combined into program;
+repeat: Alpha release;
+backward:As many times as necessary;
+repeat while
+-> worst bugs fixed;
+
+repeat: Beta release;
+backward:As many times as necessary;
+repeat while
+-> minor bugs fixed;
+:Finished program;
+
+stop
+
+@enduml
+
+
+```{note}
+
+   **More about testing day 2-3**
+
+```
 ## Source/version control and collaboration
 
 ###  The essence of version control
@@ -340,11 +356,6 @@ There are different types of remotes:
 - [Bitbucket](https://bitbucket.org) is yet another popular commercial site.
 - Another option is [NotABug](https://notabug.org)
 
-
-```{attention}
-**Also workflows!**
-```
-
 ```{objectives}
    - [Source and version control](https://uppmax.github.io/programming_formalism_intro/sourcecontrol.html) aims to
       - Introduce git and github
@@ -375,12 +386,17 @@ There are different types of remotes:
 
 ### Reproducible research
 
-- Have you ever spent days trying to repeat the results that took you hours to do the first time last week?  - Or you have to do paper revisions, but you just can’t get the results to match up? Nothing is a worse feeling - either for you or for science itself.
+- Have you ever spent days trying to repeat the results that took you hours to do the first time last week?  
+- Or you have to do paper revisions, but you just can’t get the results to match up? 
+- Nothing is a worse feeling - either for you or for science itself.
 
-In this lesson we will discuss different methods and tools for better reproducibility in research software and data. We will demonstrate how version control, workflows, containers, and package managers can be used to record reproducible environments and computational steps.
+- Some theory will be given in the [Extra material](https://uppmax.github.io/programming_formalisms_intro/reproducible_deeper.html)
+- We will integrate this topic in the hands-on.
+- We will discuss different methods and tools for better reproducibility in research software and data. 
+- We will demonstrate how version control, workflows, containers, and package managers can be used to record reproducible environments and computational steps.
 
 ```{objectives}
-   - [Reproducibility and sharing](https://uppmax.github.io/programming_formalism_intro/reproducible.html) aims to 
+   - [More about reproducibility](https://uppmax.github.io/programming_formalism_intro/reproducible_deeper.html) aims to 
      - Get a short overview of recording dependencies
      - Get short intro to tools:
        - Pip and PyPI
@@ -394,14 +410,15 @@ In this lesson we will discuss different methods and tools for better reproducib
   
   
 ```{Discussion}
-- One-time usage to distributed package
+- One-time usage towards distributed package
 ```
 
 ```{objectives}
-   - [Reproducibility and sharing](https://uppmax.github.io/programming_formalism_intro/reproducible.html) aims to 
+   - [More about sharing](https://uppmax.github.io/programming_formalism_intro/sharing_deeper.html) aims to 
      - Introduce reproducibility and sharing, licensing and citation
      - Get into thinking about dependencies and solutions
      - Get into choosing license, citation and DOI
+     
 ```
 ## Documentation
 
@@ -428,41 +445,6 @@ In this lesson we will discuss different methods and tools for better reproducib
      - Get tips for full documentation and tutorials
 ```
 
-## Testing
-
-Does it work for all legal input data sets??
-
-1. Unit testing 
-2. Integration tests
-
-**Typical testing process**
-
-```{uml}
-@startuml
-start
-:Unit testing of individual subtasks;
--> subtasks validated sperately;
-repeat: Successive builds \n - adding subtasks to the program;
-backward:As many times as necessary;
-repeat while
--> subtasks combined into program;
-repeat: Alpha release;
-backward:As many times as necessary;
-repeat while
--> worst bugs fixed;
-
-repeat: Beta release;
-backward:As many times as necessary;
-repeat while
--> minor bugs fixed;
-:Finished program;
-
-stop
-
-@enduml
-
-
-```
 
 
 ```{keypoints}
@@ -492,7 +474,7 @@ stop
 - Tools for the developer
   - Planning: UML and pseudocode
   - Development iteration: git
-  - Testing: test functions (Covered on Thursday)
+  - Testing: test functions (Covered later)
   - Collaboration: GitHub, licenses, citation
-  - Documentation: READMEs and e.g. sphinx
+  - Documentation: In-code, READMEs and e.g. sphinx
 ```
