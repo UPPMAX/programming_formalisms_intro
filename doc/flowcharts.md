@@ -2,7 +2,7 @@
 
 ```{questions}
   - How to use UML and Pseudocode?
-  - Can I learn it?
+  - Can we learn it?
 ```
 
 ```{Objectives}
@@ -20,7 +20,9 @@
 - Perhaps OK length
 ```
 
-## The planning steps
+## Some overview
+
+### The planning steps
 - get an overview of the project/program.
 - help planning writing the code
 - identify parts needed
@@ -39,7 +41,7 @@ or
   - to find out the specific algorithms needed
     - pseudocode
 
-## Analysis step
+### Analysis step
 - UML Diagrams
   - Flowchart 
 - Object-orientation programming
@@ -48,7 +50,7 @@ or
   - Identify functions  
 - Text can also work here, describing the problem as a whole
 
-## Design step
+### Design step
 
 - Pseudocode
 - Object-orientation programming
@@ -57,19 +59,24 @@ or
 - Functional programming
   - Identify algorithms 
 
+## Analysis
+
+### State our project goal
+
+```{note}
+**Planet project**
+The climate last about 1 million years has been largely determined but the change of the eccentricity (elongation) of Earth's orbit (One of the [Milankovitch cycles](https://climate.nasa.gov/news/2948/milankovitch-orbital-cycles-and-their-role-in-earths-climate/).
+The glacial cycles (daily speaking: ice ages) with a period of about 100 000 years are thought to be due to this.
+Theory: The gravity form the other planets, especially Jupiter, causes the change of the eccentricity
+- **Problem*: Reproduce Milankovitch cycle of eccentricity (100ka)
+- **Method**: Use Python
+  - Let's go for functional programming
+- **Input**: Some initial positions of the planets but no external data
+  - Perhaps also user input of lenght of simulation
+- **Output**: Graph of orbits and a timeseries of an eccentricity parameter
+```
 
 ## Unified Modeling Language
-
-- UML is not a programming language. It's a graphical notation for drawing diagrams to visualize object oriented systems.
-- UML includes over a dozen different types of structural and behavioral diagrams. 
-- UML has been marketed for many contexts.
-
-- Some problems (Wikipedia):
-  - It has been treated, at times, as a design silver bullet, which leads to problems. 
-  - UML misuse includes overuse (designing every part of the system with it, which is unnecessary) and assuming that novices can design with it.
-  - It is considered a large language, with many constructs. Some people feel that UML's size hinders learning (and therefore, using) it.
-
-"These diagrams should be a quick, useful communication tool. A support system for your brain, not the other way around!"
 
 First iteration in planning can be paper or whiteboard 
 Then there are benefits with digital tools 
@@ -85,7 +92,7 @@ Then there are benefits with digital tools
   - how entities interact with others (components and interfaces);
   - external user interface.
 
-- Although originally intended for object-oriented design documentation, UML has been extended to a larger set of design documentation,and been found useful in many contexts.
+- Although originally intended for object-oriented design documentation, UML has been extended to a larger set of design documentation, and been found useful in many contexts.
 
 ### Building blocks
 - Things
@@ -559,10 +566,7 @@ else
 
     print 'no grades were entered' 
     
-```{note}
-More practicals about Pseudocode tomorrow!
-More practicals about UML this adfternoon!
-```
+
 
 ```{Discussion}
 In Breakout-rooms 6-8 people:
@@ -572,6 +576,11 @@ In Breakout-rooms 6-8 people:
 - Experiences?
 - Share in the end 1-3 inputs in HackMD
 ```
+
+```{note}
+More practicals and UML Pseudocode later this week!
+```
+
 
 
 
