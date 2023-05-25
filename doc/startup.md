@@ -1,6 +1,6 @@
 # Start the coding and documentation
 
-# Reproducible research
+## Reproducible research
 
 ```{Objectives}
    - We will give an overview of 
