@@ -306,6 +306,12 @@ Car -- Person : < owns
   - https://mermaid.js.org/
 
 ### Pseudocode
+- Pseudocode generally does not obey the syntax rules of any particular language
+   - there is no systematic standard form. 
+- Some writers borrow style and syntax from control structures from some conventional programming language, although this is discouraged.
+- Some syntax sources include Fortran, Pascal, BASIC, C, C++, Java, Lisp, and ALGOL. 
+- Variable declarations are typically omitted. 
+- Function calls and blocks of code, such as code contained within a loop, are often replaced by a one-line natural language sentence.
 
 **Example**
 
@@ -330,6 +336,21 @@ Car -- Person : < owns
             f(v, u) ← −f(u, v)
 
     return f
+```
+
+- Depending on the writer, pseudocode may therefore vary widely in style, 
+  - from a near-exact imitation of a real programming language at one extreme
+  - to a description approaching formatted prose at the other. 
+
+#### Mathematical style pseudocode
+- Used in numerical computation
+
+```{math}
+\sum_{k\in S} x_k
+```
+
+```{console}
+\sum_{k\in S} x_k
 ```
 
 ```{objectives}
