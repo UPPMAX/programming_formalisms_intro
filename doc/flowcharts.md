@@ -190,6 +190,21 @@ In Breakout-rooms 6-8 people:
 More practicals and UML Pseudocode later this week!
 ```
 
+```{Challenge} Demo of Pseudocode
+Define constants
+Define initial values
+	positions
+	velocity (balance of gravity and centrifugal force
+(Allocate (book) space for long vectors	plan iteration)
+Iteration
+	Change of positions
+	Calc acc (gravity)
+	Calc new velocity
+Plot resulting ellipses
+Calculate orbit parameters
+Plot time series of parameter change
+´´´
+
 ## Summary
 
 ````{Keypoints}
