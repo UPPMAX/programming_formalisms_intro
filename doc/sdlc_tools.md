@@ -504,7 +504,9 @@ There are different types of remotes:
 
 - Some theory will be given in the [Extra material](https://uppmax.github.io/programming_formalisms_intro/reproducible_deeper.html)
 - We will integrate this topic in the hands-on.
-- We will discuss different methods and tools for better reproducibility in research software and data. 
+- We will discuss different methods and tools for better reproducibility in research software and data.
+  - virtual environments with ``pip install`` (venv/vuirtualenv) will be covered in the hands-on.
+  - Conda environment is referred to in the extra material. 
 - We will demonstrate how version control, workflows, containers, and package managers can be used to record reproducible environments and computational steps.
 
 ```{objectives}
@@ -515,14 +517,54 @@ There are different types of remotes:
        - Conda
        - Environments
        - Tools for other languages than Python
-
+   - We will develop our code in a virtualenvironment with the python tool ``venv ``   
+  
 ```
   
  ### Sharing and licensing and citations
-  
-  
+ 
 ```{Discussion}
 - One-time usage towards distributed package
+```
+#### Open science
+
+### FAIR
+**“FAIR”** is the current buzzword for data management. You may be asked about it in, for example, making data management plans for grants:
+
+- Findable
+  - Will anyone else know that your data exists?
+  - Solutions: put it in a standard repository, or at least a description of the data. Get a digital object identifier (DOI).
+- Accessible
+   - Once someone knows that the data exists, can they get it?
+   - Usually solved by being in a repository, but for non-open data, may require more procedures.
+- Interoperable
+   - Is your data in a format that can be used by others, like csv instead of PDF?
+   - Or better than csv. Example: 5-star open data
+- Reusable
+   - Is there a license allowing others to re-use?
+
+### Licencing
+### Copyright
+- Protects creative expression
+- Automatically created
+- **Derivative works** usually inherit copyright of the thing derived
+- Time frame: essentially forever (lifetime + X years)
+
+When can you use:
+- When there is a **license** saying you can
+- Limited other cases (private use, fair use: context dependent)
+- In practice: people do many things, but then can't share their
+  output if license does not allow it or is not clarified
+
+### Software Citation
+
+- Think the same as for a scientific paper
+- [Software citation](https://uppmax.github.io/programming_formalisms_intro/sharing_deeper.html#software-citation)
+
+```{keypoints}
+- Share your code! Eventually others will probably use it anyway.
+- Licence your software and do it early. Default is “no one can make copies or derivative works”.
+- Get DOI or at least state how to cite your software
 ```
 
 ```{objectives}
@@ -556,8 +598,6 @@ There are different types of remotes:
      - Get tips for README files
      - Get tips for full documentation and tutorials
 ```
-
-
 
 ```{keypoints}
 - Typical workflow:
