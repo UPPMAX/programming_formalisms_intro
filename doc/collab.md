@@ -8,7 +8,7 @@
 
 ```{Objectives}
    - We will give an overview Github
-      - centralized collaboratio
+      - centralized collaboration
       - Forked collaboration
       - How to contribute
 ```
@@ -110,6 +110,10 @@ remote refers to the fork.
 - Possibly **discuss and get feedback**
 - If you are working on the fix, indicate it in the issue so that others know that somebody is working on it and who is working on it
 - Submit your fix as pull request or merge request which references/closes the issue
+
+```{challenge} If time allows
+- Make issue and pull request
+```
 
 ```{keypoints}
 - Communicate and discuss before coding massive changes.
