@@ -48,106 +48,8 @@ Make yor program or workflow work for others and yourself in the future
 ### Course advertisment
 [Python for scientific computing](https://aaltoscicomp.github.io/python-for-scicomp/)
 
-## Recording computational steps
 
-```{questions}
-- How can we create a reproducible workflow?
-- When to use scientific workflow management systems.
-```
-
-```{objectives}
-- Discuss pros/cons of GUI vs. manual steps vs. scripted vs. workflow tools.
-```
-
-**4 ways (from CodeRefinery)**
-
-### Graphical user interface (GUI)
-Imagine we have programmed a GUI with a nice interface with icons where you can select scripts and input files by clicking:
-1. Click on counting script
-1. Select book txt file
-1. Give a name for the dat file
-1. Click on a run symbol
-1. Click on plotting script
-1. Select book dat file
-1. Give a name for the image file
-1. Click on a run symbol
-1. ...
-1. Go to next book ...
-1. Click on counting script
-1. Select book txt file
-1. ...
-
-Disclaimer: not all GUIs behave this way - there exist very good GUI solutions which enable
-reproducibility and automation.
-
----
-### Solution 2: Manual steps
-It is not too much work for four files:
-```{code-block} console
----
-emphasize-lines: 1-2, 13
----
-
-$ python source/wordcount.py data/abyss.txt processed_data/abyss.dat
-$ python source/plotcount.py processed_data/abyss.dat processed_data/abyss.png
-
-$ python source/wordcount.py data/isles.txt processed_data/isles.dat
-$ python source/plotcount.py processed_data/isles.dat processed_data/isles.png
-
-$ python source/wordcount.py data/last.txt processed_data/last.dat
-$ python source/plotcount.py processed_data/last.dat processed_data/last.png
-
-$ python source/wordcount.py data/sierra.txt processed_data/sierra.dat
-$ python source/plotcount.py processed_data/sierra.dat processed_data/sierra.png
-
-$ python source/zipf_test.py processed_data/abyss.dat processed_data/isles.dat processed_data/last.dat processed_data/sierra.dat
-```
-
-This is **imperative style**: first do this, then to that, then do that, finally do ...
-
----
-### Solution 3: Script
-Let’s express it more compactly with a shell script (Bash). Let’s call it script.sh:
-```shell
-#!/usr/bin/env bash
-
-# loop over all books
-for title in abyss isles last sierra; do
-    python source/wordcount.py data/${title}.txt processed_data/${title}.dat
-    python source/plotcount.py processed_data/${title}.dat processed_data/${title}.png
-done
-
-# this could be done using variables but nevermind
-python source/zipf_test.py processed_data/abyss.dat processed_data/isles.dat processed_data/last.dat processed_data/sierra.dat
-```
-We can run it with:
-```console
-bash script.sh
-```
-### Solution 4: Using [Snakemake](https://snakemake.readthedocs.io/en/stable/index.html) or other workflow manager
-
-```{figure} img/snakemake_dag.png
-:alt: Isolated tracks
-:width: 50%
-
-Isolated tracks of work.
-```
-
-````{discussion} Discussion
-Discuss the pros and cons of these different approaches. Which are reproducible? Which scale to hundreds of books and which can it be automated?
-
-```{solution}
-- GUIs may or may not be reproducible.
-- Some GUIs can be automated, many cannot.
-- Typing the same series of commands for 100 similar inputs is tedious and error prone.
-- Imperative scripts are reproducible and great for automation.
-- Declarative workflows such as Snakemake are great for longer multi-step analyses.
-- Declarative workflows are often easy to parallelize without you changing anything.
-- With declarative workflows it is no problem to add/change things late in the project.
-- Interesting modern alternative to Make/Snakemake: [https://taskfile.dev](https://taskfile.dev)
-- Many [specialized frameworks](https://github.com/common-workflow-language/common-workflow-language/wiki/Existing-Workflow-systems) exist.
-```
-````
+## Workflows
 
 ```{admonition} Learn more
 <https://coderefinery.github.io/reproducible-research/workflow-management/>
@@ -186,9 +88,9 @@ https://coderefinery.github.io/reproducible-research/environments
   - Snakemake is a comparatively simple and lightweight option to create transferable and scalable data analyses.
   - Sometimes a script is enough.
 ```
-# Documentation part 2
+## Documentation part 2
 
-## HTML static site generators
+### HTML static site generators
 
    There are many tools that can turn RST or Markdown into beautiful HTML pages:
 
@@ -215,7 +117,7 @@ https://coderefinery.github.io/reproducible-research/environments
 
 There are many more ...
 
-## Deployment
+### Deployment
                                         
 GitHub, GitLab, and Bitbucket make it possible to serve HTML pages:
 - [GitHub Pages](https://pages.github.com) (GH-pages) ← this is what we and CR use for some course material
@@ -224,15 +126,15 @@ GitHub, GitLab, and Bitbucket make it possible to serve HTML pages:
 - [GitLab Pages](https://pages.gitlab.io)
 - [Read the docs](http://readthedocs.org) ← this is what NBIS use for some course material
 
-### Github pages
+#### Github pages
 - Easiest. everything is local to GitHub
 - This lesson material
 
-### Read the Docs
+#### Read the Docs
 - Somewhat more possibilities, like having several versions of documentation to switch between.
 - Example
                                       
-## Wikis
+### Wikis
 
 - Popular solutions (but many others exist):
   - [MediaWiki](https://www.mediawiki.org)
@@ -247,12 +149,10 @@ GitHub, GitLab, and Bitbucket make it possible to serve HTML pages:
 
 ---
 
-## Demo These pages
+#### Demo These pages
 ``````{challenge} Make Documentation
-                                        
-
 ``````
-   
+ 
 
 ````{Admonition} Read more
    `CodeRefinery' <https://coderefinery.github.io/documentation/>`
