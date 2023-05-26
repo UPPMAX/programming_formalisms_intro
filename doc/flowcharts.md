@@ -76,12 +76,6 @@ Theory: The gravity form the other planets, especially Jupiter, causes the chang
 - **Output**: Graph of orbits and a timeseries of an eccentricity parameter
 ```
 
-## Unified Modeling Language
-
-First iteration in planning can be paper or whiteboard 
-Then there are benefits with digital tools 
-
-
 ### Design
 
 - A way to visualize a system's architectural blueprints in a diagram, including elements such as:
@@ -94,39 +88,15 @@ Then there are benefits with digital tools
 
 - Although originally intended for object-oriented design documentation, UML has been extended to a larger set of design documentation, and been found useful in many contexts.
 
-### Activity
 
-A flowchart that shows the process and its correlating decisions, including an **algorithm**  or a business process.
 
-```{uml} puml/activity.puml
-```
+### Let's make a flowchart of the program parts
 
-```console
-@startuml
+#### Syntax for algorithm flowchart
+- https://plantuml.com/
 
-start
 
-if (Graphviz installed?) then (yes)
-  :process all\ndiagrams;
-else (no)
-  :process only
-  __sequence__ and __activity__ diagrams;
-endif
-
-stop
-
-@enduml
-```
-### Syntax for algorithm flowchart
-
-Start and stop
-
-```{uml}
-@startuml
-start
-stop
-@enduml
-```
+`````{admonition} PlantUML Cheat sheet
 
 ```{uml}
 @startuml
@@ -138,57 +108,27 @@ stop
 @enduml
 ```
 
-Computation
+````{console}
 
-Input output
-
-Choice
-
-Direction of program flow
-Iterative or counting loop
-
-
-### PlantUML
-
-- PlantUML is an open-source tool allowing users to create diagrams from a plain text language. 
-- uses Graphviz software to lay out its diagrams
-- More info and examples at <https://plantuml.com/>
-
-#### Syntax
-- https://plantuml.com/
-
-## Pseudocode
-
-- Pseudocode generally does not obey the syntax rules of any particular language
-   - there is no systematic standard form. 
-- Some writers borrow style and syntax from control structures from some conventional programming language, although this is discouraged.
-- Some syntax sources include Fortran, Pascal, BASIC, C, C++, Java, Lisp, and ALGOL. 
-- Variable declarations are typically omitted. 
-- Function calls and blocks of code, such as code contained within a loop, are often replaced by a one-line natural language sentence.
-
-- Depending on the writer, pseudocode may therefore vary widely in style, 
-  - from a near-exact imitation of a real programming language at one extreme
-  - to a description approaching formatted prose at the other. 
-
-### Mathematical style pseudocode
-- Used in numerical computation
-
-```{math}
-\sum_{k\in S} x_k
+``` uml
+@startuml
+start
+:Hello world;
+:This is defined on
+several **lines**;
+stop
+@enduml
 ```
+```` 
+``````
 
-```{Discussion}
-In Breakout-rooms 6-8 people:
-- What are your impressions about
-  - UML?
-  - pseudocode?
-- Experiences?
-- Share in the end 1-3 inputs in HackMD
-```
+#### Exercise
+````{challenge}
+    make a flowchart of the program parts
+````
 
-```{note}
-More practicals and UML Pseudocode later this week!
-```
+### Do some pseudocode of the calculations
+
 
 ```{Challenge} Demo of Pseudocode
 Define constants
@@ -204,6 +144,22 @@ Plot resulting ellipses
 Calculate orbit parameters
 Plot time series of parameter change
 ´´´
+
+```{note}
+More practicals and UML Pseudocode later this week!
+```
+
+## Wrap-up
+
+```{Discussion}
+In Breakout-rooms 6-8 people:
+- What are your impressions about
+  - UML?
+  - pseudocode?
+- Experiences?
+- Share in the end 1-3 inputs in HackMD
+```
+
 
 ## Summary
 
