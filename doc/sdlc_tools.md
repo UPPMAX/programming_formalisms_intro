@@ -175,6 +175,71 @@ How do you program? Put "o" on you choice
 
 ### Flowcharts or Unified Modeling Language
 
+<https://en.wikipedia.org/wiki/List_of_Unified_Modeling_Language_tools>
+
+- Modeling
+  - Code generation
+  -	Reverse engineering
+  - Analyze code complexity
+  -	Other metrics
+
+```{graphviz}
+digraph{
+"UML diagrams"
+Structure, Behaviour
+"UML diagrams" -> Structure
+"UML diagrams" -> Behaviour
+Structure -> Class, Component, Object, composite
+Behaviour -> "Use case", Activity, Interaction
+Interaction -> Sequence, Communication, Timing, "Interaction overview"
+}
+```
+
+``{admonition} We will use
+  - Sequence
+  - Activity/algorithm flowchart
+``
+
+##### Sequence
+
+```{uml} puml/external.uml
+```
+
+```console
+@startuml
+Alice -> Bob: Authentication Request
+Bob --> Alice: Authentication Response
+
+Alice -> Bob: Another authentication Request
+Alice <-- Bob: Another authentication Response
+@enduml
+```
+
+##### Activity
+
+A flowchart that shows the process and its correlating decisions, including an **algorithm**  or a business process.
+
+```{uml} puml/activity.puml
+```
+
+```console
+@startuml
+
+start
+
+if (Graphviz installed?) then (yes)
+  :process all\ndiagrams;
+else (no)
+  :process only
+  __sequence__ and __activity__ diagrams;
+endif
+
+stop
+
+@enduml
+```
+
+##### Algorithm flowchart
 ```{uml}
 @startuml
 start
@@ -183,6 +248,61 @@ if (stuff) then (true)
 endif
 
 stop
+@enduml
+```
+
+
+#### Tools
+- PlantUML
+  - Open-source
+  -	Can be integrated with IDE:s, Java documentation, Word
+  -	Scripts rather than drawing tools
+  -	<http://www.plantuml.com/plantuml>
+- Graphviz
+  - Graphviz is open source graph visualization software. 
+  - Graph visualization is a way of representing structural information as diagrams of abstract graphs and networks. 
+  - It has important applications in networking, bioinformatics, software engineering, database and web design, machine learning, and in visual interfaces for other technical domains.
+  - https://graphviz.org/
+- Mermaid
+  - Open-source
+  - Not as many diagrams
+  - renders in browser
+  - https://mermaid.js.org/
+
+##### Class
+
+ A diagram that shows the system classes and relationships between them.
+
+```{uml} puml/class.puml
+```
+
+```console
+@startuml
+node foo
+foo --> bar : normal
+foo --> bar1 #line:red;line.bold;text:red  : red bold
+foo --> bar2 #green;line.dashed;text:green : green dashed 
+foo --> bar3 #blue;line.dotted;text:blue   : blue dotted
+@enduml
+```
+
+```{uml}
+@startuml
+class Car
+
+Driver - Car : drives >
+Car *- Wheel : have 4 >
+Car -- Person : < owns
+@enduml
+```
+
+```console
+@startuml
+class Car
+
+Driver - Car : drives >
+Car *- Wheel : have 4 >
+Car -- Person : < owns
 @enduml
 ```
 
