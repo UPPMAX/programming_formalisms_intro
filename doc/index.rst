@@ -191,8 +191,8 @@ Learning outcomes
    #documentation.md
    sourcecontrol.md
    %sharing.md
-   collab.md
    deploy.md
+   collab.md
    #documentation2.md
    summary.md
  
