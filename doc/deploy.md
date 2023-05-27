@@ -13,7 +13,8 @@
 ```
 
 ```{attention}
-Make yor program or workflow work for others and yourself in the future
+- Make your program or workflow work for others and yourself in the future.
+- Let people understand how to use your program/tool
 ```
 
 ## Recording dependencies
@@ -63,7 +64,8 @@ https://uppmax.github.io/programming_formalisms_intro/reproducible_deeper.html#c
   - Sometimes a script is enough.
 ```
 
-## Documentation for turorials
+
+## Documentation for tutorials
 ```{note} Documentation comes in different forms - what *is* documentation?
   - **Tutorials**: learning-oriented, allows the newcomer to get started
   - **How-to guides**: goal-oriented, shows how to solve a specific problem
@@ -120,3 +122,43 @@ GitHub, GitLab, and Bitbucket make it possible to serve HTML pages:
 ````{Admonition} Read more
    `CodeRefinery' <https://coderefinery.github.io/documentation/>`
 ````
+
+
+## Last hands on your documentation
+- Some inspiration [Beagle](https://github.com/yampelo/beagle)
+
+```{admonition} A little more about licensing
+
+Copyleft is the legal technique of granting certain freedoms over copies of copyrighted works with the requirement that the same rights be preserved in derivative works.
+
+1. Custom/closed/proprietary
+    Derivative work typically not possible
+2. Permissive (MIT, BSD, Apache)
+    Derivative work does not have to be shared
+    Permissive: gives the public permission to use, modify, and share, without any condition for downstream licensing
+    If the licenses of components are permissive, one may use any open license they want.
+3. Weak copyleft share-alike (LGPL, MPL)
+    Derivative work is free software but is limited to the component
+4. Strong copyleft share-alike (GPL, AGPL)
+    Derivative work is free software and derivative work extends to the combined project
+    If the licenses of components are strong copyleft, one must use the same license
+```
+
+```{admonition} Citation bullets    
+   - Creator
+   - Title
+   - Publication venue
+   - Date
+   - Version
+   - Type
+```
+
+``````{challenge} Update your documentation
+- Revisit your README and update it with info after all our commits
+  - About
+  - Installation
+  - Citing
+
+``````
+
+
