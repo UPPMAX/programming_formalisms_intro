@@ -3,6 +3,11 @@
 
 ```{instructor-note}
 ```
+```{Objectives}
+   - We will get started with the coding
+   - But also...
+     - think about dependencies and work in an isolated environment
+```
 
 ```{note} 
 - For more background please confer 
