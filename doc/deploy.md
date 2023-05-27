@@ -36,8 +36,42 @@
 
 [The tools](https://uppmax.github.io/programming_formalisms_intro/reproducible_deeper.html#the-tools)
 
+[Python packaging](https://aaltoscicomp.github.io/python-for-scicomp/packaging/).
+- Make Python packages of your code.
+
 **Course advertisment**
 [Python for scientific computing](https://aaltoscicomp.github.io/python-for-scicomp/)
+
+### Record our environment for other users
+
+- We can make other users aware of the dependencies for our project.
+- One can state those specifically as a list in a README
+- Or, we can make a ready file (in python) 
+- Possibilites for other languages can be
+  - C/C+
+    - CMake
+    - Conda
+  - Fortran
+    - Fortran package manager
+  - Julia
+    - Pkg.jl
+- [More info](https://uppmax.github.io/programming_formalisms_intro/reproducible_deeper.html#recording-dependencies)
+
+``````{challenge} Save your requirements as a file 
+- Save your requirements as a file that user can run to get the same dependencies as you
+
+```console
+$ pip freeze > requirements.txt
+```
+- Users can then install the same packages with:
+
+```console
+$ pip install -r requirements.txt
+```
+
+**TIP** Inform about this in the last exercise (updating the README file)
+
+``````
 
 ## Workflows
 
@@ -124,7 +158,7 @@ GitHub, GitLab, and Bitbucket make it possible to serve HTML pages:
 ````
 
 
-## Last hands on your documentation
+## (Optional) Last hands on your documentation
 - Some inspiration [Beagle](https://github.com/yampelo/beagle)
 
 ```{admonition} A little more about licensing
@@ -158,7 +192,7 @@ Copyleft is the legal technique of granting certain freedoms over copies of copy
   - About
   - Installation
   - Citing
-
+- License
 ``````
 
 
