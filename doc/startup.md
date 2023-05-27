@@ -253,14 +253,14 @@ Can you give some examples? What can we do about it?
 
 ## Create a first version of the python code
 
-``````{challenge} Type along
+``````{challenge} Type-along
 - Use you favorite editor and create the file ``planet.py``
 - Use the linear code below. 
   - It plots the approximate orbit of earth with some eccentricity, and the distance during 2 years to the sun.
   - Later we will add Jupiter and make it more modular!
 
-````{solution} ``planet.py``   
-´´´python
+````{solution} `planet.py`
+```python
 #planet
 import numpy as np
 import matplotlib.pyplot as plt 
@@ -329,7 +329,7 @@ plt.savefig('planet_earth.png', dpi=100, bbox_inches='tight')
 ```   
 
 ``````    
-## make the code a part of the git record
+## Make the code a part of the git record
 
 ```{admonition} Concepts in Git
 - **repository**: The project, contains all data and history (commits, branches, tags).
@@ -340,7 +340,8 @@ plt.savefig('planet_earth.png', dpi=100, bbox_inches='tight')
 - Branches on the remote appear as (read-only) local branches with a prefix, e.g. `origin/main`.
 - We synchronize commits between local and remote with `git fetch`/`git pull` and `git push`.
 ```
-```{challenge} make your code part of git   
+   
+``````{challenge} Type-along: Make your code part of git   
 
 - Add you file to staging
 
@@ -348,7 +349,7 @@ plt.savefig('planet_earth.png', dpi=100, bbox_inches='tight')
    git add planet.py
 ```
 - Check the status. 
-- The output should show the new changes since you work on GitHub  
+- The output should show the new changes since your work on GitHub  
 ```console
    git status
 ```
@@ -362,7 +363,7 @@ plt.savefig('planet_earth.png', dpi=100, bbox_inches='tight')
    git status
 ```
 
-````
+``````
 
 ## In-code documentation
 
@@ -373,32 +374,49 @@ plt.savefig('planet_earth.png', dpi=100, bbox_inches='tight')
   - Can be used to auto-generate documentation for functions/classes
 - Disadvantage
   - Probably not enough for users
+   
+````{exercise} Discussion
+Let's take a look at two example comments (comments in python start with `#`):
+
+**Comment A**
+```python
+# Now we check if temperature is larger then -50:
+if temperature > -50:
+    print('do something')
+```
+
+**Comment B**
+```python
+# We regard temperatures below -50 degrees as measurement errors
+if temperature > -50:
+    print('do something')
+```
+Which of these comments is best? Can you explain why?
+````
+```{solution} Solution
+Comment A describes **what** happens in this piece of code,
+whereas comment B describes **why** this piece of code is there, i.e. its **purpose**.
+Comments in the form of B are much more useful, comments of form A are redundant and we should avoid them.
+```
 
 **Why and not how**
 
-````{challenge} Type along
+``````{challenge} Exercise
 - Use you favorite editor
 - Use the linear code below. 
   - Later we will make it more modular!
 
-´´´python
-
+````{solution} 
+```python
+Coming...
 ```
 
-   
-   
-````
+``````
 
 
 ### Docstrings
 A docstring is a structured comment associated to a segment of code (i.e. function or class)
 
-Good docstrings describe:
-   - What the function does
-   - What goes in (including the type of the input variables)
-   - What goes out (including the return type)
-   - Python example: help(<function name>)
-   
 ```{note}
    - We will make docstrings in next session
 ```
