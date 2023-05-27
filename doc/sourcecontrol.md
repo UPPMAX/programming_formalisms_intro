@@ -114,40 +114,38 @@ What just happened? **Think of publishing a repository as uploading the `.git` p
 
 ## Make the next iteration of the planet project
 
+``````{challenge} Type-along: Add Jupiter
+- We will add some lines to count with the effects from the gravity of Jupiter on Earth
 
-  When you are done editing the files, try `git diff`:
+```python
 
-  ```console
+
+
+```
+
+- Do **not** stage (add) yet!
+``````
+
+### git diff
+
+When you are done editing the files, try `git diff`:
+
+```console
   $ git diff
-  ```
+```
 
-  You will see (can you identify in there the two added lines?):
+You will see (can you identify in there the two added lines?):
 
 ```diff
-diff --git a/class.puml b/class.puml
-index 3b3fd07..2be3224 100644
---- a/class.puml
-+++ b/class.puml
-@@ -11,4 +11,12 @@
-     +get_var01()
-     {method}Without parentheses or Qualifiers
-  }
-+
-+ class class02 {
-+    -var02 : Float
-+    Time : Date
-+    #method01()
-+    +get_var02()
-+    {method}Without parentheses or Qualifiers
-+ }
- @enduml
+
+```
 
 Now first stage and then commit (what happens when we leave out the `-m` flag?):
 
 ```console
-  $ git add class.puml     # <-- we can state exactly which file to stage as well
+  $ git add python.puml     # <-- we can state exactly which file to stage as well
   $ git commit                   # <-- we have left out -m "..."
-  ```
+```
 
   When you leave out the `-m` flag, Git should open an editor where you can edit
   your commit message. This message will be associated and stored with the
@@ -164,7 +162,6 @@ Now first stage and then commit (what happens when we leave out the `-m` flag?):
   ```
 ``````
 
-
 (gitignore)=
 
 ## Ignoring files and paths with .gitignore
@@ -175,45 +172,6 @@ Now first stage and then commit (what happens when we leave out the `-m` flag?):
 - Why is it considered a bad idea to commit compiled binaries to version control?
 - What types of generated files do you know?
 ```
-
-Compiled and generated files are not
-committed to version control. There are many reasons for this:
-
-- Your code could be run on different platforms.
-- These files are automatically generated and thus do not contribute in any meaningful way.
-- The number of changes to track per source code change can increase quickly.
-- When tracking generated files you could see differences in the code although you haven't touched the code.
-
-For this we use `.gitignore` files. Example:
-
-```shell
-# ignore compiled python 2 files
-*.pyc
-# ignore compiled python 3 files
-__pycache__
-```
-
-An example taken from the [official Git documentation](https://git-scm.com/docs/gitignore):
-
-```shell
-# ignore objects and archives, anywhere in the tree.
-*.[oa]
-# ignore generated html files,
-*.html
-# except foo.html which is maintained by hand
-!foo.html
-# ignore everything under build directory
-build/
-```
-
-- `.gitignore` should be part of the repository because we want to make sure that all developers see the same behavior.
-- **All files should be either tracked or ignored**.
-- `.gitignore` uses something called a
-  [shell glob syntax](https://en.wikipedia.org/wiki/Glob_(programming)) for
-  determining file patterns to ignore. You can read more about the syntax in the
-  [documentation](https://git-scm.com/docs/gitignore).
-- You can have `.gitignore` files in lower level directories and they affect the paths
-  relatively.
 
 ## Branching and merging
 
@@ -240,8 +198,9 @@ $ git merge new-feature        # merge work to master
 $ git branch -d new-feature    # remove branch
 ```
 
-Sometimes you have a wild idea which does not work.
-Or you want some throw-away branch for debugging:
+## Let's make our code modular (test in branch)
+
+```{challenge} 
 
 ```console
 $ git checkout -b wild-idea    # create branch, switch to it, work, work, work ...
