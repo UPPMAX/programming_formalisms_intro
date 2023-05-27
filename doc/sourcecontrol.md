@@ -738,8 +738,15 @@ $ git rm      # remove tracked files
 Git is not ideal for large binary files
 (for this consider [http://git-annex.branchable.com](http://git-annex.branchable.com)).
 
+### Docstrings
+A docstring is a structured comment associated to a segment of code (i.e. function or class)
 
-
+Good docstrings describe:
+   - What the function does
+   - What goes in (including the type of the input variables)
+   - What goes out (including the return type)
+   - Python example: help(<function name>)
+   
 
 ```{Keypoints}
 - Initializing a Git repository is simple: git init.
