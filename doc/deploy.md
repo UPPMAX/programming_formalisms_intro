@@ -152,6 +152,8 @@ GitHub, GitLab, and Bitbucket make it possible to serve HTML pages:
   - [Dokuwiki](https://www.dokuwiki.org)
   - Also on GitHub!
   - Typically needs to be hosted and maintained
+
+- Example with [WRF weather model](https://github.com/wrf-model/WRF/wiki)
  
 ````{Admonition} Read more
    `CodeRefinery' <https://coderefinery.github.io/documentation/>`
@@ -187,12 +189,30 @@ Copyleft is the legal technique of granting certain freedoms over copies of copy
    - Type
 ```
 
+```{admonition} Git/GitHub Repo 
+    README.md
+    License
+    Figures
+        figure outputs
+    Src 
+        License (here or in the 1st level)
+        Requirements.txt
+        python files
+    Doc
+        index
+        planning documents
+        
+```        
+
 ``````{challenge} Update your documentation
+- You can work now in GitHub directly
 - Revisit your README and update it with info after all our commits
   - About
   - Installation
   - Citing
 - License
+- Lastly, update the doc/index.md file that should describe
+- Do a git pull to have the same version of your project repo locally!
 ``````
 
 
