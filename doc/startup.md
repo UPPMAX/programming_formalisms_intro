@@ -164,9 +164,6 @@ A list:
 ---
 
 
-
-
-
 ``````{admonition} If you get errors
 ---
 class: warning, dropdown
@@ -193,30 +190,24 @@ ssh-add ~/.ssh/id_ed25519
 - Hope you can **fix this in Lunch Break**. **Follow the rest by listening for now.**
 
 ``````
-
-**Reload your GitHub project website and - taa-daa - your commits should now be
-online!**
-
-What just happened? **Think of publishing a repository as uploading the `.git` part online**.
-
 ---
 
 ## Cloning a repository
 
-Now other people can clone this repository and contribute changes. 
+Now you and other people can clone this repository and contribute changes. 
 
 At this point only a brief demo - if you copy the SSH or HTTPS address, you can clone repositories like this
 (again adapt the "namespace/repository.git" part):
 
 ```console
-$ git clone git@github.com:<user>/project.git
+$ git clone git@github.com:<user>/planet-<user>.git
 ```
 
-This creates a directory called "project" unless it already exists. You can also specify the target directory
-on your computer:
+This creates a directory called "planet-<user>" unless it already exists. You can also specify the target directory
+on your computer, in this case just "planet":
 
 ```console
-$ git clone git@github.com:<user>/project.git myproject
+$ git clone git@github.com:<user>/planet-<user>.git planet
 ```
 
 What just happened? **Think of cloning as downloading the `.git` part to your
@@ -247,7 +238,6 @@ automatically checked out.
 ```
 
 ```{note} 
-- This is a summary.
 - For more background please confer 
   - [NBIS](https://nbis-reproducible-research.readthedocs.io/en/course_2104) 
   - [CodeRefinery](https://coderefinery.github.io/reproducible-research/)
@@ -263,13 +253,113 @@ Can you give some examples? What can we do about it?
 
 ## Create a first version of the python code
 
-````{challenge} Type along
-- Use you favorite editor
+``````{challenge} Type along
+- Use you favorite editor and create the file ``planet.py``
 - Use the linear code below. 
-  - Later we will make it more modular!
+  - It plots the approximate orbit of earth with some eccentricity, and the distance during 2 years to the sun.
+  - Later we will add Jupiter and make it more modular!
 
+````{solution} ``planet.py``   
 ´´´python
+#planet
+import numpy as np
+import matplotlib.pyplot as plt 
 
+#constants
+G=6.6743e-11
+AU=149.597871e9
+AU1=150.8e9
+mj=5.97219e24
+mJ=1.899e27
+M=1.9891e30
+day=86400;
+year=31556926;
+v0=AU*2*np.pi/year;
+Fg=G*M*mj/AU**2
+ag=Fg/mj
+Fc=mj*v0**2/AU
+ac=Fc/mj
+
+L=2
+
+x0=AU1;
+y0=0;
+u0=0;
+x=np.zeros(365*L, dtype=float);
+y=np.zeros(365*L, dtype=float);
+
+x[0]=x0;
+y[0]=y0;
+u=u0;
+v=v0;
+
+for i in range(1,365*L):    
+    print(i)
+    x[i]=x[i-1]+day*u;
+    y[i]=y[i-1]+day*v;
+    ax=-G*M/(abs(x[i]**2+y[i]**2)**[3/2])*x[i];
+    ay=-G*M/(abs(x[i]**2+y[i]**2)**[3/2])*y[i];
+    u=u+ax*day;
+    v=v+ay*day;
+
+rj=(x**2+y**2)**.5
+a=max(rj)
+b=min(rj)
+e=1-2/(a/b+1)
+rel=(a/b-1)
+
+
+fig=plt.figure(1,figsize=(12,5))
+ax=fig.add_subplot(1,2,1)
+ax.plot(x,y)
+ax.plot (0,0,'o')
+#axis equal
+
+ax=fig.add_subplot(1,2,2)
+ax.plot(range(0,365*2),rj)
+
+plt.savefig('planet_earth.png', dpi=100, bbox_inches='tight')
+
+```
+````
+   
+```{figure} img/planet_earth.png
+:width: 100%
+:class: with-border
+```   
+
+``````    
+## make the code a part of the git record
+
+```{admonition} Concepts in Git
+- **repository**: The project, contains all data and history (commits, branches, tags).
+- **add**: Stage you files (collect what to be added to the git record — a kind of middle step)
+- **commit**: Snapshot of the project, gets a unique identifier (e.g. `c7f0e8bfc718be04525847fc7ac237f470add76e`).
+- **cloning**: Copying the whole repository to your laptop - the first time. It is not necessary to download each file one by one.
+- `git clone` copies everything: all commits and all branches.
+- Branches on the remote appear as (read-only) local branches with a prefix, e.g. `origin/main`.
+- We synchronize commits between local and remote with `git fetch`/`git pull` and `git push`.
+```
+```{challenge} make your code part of git   
+
+- Add you file to staging
+
+```console
+   git add planet.py
+```
+- Check the status. 
+- The output should show the new changes since you work on GitHub  
+```console
+   git status
+```
+- Commit with the message "First commit of code"
+```console
+   git commit -m "First commit of code"
+```
+- Check the status   
+- The output should show "Nothing to commit
+```console
+   git status
 ```
 
 ````
@@ -295,6 +385,8 @@ Can you give some examples? What can we do about it?
 
 ```
 
+   
+   
 ````
 
 
