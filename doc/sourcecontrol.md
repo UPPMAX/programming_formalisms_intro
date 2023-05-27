@@ -160,23 +160,25 @@ Now first stage and then commit (what happens when we leave out the `-m` flag?):
   $ git log --stat
   $ git log --oneline
   ```
-``````
 
-(gitignore)=
 
 ## Ignoring files and paths with .gitignore
 
-```{discussion}
-- Should we add and track all files in a project?
-- How about generated files?
-- Why is it considered a bad idea to commit compiled binaries to version control?
-- What types of generated files do you know?
-```
+Compiled and generated files are not
+committed to version control. There are many reasons for this:
+
+- Your code could be run on different platforms.
+- These files are automatically generated and thus do not contribute in any meaningful way.
+- The number of changes to track per source code change can increase quickly.
+- When tracking generated files you could see differences in the code although you haven't touched the code.
+
+For this we use `.gitignore` files. Read more https://uppmax.github.io/programming_formalisms_intro/git_deeper.html
+
+- Not important for our project right now.
 
 ## Branching and merging
 
 - A branch is a division unit of work, to be merged with other units of work.
-- A tag is a pointer to a moment in the history of a project.
 
 ```{figure} img/git-collaborative.svg
 :alt: Isolated tracks
@@ -198,24 +200,27 @@ $ git merge new-feature        # merge work to master
 $ git branch -d new-feature    # remove branch
 ```
 
-## Let's make our code modular (test in branch)
-
-```{challenge} 
-
-```console
-$ git checkout -b wild-idea    # create branch, switch to it, work, work, work ...
-$ git checkout master          # realize it was a bad idea, back to master
-$ git branch -D wild-idea      # it is gone, off to a new idea
-```
-
-No problem: we worked on a branch, branch is deleted, `master` is clean.
-
 ```{note}
 [More about branches](https://coderefinery.github.io/git-intro/branches/)
 ```
 
+## Let's make our code modular (test in branch)
 
----
+``````{challenge} 
+- first make abranch called ``modularity`` and g to that branch
+```console
+$ git checkout -b modularity    # create branch, switch to it
+$ git branch                    # check that we are on the new branch
+```
+- We can now do our changes
+
+- add and commit, possibly several times
+
+
+
+
+``````
+
 
 
 ## Summary
@@ -242,12 +247,13 @@ $ git diff    # show unstaged/uncommitted modifications
 $ git show    # show the change for a specific commit
 $ git mv      # move tracked files
 $ git rm      # remove tracked files
+$ git checkout -b wild-idea    # create branch, switch to it, work, work, work ...
+$ git checkout master          # realize it was a bad idea, back to master
+$ git branch -D wild-idea      # it is gone, off to a new idea
+$ git merge 
 ```
 
-Git is not ideal for large binary files
-(for this consider [http://git-annex.branchable.com](http://git-annex.branchable.com)).
-
-### Docstrings
+## Docstrings
 A docstring is a structured comment associated to a segment of code (i.e. function or class)
 
 Good docstrings describe:
@@ -255,8 +261,54 @@ Good docstrings describe:
    - What goes in (including the type of the input variables)
    - What goes out (including the return type)
    - Python example: help(<function name>)
-   
+  
+  
+``````{challenge}   
+- make docstrings for the main program and the functions
 
+``````  
+  
+
+## Merging
+It turned out that our experiment with modularity was a good idea. 
+Our goal now is to merge modularity into main.
+ 
+```{figure} img/git-collaborative.svg
+:alt: Isolated tracks
+:width: 50%
+
+Isolated tracks of work.
+```
+``````{challenge} Merge into main
+- once all features are ready, switch to main
+```console
+$ git checkout main    # create branch, switch to it
+$ git branch           # check that we are on main branch
+$ git merge  modularity          # merge modularity into main
+```
+  
+````{admonition} **An important alias**
+---
+class: important
+---
+
+We will now define an *alias* in Git, to be able to nicely visualize branch
+structure in the terminal without having to remember a long Git command
+(more details about aliases are given
+in a later section).  **This is extensively used in the rest of this
+and other lessons**:
+
+```console
+$ git config --global alias.graph "log --all --graph --decorate --oneline"
+``` 
+````
+```console
+$ git graph
+```
+
+``````
+  
+  
 ```{Keypoints}
 - Initializing a Git repository is simple: git init.
 - Commits should be used to tell a story.
