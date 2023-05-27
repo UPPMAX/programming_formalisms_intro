@@ -38,6 +38,7 @@ extensions = ["sphinx_lesson",
     'sphinxcontrib.plantuml',
     'sphinx.ext.graphviz',
     'sphinxcontrib.mermaid',
+    'sphinx_copybutton',
 ]
 #plantuml = 'java -jar plantuml.jar'
 #plantuml = 'java -Djava.awt.headless=true -jar %s' % os.path.join(os.path.dirname(os.path.abspath(__file__)), "plantuml.jar")
@@ -68,6 +69,8 @@ myst_enable_extensions = [
     "substitution",
     "tasklist",
 ]
+copybutton_exclude = '.linenos, .gp, .go'
+
 source_suffix = ['.rst', '.md','.dot','.uml','.gv']
 
 # Add any paths that contain templates here, relative to this directory.
