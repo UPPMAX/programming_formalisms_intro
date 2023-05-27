@@ -351,6 +351,7 @@ plt.savefig('planet_earth.png', dpi=100, bbox_inches='tight')
 - We synchronize commits between local and remote with `git fetch`/`git pull` and `git push`.
 ```
    
+### Before we start we need to configure Git
 
 ```{prereq}
 
@@ -362,10 +363,38 @@ plt.savefig('planet_earth.png', dpi=100, bbox_inches='tight')
       system. Emacs and Vim are excellent choices if you know how to use
       them but Nano or Notepad on Windows are sufficient.
       
-```   
+```    
+   
+```{Attention}
+- Start your terminal of choice
+   - MAC terminal 
+   - iTerm
+   - WSL environment in
+     - MobaxTerm
+     - Visual Studio Code
+   - Git BASH  
+   - PowerShell
+
+```
+
+If you haven't already configured Git, please follow the instructions in the
+[installation instructions](https://coderefinery.github.io/installation/shell-and-git/#configuration).
+
+```console
+$ git config --global user.name "Your Name"
+$ git config --global user.email yourname@example.com
+$ git config --global core.editor nano
+```
+
+Verify with:
+```console
+$ git config --list
+```
+     
+   
 ## Make the code a part of the git record
    
-   ``````{challenge} Type-along: Make your code part of git   
+``````{challenge} Type-along: Make your code part of git   
 
 - Add you file to staging
 
