@@ -9,19 +9,11 @@ Answer in HackMD
 
 ```{Objectives}
    - We will
-      - introduce the use of git
       - work with the basic commands in git
       - go through branching and merging
-      - present and use sharing online
 ```
 
 ```{instructor-note}
-- Git Lecture + typealong 25 min
-- Git Exercise 10 min
-- Include branching?
-- Github locally + type along 15 min
-- Perhaps more time?? Maximum 60 min
-
 ```
 This material is based on or inspired by the material from [NBIS](https://nbis-reproducible-research.readthedocs.io/en/course_2104/git/) and [CodeRefinery](https://coderefinery.github.io/git-intro/)
 
@@ -50,95 +42,63 @@ This material is based on or inspired by the material from [NBIS](https://nbis-r
       
 ```
 
+## Start with pushing your changes in the local Git to GitHub
 
-
-### What is Git, and what is a Git repository?
-
-- Git is a version control system: can **record/save snapshots** and track the content of a folder as it changes over time.
-- Every time we **commit** a snapshot, Git records a snapshot of the **entire project**, saves it, and assigns it a version.
-- These snapshots are kept inside a sub-folder called `.git`.
-- If we remove `.git`, we remove the repository and history (but keep the working directory!).
-- `.git` uses relative paths - you can move the whole thing somewhere else and it will still work
-- Git doesn't do anything unless you ask it to (it does not record anything automatically).
-- Multiple interfaces to Git exist (command line, graphical interfaces, web interfaces).
-
-### Recording a snapshot with Git
-
-- Git takes snapshots only if we request it.
-- We will record changes always in two steps (we will later explain why this is a recommended practice).
-- Example (we don't need to type yet):
-
-  ```console
-  $ git add somefile.txt
-  $ git commit
-
-  $ git add file.txt anotherfile.txt
-  $ git commit
+ ```console
+  $ git push
   ```
 
-- We first focus (`git add`, we "stage" the change), then shoot (`git commit`):
+You should now see something like:
 
-### Before we start we need to configure Git
-
-```{Attention}
-- Start your terminal of choice
-   - MAC terminal 
-   - iTerm
-   - WSL environment in
-     - MobaxTerm
-     - Visual Studio Code
-   - Git BASH  
-   - PowerShell
+```text
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (7/7), done.
+Writing objects: 100% (7/7), 846 bytes | 846.00 KiB/s, done.
+Total 7 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), done.
+To github.com:bclaremar/Formalisms.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
 
 ```
 
-If you haven't already configured Git, please follow the instructions in the
-[installation instructions](https://coderefinery.github.io/installation/shell-and-git/#configuration).
+``````{admonition} If you get errors
+---
+class: warning, dropdown
+---
+If you instead get something like the below, your SSH keys are not correctly configured. 
+```text
+git@github.com: Permission denied (publickey).
+fatal: Could not read from remote repository.
 
+Please make sure you have the correct access rights
+and the repository exists.
+```
+If `ssh -T git@github.com` gives an error, this is the case.
+
+
+- [Generating a new SSH key and adding it to the ssh-agent](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
+- Approximate steps
 ```console
-$ git config --global user.name "Your Name"
-$ git config --global user.email yourname@example.com
-$ git config --global core.editor nano
+ssh-keygen -t ed25519 -C "email address"
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_ed25519
 ```
+- [Adding a new SSH key to your GitHub account](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account)
+- Hope you can **fix this in Lunch Break**. **Follow the rest by listening for now.**
 
-Verify with:
-```console
-$ git config --list
-```
+``````
 
+**Reload your GitHub project website and - taa-daa - your commits should now be
+online!**
 
-## Type-along
+What just happened? **Think of publishing a repository as uploading the `.git` part online**.
 
-### Create repository 
-We will create a repository (repo) called `Diagrams`.
+---
 
-Be sure you are in a directory like "Programming_Formalisms" or similar (to have track of your work)
-
-One of the basic principles of Git is that it is **easy to create repositories**:
-```console
-$ mkdir Diagrams
-$ cd Diagrams
-$ git init
-```
-
-That's it! With `git init` have now created an empty Git repository.
-
-#### Check status
-
-We will use `git status` a lot to check out what is going on:
-
-```console
-$ git status
-
-On branch master
-
-No commits yet
-
-nothing to commit (create/copy files and use "git add" to track)
-```
-
-We will make sense of this information during this workshop.
-
+## Alternative way to initialize Git
 
 ```{admonition} A new repository from an existing project on own computer or HPC user account.
 
@@ -152,140 +112,9 @@ We will make sense of this information during this workshop.
 
 ```
 
-### Git everyday steps
+## Make the next iteration of the planet project
 
 
-Let us now **create two files**.
-
-One file is called `class.puml` and contains:
-
-```shell
-@startuml
- class01 <|-- class02
- class03 *-- class04
- class05 o-- class06
-
- class01- class03 : knows >
- class class01 {
-    -var01 : Integer
-    Time : Date
-    #method01()
-    +get_var01()
-    {method}Without parentheses or Qualifiers
- }
-@enduml
-```
-
-The second file is called `activity.puml` and contains:
-
-```shell
-@startuml
-start
-
-if (Graphviz installed?) then (yes)
-  :process all\ndiagrams;
-else (no)
-  :process only
-  __sequence__ and __activity__ diagrams;
-endif
-
-stop
-@enduml
-```
-
-#### Staging files
-
-
-As mentioned above, in Git you can always check the status of files in your repository using
-`git status`. It is always a safe command to run and in general a good idea to
-do when you are trying to figure out what to do next:
-
-```console
-On branch master
-
-No commits yet
-
-Untracked files:
-  (use "git add <file>..." to include in what will be committed)
-        activity.puml
-        class.puml
-
-nothing added to commit but untracked files present (use "git add" to track)
-
-```
-
-The two files are untracked in the repository (directory). You want to **add the files** (focus the camera)
-to the list of files tracked by Git. Git does not track
-any files automatically and you need make a conscious decision to add a file. Let's do what
-Git hints at and add the files:
-
-
-```console
-$ git add .    # < -- "." means all files
-$ git status
-
-On branch master
-
-Initial commit
-
-Changes to be committed:
-  (use "git rm --cached <file>..." to unstage)
-
-        new file:   activity.puml
-        new file:   class.puml
-```
-
-Now this change is *staged* and ready to be committed.
-
-#### Commit
-
-Let us now commit the change to the repository:
-
-```console
-$ git commit -m "adding class and activity diagrams"
-
-[master (root-commit) 8adee34] adding class and activity diagrams
- 2 files changed, 26 insertions(+)
- create mode 100644 activity.puml
- create mode 100644 class.puml
-```
-
-Right after we query the status to get this useful command into our muscle memory:
-
-```console
-$ git status
-
-On branch master
-nothing to commit, working tree clean
-
-```
-
-What does the `-m` flag mean? Let us check the help page for that command:
-
-```console
-$ git help commit
-```
-
-You should see a very long help page as the tool is very versatile (press q to quit).
-Do not worry about this now but keep in mind that you can always read the help files
-when in doubt. Searching online can also be useful, but choosing search terms
-to find relevant information takes some practice and discussions in some
-online threads may be confusing.
-Note that help pages also work when you don't have a network connection!
-
-#### Exercise-optional
-``````{challenge} Make changes (10 min)
-  Add the follwing lines before the line "@enduml" to `class.puml`:
-  
- ```shell
- class class02 {
-    -var02 : Float
-    Time : Date
-    #method01()
-    +get_var02()
-    {method}Without parentheses or Qualifiers
- }
-```
   When you are done editing the files, try `git diff`:
 
   ```console
@@ -334,93 +163,6 @@ Now first stage and then commit (what happens when we leave out the `-m` flag?):
   $ git log --oneline
   ```
 ``````
-
-## Git history and log
-
-If you haven't yet, please try now `git log`:
-
-```console
-$ git log
-
-commit 4bb8b6fa66e5ea693a80e40cee3c3014163eb7ac (HEAD -> master)
-Author: bclaremar <bjorn.claremar@uppmax.uu.se>
-Date:   Sat Oct 22 19:27:57 2022 +0200
-
-    Added info for class02
-
-commit 8adee34b35a8b1b1c1c41f4dce1b1e793030f669
-Author: bclaremar <bjorn.claremar@uppmax.uu.se>
-Date:   Fri Oct 21 23:37:31 2022 +0200
-
-    adding class and activity diagrams
-
-```
-
-- We can browse the development and access each state that we have committed.
-- The long hashes uniquely label a state of the code.
-- They are not just integers counting 1, 2, 3, 4, ... (why?).
-- Output is in reverse chronological order, i.e. **newest commits on top**.
-- We will use them when comparing versions and when going back in time.
-- `git log --oneline` only shows the first 7 characters of the commit hash and is good to get an overview.
-- If the first characters of the hash are unique it is not necessary to type the entire hash.
-- `git log --stat` is nice to show which files have been modified.
-
-### Writing useful commit messages
-
-Using `git log --oneline` we understand that the first line of the commit message is very important.
-
-Good example:
-```text
-increase threshold alpha to 2.0
-
-the motivation for this change is
-to enable ...
-...
-this is based on a discussion in #123
-```
-
-Convention: **one line summarizing the commit, then one empty line,
-then paragraph(s) with more details in free form, if necessary**.
-
-- **Why something was changed is more important than what has changed.**
-- Cross-reference to issues and discussions if possible/relevant.
-- Bad commit messages: "fix", "oops", "save work"
-- Bad examples: [http://whatthecommit.com](http://whatthecommit.com)
-- Write commit messages in English that will be understood
-  15 years from now by someone else than you. Or by your future you.
-- Many projects start out as projects "just for me" and end up to be successful projects
-  that are developed by 50 people over decades.
-- [Commits with multiple authors](https://help.github.com/articles/creating-a-commit-with-multiple-authors/) are possible.
-
-Good references:
-
-- ["My favourite Git commit"](https://fatbusinessman.com/2019/my-favourite-git-commit)
-- ["On commit messages"](https://who-t.blogspot.com/2009/12/on-commit-messages.html)
-- ["How to Write a Git Commit Message"](https://chris.beams.io/posts/git-commit/)
-
-```{note}
-A great way to learn how to write commit messages and to get inspired by their
-style choices: **browse repositories of codes that you use/like**:
-
-Some examples (but there are so many good examples):
-- [SciPy](https://github.com/scipy/scipy/commits/main)
-- [NumPy](https://github.com/numpy/numpy/commits/main)
-- [Pandas](https://github.com/pandas-dev/pandas/commits/main)
-- [Julia](https://github.com/JuliaLang/julia/commits/master)
-- [ggplot2](https://github.com/tidyverse/ggplot2/commits/main),
-  compare with their [release
-  notes](https://github.com/tidyverse/ggplot2/releases)
-- [Flask](https://github.com/pallets/flask/commits/main),
-  compare with their [release
-  notes](https://github.com/pallets/flask/blob/main/CHANGES.rst)
-
-When designing commit message styles consider also these:
-- How will you easily generate a changelog or release notes?
-- During code review, you can help each other improving commit messages.
-```
-
-But remember: it is better to make any commit, than no commit. Especially in small projects.
-**Let not the perfect be the enemy of the good enough**.
 
 
 (gitignore)=
@@ -472,17 +214,6 @@ build/
   [documentation](https://git-scm.com/docs/gitignore).
 - You can have `.gitignore` files in lower level directories and they affect the paths
   relatively.
-
-
-## Graphical user interfaces
-
-We have seen how to make commits directly via the GitHub website, and also via command line.
-But it is also possible to work from within a Git graphical user interface (GUI):
-
-- [GitHub Desktop](https://desktop.github.com)
-- [SourceTree](https://www.sourcetreeapp.com)
-- [List of third-party GUIs](https://git-scm.com/downloads/guis)
-
 
 ## Branching and merging
 
