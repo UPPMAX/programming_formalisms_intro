@@ -1,11 +1,7 @@
 # Start the project
 ```{Objectives}
-   - We will get started with the coding
-   - But also...
-     - think about structure of the files and folders for the project
-     - think about dependencies and work in an isolated environment
-     - think about docuemtation already
-
+   - think about structure of the files and folders for the project
+   - think about documentation already
 ```
 
 ```{note}
