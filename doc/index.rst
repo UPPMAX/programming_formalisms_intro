@@ -187,6 +187,7 @@ Learning outcomes
    sdlc_tools.md 
    flowcharts.md
    startup.md
+   startup_code.md
    #reproducible.md 
    #documentation.md
    sourcecontrol.md
