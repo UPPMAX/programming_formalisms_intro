@@ -74,6 +74,12 @@ Theory: The gravity form the other planets, especially Jupiter, causes the chang
 - **Input**: Some initial positions of the planets but no external data
   - Perhaps also user input of lenght of simulation
 - **Output**: Graph of orbits and a timeseries of an eccentricity parameter
+Development steps
+1. Earth-sun system
+2. Add Jupiter
+3. Make modular
+4. Add more planets?
+
 ```
 
 ### Design
