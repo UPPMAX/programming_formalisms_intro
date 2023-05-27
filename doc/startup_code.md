@@ -1,10 +1,7 @@
 # Start with coding!
-## Start code but be aware of dependencies
+## Start code but be aware of reproducibility
 
 ```{instructor-note}
-- Lecture+discussions 25 min
-- Sharing moved to own page
-- Time required, 20?
 ```
 
 ```{note} 
@@ -56,7 +53,7 @@ $ source planet-project/bin/activate
   - It plots the approximate orbit of earth with some eccentricity, and the distance during 2 years to the sun.
   - Later we will add Jupiter and make it more modular!
 
-````{solution} `planet.py`
+````{solution} Code
 ```python
 #planet
 import numpy as np
