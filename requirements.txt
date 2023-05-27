@@ -10,3 +10,4 @@ sphinxemoji
 sphinxcontrib-plantuml
 sphinxcontrib-mermaid==0.7.*
 #sphinx-mermaid
+sphinx-copybutton
