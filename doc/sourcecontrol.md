@@ -177,8 +177,12 @@ For this we use `.gitignore` files. Read more https://uppmax.github.io/programmi
 - Not important for our project right now.
 
 ## Branching and merging
+Software development is often not linear:
 
-- A branch is a division unit of work, to be merged with other units of work.
+- We typically need at least one version of the code to "work" (to compile, to give expected results, ...).
+- At the same time we work on new features, often several features concurrently.
+  Often they are unfinished.
+- We need to be able to separate different lines of work really well.
 
 ```{figure} img/git-collaborative.svg
 :alt: Isolated tracks
@@ -187,6 +191,19 @@ For this we use `.gitignore` files. Read more https://uppmax.github.io/programmi
 Isolated tracks of work.
 ```
 
+The strength of version control is that it permits the researcher to **isolate
+different tracks of work**, which can later be merged to create a composite
+version that contains all changes:Isolated tracks of work.
+
+- We see branching points and merging points.
+- Main line development is often called `master` or `main`.
+- Other than this convention there is nothing special about `master` or `main`, it is just a branch.
+- Commits form a directed acyclic graph (we have left out the arrows to avoid confusion about the time arrow).
+
+A group of commits that create a single narrative are called a **branch**.
+There are different branching strategies, but it is useful to think that a branch
+tells the story of a feature, e.g. "fast sequence extraction" or "Python interface" or "fixing bug in
+matrix inversion algorithm".
 
 ### Typical workflows
 
@@ -222,36 +239,6 @@ $ git branch                    # check that we are on the new branch
 ``````
 
 
-
-## Summary
-
-Now we know how to save snapshots:
-
-```console
-$ git add <file(s)>
-$ git commit
-```
-
-And this is what we do as we program.
-
-Every state is then saved and later we will learn how to go back to these "checkpoints"
-and how to undo things.
-
-```console
-$ git init    # initialize new repository
-$ git add     # add files or stage file(s)
-$ git commit  # commit staged file(s)
-$ git status  # see what is going on
-$ git log     # see history
-$ git diff    # show unstaged/uncommitted modifications
-$ git show    # show the change for a specific commit
-$ git mv      # move tracked files
-$ git rm      # remove tracked files
-$ git checkout -b wild-idea    # create branch, switch to it, work, work, work ...
-$ git checkout master          # realize it was a bad idea, back to master
-$ git branch -D wild-idea      # it is gone, off to a new idea
-$ git merge 
-```
 
 ## Docstrings
 A docstring is a structured comment associated to a segment of code (i.e. function or class)
@@ -307,6 +294,37 @@ $ git graph
 ```
 
 ``````
+
+## Summary
+
+Now we know how to save snapshots:
+
+```console
+$ git add <file(s)>
+$ git commit
+```
+
+And this is what we do as we program.
+
+Every state is then saved and later we will learn how to go back to these "checkpoints"
+and how to undo things.
+
+```console
+$ git init    # initialize new repository
+$ git add     # add files or stage file(s)
+$ git commit  # commit staged file(s)
+$ git status  # see what is going on
+$ git log     # see history
+$ git diff    # show unstaged/uncommitted modifications
+$ git show    # show the change for a specific commit
+$ git mv      # move tracked files
+$ git rm      # remove tracked files
+$ git checkout -b wild-idea    # create branch, switch to it, work, work, work ...
+$ git checkout master          # realize it was a bad idea, back to master
+$ git branch -D wild-idea      # it is gone, off to a new idea
+$ git merge 
+```
+
   
   
 ```{Keypoints}
