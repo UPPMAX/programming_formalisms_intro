@@ -1,7 +1,20 @@
 # Deploy and document for usage
 
-Make yor program or workflow work for others and yourself in the future
+```{Objectives}
+   - We will prepare for use of your code
+   - Update the README
+   - update a Doc Index
+   - Revisit licence
+   - But also...
+     - some theory of packages
+     - some theory of workflows
+     - some theory of containers
+     - some info about tutorials/reference/howTo guides
+```
 
+```{attention}
+Make yor program or workflow work for others and yourself in the future
+```
 
 ## Recording dependencies
 -	**Reproducibility**: We can control our code but how can we control dependencies?
@@ -20,34 +33,10 @@ Make yor program or workflow work for others and yourself in the future
    -	Using **different Python/R versions** per project??
    -    Provide tools and services to **share packages**
 
-### The tools
-- Python
-  -	PyPI
-    -pip freeze > requirements.txt
-  -	Conda: any language, also compiled code and libraries.
-    -	conda-forge is a GitHub organization containing repositories of conda recipes.
-	  - Export the requirements into requirements.txt with conda list --export > requirements.txt.
-	  - Export the full environment using conda env export > environment.yml, and compare the .yml file format to the .txt file format.
-  -	Virtualenv
-	- Pipenv
-	- Poetry
-	- Pyenv
-	- Mamba (faster conda)
--	R
-  - Packrat, jetpack, rsuite, renv, automagic, deplearning, devtools
--	C/C+
-	- CMake
-	- Conan
-	- Conda
--	Fortran
-  - Fortran package manager
-- Julia
-  - Pkg.jl
-    -	designed around using isolated environments with independent sets of packages. Environments can either be local to a particular project or shared and selected by name.
+[The tools](https://uppmax.github.io/programming_formalisms_intro/reproducible_deeper.html#the-tools)
 
-### Course advertisment
+**Course advertisment**
 [Python for scientific computing](https://aaltoscicomp.github.io/python-for-scicomp/)
-
 
 ## Workflows
 
@@ -58,29 +47,14 @@ Make yor program or workflow work for others and yourself in the future
 ## Containers
 
 Popular container implementations:
-
 - Docker
-
 - Singularity (popular on high-performance computing systems)
-
 - Apptainer (popular on high-performance computing systems, fork of Singularity)
-
-- podman
-
-They are to some extent interoperable:
-
-- podman is very close to Docker
-
 - Docker images can be converted to Singularity/Apptainer images
-
 - Singularity Python can convert Dockerfiles to Singularity definition files
-
 https://coderefinery.github.io/reproducible-research/environments
+https://uppmax.github.io/programming_formalisms_intro/reproducible_deeper.html#containers
 
-## Reproducible publications
-- Git (overleaf, authorea), hackmd, manuscripts.io, google docs
-- Scholarly output reproducible: rrtools, jupyter, binder, research compendia
-- Reprohack
 
 ```{keypoints}
   - Preserve the steps for re-generating published results.
@@ -88,7 +62,19 @@ https://coderefinery.github.io/reproducible-research/environments
   - Snakemake is a comparatively simple and lightweight option to create transferable and scalable data analyses.
   - Sometimes a script is enough.
 ```
-## Documentation part 2
+
+## Documentation for turorials
+```{note} Documentation comes in different forms - what *is* documentation?
+  - **Tutorials**: learning-oriented, allows the newcomer to get started
+  - **How-to guides**: goal-oriented, shows how to solve a specific problem
+  - **Explanation**: understanding-oriented, explains a concept
+  - **Reference**: information-oriented, describes the machinery
+  **Not to forget**
+  - Project documentation:
+    - requirements: what is the goal of the software, risks, platforms
+    the analysis: pseusocode and UML
+    - risk analysis
+```
 
 ### HTML static site generators
 
@@ -101,23 +87,14 @@ https://coderefinery.github.io/reproducible-research/environments
     hosts public Sphinx documentation for free!
   - Also hostable anywhere else, like Github pages. **← this is what we use for this lesson 
   - API documentation possible
-
 - [Jekyll](https://jekyllrb.com)
   - Generates HTML from Markdown.
   - GitHub supports this without adding extra build steps.
-
-- [pkgdown](https://pkgdown.r-lib.org/)
-  - Popular in the R community
-
 - [MkDocs](https://www.mkdocs.org/)
-- [GitBook](https://www.gitbook.com/)
-- [Hugo](https://gohugo.io)
-- [Hexo](https://hexo.io)
-- [Zola](https://www.getzola.org/) **← this is what CodeRefinery use for their project website and workshop websites**
 
 There are many more ...
 
-### Deployment
+### Deployment on servers
                                         
 GitHub, GitLab, and Bitbucket make it possible to serve HTML pages:
 - [GitHub Pages](https://pages.github.com) (GH-pages) ← this is what we and CR use for some course material
@@ -127,33 +104,19 @@ GitHub, GitLab, and Bitbucket make it possible to serve HTML pages:
 - [Read the docs](http://readthedocs.org) ← this is what NBIS use for some course material
 
 #### Github pages
-- Easiest. everything is local to GitHub
+- Easiest. Everything is local to GitHub
 - This lesson material
 
 #### Read the Docs
 - Somewhat more possibilities, like having several versions of documentation to switch between.
-- Example
                                       
 ### Wikis
-
 - Popular solutions (but many others exist):
   - [MediaWiki](https://www.mediawiki.org)
   - [Dokuwiki](https://www.dokuwiki.org)
-- Advantage
-  - Barrier to write and edit is low
-- Disadvantages
-  - Typically disconnected from source code repository (**reproducibility**)
-  - Difficult to serve multiple versions
-  - Difficult to check out a specific old version
+  - Also on GitHub!
   - Typically needs to be hosted and maintained
-
----
-
-#### Demo These pages
-``````{challenge} Make Documentation
-``````
  
-
 ````{Admonition} Read more
    `CodeRefinery' <https://coderefinery.github.io/documentation/>`
 ````
