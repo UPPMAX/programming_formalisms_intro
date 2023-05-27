@@ -1,5 +1,4 @@
-# Start the coding and documentation
-
+# Start the project
 ```{Objectives}
    - We will get started with the coding
    - But also...
