@@ -164,33 +164,6 @@ A list:
 ---
 
 
-``````{admonition} If you get errors
----
-class: warning, dropdown
----
-If you instead get something like the below, your SSH keys are not correctly configured. 
-```text
-git@github.com: Permission denied (publickey).
-fatal: Could not read from remote repository.
-
-Please make sure you have the correct access rights
-and the repository exists.
-```
-If `ssh -T git@github.com` gives an error, this is the case.
-
-
-- [Generating a new SSH key and adding it to the ssh-agent](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
-- Approximate steps
-```console
-ssh-keygen -t ed25519 -C "email address"
-eval "$(ssh-agent -s)"
-ssh-add ~/.ssh/id_ed25519
-```
-- [Adding a new SSH key to your GitHub account](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account)
-- Hope you can **fix this in Lunch Break**. **Follow the rest by listening for now.**
-
-``````
----
 
 ## Cloning a repository
 
@@ -356,8 +329,18 @@ plt.savefig('planet_earth.png', dpi=100, bbox_inches='tight')
 ```   
 
 ``````    
-## Make the code a part of the git record
 
+## What is Git, and what is a Git repository?
+
+- Git is a version control system: can **record/save snapshots** and track the content of a folder as it changes over time.
+- Every time we **commit** a snapshot, Git records a snapshot of the **entire project**, saves it, and assigns it a version.
+- These snapshots are kept inside a sub-folder called `.git`.
+- If we remove `.git`, we remove the repository and history (but keep the working directory!).
+- `.git` uses relative paths - you can move the whole thing somewhere else and it will still work
+- Git doesn't do anything unless you ask it to (it does not record anything automatically).
+- Multiple interfaces to Git exist (command line, graphical interfaces, web interfaces).
+
+  
 ```{admonition} Concepts in Git
 - **repository**: The project, contains all data and history (commits, branches, tags).
 - **add**: Stage you files (collect what to be added to the git record — a kind of middle step)
@@ -368,7 +351,21 @@ plt.savefig('planet_earth.png', dpi=100, bbox_inches='tight')
 - We synchronize commits between local and remote with `git fetch`/`git pull` and `git push`.
 ```
    
-``````{challenge} Type-along: Make your code part of git   
+
+```{prereq}
+
+   -  **Git and GITHUB should be configured prior to the course**
+      following [https://coderefinery.github.io/installation](https://github.com/UPPMAX/programming_formalism/blob/main/setup.md)).
+   -  Being comfortable with the command line. No expertise is required,
+      but the lesson will be mostly taken from the command line.
+   -  Students should be familiar with using a **text editor** on their
+      system. Emacs and Vim are excellent choices if you know how to use
+      them but Nano or Notepad on Windows are sufficient.
+      
+```   
+## Make the code a part of the git record
+   
+   ``````{challenge} Type-along: Make your code part of git   
 
 - Add you file to staging
 
