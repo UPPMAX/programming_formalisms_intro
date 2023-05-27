@@ -390,7 +390,88 @@ Verify with:
 ```console
 $ git config --list
 ```
-     
+
+   
+#### Staging files
+
+
+As mentioned above, in Git you can always check the status of files in your repository using
+`git status`. It is always a safe command to run and in general a good idea to
+do when you are trying to figure out what to do next:
+
+```console
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        activity.puml
+        class.puml
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+```
+   
+The two files are untracked in the repository (directory). You want to **add the files** (focus the camera)
+to the list of files tracked by Git. Git does not track
+any files automatically and you need make a conscious decision to add a file. Let's do what
+Git hints at and add the files:
+
+
+```console
+$ git add .    # < -- "." means all files
+$ git status
+
+On branch master
+
+Initial commit
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   activity.puml
+        new file:   class.puml
+```
+
+Now this change is *staged* and ready to be committed.
+
+#### Commit
+
+Let us now commit the change to the repository:
+
+```console
+$ git commit -m "adding class and activity diagrams"
+
+[master (root-commit) 8adee34] adding class and activity diagrams
+ 2 files changed, 26 insertions(+)
+ create mode 100644 activity.puml
+ create mode 100644 class.puml
+```
+
+Right after we query the status to get this useful command into our muscle memory:
+
+```console
+$ git status
+
+On branch master
+nothing to commit, working tree clean
+
+```
+
+What does the `-m` flag mean? Let us check the help page for that command:
+
+```console
+$ git help commit
+```
+
+You should see a very long help page as the tool is very versatile (press q to quit).
+Do not worry about this now but keep in mind that you can always read the help files
+when in doubt. Searching online can also be useful, but choosing search terms
+to find relevant information takes some practice and discussions in some
+online threads may be confusing.
+Note that help pages also work when you don't have a network connection!   
+   
    
 ## Make the code a part of the git record
    
