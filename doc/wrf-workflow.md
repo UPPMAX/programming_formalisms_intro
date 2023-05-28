@@ -13,6 +13,7 @@ WRF programs to be run every simulation
 Automatise this!
 1. **download script**
 2. **script_WPS**
+
    a. find dates/times to be used
    a. find downloaded files
 
@@ -27,6 +28,7 @@ Automatise this!
    a. start next script **script_WRF**
    
 4. **scipt_WRF**
+
    a. find output from the last script
    b. run ./run_real.sh
       - insert correct dates into a "namelist"
