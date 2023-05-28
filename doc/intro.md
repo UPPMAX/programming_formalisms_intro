@@ -7,7 +7,7 @@
 ```
 
 ```{objectives}
-- We'll give an introducton to the week
+- We'll give an introduction to the week
 - We'll give some introduction to concepts used in the course
 - We'll give some introduction to handy tools for the software developer
 - We'll try to set up the mindset to find the rest of the week interesting and useful!
@@ -68,7 +68,7 @@
 
 #### Object oriented programming
 - Object-oriented (OO) programming is 
-  - a mindset of mimicing the real-world as:
+  - a mindset of mimicking the real-world as:
   - entities (`objects`) that are different 
   - or share attributes with each-other (within a `class`)
   - info-hiding mindset...
@@ -148,7 +148,7 @@ More on Wednesday
   - Perl	2%	(3.5%)
   - Nim 2% (-)
 
-Not this but last yeer
+Not this but last year
 
   - Julia 0	(5%)
   - HTML	0	(3.5%)
@@ -170,7 +170,7 @@ Not this but last yeer
     - bioinformatics
 - workflows
 - modelling (mimic the reality)
-      - simulations time-varying bahvour of a system
+      - simulations time-varying bahaviour of a system
       - mathematical models of relationships among variables in a system 
 - decision assistance
 
