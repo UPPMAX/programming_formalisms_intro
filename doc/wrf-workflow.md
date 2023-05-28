@@ -48,11 +48,27 @@ WRF programs to be run every simulation
 
 ```plantuml
 @startuml
-node foo
-foo --> bar : normal
-foo --> bar1 #line:red;line.bold;text:red  : red bold
-foo --> bar2 #green;line.dashed;text:green : green dashed 
-foo --> bar3 #blue;line.dotted;text:blue   : blue dotted
+ class01 <|-- class02
+ class03 *-- class04
+ class05 o-- class06
+
+ class01- class03 : knows >
+ class class01 {
+    -var01 : Integer
+    Time : Date
+    #method01()
+    +get_var01()
+    {method}Without paranteces or Qualifiers
+ }
+ 
+ class class02 {
+    -var02 : Float
+    Time : Date
+    #method01()
+    +get_var02()
+    {method}Without paranteces or Qualifiers
+ }
+
 @enduml
 
 
