@@ -6,15 +6,19 @@
 WPS (preprocessing) programs to be run every simulation
 - ungrib.exe
 - metgrid.exe
+- 
 WRF programs to be run every simulation
 - real.exe
 - wrf.exe
 
-Automatise this!
+## Automatise this!
+
 1. **download script**
-2. **script_WPS**
+
+1. **script_WPS**
 
    a. find dates/times to be used
+   
    a. find downloaded files
 
    a. start **run_ungrib.sh**
@@ -27,18 +31,19 @@ Automatise this!
 
    a. start next script **script_WRF**
    
-4. **scipt_WRF**
+1. **scipt_WRF**
 
    a. find output from the last script
-   b. run ./run_real.sh
+   
+   a. run ./run_real.sh
       - insert correct dates into a "namelist"
       - run **real.exe**
 
-   b. run ./run_wrf.sh
+   a. run ./run_wrf.sh
       - insert correct dates into a "namelist"
       - run **wrf.exe**
 
-   b. run ./analysis_script.sh
+   a. run ./analysis_script.sh
      
 
 ```plantuml
