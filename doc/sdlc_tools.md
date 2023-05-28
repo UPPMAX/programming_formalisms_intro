@@ -11,10 +11,8 @@
 - We will get some theory of project tools and thinking.
 ```
 
-
-
 ```{instructor-note}
-- Lecture 45 min
+
 ```
 
 ## The waterfall model
@@ -101,7 +99,7 @@ see the extra reading section: https://uppmax.github.io/programming_formalisms_i
 - Source/version control
   - Git etc
 - Collaboration
-  - Github
+  - GitHub
 - Reproducibility (for you and others)
   - Dependencies
   - (Workflows)
@@ -120,7 +118,7 @@ see the extra reading section: https://uppmax.github.io/programming_formalisms_i
 
 ```{note}
 "If I had nine hours to chop down a tree, I'd spend the first six sharpening my axe.
--	Modeling sharpens your axe since it helps you think about what you're going to build, how to seek feedback, and where to make improvements. It prepares you to build the real thing to reduce any potential risk of failure. "
+-	Modelling sharpens your axe since it helps you think about what you're going to build, how to seek feedback, and where to make improvements. It prepares you to build the real thing to reduce any potential risk of failure. "
 ```
 
 ```{note}
@@ -363,7 +361,7 @@ Car -- Person : < owns
 Does it work for all legal input data sets??
 
 1. Unit testing 
-2. Integration tests (test modeuls together as a whole)
+2. Integration tests (test modeles together as a whole)
 
 **Typical testing process**
 
@@ -371,7 +369,7 @@ Does it work for all legal input data sets??
 @startuml
 start
 :Unit testing of individual subtasks;
--> subtasks validated sperately;
+-> subtasks validated separately;
 repeat: Successive builds \n - adding subtasks to the program;
 backward:As many times as necessary;
 repeat while
@@ -490,7 +488,7 @@ There are different types of remotes:
 
 ```{objectives}
    - [Source and version control](https://uppmax.github.io/programming_formalism_intro/sourcecontrol.html) aims to
-      - Introduce git and github
+      - Introduce git and GitHub
       - Get into working with git
       - Get into using GitHub as a remote repository
    ```
@@ -548,7 +546,7 @@ There are different types of remotes:
 ```
 #### Open science
 
-### FAIR
+##### FAIR
 **“FAIR”** is the current buzzword for data management. You may be asked about it in, for example, making data management plans for grants:
 
 - Findable
@@ -564,7 +562,9 @@ There are different types of remotes:
    - Is there a license allowing others to re-use?
 
 ### Licencing
-### Copyright
+[Read more](https://uppmax.github.io/programming_formalisms_intro/sharing_deeper.html#licensing#)
+
+#### Copyright
 - Protects creative expression
 - Automatically created
 - **Derivative works** usually inherit copyright of the thing derived
