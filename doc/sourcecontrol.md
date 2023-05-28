@@ -502,9 +502,28 @@ Good docstrings describe:
    - What goes out (including the return type)
    - Python example: help(<function name>)
   
+**Example**
+  
+```python
+def mean_temperature(data):
+    """
+    Get the mean temperature
+
+    Args:
+        data (pandas.DataFrame): A pandas dataframe with air temperature measurements.
+
+    Returns:
+        The mean air temperature (float)
+    """
+    temperatures = data['Air temperature (degC)']
+    return float(sum(temperatures)/len(temperatures))  
+  
+```
+  
   
 ``````{challenge} (Optional) Docstrings
-- make docstrings for the main program and the functions
+- Try to make docstrings for the main program and some of the functions
+- Test from a python console (after importing) with ``help(eccentricity)`` or similar
 
 ``````  
   
