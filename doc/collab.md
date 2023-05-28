@@ -121,14 +121,16 @@ remote refers to the fork.
   - That means that we can ignore small planets and/or far away planets
 - Below, see a first sorted out table of mass of the planets and their approximate shortest distance to Earth.
 
-|Planet|Mass (relative to Earth) |Shortest distance (AU)|
-|----|---|---|
-Venus| 0.815 | 0.72
-March| 0.107 | 1.52
-Jupiter| 318 | 5.2
-Saturn| 95.2 | 9.54
+|Planet|Mass (relative to Earth) |Mean distance to sun (AU)| Shortest distance to earth (AU)|
+|----|---|---|---|
+Venus| 0.815 | 0.72 | 0.28
+March| 0.107 | 1.52 | 0.52
+Jupiter| 318 | 5.2 | 4.2
+Saturn| 95.2 | 9.54 | 8.54
 
-- Adding a planet should be pretty straight-forward in our modular code.
+- Adding a planet should be pretty straight-forward in our modular code!
+
+- For ideas view Code Refinery's  [Centralized workflow](https://coderefinery.github.io/git-collaborative/centralized/)
   
 ```
 
