@@ -7,15 +7,13 @@
 ```
 
 ```{Objectives}
-   - We will give an overview Github
+   - We will give an overview GitHub
       - centralized collaboration
       - Forked collaboration
       - How to contribute
 ```
 
 ```{instructor-note}
-- GitHub Lecture+discussion 15 min
-- Add exercise?
 
 ```
 
@@ -28,7 +26,7 @@ Different types of remotes:
 - [Bitbucket](https://bitbucket.org) is yet another popular commercial site.
 - Another option is [NotABug](https://notabug.org)
   
-## Github
+## GitHub
 There are two more ways to create “copies” of repositories into your user space:
 
 - A repository can be marked as **template** and new repositories can be **generated** from it, like using a cookie-cutter. The newly created repository will start with a new history, only one commit, and not inherit the history of the template.
@@ -136,5 +134,5 @@ Saturn| 95.2 | 9.54 | 8.54
 
 ```{keypoints}
 - Communicate and discuss before coding massive changes.
-- **Cross-reference discussions, proposals, and code changes**.
+- Cross-reference discussions, proposals, and code changes.
 ```
