@@ -117,8 +117,7 @@ ax.plot (0,0,'o')
 ax=fig.add_subplot(1,2,2)
 ax.plot(range(0,365*2),rj)
 
-plt.savefig('planet_earth.png', dpi=100, bbox_inches='tight')
-
+plt.savefig('../Figures/planet_earth.png', dpi=100, bbox_inches='tight')
 ```
 ````
    
