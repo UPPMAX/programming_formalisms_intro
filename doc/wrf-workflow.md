@@ -11,8 +11,8 @@ WRF programs to be run every simulation
 - wrf.exe
 
 Automatise this!
-1. **download**
-2. script_WPS
+1. **download script**
+2. **script_WPS**
    a. find dates/times to be used
    a. find downloaded files
 
@@ -23,7 +23,7 @@ Automatise this!
       - insert correct dates into a "namelist"
       - run **metgrid.exe**
    a. start next script **script_WRF**
-4. scipts WRF
+4. **scipt_WRF**
    a. find output from the last script
    b. run ./run_real.sh
       - insert correct dates into a "namelist"
