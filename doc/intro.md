@@ -64,6 +64,13 @@
     - Encapsulation/information hiding
 
 
+### Independent modules
+- Modular coding is really good!
+- it can be done as object-oriented or functional programming, see below.
+- Modularity could be within a program but also for a workflow.
+- Here's an example of bashs scripts taking care of runs with executable files.
+  - [A weather model workflow](https://github.com/UPPMAX/programming_formalisms_intro/blob/main/doc/wrf-workflow.md)
+
 ### Functional vs. object-oriented programming
 
 #### Object oriented programming
