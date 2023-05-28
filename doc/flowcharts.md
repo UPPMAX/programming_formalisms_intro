@@ -72,9 +72,10 @@ Theory: The gravity form the other planets, especially Jupiter, causes the chang
 - **Method**: Use Python
   - Let's go for functional programming
 - **Input**: Some initial positions of the planets but no external data
-  - Perhaps also user input of lenght of simulation
+  - Perhaps also user input of length of simulation
 - **Output**: Graph of orbits and a timeseries of an eccentricity parameter
-Development steps
+
+**Development steps**
 1. Earth-sun system
 2. Add Jupiter
 3. Make modular
@@ -99,7 +100,7 @@ Development steps
 ### Let's make a flowchart of the program parts
 
 #### Syntax for algorithm flowchart
-- https://plantuml.com/
+- [plantuml.com](https://plantuml.com/)
 
 
 `````{admonition} PlantUML Cheat sheet
@@ -114,9 +115,11 @@ stop
 @enduml
 ```
 
+Start with 
+
 ````{console}
 
-``` uml
+
 @startuml
 start
 :Hello world;
@@ -124,17 +127,18 @@ start
 several **lines**;
 stop
 @enduml
-```
+
 ```` 
 ``````
 
 #### Exercise
-````{challenge}
-    make a flowchart of the program parts
+````{challenge} Test some psuedocode 10 min
+    - go to [plantum server](https://www.plantuml.com/plantuml/uml/SyfFKj2rKt3CoKnELR1Io4ZDoSa70000)
+    - try to make a flowchart of the program parts 
+    - have a look on examples, for help: [activity-diagram](https://plantuml.com/activity-diagram-beta)
 ````
 
 ### Do some pseudocode of the calculations
-
 
 ```{Challenge} Demo of Pseudocode
 Define constants
@@ -157,7 +161,7 @@ More practicals and UML Pseudocode later this week!
 
 ## Wrap-up
 
-```{Discussion}
+```{Discussion} If there is time
 In Breakout-rooms 6-8 people:
 - What are your impressions about
   - UML?
