@@ -66,7 +66,7 @@ import matplotlib.pyplot as plt
 
 #constants
 G=6.6743e-11
-AU=149.597871e9
+AU=149.597871e9 # 1 astronomical unit (AU) is the mean distance between sun and Earth
 AU1=150.8e9
 mj=5.97219e24
 mJ=1.899e27
