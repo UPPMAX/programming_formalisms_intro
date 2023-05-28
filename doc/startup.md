@@ -5,14 +5,14 @@
 ```
 
 ```{note}
-- Many projects/scripts starts as something for personal use, but expands to be distributed.
-- Let's start i nthat end and be preperad.
+- Many projects/scripts start as something for personal use, but expands to be distributed.
+- Let's start in that end and be prepared.
 - The following steps can be very valuable for you in a couple of months as well as you revisit your code and don't know what it does or why you did this and that.
 ```
 
 ## First things: order your files!
 
-- Think that **everything is worth to be part of documentation** (like Github directory tree)
+- Think that **everything is worth to be part of documentation** (like GitHub directory tree)
 - The parts from the software development cycle
   - The planning parts
       - Requirements: 
@@ -23,7 +23,7 @@
   - Design documentation
       - Analysis: pseudo code and UML
   - Source code
-    - with in-code deocumentation
+    - with in-code documentation
   - README
   - (Full documentation)
   - (Tutorial)
@@ -48,8 +48,8 @@
 ## Start with a new GitHub project
 
 ```{discussion}
-- For the course porject we do it in this order, but that is not necessary in all cases.
-- Typically you may start locally in  Git repository and later push to a GitHub repository (more next session about Git)
+- For the course project we do it in this order, but that is not necessary in all cases.
+- Typically you may start locally in Git repository and later push to a GitHub repository (more next session about Git)
 - The reason for starting here is that we can get our PlantUML render in the browser!
 ```
 
@@ -74,7 +74,7 @@ Or if you see your profile page, there is a "+" menu (top right corner).
 ---
 
 On this page choose a project name, e.g. ``planets-<username>`` 
-  - the name there so there are noe clahes when you collaborate and fork other repositories)
+  - the name there so there are no clashes when/if you collaborate and fork other repositories)
    
 For the sake of this exercise **do select**
 "Initialize this repository with a README"
@@ -194,6 +194,5 @@ automatically checked out.
 
 ```{keypoints}
 - A repository can have one or multiple remotes (we will revisit these later).
-- Local branches often track remote branches.
-- A remote serves as a full backup of your work.
+- A remote (GitHub) in this case serves as a full backup of your work.
 ```
