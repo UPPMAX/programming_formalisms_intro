@@ -274,7 +274,7 @@ Isolated tracks of work.
 
 The strength of version control is that it permits the researcher to **isolate
 different tracks of work**, which can later be merged to create a composite
-version that contains all changes:Isolated tracks of work.
+version that contains all changes.
 
 - We see branching points and merging points.
 - Main line development is often called `master` or `main`.
@@ -288,7 +288,7 @@ matrix inversion algorithm".
 
 ### Typical workflows
 
-There are two typical workflows:
+One typical workflow:
 
 ```console
 $ git checkout -b new-feature  # create branch, switch to it
