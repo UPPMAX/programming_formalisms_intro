@@ -313,7 +313,7 @@ $ git branch                    # check that we are on the new branch
 - We can now do our changes
 - We will make three files
   - ``planet_main.py``, containing an overview e.g. the main program
-  - ``planet_data``, containing general constants, and planetary parameters
+  - ``planet_data.py``, containing general constants, and planetary parameters
   - ``planet_iter.py``, containing the equation of motion for the planets
   - ``planet_functions.py``, containing eccentricity calculations and a plot function
   
@@ -327,33 +327,42 @@ from  planet_iter import *
 
 L=400 #number of years to simulate
 
-
 G,AU,M,day,year=general_constants()
 
+# Get the mass and the initial position of Earth
 x,y,u,v,mj=init_Earth(AU,year,L)
 
+# Get the mass and the initial position of Jupiter
 xJ,yJ,uJ,vJ,mJ=init_Jupiter(AU,year,L)
 
 for i in range(1,365*L):    
+    #Counter for each 100 years
     if i % 36500==0:
         print(i/365)
-
+        
+    # New positions of Earth
     x[i]=x[i-1]+day*u;
     y[i]=y[i-1]+day*v;
+    
+    # New positions of Jupiter
     xJ[i]=xJ[i-1]+day*uJ;
     yJ[i]=yJ[i-1]+day*vJ;
     
+    # acceleration of Earth due to Sun
     axS, ayS = acc_effect(G,M,x[i],y[i])    
         
+    # acceleration of Earth due to Jupiter
     dxJ=x[i]-xJ[i];
     dyJ=y[i]-yJ[i];
     axEJ, ayEJ = acc_effect(G,mJ,dxJ,dyJ)  
     
+    # net effect on velocity of Earth
     ax=axS+axEJ;
     ay=ayS+ayEJ;
     u=u+ax*day;
     v=v+ay*day;
 
+    # new velocity of Jupiter
     uJ,vJ = planet_motion(G,M,xJ[i],yJ[i],uJ,vJ,day)
 
     
@@ -394,6 +403,7 @@ def init_Earth(AU,year,L):
   y[0]=y0;
   u=u0;
   v=v0;
+  
   return x,y,u,v,mj
 
 def init_Jupiter(AU,year,L):
@@ -410,6 +420,7 @@ def init_Jupiter(AU,year,L):
   yJ[0]=y0J;
   uJ=u0J;
   vJ=v0J;
+  
   return xJ,yJ,uJ,vJ,mJ
 
 ```
@@ -432,6 +443,7 @@ def planet_motion(G,M,x,y,u,v,day):
     ay=-G*M/(abs(x**2+y**2)**[3/2])*y;
     u=u+ax*day;
     v=v+ay*day;
+    
     return u, v
     
 ```
@@ -491,15 +503,15 @@ Good docstrings describe:
    - Python example: help(<function name>)
   
   
-``````{challenge}   
+``````{challenge} (Optional) Docstrings
 - make docstrings for the main program and the functions
 
 ``````  
   
 
 ## Merging
-It turned out that our experiment with modularity was a good idea. 
-Our goal now is to merge modularity into main.
+- It turned out that our experiment with modularity was a good idea. 
+- Our goal now is to merge modularity into main.
  
 ```{figure} img/git-collaborative.svg
 :alt: Isolated tracks
@@ -545,7 +557,7 @@ $ git add <file(s)>
 $ git commit
 ```
 
-And this is what we do as we program.
+And that is what we do as we program.
 
 Every state is then saved and later we will learn how to go back to these "checkpoints"
 and how to undo things.
