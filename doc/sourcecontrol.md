@@ -112,17 +112,9 @@ M=1.9891e30
 day=86400;
 year=31556926;
 v0=AU*2*np.pi/year;
-Fg=G*M*mj/AU**2
-ag=Fg/mj
-Fc=mj*v0**2/AU
-ac=Fc/mj
 
 #Jupiter
 v0J=dJ*2*np.pi/(11.86*year);
-FgJ=G*M*mJ/dJ**2
-agJ=FgJ/mJ
-FcJ=mJ*v0J**2/dJ
-acJ=FcJ/mJ
 
 L=50000
 
@@ -176,12 +168,6 @@ for i in range(1,365*L):
 
 
 rj=(x**2+y**2)**.5
-print('length')
-print(len(rj))
-#a=max(rj)
-#b=min(rj)
-#e=1-2/(a/b+1)
-#rel=(a/b-1)
 
 l=1000;
 e=np.zeros(int(L/l), dtype=float);
@@ -319,13 +305,67 @@ $ git branch -d new-feature    # remove branch
 ## Let's make our code modular (test in branch)
 
 ``````{challenge} 
-- first make abranch called ``modularity`` and g to that branch
+- First make a branch called ``modularity`` and g to that branch
 ```console
 $ git checkout -b modularity    # create branch, switch to it
 $ git branch                    # check that we are on the new branch
 ```
 - We can now do our changes
+- We will make three files
+  - ``planet_main.py``, containing an overview e.g. the main program
+  - ``planet_data``, containing general constants, and planetary parameters
+  - ``planet_iter.py``, containing the equation of motion for the planets
+  - ``planet_functions.py``, containing eccentricity calculations and a plot function
+  
+  ````{solution} planet_main.py
+  ```python
+#planet with Jupiter
+import numpy as np
+from  planet_functions import *
+from  planet_data import *
+from  planet_iter import *
 
+L=400 #number of years to simulate
+
+
+G,AU,M,day,year=general_constants()
+
+x,y,u,v,mj=init_Earth(AU,year,L)
+
+xJ,yJ,uJ,vJ,mJ=init_Jupiter(AU,year,L)
+
+for i in range(1,365*L):    
+    if i % 36500==0:
+        print(i/365)
+
+    x[i]=x[i-1]+day*u;
+    y[i]=y[i-1]+day*v;
+    xJ[i]=xJ[i-1]+day*uJ;
+    yJ[i]=yJ[i-1]+day*vJ;
+    
+    axS, ayS = acc_effect(G,M,x[i],y[i])    
+        
+    dxJ=x[i]-xJ[i];
+    dyJ=y[i]-yJ[i];
+    axEJ, ayEJ = acc_effect(G,mJ,dxJ,dyJ)  
+    
+    ax=axS+axEJ;
+    ay=ayS+ayEJ;
+    u=u+ax*day;
+    v=v+ay*day;
+
+    uJ,vJ = planet_motion(G,M,xJ[i],yJ[i],uJ,vJ,day)
+
+    
+l=100
+e=eccentricity(x,y,L,l)
+
+figure_orbit(x,y,xJ,yJ,e)
+
+```
+```` 
+  
+  
 - add and commit, possibly several times
 
 
