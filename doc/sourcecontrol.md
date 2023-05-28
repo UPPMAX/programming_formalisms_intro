@@ -13,34 +13,11 @@ Answer in HackMD
       - go through branching and merging
 ```
 
-```{instructor-note}
-```
-This material is based on or inspired by the material from [NBIS](https://nbis-reproducible-research.readthedocs.io/en/course_2104/git/) and [CodeRefinery](https://coderefinery.github.io/git-intro/)
-
 ```{note}
 - We will cover the most basic things with Git such that you can use it this week.
 - For deeper understanding and hands-on on branching etcetera, please confer the course material of [NBIS](https://nbis-reproducible-research.readthedocs.io/en/course_2104/git/) and [CodeRefinery](https://coderefinery.github.io/git-intro/).
 ```
 
-## Git
-
-- We will start with our own repository.
-- branching and merging (locally)
-- and a brief introduction to pushing to remotes.
-- In the separate collaborative Git lesson, we teach more use of remote repositories and good collaborative workflows. 
-
-
-```{prereq}
-
-   -  **Git and GITHUB should be configured prior to the course**
-      following [https://coderefinery.github.io/installation](https://github.com/UPPMAX/programming_formalism/blob/main/setup.md)).
-   -  Being comfortable with the command line. No expertise is required,
-      but the lesson will be mostly taken from the command line.
-   -  Students should be familiar with using a **text editor** on their
-      system. Emacs and Vim are excellent choices if you know how to use
-      them but Nano or Notepad on Windows are sufficient.
-      
-```
 
 ## Start with pushing your changes in the local Git to GitHub
 
@@ -119,9 +96,119 @@ What just happened? **Think of publishing a repository as uploading the `.git` p
 
 ```python
 
+#planet with Jupiter
+import numpy as np
+import matplotlib.pyplot as plt 
 
+#constants
+G=6.6743e-11
+AU=149.597871e9
+AU1=150.8e9
+dJ=5.203*AU
+mj=5.97219e24
+mJ=1.899e27
+M=1.9891e30
+day=86400;
+year=31556926;
+v0=AU*2*np.pi/year;
+Fg=G*M*mj/AU**2
+ag=Fg/mj
+Fc=mj*v0**2/AU
+ac=Fc/mj
+
+#Jupiter
+v0J=dJ*2*np.pi/(11.86*year);
+FgJ=G*M*mJ/dJ**2
+agJ=FgJ/mJ
+FcJ=mJ*v0J**2/dJ
+acJ=FcJ/mJ
+
+L=50000
+
+x0=AU1;
+y0=0;
+u0=0;
+x=np.zeros(365*L, dtype=float);
+y=np.zeros(365*L, dtype=float);
+
+
+x[0]=x0;
+y[0]=y0;
+u=u0;
+v=v0;
+
+x0J=dJ;
+y0J=0;
+u0J=0;
+xJ=np.zeros(365*L, dtype=float);
+yJ=np.zeros(365*L, dtype=float);
+xJ[0]=x0J;
+yJ[0]=y0J;
+uJ=u0J;
+vJ=v0J;
+
+for i in range(1,365*L):    
+    if i % 36500==0:
+        print(i/365)
+
+    x[i]=x[i-1]+day*u;
+    y[i]=y[i-1]+day*v;
+    xJ[i]=xJ[i-1]+day*uJ;
+    yJ[i]=yJ[i-1]+day*vJ;
+    
+    axS=-G*M/(abs(x[i]**2+y[i]**2)**[3/2])*x[i];
+    ayS=-G*M/(abs(x[i]**2+y[i]**2)**[3/2])*y[i];
+    dxJ=x[i]-xJ[i];
+    dyJ=y[i]-yJ[i];
+    axEJ=-G*mJ/(abs(dxJ**2+dyJ**2)**[3/2])*dxJ;
+    ayEJ=-G*mJ/(abs(dxJ**2+dyJ**2)**[3/2])*dyJ;
+    ax=axS+axEJ;
+    ay=ayS+ayEJ;
+
+    u=u+ax*day;
+    v=v+ay*day;
+
+    axJ=-G*M/(abs(xJ[i]**2+yJ[i]**2)**[3/2])*xJ[i];
+    ayJ=-G*M/(abs(xJ[i]**2+yJ[i]**2)**[3/2])*yJ[i];
+    uJ=uJ+axJ*day;
+    vJ=vJ+ayJ*day;
+
+
+rj=(x**2+y**2)**.5
+print('length')
+print(len(rj))
+#a=max(rj)
+#b=min(rj)
+#e=1-2/(a/b+1)
+#rel=(a/b-1)
+
+l=1000;
+e=np.zeros(int(L/l), dtype=float);
+for i in range(0,int(L/l)):
+    win=range(i*l*365,(i+1)*l*365)
+    print((win))
+    a=max(rj[win])
+    b=min(rj[win])
+    print(a,b)
+    e[i]=1-2/(a/b+1)
+
+fig=plt.figure(1,figsize=(12,5))
+ax=fig.add_subplot(1,2,1)
+ax.plot(x,y)
+ax.plot(xJ,yJ)
+ax.plot (0,0,'o')
+
+
+ax=fig.add_subplot(1,2,2)
+ax.plot(range(0,int(L/l)),e)
+
+plt.savefig('../Figures/planet_earthJupiter.png', dpi=100, bbox_inches='tight')
 
 ```
+```{figure} img/planet_earthJupiter.png
+:width: 100%
+:class: with-border
+```   
 
 - Do **not** stage (add) yet!
 ``````
