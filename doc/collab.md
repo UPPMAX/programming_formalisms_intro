@@ -112,7 +112,24 @@ remote refers to the fork.
 - Submit your fix as pull request or merge request which references/closes the issue
 
 ```{challenge} If time allows
-- Make issue and pull request
+- Make issue and pull requests
+- Remember that we were not happy with the results
+- Can we easily add one or more planets?
+
+- The importance of each planet should be determined by the distance and the mass of it. 
+  - The acceleration effect should proportional with MASS/distance^2
+  - That means that we can ignore small planets and/or far away planets
+- Below, see a first sorted out table of mass of the planets and their approximate shortest distance to Earth.
+
+|Planet|Mass (relative to Earth) |Shortest distance (AU)|
+|----|---|---|
+Venus| 0.815 | 0.72
+March| 0.107 | 1.52
+Jupiter| 318 | 5.2
+Saturn| 95.2 | 9.54
+
+- Adding a planet should be pretty straight-forward in our modular code.
+  
 ```
 
 ```{keypoints}
