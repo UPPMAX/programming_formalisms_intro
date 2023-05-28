@@ -17,37 +17,43 @@ WRF programs to be run every simulation
 
 1. **script_WPS**
 
-   a. find dates/times to be used
+   - find dates/times to be used
    
-   a. find downloaded files
+   - find downloaded files
 
-   a. start **run_ungrib.sh**
+   - start **run_ungrib.sh**
       - insert correct dates into a "namelist"
       - run **ungrib.exe**
       
-   a. start **run_metgrid.sh**
+    - start **run_metgrid.sh**
       - insert correct dates into a "namelist"
       - run **metgrid.exe**
 
-   a. start next script **script_WRF**
+   - start next script **script_WRF**
    
 1. **scipt_WRF**
 
-   a. find output from the last script
+   - find output from the last script
    
-   a. run ./run_real.sh
+   - run ./run_real.sh
       - insert correct dates into a "namelist"
       - run **real.exe**
 
-   a. run ./run_wrf.sh
+   - run ./run_wrf.sh
       - insert correct dates into a "namelist"
       - run **wrf.exe**
 
-   a. run ./analysis_script.sh
+   - run ./analysis_script.sh
      
 
 ```plantuml
-
+@startuml
+node foo
+foo --> bar : normal
+foo --> bar1 #line:red;line.bold;text:red  : red bold
+foo --> bar2 #green;line.dashed;text:green : green dashed 
+foo --> bar3 #blue;line.dotted;text:blue   : blue dotted
+@enduml
 
 
 ```
