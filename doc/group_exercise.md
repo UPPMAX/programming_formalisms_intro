@@ -1,4 +1,4 @@
-# Exercise in group
+# Old exercise in group
 
 ```{instructor-note}
 - Exercise 30 min
