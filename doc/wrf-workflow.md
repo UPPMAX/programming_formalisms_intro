@@ -31,7 +31,7 @@ WRF programs to be run every simulation
 
    - start next script **script_WRF**
    
-1. **scipt_WRF**
+1. **script_WRF**
 
    - find output from the last script
    
