@@ -94,6 +94,7 @@ What just happened? **Think of publishing a repository as uploading the `.git` p
 ``````{challenge} Type-along: Add Jupiter
 - We will add some lines to count with the effects from the gravity of Jupiter on Earth
 
+````{solution} Code
 ```python
 
 #planet with Jupiter
@@ -203,14 +204,21 @@ ax=fig.add_subplot(1,2,2)
 ax.plot(range(0,int(L/l)),e)
 
 plt.savefig('../Figures/planet_earthJupiter.png', dpi=100, bbox_inches='tight')
-
 ```
+````
+
 ```{figure} img/planet_earthJupiter.png
 :width: 100%
 :class: with-border
 ```   
 
 - Do **not** stage (add) yet!
+
+**Discussion**
+- That's long code!
+- Perhaps make modular?
+- The orbits seems too elliptic in the plot. The axes should be equal!
+- Let's look at that in the next iteration!
 ``````
 
 ### git diff
