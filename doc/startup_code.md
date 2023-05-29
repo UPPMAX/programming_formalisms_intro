@@ -26,28 +26,29 @@ Can you give some examples? What can we do about it?
 ## Create a virtual python environment with ``venv``
    
 ```{note}
-There are seveal ways to make an isolated environment where you are sure what is needed by other users.
+There are several ways to make an isolated environment where you are sure what is needed by other users.
    - Conda is one way
-   - virtualenv is an extarnal package that has to be installed explicitely
+   - `virtualenv` is an external package that has to be installed explicitely
      - uses pip to install within the isolated environment
    - We'll use ´venv´, which is standard library
 ```   
 
    
 ``````{challenge} Type-along
-- We will need the python packages: numpy and matplotlib
+- We will need the python packages: ``numpy`` and ``matplotlib``
 - Let's create an isolated environment with those packages and based on the python we have install, like 3.8.X. It is assumed that no-one uses python-2.X.X!   
 - In the command-line, create and activate the environment ``planet-project``
 ```console
-$ pyton -m venv planet-project
+$ python -m venv planet-project
 $ source planet-project/bin/activate
 ```
 - Note that your prompt is changing to start with (planet-project) to show that you are within that environment.   
 - Now install the packages
 ```console
-(planet-project) $ pip install --no-cache-dir --no-build-isolation numpy==1.15.4 matplotlib==2.2.2   
+(planet-project) $ pip install numpy==1.15.4 matplotlib==2.2.2   
 ```
-- we won't deactivate the project environment now but for later, simply type ``deactivate`` in the console.
+- We won't deactivate the project environment now but for later, simply type ``deactivate`` in the console.
+  - That's a good practice
    
 ``````   
 ## Create a first version of the python code
@@ -334,7 +335,7 @@ Comments in the form of B are much more useful, comments of form A are redundant
 **Why and not how**
 
 ``````{challenge} Exercise
-- Use you favorite editor
+- Use your favourite editor
 - Use the linear code below. 
   - Later we will make it more modular!
 
