@@ -160,7 +160,9 @@ https://uppmax.github.io/programming_formalisms/#schedule
 
 Reflections at the end of day
 -----------------------------
-
+- Students will have the opportunity to give feedback to the teachers at the end of each day. 
+- A reflection session will be conducted in a similar fashion to an Agile Software Development retrospective meeting. '
+- It is important that all students and teachers involved in the lessons actively engage in this event.
 
 Learning outcomes
 -----------------
