@@ -12,12 +12,24 @@
 - We'll give some introduction to handy tools for the software developer
 - We'll try to set up the mindset to find the rest of the week interesting and useful!
 ```
+## Preliminary schedule 1st day
+- Syllabus              9.00
+- Intro                 9.30
+- Coffe (15 min)        9.50
+- SDLC tools            10.05
+- Break (5 min)         11.00
+- Planning phase        11.05
+- Start the project     11.35
+- LUNCH                 12.00
+- Start with coding     13.00
+- Iterations and Git    13.30
+- Break                 14.15
+- Deploy                14.20
+- Coffee break          14.50
+- (Collaboration)       15.05
+- Summary               15.20
+- Reflection            15.30
 
-```{instructor-note}
-- Lecture 30 min
-- Discussions 15 min
-- To be much shortened
-```
 
 ## What is software?
 *Wikipedia*
