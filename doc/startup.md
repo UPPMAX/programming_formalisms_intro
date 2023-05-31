@@ -28,7 +28,8 @@
   - (Full documentation)
   - (Tutorial)
 
-- Directory structure: Different projects should have separate folders
+```{admonition} Directory structure
+Different projects should have separate folders
   - Readme file
   - Data		(version controlled)(.gitignore)
   - Processed data	intermediate
@@ -39,6 +40,7 @@
     - Requirements.txt
   - Doc
     - index
+```
 
 ```{note}
 - If software is reused in several projects it can make sense to put them in own repo.
