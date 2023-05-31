@@ -16,8 +16,6 @@
 ```
 
 ```{instructor-note}
-- Lecture + Discussions 45 min
-- Perhaps OK length
 ```
 
 ## Some overview
