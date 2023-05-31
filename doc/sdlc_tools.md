@@ -358,7 +358,7 @@ Car -- Person : < owns
 \sum_{k\in S} x_k
 ```
 
-```{console}
+```console
 \sum_{k\in S} x_k
 ```
 
