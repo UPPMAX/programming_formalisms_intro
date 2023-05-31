@@ -31,7 +31,7 @@ digraph {
 ```
 
 - Good approach for **small and simple systems** where the team knows the system and **requirements very well**.
-- :warning:  Error is spreading 
+- |:warning:|  Error is spreading 
   - small mistakes in the beginning will have large impact on the end result. 
     - e.g. bugs, architecture limiting extensions
   - large costs economically and timely
@@ -69,7 +69,7 @@ digraph {
 ```
 
 **Most other models are Agile...**
-see the extra reading section: https://uppmax.github.io/programming_formalisms_intro/SDLC_models.html
+see the extra reading section: [SDLC models](https://uppmax.github.io/programming_formalisms_intro/SDLC_models.html)
 
 - Modern principles: 
   - automated tests, continuous integration
@@ -193,10 +193,10 @@ Interaction -> Sequence, Communication, Timing, "Interaction overview"
 }
 ```
 
-``{admonition} We will use
+```{admonition} We will use
   - Sequence
   - Activity/algorithm flowchart
-``
+```
 
 ##### Sequence
 
@@ -239,6 +239,17 @@ stop
 
 ##### Algorithm flowchart
 ```{uml}
+@startuml
+start
+if (stuff) then (true) 
+   :action 2;
+endif
+
+stop
+@enduml
+```
+
+```console
 @startuml
 start
 if (stuff) then (true) 
@@ -296,12 +307,12 @@ Car -- Person : < owns
   - Graphviz is open source graph visualization software. 
   - Graph visualization is a way of representing structural information as diagrams of abstract graphs and networks. 
   - It has important applications in networking, bioinformatics, software engineering, database and web design, machine learning, and in visual interfaces for other technical domains.
-  - https://graphviz.org/
+  - <https://graphviz.org/>
 - Mermaid
   - Open-source
   - Not as many diagrams
   - renders in browser
-  - https://mermaid.js.org/
+  - <https://mermaid.js.org/>
 
 ### Pseudocode
 - Pseudocode generally does not obey the syntax rules of any particular language
