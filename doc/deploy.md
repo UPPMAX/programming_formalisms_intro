@@ -25,7 +25,7 @@
 ### Conda, Anaconda, pip, Virtualenv, Pipenv, pyenv, Poetry, requirements.txt …
 
 **These tools try to solve the following problems:**
--	**Defining a specific set of dependencies**, possibly with well defined versions
+-	**Defining a specific set of dependencies**, possibly with well-defined versions
 -	**Installing those dependencies** mostly automatically
 -	**Recording the versions** for all dependencies
 -	**Isolated environments**
@@ -39,7 +39,7 @@
 [Python packaging](https://aaltoscicomp.github.io/python-for-scicomp/packaging/).
 - Make Python packages of your code.
 
-**Course advertisment**
+**Course advertisement**
 [Python for scientific computing](https://aaltoscicomp.github.io/python-for-scicomp/)
 
 ### Record our environment for other users
@@ -47,7 +47,7 @@
 - We can make other users aware of the dependencies for our project.
 - One can state those specifically as a list in a README
 - Or, we can make a ready file (in python) 
-- Possibilites for other languages can be
+- Possibilities for other languages can be
   - C/C+
     - CMake
     - Conda
@@ -86,7 +86,7 @@ Popular container implementations:
 - Singularity (popular on high-performance computing systems)
 - Apptainer (popular on high-performance computing systems, fork of Singularity)
 - Docker images can be converted to Singularity/Apptainer images
-- Singularity Python can convert Dockerfiles to Singularity definition files
+- Singularity Python can convert Docker files to Singularity definition files
 https://coderefinery.github.io/reproducible-research/environments
 https://uppmax.github.io/programming_formalisms_intro/reproducible_deeper.html#containers
 
@@ -108,7 +108,7 @@ https://uppmax.github.io/programming_formalisms_intro/reproducible_deeper.html#c
   **Not to forget**
   - Project documentation:
     - requirements: what is the goal of the software, risks, platforms
-    the analysis: pseusocode and UML
+    the analysis: pseudocode and UML
     - risk analysis
 ```
 
@@ -121,7 +121,7 @@ https://uppmax.github.io/programming_formalisms_intro/reproducible_deeper.html#c
   - Basically all Python projects use Sphinx but **Sphinx is not limited to Python**
   - [Read the docs](http://readthedocs.org)
     hosts public Sphinx documentation for free!
-  - Also hostable anywhere else, like Github pages. **← this is what we use for this lesson 
+  - Also hostable anywhere else, like GitHub pages. **← this is what we use for this lesson 
   - API documentation possible
 - [Jekyll](https://jekyllrb.com)
   - Generates HTML from Markdown.
@@ -139,7 +139,7 @@ GitHub, GitLab, and Bitbucket make it possible to serve HTML pages:
 - [GitLab Pages](https://pages.gitlab.io)
 - [Read the docs](http://readthedocs.org) ← this is what NBIS use for some course material
 
-#### Github pages
+#### GitHub pages
 - Easiest. Everything is local to GitHub
 - This lesson material
 
