@@ -102,7 +102,6 @@ Theory: The gravity form the other planets, especially Jupiter, causes the chang
 #### Syntax for algorithm flowchart
 - [plantuml.com](https://plantuml.com/)
 
-
 `````{admonition} PlantUML Cheat sheet
 
 ```{uml}
@@ -117,9 +116,7 @@ stop
 
 Start with 
 
-````{console}
-
-
+```{console}
 @startuml
 start
 :Hello world;
@@ -128,19 +125,21 @@ several **lines**;
 stop
 @enduml
 
-```` 
+``` 
 ``````
 
 #### Exercise
 ````{challenge} Test some psuedocode 10 min
-    - go to [plantum server](https://www.plantuml.com/plantuml/uml/SyfFKj2rKt3CoKnELR1Io4ZDoSa70000)
-    - try to make a flowchart of the program parts 
-    - have a look on examples, for help: [activity-diagram](https://plantuml.com/activity-diagram-beta)
+- go to [plantum server](https://www.plantuml.com/plantuml/uml/SyfFKj2rKt3CoKnELR1Io4ZDoSa70000)
+- try to make a flowchart of the program parts 
+- have a look on examples, for help: [activity-diagram](https://plantuml.com/activity-diagram-beta)
 ````
 
 ### Do some pseudocode of the calculations
 
 ```{Challenge} Demo of Pseudocode
+
+```{code}
 Define constants
 Define initial values
 	positions
