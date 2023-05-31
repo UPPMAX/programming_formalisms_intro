@@ -630,19 +630,7 @@ When can you use:
      - Get tips for full documentation and tutorials
 ```
 
-```{keypoints}
-- Typical workflow:
-  - Requirements
-  - Analysis and design
-  - Development
-  - Test
-  - Development and maintenance
-- Iteration!
-- Important to identify problem in beginning and add for flexibility
-
-```
-
-## Summary of Introduction
+## Summary of SDLC tools
 - Now after the overview you are ready to dig deeper in the topics and try it out yourself!
 
 ```{Keypoints}
@@ -659,5 +647,5 @@ When can you use:
   - Development iteration: git
   - Testing: test functions (Covered later)
   - Collaboration: GitHub, licenses, citation
-  - Documentation: In-code, READMEs and e.g. sphinx
+  - Documentation: In-code, READMEs, html
 ```
