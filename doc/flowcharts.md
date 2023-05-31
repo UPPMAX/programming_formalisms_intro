@@ -114,7 +114,7 @@ stop
 
 Start with 
 
-```{console}
+```console
 @startuml
 start
 :Hello world;
