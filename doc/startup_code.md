@@ -30,7 +30,7 @@ There are several ways to make an isolated environment where you are sure what i
    - Conda is one way
    - `virtualenv` is an external package that has to be installed explicitely
      - uses pip to install within the isolated environment
-   - We'll use ´venv´, which is standard library
+   - We'll use ``venv``, which is standard library
 ```   
 
    
@@ -43,9 +43,9 @@ $ python -m venv planet-project
 $ source planet-project/bin/activate
 ```
 - Note that your prompt is changing to start with (planet-project) to show that you are within that environment.   
-- Now install the packages
+- Now install the packages (leave out package versions so that ``python-<your-version>`` can choose by itself what suites)
 ```console
-(planet-project) $ pip install numpy==1.15.4 matplotlib==2.2.2   
+(planet-project) $ pip install numpy matplotlib  
 ```
 - We won't deactivate the project environment now but for later, simply type ``deactivate`` in the console.
   - That's a good practice
