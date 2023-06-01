@@ -156,7 +156,7 @@ GitHub, GitLab, and Bitbucket make it possible to serve HTML pages:
    
 
 ````{Admonition} Read more
-   `CodeRefinery' <https://coderefinery.github.io/documentation/>`
+   [CodeRefinery](https://coderefinery.github.io/documentation/)
 ````
 
 ## Summary
