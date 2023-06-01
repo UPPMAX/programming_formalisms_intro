@@ -91,21 +91,20 @@ and
 
 **Done!**
 
-Let's view the license!
+**Let's view the license!**
 - There are prewritten text for the different types.
-- More info at https://uppmax.github.io/programming_formalisms_intro/sharing_deeper.html#licensing
+- More info at [Licensing](https://uppmax.github.io/programming_formalisms_intro/sharing_deeper.html#licensing)
 
 ## README files
 
-   - Advantage
-  - Versioned (goes with the code development)
-  - It is often good enough to have a `README.md` or `README.rst` along with your code/script
+**Advantages**
+- Versioned (goes with the code development)
+- It is often good enough to have a `README.md` or `README.rst` along with your code/script
 - If you use README files, use either
   [RST](http://docutils.sourceforge.net/rst.html) or
   [Markdown](https://commonmark.org/help/)
 - A great guide to README files: [MakeaREADME](https://www.makeareadme.com/)
 
-   
 ````{keypoints}
 README file should include:
 
@@ -160,8 +159,6 @@ A list:
 ````
 ---
 
-
-
 ## Cloning a repository
 
 Now you and other people can clone this repository and contribute changes. 
@@ -180,8 +177,10 @@ on your computer, in this case just "planet":
 $ git clone git@github.com:<user>/planet-<user>.git planet
 ```
 
-What just happened? **Think of cloning as downloading the `.git` part to your
-computer**. After downloading the `.git` part the branch pointed to by HEAD is
+What just happened?
+- **Think of cloning as downloading the `.git` part to your
+computer**. 
+- After downloading the `.git` part the branch pointed to by HEAD is
 automatically checked out.
 
 ## Working on GitHub
@@ -189,10 +188,12 @@ automatically checked out.
 - You can do basically the same work at GitHub as in your local git repo
 - The graphical view makes it easier to work with in everyday editing work at least.
   - Depends on your own preferences of course.
-- Here your commit each file at a time with the "commit button". No staging that is.
+- Here your commit each file at a time with the "commit button". 
+  - No staging that is.
+  - Be aware of that feature!
 - GitHub Actions are workflows defined by you, like:
-  - for automatic testing after each commit (Used on Thursday)
-  - for GitHub Pages, briefly covered in last session today.
+  - for automatic testing after each commit (Used in the test lessons)
+  - for GitHub Pages, briefly covered in last session today or Extra reading: [Documentation](https://uppmax.github.io/programming_formalisms_intro/documentation_deeper.html).
 
 ```{keypoints}
 - A repository can have one or multiple remotes (we will revisit these later).
