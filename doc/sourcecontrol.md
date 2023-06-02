@@ -714,7 +714,19 @@ $ git checkout main    # switch to main branch
 $ git branch           # check that we are on main branch
 $ git merge  modularity          # merge modularity into main
 ```
+- let's now check the graphical view:
   
+```git
+$ git graph
+*   dc3f83f (HEAD -> master) modular
+|\
+| * fc007d4 (modular) modular code
+* | 413d0e3 rm printing output
+|/
+* 5434395 add Jupiter
+* f3c1fb5 planet.py
+
+```
 
 ``````
 
