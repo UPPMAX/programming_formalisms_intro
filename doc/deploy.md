@@ -76,8 +76,8 @@ $ pip install -r requirements.txt
 ## Workflows
 
 ```{admonition} Learn more
-<https://coderefinery.github.io/reproducible-research/workflow-management/>
-<https://nbis-reproducible-research.readthedocs.io/en/course_2104/snakemake/>
+[Workflow management by CodeRefinery](https://coderefinery.github.io/reproducible-research/workflow-management/)
+[Snakemake by CodeRefinery](https://nbis-reproducible-research.readthedocs.io/en/course_2104/snakemake/)
 ```
 ## Containers
 
@@ -87,8 +87,8 @@ Popular container implementations:
 - Apptainer (popular on high-performance computing systems, fork of Singularity)
 - Docker images can be converted to Singularity/Apptainer images
 - Singularity Python can convert Docker files to Singularity definition files
-https://coderefinery.github.io/reproducible-research/environments
-https://uppmax.github.io/programming_formalisms_intro/reproducible_deeper.html#containers
+[Environments by CodeRefinery](https://coderefinery.github.io/reproducible-research/environments)
+[Containers in the extra material](https://uppmax.github.io/programming_formalisms_intro/reproducible_deeper.html#containers)
 
 
 ```{keypoints}
