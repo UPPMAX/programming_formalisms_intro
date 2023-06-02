@@ -33,6 +33,17 @@ There are several ways to make an isolated environment where you are sure what i
    - We'll use ``venv``, which is standard library
 ```   
 
+```{Attention}
+- Start your terminal of choice
+   - MAC terminal 
+   - iTerm
+   - WSL environment in
+     - MobaxTerm
+     - Visual Studio Code
+   - Git BASH  
+   - PowerShell
+
+```
    
 ``````{challenge} Type-along
 - We will need the python packages: ``numpy`` and ``matplotlib``
@@ -42,7 +53,7 @@ There are several ways to make an isolated environment where you are sure what i
 $ python -m venv planet-project
 $ source planet-project/bin/activate
 ```
-````{warning}
+````{attention}
 - In Windows, like from Git-bash, you activate instead with ``source planet-project/Scripts/activate`` 
 ````
 - Note that your prompt is changing to start with (planet-project) to show that you are within that environment.   
