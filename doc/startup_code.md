@@ -164,7 +164,7 @@ plt.savefig('../Figures/planet_earth.png', dpi=100, bbox_inches='tight')
 - We synchronize commits between local and remote with `git fetch`/`git pull` and `git push`.
 ```
    
-### Before we start we need to configure Git
+## Before we start we need to configure Git
 
 ```{prereq}
 
@@ -205,12 +205,14 @@ $ git config --list
 ```
 
    
-#### Staging files
+## Staging files
 
 
 As mentioned above, in Git you can always check the status of files in your repository using
 `git status`. It is always a safe command to run and in general a good idea to
 do when you are trying to figure out what to do next:
+
+### Example
 
 ```console
 On branch master
@@ -249,8 +251,9 @@ Changes to be committed:
 
 Now this change is *staged* and ready to be committed.
 
-#### Commit
+## Commit
 
+### Example
 Let us now commit the change to the repository:
 
 ```console
