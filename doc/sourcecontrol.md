@@ -718,9 +718,9 @@ $ git merge  modularity          # merge modularity into main
   
 ```git
 $ git graph
-*   dc3f83f (HEAD -> master) modular
+*   dc3f83f (HEAD -> main) modular
 |\
-| * fc007d4 (modular) modular code
+| * fc007d4 (modularity) modular code
 * | 413d0e3 rm printing output
 |/
 * 5434395 add Jupiter
