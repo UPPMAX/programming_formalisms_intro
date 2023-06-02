@@ -217,6 +217,7 @@ When you are done editing the files, try `git diff`:
 
 You will see (can you identify in there the two added lines?):
 
+````{solution} Output from diff
 ```diff
 diff --git a/planet.py b/planet.py
 index 60b8b20..8061461 100644
@@ -335,79 +336,10 @@ index 60b8b20..8061461 100644
 -plt.savefig('../Figures/planet_earth.png', dpi=100, bbox_inches='tight')
 +plt.savefig('../Figures/planet_earthJupiter.png', dpi=100, bbox_inches='tight')
 (END)
-+
- rj=(x**2+y**2)**.5
--a=max(rj)
--b=min(rj)
--e=1-2/(a/b+1)
--rel=(a/b-1)
 
-+l=1000;
-+e=np.zeros(int(L/l), dtype=float);
-+for i in range(0,int(L/l)):
-+    win=range(i*l*365,(i+1)*l*365)
-+    print((win))
-+    a=max(rj[win])
-+    b=min(rj[win])
-+    print(a,b)
-+    e[i]=1-2/(a/b+1)
-
- fig=plt.figure(1,figsize=(12,5))
- ax=fig.add_subplot(1,2,1)
- ax.plot(x,y)
-+ax.plot(xJ,yJ)
- ax.plot (0,0,'o')
--#axis equal
-+
-
- ax=fig.add_subplot(1,2,2)
--ax.plot(range(0,365*2),rj)
-+ax.plot(range(0,int(L/l)),e)
-
--plt.savefig('../Figures/planet_earth.png', dpi=100, bbox_inches='tight')
-+plt.savefig('../Figures/planet_earthJupiter.png', dpi=100, bbox_inches='tight')
-~
-~
-~
-~
-~
-~
-~
-~
-~
-(END)
-+
- rj=(x**2+y**2)**.5
--a=max(rj)
--b=min(rj)
--e=1-2/(a/b+1)
--rel=(a/b-1)
-
-+l=1000;
-+e=np.zeros(int(L/l), dtype=float);
-+for i in range(0,int(L/l)):
-+    win=range(i*l*365,(i+1)*l*365)
-+    print((win))
-+    a=max(rj[win])
-+    b=min(rj[win])
-+    print(a,b)
-+    e[i]=1-2/(a/b+1)
-
- fig=plt.figure(1,figsize=(12,5))
- ax=fig.add_subplot(1,2,1)
- ax.plot(x,y)
-+ax.plot(xJ,yJ)
- ax.plot (0,0,'o')
--#axis equal
-+
-
- ax=fig.add_subplot(1,2,2)
--ax.plot(range(0,365*2),rj)
-+ax.plot(range(0,int(L/l)),e)
-
--plt.savefig('../Figures/planet_earth.png', dpi=100, bbox_inches='tight')
-+plt.savefig('../Figures/planet_earthJupiter.png', dpi=100, bbox_inches='tight')
 ```
+````
+
 
 Now first stage and then commit (what happens when we leave out the `-m` flag?):
 
