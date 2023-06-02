@@ -732,17 +732,15 @@ $ git graph
 
 ## Summary
 
-Now we know how to save snapshots:
+- Now we know how to save snapshots:
 
 ```console
 $ git add <file(s)>
 $ git commit
 ```
 
-And that is what we do as we program.
-
-Every state is then saved and later we will learn how to go back to these "checkpoints"
-and how to undo things.
+- And that is what we do as we program.
+- Other very useful commands are these:
 
 ```console
 $ git init    # initialize new repository
@@ -755,11 +753,10 @@ $ git show    # show the change for a specific commit
 $ git mv      # move tracked files
 $ git rm      # remove tracked files
 $ git checkout -b wild-idea    # create branch, switch to it, work, work, work ...
-$ git checkout master          # realize it was a bad idea, back to master
+$ git checkout main          # realize it was a bad idea, back to main/master
 $ git branch -D wild-idea      # it is gone, off to a new idea
 $ git merge 
 ```
-
   
   
 ```{Keypoints}
