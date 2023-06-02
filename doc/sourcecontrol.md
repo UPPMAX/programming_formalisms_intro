@@ -646,7 +646,7 @@ def mean_temperature(data):
 
 ## Meanwhile...  
   
-`````{challenge} Back in main branch
+````{challenge} Back in main branch
 - We spotted some unnecessary ``print`` lines in the main branch code.
 - Go to the main branch:
 ```git
@@ -679,10 +679,11 @@ in a later section).
 $ git config --global alias.graph "log --all --graph --decorate --oneline"
 ``` 
   
-This will enable you to use ``git graph``for short
+This will enable you to use ``git graph`` for short
 ````  
 
 - It will give you something like this:
+
   
 ```git 
   
@@ -709,7 +710,7 @@ Isolated tracks of work.
 ``````{challenge} Merge into main
 - once all features are ready, switch to main
 ```console
-$ git checkout main    # create branch, switch to it
+$ git checkout main    # switch to main branch
 $ git branch           # check that we are on main branch
 $ git merge  modularity          # merge modularity into main
 ```
