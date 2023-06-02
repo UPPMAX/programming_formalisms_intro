@@ -207,7 +207,7 @@ plt.savefig('../Figures/planet_earthJupiter.png', dpi=100, bbox_inches='tight')
 - Let's look at that in the next iteration!
 ``````
 
-### git diff
+## git diff
 
 When you are done editing the files, try `git diff`:
 
@@ -218,7 +218,195 @@ When you are done editing the files, try `git diff`:
 You will see (can you identify in there the two added lines?):
 
 ```diff
+diff --git a/planet.py b/planet.py
+index 60b8b20..8061461 100644
+--- a/planet.py
++++ b/planet.py
+@@ -1,23 +1,24 @@
+-#planet
++
++#planet with Jupiter
+ import numpy as np
+ import matplotlib.pyplot as plt
 
+ #constants
+ G=6.6743e-11
+-AU=149.597871e9 # 1 astronomical unit (AU) is the mean distance between sun and Earth
++AU=149.597871e9
+ AU1=150.8e9
++dJ=5.203*AU
+ mj=5.97219e24
+ mJ=1.899e27
+ M=1.9891e30
+ day=86400;
+ year=31556926;
+ v0=AU*2*np.pi/year;
+-Fg=G*M*mj/AU**2
+-ag=Fg/mj
+-Fc=mj*v0**2/AU
+-ac=Fc/mj
+
+-L=2
++#Jupiter
++v0J=dJ*2*np.pi/(11.86*year);
++
++L=50000
+
+ x0=AU1;
+ y0=0;
+@@ -25,34 +26,69 @@ u0=0;
+ x=np.zeros(365*L, dtype=float);
+ y=np.zeros(365*L, dtype=float);
+
++
+ x[0]=x0;
+ y[0]=y0;
+ u=u0;
+ v=v0;
+
++x0J=dJ;
++y0J=0;
++u0J=0;
++xJ=np.zeros(365*L, dtype=float);
++yJ=np.zeros(365*L, dtype=float);
++xJ[0]=x0J;
++yJ[0]=y0J;
++uJ=u0J;
++vJ=v0J;
++
+ for i in range(1,365*L):
+-    print(i)
++    if i % 36500==0:
++        print(i/365)
++
+     x[i]=x[i-1]+day*u;
+     y[i]=y[i-1]+day*v;
+-    ax=-G*M/(abs(x[i]**2+y[i]**2)**[3/2])*x[i];
+-    ay=-G*M/(abs(x[i]**2+y[i]**2)**[3/2])*y[i];
++    xJ[i]=xJ[i-1]+day*uJ;
++    yJ[i]=yJ[i-1]+day*vJ;
++
++    axS=-G*M/(abs(x[i]**2+y[i]**2)**[3/2])*x[i];
++    ayS=-G*M/(abs(x[i]**2+y[i]**2)**[3/2])*y[i];
++    dxJ=x[i]-xJ[i];
++    dyJ=y[i]-yJ[i];
++    axEJ=-G*mJ/(abs(dxJ**2+dyJ**2)**[3/2])*dxJ;
++    ayEJ=-G*mJ/(abs(dxJ**2+dyJ**2)**[3/2])*dyJ;
++    ax=axS+axEJ;
++    ay=ayS+ayEJ;
++
+     u=u+ax*day;
+     v=v+ay*day;
+
++    axJ=-G*M/(abs(xJ[i]**2+yJ[i]**2)**[3/2])*xJ[i];
++    ayJ=-G*M/(abs(xJ[i]**2+yJ[i]**2)**[3/2])*yJ[i];
++    uJ=uJ+axJ*day;
++    vJ=vJ+ayJ*day;
++
++
+ rj=(x**2+y**2)**.5
+-a=max(rj)
+-b=min(rj)
+-e=1-2/(a/b+1)
+-rel=(a/b-1)
+
++l=1000;
++e=np.zeros(int(L/l), dtype=float);
++for i in range(0,int(L/l)):
++    win=range(i*l*365,(i+1)*l*365)
++    print((win))
++    a=max(rj[win])
++    b=min(rj[win])
++    print(a,b)
++    e[i]=1-2/(a/b+1)
+
+ fig=plt.figure(1,figsize=(12,5))
+ ax=fig.add_subplot(1,2,1)
+ ax.plot(x,y)
++ax.plot(xJ,yJ)
+ ax.plot (0,0,'o')
+-#axis equal
++
+
+ ax=fig.add_subplot(1,2,2)
+-ax.plot(range(0,365*2),rj)
++ax.plot(range(0,int(L/l)),e)
+
+-plt.savefig('../Figures/planet_earth.png', dpi=100, bbox_inches='tight')
++plt.savefig('../Figures/planet_earthJupiter.png', dpi=100, bbox_inches='tight')
+(END)
++
+ rj=(x**2+y**2)**.5
+-a=max(rj)
+-b=min(rj)
+-e=1-2/(a/b+1)
+-rel=(a/b-1)
+
++l=1000;
++e=np.zeros(int(L/l), dtype=float);
++for i in range(0,int(L/l)):
++    win=range(i*l*365,(i+1)*l*365)
++    print((win))
++    a=max(rj[win])
++    b=min(rj[win])
++    print(a,b)
++    e[i]=1-2/(a/b+1)
+
+ fig=plt.figure(1,figsize=(12,5))
+ ax=fig.add_subplot(1,2,1)
+ ax.plot(x,y)
++ax.plot(xJ,yJ)
+ ax.plot (0,0,'o')
+-#axis equal
++
+
+ ax=fig.add_subplot(1,2,2)
+-ax.plot(range(0,365*2),rj)
++ax.plot(range(0,int(L/l)),e)
+
+-plt.savefig('../Figures/planet_earth.png', dpi=100, bbox_inches='tight')
++plt.savefig('../Figures/planet_earthJupiter.png', dpi=100, bbox_inches='tight')
+~
+~
+~
+~
+~
+~
+~
+~
+~
+(END)
++
+ rj=(x**2+y**2)**.5
+-a=max(rj)
+-b=min(rj)
+-e=1-2/(a/b+1)
+-rel=(a/b-1)
+
++l=1000;
++e=np.zeros(int(L/l), dtype=float);
++for i in range(0,int(L/l)):
++    win=range(i*l*365,(i+1)*l*365)
++    print((win))
++    a=max(rj[win])
++    b=min(rj[win])
++    print(a,b)
++    e[i]=1-2/(a/b+1)
+
+ fig=plt.figure(1,figsize=(12,5))
+ ax=fig.add_subplot(1,2,1)
+ ax.plot(x,y)
++ax.plot(xJ,yJ)
+ ax.plot (0,0,'o')
+-#axis equal
++
+
+ ax=fig.add_subplot(1,2,2)
+-ax.plot(range(0,365*2),rj)
++ax.plot(range(0,int(L/l)),e)
+
+-plt.savefig('../Figures/planet_earth.png', dpi=100, bbox_inches='tight')
++plt.savefig('../Figures/planet_earthJupiter.png', dpi=100, bbox_inches='tight')
 ```
 
 Now first stage and then commit (what happens when we leave out the `-m` flag?):
