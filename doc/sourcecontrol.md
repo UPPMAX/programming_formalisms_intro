@@ -646,7 +646,7 @@ def mean_temperature(data):
 
 ## Meanwhile...  
   
-```{challenge} Back in main branch
+`````{challenge} Back in main branch
 - We spotted some unnecessary ``print`` lines in the main branch code.
 - Go to the main branch:
 ```git
@@ -660,6 +660,9 @@ git checkout main
 git add planet.py
 git commit -m "rm print"  
 ```
+
+````  
+  
 - We can now check the history with a command that graphically tries to show the log with branches
 
 ````{admonition} **An important alias**
@@ -670,16 +673,16 @@ class: important
 We will now define an *alias* in Git, to be able to nicely visualize branch
 structure in the terminal without having to remember a long Git command
 (more details about aliases are given
-in a later section).  **This is extensively used in the rest of this
-and other lessons**:
+in a later section).
 
 ```console
 $ git config --global alias.graph "log --all --graph --decorate --oneline"
 ``` 
   
 This will enable you to use ``git graph``for short
-````
-- It will give you some thong liek this:
+````  
+
+- It will give you something like this:
   
 ```git 
   
@@ -689,8 +692,8 @@ $ git graph
 |/
 * 5434395 add Jupiter
 * f3c1fb5 planet.py
-  ```
-  
+```
+
   
 ## Merging
 
