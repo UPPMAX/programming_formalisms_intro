@@ -42,6 +42,9 @@ There are several ways to make an isolated environment where you are sure what i
 $ python -m venv planet-project
 $ source planet-project/bin/activate
 ```
+````{warning}
+- In Windows, like from Git-bash, you activate instead with ``source planet-project/Scripts/activate`` 
+````
 - Note that your prompt is changing to start with (planet-project) to show that you are within that environment.   
 - Now install the packages (leave out package versions so that ``python-<your-version>`` can choose by itself what suites)
 ```console
