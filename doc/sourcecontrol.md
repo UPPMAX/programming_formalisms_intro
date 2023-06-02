@@ -606,10 +606,8 @@ def figure_orbit(x,y,xJ,yJ,e):
   
 - add and commit, possibly several times
 
-
-
-
 ``````
+
 
 
 
@@ -640,15 +638,62 @@ def mean_temperature(data):
   
 ```
   
-  
 ``````{challenge} (Optional) Docstrings
 - Try to make docstrings for the main program and some of the functions
 - Test from a python console (after importing) with ``help(eccentricity)`` or similar
 
 ``````  
-  
 
+## Meanwhile...  
+  
+```{challenge} Back in main branch
+- We spotted some unnecessary ``print`` lines in the main branch code.
+- Go to the main branch:
+```git
+git checkout main
+```
+ 
+- Let's remove the two print lines around row 80 in the second for-loop.
+- add and commit
+
+```git
+git add planet.py
+git commit -m "rm print"  
+```
+- We can now check the history with a command that graphically tries to show the log with branches
+
+````{admonition} **An important alias**
+---
+class: important
+---
+
+We will now define an *alias* in Git, to be able to nicely visualize branch
+structure in the terminal without having to remember a long Git command
+(more details about aliases are given
+in a later section).  **This is extensively used in the rest of this
+and other lessons**:
+
+```console
+$ git config --global alias.graph "log --all --graph --decorate --oneline"
+``` 
+  
+This will enable you to use ``git graph``for short
+````
+- It will give you some thong liek this:
+  
+```git 
+  
+$ git graph
+* 413d0e3 (HEAD -> master) rm printing output
+| * fc007d4 (modular) modular code
+|/
+* 5434395 add Jupiter
+* f3c1fb5 planet.py
+  ```
+  
+  
 ## Merging
+
 - It turned out that our experiment with modularity was a good idea. 
 - Our goal now is to merge modularity into main.
  
@@ -666,24 +711,6 @@ $ git branch           # check that we are on main branch
 $ git merge  modularity          # merge modularity into main
 ```
   
-````{admonition} **An important alias**
----
-class: important
----
-
-We will now define an *alias* in Git, to be able to nicely visualize branch
-structure in the terminal without having to remember a long Git command
-(more details about aliases are given
-in a later section).  **This is extensively used in the rest of this
-and other lessons**:
-
-```console
-$ git config --global alias.graph "log --all --graph --decorate --oneline"
-``` 
-````
-```console
-$ git graph
-```
 
 ``````
 
