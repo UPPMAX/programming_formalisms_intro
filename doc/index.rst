@@ -183,6 +183,12 @@ Learning outcomes
   
 .. toctree::
    :maxdepth: 2
+   :caption: Preparations:
+
+   setup.md
+
+.. toctree::
+   :maxdepth: 2
    :caption: Lesson:
 
    intro.md
