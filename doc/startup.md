@@ -30,7 +30,7 @@
 
 ```{admonition} Directory structure
 Different projects should have separate folders
-  - Readme file
+  - ReadMe file
   - Data		(version controlled)(.gitignore)
   - Processed data	intermediate
   - (Manuscript)	
