@@ -153,7 +153,7 @@ A list:
 
 2. Create the planning document in markdown **Add file** button and choose "Create file".
   - Call the file ``doc/plan.md``
-  - Copy paste the example code found in the last session for plantUML and pseudocode.
+  - Copy paste the example code found in the last session for PlantUML and pseudocode.
   - Add some suitable headings for the code sections
 
 ````
