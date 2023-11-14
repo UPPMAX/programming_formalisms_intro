@@ -558,3 +558,7 @@ preprocessing
 ungrib
 Automatise
 namelist
+WRF
+wrf
+scalable
+ReadTheDocs
