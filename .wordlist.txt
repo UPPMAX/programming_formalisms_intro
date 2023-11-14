@@ -535,3 +535,18 @@ pylintrc
 pyproject
 toml
 
+Licensor
+synched
+Generis
+WIPO
+ies
+DISCOVERABLE
+MERCHANTABILITY
+
+README
+ReadMe
+instructure
+uppsala
+uppmax
+gitignore
+img
