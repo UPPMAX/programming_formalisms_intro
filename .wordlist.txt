@@ -550,3 +550,11 @@ uppsala
 uppmax
 gitignore
 img
+namespace
+WPS
+exe
+metgrid
+preprocessing
+ungrib
+Automatise
+namelist
