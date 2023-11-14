@@ -34,7 +34,7 @@ Different projects should have separate folders
   - Data		(version controlled)(.gitignore)
   - Processed data	intermediate
   - (Manuscript)	
-  - Results		data, tables, figures (version controlled, git tags for manus version)
+  - Results		data, tables, figures (version controlled, git tags for manuscript version)
   - Src		version controlled code
     - License (here or in the 1st level)
     - Requirements.txt
