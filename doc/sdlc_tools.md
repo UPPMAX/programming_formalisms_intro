@@ -372,7 +372,7 @@ Car -- Person : < owns
 Does it work for all legal input data sets??
 
 1. Unit testing 
-2. Integration tests (test modeles together as a whole)
+2. Integration tests (test modules together as a whole)
 
 **Typical testing process**
 
@@ -534,7 +534,7 @@ There are different types of remotes:
 - Some theory will be given in the [Extra material](https://uppmax.github.io/programming_formalisms_intro/reproducible_deeper.html)
 - We will integrate this topic in the hands-on.
 - We will discuss different methods and tools for better reproducibility in research software and data.
-  - virtual environments with ``pip install`` (venv/vuirtualenv) will be covered in the hands-on.
+  - virtual environments with ``pip install`` (venv/virtualenv) will be covered in the hands-on.
   - Conda environment is referred to in the extra material. 
 - We will demonstrate how version control, workflows, containers, and package managers can be used to record reproducible environments and computational steps.
 
@@ -566,7 +566,7 @@ There are different types of remotes:
 - Accessible
    - Once someone knows that the data exists, can they get it?
    - Usually solved by being in a repository, but for non-open data, may require more procedures.
-- Interoperable
+- Inter-operable
    - Is your data in a format that can be used by others, like csv instead of PDF?
    - Or better than csv. Example: 5-star open data
 - Reusable
@@ -615,7 +615,7 @@ When can you use:
   **Not to forget**
   - Project documentation:
     - requirements: what is the goal of the software, risks, platforms
-    the analysis: pseusocode and UML
+    the analysis: pseudocode and UML
     - risk analysis
 ```
 
