@@ -596,7 +596,7 @@ dillinger
 docstring
 docstrings
 Docstrings
-
+Documenter
 Dokuwiki
 Doxygen
 dropdown
@@ -615,7 +615,7 @@ GUIs
 hackathons
 
 Hexo
-
+hostable
 
 Javascript
 jetpack
@@ -642,7 +642,7 @@ numpy
 Packrat
 Pandoc
 pdfs
-
+pkgdown
 Pipenv
 plotcount
 podman
@@ -665,6 +665,7 @@ snakemake
 somefile
 SourceTree
 Spotify
+stackedit
 TOC
 
 untracked
