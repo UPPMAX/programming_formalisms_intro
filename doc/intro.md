@@ -15,7 +15,7 @@
 ## Preliminary schedule 1st day
 - Syllabus              9.00
 - Intro                 9.30
-- Coffe (15 min)        9.50
+- Coffee break (15 min) 9.50
 - SDLC tools            10.05
 - Break (5 min)         11.00
 - Planning phase        11.05
@@ -80,7 +80,7 @@
 - Modular coding is really good!
 - it can be done as object-oriented or functional programming, see below.
 - Modularity could be within a program but also for a workflow.
-- Here's an example of bashs scripts taking care of runs with executable files.
+- Here's an example of a bash script taking care of runs with executable files.
   - [A weather model workflow](https://github.com/UPPMAX/programming_formalisms_intro/blob/main/doc/wrf-workflow.md)
 
 ### Functional vs. object-oriented programming
