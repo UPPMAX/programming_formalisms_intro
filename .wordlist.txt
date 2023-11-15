@@ -679,3 +679,6 @@ zipf
 whatthecommit
 
 branchable
+rrtools
+compendia
+authorea
