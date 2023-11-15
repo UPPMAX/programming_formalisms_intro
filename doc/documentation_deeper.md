@@ -73,7 +73,7 @@ There are many more ...
 GitHub, GitLab, and Bitbucket make it possible to serve HTML pages:
 - [GitHub Pages](https://pages.github.com) (GH-pages) ← this is what we and CR use for some course material
 
-- [Bitbucket Pages](https://pages.bitbucket.io/)
+- [Bitbucket Pages](https://appfire.atlassian.net/wiki/spaces/PAGE/overview?homepageId=151420930)
 - [GitLab Pages](https://pages.gitlab.io)
 - [Read the docs](http://readthedocs.org) ← this is what NBIS use for some course material
 
