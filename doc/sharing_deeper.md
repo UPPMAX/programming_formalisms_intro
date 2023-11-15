@@ -47,7 +47,7 @@ Arguments against [(from Wikipedia)](https://en.wikipedia.org/wiki/Open_science)
 - Accessible
    - Once someone knows that the data exists, can they get it?
    - Usually solved by being in a repository, but for non-open data, may require more procedures.
-- Interoperable
+- Inter-operable
    - Is your data in a format that can be used by others, like csv instead of PDF?
    - Or better than csv. Example: 5-star open data
 - Reusable
