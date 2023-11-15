@@ -91,14 +91,14 @@ Or:
 
 ### DevOps (Development Operations)
 - **Dev**elopers and testers
-- **Ops**: people working with release, servers, middleware, network, storage configs, monitoring techniques
+- **Ops** (operations): people working with release, servers, middleware, network, storage configs, monitoring techniques
 - DevOps aims to extend fast and frequent software feature development approach to build an efficient delivery pipeline.
 - Phases: development --> test --> stage --> production
   -  development: unit testing (code)
-  -  test: integration testing (User-interface, web server, app server, backend)
+  -  test: integration testing (User-interface, web server, app server, back-end)
   -  stage: user acceptance 
   -  production
-- **Continous**...
+- **Continuous**...
   - **Integration**: Central repository
     - development + test
   - **Development**: Ensuring stable product after every release
