@@ -20,6 +20,10 @@ import sys
 project = 'Programming formalism intro'
 copyright = '2023, UPPMAX'
 author = 'UPPMAX'
+github_user = "UPPMAX"
+github_repo_name = ""  # auto-detected from dirname if blank
+github_version = "main"
+conf_py_path = "/doc/" 
 
 # The full version, including alpha/beta/rc tags
 release = '0.1'
@@ -103,3 +107,12 @@ html_theme = 'sphinx_rtd_theme'
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
 
+html_context = {
+    "display_github": True,
+    "github_user": github_user,
+    # Auto-detect directory name.  This can break, but
+    # useful as a default.
+    "github_repo": github_repo_name or basename(dirname(realpath(__file__))),
+    "github_version": github_version,
+    "conf_py_path": conf_py_path,
+}
