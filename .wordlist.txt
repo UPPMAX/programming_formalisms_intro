@@ -503,8 +503,8 @@ dataset
 meagre
 AFAICS
 preregistrations
-coordinat
-coordinats
+coordinate
+coordinates
 timestep
 Doob
 Bioengineering
@@ -600,8 +600,8 @@ Documenter
 Dokuwiki
 Doxygen
 dropdown
-
-
+eBooks
+elopers
 
 favourite
 fc
@@ -613,7 +613,7 @@ graphviz
 Graphviz
 GUIs
 hackathons
-
+handoffs
 Hexo
 hostable
 
