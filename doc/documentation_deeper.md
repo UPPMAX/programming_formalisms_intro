@@ -147,7 +147,7 @@ GitHub, GitLab, and Bitbucket make it possible to serve HTML pages:
 - Add the GitHub Action
 - Create a new file at `.github/workflows/documentation.yaml`
 - Enable GitHub Pages:
-  - Go to `[https://github.com/myuser/word-count/settings/pages](https://github.com/myuser/word-count/settings/pages)` 
+  - Go to ``https://github.com/<username>/<repo>/settings/pages``
   - In the “Source” section, choose “gh-pages” in the dropdown menu and click save 
 - That’s it! Your site should now be live on [https://uppmax.github.io/programming_formalisms_intro/index.html](https://uppmax.github.io/programming_formalisms_intro/index.html).
    
