@@ -11,7 +11,7 @@
 - Some problems (Wikipedia):
   - It has been treated, at times, as a design silver bullet, which leads to problems. 
   - UML misuse includes overuse (designing every part of the system with it, which is unnecessary) and assuming that novices can design with it.
-  - It is considered a large language, with many constructs. Some people feel that UML's size hinders learning (and therefore, using) it.
+  - It is considered a large language, with many constructs. Some people feel that the size of UML hinders learning (and therefore, using) it.
 
 "These diagrams should be a quick, useful communication tool. A support system for your brain, not the other way around!"
 
