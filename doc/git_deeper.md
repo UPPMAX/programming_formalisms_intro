@@ -375,7 +375,7 @@ Good references:
 
 - ["My favourite Git commit"](https://fatbusinessman.com/2019/my-favourite-git-commit)
 - ["On commit messages"](https://who-t.blogspot.com/2009/12/on-commit-messages.html)
-- ["How to Write a Git Commit Message"](https://chris.beams.io/posts/git-commit/)
+- ["How to Write a Git Commit Message"](https://gist.github.com/julienbourdeau/e605e4b8b47da97c249a0f72598529c8)
 
 ```{note}
 A great way to learn how to write commit messages and to get inspired by their
