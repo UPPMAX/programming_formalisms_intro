@@ -576,7 +576,7 @@ Apptainer
 automagic
 aways
 AWK
-
+bfc
 
 Bitbucket
 
@@ -604,7 +604,7 @@ dropdown
 
 
 favourite
-
+fc
 Findable
 gh
 GiHub
