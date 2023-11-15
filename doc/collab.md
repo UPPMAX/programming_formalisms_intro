@@ -23,7 +23,7 @@ Different types of remotes:
 - [GitLab](https://about.gitlab.com) is a popular, open-core
   commercial site.  Many universities have their own private GitLab servers
   set up.
-- [Bitbucket](https://bitbucket.org) is yet another popular commercial site.
+- [Bitbucket](https://bitbucket.org/product/guides/getting-started/overview) is yet another popular commercial site.
 - Another option is [NotABug](https://notabug.org)
   
 ## GitHub
