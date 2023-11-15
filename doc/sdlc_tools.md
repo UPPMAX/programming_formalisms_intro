@@ -363,7 +363,7 @@ Car -- Person : < owns
 ```
 
 ```{objectives}
-   - [Planning phase section](https://uppmax.github.io/programming_formalism_intro/flowcharts.html) aims to 
+   - [Planning phase section](https://uppmax.github.io/programming_formalisms_intro/flowcharts.html) aims to 
      - Introduce flowcharts and UML expressions
      - Get into UML coding with PlantUML
 ```
@@ -498,7 +498,7 @@ There are different types of remotes:
 - Another option is [NotABug](https://notabug.org)
 
 ```{objectives}
-   - [Source and version control](https://uppmax.github.io/programming_formalism_intro/sourcecontrol.html) aims to
+   - [Source and version control](https://uppmax.github.io/programming_formalisms_intro/sourcecontrol.html) aims to
       - Introduce git and GitHub
       - Get into working with git
       - Get into using GitHub as a remote repository
@@ -516,7 +516,7 @@ There are different types of remotes:
   contributors.
 
 ```{objectives}
-   - [Collaboration](https://uppmax.github.io/programming_formalism_intro/collab.html) aims to 
+   - [Collaboration](https://uppmax.github.io/programming_formalisms_intro/collab.html) aims to 
      - Get into working more with GitHub for collaboration
      - Centralized workflow
      - Forking
@@ -623,7 +623,7 @@ When can you use:
 `README.rst` can be enough (more about these formats later).
 
 ```{objectives}
-   - [Documentation](https://uppmax.github.io/programming_formalism_intro/documentation.html) aims to 
+   - [Documentation](https://uppmax.github.io/programming_formalisms_intro/documentation.html) aims to 
      - Introduce motivation for documentation
      - Get tips for in-code documentation
      - Get tips for README files
