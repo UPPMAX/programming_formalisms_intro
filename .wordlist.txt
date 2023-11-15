@@ -579,11 +579,11 @@ AWK
 bfc
 
 Bitbucket
-
+choosealicense
 Chue
-
+cff
 CMake
-
+citable
 configs
 
 csv
@@ -623,7 +623,7 @@ jl
 JQuery
 
 jupyter
-
+Katz
 LaTeX
 LGPL
 Licencing
@@ -635,7 +635,7 @@ MediaWiki
 
 
 MkDocs
-
+MPL
 nd
 Nim
 numpy
