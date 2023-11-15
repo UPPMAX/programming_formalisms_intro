@@ -571,6 +571,7 @@ calver
 efe
 nehckl
 
+Annotational
 Apptainer
 anotherfile
 automagic
@@ -668,10 +669,13 @@ SourceTree
 Spotify
 stackedit
 TOC
-
+taa
+daa
 untracked
 venv
 Virtualenv
 wordcount
 zipf
 whatthecommit
+
+branchable
