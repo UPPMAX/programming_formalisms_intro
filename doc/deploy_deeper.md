@@ -16,13 +16,13 @@ Popular container implementations:
 
 - podman
 
-They are to some extent interoperable:
+They are to some extent inter-operable:
 
 - podman is very close to Docker
 
 - Docker images can be converted to Singularity/Apptainer images
 
-- Singularity Python can convert Dockerfiles to Singularity definition files
+- Singularity Python can convert Docker files to Singularity definition files
 
 https://coderefinery.github.io/reproducible-research/environments
 
@@ -31,6 +31,6 @@ https://coderefinery.github.io/reproducible-research/environments
 October?
 
 ## Reproducible publications
-- Git (overleaf, authorea), hackmd, manuscripts.io, google docs
+- Git (overleaf, authorea), HackMD, manuscripts.io, google docs
 - Scholarly output reproducible: rrtools, jupyter, binder, research compendia
 - Reprohack
