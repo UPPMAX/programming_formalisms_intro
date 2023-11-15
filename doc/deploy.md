@@ -3,7 +3,7 @@
 ```{Objectives}
    - We will prepare for use of your code
    - Update the README
-   - update a Doc Index
+   - Update a Doc Index
    - Revisit licence
    - But also...
      - some theory of packages
@@ -135,7 +135,7 @@ There are many more ...
 GitHub, GitLab, and Bitbucket make it possible to serve HTML pages:
 - [GitHub Pages](https://pages.github.com) (GH-pages) ← this is what we and CR use for some course material
 
-- [Bitbucket Pages](https://pages.bitbucket.io/)
+- [Bitbucket Pages](https://www.w3schools.com/git/git_remote_pages.asp?remote=bitbucket)
 - [GitLab Pages](https://pages.gitlab.io)
 - [Read the docs](http://readthedocs.org) ← this is what NBIS use for some course material
 
