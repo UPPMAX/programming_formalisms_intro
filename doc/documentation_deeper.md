@@ -108,7 +108,7 @@ GitHub, GitLab, and Bitbucket make it possible to serve HTML pages:
   - PDF format is not ideal for copy-paste ability of examples
   - Possible, but not trivial to automate rebuilding documentation after every Git push
 
-### Doxygen (C, C++, Java atc...)
+### Doxygen (C, C++, Java etc...)
 - Auto-generates API documentation
 - Documented directly in the source code
   see [Doxygen Github Repo](https://github.com/doxygen/doxygen)
@@ -122,7 +122,7 @@ GitHub, GitLab, and Bitbucket make it possible to serve HTML pages:
 - [Documenter.jl](https://juliadocs.github.io/Documenter.jl/stable/)
 
 ### For Markdown
-- [Quarto](https://quarto.org/) converts markdown to websites, pdfs, ebooks and many other things
+- [Quarto](https://quarto.org/) converts markdown to websites, pdfs, eBooks and many other things
 
 ---
 
@@ -143,7 +143,7 @@ GitHub, GitLab, and Bitbucket make it possible to serve HTML pages:
 - You can build locally and view results in a web browser
 ---
 **To use GH-pages**
-- push to the GitHub remote wnd continue working from there.
+- push to the GitHub remote and continue working from there.
 - Add the GitHub Action
 - Create a new file at `.github/workflows/documentation.yaml`
 - Enable GitHub Pages:
@@ -151,7 +151,7 @@ GitHub, GitLab, and Bitbucket make it possible to serve HTML pages:
   - In the “Source” section, choose “gh-pages” in the dropdown menu and click save 
 - That’s it! Your site should now be live on [https://uppmax.github.io/programming_formalism_intro/index.html](https://uppmax.github.io/programming_formalism_intro/index.html).
    
-**Everytime you commit the GH Actions will render your source code to html and deploy it to your new web page!**
+**Every time you commit the GH Actions will render your source code to html and deploy it to your new web page!**
 ``````
    
 
