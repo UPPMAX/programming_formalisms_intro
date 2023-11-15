@@ -36,8 +36,6 @@ Arguments against [(from Wikipedia)](https://en.wikipedia.org/wiki/Open_science)
 
 ```{admonition} Read more
 
-[CodeRefinery](https://coderefinery.github.io/reproducible-research/sharing/)
-
 ### FAIR
 **“FAIR”** is the current buzzword for data management. You may be asked about it in, for example, making data management plans for grants:
 
@@ -70,7 +68,7 @@ More on Wednesday!
 ```
     
 ## Licensing
-[For more details](https://coderefinery.github.io/social-coding/licensing/#)
+[For more details](https://coderefinery.github.io/social-coding/software-licensing/)
 
 ### Copyright
 
@@ -297,8 +295,8 @@ is provided as part of the reference [Katz, Chue Hong, Clark, 2021](https://doi.
 
     
 - Digital object identifiers (DOI) are the backbone of the academic reference and metrics system. 
-- CodeRefinery has an exercise to see how to make a GitHub repository citable by archiving it on the Zenodo archiving service. If you are interested,  have a look [here](https://coderefinery.github.io/reproducible-research/sharing/#exercise-connecting-repositories-to-zenodo)
-- For Services for sharing and collaboration on RESEARCH DATA, click [here](https://coderefinery.github.io/reproducible-research/sharing/#exercise-connecting-repositories-to-zenodo)
+- CodeRefinery has an exercise to see how to make a GitHub repository citable by archiving it on the Zenodo archiving service. If you are interested,  have a look [here](https://coderefinery.github.io/github-without-command-line/doi/#making-your-project-citable)
+
 
 
 ```{keypoints}
