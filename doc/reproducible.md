@@ -39,7 +39,7 @@ Turing Way](https://the-turing-way.netlify.com) community and is used under a
 CC-BY licence. The image was obtained from [https://zenodo.org/record/3332808](https://zenodo.org/record/3332808).)
 
 
-```{discussion} Discuss in HackMD, with your neighbors, or among all participants
+```{discussion} Discuss in HackMD, with your neighbours, or among all participants
 Computer programs are expected to produce the same
 output for the same inputs. Is
 that true for research software?
@@ -123,7 +123,7 @@ Additional labels for pre-release and build metadata are available as extensions
 	- Pyenv
 	- Mamba (faster conda)
 -	R
-  - Packrat, jetpack, rsuite, renv, automagic, deplearning, devtools
+  - Packrat, jetpack, rsuite, renv, automagic, deplearning (sic!), devtools
 -	C/C+
 	- CMake
 	- Conan
@@ -134,7 +134,7 @@ Additional labels for pre-release and build metadata are available as extensions
   - Pkg.jl
     -	designed around using isolated environments with independent sets of packages. Environments can either be local to a particular project or shared and selected by name.
 
-### Course advertisment
+### Course advertisement
 [Python for scientific computing](https://aaltoscicomp.github.io/python-for-scicomp/)
 
 
