@@ -23,6 +23,6 @@ jobs:
           rm -rf development_design
           rm -rf doc/old
 
-      - uses: lycheeverse/lychee-action@v1.2.0
+      - uses: lycheeverse/lychee-action@v1.8.0
         with:
           fail: true
