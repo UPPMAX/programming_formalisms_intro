@@ -674,6 +674,7 @@ daa
 untracked
 venv
 Virtualenv
+virtualenv
 wordcount
 zipf
 whatthecommit
