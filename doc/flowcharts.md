@@ -128,7 +128,7 @@ stop
 
 #### Exercise
 ````{challenge} Test some psuedocode 10 min
-- go to [plantum server](https://www.plantuml.com/plantuml/uml/SyfFKj2rKt3CoKnELR1Io4ZDoSa70000)
+- go to [plantuml server](https://www.plantuml.com/plantuml/uml/SyfFKj2rKt3CoKnELR1Io4ZDoSa70000)
 - try to make a flowchart of the program parts 
 - have a look on examples, for help: [activity-diagram](https://plantuml.com/activity-diagram-beta)
 ````
