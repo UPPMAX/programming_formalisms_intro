@@ -70,7 +70,7 @@ Additional labels for pre-release and build metadata are available as extensions
   - Pkg.jl
     -	designed around using isolated environments with independent sets of packages. Environments can either be local to a particular project or shared and selected by name.
 
-### Course advertisment
+### Course advertisement
 [Python for scientific computing](https://aaltoscicomp.github.io/python-for-scicomp/)
 
 
