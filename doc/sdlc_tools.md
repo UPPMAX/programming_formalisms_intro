@@ -539,7 +539,7 @@ There are different types of remotes:
 - We will demonstrate how version control, workflows, containers, and package managers can be used to record reproducible environments and computational steps.
 
 ```{objectives}
-   - [More about reproducibility](https://uppmax.github.io/programming_formalism_intro/reproducible_deeper.html) aims to 
+   - [More about reproducibility](https://uppmax.github.io/programming_formalisms_intro/reproducible_deeper.html) aims to 
      - Get a short overview of recording dependencies
      - Get short intro to tools:
        - Pip and PyPI
@@ -599,7 +599,7 @@ When can you use:
 ```
 
 ```{objectives}
-   - [More about sharing](https://uppmax.github.io/programming_formalism_intro/sharing_deeper.html) aims to 
+   - [More about sharing](https://uppmax.github.io/programming_formalisms_intro/sharing_deeper.html) aims to 
      - Introduce reproducibility and sharing, licensing and citation
      - Get into thinking about dependencies and solutions
      - Get into choosing license, citation and DOI
@@ -623,7 +623,7 @@ When can you use:
 `README.rst` can be enough (more about these formats later).
 
 ```{objectives}
-   - [Documentation](https://uppmax.github.io/programming_formalisms_intro/documentation.html) aims to 
+   - [Documentation](https://uppmax.github.io/programming_formalisms_intro/documentation_deeper.html) aims to 
      - Introduce motivation for documentation
      - Get tips for in-code documentation
      - Get tips for README files
