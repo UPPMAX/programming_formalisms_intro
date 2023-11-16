@@ -86,6 +86,10 @@ $ ssh-add ~/.ssh/id_ed25519
 - Get it working from **Git Bash**
   - if the command ``type python`` gives you a path, then proceed
     - otherwise you may have to do a new installation
+    - or find the path
+    - if anaconda installation you may add something like this:
+    - ``echo 'export PATH="<path/to/Anaconda/root>:<path/to/anaconda/root>/Scripts:$PATH:' >> .bashrc``
+      - example:  ``/c/Users/bjcar425/AppData/Local/anaconda3:/c/Users/bjcar425/AppData/Local/anaconda3/Scripts``
   - ``$ alias python='winpty python.exe'``
   - ``$ python -V``
     - does it give you the python version 3-something?
