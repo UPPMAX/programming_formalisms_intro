@@ -5,9 +5,8 @@ Parts taken from [https://nbis-reproducible-research.readthedocs.io/en/course_21
 ## Shell and Git
 
 
-.. tabs::
-
-   .. tab:: "Mac & Linux"
+`````{tabs} 
+````{tab} Mac & Linux
 
       - We will use terminal to some extent.
       - Choose one of your choice, the built-in or another!
@@ -16,7 +15,7 @@ Parts taken from [https://nbis-reproducible-research.readthedocs.io/en/course_21
       - If you don't have git, install it following the instructions [here](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git). 
       - If you have a very old version of git you might want to update to a later version.
 
-   .. tab:: Windows
+````{tab}  Windows
 
       There are several different ways to run the course material on a Windows computer. Neither is perhaps optimal, and the material itself has not been adapted specifically for Windows. Nevertheless, in principle everything *should* be possible to run. A few ways you could setup:
 
