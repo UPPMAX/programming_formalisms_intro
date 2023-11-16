@@ -1,4 +1,6 @@
 # Setup
+<base target="_blank">
+
 Parts taken from [https://nbis-reproducible-research.readthedocs.io/en/course_2104/setup/](https://nbis-reproducible-research.readthedocs.io/en/course_2104/setup/)
  and [https://coderefinery.github.io/installation/](https://coderefinery.github.io/installation/)
 
@@ -13,7 +15,7 @@ Parts taken from [https://nbis-reproducible-research.readthedocs.io/en/course_21
 - Choose one of your choice, the built-in or another!
 
 - Chances are that you already have git installed on your computer. You can check by running e.g. `git --version`. 
-- If you don't have git, install it following the instructions [here](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git?to=/placeholder.com) 
+- If you don't have git, install it following the instructions [here](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) 
 - If you have a very old version of git you might want to update to a later version.
 ````
 
