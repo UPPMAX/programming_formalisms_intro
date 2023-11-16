@@ -7,7 +7,7 @@ Parts taken from [https://nbis-reproducible-research.readthedocs.io/en/course_21
 
 .. tabs::
 
-   .. tab:: Mac/Linux
+   .. tab:: "Mac & Linux"
 
       - We will use terminal to some extent.
       - Choose one of your choice, the built-in or another!
