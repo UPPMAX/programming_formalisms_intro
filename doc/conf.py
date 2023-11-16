@@ -22,7 +22,7 @@ copyright = '2023, UPPMAX'
 author = 'UPPMAX'
 github_user = "UPPMAX"
 github_repo_name = ""  # auto-detected from dirname if blank
-github_version = "main"
+github_version = "main/doc/"
 conf_py_path = "/doc/" 
 
 # The full version, including alpha/beta/rc tags
