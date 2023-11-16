@@ -4,6 +4,7 @@ Parts taken from [https://nbis-reproducible-research.readthedocs.io/en/course_21
 
 ## Shell and Git
 
+### Terminal 
 
 `````{tabs} 
 ````{tab} Mac & Linux
@@ -11,24 +12,26 @@ Parts taken from [https://nbis-reproducible-research.readthedocs.io/en/course_21
 - We will use terminal to some extent.
 - Choose one of your choice, the built-in or another!
 
-- Chances are that you already have git installed on your computer. You can check by running e.g. git --version. 
-- If you don't have git, install it following the instructions [here](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git). 
+- Chances are that you already have git installed on your computer. You can check by running e.g. git `--version`. 
+- If you don't have git, install it following the instructions [here](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git){:target="_blank"}. 
 - If you have a very old version of git you might want to update to a later version.
 ````
+
 ````{tab}  Windows
 
 There are several different ways to run the course material on a Windows computer. Neither is perhaps optimal, and the material itself has not been adapted specifically for Windows. Nevertheless, in principle everything *should* be possible to run. A few ways you could setup:
+
 **Most straight-forward way with a command line and Git integrated**
-- Install Git Windows: [https://gitforwindows.org/](https://gitforwindows.org/) (**easiest if you want to start fast and plan to work in windows environment**)
+- Install Git Windows: [https://gitforwindows.org/](https://gitforwindows.org/){:target="_blank"} (**easiest if you want to start fast and plan to work in windows environment**)
       
-   - See Windows part at [https://coderefinery.github.io/installation/shell-and-git/#installation](https://coderefinery.github.io/installation/shell-and-git/#installation)
-   - Included will be the Git Bash
+   - See Windows part at [https://coderefinery.github.io/installation/shell-and-git/#installation](https://coderefinery.github.io/installation/shell-and-git/#installation){:target="_blank"}
+   - Included will be the **Git Bash**
 
 **Other possibilities**
 - Run as Linux through a virtual machine (and see the Linux setup above)
 - Use the Windows 10 PowerShell, install git 
 
-   - [https://git-scm.com/book/en/v2/Appendix-A%3A-Git-in-Other-Environments-Git-in-PowerShell](https://git-scm.com/book/en/v2/Appendix-A%3A-Git-in-Other-Environments-Git-in-PowerShell)
+   - [https://git-scm.com/book/en/v2/Appendix-A%3A-Git-in-Other-Environments-Git-in-PowerShell](https://git-scm.com/book/en/v2/Appendix-A%3A-Git-in-Other-Environments-Git-in-PowerShell){:target="_blank"}
         
 - Use the Linux Bash Shell (WSL) on Windows 10 (**perhaps best practice if you plan to run Linux as well**
       
