@@ -67,8 +67,8 @@ Sign up for GitHub account:
 
 ```console
 $ ssh-keygen -t ed25519 -C "email address"
-$eval "$(ssh-agent -s)"
-$ssh-add ~/.ssh/id_ed25519
+$ eval "$(ssh-agent -s)"
+$ ssh-add ~/.ssh/id_ed25519
 ```
 
 - [Adding a new SSH key to your GitHub account](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account)
