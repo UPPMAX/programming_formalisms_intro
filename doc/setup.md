@@ -64,21 +64,26 @@ Sign up for GitHub account:
 
 - Test: `ssh -T git@github.com`
 - If not working, these are the approximate steps to be done in your terminal. It can vary between systems, so link above is more certain.
+
 ```console
-ssh-keygen -t ed25519 -C "email address"
-eval "$(ssh-agent -s)"
-ssh-add ~/.ssh/id_ed25519
+$ ssh-keygen -t ed25519 -C "email address"
+$eval "$(ssh-agent -s)"
+$ssh-add ~/.ssh/id_ed25519
 ```
+
 - [Adding a new SSH key to your GitHub account](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account)
 
 
 ## Python
 - Use what you already have
-- If you don't have it there are different ways to go. We won't use Conda during the lessons, for instance.
-- In Linux and Bash Python should work from the command line by typing ``python``/``python3`` or running a script with ``python <script>``/``python3 <script>``
+- If you don't have Python there are different ways to go. We won't use Conda during the lessons, for instance.
+- In Linux and Bash, Python should work from the command line by typing ``python``/``python3`` or running a script with ``python <script>``/``python3 <script>``
+- That is how we will present
 
- ### Windows
-- Get it working from Git Bash
+
+### Windows
+- 
+- Get it working from **Git Bash**
   - if the command ``type python`` gives you a path, then proceed
     - otherwise you may have to do a new installation
   - ``$ alias python='winpty python.exe'``
