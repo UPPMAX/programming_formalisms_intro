@@ -14,7 +14,7 @@ Parts taken from [https://nbis-reproducible-research.readthedocs.io/en/course_21
       - Chances are that you already have git installed on your computer. You can check by running e.g. git --version. 
       - If you don't have git, install it following the instructions [here](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git). 
       - If you have a very old version of git you might want to update to a later version.
-
+````
 ````{tab}  Windows
 
       There are several different ways to run the course material on a Windows computer. Neither is perhaps optimal, and the material itself has not been adapted specifically for Windows. Nevertheless, in principle everything *should* be possible to run. A few ways you could setup:
@@ -44,7 +44,8 @@ Parts taken from [https://nbis-reproducible-research.readthedocs.io/en/course_21
       - [Installing the Windows Subsystem and the Linux Bash](https://docs.microsoft.com/en-us/windows/wsl/install-win10)
       - [Installing and using Linux Bash on Windows](https://www.howtogeek.com/249966/how-to-install-and-use-the-linux-bash-shell-on-windows-10/)
       - [Installing Linux Bash on Windows](https://itsfoss.com/install-bash-on-windows/)
-
+````
+`````
 
 ### Configure git
 Follow these instructions. [https://nbis-reproducible-research.readthedocs.io/en/course_2104/setup/#installing-git](https://nbis-reproducible-research.readthedocs.io/en/course_2104/setup/#installing-git)
