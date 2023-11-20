@@ -284,8 +284,8 @@ date-released: 2021-08-11
 ```
 
 Recommended format for software citation is to ensure the following information
-is provided as part of the reference [Katz, Chue Hong, Clark, 2021](https://doi.org/10.12688/f1000research.26932.2):
-- Creator
+is provided as part of the reference [Katz, Chue Hong, Clark, 2021](https://f1000research.com/articles/9-1257/v2):
+- Creator 
 - Title
 - Publication venue
 - Date
