@@ -41,21 +41,22 @@ END                | 16.00
 *Wikipedia*
 - set of computer programs and associated documentation and data.
 - This is in contrast to hardware, from which the system is built and which actually performs the work. 
-- Application software 
-  - Most users think of compilers, databases, and other "system software" as applications.
 - **User-written software: End-user development**
-  - Users create this software themselves and often overlook how important it is.
+  - Users create this software themselves and often overlook how important it may be to others.
   - Depending on how competently the user-written software has been integrated into default application packages, many users may not be aware of the distinction between the original packages, and what has been added by co-workers.
 
 ### Some concepts
 - program
-- script
+- script (directly interpreted at run time)
 - tool
 - model
 ---
-- scripting vs programming
-  - **Python** is an **interpreted language**. Python uses an interpreter to translate and run its code. Hence Python is a **scripting language**.
-  - Programs written in **C++** are **compiled** and then the compiled code runs to generate the output. C++ is thus a **programming language** and not a scripting language, since scripting languages are directly interpreted at run time and no prior compilation of the code takes place.
+
+```{admonition} scripting vs programming
+  - **Python** is an **interpreted language**.
+    - Python uses an interpreter to translate and run its code. Hence Python is a **scripting language**.
+  - Programs written in **C++** are **compiled** and then the compiled code runs to generate the output.
+    - Hence, C++ is  a **programming language** and not a scripting language, since scripting languages are directly interpreted at run time and no prior compilation of the code takes place.
 ---
 
 ```{Note}
@@ -64,30 +65,31 @@ END                | 16.00
 
 ### Outcome of a Program
 - **Correct**
-  - and flawless
+  - and _flawless_
 - **Efficient**
-  - Utilize the computer system's resources
+  - _Utilize_ the computer system's resources
 - **Reusable**
-  - Development costs
-  - Finished components
-  - Lower development costs
-  - Faster
-  - Higher quality
-  - packaging technology
+  - Finished _components_
+  - Lower _development_ _costs_
+  - _Faster_
+  - Higher _quality_
+  - _packaging_ technology
 - **Changeable**
-  - Maintenance cost
+  - _Maintenance_ cost
     - Fix errors, bugs
-    - Adapt to new requirements
-    - Independent modules
-    - Encapsulation/information hiding
-
+    - Adapt to _new requirements_
+    - Independent _modules_
+    - Encapsulation/_information hiding_
 
 ### Independent modules
 - Modular coding is really good!
-- it can be done as object-oriented or functional programming, see below.
+- Object-oriented or functional programming, see below.
 - Modularity could be within a program but also for a workflow.
+
+```{demo} Workflow
 - Here's an example of a bash script taking care of runs with executable files.
   - [A weather model workflow](https://github.com/UPPMAX/programming_formalisms_intro/blob/main/doc/wrf-workflow.md)
+```
 
 ### Functional vs. object-oriented programming
 
@@ -125,7 +127,8 @@ floor=5
 @enduml
 
 ```
-#### Object orientation (OO) in some programming languages 
+```{note}
+**Object orientation (OO) in some programming languages**
 - OO (built-in classes)
   - C++
   - Java
@@ -138,13 +141,14 @@ floor=5
   - PHP
 - OO object-based (but not class-based)
   - Javascript
+```
 
 #### Functional programming
 
-  - more classical as it is more focused on the algorithms
-  - keys are functions
-  - modules: a way to gather functions with similar functionality
-  - also to some extent info-hiding mindset
+- more classical as it is more focused on the algorithms
+- functions
+- modules: a way to _gather functions_ with similar functionality
+- also to some extent info-hiding mindset
 
 ```{admonition} To sum up
 
@@ -155,10 +159,13 @@ floor=5
 ```
 
 ```{note} 
-More on Wednesday
+- More on Tuesday: Object-orientation
+- More on Thursday: Algorithms
+- More on Friday: Modular programming
+
 ```
 
-```{discussion} Your scripting/programming background 
+```{admonition} Your scripting/programming background 
 
 1. Python 91%	(last year 86%)
 1. Bash	58	(80%)
@@ -185,7 +192,7 @@ Not this but last year
 
 ```
 
-### Different types of Scientific software:
+## Different types of Scientific software:
 - analysis of data
     - statistics
     - figures
@@ -200,11 +207,11 @@ Not this but last year
 - decision assistance
 
 ```{Discussion}
-What experience have you had?
+**What experience have you had regarding type of scripting/programming?**
 - Use HackMD
 ```
 
-``````{discussion}
+``````{exercise}
 **Planet application**
 - Make a program that simulates the Earth's change of orbit due to the interaction with other planets-
 
@@ -330,7 +337,7 @@ plot(1:L/l,e)
 ````  
 - What are the problems?
 - Discuss!
-  - **readability?**
+  - **Readability?**
   - **Correct**?
   - **Efficient**?
   - **Reusable**?
@@ -338,33 +345,9 @@ plot(1:L/l,e)
     
 ``````
 
-
 ## Software Development Life Cycle (SDLC)
 
-### Basic models
-#### Waterfall
-  1.	Requirements
-  2.	Analysis and design
-  3.	Development
-  4.	Test
-  5.	Development and maintenance
-
-#### Spiral model
-- iterating waterfalls, quadrants
-  - Planning: reqs, identification: analysis
-  -	Risk analysis: build prototypes to identify risks
-  -	Engineering: software implementation
-  -	Evaluation: stakeholder review, feedback, plan next iteration
-- Each lab is new cycle: prototype --> RC --> Launch
-- Risk driven
-
-```{figure} img/spiral-1-1024x945.jpg
-:alt: Spiral
-:width: 50%
-```
-
-- Agile developing
-  - Division of tasks into **short phases of work** and frequent **reassessment** and adaptation of plans.
+- We need a workflow in our programming projects!
 
 ### Some common steps 
 
@@ -377,14 +360,22 @@ plot(1:L/l,e)
   - Optimization
     - Parallelism
 - Test
-  - Tests 
-  - Test-driven development
 - Development and maintenance
   - Documentation
   - Reproducibility and sharing
-- Iterations
+--- 
+- ... and **Iterations**
+---
+### Agile developing
+  - Division of tasks into **short phases of work** and frequent **re-assessment** and adaptation of plans.
 
+```{seealso}
 More about life cycles in next session and later this week
+```
+
+```{todo}
+Links
+```
 
 ## Summary of Introduction
 - Now after the overview you are ready to dig deeper in the topics and try it out yourself!
