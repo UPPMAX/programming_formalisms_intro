@@ -688,3 +688,4 @@ Pijul
 macOS
 Spyder
 RStudio
+GPG
