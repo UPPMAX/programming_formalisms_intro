@@ -1,5 +1,8 @@
 # Introduction
 
+- &#9744;
+
+
 ```{questions}
 - What is the Purpose of Formalism in Computer Science?
 - What is software development life cycle
