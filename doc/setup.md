@@ -4,8 +4,24 @@
 Parts taken from [https://nbis-reproducible-research.readthedocs.io/en/course_2104/setup/](https://nbis-reproducible-research.readthedocs.io/en/course_2104/setup/)
  and [https://coderefinery.github.io/installation/](https://coderefinery.github.io/installation/)
 
-## Shell and Git
+**There are several solutions in how to work with coding and the environemnts around it**
+- You can work in the environment(s) you are used to.
+- Many of the teachers will use Visual Studio Code (VS code)
+- This is not necessary if you have other solution
+- Benefit:  
+  - integrate you terminal and Git work with **code development**
+  - graphical user interface
+  - available in all platforms
+ 
+- [Install](https://code.visualstudio.com/)
 
+- Follow the steps from [configure git](https://uppmax.github.io/programming_formalisms_intro/setup.html#configure-git) if not done already
+- Follow the steps from [configure GitHub](https://uppmax.github.io/programming_formalisms_intro/setup.html#github) if not done already
+- Follow the steps from [configure ssh-keys](https://uppmax.github.io/programming_formalisms_intro/setup.html#git-github-connection-through-ssh-keys-this-may-take-a-while-to-get-working-but-is-worth-it) if not done already
+
+## Shell and Git
+If you will not use VS code, follow steps below.
+ 
 ### Terminal 
 
 `````{tabs} 
@@ -52,6 +68,9 @@ Install Bash on Windows 10 (WSL), following the instructions at *e.g.* **1** of 
 `````
 
 ### Configure git
+
+**This must be done**
+
 Follow these instructions. [https://nbis-reproducible-research.readthedocs.io/en/course_2104/setup/#installing-git](https://nbis-reproducible-research.readthedocs.io/en/course_2104/setup/#installing-git)
 
 ### GitHub
@@ -78,11 +97,14 @@ $ ssh-add ~/.ssh/id_ed25519
 - Use what you already have
 - If you don't have Python there are different ways to go. We won't use Conda during the lessons, for instance.
 - In Linux and Bash, Python should work from the command line by typing ``python``/``python3`` or running a script with ``python <script>``/``python3 <script>``
-- That is how we will present
 
+### In VS Code
 
-### Windows
-- 
+- Step 1. Install a supported version of Python on your system (note: that the system install of Python on macOS is not supported).
+- Step 2. Install the Python extension for Visual Studio Code.
+- Step 3. Open or create a Python file and start coding!
+
+### In Git-bash (Windows)
 - Get it working from **Git Bash**
   - if the command ``type python`` gives you a path, then proceed
     - otherwise you may have to do a new installation
