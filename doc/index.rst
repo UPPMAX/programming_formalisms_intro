@@ -2,6 +2,17 @@
 Programming formalisms — Introduction day
 =========================================
 
+.. attention::
+
+.. caution::
+
+.. error::
+
+.. hint::
+
+.. tip::
+
+
 .. admonition:: Course punchlines
    
     - "Turning scripters into computer scientists”
