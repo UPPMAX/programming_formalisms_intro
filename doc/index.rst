@@ -5,7 +5,7 @@ Programming formalisms — Introduction day
 .. checklist::
 
    - [ ] not checked
-   - :white_check_mark: checked
+   - |:white_check_mark:| checked
 
 
 
