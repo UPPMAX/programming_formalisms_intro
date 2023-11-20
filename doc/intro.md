@@ -52,7 +52,7 @@ END                | 16.00
 - model
 ---
 
-```{admonition} scripting vs programming
+```{admonition} Scripting vs programming
   - **Python** is an **interpreted language**.
     - Python uses an interpreter to translate and run its code. Hence Python is a **scripting language**.
   - Programs written in **C++** are **compiled** and then the compiled code runs to generate the output.
@@ -158,7 +158,7 @@ floor=5
 
 ```
 
-```{note} 
+```{seealso} 
 - More on Tuesday: Object-orientation
 - More on Thursday: Algorithms
 - More on Friday: Modular programming
@@ -202,8 +202,8 @@ Not this but last year
     - bioinformatics
 - workflows
 - modelling (mimic the reality)
-      - simulations time-varying bahaviour of a system
-      - mathematical models of relationships among variables in a system 
+    - simulations time-varying bahaviour of a system
+    - mathematical models of relationships among variables in a system 
 - decision assistance
 
 ```{Discussion}
@@ -366,7 +366,7 @@ plot(1:L/l,e)
 --- 
 - ... and **Iterations**
 ---
-### Agile developing
+### Agile development
   - Division of tasks into **short phases of work** and frequent **re-assessment** and adaptation of plans.
 
 ```{seealso}
