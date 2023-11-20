@@ -152,7 +152,8 @@ The teachers
 - Lars Eklund, lars.eklund@uppmax.uu.se
 - Björn Claremar, bjorn.claremar@uppmax.uu.se
 - Jon Ander Novella, jon.novella@nbis.se
-- Richèl Biderbeek, richel.bilderbeek@uppmax.uu.se 
+- Richèl Bilderbeek, richel.bilderbeek@uppmax.uu.se 
+- Marcus Lundberg, marcus.lundberg@uppmax.uu.se
    
 Schedule
 --------
