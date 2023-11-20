@@ -2,15 +2,10 @@
 Programming formalisms — Introduction day
 =========================================
 
-.. attention::
+.. checklist::
 
-.. caution::
-
-.. error::
-
-.. hint::
-
-.. tip::
+   - [ ] not checked
+   - [x] checked
 
 
 .. admonition:: Course punchlines
