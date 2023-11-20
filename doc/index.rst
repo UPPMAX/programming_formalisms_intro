@@ -5,10 +5,8 @@ Programming formalisms — Introduction day
 .. checklist::
 
    - [ ] not checked
-   - [x] checked
-   - &#2751 checked
-   - &#2611 checked
-   - &#2610 unchecked
+   - :white_check_mark: checked
+
 
 
 .. admonition:: Course punchlines
