@@ -686,3 +686,5 @@ authorea
 js
 Pijul
 macOS
+Spyder
+RStudio
