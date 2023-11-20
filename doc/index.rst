@@ -1,25 +1,21 @@
 
+
+`Welcome page and syllabus <https://uppmax.github.io/programming_formalisms_intro/index.html>`_
+   - Also link at House symbol |:house:| at top of page 
+
+
 Programming formalisms — Introduction day
 =========================================
-
-.. checklist::
-
-   - [ ] not checked
-   - |:white_check_mark:| checked
-
-
 
 .. admonition:: Course punchlines
    
     - "Turning scripters into computer scientists”
     - "Add theory to bolster already present practical skills"
    
-
-
-.. admonition:: This course aims to 
+.. important:: This course aims to 
    
    - give scientists
-       ... with some experience in programming and scripting 
+       ... with some experience in programming and scripting:  
        
        - an understanding of the underlying principles of software development, design, and programming. 
       
@@ -32,8 +28,6 @@ Programming formalisms — Introduction day
       - Git and Github
    - **convince the benefits of sharing and social coding**
  
-.. note:: 
-
 .. admonition:: Your expectations
     
    - Optimisation/speed 8
@@ -64,9 +58,7 @@ Programming formalisms — Introduction day
    - Refine 1
    - Functional 1
 
-
-
-.. admonition:: Content and expectations
+.. tip:: Content and expectations
 
    - We will cover an introduction to 
    
@@ -96,7 +88,12 @@ Programming formalisms — Introduction day
 
 .. prereq::
 
-   See the `setup.md <https://github.com/UPPMAX/programming_formalism/blob/main/setup.md>`_ file
+   - Python
+   - Git
+   - GitHub
+   - PlanUML
+   - |:bulb:| Visual Studio code can work as an integrated environment
+   - See the `setup.md <https://github.com/UPPMAX/programming_formalism/blob/main/setup.md>`_ file
 
 Some practicals
 ----------------
@@ -126,7 +123,7 @@ ZOOM
 Collaboration document HackMD
 +++++++++++++++++++++++++++++
 
-.. note:: 
+.. important:: 
 
     - Use the HackMD page for the workshop with your questions.
     - Tell us directly if it is too fast or you need clarification.
