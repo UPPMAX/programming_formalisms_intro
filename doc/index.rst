@@ -6,9 +6,9 @@ Programming formalisms — Introduction day
 
    - [ ] not checked
    - [x] checked
-   - \u2751 checked
-   - \u2611 checked
-   - \u261o unchecked
+   - &#2751 checked
+   - &#2611 checked
+   - &#2610 unchecked
 
 
 .. admonition:: Course punchlines
