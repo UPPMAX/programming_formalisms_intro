@@ -82,19 +82,36 @@ Sign up for GitHub account:
 [https://coderefinery.github.io/installation/github/](https://coderefinery.github.io/installation/github/)
 
 ### Git/GitHub connection through ssh keys 
-((This may take a while to get working, but is worth it))
+(This may take a while to get working, but is worth it)
 [https://coderefinery.github.io/installation/ssh/](https://coderefinery.github.io/installation/ssh/)
 
 - Test: `ssh -T git@github.com`
+  - Output should be something like this: ``Hi bclaremar! You've successfully authenticated, but GitHub does not provide shell access.`` 
 - If not working, these are the approximate steps to be done in your terminal. It can vary between systems, so link above is more certain.
 
 ```console
-$ ssh-keygen -t ed25519 -C "email address"
+$ ssh-keygen -t ed25519 -C "<email address for your GitHub account>"
 $ eval "$(ssh-agent -s)"
 $ ssh-add ~/.ssh/id_ed25519
+$ # Copy the SSH public key to your clipboard.
+$ clip < ~/.ssh/id_ed25519.pub
 ```
 
-- [Adding a new SSH key to your GitHub account](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account)
+- Then go to your GitHub account on the web.
+  1. In the upper-right corner of any page, click your profile photo, then click Settings.
+  2. In the "Access" section of the sidebar, click SSH and GPG keys.
+  3. Click New SSH key or Add SSH key.
+  4. In the "Title" field, add a descriptive label for the new key. For example, if you're using a personal laptop, you might call this key "Personal laptop".
+  5. Select the type of key **authentication**.
+  6. In the "Key" field, paste your public key.
+  7. Click Add SSH key.
+  8. If prompted, confirm access to your account on GitHub. For more information, see "Sudo mode."
+
+- Now test again in your terminal: `ssh -T git@github.com`
+  - Output should be something like this: ``Hi bclaremar! You've successfully authenticated, but GitHub does not provide shell access.`` 
+
+- If there was a problem, confer the full article [Adding a new SSH key to your GitHub account](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account).
+  -   
 
 
 ## Python
