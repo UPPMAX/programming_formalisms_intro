@@ -149,11 +149,11 @@ Collaboration document HackMD
 The teachers 
 ------------
 
-- Lars Eklund, lars.eklund@uppmax.uu.se
-- Björn Claremar, bjorn.claremar@uppmax.uu.se
-- Jon Ander Novella, jon.novella@nbis.se
-- Richèl Bilderbeek, richel.bilderbeek@uppmax.uu.se 
-- Marcus Lundberg, marcus.lundberg@uppmax.uu.se
+- Lars Eklund (LE), lars.eklund@uppmax.uu.se
+- Björn Claremar (BC), bjorn.claremar@uppmax.uu.se
+- Jon Ander Novella (JN), jon.novella@nbis.se
+- Richèl Bilderbeek (RB), richel.bilderbeek@uppmax.uu.se 
+- Marcus Lundberg (ML), marcus.lundberg@uppmax.uu.se
    
 Schedule
 --------
