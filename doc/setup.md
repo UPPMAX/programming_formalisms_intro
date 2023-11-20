@@ -102,13 +102,13 @@ $ ssh-add ~/.ssh/id_ed25519
 - If you don't have Python there are different ways to go. We won't use Conda during the lessons, for instance.
   - Bare python (recommended for the **"bare metal" user**)
     - you need to install other packages (pip)
-    - [iknstall python](https://www.python.org/downloads/)
-  - Anaconda (recommended for **developer liking GUI:s**)
+    - [install python](https://www.python.org/downloads/)
+  - Anaconda (recommended for **python/R developers liking GUI:s**)
     - includes many many packages
     - includes conda packager
     - GUI launchers, like example
     - jupyter notebook/lab
-    - spyder
+    - Spyder
     - RStudio
     - etc
   - miniconda (recommended for **terminal user**)
