@@ -685,3 +685,4 @@ compendia
 authorea
 js
 Pijul
+macOS
