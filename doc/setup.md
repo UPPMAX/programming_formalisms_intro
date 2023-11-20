@@ -105,7 +105,7 @@ $ clip < ~/.ssh/id_ed25519.pub
   5. Select the type of key **authentication**.
   6. In the "Key" field, paste your public key.
   7. Click Add SSH key.
-  8. If prompted, confirm access to your account on GitHub. For more information, see "Sudo mode."
+  8. If prompted, confirm access to your account on GitHub.
 
 - Now test again in your terminal: `ssh -T git@github.com`
   - Output should be something like this: ``Hi bclaremar! You've successfully authenticated, but GitHub does not provide shell access.`` 
