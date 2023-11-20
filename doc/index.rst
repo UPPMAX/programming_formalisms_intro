@@ -59,7 +59,7 @@ Your expectations
    - Refine 1
    - Functional 1
 
-.. tip:: Content and expectations
+.. admonition:: Content and expectations
 
    - We will cover an introduction to 
    
