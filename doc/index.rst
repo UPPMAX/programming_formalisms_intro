@@ -12,7 +12,7 @@ Programming formalisms — Introduction day
     - "Turning scripters into computer scientists”
     - "Add theory to bolster already present practical skills"
    
-.. important:: This course aims to 
+.. Exercise:: This course aims to 
    
    - give scientists
        ... with some experience in programming and scripting:  
@@ -28,7 +28,8 @@ Programming formalisms — Introduction day
       - Git and Github
    - **convince the benefits of sharing and social coding**
  
-.. admonition:: Your expectations
+Your expectations
+-----------------
     
    - Optimisation/speed 8
    - Structured/systematic 	7
@@ -82,7 +83,7 @@ Programming formalisms — Introduction day
             - NBIS *best practices*: https://github.com/NBISweden/development-guidelines
             
     
-   - The modules will cover theory with bridging practical examples and applications to enhance the theoretical understanding of the principles.
+   - The course modules will cover theory with bridging practical examples and applications to enhance the theoretical understanding of the principles.
    
    
 
@@ -96,7 +97,7 @@ Programming formalisms — Introduction day
    - See the `setup.md <https://github.com/UPPMAX/programming_formalism/blob/main/setup.md>`_ file
 
 Some practicals
-----------------
+---------------
         
 ZOOM
 ++++
@@ -165,7 +166,7 @@ https://uppmax.github.io/programming_formalisms/#schedule
 Reflections at the end of day
 -----------------------------
 - Students will have the opportunity to give feedback to the teachers at the end of each day. 
-- A reflection session will be conducted in a similar fashion to an Agile Software Development retrospective meeting. '
+- A reflection session will be conducted in a similar fashion to an Agile Software Development retrospective meeting.
 - It is important that all students and teachers involved in the lessons actively engage in this event.
 
 Learning outcomes
