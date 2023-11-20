@@ -1,8 +1,5 @@
 # Introduction
 
-- &#9744;
-
-
 ```{questions}
 - What is the Purpose of Formalism in Computer Science?
 - What is software development life cycle
@@ -15,6 +12,9 @@
 - We'll give some introduction to handy tools for the software developer
 - We'll try to set up the mindset to find the rest of the week interesting and useful!
 - |:white_check_mark:| checked
+- &#9745; checked 
+- &#9744; unchecked
+- {|:white_check_mark:|} checked
 ```
 ## Preliminary schedule 1st day
 
