@@ -7,13 +7,13 @@
 ```
 
 ```{objectives}
-- We'll give an introduction to the week
-- We'll give some introduction to concepts used in the course
-- We'll give some introduction to handy tools for the software developer
-- We'll try to set up the mindset to find the rest of the week interesting and useful!
-- &#9745; checked 
-- &#9744; unchecked
-- `` {fa}`check` ``
+- We'll
+
+    - give an **introduction** to the week
+    - give some introduction to **concepts** used in the course
+    - give some introduction to handy **tools for the software developer**
+    - try to **set up the mindset** to find the rest of the week interesting and useful!
+
 ```
 ## Preliminary schedule 1st day
 
