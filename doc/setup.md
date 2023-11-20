@@ -103,6 +103,8 @@ $ ssh-add ~/.ssh/id_ed25519
   - Bare python (recommended for the **"bare metal" user**)
     - you need to install other packages (pip)
     - [install python](https://www.python.org/downloads/)
+    - **note macOS**: the system install of Python on macOS is not supported, instead:
+      - ``brew install python3`` 
   - Anaconda (recommended for **python/R developers liking GUI:s**)
     - includes many many packages
     - includes conda packager
@@ -110,18 +112,22 @@ $ ssh-add ~/.ssh/id_ed25519
     - jupyter notebook/lab
     - Spyder
     - RStudio
-    - etc
+    - etc...
+    - [install Anaconda](https://www.anaconda.com/download)
   - miniconda (recommended for **terminal user**)
     - less packages than Anaconda, and no GUI launcher but:
     - conda packager
     - pip
-    - etc... 
+    - etc...
+    - [install Miniconda](https://docs.conda.io/projects/miniconda/en/latest/)
 
 - In Linux and Bash, Python should work from the command line by typing ``python``/``python3`` or running a script with ``python <script>``/``python3 <script>``
 
 ### In VS Code
 
-- Step 1. Install a supported version of Python on your system (note: that the system install of Python on macOS is not supported).
+- Step 1. Install a supported version of Python on your system 
+  - note: that the system install of Python on macOS is not supported
+  - ``brew install python3`` 
 - Step 2. Install the Python extension for Visual Studio Code.
 - Step 3. Open or create a Python file and start coding!
 
