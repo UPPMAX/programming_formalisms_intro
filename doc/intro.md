@@ -14,23 +14,26 @@
 - |:white_check_mark:| checked
 ```
 ## Preliminary schedule 1st day
-- Syllabus              9.00
-- Intro                 9.30
-- Coffee break (15 min) 9.50
-- SDLC tools            10.05
-- Break (5 min)         11.00
-- Planning phase        11.05
-- Start the project     11.35
-- LUNCH                 12.00
-- Start with coding     13.00
-- Iterations and Git    13.30
-- Break                 14.15
-- Deploy                14.20
-- Coffee break          14.50
-- (Collaboration)       15.05
-- Summary               15.20
-- Reflection            15.30
 
+Topic|Time
+-----|----
+Syllabus      |        9.00
+Intro          |       9.30
+Coffee break (15 min)| 9.50
+SDLC tools            |10.05
+Break (5 min)       |  11.00
+Planning phase      |  11.05
+Start the project   |  11.35
+LUNCH               |  12.00
+Start with coding   |  13.00
+Iterations and Git  |  13.30
+Break               |  14.15
+Deploy              |  14.20
+Coffee break        |  14.50
+(Collaboration)     |  15.05
+Summary             |  15.20
+Reflection          |  15.30
+END                | 16.00
 
 ## What is software?
 *Wikipedia*
@@ -199,7 +202,7 @@ What experience have you had?
 - Use HackMD
 ```
 
-``````{Admonition} Demo
+``````{discussion}
 **Planet application**
 - Make a program that simulates the Earth's change of orbit due to the interaction with other planets-
 
@@ -325,7 +328,7 @@ plot(1:L/l,e)
 ````  
 - What are the problems?
 - Discuss!
-  - readability?
+  - **readability?**
   - **Correct**?
   - **Efficient**?
   - **Reusable**?
