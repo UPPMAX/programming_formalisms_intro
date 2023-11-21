@@ -12,7 +12,7 @@
 ```
 
 ```{instructor-note}
-
+   
 ```
 
 ## The waterfall model
@@ -31,10 +31,14 @@ digraph {
 ```
 
 - Good approach for **small and simple systems** where the team knows the system and **requirements very well**.
-- |:warning:|  Error is spreading 
+
+```{warning}
+- Error is spreading 
   - small mistakes in the beginning will have large impact on the end result. 
     - e.g. bugs, architecture limiting extensions
   - large costs economically and timely
+```
+
 
 ## Include iteration
 ### Spiral model
