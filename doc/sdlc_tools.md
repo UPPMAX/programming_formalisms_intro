@@ -461,10 +461,10 @@ Summarized from [Code refinery](https://coderefinery.github.io/git-intro/motivat
   - How do you indicate which **version** of your code you have used in your paper?
   - When you find a bug, how do you know **when precisely** this bug was introduced
 - Compare with **Dropbox or Google Drive**
-  - + Document/code is in **one place**, no need to email snapshots.
-  - - How can you use an **old version**? Possible to get old versions but in a much less useful way - snapshots of files, not directories.
-  - - What if you want to work on **multiple versions** at the same time? Do you make a copy? How do you merge copies?
-  - - What if you **don't have internet**?
+  -  |:+1:| Document/code is in **one place**, no need to email snapshots.
+  - |:-1:| How can you use an **old version**? Possible to get old versions but in a much less useful way .
+  - |:-1:| What if you want to work on **multiple versions** at the same time? Do you make a copy? How do you merge copies?
+  - |:-1:| What if you **don't have internet**?
 
 ```{discussion} Why Git?
 We will use [Git](https://git-scm.com) to record snapshots of our work:
@@ -502,9 +502,7 @@ There are different types of remotes:
 
 - If you have a **own server** you can ssh to, you can use that as a remote.
 - [GitHub](https://github.com) is a popular, closed-source commercial site.
-- [GitLab](https://about.gitlab.com) is a popular, open-core
-  commercial site.  Many universities have their own private GitLab servers
-  set up.
+- [GitLab](https://about.gitlab.com) is a popular, open-core commercial site. Many universities have their own private GitLab servers  set up.
 - [Bitbucket](https://bitbucket.org) is yet another popular commercial site.
 - Another option is [NotABug](https://notabug.org)
 
@@ -514,7 +512,6 @@ There are different types of remotes:
       - Get into working with git
       - Get into using GitHub as a remote repository
 ```
-
 
 ## Collaboration
 
@@ -547,12 +544,12 @@ There are different types of remotes:
 - Or you have to do paper revisions, but you just can’t get the results to match up? 
 - Nothing is a worse feeling - either for you or for science itself.
 
-- Some theory will be given in the [Extra material](https://uppmax.github.io/programming_formalisms_intro/reproducible_deeper.html)
 - We will integrate this topic in the hands-on.
 - We will discuss different methods and tools for better reproducibility in research software and data.
   - Virtual environments with ``pip install`` (venv/virtualenv) will be covered in the hands-on.
   - Conda environment is referred to in the extra material. 
 - We will demonstrate how version control, workflows, containers, and package managers can be used to record reproducible environments and computational steps.
+- [Extra material](https://uppmax.github.io/programming_formalisms_intro/reproducible_deeper.html)
 
 ```{objectives}
    - [More about reproducibility](https://uppmax.github.io/programming_formalisms_intro/reproducible_deeper.html) aims to 
@@ -575,9 +572,13 @@ There are different types of remotes:
 - Did you take actions somehow?
 ```
 #### Open science
+- The **Open Science movement** encourages researchers to share research output beyond the contents of a published academic article (and possibly supplementary information).
+- **Open-source license** is a type of license for computer software and other products that allows the source code, blueprint or design to be used, modified and/or shared under defined terms and conditions.
+- 
+```[admonition} FAIR
 
-##### FAIR
-**“FAIR”** is the current buzzword for data management. You may be asked about it in, for example, making data management plans for grants:
+**The current buzzword for data management**
+- You may be asked about it in, for example, making data management plans for grants:
 
 - **F**indable
   - Will anyone else know that your data exists?
@@ -590,8 +591,8 @@ There are different types of remotes:
    - Or better than csv. Example: 5-star open data
 - **R**eusable
    - Is there a license allowing others to re-use?
-
-### Licencing
+```
+### Licensing
 
 #### Copyright
 - Protects creative expression
@@ -599,16 +600,21 @@ There are different types of remotes:
 - **Derivative works** usually inherit copyright of the thing derived
 - Time frame: essentially forever (lifetime + X years)
 
-When can you use?
+**When can you use?**
 - When there is a **license** saying you can
 - Limited other cases (private use, fair use: context dependent)
 - In practice: people do many things, but then can't share their output if license does not allow it or is not clarified
 
-Examples
+**Examples**
 -  Custom/closed/proprietary
+  - Derivative work typically not possible
+  - Unusual in academics 
 -  Permissive (**MIT**, BSD, Apache)
+  - Derivative work does not have to be shared    
 -  Weak copyleft share-alike (LGPL, MPL)
+  - Derivative work is free software but is limited to the component    
 -  Strong copyleft share-alike (**GPL**, AGPL)
+  - Derivative work is free software and derivative work extends to the combined project    
 
 [Read more](https://uppmax.github.io/programming_formalisms_intro/sharing_deeper.html#licensing#)
 
@@ -617,6 +623,11 @@ Examples
 - Think the same as for a scientific paper
 - [Software citation](https://uppmax.github.io/programming_formalisms_intro/sharing_deeper.html#software-citation)
 
+```{seealso}
+- Parts of [sharing](https://github.com/UPPMAX/programming_formalisms/blob/main/common_practices/slides/notes_social_coding.pdf) will be covered on Tuedays afternoon.
+```
+
+
 ```{keypoints}
 - Share your code! Eventually others will probably use it anyway.
 - Licence your software and do it early. **Default is “no one can make copies or derivative works”**.
@@ -624,15 +635,16 @@ Examples
 ```
 
 ```{objectives}
-   - [More about sharing](https://uppmax.github.io/programming_formalisms_intro/sharing_deeper.html) aims to: 
-     - introduce reproducibility and sharing, licensing and citation
-     - get into thinking about dependencies and solutions
-     - get into choosing license, citation and DOI
-     
+
+- [More about sharing](https://uppmax.github.io/programming_formalisms_intro/sharing_deeper.html) aims to:
+  - introduce reproducibility and sharing, licensing and citation
+  - get into thinking about dependencies and solutions
+  - get into choosing license, citation and DOI
 ```
+
 ## Documentation
 
-```{nadmonition} Documentation comes in different forms
+```{admonition} Documentation comes in different forms
 
 What *is* documentation?
   - **Tutorials**: learning-oriented, allows the newcomer to get started
