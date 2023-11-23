@@ -207,9 +207,10 @@ Interaction -> Sequence, Communication, Timing, "Interaction overview"
 }
 ```
 
-```{admonition} We will use
+```{admonition} We will i nthe course use
   - Sequence
   - Activity/algorithm flowchart
+  - class diagrams
 ```
 
 ##### Sequence
@@ -281,16 +282,6 @@ stop
 ```{uml} puml/class.puml
 ```
 
-```console
-@startuml
-node foo
-foo --> bar : normal
-foo --> bar1 #line:red;line.bold;text:red  : red bold
-foo --> bar2 #green;line.dashed;text:green : green dashed 
-foo --> bar3 #blue;line.dotted;text:blue   : blue dotted
-@enduml
-```
-
 ```{uml}
 @startuml
 class Car
@@ -312,7 +303,7 @@ Car -- Person : < owns
 ```
 
 #### Tools
-- PlantUML
+- **PlantUML** used in this course
   - Open-source
   -	Can be integrated with IDE:s, Java documentation, Word
   -	Scripts rather than drawing tools
@@ -329,10 +320,10 @@ Car -- Person : < owns
   - <https://mermaid.js.org/>
 
 ### Pseudocode
-- Pseudocode generally does not obey the syntax rules of any particular language
-   - there is no systematic standard form. 
-- Some writers borrow style and syntax from control structures from some conventional programming language, although this is discouraged.
-- Some syntax sources include Fortran, Pascal, BASIC, C, C++, Java, Lisp, and ALGOL. 
+- Pseudocode does not have syntax rules of any particular language
+   - no systematic standard form. 
+- Some borrow style and syntax from some conventional programming language
+   - like Fortran, Pascal, BASIC, C, C++, Java, Lisp, and ALGOL. 
 - Variable declarations are typically omitted. 
 - Function calls and blocks of code, such as code contained within a loop, are often replaced by a one-line natural language sentence.
 
@@ -360,7 +351,6 @@ Car -- Person : < owns
 
     return f
 ```
-
 - Depending on the writer, pseudocode may therefore vary widely in style, 
   - from a near-exact imitation of a real programming language at one extreme
   - to a description approaching formatted prose at the other. 
@@ -380,7 +370,16 @@ Car -- Person : < owns
    - [Planning phase section](https://uppmax.github.io/programming_formalisms_intro/flowcharts.html) aims to 
      - Introduce flowcharts and UML expressions
      - Get into UML coding with PlantUML
+     - Test Pseudocoding
 ```
+
+```{seealso}
+- Diagrams will be cover on
+  - Tuesday during several part of the [Software development processes](https://github.com/UPPMAX/programming_formalisms/blob/main/development_design/README.md#software-development-processes)
+  - Friday during [Modular programming](https://github.com/UPPMAX/programming_formalisms/blob/main/development_design/Modular_Programming.pdf)
+
+```
+
 ## Testing
 
 Does it work for all legal input data sets??
@@ -416,9 +415,11 @@ stop
 
 ```
 
-```{note}
+```{seealso}
 
-   **More about testing day 2-3**
+- More about testing day 3.
+  - [Test-driven development(TDD)](https://github.com/UPPMAX/programming_formalisms/blob/main/tdd/tdd_lecture.pdf)
+  - [Testing lecture](https://github.com/UPPMAX/programming_formalisms/blob/main/testing/testing_lecture.pdf)
 
 ```
 ## Source/version control and collaboration
