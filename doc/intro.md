@@ -42,14 +42,14 @@ END                | 16.00
 - set of computer programs and associated documentation and data.
 - This is in contrast to hardware, from which the system is built and which actually performs the work. 
 - **User-written software: End-user development**
-  - Users create this software themselves and often overlook how important it may be to others.
-  - Depending on how competently the user-written software has been integrated into default application packages, many users may not be aware of the distinction between the original packages, and what has been added by co-workers.
+  - Users create this software themselves and _often overlook how important it may be to others_.
 
-### Some concepts
+### Some software concepts
 - program
 - script (directly interpreted at run time)
 - tool
 - model
+- application
 ---
 
 ```{admonition} Scripting vs programming
@@ -145,10 +145,10 @@ floor=5
 
 #### Functional programming
 
-- more classical as it is more focused on the algorithms
-- functions
-- modules: a way to _gather functions_ with similar functionality
-- also to some extent info-hiding mindset
+- More classical as it is more focused on the algorithms
+- Functions
+- Modules: a way to _gather functions_ with similar functionality
+- Also to some extent info-hiding mindset
 
 ```{admonition} To sum up
 
@@ -159,36 +159,17 @@ floor=5
 ```
 
 ```{seealso} 
-- More on Tuesday: Object-orientation
-- More on Thursday: Algorithms
-- More on Friday: Modular programming
+- More on Tuesday: [Object-orientation](https://github.com/UPPMAX/programming_formalisms/blob/main/development_design/README.md#object-orientation)
+- More on Tues: [Algorithms](https://github.com/UPPMAX/programming_formalisms/blob/main/algorithms/algorithms_lecture.pdf)
+- More on Friday: [Modular programming](https://github.com/UPPMAX/programming_formalisms/blob/main/development_design/Modular_Programming.pdf)
 
 ```
 
 ```{admonition} Your scripting/programming background 
 
-1. Python 91%	(last year 86%)
-1. Bash	58	(80%)
-1. R	56	(42%)
-1. C++	12	(14%)
-1. MATLAB 7%	(3.5%)
-1. C	5%	(12%)
-
-- 1 person each
-  - FORTRAN	2% (14%)
-  - Javascript/JQuery	2% (3.5%)
-  - Perl	2%	(3.5%)
-  - Nim 2% (-)
-
-Not this but last year
-
-  - Julia 0	(5%)
-  - HTML	0	(3.5%)
-  - JAVA	0	(3.5%)
-  - AWK 0 (1 person)
-  - PHP 0 (1 person)
-  - Groovy 0 (1 person)
-  - SQL 0 (1 person)
+```{figure} img/background.png
+:alt: spiral
+:width: 50%
 
 ```
 
