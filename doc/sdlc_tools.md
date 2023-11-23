@@ -427,31 +427,29 @@ stop
 ###  The essence of version control
 Summarized from [Code refinery](https://coderefinery.github.io/git-intro/motivation/)
 
-- System which records snapshots of a project
-- Implements branching:
-  - You can work on several feature branches and switch between them
-  - Different people can work on the same code/project without interfering
-  - You can experiment with an idea and discard it if it turns out to be a bad idea
-- Implements merging:
-  - Person A and B’s simultaneous work can be easily combined
+- System which records **snapshots** of a project
+- Implements **branching**:
+  - You can work on several **feature** branches and switch between them
+  - **Different people** can work on the same code/project without interfering
+  - You can **experiment** with an idea and discard it if it turns out to be a bad idea
+- Implements **merging**:
+  - Person A and B’s simultaneous work can be **easily combined**
 
 ### What we typically like to snapshot
 
-- Software (this is how it started but Git/GitHub can track a lot more)
+- **Software** (this is how it started but Git/GitHub can track a lot more)
 - Scripts
-- Documents (plain text files much better suitable than Word documents)
-- Manuscripts (Git is great for collaborating/sharing LaTeX or Quarto manuscripts)
+- **Documents** (plain text files much better suitable than Word documents)
+- **Manuscripts** (Git is great for collaborating/sharing LaTeX or Quarto manuscripts)
 - Configuration files
-- Website sources
-- tool
+- **Website sources**
 
 ###  Why version control
-- Roll-back functionality
-   - Mistakes happen - without recorded snapshots you cannot easily undo mistakes and **go back to a working version**.
-- Branching
+- **Roll-back functionality**
+   - Mistakes happen - **go back to a working version**.
+- **Branching**
   - Often you need to work on **several issues/features in one code** - without branching this can be messy and confusing.
-  - You can simulate branching by copying the entire code to multiple places but also this will be messy and confusing.
-- Collaboration
+- **Collaboration**
   - With version control, none of these are needed anymore (or have much simpler answers):
     - *"I will just finish my work and then you can start with your changes."*
     - *"Can you please send me the latest version?"*
@@ -459,15 +457,14 @@ Summarized from [Code refinery](https://coderefinery.github.io/git-intro/motivat
     - *"Where is the latest version?"*
     - *"Which version are you using?"*
    - *"Which version have the authors used in the paper I am trying to reproduce?"*
-- Reproducibility
-  - How do you indicate which version of your code you have used in your paper?
+- **Reproducibility**
+  - How do you indicate which **version** of your code you have used in your paper?
   - When you find a bug, how do you know **when precisely** this bug was introduced
-  (Are published results affected? Do you need to inform collaborators or users of your code?).
-- Compare with Dropbox or Google Drive
-  - Document/code is in one place, no need to email snapshots.
-  - How can you use an old version? Possible to get old versions but in a much less useful way - snapshots of files, not directories.
-  - What if you want to work on multiple versions at the same time? Do you make a copy? How do you merge copies?
-  - What if you don't have internet?
+- Compare with **Dropbox or Google Drive**
+  - + Document/code is in **one place**, no need to email snapshots.
+  - - How can you use an **old version**? Possible to get old versions but in a much less useful way - snapshots of files, not directories.
+  - - What if you want to work on **multiple versions** at the same time? Do you make a copy? How do you merge copies?
+  - - What if you **don't have internet**?
 
 ```{discussion} Why Git?
 We will use [Git](https://git-scm.com) to record snapshots of our work:
@@ -494,17 +491,16 @@ Other tools:
 
 #### Remotes
 
-To store your git data on another server, you use remotes. A remote is a repository on its own, with its own branches We can push changes to the remote and pull from the remote.
+- To store your git data on another server, you use remotes. 
+- A remote is a repository on its own, with its own branches We can push changes to the remote and pull from the remote.
 
 You might use remotes to:
-
  - Back up your own work.
-
  - To collaborate with other people.
 
 There are different types of remotes:
 
-- If you have a server you can ssh to, you can use that as a remote.
+- If you have a **own server** you can ssh to, you can use that as a remote.
 - [GitHub](https://github.com) is a popular, closed-source commercial site.
 - [GitLab](https://about.gitlab.com) is a popular, open-core
   commercial site.  Many universities have their own private GitLab servers
@@ -517,25 +513,30 @@ There are different types of remotes:
       - Introduce git and GitHub
       - Get into working with git
       - Get into using GitHub as a remote repository
-   ```
+```
+
 
 ## Collaboration
 
-- Let's say that someone has given you access to a repository online and you want to contribute to it.
-- It is quite easy to make a copy and send a change back.
-- First, we do this a relatively simple way: get repository, make a change
-  locally, and send the change directly back.
-- Then, we make a "pull request" that allows a review.
-- Once we know how code review works, we will be able to propose changes
-  to repositories of others and review changes submitted by external
-  contributors.
+### Example
+- Someone has given you access to a repository online and **you want to contribute** to it.
+- Quite easy to make a **copy and send a change back**.
+  1. get repository, make a change locally, and send the change directly back.
+  2. make a "pull request" that allows a review.
+- Once we know how code review works:
+  -  we will be able to propose changes to repositories of others
+  -  review changes submitted by external contributors.
 
 ```{objectives}
    - [Collaboration](https://uppmax.github.io/programming_formalisms_intro/collab.html) aims to 
      - Get into working more with GitHub for collaboration
-     - Centralized workflow
-     - Forking
+     - **Centralized** workflow (good within a group)
+     - **Forking** (better for contribution to other's project)
      - Contributing to other's projects
+```
+
+```{seealso}
+- Git and GitHub will be used in the other days as well
 ```
 
 ## Reproducibility and sharing
