@@ -104,24 +104,24 @@ see the extra reading section: [SDLC models](https://uppmax.github.io/programmin
 
 ```{admonition} Parts to be covered
 
-- Planning
+- &#9745; Planning
   - Pseudocode
   - Unified Modelling Language
-- Testing
+- &#9745; Testing
   - Different levels
-- Source/version control
+- &#9745; Source/version control
   - Git etc
-- Collaboration
+- &#9745; Collaboration
   - GitHub
-- Reproducibility (for you and others)
+- &#9745; Reproducibility (for you and others)
   - Dependencies
   - (Workflows)
   - Containers (deployment)
-- Sharing
+- &#9745; Sharing
   - open science
   - citation
   - licensing  
-- Documentation
+- &#9745; Documentation
   - Tutorials
   - How-to guides
   - Explanation
