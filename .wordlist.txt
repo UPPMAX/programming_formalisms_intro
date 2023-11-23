@@ -689,3 +689,10 @@ macOS
 Spyder
 RStudio
 GPG
+
+GPL
+AGPL
+indable
+ccessible
+eusable
+nter
