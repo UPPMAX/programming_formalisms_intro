@@ -207,10 +207,10 @@ Interaction -> Sequence, Communication, Timing, "Interaction overview"
 }
 ```
 
-```{admonition} We will i nthe course use
+```{admonition} We will in the course use
   - Sequence
   - Activity/algorithm flowchart
-  - class diagrams
+  - Class diagrams
 ```
 
 ##### Sequence
@@ -550,7 +550,7 @@ There are different types of remotes:
 - Some theory will be given in the [Extra material](https://uppmax.github.io/programming_formalisms_intro/reproducible_deeper.html)
 - We will integrate this topic in the hands-on.
 - We will discuss different methods and tools for better reproducibility in research software and data.
-  - virtual environments with ``pip install`` (venv/virtualenv) will be covered in the hands-on.
+  - Virtual environments with ``pip install`` (venv/virtualenv) will be covered in the hands-on.
   - Conda environment is referred to in the extra material. 
 - We will demonstrate how version control, workflows, containers, and package managers can be used to record reproducible environments and computational steps.
 
@@ -566,30 +566,32 @@ There are different types of remotes:
   
 ```
   
- ### Sharing and licensing and citations
+### Sharing and licensing and citations
  
 ```{Discussion}
-- One-time usage towards distributed package
+**One-time usage towards distributed package**
+- Have others used your code?
+- Did you plan it from beginning?
+- Did you take actions somehow?
 ```
 #### Open science
 
 ##### FAIR
 **“FAIR”** is the current buzzword for data management. You may be asked about it in, for example, making data management plans for grants:
 
-- Findable
+- **F**indable
   - Will anyone else know that your data exists?
   - Solutions: put it in a standard repository, or at least a description of the data. Get a digital object identifier (DOI).
-- Accessible
+- **A**ccessible
    - Once someone knows that the data exists, can they get it?
    - Usually solved by being in a repository, but for non-open data, may require more procedures.
-- Inter-operable
+- **I**nter-operable
    - Is your data in a format that can be used by others, like csv instead of PDF?
    - Or better than csv. Example: 5-star open data
-- Reusable
+- **R**eusable
    - Is there a license allowing others to re-use?
 
 ### Licencing
-[Read more](https://uppmax.github.io/programming_formalisms_intro/sharing_deeper.html#licensing#)
 
 #### Copyright
 - Protects creative expression
@@ -597,11 +599,18 @@ There are different types of remotes:
 - **Derivative works** usually inherit copyright of the thing derived
 - Time frame: essentially forever (lifetime + X years)
 
-When can you use:
+When can you use?
 - When there is a **license** saying you can
 - Limited other cases (private use, fair use: context dependent)
-- In practice: people do many things, but then can't share their
-  output if license does not allow it or is not clarified
+- In practice: people do many things, but then can't share their output if license does not allow it or is not clarified
+
+Examples
+-  Custom/closed/proprietary
+-  Permissive (**MIT**, BSD, Apache)
+-  Weak copyleft share-alike (LGPL, MPL)
+-  Strong copyleft share-alike (**GPL**, AGPL)
+
+[Read more](https://uppmax.github.io/programming_formalisms_intro/sharing_deeper.html#licensing#)
 
 ### Software Citation
 
@@ -610,20 +619,22 @@ When can you use:
 
 ```{keypoints}
 - Share your code! Eventually others will probably use it anyway.
-- Licence your software and do it early. Default is “no one can make copies or derivative works”.
+- Licence your software and do it early. **Default is “no one can make copies or derivative works”**.
 - Get DOI or at least state how to cite your software
 ```
 
 ```{objectives}
-   - [More about sharing](https://uppmax.github.io/programming_formalisms_intro/sharing_deeper.html) aims to 
-     - Introduce reproducibility and sharing, licensing and citation
-     - Get into thinking about dependencies and solutions
-     - Get into choosing license, citation and DOI
+   - [More about sharing](https://uppmax.github.io/programming_formalisms_intro/sharing_deeper.html) aims to: 
+     - introduce reproducibility and sharing, licensing and citation
+     - get into thinking about dependencies and solutions
+     - get into choosing license, citation and DOI
      
 ```
 ## Documentation
 
-```{note} Documentation comes in different forms - what *is* documentation?
+```{nadmonition} Documentation comes in different forms
+
+What *is* documentation?
   - **Tutorials**: learning-oriented, allows the newcomer to get started
   - **How-to guides**: goal-oriented, shows how to solve a specific problem
   - **Explanation**: understanding-oriented, explains a concept
@@ -631,7 +642,7 @@ When can you use:
   **Not to forget**
   - Project documentation:
     - requirements: what is the goal of the software, risks, platforms
-    the analysis: pseudocode and UML
+    - the analysis: pseudocode and UML
     - risk analysis
 ```
 
@@ -639,11 +650,11 @@ When can you use:
 `README.rst` can be enough (more about these formats later).
 
 ```{objectives}
-   - [Documentation](https://uppmax.github.io/programming_formalisms_intro/documentation_deeper.html) aims to 
-     - Introduce motivation for documentation
-     - Get tips for in-code documentation
-     - Get tips for README files
-     - Get tips for full documentation and tutorials
+   - [Documentation](https://uppmax.github.io/programming_formalisms_intro/documentation_deeper.html) aims to:
+     - introduce motivation for documentation
+     - get tips for in-code documentation
+     - get tips for README files
+     - get tips for full documentation and tutorials
 ```
 
 ## Summary of SDLC tools
@@ -662,6 +673,8 @@ When can you use:
   - Planning: UML and pseudocode
   - Development iteration: git
   - Testing: test functions (Covered later)
-  - Collaboration: GitHub, licenses, citation
+  - Collaboration: GitHub
+  - Sharing: GitHub, licenses, citation
   - Documentation: In-code, READMEs, html
+
 ```
