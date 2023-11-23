@@ -13,8 +13,15 @@
     - give some introduction to **concepts** used in the course
     - give some introduction to handy **tools for the software developer**
     - try to **set up the mindset** to find the rest of the week interesting and useful!
-
 ```
+
+```{instructor-note}
+   - Theory
+   - Demos/type-alongs
+   - Exercise
+```
+
+
 ## Preliminary schedule 1st day
 
 Topic|Time
