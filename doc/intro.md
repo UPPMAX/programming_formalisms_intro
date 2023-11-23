@@ -44,6 +44,12 @@ Summary             |  15.20
 Reflection          |  15.30
 END                | 16.00
 
+```{hint}
+- We start with a more theoretical introduction covering the software and tools and mindsets for software development.
+- The second part follows the development of a simple software project.
+- Deeper material not covered in the lessons today can be found in the extra reading part.
+```
+
 ## What is software?
 *Wikipedia*
 - set of computer programs and associated documentation and data.
