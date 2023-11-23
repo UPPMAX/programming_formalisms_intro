@@ -12,6 +12,9 @@
 ```
 
 ```{instructor-note}
+   - Theory
+   - Demos/type-alongs
+   - Exercise
    
 ```
 
@@ -81,11 +84,15 @@ see the extra reading section: [SDLC models](https://uppmax.github.io/programmin
 - Extreme Programming
   - Pair programming
     - Collaborate, continuous code inspection
-    - real-time development technique to increase algorithm implementation
+    - Real-time development technique to increase algorithm implementation
   - Test-driven development
     - Write test
     - Write function to fail test
-   - Write code to pass test
+    - Write code to pass test
+   
+```{seealso}
+- [Software Development Lifecycle on Tuesday](https://github.com/UPPMAX/programming_formalisms/blob/main/development_design/README.md]
+```
 
 ```{admonition} Conclusion
   - Each team has unique requirements
@@ -94,6 +101,8 @@ see the extra reading section: [SDLC models](https://uppmax.github.io/programmin
 ```
 
 ## The tools/concepts for Developing a programming project
+
+```{admonition} Parts to be covered
 
 - Planning
   - Pseudocode
@@ -117,6 +126,7 @@ see the extra reading section: [SDLC models](https://uppmax.github.io/programmin
   - How-to guides
   - Explanation
   - Reference 
+```
 
 ## Planning: Analysis and design
 
