@@ -195,11 +195,16 @@ Learning outcomes
 
 .. toctree::
    :maxdepth: 2
-   :caption: Lesson:
+   :caption: Theory lessons:
 
    intro.md
    sdlc_tools.md 
    flowcharts.md
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Project lessons:
+
    startup.md
    startup_code.md
    #reproducible.md 
