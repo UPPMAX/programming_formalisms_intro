@@ -70,9 +70,48 @@ Theory: The gravity form the other planets, especially Jupiter, causes the chang
 4. Add more planets?
 ```
 
-### Let's make a flowchart of the program parts
+`````{admonition} PlantUML Cheat sheet
 
-``````{demo}
+**UML code** (if this is rendered automatically, turn off the plugin!)
+```console
+@startuml
+skin rose
+title Repeat - Activity Diagram
+
+start
+repeat
+  :Eat Hot Wings;
+  :Drink Homebrew;
+repeat while (Still Hungry?)
+stop
+@enduml
+```
+
+**UML graph**
+```{uml}
+@startuml
+
+skin rose
+
+title Repeat - Activity Diagram 
+
+
+start
+
+repeat
+  :Eat Hot Wings;
+  :Drink Homebrew;
+repeat while (Still Hungry?)
+
+stop
+
+@enduml
+```
+``````
+
+#### Let's make a flowchart of the program parts
+
+``````{exercise}
 We want to make a activity diagram of these steps.
 
 I will use <https://www.planttext.com/> for this
@@ -80,16 +119,41 @@ I will use <https://www.planttext.com/> for this
 - define some parameters
 - initialize earth (and Jupiter later on)
 - repeat until simulation time is met
+  - calculate new position
   - calculate acceleration
   - calculate velocity in two dimensions
 - then plot figure 
 
-
-
 ````{solution}
 ```console
 @startuml
+skin rose
+title Planet flowchart
+start
 
+:define some parameters;
+:initialize earth (and Jupiter);
+
+repeat
+  :calculate new position;
+  :calculate acceleration;
+  :calculate velocity in two dimensions;
+
+repeat while (simulation time is met) is (no)
+->yes;
+:figure plotting;
+stop
+
+@enduml
+```
+````
+
+It should look like this:
+
+```uml
+@startuml
+skin rose
+title Planet flowchart
 start
 
 :define some parameters;
@@ -104,16 +168,17 @@ repeat while (simulation time is met) is (no)
 :figure plotting;
 stop
 
-@enduml
+
 ```
-````
 
 ```````
 
+```{seealso}
+**Syntax for algorithm flowchart**
+- [plantuml.com](https://plantuml.com/)
+```
 
-https://www.planttext.com/
-
-## Design
+### Design
 
 - A way to visualize a system's architectural blueprints in a diagram, including elements such as:
   - any activities (jobs);
@@ -125,47 +190,14 @@ https://www.planttext.com/
 
 - Although originally intended for object-oriented design documentation, UML has been extended to a larger set of design documentation, and been found useful in many contexts.
 
-
-
-### Let's make a flowchart of the program parts
-
-#### Syntax for algorithm flowchart
-- [plantuml.com](https://plantuml.com/)
-
-`````{admonition} PlantUML Cheat sheet
-
-```{uml}
-@startuml
-start
-:Hello world;
-:This is defined on
-several **lines**;
-stop
-@enduml
+```{note}
+    - Many people jump this step feels it's more comfortable to write in the actual programming language directly
+    - This will not be covered deeply in the lessons of the week
 ```
 
-Start with 
 
-```console
-@startuml
-start
-:Hello world;
-:This is defined on
-several **lines**;
-stop
-@enduml
 
-``` 
-``````
-
-#### Exercise
-````{challenge} Test some psuedocode 10 min
-- go to [plantuml server](https://www.plantuml.com/plantuml/uml/SyfFKj2rKt3CoKnELR1Io4ZDoSa70000)
-- try to make a flowchart of the program parts 
-- have a look on examples, for help: [activity-diagram](https://plantuml.com/activity-diagram-beta)
-````
-
-### Do some pseudocode of the calculations
+#### Do some pseudocode of the calculations
 
 ```{Challenge} Demo of Pseudocode
 
@@ -173,7 +205,7 @@ stop
 Define constants
 Define initial values
 	positions
-	velocity (balance of gravity and centrifugal force
+	velocity (balance of gravity and centrifugal force)
 (Allocate (book) space for long vectors	plan iteration)
 Iteration
 	Change of positions
@@ -184,10 +216,6 @@ Calculate orbit parameters
 Plot time series of parameter change
 ´´´
 
-```{note}
-More practicals and UML Pseudocode later this week!
-```
-
 ## Wrap-up
 
 ```{Discussion} If there is time
@@ -197,6 +225,11 @@ In Breakout-rooms 6-8 people:
   - pseudocode?
 - Experiences?
 - Share in the end 1-3 inputs in HackMD
+```
+
+```{note}
+- More practicals on UML later this week!
+- Pseudocode will not be covered deeply in the lessons of the week
 ```
 
 
@@ -210,4 +243,5 @@ In Breakout-rooms 6-8 people:
     - Designing phase of programming
   - Pseudocode gives a more detailed description what you want the program to do.
     - Can be highly personal or very language-like
+    - Many people jump this step feels it's more comfortable to write in the actual programming language directly
 ```` 
