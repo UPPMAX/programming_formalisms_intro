@@ -28,36 +28,22 @@ Programming formalisms — Introduction day
       - Git and Github
    - **convince the benefits of sharing and social coding**
  
+Your background
+---------------
+
+.. figure:: img/background.png
+   :alt: spiral
+   :width: 100%
+
+
+
 Your expectations
 -----------------
-    
-   - Optimisation/speed 8
-   - Structured/systematic 	7
-   - Reusable 5
-   - Testing 4
-   - Organise	3
-   - Modular 3
-   - Best practice 3
-   - Efficiency 3
-   - Team/collaboration 3
-   - Object 2
-   - Design 2
-   - Formalism 2
-   - Paradigm 2
-   - Bioinformatic tools 2
-   - Revision 1
-   - Advanced level 1
-   - Comprehensive intro 1
-   - Pair coding 1
-   - TDD 1
-   - Publish 1
-   - High quality 1
-   - Planning 1
-   - Reproducible 1
-   - Easy-to-use 1
-   - Readable 1
-   - Refine 1
-   - Functional 1
+
+
+.. figure:: img/expectations23dec.png
+   :alt: spiral
+   :width: 100%
 
 .. admonition:: Content and expectations
 
