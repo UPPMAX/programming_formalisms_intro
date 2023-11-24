@@ -696,3 +696,5 @@ indable
 ccessible
 eusable
 nter
+
+dec
