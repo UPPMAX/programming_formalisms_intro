@@ -257,6 +257,19 @@ In Breakout-rooms 6-8 people:
 - Pseudocode will not be covered deeply in the lessons of the week
 ```
 
+```{admonition} Parts to be covered
+
+- &#9745; Planning
+  - Pseudocode
+  - Unified Modelling Language
+- &#9744; Testing
+  - We don't do this today!
+- &#9744; Source/version control
+- &#9744; Collaboration
+- &#9744; Sharing
+- &#9744; Documentation
+
+```
 
 ## Summary
 
