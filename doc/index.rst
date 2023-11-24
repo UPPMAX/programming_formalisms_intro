@@ -185,12 +185,12 @@ Learning outcomes
 
    intro.md
    sdlc_tools.md 
-   flowcharts.md
 
 .. toctree::
    :maxdepth: 2
    :caption: Project lessons:
 
+   flowcharts.md
    startup.md
    startup_code.md
    #reproducible.md 
