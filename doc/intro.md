@@ -182,7 +182,7 @@ floor=5
 
 ```{figure} img/language_dec23.png
 :alt: spiral
-:width: 50%
+:width: 100%
 
 ```
 
