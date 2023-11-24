@@ -1,7 +1,7 @@
 # Start the project
 ```{Objectives}
-   - think about structure of the files and folders for the project
-   - think about documentation already
+   - Think about structure of the files and folders for the project
+   - Think about documentation already
 ```
 
 ```{note}
@@ -10,7 +10,7 @@
 - The following steps can be very valuable for you in a couple of months as well as you revisit your code and don't know what it does or why you did this and that.
 ```
 
-## First things: order your files!
+## First things: Think of the order your files!
 
 - Think that **everything is worth to be part of documentation** (like GitHub directory tree)
 - The parts from the software development cycle
@@ -43,13 +43,13 @@ Different projects should have separate folders
 ```
 
 ```{note}
-- If software is reused in several projects it can make sense to put them in own repo.
-- We will revisit this structure in the coming sessions as well!
+- If software is reused in several projects it can make sense to put them in its own repo, not connected to a specific research project
+
 ```
 
 ## Start with a new GitHub project
 
-```{discussion}
+```{note}
 - For the course project we do it in this order, but that is not necessary in all cases.
 - Typically you may start locally in Git repository and later push to a GitHub repository (more next session about Git)
 - The reason for starting here is that we can get our PlantUML render in the browser!
@@ -57,6 +57,7 @@ Different projects should have separate folders
 
 ### Type-along: Create a new repository on GitHub
 
+``````{type-along}
 Make sure that you are **logged into GitHub**.
 
 ```{figure} img/New_repo.png
@@ -95,6 +96,8 @@ and
 - There are prewritten text for the different types.
 - More info at [Licensing](https://uppmax.github.io/programming_formalisms_intro/sharing_deeper.html#licensing)
 
+``````
+
 ## README files
 
 **Advantages**
@@ -128,7 +131,7 @@ README file should include:
 1. Extend the README file a little bit with an **About section** in Markdown format describing the project.
   - Use the **Pencil** button
   - Use the goals stated in last session). 
-  - Get inspiration from https://www.makeareadme.com/ and a favorite Git repo or https://github.com/yampelo/beagle. 
+  - Get inspiration from <https://www.makeareadme.com/> and a favorite Git repo or <https://github.com/yampelo/beagle>. 
 
 
 ```markdown
@@ -194,6 +197,33 @@ automatically checked out.
 - GitHub Actions are workflows defined by you, like:
   - for automatic testing after each commit (Used in the test lessons)
   - for GitHub Pages, briefly covered in last session today or Extra reading: [Documentation](https://uppmax.github.io/programming_formalisms_intro/documentation_deeper.html).
+ 
+```{seealso}
+- [Workshop on GitHub without command-line](https://coderefinery.github.io/github-without-command-line/ )
+``` 
+ 
+```{admonition} Parts to be covered
+
+- &#9745; Planning
+  - Pseudocode
+  - Unified Modelling Language
+- &#9744; Testing
+  - Different levels
+  - We don't do this today!
+- &#9745; Source/version control
+  - Git
+    - We have a starting point!
+- &#9745; Collaboration
+  - GitHub
+    - We have a starting point!
+- &#9745; Sharing
+  - &#9745; open science
+  - &#9744; citation
+  - &#9745; licensing  
+- &#9744; Documentation
+
+```
+
 
 ```{keypoints}
 - A repository can have one or multiple remotes (we will revisit these later).
