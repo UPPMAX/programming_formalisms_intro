@@ -180,7 +180,7 @@ floor=5
 
 ```{admonition} Your scripting/programming background 
 
-```{figure} img/language(1).png
+```{figure} img/language_dec23.png
 :alt: spiral
 :width: 50%
 
