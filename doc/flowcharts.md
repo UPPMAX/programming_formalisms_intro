@@ -9,8 +9,6 @@
    - We will give an overview of UML diagrams
       - learn when to use
       - learn basic notations
-      - (Test with graphical interface)
-      - (Test with the script based plantUML)
    - We will see some examples of Pseudocode   
    
 ```
@@ -20,24 +18,16 @@
 
 ## Some overview
 
-### The planning steps
-- get an overview of the project/program.
-- help planning writing the code
-- identify parts needed
-
-Lifecycle steps, example
-1.	Plan/initiate
-2.	Gather requirements
-3.	Design
-
-or
-
+```{admonition} The planning steps
 1. Analysis
+  - Get an overview of the project/program and goals
   - to state the problem and define inputs and outputs
-    - graphical tools like UML
-2. Design
+  - Gather requirements
+  - graphical tools like UML
+1. Design
   - to find out the specific algorithms needed
-    - pseudocode
+  - pseudocode
+```
 
 ### Analysis step
 - UML Diagrams
@@ -57,14 +47,14 @@ or
 - Functional programming
   - Identify algorithms 
 
-## Analysis
+## The Planet project
 
-### State our project goal
+### Analysis
 
-```{note}
-**Planet project**
-The climate last about 1 million years has been largely determined but the change of the eccentricity (elongation) of Earth's orbit (One of the [Milankovitch cycles](https://climate.nasa.gov/news/2948/milankovitch-orbital-cycles-and-their-role-in-earths-climate/).
-The glacial cycles (daily speaking: ice ages) with a period of about 100 000 years are thought to be due to this.
+```{admonition} Planet project
+Background
+- The climate last about 1 million years has been largely determined but the change of the eccentricity (elongation) of Earth's orbit (One of the [Milankovitch cycles](https://climate.nasa.gov/news/2948/milankovitch-orbital-cycles-and-their-role-in-earths-climate/).
+- The glacial cycles (daily speaking: ice ages) with a period of about 100 000 years are thought to be due to this.
 Theory: The gravity form the other planets, especially Jupiter, causes the change of the eccentricity
 - **Problem*: Reproduce Milankovitch cycle of eccentricity (100ka)
 - **Method**: Use Python
@@ -73,15 +63,57 @@ Theory: The gravity form the other planets, especially Jupiter, causes the chang
   - Perhaps also user input of length of simulation
 - **Output**: Graph of orbits and a timeseries of an eccentricity parameter
 
-**Development steps**
+**Development steps** (we extend the program with iterations)
 1. Earth-sun system
 2. Add Jupiter
 3. Make modular
 4. Add more planets?
-
 ```
 
-### Design
+### Let's make a flowchart of the program parts
+
+``````{demo}
+We want to make a activity diagram of these steps.
+
+I will use <https://www.planttext.com/> for this
+
+- define some parameters
+- initialize earth (and Jupiter later on)
+- repeat until simulation time is met
+  - calculate acceleration
+  - calculate velocity in two dimensions
+- then plot figure 
+
+
+
+````{solution}
+```console
+@startuml
+
+start
+
+:define some parameters;
+:initialize earth (and Jupiter);
+
+repeat
+  :calculate acceleration;
+  :calculate velocity in two dimensions;
+
+repeat while (simulation time is met) is (no)
+->yes;
+:figure plotting;
+stop
+
+@enduml
+```
+````
+
+```````
+
+
+https://www.planttext.com/
+
+## Design
 
 - A way to visualize a system's architectural blueprints in a diagram, including elements such as:
   - any activities (jobs);
