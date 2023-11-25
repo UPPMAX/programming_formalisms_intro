@@ -186,6 +186,69 @@ computer**.
 - After downloading the `.git` part the branch pointed to by HEAD is
 automatically checked out.
 
+## What is Git, and what is a Git repository?
+
+- Git is a version control system: can **record/save snapshots** and track the content of a folder as it changes over time.
+- Every time we **commit** a snapshot, Git records a snapshot of the **entire project**, saves it, and assigns it a version.
+- These snapshots are kept inside a sub-folder called `.git`.
+- If we remove `.git`, we remove the repository and history (but keep the working directory!).
+- `.git` uses relative paths - you can move the whole thing somewhere else and it will still work
+- Git doesn't do anything unless you ask it to (it does not record anything automatically).
+- Multiple interfaces to Git exist (command line, graphical interfaces, web interfaces).
+
+  
+```{admonition} Concepts in Git
+- **repository**: The project, contains all data and history (commits, branches, tags).
+- **add**: Stage you files (collect what to be added to the git record — a kind of middle step)
+- **commit**: Snapshot of the project, gets a unique identifier (e.g. `c7f0e8bfc718be04525847fc7ac237f470add76e`).
+- **cloning**: Copying the whole repository to your laptop - the first time. It is not necessary to download each file one by one.
+- `git clone` copies everything: all commits and all branches.
+- Branches on the remote appear as (read-only) local branches with a prefix, e.g. `origin/main`.
+- We synchronize commits between local and remote with `git fetch`/`git pull` and `git push`.
+```
+   
+## Before we start we need to configure Git
+
+```{prereq}
+
+   -  **Git and GITHUB should be configured prior to the course**
+      following [https://coderefinery.github.io/installation](https://github.com/UPPMAX/programming_formalism/blob/main/setup.md)).
+   -  Being comfortable with the command line. No expertise is required,
+      but the lesson will be mostly taken from the command line.
+   -  Students should be familiar with using a **text editor** on their
+      system. Emacs and Vim are excellent choices if you know how to use
+      them but Nano or Notepad on Windows are sufficient.
+      
+```    
+   
+```{Attention}
+- Start your terminal of choice
+   - MAC terminal 
+   - iTerm
+   - WSL environment in
+     - MobaxTerm
+     - Visual Studio Code
+   - Git BASH  
+   - PowerShell
+
+```
+
+If you haven't already configured Git, please follow the instructions in the
+[installation instructions](https://uppmax.github.io/programming_formalisms_intro/setup.html#shell-and-git).
+
+```console
+$ git config --global user.name "Your Name"
+$ git config --global user.email yourname@example.com
+$ git config --global core.editor nano
+```
+
+Verify with:
+```console
+$ git config --list
+```
+
+
+
 ## Working on GitHub
 
 - You can do basically the same work at GitHub as in your local git repo
