@@ -1,7 +1,7 @@
 # Collaboration
 
 ```{discussion}
-**Optional**
+**Menti**
 - Have you downloaded programs/tools from GitHub?
 - Have you uploaded your own programs/tools and believe that people are using your tool?
 ```
@@ -11,13 +11,14 @@
       - centralized collaboration
       - Forked collaboration
       - How to contribute
+   - You will test this more later this week so we won't get deep
 ```
 
 ```{instructor-note}
 
 ```
 
-Different types of remotes:
+```{admonition} Different types of remotes
 - If you have a server you can ssh to, you can use that as a remote.
 - [GitHub](https://github.com) is a popular, closed-source commercial site.
 - [GitLab](https://about.gitlab.com) is a popular, open-core
@@ -25,40 +26,47 @@ Different types of remotes:
   set up.
 - [Bitbucket](https://bitbucket.org/product/guides/getting-started/overview) is yet another popular commercial site.
 - Another option is [NotABug](https://notabug.org)
-  
+```
+   
 ## GitHub
 There are two more ways to create “copies” of repositories into your user space:
 
 - A repository can be marked as **template** and new repositories can be **generated** from it, like using a cookie-cutter. The newly created repository will start with a new history, only one commit, and not inherit the history of the template.
 - You can **import** a repository from another hosting service or web address. This will preserve the history of the imported project.
 
-## Commits, branches, repositories, forks, clones
+```{admonition} Cheat-sheet
+**Commits, branches, repositories, forks, clones**
 
 - **repository**: The project, contains all data and history (commits, branches, tags).
 - **commit**: Snapshot of the project, gets a unique identifier (e.g. `c7f0e8bfc718be04525847fc7ac237f470add76e`).
 - **branch**: Independent development line, often we call the main development line `master` or `main`.
 - **tag**: A pointer to one commit, to be able to refer to it later. Like a [commemorative plaque](https://en.wikipedia.org/wiki/Commemorative_plaque)
   that you attach to a particular commit (e.g. `phd-printed` or `paper-submitted`).
-- **cloning**: Copying the whole repository to your laptop - the first time. It is not necessary to download each file one by one.
-- **forking**: Taking a copy of a repository (which is typically not yours) - your
-  copy (fork) stays on GitHub and you can make changes to your copy.
-
+- **cloning**: Copying the whole repository to your laptop - the first time.
+  - It is not necessary to download each file one by one.
+  - good within a group  
+- **forking**: Taking a copy of a repository (which is typically not yours)
+  - your copy (fork) stays on GitHub and you can make changes to your copy.
+  - better for contribution to other's project
 - `git clone` copies everything: all commits and all branches.
 - Branches on the remote appear as (read-only) local branches with a prefix, e.g. `origin/master`.
 - We synchronize commits between local and remote with `git fetch`/`git pull` and `git push`.
-- Repositories that are shared online often synchronize via pull requests or merge requests.
-- Repositories that are forked or cloned do not automatically synchronize themselves.
+- Repositories that are shared online often synchronize via **pull requests** or **merge requests**.
+- Repositories that are forked or cloned **do not automatically synchronize themselves**.
+```
 
 ## Centralized workflow
+
 ```{figure} img/centralized.svg
 :alt: Centralized layout
 :width: 50%
 
-Centralized layout. **Red** is the repository on GitHub.  **Blue** is
-where all contributors work on their own computers.
+**Centralized layout**
+- **Red** is the repository on GitHub.
+- **Blue** is where all contributors work on their own computers.
 ```
 
-- Centralized workflow is often used for remote collaborative work.
+- Centralized workflow is often used for **remote collaborative work**.
 - `origin` refers to where you cloned from (but you can relocate it).
 - `origin/mybranch` is a read-only pointer to branch `mybranch` on `origin`.
 - These read-only pointers only move when you `git fetch`/`git pull` or `git push`.
@@ -69,16 +77,14 @@ where all contributors work on their own computers.
 :alt: Centralized layout
 :width: 50%
 
-Forking workflow.  **Red** is the central repository, where only
-owners have access.  **Green** are *forks* on Github (copy for a
-single user to work on).  **Blue** are local copies where contributors
-work on their own computer.
+**Forking workflow**
+- **Red** is the central repository, where only owners have access.
+- **Green** are *forks* on GitHub (copy for a single user to work on).
+- **Blue** are local copies where contributors work on their own computer.
 ```
 
 In the forking layout described above we work with **multiple remotes**,
-in this case **two remotes**: One remote refers to the "central" repository, and the other
-remote refers to the fork.
-
+in this case **two remotes**: One remote refers to the **"central"** repository, and the other remote refers to the **"fork"**.
 
 - Working with multiple remotes is not as scary as it might look.
 - `origin` is just an alias/placeholder.
@@ -95,7 +101,7 @@ remote refers to the fork.
 ### Contributing very minor changes
 
 - Fork repository
-- Create a branch
+- Create a branch (e.g. with your name)
 - Commit and push change
 - File a pull request or merge request
 
@@ -109,7 +115,10 @@ remote refers to the fork.
 - If you are working on the fix, indicate it in the issue so that others know that somebody is working on it and who is working on it
 - Submit your fix as pull request or merge request which references/closes the issue
 
-```{challenge} If time allows
+```{challenge} (Optional) Add to another's project
+
+**You can from the breakout room group decide on some collaboration if you want to!**
+
 - Make issue and pull requests
 - Remember that we were not happy with the results
 - Can we easily add one or more planets?
@@ -130,6 +139,10 @@ Saturn| 95.2 | 9.54 | 8.54
 
 - For ideas view Code Refinery's  [Centralized workflow](https://coderefinery.github.io/git-collaborative/centralized/)
   
+```
+
+```{seealso}
+You will work more with Git and GitHub and collaborate the other days of the week.
 ```
 
 ```{keypoints}
