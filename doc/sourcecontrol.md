@@ -606,6 +606,42 @@ def figure_orbit(x,y,xJ,yJ,e):
 - add and commit, possibly several times
 
 ``````
+## In-code documentation
+
+- Comments, function docstrings, ...
+- Advantages
+  - Good for programmers
+  - Version controlled alongside code
+  - Can be used to auto-generate documentation for functions/classes
+- Disadvantage
+  - Probably not enough for users
+   
+````{discussion}
+**Comments examples**
+
+Let's take a look at two example comments (comments in python start with `#`):
+
+**Comment A**
+```python
+# Now we check if temperature is larger then -50:
+if temperature > -50:
+    print('do something')
+```
+
+**Comment B**
+```python
+# We regard temperatures below -50 degrees as measurement errors
+if temperature > -50:
+    print('do something')
+```
+Which of these comments is best? Can you explain why?
+````
+```{solution} Solution
+- Comment A describes **what** happens in this piece of code, whereas comment B describes **why** this piece of code is there, i.e. its **purpose**.
+- Comments in the form of B are much more useful, comments of form A are redundant and we should avoid them.
+```
+
+**Why and not how**
 
 
 ### Function docstrings
@@ -759,6 +795,26 @@ $ git merge
 :class: with-border
 ```   
 
+```{admonition} Parts to be covered
+- &#9745; Planning
+  - Pseudocode
+  - Unified Modelling Language
+- &#9744; Testing
+  - We don't do this today!
+- &#9745; Source/version control
+  - We have a starting point with code
+  - git history
+  - git branches
+- &#9745; Collaboration
+  - GitHub
+    - We have a starting point!
+- &#9745; Sharing
+  - &#9745; open science
+  - &#9744; citation
+  - &#9745; licensing  
+- &#9745; Documentation
+  - docstrings
+```
   
 ```{Keypoints}
 - Initializing a Git repository is simple: git init.
