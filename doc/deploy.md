@@ -175,16 +175,15 @@ GitHub, GitLab, and Bitbucket make it possible to serve HTML pages:
 Copyleft is the legal technique of granting certain freedoms over copies of copyrighted works with the requirement that the same rights be preserved in derivative works.
 
 1. Custom/closed/proprietary
-    Derivative work typically not possible
-2. Permissive (MIT, BSD, Apache)
-    Derivative work does not have to be shared
-    Permissive: gives the public permission to use, modify, and share, without any condition for downstream licensing
-    If the licenses of components are permissive, one may use any open license they want.
-3. Weak copyleft share-alike (LGPL, MPL)
-    Derivative work is free software but is limited to the component
-4. Strong copyleft share-alike (GPL, AGPL)
-    Derivative work is free software and derivative work extends to the combined project
-    If the licenses of components are strong copyleft, one must use the same license
+  - Derivative work typically not possible
+  - Unusual in academics 
+2. Permissive (**MIT**, BSD, Apache)
+  - Derivative work does not have to be shared    
+3. Weak copyleft share-alike (**LGPL**, MPL)
+  - Derivative work is free software but is limited to the component
+4. Strong copyleft share-alike (**GPL**, AGPL)
+  - Derivative work is free software and derivative work extends to the combined project    
+
 ```
 
 ```{admonition} Citation bullets    
@@ -198,6 +197,7 @@ Copyleft is the legal technique of granting certain freedoms over copies of copy
 
 ```{admonition} Git/GitHub Repo 
     README.md
+         - with citation info
     License
     Figures
         figure outputs
@@ -211,15 +211,17 @@ Copyleft is the legal technique of granting certain freedoms over copies of copy
         
 ```        
 
-``````{challenge} Update your documentation
-- You can work now in GitHub directly
+``````{challenge} (Optional) Update your documentation
+- You can now work in GitHub directly
+- Do ``git push`` first from local command-line!
 - Revisit your README and update it with info after all our commits
   - About
   - Installation
   - Citing
 - License
 - Lastly, update the doc/index.md file that should describe
-- Do a git pull to have the same version of your project repo locally!
+- Do a ``git pull`` to have the same version of your project repo locally!
 ``````
+
 
 
