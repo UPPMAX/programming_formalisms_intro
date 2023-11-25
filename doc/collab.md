@@ -145,6 +145,29 @@ Saturn| 95.2 | 9.54 | 8.54
 You will work more with Git and GitHub and collaborate the other days of the week.
 ```
 
+```{admonition} Parts to be covered
+- &#9745; Planning
+  - Pseudocode
+  - Unified Modelling Language
+- &#9744; Testing
+  - We don't do this today!
+- &#9745; Source/version control
+  - git history
+  - git branches
+- &#9745; Collaboration
+  - GitHub
+    - We have a starting point!
+  - Some overview of collaboration
+- &#9745; Sharing
+  - &#9745; open science
+  - &#9745; citation
+  - &#9745; licensing
+  - &#9745; reproducible
+- &#9745; Documentation
+  - docstrings
+  - README
+```
+
 ```{keypoints}
 - Communicate and discuss before coding massive changes.
 - Cross-reference discussions, proposals, and code changes.
