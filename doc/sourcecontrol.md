@@ -103,7 +103,7 @@ import matplotlib.pyplot as plt
 
 #constants
 G=6.6743e-11
-AU=149.597871e9
+AU=149.597871e9 # 1 astronomical unit (AU) is the mean distance between sun and Earth
 AU1=150.8e9
 dJ=5.203*AU
 mj=5.97219e24
@@ -232,8 +232,7 @@ index 60b8b20..8061461 100644
 
  #constants
  G=6.6743e-11
--AU=149.597871e9 # 1 astronomical unit (AU) is the mean distance between sun and Earth
-+AU=149.597871e9
+ AU=149.597871e9 # 1 astronomical unit (AU) is the mean distance between sun and Earth
  AU1=150.8e9
 +dJ=5.203*AU
  mj=5.97219e24
@@ -609,9 +608,7 @@ def figure_orbit(x,y,xJ,yJ,e):
 ``````
 
 
-
-
-## Docstrings
+### Function docstrings
 A docstring is a structured comment associated to a segment of code (i.e. function or class)
 
 Good docstrings describe:
@@ -646,7 +643,9 @@ def mean_temperature(data):
 
 ## Meanwhile...  
   
-````{challenge} Back in main branch
+````{typealong}
+
+**Back in main branch**
 - We spotted some unnecessary ``print`` lines in the main branch code.
 - Go to the main branch:
 ```git
@@ -665,15 +664,11 @@ git commit -m "rm print"
   
 - We can now check the history with a command that graphically tries to show the log with branches
 
-````{admonition} **An important alias**
----
-class: important
----
+````{tip}
 
-We will now define an *alias* in Git, to be able to nicely visualize branch
-structure in the terminal without having to remember a long Git command
-(more details about aliases are given
-in a later section).
+**An important alias**
+
+We will now define an *alias* in Git, to be able to nicely visualize branch structure in the terminal without having to remember a long Git command.
 
 ```console
 $ git config --global alias.graph "log --all --graph --decorate --oneline"
