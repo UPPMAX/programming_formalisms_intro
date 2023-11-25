@@ -209,7 +209,30 @@ Copyleft is the legal technique of granting certain freedoms over copies of copy
         index
         planning documents
         
-```        
+```
+
+```{admonition} Parts to be covered
+- &#9745; Planning
+  - Pseudocode
+  - Unified Modelling Language
+- &#9744; Testing
+  - We don't do this today!
+- &#9745; Source/version control
+  - git history
+  - git branches
+- &#9745; Collaboration
+  - GitHub
+    - We have a starting point!
+- &#9745; Sharing
+  - &#9745; open science
+  - &#9745; citation
+  - &#9745; licensing
+  - &#9745; reproducible
+- &#9745; Documentation
+  - docstrings
+  - README
+
+```
 
 ``````{challenge} (Optional) Update your documentation
 - You can now work in GitHub directly
