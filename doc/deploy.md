@@ -9,7 +9,7 @@
      - some theory of packages
      - some theory of workflows
      - some theory of containers
-     - some info about tutorials/reference/howTo guides
+     - some info about Tutorials/Reference/HowTo guides
 ```
 
 ```{attention}
@@ -24,7 +24,7 @@
 
 ### Conda, Anaconda, pip, Virtualenv, Pipenv, pyenv, Poetry, requirements.txt …
 
-**These tools try to solve the following problems:**
+**These _Python-related_ tools try to solve the following problems:**
 -	**Defining a specific set of dependencies**, possibly with well-defined versions
 -	**Installing those dependencies** mostly automatically
 -	**Recording the versions** for all dependencies
@@ -34,20 +34,10 @@
    -	Using **different Python/R versions** per project??
    -    Provide tools and services to **share packages**
 
-[The tools](https://uppmax.github.io/programming_formalisms_intro/reproducible_deeper.html#the-tools)
-
 [Python packaging](https://aaltoscicomp.github.io/python-for-scicomp/packaging/).
 - Make Python packages of your code.
-
-**Course advertisement**
-[Python for scientific computing](https://aaltoscicomp.github.io/python-for-scicomp/)
-
-### Record our environment for other users
-
-- We can make other users aware of the dependencies for our project.
-- One can state those specifically as a list in a README
-- Or, we can make a ready file (in python) 
-- Possibilities for other languages can be
+  
+- **Possibilities for other languages can be**
   - C/C+
     - CMake
     - Conda
@@ -56,6 +46,19 @@
   - Julia
     - Pkg.jl
 - [More info](https://uppmax.github.io/programming_formalisms_intro/reproducible_deeper.html#recording-dependencies)
+
+[The tools](https://uppmax.github.io/programming_formalisms_intro/reproducible_deeper.html#the-tools)
+
+
+
+**Course advertisement**
+[Python for scientific computing](https://aaltoscicomp.github.io/python-for-scicomp/)
+
+### Record our environment for other users
+
+- We can make other users aware of the dependencies for our Python project.
+- One can state those specifically as a list in a README
+- Or, we can make a ready file (in python) 
 
 ``````{challenge} Save your requirements as a file 
 - Save your requirements as a file that user can run to get the same dependencies as you
@@ -75,23 +78,26 @@ $ pip install -r requirements.txt
 
 ## Workflows
 
-```{admonition} Learn more
+```{seealso}
+**Learn more**
 [Workflow management by CodeRefinery](https://coderefinery.github.io/reproducible-research/workflow-management/)
 [Snakemake by CodeRefinery](https://nbis-reproducible-research.readthedocs.io/en/course_2104/snakemake/)
 ```
 ## Containers
 
-Popular container implementations:
+**Popular container implementations:**
 - Docker
 - Singularity (popular on high-performance computing systems)
 - Apptainer (popular on high-performance computing systems, fork of Singularity)
 - Docker images can be converted to Singularity/Apptainer images
 - Singularity Python can convert Docker files to Singularity definition files
-[Environments by CodeRefinery](https://coderefinery.github.io/reproducible-research/environments)
-[Containers in the extra material](https://uppmax.github.io/programming_formalisms_intro/reproducible_deeper.html#containers)
+
+- [Environments by CodeRefinery](https://coderefinery.github.io/reproducible-research/environments)
+- [Containers in the extra material](https://uppmax.github.io/programming_formalisms_intro/reproducible_deeper.html#containers)
 
 
 ```{keypoints}
+**Make sure it works for other or you in the future!**
   - Preserve the steps for re-generating published results.
   - Hundreds of workflow management tools exist.
   - Snakemake is a comparatively simple and lightweight option to create transferable and scalable data analyses.
@@ -127,6 +133,7 @@ Popular container implementations:
   - Generates HTML from Markdown.
   - GitHub supports this without adding extra build steps.
 - [MkDocs](https://www.mkdocs.org/)
+  - Example: [Bianca course](https://uppmax.github.io/bianca_workshop/)
 
 There are many more ...
 
@@ -137,7 +144,8 @@ GitHub, GitLab, and Bitbucket make it possible to serve HTML pages:
 
 - [Bitbucket Pages](https://www.w3schools.com/git/git_remote_pages.asp?remote=bitbucket)
 - [GitLab Pages](https://pages.gitlab.io)
-- [Read the docs](http://readthedocs.org) ← this is what NBIS use for some course material
+- [Read the docs](http://readthedocs.org) ← this is what NBIS uses for some course material
+  - Example: [NBIS Introduction to Git](https://nbis-reproducible-research.readthedocs.io/en/course_1803/git/)
 
 #### GitHub pages
 - Easiest. Everything is local to GitHub
@@ -146,7 +154,7 @@ GitHub, GitLab, and Bitbucket make it possible to serve HTML pages:
 #### Read the Docs
 - Somewhat more possibilities, like having several versions of documentation to switch between.
                                       
-### Wikis
+### Wiki:s
 - Popular solutions (but many others exist):
   - [MediaWiki](https://www.mediawiki.org)
   - [Dokuwiki](https://www.dokuwiki.org)
@@ -155,10 +163,9 @@ GitHub, GitLab, and Bitbucket make it possible to serve HTML pages:
 
 - Example with [WRF weather model](https://github.com/wrf-model/WRF/wiki)
  
-````{Admonition} Read more
+````{seealso} 
    [Documentaion by CodeRefinery](https://coderefinery.github.io/documentation/)
 ````
-
 
 ## (Optional) Last hands on your documentation
 - Some inspiration [Beagle](https://github.com/yampelo/beagle)
