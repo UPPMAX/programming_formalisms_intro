@@ -115,7 +115,7 @@ in this case **two remotes**: One remote refers to the **"central"** repository,
 - If you are working on the fix, indicate it in the issue so that others know that somebody is working on it and who is working on it
 - Submit your fix as pull request or merge request which references/closes the issue
 
-```{challenge} (Optional) Add to another's project
+```{challenge} (Optional) Add to someone else's project
 
 **You can from the breakout room group decide on some collaboration if you want to!**
 
