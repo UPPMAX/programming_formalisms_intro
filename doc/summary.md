@@ -68,15 +68,21 @@ Important to identify problem in beginning and add for flexibility
 - Deploy at GH-pages or ReadTheDocs
 
 ## Coming days
-- Algorithm and data structures
 - Programming paradigms
-- Modular programming
 - Testing and test-driven design
+- Algorithms 
+- Data structures
+- Modular programming
 - Optimization
 
 ```{admonition} Nordic Research Software Engineer
 A Research Software Engineer (RSE) is someone in between research and technology (software, computing, data). Perhaps they work as a expert within a research group, or perhaps they work as a specialist in a service that supports other researchers. 
 Does this sound like you? Read on...
 <https://nordic-rse.org/>
+```
+
+```{discussion} Menti
+- What have you learnt
+- What will you do differently?
 ```
 
