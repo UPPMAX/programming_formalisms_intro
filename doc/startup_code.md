@@ -34,7 +34,6 @@ There are several ways to make an isolated environment where you get sure what i
 ```{Attention}
 - Start your terminal of choice
    - Terminal in Visual Studio code
-     - 
    - MAC terminal 
    - iTerm (Mac)
    - Git BASH  (Windows)
@@ -220,17 +219,18 @@ What does the `-m` flag mean? Let us check the help page for that command:
 $ git help commit
 ```
 
-You should see a very long help page as the tool is very versatile (press q to quit).
-Do not worry about this now but keep in mind that you can always read the help files
-when in doubt. Searching online can also be useful, but choosing search terms
-to find relevant information takes some practice and discussions in some
-online threads may be confusing.
-Note that help pages also work when you don't have a network connection!   
-   
+- You should see a very long help page as the tool is very versatile (press q to quit).
+- Do not worry about this now but keep in mind that you can always read the help files when in doubt.
+- Searching online can also be useful, but choosing search terms to find relevant information takes some practice and discussions in some online threads may be confusing.
+- Note that help pages also work when you don't have a network connection!   
+
+
    
 ## Make the code a part of the git record
    
-``````{challenge} Type-along: Make your code part of git   
+``````{typelong}
+
+**Make your code part of git**
 
 - Add you file to staging
 
@@ -264,7 +264,9 @@ Note that help pages also work when you don't have a network connection!
 - Disadvantage
   - Probably not enough for users
    
-````{exercise} Discussion
+````{discussion}
+**Comments examples**
+
 Let's take a look at two example comments (comments in python start with `#`):
 
 **Comment A**
@@ -283,32 +285,16 @@ if temperature > -50:
 Which of these comments is best? Can you explain why?
 ````
 ```{solution} Solution
-Comment A describes **what** happens in this piece of code,
-whereas comment B describes **why** this piece of code is there, i.e. its **purpose**.
-Comments in the form of B are much more useful, comments of form A are redundant and we should avoid them.
+- Comment A describes **what** happens in this piece of code, whereas comment B describes **why** this piece of code is there, i.e. its **purpose**.
+- Comments in the form of B are much more useful, comments of form A are redundant and we should avoid them.
 ```
 
 **Why and not how**
 
-``````{challenge} Exercise
-- Use your favourite editor
-- Use the linear code below. 
-  - Later we will make it more modular!
-
-````{solution} 
-```python
-Coming...
-```
-
-``````
-
-
-### Docstrings
-A docstring is a structured comment associated to a segment of code (i.e. function or class)
-
 ```{note}
    - We will make docstrings in next session
 ```
+
 
 ````{keypoints}
 - Comments should describe the why for your code not the what.
