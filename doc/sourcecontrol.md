@@ -757,7 +757,13 @@ $ git checkout main          # realize it was a bad idea, back to main/master
 $ git branch -D wild-idea      # it is gone, off to a new idea
 $ git merge 
 ```
-  
+
+**Overview workflow**
+```{figure} img/git_branches.png
+:width: 100%
+:class: with-border
+```   
+
   
 ```{Keypoints}
 - Initializing a Git repository is simple: git init.
