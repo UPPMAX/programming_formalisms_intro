@@ -99,12 +99,13 @@ ZOOM
       - use the “**Raise hand**” functionality under the “Participants” window during the lecture. 
     
     - Behave politely!
-    - There will be breakout rooms used in the Zoom for some of the exercises. You will be randomly assigned to one of them the first day. The other days there will be defined groups.  
+    - There will be breakout rooms used in the Zoom for some of the exercises. 
     
     - Use **Zoom chat only**:
     
        - in breakout rooms 
        - for Zoom specific technical issues
+       - **otherwise use HackMD, see below**
     
     
 Collaboration document HackMD
@@ -112,7 +113,8 @@ Collaboration document HackMD
 
 .. important:: 
 
-    - Use the HackMD page for the workshop with your questions.
+    - Use the HackMD page for the workshop with your **questions**.
+    - <https://hackmd.io/lPmOnlj4Qw6FSVgizuFJKg?both>
     - Tell us directly if it is too fast or you need clarification.
     
        -  Either a helper will answer the question or the helper will pose the question to the teacher.
@@ -130,7 +132,21 @@ Collaboration document HackMD
     
 .. discussion:: Icebreaker
 
-   - Where do you work?
+   - What topic do you work with?
+
+Interctive questions/discussion
++++++++++++++++++++++++++++++++
+
+.. important:: 
+
+   - **Menti:**
+   - <https://www.menti.com/al15tk57h9md>
+   - <https://www.menti.com> with code valid the week: `69 32 18 8`
+   
+.. discussion:: Icebreaker
+
+   - Which city do you work in?
+
 
 The teachers 
 ------------
