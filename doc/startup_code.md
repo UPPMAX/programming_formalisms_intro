@@ -9,24 +9,22 @@
      - think about dependencies and work in an isolated environment
 ```
 
-```{note} 
+```{seealso} 
 - For more background please confer 
   - [NBIS](https://nbis-reproducible-research.readthedocs.io/en/course_2104) 
   - [CodeRefinery](https://coderefinery.github.io/reproducible-research/)
 ``` 
 
-```{discussion} Discuss in HackMD
-Computer programs are expected to produce the same
-output for the same inputs. Is
+```{discussion} Discuss in Menti
+Computer programs are expected to produce the same output for the same inputs. Is
 that true for research software?
-
-Can you give some examples? What can we do about it?
+- Have been through the opposite?
 ```
 
 ## Create a virtual python environment with ``venv``
    
 ```{note}
-There are several ways to make an isolated environment where you are sure what is needed by other users.
+There are several ways to make an isolated environment where you get sure what is needed by other users.
    - Conda is one way
    - `virtualenv` is an external package that has to be installed explicitely
      - uses pip to install within the isolated environment
@@ -35,19 +33,22 @@ There are several ways to make an isolated environment where you are sure what i
 
 ```{Attention}
 - Start your terminal of choice
+   - Terminal in Visual Studio code
+     - 
    - MAC terminal 
-   - iTerm
-   - WSL environment in
+   - iTerm (Mac)
+   - Git BASH  (Windows)
+   - WSL (Windows subsystem Linux) environment in
      - MobaxTerm
-     - Visual Studio Code
-   - Git BASH  
+     - Powershell
    - PowerShell
-
 ```
    
-``````{challenge} Type-along
+``````{type-along} 
+
+- Change working directory to where you have your local git repository
 - We will need the python packages: ``numpy`` and ``matplotlib``
-- Let's create an isolated environment with those packages and based on the python we have install, like 3.8.X. It is assumed that no-one uses python-2.X.X!   
+- Let's create an isolated environment with those packages and based on the python we have installed, like 3.8.X. It is assumed that no-one uses python-2.X.X!   
 - In the command-line, create and activate the environment ``planet-project``
 ```console
 $ python -m venv planet-project
@@ -67,7 +68,7 @@ $ source planet-project/bin/activate
 ``````   
 ## Create a first version of the python code
 
-``````{challenge} Type-along
+``````{type-along}
 - Use you favorite editor and create the file ``planet.py``
 - Use the linear code below. 
   - It plots the approximate orbit of earth with some eccentricity, and the distance during 2 years to the sun.
@@ -143,68 +144,6 @@ plt.savefig('../Figures/planet_earth.png', dpi=100, bbox_inches='tight')
 
 ``````    
 
-## What is Git, and what is a Git repository?
-
-- Git is a version control system: can **record/save snapshots** and track the content of a folder as it changes over time.
-- Every time we **commit** a snapshot, Git records a snapshot of the **entire project**, saves it, and assigns it a version.
-- These snapshots are kept inside a sub-folder called `.git`.
-- If we remove `.git`, we remove the repository and history (but keep the working directory!).
-- `.git` uses relative paths - you can move the whole thing somewhere else and it will still work
-- Git doesn't do anything unless you ask it to (it does not record anything automatically).
-- Multiple interfaces to Git exist (command line, graphical interfaces, web interfaces).
-
-  
-```{admonition} Concepts in Git
-- **repository**: The project, contains all data and history (commits, branches, tags).
-- **add**: Stage you files (collect what to be added to the git record — a kind of middle step)
-- **commit**: Snapshot of the project, gets a unique identifier (e.g. `c7f0e8bfc718be04525847fc7ac237f470add76e`).
-- **cloning**: Copying the whole repository to your laptop - the first time. It is not necessary to download each file one by one.
-- `git clone` copies everything: all commits and all branches.
-- Branches on the remote appear as (read-only) local branches with a prefix, e.g. `origin/main`.
-- We synchronize commits between local and remote with `git fetch`/`git pull` and `git push`.
-```
-   
-## Before we start we need to configure Git
-
-```{prereq}
-
-   -  **Git and GITHUB should be configured prior to the course**
-      following [https://coderefinery.github.io/installation](https://github.com/UPPMAX/programming_formalism/blob/main/setup.md)).
-   -  Being comfortable with the command line. No expertise is required,
-      but the lesson will be mostly taken from the command line.
-   -  Students should be familiar with using a **text editor** on their
-      system. Emacs and Vim are excellent choices if you know how to use
-      them but Nano or Notepad on Windows are sufficient.
-      
-```    
-   
-```{Attention}
-- Start your terminal of choice
-   - MAC terminal 
-   - iTerm
-   - WSL environment in
-     - MobaxTerm
-     - Visual Studio Code
-   - Git BASH  
-   - PowerShell
-
-```
-
-If you haven't already configured Git, please follow the instructions in the
-[installation instructions](https://coderefinery.github.io/installation/shell-and-git/#configuration).
-
-```console
-$ git config --global user.name "Your Name"
-$ git config --global user.email yourname@example.com
-$ git config --global core.editor nano
-```
-
-Verify with:
-```console
-$ git config --list
-```
-
-   
 ## Staging files
 
 
