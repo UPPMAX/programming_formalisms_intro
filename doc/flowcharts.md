@@ -224,7 +224,7 @@ stop
 
 #### Do some pseudocode of the calculations
 
-```{Challenge} Demo of Pseudocode
+````{Challenge} Demo of Pseudocode
 
 ```{code}
 Define constants
@@ -240,16 +240,17 @@ Plot resulting ellipses
 Calculate orbit parameters
 Plot time series of parameter change
 ´´´
+````
 
 ## Wrap-up
 
-```{Discussion} If there is time
-In Breakout-rooms 6-8 people:
-- What are your impressions about
-  - UML?
-  - pseudocode?
-- Experiences?
-- Share in the end 1-3 inputs in HackMD
+```{Discussion} UML & Pseudocode
+**Menti**
+
+- I have used it
+- I like it
+- I plan to use it
+
 ```
 
 ```{note}
