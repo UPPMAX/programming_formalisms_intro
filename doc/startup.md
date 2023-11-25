@@ -162,30 +162,6 @@ A list:
 ````
 ---
 
-## Cloning a repository
-
-Now you and other people can clone this repository and contribute changes. 
-
-At this point only a brief demo - if you copy the SSH or HTTPS address, you can clone repositories like this
-(again adapt the "namespace/repository.git" part):
-
-```console
-$ git clone git@github.com:<user>/planet-<user>.git
-```
-
-This creates a directory called "planet-<user>" unless it already exists. You can also specify the target directory
-on your computer, in this case just "planet":
-
-```console
-$ git clone git@github.com:<user>/planet-<user>.git planet
-```
-
-What just happened?
-- **Think of cloning as downloading the `.git` part to your
-computer**. 
-- After downloading the `.git` part the branch pointed to by HEAD is
-automatically checked out.
-
 ## What is Git, and what is a Git repository?
 
 - Git is a version control system: can **record/save snapshots** and track the content of a folder as it changes over time.
@@ -207,28 +183,29 @@ automatically checked out.
 - We synchronize commits between local and remote with `git fetch`/`git pull` and `git push`.
 ```
    
-## Before we start we need to configure Git
+## Before we continue we need to configure Git
 
 ```{prereq}
 
-   -  **Git and GITHUB should be configured prior to the course**
-      following [https://coderefinery.github.io/installation](https://github.com/UPPMAX/programming_formalism/blob/main/setup.md)).
-   -  Being comfortable with the command line. No expertise is required,
-      but the lesson will be mostly taken from the command line.
-   -  Students should be familiar with using a **text editor** on their
-      system. Emacs and Vim are excellent choices if you know how to use
-      them but Nano or Notepad on Windows are sufficient.
+   -  **Git and GitHub should be configured prior to the course**
+      following [Setup](https://uppmax.github.io/programming_formalisms_intro/setup.html).
+   -  Being comfortable with the command line. No expertise is required, but the lesson will be mostly taken from the command line.
+   -  Students should be familiar with using a **text editor** on their system.
+      - Emacs and Vim are excellent choices if you know how to use them
+      - but Nano or
+      - Notepad on Windows are sufficient.
       
 ```    
    
 ```{Attention}
 - Start your terminal of choice
+   - Terminal in Visual Studio code
    - MAC terminal 
-   - iTerm
-   - WSL environment in
+   - iTerm (Mac)
+   - Git BASH  (Windows)
+   - WSL (Windows subsystem Linux) environment in
      - MobaxTerm
-     - Visual Studio Code
-   - Git BASH  
+     - Powershell
    - PowerShell
 
 ```
@@ -237,8 +214,8 @@ If you haven't already configured Git, please follow the instructions in the
 [installation instructions](https://uppmax.github.io/programming_formalisms_intro/setup.html#shell-and-git).
 
 ```console
-$ git config --global user.name "Your Name"
-$ git config --global user.email yourname@example.com
+$ git config --global user.name "<Your Name>"
+$ git config --global user.email <your GitHub-connected email address>
 $ git config --global core.editor nano
 ```
 
@@ -247,20 +224,41 @@ Verify with:
 $ git config --list
 ```
 
+## Cloning our Plane repository to local
 
+Now you and other people can clone this repository and contribute changes. 
 
+``````type-along
+If you copy the SSH or HTTPS address, you can clone repositories like this
+(adapt the "namespace/repository.git" part):
+
+```console
+$ git clone git@github.com:<user>/planet-<user>.git
+```
+Using the SSH makes it very straight-forward to upload your local changes back ot GitHub. Use HTTP if you clone repos that do not belong to you or your group.
+This creates a directory called planet-<user>" unless it already exists.
+You can also specify the target directory on your computer, in this case just "planet":
+
+```console
+$ git clone git@github.com:<user>/planet-<user>.git planet
+```
+
+What just happened?
+- **Think of cloning as downloading the `.git` part to your computer**. 
+- After downloading the `.git` part the branch pointed to by HEAD is automatically checked out.
+``````
 ## Working on GitHub
 
-- You can do basically the same work at GitHub as in your local git repo
-- The graphical view makes it easier to work with in everyday editing work at least.
+- You can do basically the **same work at GitHub as in your local git repo**
+- The **graphical view** makes it easier to work with in everyday editing work at least.
   - Depends on your own preferences of course.
 - Here your commit each file at a time with the "commit button". 
-  - No staging that is.
+  - **No staging** that is.
   - Be aware of that feature!
-- GitHub Actions are workflows defined by you, like:
+- **GitHub Actions** are workflows defined by you, like:
   - for automatic testing after each commit (Used in the test lessons)
   - for GitHub Pages, briefly covered in last session today or Extra reading: [Documentation](https://uppmax.github.io/programming_formalisms_intro/documentation_deeper.html).
- 
+
 ```{seealso}
 - [Workshop on GitHub without command-line](https://coderefinery.github.io/github-without-command-line/ )
 ``` 
