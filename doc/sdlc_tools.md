@@ -179,8 +179,8 @@ stop
 ### Bottom-Up
 Start with parts first and develop a bigger organization with time.
 
-```{Discussion}
-How do you program? Put "o" on you choice
+```{Discussion} How do you program? 
+**Menti**
 - Top-down
 - Bottom-up
 ```
@@ -565,8 +565,8 @@ There are different types of remotes:
   
 ### Sharing and licensing and citations
  
-```{Discussion}
-**One-time usage towards distributed package**
+```{Discussion} One-time usage towards distributed package
+**Menti**
 - Have others used your code?
 - Did you plan it from beginning?
 - Did you take actions somehow?
