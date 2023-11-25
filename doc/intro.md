@@ -201,8 +201,8 @@ floor=5
 - decision assistance
 
 ```{Discussion}
-**What experience have you had regarding type of scripting/programming?**
-- Use HackMD
+**What do you develop for?**
+- Use Menti
 ```
 
 ``````{exercise}
