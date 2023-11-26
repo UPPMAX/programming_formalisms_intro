@@ -291,7 +291,7 @@ $ git config --list
 
 Now you and other people can clone this repository and contribute changes. 
 
-``````type-along
+``````{typealong}
 If you copy the SSH or HTTPS address, you can clone repositories like this
 (adapt the "namespace/repository.git" part):
 
