@@ -21,6 +21,14 @@
    - Exercise
 ```
 
+```{hint}
+1. We start with a more **theoretical introduction** covering the software and tools and mindsets for software development.
+2. The second part follows the development of a simple software **project**.
+  - The exercises and type-alongs are mostly based on copy-pasting code.
+  - So you don't need to program yourself or understand the python syntax used.
+  - The important aspect is the **workflow**!
+3. **Deeper material** not covered in the lessons today can be found in the extra reading part.
+```
 
 ## Preliminary schedule 1st day
 
@@ -44,11 +52,7 @@ Summary             |  15.20
 Reflection          |  15.30
 END                | 16.00
 
-```{hint}
-- We start with a more theoretical introduction covering the software and tools and mindsets for software development.
-- The second part follows the development of a simple software project.
-- Deeper material not covered in the lessons today can be found in the extra reading part.
-```
+
 
 ## What is software?
 *Wikipedia*
