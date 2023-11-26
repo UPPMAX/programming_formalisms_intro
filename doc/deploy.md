@@ -290,9 +290,7 @@ Copyleft is the legal technique of granting certain freedoms over copies of copy
 - &#9745; Source/version control
   - git history
   - git branches
-- &#9745; Collaboration
-  - GitHub
-    - We have a starting point!
+- &#9744; Collaboration
 - &#9745; Sharing
   - &#9745; open science
   - &#9745; citation
