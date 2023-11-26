@@ -4,7 +4,7 @@
 ```
 
 ```{Discussion} Have you used Git (locally) in your own work?
-Answer in HackMD
+Answer in **Menti**
 ```
 
 ```{Objectives}
