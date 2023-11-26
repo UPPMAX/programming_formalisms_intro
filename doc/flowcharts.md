@@ -24,7 +24,7 @@
   - to state the problem and define inputs and outputs
   - Gather requirements
   - graphical tools like UML
-1. Design
+2. Design
   - to find out the specific algorithms needed
   - pseudocode
 ```
