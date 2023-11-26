@@ -192,6 +192,8 @@ ax.plot(range(0,int(L/l)),e)
 plt.savefig('../Figures/planet_earthJupiter.png', dpi=100, bbox_inches='tight')
 ```
 ````
+- **Do not run because we changed from 2 years simulation time to 5000 years!**
+- The output should look like this at least.
 
 ```{figure} img/planet_earthJupiter.png
 :width: 100%
@@ -209,13 +211,15 @@ plt.savefig('../Figures/planet_earthJupiter.png', dpi=100, bbox_inches='tight')
 
 ## git diff
 
-When you are done editing the files, try `git diff`:
+``````{type-along}
+
+- When you are done editing the files, try `git diff`:
 
 ```console
   $ git diff
 ```
-
-You will see (can you identify in there the two added lines?):
+- You can use _arrows_ or _enter_ to scroll the output and quit with ``q``.
+- You will see some thing like this.
 
 ````{solution} Output from diff
 ```diff
@@ -338,7 +342,7 @@ index 60b8b20..8061461 100644
 
 ```
 ````
-
+``````
 
 Now first stage and then commit (what happens when we leave out the `-m` flag?):
 
