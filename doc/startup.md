@@ -127,10 +127,10 @@ README file should include:
 - Make some folders according to the above list
 - Put the planning documents in a docs folder
 
-````{challenge}
+````{challenge} 10 min
 1. Extend the README file a little bit with an **About section** in Markdown format describing the project.
   - Use the **Pencil** button
-  - Use the goals stated in last session). 
+  - Use the goals stated in last session, [Analysis](https://uppmax.github.io/programming_formalisms_intro/flowcharts.html#analysis)
   - Get inspiration from <https://www.makeareadme.com/> and a favorite Git repo or <https://github.com/yampelo/beagle>. 
 
 
@@ -156,9 +156,69 @@ A list:
 
 2. Create the planning document in markdown **Add file** button and choose "Create file".
   - Call the file ``doc/plan.md``
-  - Copy paste the example code found in the last session for PlantUML and pseudocode.
+  - Copy paste the example code found in the last session for [PlantUML](https://uppmax.github.io/programming_formalisms_intro/flowcharts.html#lets-make-a-flowchart-of-the-program-parts) and [pseudocode](https://uppmax.github.io/programming_formalisms_intro/flowcharts.html#do-some-pseudocode-of-the-calculations).
   - Add some suitable headings for the code sections
 
+````
+
+````{solution}
+# Plan
+
+## Background
+- The climate last about 1 million years has been largely determined but the change of the eccentricity (elongation) of Earth's orbit (One of the [Milankovitch cycles](https://climate.nasa.gov/news/2948/milankovitch-orbital-cycles-and-their-role-in-earths-climate/).
+- The glacial cycles (daily speaking: ice ages) with a period of about 100 000 years are thought to be due to this.
+Theory: The gravity form the other planets, especially Jupiter, causes the change of the eccentricity
+- **Problem**: Reproduce Milankovitch cycle of eccentricity (100ka)
+- **Method**: Use Python
+  - Let's go for functional programming
+- **Input**: Some initial positions of the planets but no external data
+  - Perhaps also user input of length of simulation
+- **Output**: Graph of orbits and a timeseries of an eccentricity parameter
+
+**Development steps** (we extend the program with iterations)
+1. Earth-sun system
+1. Add Jupiter
+1. Make modular
+1. Add more planets?
+
+## PlantUML
+
+```uml
+@startuml
+skin rose
+title Planet flowchart
+start
+
+:define some parameters;
+:initialize earth (and Jupiter);
+
+repeat
+  :calculate new position;
+  :calculate acceleration;
+  :calculate velocity in two dimensions;
+
+repeat while (simulation time is met) is (no)
+->yes;
+:figure plotting;
+stop
+```
+
+## Pseudocode
+
+```console
+Define constants
+Define initial values
+	positions
+	velocity (balance of gravity and centrifugal force)
+(Allocate (book) space for long vectors	plan iteration)
+Iteration
+	Change of positions
+	Calc acc (gravity)
+	Calc new velocity
+Plot resulting ellipses
+Calculate orbit parameters
+Plot time series of parameter change
+```
 ````
 ---
 
