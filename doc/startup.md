@@ -158,8 +158,8 @@ A list:
   - Call the file ``doc/plan.md``
 	- this will on the fly create the directory ``doc``.
   - Copy paste the example code found in the last session for [PlantUML](https://uppmax.github.io/programming_formalisms_intro/flowcharts.html#lets-make-a-flowchart-of-the-program-parts) and [pseudocode](https://uppmax.github.io/programming_formalisms_intro/flowcharts.html#do-some-pseudocode-of-the-calculations).
-    - Type ``"```uml"`` above the UML code and ``"```"`` below, and it should render nicely.
-    - Type ``"```code"`` above the pseudo code and ``"```"`` below, and it should render nicely.
+    - Type ``"```uml"`` (without ") above the UML code and ``"```"`` below, and it should render nicely.
+    - Type ``"```code"`` (without ") above the pseudo code and ``"```"`` below, and it should render nicely.
   - Add some suitable headings for the code sections
 
 ````
@@ -291,7 +291,7 @@ $ git config --list
 
 Now you and other people can clone this repository and contribute changes. 
 
-``````{typealong}
+``````{type-along}
 If you copy the SSH or HTTPS address, you can clone repositories like this
 (adapt the "namespace/repository.git" part):
 
@@ -310,6 +310,7 @@ What just happened?
 - **Think of cloning as downloading the `.git` part to your computer**. 
 - After downloading the `.git` part the branch pointed to by HEAD is automatically checked out.
 ``````
+
 ## Working on GitHub
 
 - You can do basically the **same work at GitHub as in your local git repo**
