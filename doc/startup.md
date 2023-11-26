@@ -291,22 +291,32 @@ $ git config --list
 
 Now you and other people can clone this repository and contribute changes. 
 
+
 ``````{type-along}
-If you copy the SSH or HTTPS address, you can clone repositories like this
-(adapt the "namespace/repository.git" part):
+- You may want to create a directory for this course. You can do it in the normal way or use your terminal, like this in a good place (like "Courses" if you have that)
+  - ``cd Courses``
+  - ``mkdir Programming_formalisms``
+- In GitHub, locate the **Code** button, select **SSH** and click the *copy* symbol to the right
+- Back in your terminal type ``git clone`` followed by pasting the copied text.
+- The result shall look something like this:
 
 ```console
 $ git clone git@github.com:<user>/planet-<user>.git
 ```
-Using the SSH makes it very straight-forward to upload your local changes back ot GitHub. Use HTTP if you clone repos that do not belong to you or your group.
-This creates a directory called planet-<user>" unless it already exists.
-You can also specify the target directory on your computer, in this case just "planet":
+```{tip}
+- Using the SSH makes it very straight-forward to upload your local changes back ot GitHub. Use HTTP if you clone repos that do not belong to you or your group.
+```
+
+- This creates a directory called planet-<user>" unless it already exists.
+- You can also specify the target directory on your computer, in this case just "planet":
 
 ```console
 $ git clone git@github.com:<user>/planet-<user>.git planet
 ```
 
 What just happened?
+- `cd` the new directory that was created
+- list the files with `ls`
 - **Think of cloning as downloading the `.git` part to your computer**. 
 - After downloading the `.git` part the branch pointed to by HEAD is automatically checked out.
 ``````
@@ -353,4 +363,5 @@ What just happened?
 ```{keypoints}
 - A repository can have one or multiple remotes (we will revisit these later).
 - A remote (GitHub) in this case serves as a full backup of your work.
+- Code development might be easier to develop in the local git repo since you can run and test locally in an easy way.
 ```
