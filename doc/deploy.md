@@ -240,9 +240,11 @@ Copyleft is the legal technique of granting certain freedoms over copies of copy
 - Revisit your README and update it with info after all our commits
   - About
   - Installation
+    - Users should be able to install the required python packages with:
+      ``pip install -r requirements.txt`` (depending on system ``--user`` may be added)
   - Citing
 - License
-- Lastly, update the doc/index.md file that should describe
+- Lastly, you may, if tme allows, update the doc/index.md file that should describe the content
 - Do a ``git pull`` to have the same version of your project repo locally!
 ``````
 
