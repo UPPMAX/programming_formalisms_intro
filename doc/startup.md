@@ -353,9 +353,9 @@ What just happened?
 - &#9745; Source/version control
   - Git
     - We have a starting point!
-- &#9745; Collaboration
+  - GitHub as remote backup
+- &#9744; Collaboration
   - GitHub
-    - We have a starting point!
 - &#9745; Sharing
   - &#9745; open science
   - &#9744; citation
