@@ -239,10 +239,12 @@ $ git help commit
 
 **Make your code part of git**
 
-- Add you file to staging
+- Check the status. 
+- Add all files (``.``) to staging
 
 ```console
-   git add planet.py
+   git status   
+   git add .
 ```
 - Check the status. 
 - The output should show the new changes since your work on GitHub  
