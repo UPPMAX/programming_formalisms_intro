@@ -35,21 +35,20 @@
 Topic|Time
 -----|----
 Syllabus      |        9.00
-Intro          |       9.30
-Coffee break (15 min)| 9.50
-SDLC tools            |10.05
-Break (5 min)       |  11.00
-Planning phase      |  11.05
-Start the project   |  11.35
+Intro          |       9.20
+Coffee break (15 min)| 9.45
+SDLC tools            |10.00
+Planning phase (incl. break)   |  10.45
+Start the project   |  11.15
+Start with coding (begin)  |  11.45
 LUNCH               |  12.00
-Start with coding   |  13.00
-Iterations and Git  |  13.30
-Break               |  14.15
-Deploy              |  14.20
-Coffee break        |  14.50
-(Collaboration)     |  15.05
-Summary             |  15.20
-Reflection          |  15.30
+Start with coding (cont'd)  |  13.00
+Iterations and Git (incl. break) |  13.30
+Deploy and documentation   |  14.30
+Coffee break        |  15.00
+(Collaboration)     |  15.15
+Summary             |  15.25
+Reflection          |  15.35
 END                | 16.00
 
 
