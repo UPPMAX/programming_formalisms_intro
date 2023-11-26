@@ -343,11 +343,13 @@ index 60b8b20..8061461 100644
 ```
 ````
 ``````
+## Stage and commit the changes
 
-Now first stage and then commit (what happens when we leave out the `-m` flag?):
+``````{type-along}
+- Now first stage and then commit (what happens when we leave out the `-m` flag?):
 
 ```console
-  $ git add python.puml     # <-- we can state exactly which file to stage as well
+  $ git add python.py     # <-- we can state exactly which file to stage as well
   $ git commit                   # <-- we have left out -m "..."
 ```
 
@@ -355,7 +357,7 @@ Now first stage and then commit (what happens when we leave out the `-m` flag?):
   your commit message. This message will be associated and stored with the
   changes you made. This message is your chance to explain what you've done and
   convince others (and your future self) that the changes you made were
-  justified.  Write a message and save and close the file.
+  justified.  Write a message (like ``added Jupiter`` and save and close the file.
 
   When you are done committing the changes, experiment with these commands:
 
@@ -364,7 +366,7 @@ Now first stage and then commit (what happens when we leave out the `-m` flag?):
   $ git log --stat
   $ git log --oneline
   ```
-
+``````
 
 ## Ignoring files and paths with .gitignore
 
@@ -379,6 +381,7 @@ committed to version control. There are many reasons for this:
 For this we use `.gitignore` files. Read more https://uppmax.github.io/programming_formalisms_intro/git_deeper.html
 
 - Not important for our project right now.
+- **But**, we should had omitted the virtual environment, i.e. the directory ``planet-project``.
 
 ## Branching and merging
 Software development is often not linear:
