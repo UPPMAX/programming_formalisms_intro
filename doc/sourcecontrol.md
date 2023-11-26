@@ -745,10 +745,9 @@ $ git merge
   - We have a starting point with code
   - git history
   - git branches
-  - GitHb as remote backup
-- &#9745; Collaboration
+  - GitHub as remote backup
+- &#9744; Collaboration
   - GitHub
-    - We have a starting point!
 - &#9745; Sharing
   - &#9745; open science
   - &#9744; citation
@@ -759,7 +758,7 @@ $ git merge
 ```
   
 ```{Keypoints}
-- Initializing a Git repository is simple: git init.
+- Initializing a Git repository is simple: ``git init``.
 - Commits should be used to tell a story.
 - Git uses the .git folder to store the snapshots.
 - Don’t be afraid to stage and commit often. Better too often than not often enough.
