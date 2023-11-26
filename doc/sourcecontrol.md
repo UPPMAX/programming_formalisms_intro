@@ -617,7 +617,7 @@ def figure_orbit(x,y,xJ,yJ,e):
 
 ## Meanwhile...  
   
-````{typealong}
+````{type-along}
 
 **Back in main branch**
 - We spotted some unnecessary ``print`` lines in the main branch code.
