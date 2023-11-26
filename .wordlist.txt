@@ -706,3 +706,4 @@ nordic
 makeareadme
 yampelo
 iter
+nano
