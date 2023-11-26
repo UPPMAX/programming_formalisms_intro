@@ -430,14 +430,14 @@ $ git branch -d new-feature    # remove branch
 
 ## Let's make our code modular (test in branch)
 
-``````{challenge} 
-- First make a branch called ``modularity`` and g to that branch
+``````{challenge} Make four modules (10-15 minutes in BO)
+- First make a branch called ``modularity`` and go to that branch
 ```console
 $ git checkout -b modularity    # create branch, switch to it
 $ git branch                    # check that we are on the new branch
 ```
 - We can now do our changes
-- We will make three files
+- We will make four files
   - ``planet_main.py``, containing an overview e.g. the main program
   - ``planet_data.py``, containing general constants, and planetary parameters
   - ``planet_iter.py``, containing the equation of motion for the planets
@@ -613,76 +613,7 @@ def figure_orbit(x,y,xJ,yJ,e):
 - add and commit, possibly several times
 
 ``````
-## In-code documentation
 
-- Comments, function docstrings, ...
-- Advantages
-  - Good for programmers
-  - Version controlled alongside code
-  - Can be used to auto-generate documentation for functions/classes
-- Disadvantage
-  - Probably not enough for users
-   
-````{discussion}
-**Comments examples**
-
-Let's take a look at two example comments (comments in python start with `#`):
-
-**Comment A**
-```python
-# Now we check if temperature is larger then -50:
-if temperature > -50:
-    print('do something')
-```
-
-**Comment B**
-```python
-# We regard temperatures below -50 degrees as measurement errors
-if temperature > -50:
-    print('do something')
-```
-Which of these comments is best? Can you explain why?
-````
-```{solution} Solution
-- Comment A describes **what** happens in this piece of code, whereas comment B describes **why** this piece of code is there, i.e. its **purpose**.
-- Comments in the form of B are much more useful, comments of form A are redundant and we should avoid them.
-```
-
-**Why and not how**
-
-
-### Function docstrings
-A docstring is a structured comment associated to a segment of code (i.e. function or class)
-
-Good docstrings describe:
-   - What the function does
-   - What goes in (including the type of the input variables)
-   - What goes out (including the return type)
-   - Python example: help(<function name>)
-  
-**Example**
-  
-```python
-def mean_temperature(data):
-    """
-    Get the mean temperature
-
-    Args:
-        data (pandas.DataFrame): A pandas dataframe with air temperature measurements.
-
-    Returns:
-        The mean air temperature (float)
-    """
-    temperatures = data['Air temperature (degC)']
-    return float(sum(temperatures)/len(temperatures))  
-  
-```
-  
-``````{challenge} (Optional) Docstrings
-- Try to make docstrings for the main program and some of the functions
-- Test from a python console (after importing) with ``help(eccentricity)`` or similar
-
-``````  
 
 ## Meanwhile...  
   
@@ -731,6 +662,7 @@ $ git graph
 |/
 * 5434395 add Jupiter
 * f3c1fb5 planet.py
+...
 ```
 
   
@@ -795,6 +727,77 @@ $ git checkout main          # realize it was a bad idea, back to main/master
 $ git branch -D wild-idea      # it is gone, off to a new idea
 $ git merge 
 ```
+
+## In-code documentation
+
+- Comments, function docstrings, ...
+- Advantages
+  - Good for programmers
+  - Version controlled alongside code
+  - Can be used to auto-generate documentation for functions/classes
+- Disadvantage
+  - Probably not enough for users
+   
+````{discussion} In BO:s?
+**Comments examples**
+
+Let's take a look at two example comments (comments in python start with `#`):
+
+**Comment A**
+```python
+# Now we check if temperature is larger then -50:
+if temperature > -50:
+    print('do something')
+```
+
+**Comment B**
+```python
+# We regard temperatures below -50 degrees as measurement errors
+if temperature > -50:
+    print('do something')
+```
+Which of these comments is best? Can you explain why?
+````
+```{solution} Solution
+- Comment A describes **what** happens in this piece of code, whereas comment B describes **why** this piece of code is there, i.e. its **purpose**.
+- Comments in the form of B are much more useful, comments of form A are redundant and we should avoid them.
+```
+
+**Why and not how**
+
+
+### Function docstrings
+A docstring is a structured comment associated to a segment of code (i.e. function or class)
+
+Good docstrings describe:
+   - What the function does
+   - What goes in (including the type of the input variables)
+   - What goes out (including the return type)
+   - Python example: help(<function name>)
+  
+**Example**
+  
+```python
+def mean_temperature(data):
+    """
+    Get the mean temperature
+
+    Args:
+        data (pandas.DataFrame): A pandas dataframe with air temperature measurements.
+
+    Returns:
+        The mean air temperature (float)
+    """
+    temperatures = data['Air temperature (degC)']
+    return float(sum(temperatures)/len(temperatures))  
+  
+```
+  
+``````{challenge} (Optional) Docstrings
+- Try to make docstrings for the main program and some of the functions
+- Test from a python console (after importing) with ``help(eccentricity)`` or similar
+
+``````  
 
 **Overview workflow**
 ```{figure} img/git_branches.png
