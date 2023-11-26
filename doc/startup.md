@@ -10,7 +10,7 @@
 - The following steps can be very valuable for you in a couple of months as well as you revisit your code and don't know what it does or why you did this and that.
 ```
 
-## First things: Think of the order your files!
+## Order your files!
 
 - Think that **everything is worth to be part of documentation** (like GitHub directory tree)
 - The parts from the software development cycle
@@ -156,6 +156,7 @@ A list:
 
 2. Create the planning document in markdown **Add file** button and choose "Create file".
   - Call the file ``doc/plan.md``
+	- this will on the fly create the directory ``doc``.
   - Copy paste the example code found in the last session for [PlantUML](https://uppmax.github.io/programming_formalisms_intro/flowcharts.html#lets-make-a-flowchart-of-the-program-parts) and [pseudocode](https://uppmax.github.io/programming_formalisms_intro/flowcharts.html#do-some-pseudocode-of-the-calculations).
   - Add some suitable headings for the code sections
 
@@ -165,9 +166,9 @@ A list:
 # Plan
 
 ## Background
-- The climate last about 1 million years has been largely determined but the change of the eccentricity (elongation) of Earth's orbit (One of the [Milankovitch cycles](https://climate.nasa.gov/news/2948/milankovitch-orbital-cycles-and-their-role-in-earths-climate/).
+- The climate last about 1 million years has been largely determined but the change of the eccentricity (elongation) of Earth's orbit (One of the [Milankovitch cycles](https://climate.nasa.gov/news/2948/milankovitch-orbital-cycles-and-their-role-in-earths-climate/)).
 - The glacial cycles (daily speaking: ice ages) with a period of about 100 000 years are thought to be due to this.
-Theory: The gravity form the other planets, especially Jupiter, causes the change of the eccentricity
+  - Theory: The gravity form the other planets, especially Jupiter, causes the change of the eccentricity
 - **Problem**: Reproduce Milankovitch cycle of eccentricity (100ka)
 - **Method**: Use Python
   - Let's go for functional programming
