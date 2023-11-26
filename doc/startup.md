@@ -123,7 +123,7 @@ README file should include:
 ````
 
 **We are ready to**
-- extend the README file
+- Extend the README file
 - Make some folders according to the above list
 - Put the planning documents in a docs folder
 
@@ -252,6 +252,10 @@ Plot time series of parameter change
 
    -  **Git and GitHub should be configured prior to the course**
       following [Setup](https://uppmax.github.io/programming_formalisms_intro/setup.html).
+      - Test: ``ssh -T git@github.com``
+        - Output should be something like this: ``Hi bclaremar! You've successfully authenticated, but GitHub does not provide shell access.``
+
+
    -  Being comfortable with the command line. No expertise is required, but the lesson will be mostly taken from the command line.
    -  Students should be familiar with using a **text editor** on their system.
       - Emacs and Vim are excellent choices if you know how to use them
@@ -281,11 +285,16 @@ $ git config --global user.name "<Your Name>"
 $ git config --global user.email <your GitHub-connected email address>
 $ git config --global core.editor nano
 ```
-
+or replace nano with another editor, like in Windows: ``notepad``
 Verify with:
 ```console
 $ git config --list
 ```
+- Also, test:
+- ``ssh -T git@github.com``
+
+- Output should be something like this:
+- ``Hi bclaremar! You've successfully authenticated, but GitHub does not provide shell access.``
 
 ## Cloning our Plane repository to local
 
