@@ -60,7 +60,7 @@
 - One can state those specifically as a list in a README
 - Or, we can make a ready file (in python) 
 
-``````{challenge} Save your requirements as a file 
+``````{type-along} Save your requirements as a file 
 - Save your requirements as a file that user can run to get the same dependencies as you
 
 ```console
