@@ -697,7 +697,8 @@ $ git graph
 * f3c1fb5 planet.py
 
 ```
-
+- push to GitHub
+- ``git push``
 ``````
 
 ## Summary
@@ -744,6 +745,7 @@ $ git merge
   - We have a starting point with code
   - git history
   - git branches
+  - GitHb as remote backup
 - &#9745; Collaboration
   - GitHub
     - We have a starting point!
@@ -751,8 +753,9 @@ $ git merge
   - &#9745; open science
   - &#9744; citation
   - &#9745; licensing  
-- &#9745; Documentation
-  - docstrings
+- &#9744; Documentation
+  - **docstrings** should actually be **implemented directly**!!
+    - **we save that now for next sesson**
 ```
   
 ```{Keypoints}
