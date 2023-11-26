@@ -68,10 +68,13 @@ $ source planet-project/bin/activate
 ## Create a first version of the python code
 
 ``````{type-along}
+- Make a ``code`` directory for our python scripts (inside the git repo/directory)
+- Make a ``Figure`` directory (note captial F) for out output figures
+- ``cd`` into the ``code`` directory
 - Use you favorite editor and create the file ``planet.py``
 - Use the linear code below. 
-  - It plots the approximate orbit of earth with some eccentricity, and the distance during 2 years to the sun.
-  - Later we will add Jupiter and make it more modular!
+  - It plots the approximate orbit of earth with some eccentricity, and the distance to the sun during 2 years.
+  - Later we will add Jupiter and make the program more modular!
 
 ````{solution} Code
 ```python
@@ -135,7 +138,11 @@ ax.plot(range(0,365*2),rj)
 plt.savefig('../Figures/planet_earth.png', dpi=100, bbox_inches='tight')
 ```
 ````
-   
+- **IF** you want to, you can try to run it from the terminal. Run from ``code`` directory.
+```console
+$ python planet.py
+```
+- The figure can be viewed in the Figure directory
 ```{figure} img/planet_earth.png
 :width: 100%
 :class: with-border
