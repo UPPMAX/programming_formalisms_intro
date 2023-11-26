@@ -52,11 +52,11 @@
 ### Analysis
 
 ```{admonition} Planet project
-Background
+**Background**
 - The climate last about 1 million years has been largely determined but the change of the eccentricity (elongation) of Earth's orbit (One of the [Milankovitch cycles](https://climate.nasa.gov/news/2948/milankovitch-orbital-cycles-and-their-role-in-earths-climate/).
 - The glacial cycles (daily speaking: ice ages) with a period of about 100 000 years are thought to be due to this.
-Theory: The gravity form the other planets, especially Jupiter, causes the change of the eccentricity
-- **Problem*: Reproduce Milankovitch cycle of eccentricity (100ka)
+  - Theory: The gravity from the other planets, especially Jupiter, causes the change of the eccentricity.
+- **Problem**: Reproduce Milankovitch cycle of eccentricity (100ka)
 - **Method**: Use Python
   - Let's go for functional programming
 - **Input**: Some initial positions of the planets but no external data
@@ -239,7 +239,7 @@ Iteration
 Plot resulting ellipses
 Calculate orbit parameters
 Plot time series of parameter change
-´´´
+```
 ````
 
 ## Wrap-up
