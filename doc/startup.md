@@ -296,6 +296,7 @@ Now you and other people can clone this repository and contribute changes.
 - You may want to create a directory for this course. You can do it in the normal way or use your terminal, like this in a good place (like "Courses" if you have that)
   - ``cd Courses``
   - ``mkdir Programming_formalisms``
+  - ``cd Programming_formalisms``
 - In GitHub, locate the **Code** button, select **SSH** and click the *copy* symbol to the right
 - Back in your terminal type ``git clone`` followed by pasting the copied text.
 - The result shall look something like this:
@@ -307,12 +308,7 @@ $ git clone git@github.com:<user>/planet-<user>.git
 - Using the SSH makes it very straight-forward to upload your local changes back ot GitHub. Use HTTP if you clone repos that do not belong to you or your group.
 ```
 
-- This creates a directory called planet-<user>" unless it already exists.
-- You can also specify the target directory on your computer, in this case just "planet":
-
-```console
-$ git clone git@github.com:<user>/planet-<user>.git planet
-```
+- This creates a directory called ``planet-<user>`` unless it already exists.
 
 What just happened?
 - `cd` the new directory that was created
