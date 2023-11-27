@@ -235,7 +235,7 @@ $ git help commit
    
 ## Make the code a part of the git record
    
-``````{typealong}
+``````{type-along}
 
 **Make your code part of git**
 
