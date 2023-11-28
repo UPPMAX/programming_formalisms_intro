@@ -69,7 +69,7 @@ $ source planet-project/bin/activate
 
 ``````{type-along}
 - Make a ``code`` directory for our python scripts (inside the git repo/directory)
-- Make a ``Figure`` directory (note captial F) for out output figures
+- Make a ``Figures`` directory (note captial F) for output figures
 - ``cd`` into the ``code`` directory
 - Use you favorite editor and create the file ``planet.py``
 - Use the linear code below. 
