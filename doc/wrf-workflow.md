@@ -1,13 +1,13 @@
-# The modularity
+# The modularity of WRF weather model
+
 
 ## WRF source code github
 
-Look at file tree for a feeling of modules.
+Look at file tree for a feeling of modules. <https://github.com/wrf-model/WRF>
 
 - Interesting directories related to the codes:
     - dyn_em/
     - phys/
-<https://github.com/wrf-model/WRF>
 
 - Below is some module dependencies in the physics section of the code
 
