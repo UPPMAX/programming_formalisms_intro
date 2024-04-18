@@ -1,16 +1,5 @@
 # The modularity
 
-
-![image](img/WRF-flowchart.png)
-
-WPS (preprocessing) programs to be run every simulation
-- ungrib.exe
-- metgrid.exe
-
-WRF programs to be run every simulation
-- real.exe
-- wrf.exe
-
 ## WRF source code github
 
 Look at file tree for a feeling of modules.
@@ -23,7 +12,21 @@ Look at file tree for a feeling of modules.
 - Below is some module dependencies in the physics section of the code
 
 ![image](img/wrf-physics.PNG)
+
 *Source: <https://opensky.ucar.edu/islandora/object/opensky:2898>*
+
+## The WRF suite
+
+![image](img/WRF-flowchart.png)
+
+WPS (preprocessing) programs to be run every simulation
+- ungrib.exe
+- metgrid.exe
+
+WRF programs to be run every simulation
+- real.exe
+- wrf.exe
+
 
 
 ## Automatise this!
