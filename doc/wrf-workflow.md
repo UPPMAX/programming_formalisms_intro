@@ -15,6 +15,8 @@ WRF programs to be run every simulation
 
 1. **download script**
 
+    - download large-scale weather data
+
 1. **script_WPS**
 
    - find dates/times to be used
@@ -44,5 +46,8 @@ WRF programs to be run every simulation
       - run **wrf.exe**
 
    - run ./analysis_script.sh
+      - inserts correct time
+      - runs a python script that plots some graphs
+     
      
 
