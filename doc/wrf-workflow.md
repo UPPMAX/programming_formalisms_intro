@@ -22,7 +22,7 @@ Look at file tree for a feeling of modules.
 
 - Below is some module dependencies in the physics section of the code
 
-![image](img/WRF-flowchart.png)
+![image](img/wrf-physics.PNG)
 *Source: <https://opensky.ucar.edu/islandora/object/opensky:2898>*
 
 
