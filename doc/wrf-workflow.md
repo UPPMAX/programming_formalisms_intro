@@ -11,6 +11,21 @@ WRF programs to be run every simulation
 - real.exe
 - wrf.exe
 
+## WRF source code github
+
+Look at file tree for a feeling of modules.
+
+- Interesting directories related to the codes:
+    - dyn_em/
+    - phys/
+<https://github.com/wrf-model/WRF>
+
+- Below is some module dependencies in the physics section of the code
+
+![image](img/WRF-flowchart.png)
+*Source: <https://opensky.ucar.edu/islandora/object/opensky:2898>*
+
+
 ## Automatise this!
 
 1. **download script**
