@@ -1,7 +1,7 @@
 # The modularity of WRF weather model
 
 
-## WRF source code github
+## WRF (ARW) source code github
 
 Look at file tree for a feeling of modules. <https://github.com/wrf-model/WRF>
 
