@@ -1,5 +1,4 @@
-# programming_formalism_intro
-
+# Programming formalisms intro
 Main course page is found here: https://uppsala.instructure.com/courses/69215
 
 Topics
