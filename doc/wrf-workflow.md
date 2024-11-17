@@ -5,7 +5,7 @@
 
 Look at file tree for a feeling of modules. <https://github.com/wrf-model/WRF>
 
-- Interesting directories related to the codes:
+- Interesting directories related to the Fortran codes:
     - dyn_em/
     - phys/
 
@@ -20,33 +20,29 @@ Look at file tree for a feeling of modules. <https://github.com/wrf-model/WRF>
 ![image](img/WRF-flowchart.png)
 
 WPS (preprocessing) programs to be run every simulation
+
 - ungrib.exe
 - metgrid.exe
 
 WRF programs to be run every simulation
+
 - real.exe
 - wrf.exe
 
-
 ## Personal workflow script of different parts
 
-Script 
+### Workflow consisting of several bash scripts. 
 
 ```mermaid
 flowchart LR
-    Download --> Preprocess --> Development --> Test --> D["Deployment and maintenance"] --> Requirements
-
-
-
+    Download global weather data --> Preprocess --> Real (initialization) -->  WRF (simulation) --> Analysis
 ```
-
-### Workflow consisting of several bash scripts. 
 
 1. **download script**
 
     - download large-scale weather data
 
-1. **script_WPS**
+1. **script_WPS** (Preprocessing)
 
    - find dates/times to be used
    
@@ -54,11 +50,11 @@ flowchart LR
 
    - start **run_ungrib.sh**
       - insert correct dates into a "namelist"
-      - run **ungrib.exe** (Fortran)
+      - run **ungrib.exe** (_Fortran_)
       
     - start **run_metgrid.sh**
       - insert correct dates into a "namelist"
-      - run **metgrid.exe** (Fortran)
+      - run **metgrid.exe** (_Fortran_)
 
    - start next script **script_WRF**
    
@@ -68,15 +64,14 @@ flowchart LR
    
    - run ./run_real.sh
       - insert correct dates into a "namelist"
-      - run **real.exe** (Fortran)
+      - run **real.exe** (_Fortran_)
 
    - run ./run_wrf.sh
       - insert correct dates into a "namelist"
-      - run **wrf.exe** (Fortran)
+      - run **wrf.exe** (_Fortran_)
 
    - run ./analysis_script.sh
       - inserts correct time
-      - runs a python script that plots some graphs
-     
-     
+      - runs a _python_ script that plots some graphs
+
 
