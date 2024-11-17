@@ -15,7 +15,7 @@ Look at file tree for a feeling of modules. <https://github.com/wrf-model/WRF>
 
 *Source: <https://opensky.ucar.edu/islandora/object/opensky:2898>*
 
-## The WRF suite
+## The WRF suite with flow chart
 
 ![image](img/WRF-flowchart.png)
 
@@ -28,8 +28,19 @@ WRF programs to be run every simulation
 - wrf.exe
 
 
+## Personal workflow script of different parts
 
-## Automatise this!
+Script 
+
+```mermaid
+flowchart LR
+    Download --> Preprocess --> Development --> Test --> D["Deployment and maintenance"] --> Requirements
+
+
+
+```
+
+### Workflow consisting of several bash scripts. 
 
 1. **download script**
 
@@ -43,11 +54,11 @@ WRF programs to be run every simulation
 
    - start **run_ungrib.sh**
       - insert correct dates into a "namelist"
-      - run **ungrib.exe**
+      - run **ungrib.exe** (Fortran)
       
     - start **run_metgrid.sh**
       - insert correct dates into a "namelist"
-      - run **metgrid.exe**
+      - run **metgrid.exe** (Fortran)
 
    - start next script **script_WRF**
    
@@ -57,11 +68,11 @@ WRF programs to be run every simulation
    
    - run ./run_real.sh
       - insert correct dates into a "namelist"
-      - run **real.exe**
+      - run **real.exe** (Fortran)
 
    - run ./run_wrf.sh
       - insert correct dates into a "namelist"
-      - run **wrf.exe**
+      - run **wrf.exe** (Fortran)
 
    - run ./analysis_script.sh
       - inserts correct time
