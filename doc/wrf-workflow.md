@@ -35,7 +35,7 @@ WRF programs to be run every simulation
 
 ```mermaid
 flowchart LR
-    A["Download global weather data"] --> Preprocess --> Real (initialization) -->  WRF (simulation) --> Analysis
+    A["Download global weather data"] --> Preprocess --> B["Real (init)"] -->  C["WRF (simulation)"] --> Analysis
 ```
 
 1. **download script**
