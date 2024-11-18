@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Planning phase &mdash; Programming formalism intro 0.1 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" type="text/css" />
+      <link rel="stylesheet" href="_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="_static/togglebutton.css" type="text/css" />
+      <link rel="stylesheet" href="_static/sphinx_lesson.css" type="text/css" />
+      <link rel="stylesheet" href="_static/sphinx_rtd_theme_ext_color_contrast.css" type="text/css" />
+      <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+        <script src="_static/clipboard.min.js"></script>
+        <script src="_static/copybutton.js"></script>
+        <script src="_static/minipres.js"></script>
+        <script>let toggleHintShow = 'Click to show';</script>
+        <script>let toggleHintHide = 'Click to hide';</script>
+        <script>let toggleOpenOnPrint = 'true';</script>
+        <script src="_static/togglebutton.js"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+        <script>mermaid.initialize({startOnLoad:true});</script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Start the project" href="startup.html" />
+    <link rel="prev" title="Software Development Lifecycle (SDLC) tools" href="sdlc_tools.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> Programming formalism intro
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Preparations:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="setup.html">Setup</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Theory lessons:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sdlc_tools.html">Software Development Lifecycle (SDLC) tools</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Project lessons:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Planning phase</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#some-overview">Some overview</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#analysis-step">Analysis step</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#design-step">Design step</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#the-planet-project">The Planet project</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#analysis">Analysis</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#lets-make-a-flowchart-of-the-program-parts">Let’s make a flowchart of the program parts</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#design">Design</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#do-some-pseudocode-of-the-calculations">Do some pseudocode of the calculations</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#wrap-up">Wrap-up</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#summary">Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="startup.html">Start the project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="startup_code.html">Start with coding!</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sourcecontrol.html">The iterations and Git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="deploy.html">Deploy and document for usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="collab.html">Collaboration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="summary.html">Summary</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Extra reading:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="SDLC_models.html">Software Development Lifecycle (SDLC) models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="UML_deeper.html">More about UML</a></li>
+<li class="toctree-l1"><a class="reference internal" href="git_deeper.html">More about git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="collab_deeper.html">More about collaboration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reproducible_deeper.html">More about reproducibility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sharing_deeper.html">More about sharing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="documentation_deeper.html">More about documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="deploy_deeper.html">More about deploying</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Reference:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="concepts.html">Concepts</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Programming formalism intro</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Planning phase</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/UPPMAX/programming_formalisms_intro/blob/main/doc//doc/flowcharts.md" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section class="tex2jax_ignore mathjax_ignore" id="planning-phase">
+<h1>Planning phase<a class="headerlink" href="#planning-phase" title="Permalink to this heading"></a></h1>
+<div class="admonition-questions questions admonition">
+<p class="admonition-title">Questions</p>
+<ul class="simple">
+<li><p>How to use UML and Pseudocode?</p></li>
+<li><p>Can we learn it?</p></li>
+</ul>
+</div>
+<div class="admonition-objectives objectives admonition">
+<p class="admonition-title">Objectives</p>
+<ul class="simple">
+<li><p>We will give an overview of UML diagrams</p>
+<ul>
+<li><p>learn when to use</p></li>
+<li><p>learn basic notations</p></li>
+</ul>
+</li>
+<li><p>We will see some examples of Pseudocode</p></li>
+</ul>
+</div>
+<div class="admonition-instructor-note instructor-note admonition-no-content admonition">
+<p class="admonition-title">Instructor note</p>
+</div>
+<section id="some-overview">
+<h2>Some overview<a class="headerlink" href="#some-overview" title="Permalink to this heading"></a></h2>
+<div class="admonition-the-planning-steps admonition">
+<p class="admonition-title">The planning steps</p>
+<ol class="arabic simple">
+<li><p>Analysis</p></li>
+</ol>
+<ul class="simple">
+<li><p>Get an overview of the project/program and goals</p></li>
+<li><p>to state the problem and define inputs and outputs</p></li>
+<li><p>Gather requirements</p></li>
+<li><p>graphical tools like UML</p></li>
+</ul>
+<ol class="arabic simple" start="2">
+<li><p>Design</p></li>
+</ol>
+<ul class="simple">
+<li><p>to find out the specific algorithms needed</p></li>
+<li><p>pseudocode</p></li>
+</ul>
+</div>
+<section id="analysis-step">
+<h3>Analysis step<a class="headerlink" href="#analysis-step" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>UML Diagrams</p>
+<ul>
+<li><p>Flowchart</p></li>
+</ul>
+</li>
+<li><p>Object-orientation programming</p>
+<ul>
+<li><p>Identify objects</p></li>
+</ul>
+</li>
+<li><p>Functional programming</p>
+<ul>
+<li><p>Identify functions</p></li>
+</ul>
+</li>
+<li><p>Text can also work here, describing the problem as a whole</p></li>
+</ul>
+</section>
+<section id="design-step">
+<h3>Design step<a class="headerlink" href="#design-step" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>Pseudocode</p></li>
+<li><p>Object-orientation programming</p>
+<ul>
+<li><p>Identify classes that objects can belong to</p></li>
+<li><p>UML</p></li>
+</ul>
+</li>
+<li><p>Functional programming</p>
+<ul>
+<li><p>Identify algorithms</p></li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+<section id="the-planet-project">
+<h2>The Planet project<a class="headerlink" href="#the-planet-project" title="Permalink to this heading"></a></h2>
+<section id="analysis">
+<h3>Analysis<a class="headerlink" href="#analysis" title="Permalink to this heading"></a></h3>
+<div class="admonition-planet-project admonition">
+<p class="admonition-title">Planet project</p>
+<p><strong>Background</strong></p>
+<ul class="simple">
+<li><p>The climate last about 1 million years has been largely determined but the change of the eccentricity (elongation) of Earth’s orbit (One of the <a class="reference external" href="https://climate.nasa.gov/news/2948/milankovitch-orbital-cycles-and-their-role-in-earths-climate/">Milankovitch cycles</a>.</p></li>
+<li><p>The glacial cycles (daily speaking: ice ages) with a period of about 100 000 years are thought to be due to this.</p>
+<ul>
+<li><p>Theory: The gravity from the other planets, especially Jupiter, causes the change of the eccentricity.</p></li>
+</ul>
+</li>
+<li><p><strong>Problem</strong>: Reproduce Milankovitch cycle of eccentricity (100ka)</p></li>
+<li><p><strong>Method</strong>: Use Python</p>
+<ul>
+<li><p>Let’s go for functional programming</p></li>
+</ul>
+</li>
+<li><p><strong>Input</strong>: Some initial positions of the planets but no external data</p>
+<ul>
+<li><p>Perhaps also user input of length of simulation</p></li>
+</ul>
+</li>
+<li><p><strong>Output</strong>: Graph of orbits and a timeseries of an eccentricity parameter</p></li>
+</ul>
+<p><strong>Development steps</strong> (we extend the program with iterations)</p>
+<ol class="arabic simple">
+<li><p>Earth-sun system</p></li>
+<li><p>Add Jupiter</p></li>
+<li><p>Make modular</p></li>
+<li><p>Add more planets?</p></li>
+</ol>
+</div>
+<div class="admonition-plantuml-cheat-sheet admonition">
+<p class="admonition-title">PlantUML Cheat sheet</p>
+<p><strong>UML code</strong> (if this is rendered automatically, turn off the plugin!)</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">@startuml</span>
+<span class="go">skin rose</span>
+<span class="go">title Repeat - Activity Diagram</span>
+
+<span class="go">start</span>
+<span class="go">repeat</span>
+<span class="go">  :Eat Hot Wings;</span>
+<span class="go">  :Drink Homebrew;</span>
+<span class="go">repeat while (Still Hungry?)</span>
+<span class="go">stop</span>
+<span class="go">@enduml</span>
+</pre></div>
+</div>
+<p><strong>UML graph</strong></p>
+<p class="plantuml">
+<img src="_images/plantuml-1da2de536c7459522a03a5fc9aada8b14b3668bd.png" alt="&#64;startuml
+
+skin rose
+
+title Repeat - Activity Diagram 
+
+
+start
+
+repeat
+  :Eat Hot Wings;
+  :Drink Homebrew;
+repeat while (Still Hungry?)
+
+stop
+
+&#64;enduml"/>
+</p>
+</div>
+<section id="lets-make-a-flowchart-of-the-program-parts">
+<h4>Let’s make a flowchart of the program parts<a class="headerlink" href="#lets-make-a-flowchart-of-the-program-parts" title="Permalink to this heading"></a></h4>
+<div class="admonition-exercise exercise important admonition">
+<p class="admonition-title">Exercise</p>
+<p>We want to make a activity diagram of these steps.</p>
+<p>I will use <a class="reference external" href="https://www.planttext.com/">https://www.planttext.com/</a> for this</p>
+<ul class="simple">
+<li><p>define some parameters</p></li>
+<li><p>initialize earth (and Jupiter later on)</p></li>
+<li><p>repeat until simulation time is met</p>
+<ul>
+<li><p>calculate new position</p></li>
+<li><p>calculate acceleration</p></li>
+<li><p>calculate velocity in two dimensions</p></li>
+</ul>
+</li>
+<li><p>then plot figure</p></li>
+</ul>
+<div class="admonition-solution solution important dropdown admonition">
+<p class="admonition-title">Solution</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">@startuml</span>
+<span class="go">skin rose</span>
+<span class="go">title Planet flowchart</span>
+<span class="go">start</span>
+
+<span class="go">:define some parameters;</span>
+<span class="go">:initialize earth (and Jupiter);</span>
+
+<span class="go">repeat</span>
+<span class="go">  :calculate new position;</span>
+<span class="go">  :calculate acceleration;</span>
+<span class="go">  :calculate velocity in two dimensions;</span>
+
+<span class="go">repeat while (simulation time is met) is (no)</span>
+<span class="go">-&gt;yes;</span>
+<span class="go">:figure plotting;</span>
+<span class="go">stop</span>
+
+<span class="go">@enduml</span>
+</pre></div>
+</div>
+</div>
+<p>It should look something like this:</p>
+<div class="highlight-uml notranslate"><div class="highlight"><pre><span></span>@startuml
+skin rose
+title Planet flowchart
+start
+
+:define some parameters;
+:initialize earth (and Jupiter);
+
+repeat
+  :calculate new position;
+  :calculate acceleration;
+  :calculate velocity in two dimensions;
+
+repeat while (simulation time is met) is (no)
+-&gt;yes;
+:figure plotting;
+stop
+
+
+</pre></div>
+</div>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><strong>Syntax for algorithm flowchart</strong></p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://plantuml.com/">plantuml.com</a></p></li>
+</ul>
+</div>
+</section>
+</section>
+<section id="design">
+<h3>Design<a class="headerlink" href="#design" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>A way to visualize a system’s architectural blueprints in a diagram, including elements such as:</p>
+<ul>
+<li><p>any activities (jobs);</p></li>
+<li><p>individual components of the system;</p>
+<ul>
+<li><p>and how they can interact with other software components;</p></li>
+</ul>
+</li>
+<li><p>how the system will run;</p></li>
+<li><p>how entities interact with others (components and interfaces);</p></li>
+<li><p>external user interface.</p></li>
+</ul>
+</li>
+<li><p>Although originally intended for object-oriented design documentation, UML has been extended to a larger set of design documentation, and been found useful in many contexts.</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>- Many people jump this step feels it&#39;s more comfortable to write in the actual programming language directly
+- This will not be covered deeply in the lessons of the week
+</pre></div>
+</div>
+</div>
+<p><strong>Example</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  algorithm ford-fulkerson is
+    input: Graph G with flow capacity c, 
+           source node s, 
+           sink node t
+    output: Flow f such that f is maximal from s to t
+
+    (Note that f(u,v) is the flow from node u to node v, and c(u,v) is the flow capacity from node u to node v)
+
+    for each edge (u, v) in GE do
+        f(u, v) ← 0
+        f(v, u) ← 0
+
+    while there exists a path p from s to t in the residual network Gf do
+        let cf be the flow capacity of the residual network Gf
+        cf(p) ← min{cf(u, v) | (u, v) in p}
+        for each edge (u, v) in p do
+            f(u, v) ←  f(u, v) + cf(p)
+            f(v, u) ← −f(u, v)
+
+    return f
+</pre></div>
+</div>
+<section id="do-some-pseudocode-of-the-calculations">
+<h4>Do some pseudocode of the calculations<a class="headerlink" href="#do-some-pseudocode-of-the-calculations" title="Permalink to this heading"></a></h4>
+<div class="admonition-demo-of-pseudocode exercise important admonition">
+<p class="admonition-title">Demo of Pseudocode</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Define</span> <span class="n">constants</span>
+<span class="n">Define</span> <span class="n">initial</span> <span class="n">values</span>
+	<span class="n">positions</span>
+	<span class="n">velocity</span> <span class="p">(</span><span class="n">balance</span> <span class="n">of</span> <span class="n">gravity</span> <span class="ow">and</span> <span class="n">centrifugal</span> <span class="n">force</span><span class="p">)</span>
+<span class="p">(</span><span class="n">Allocate</span> <span class="p">(</span><span class="n">book</span><span class="p">)</span> <span class="n">space</span> <span class="k">for</span> <span class="n">long</span> <span class="n">vectors</span>	<span class="n">plan</span> <span class="n">iteration</span><span class="p">)</span>
+<span class="n">Iteration</span>
+	<span class="n">Change</span> <span class="n">of</span> <span class="n">positions</span>
+	<span class="n">Calc</span> <span class="n">acc</span> <span class="p">(</span><span class="n">gravity</span><span class="p">)</span>
+	<span class="n">Calc</span> <span class="n">new</span> <span class="n">velocity</span>
+<span class="n">Plot</span> <span class="n">resulting</span> <span class="n">ellipses</span>
+<span class="n">Calculate</span> <span class="n">orbit</span> <span class="n">parameters</span>
+<span class="n">Plot</span> <span class="n">time</span> <span class="n">series</span> <span class="n">of</span> <span class="n">parameter</span> <span class="n">change</span>
+</pre></div>
+</div>
+</div>
+</section>
+</section>
+</section>
+<section id="wrap-up">
+<h2>Wrap-up<a class="headerlink" href="#wrap-up" title="Permalink to this heading"></a></h2>
+<div class="admonition-uml-pseudocode discussion attention admonition">
+<p class="admonition-title">UML &amp; Pseudocode</p>
+<p><strong>Menti</strong></p>
+<ul class="simple">
+<li><p>I have used it</p></li>
+<li><p>I like it</p></li>
+<li><p>I plan to use it</p></li>
+</ul>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul class="simple">
+<li><p>More practicals on UML later this week!</p></li>
+<li><p>Pseudocode will not be covered deeply in the lessons of the week</p></li>
+</ul>
+</div>
+<div class="admonition-parts-to-be-covered admonition">
+<p class="admonition-title">Parts to be covered</p>
+<ul class="simple">
+<li><p>☑ Planning</p>
+<ul>
+<li><p>Pseudocode</p></li>
+<li><p>Unified Modelling Language</p></li>
+</ul>
+</li>
+<li><p>☐ Testing</p>
+<ul>
+<li><p>We don’t do this today!</p></li>
+</ul>
+</li>
+<li><p>☐ Source/version control</p></li>
+<li><p>☐ Collaboration</p></li>
+<li><p>☐ Sharing</p></li>
+<li><p>☐ Documentation</p></li>
+</ul>
+</div>
+</section>
+<section id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this heading"></a></h2>
+<div class="admonition-keypoints keypoints admonition">
+<p class="admonition-title">Keypoints</p>
+<ul class="simple">
+<li><p>UML is good in several conditions</p>
+<ul>
+<li><p>Structural overviews</p></li>
+<li><p>Planning</p></li>
+<li><p>Problem solving</p></li>
+<li><p>Designing phase of programming</p></li>
+</ul>
+</li>
+<li><p>Pseudocode gives a more detailed description what you want the program to do.</p>
+<ul>
+<li><p>Can be highly personal or very language-like</p></li>
+<li><p>Many people jump this step feels it’s more comfortable to write in the actual programming language directly</p></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="sdlc_tools.html" class="btn btn-neutral float-left" title="Software Development Lifecycle (SDLC) tools" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="startup.html" class="btn btn-neutral float-right" title="Start the project" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, UPPMAX.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

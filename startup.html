@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Start the project &mdash; Programming formalism intro 0.1 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" type="text/css" />
+      <link rel="stylesheet" href="_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="_static/togglebutton.css" type="text/css" />
+      <link rel="stylesheet" href="_static/sphinx_lesson.css" type="text/css" />
+      <link rel="stylesheet" href="_static/sphinx_rtd_theme_ext_color_contrast.css" type="text/css" />
+      <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+        <script src="_static/clipboard.min.js"></script>
+        <script src="_static/copybutton.js"></script>
+        <script src="_static/minipres.js"></script>
+        <script>let toggleHintShow = 'Click to show';</script>
+        <script>let toggleHintHide = 'Click to hide';</script>
+        <script>let toggleOpenOnPrint = 'true';</script>
+        <script src="_static/togglebutton.js"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+        <script>mermaid.initialize({startOnLoad:true});</script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Start with coding!" href="startup_code.html" />
+    <link rel="prev" title="Planning phase" href="flowcharts.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> Programming formalism intro
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Preparations:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="setup.html">Setup</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Theory lessons:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sdlc_tools.html">Software Development Lifecycle (SDLC) tools</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Project lessons:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="flowcharts.html">Planning phase</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Start the project</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#order-your-files">Order your files!</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#start-with-a-new-github-project">Start with a new GitHub project</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#type-along-create-a-new-repository-on-github">Type-along: Create a new repository on GitHub</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#readme-files">README files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#what-is-git-and-what-is-a-git-repository">What is Git, and what is a Git repository?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#before-we-continue-we-need-to-configure-git">Before we continue we need to configure Git</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#cloning-our-plane-repository-to-local">Cloning our Plane repository to local</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#working-on-github">Working on GitHub</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="startup_code.html">Start with coding!</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sourcecontrol.html">The iterations and Git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="deploy.html">Deploy and document for usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="collab.html">Collaboration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="summary.html">Summary</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Extra reading:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="SDLC_models.html">Software Development Lifecycle (SDLC) models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="UML_deeper.html">More about UML</a></li>
+<li class="toctree-l1"><a class="reference internal" href="git_deeper.html">More about git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="collab_deeper.html">More about collaboration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reproducible_deeper.html">More about reproducibility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sharing_deeper.html">More about sharing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="documentation_deeper.html">More about documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="deploy_deeper.html">More about deploying</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Reference:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="concepts.html">Concepts</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Programming formalism intro</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Start the project</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/UPPMAX/programming_formalisms_intro/blob/main/doc//doc/startup.md" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section class="tex2jax_ignore mathjax_ignore" id="start-the-project">
+<h1>Start the project<a class="headerlink" href="#start-the-project" title="Permalink to this heading"></a></h1>
+<div class="admonition-objectives objectives admonition">
+<p class="admonition-title">Objectives</p>
+<ul class="simple">
+<li><p>Think about structure of the files and folders for the project</p></li>
+<li><p>Think about documentation already</p></li>
+</ul>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul class="simple">
+<li><p>Many projects/scripts start as something for personal use, but expands to be distributed.</p></li>
+<li><p>Let’s start in that end and be prepared.</p></li>
+<li><p>The following steps can be very valuable for you in a couple of months as well as you revisit your code and don’t know what it does or why you did this and that.</p></li>
+</ul>
+</div>
+<section id="order-your-files">
+<h2>Order your files!<a class="headerlink" href="#order-your-files" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>Think that <strong>everything is worth to be part of documentation</strong> (like GitHub directory tree)</p></li>
+<li><p>The parts from the software development cycle</p>
+<ul>
+<li><p>The planning parts</p>
+<ul>
+<li><p>Requirements:</p>
+<ul>
+<li><p>what should the program deliver</p></li>
+<li><p>dependencies</p></li>
+<li><p>OS platforms</p></li>
+</ul>
+</li>
+<li><p>Risk analysis</p></li>
+</ul>
+</li>
+<li><p>Design documentation</p>
+<ul>
+<li><p>Analysis: pseudo code and UML</p></li>
+</ul>
+</li>
+<li><p>Source code</p>
+<ul>
+<li><p>with in-code documentation</p></li>
+</ul>
+</li>
+<li><p>README</p></li>
+<li><p>(Full documentation)</p></li>
+<li><p>(Tutorial)</p></li>
+</ul>
+</li>
+</ul>
+<div class="admonition-directory-structure admonition">
+<p class="admonition-title">Directory structure</p>
+<p>Different projects should have separate folders</p>
+<ul class="simple">
+<li><p>ReadMe file</p></li>
+<li><p>Data		(version controlled)(.gitignore)</p></li>
+<li><p>Processed data	intermediate</p></li>
+<li><p>(Manuscript)</p></li>
+<li><p>Results		data, tables, figures (version controlled, git tags for manuscript version)</p></li>
+<li><p>Src		version controlled code</p>
+<ul>
+<li><p>License (here or in the 1st level)</p></li>
+<li><p>Requirements.txt</p></li>
+</ul>
+</li>
+<li><p>Doc</p>
+<ul>
+<li><p>index</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul class="simple">
+<li><p>If software is reused in several projects it can make sense to put them in its own repo, not connected to a specific research project</p></li>
+</ul>
+</div>
+</section>
+<section id="start-with-a-new-github-project">
+<h2>Start with a new GitHub project<a class="headerlink" href="#start-with-a-new-github-project" title="Permalink to this heading"></a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul class="simple">
+<li><p>For the course project we do it in this order, but that is not necessary in all cases.</p></li>
+<li><p>Typically you may start locally in Git repository and later push to a GitHub repository (more next session about Git)</p></li>
+<li><p>The reason for starting here is that we can get our PlantUML render in the browser!</p></li>
+</ul>
+</div>
+<section id="type-along-create-a-new-repository-on-github">
+<h3>Type-along: Create a new repository on GitHub<a class="headerlink" href="#type-along-create-a-new-repository-on-github" title="Permalink to this heading"></a></h3>
+<div class="admonition-type-along type-along important admonition">
+<p class="admonition-title">Type-Along</p>
+<p>Make sure that you are <strong>logged into GitHub</strong>.</p>
+<figure class="align-default" id="id1">
+<a class="with-border reference internal image-reference" href="_images/New_repo.png"><img alt="_images/New_repo.png" class="with-border" src="_images/New_repo.png" style="width: 60%;" /></a>
+<figcaption>
+<p><span class="caption-text">To create a repository we either click the green button “New” (top left corner).</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="id2">
+<a class="with-border reference internal image-reference" href="_images/new-top-right.png"><img alt="_images/new-top-right.png" class="with-border" src="_images/new-top-right.png" style="width: 60%;" /></a>
+<figcaption>
+<p><span class="caption-text">Or if you see your profile page, there is a “+” menu (top right corner).</span><a class="headerlink" href="#id2" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<hr class="docutils" />
+<p>On this page choose a project name, e.g. <code class="docutils literal notranslate"><span class="pre">planets-&lt;username&gt;</span></code></p>
+<ul class="simple">
+<li><p>the name there so there are no clashes when/if you collaborate and fork other repositories)</p></li>
+</ul>
+<p>For the sake of this exercise <strong>do select</strong>
+“Initialize this repository with a README”
+and
+“Choose a license”</p>
+<ul class="simple">
+<li><p>Let’s choose MIT (we may discuss this later on</p></li>
+</ul>
+<figure class="align-default">
+<a class="with-border reference internal image-reference" href="_images/New_repo_formalisms.png"><img alt="_images/New_repo_formalisms.png" class="with-border" src="_images/New_repo_formalisms.png" style="width: 100%;" /></a>
+</figure>
+<p><strong>Done!</strong></p>
+<p><strong>Let’s view the license!</strong></p>
+<ul class="simple">
+<li><p>There are prewritten text for the different types.</p></li>
+<li><p>More info at <a class="reference external" href="https://uppmax.github.io/programming_formalisms_intro/sharing_deeper.html#licensing">Licensing</a></p></li>
+</ul>
+</div>
+</section>
+</section>
+<section id="readme-files">
+<h2>README files<a class="headerlink" href="#readme-files" title="Permalink to this heading"></a></h2>
+<p><strong>Advantages</strong></p>
+<ul class="simple">
+<li><p>Versioned (goes with the code development)</p></li>
+<li><p>It is often good enough to have a <code class="docutils literal notranslate"><span class="pre">README.md</span></code> or <code class="docutils literal notranslate"><span class="pre">README.rst</span></code> along with your code/script</p></li>
+<li><p>If you use README files, use either
+<a class="reference external" href="http://docutils.sourceforge.net/rst.html">RST</a> or
+<a class="reference external" href="https://commonmark.org/help/">Markdown</a></p></li>
+<li><p>A great guide to README files: <a class="reference external" href="https://www.makeareadme.com/">MakeaREADME</a></p></li>
+</ul>
+<div class="admonition-keypoints keypoints admonition">
+<p class="admonition-title">Keypoints</p>
+<p>README file should include:</p>
+<ul class="simple">
+<li><p>A descriptive project title</p></li>
+<li><p>Motivation (why the project exists)</p></li>
+<li><p>How to setup</p></li>
+<li><p>Copy-pastable quick start code example</p></li>
+<li><p>Recommended citation</p></li>
+</ul>
+</div>
+<p><strong>We are ready to</strong></p>
+<ul class="simple">
+<li><p>Extend the README file</p></li>
+<li><p>Make some folders according to the above list</p></li>
+<li><p>Put the planning documents in a docs folder</p></li>
+</ul>
+<div class="admonition-min exercise important admonition">
+<p class="admonition-title">10 min</p>
+<ol class="arabic simple">
+<li><p>Extend the README file a little bit with an <strong>About section</strong> in Markdown format describing the project.</p></li>
+</ol>
+<ul class="simple">
+<li><p>Use the <strong>Pencil</strong> button</p></li>
+<li><p>Use the goals stated in last session, <a class="reference external" href="https://uppmax.github.io/programming_formalisms_intro/flowcharts.html#analysis">Analysis</a></p></li>
+<li><p>Get inspiration from <a class="reference external" href="https://www.makeareadme.com/">https://www.makeareadme.com/</a> and a favorite Git repo or <a class="reference external" href="https://github.com/yampelo/beagle">https://github.com/yampelo/beagle</a>.</p></li>
+</ul>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span><span class="gs">**Cheat sheet**</span>
+<span class="gh"># This is a section in Markdown   </span>
+
+<span class="gu">## This is a subsection           </span>
+
+Nothing special needed for        
+a normal paragraph.               
+
+    This is a code block          
+
+
+<span class="gs">**Bold**</span> and <span class="ge">*emphasized*</span>.       
+
+A list:                           
+<span class="k">-</span><span class="w"> </span>this is an item                 
+<span class="k">-</span><span class="w"> </span>another item                   
+               
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>Create the planning document in markdown <strong>Add file</strong> button and choose “Create file”.</p></li>
+</ol>
+<ul class="simple">
+<li><p>Call the file <code class="docutils literal notranslate"><span class="pre">doc/plan.md</span></code></p>
+<ul>
+<li><p>this will on the fly create the directory <code class="docutils literal notranslate"><span class="pre">doc</span></code>.</p></li>
+</ul>
+</li>
+<li><p>Copy paste the example code found in the last session for <a class="reference external" href="https://uppmax.github.io/programming_formalisms_intro/flowcharts.html#lets-make-a-flowchart-of-the-program-parts">PlantUML</a> and <a class="reference external" href="https://uppmax.github.io/programming_formalisms_intro/flowcharts.html#do-some-pseudocode-of-the-calculations">pseudocode</a>.</p>
+<ul>
+<li><p>Type <code class="docutils literal notranslate"><span class="pre">&quot;```uml&quot;</span></code> (without “) above the UML code and <code class="docutils literal notranslate"><span class="pre">&quot;```&quot;</span></code> below, and it should render nicely.</p></li>
+<li><p>Type <code class="docutils literal notranslate"><span class="pre">&quot;```code&quot;</span></code> (without “) above the pseudo code and <code class="docutils literal notranslate"><span class="pre">&quot;```&quot;</span></code> below, and it should render nicely.</p></li>
+</ul>
+</li>
+<li><p>Add some suitable headings for the code sections</p></li>
+</ul>
+</div>
+<div class="admonition-solution solution important dropdown admonition">
+<p class="admonition-title">Solution</p>
+<h1 class="rubric" id="plan">Plan</h1>
+<h2 class="rubric" id="background">Background</h2>
+<ul class="simple">
+<li><p>The climate last about 1 million years has been largely determined but the change of the eccentricity (elongation) of Earth’s orbit (One of the <a class="reference external" href="https://climate.nasa.gov/news/2948/milankovitch-orbital-cycles-and-their-role-in-earths-climate/">Milankovitch cycles</a>).</p></li>
+<li><p>The glacial cycles (daily speaking: ice ages) with a period of about 100 000 years are thought to be due to this.</p>
+<ul>
+<li><p>Theory: The gravity form the other planets, especially Jupiter, causes the change of the eccentricity</p></li>
+</ul>
+</li>
+<li><p><strong>Problem</strong>: Reproduce Milankovitch cycle of eccentricity (100ka)</p></li>
+<li><p><strong>Method</strong>: Use Python</p>
+<ul>
+<li><p>Let’s go for functional programming</p></li>
+</ul>
+</li>
+<li><p><strong>Input</strong>: Some initial positions of the planets but no external data</p>
+<ul>
+<li><p>Perhaps also user input of length of simulation</p></li>
+</ul>
+</li>
+<li><p><strong>Output</strong>: Graph of orbits and a timeseries of an eccentricity parameter</p></li>
+</ul>
+<p><strong>Development steps</strong> (we extend the program with iterations)</p>
+<ol class="arabic simple">
+<li><p>Earth-sun system</p></li>
+<li><p>Add Jupiter</p></li>
+<li><p>Make modular</p></li>
+<li><p>Add more planets?</p></li>
+</ol>
+<h2 class="rubric" id="plantuml">PlantUML</h2>
+<div class="highlight-uml notranslate"><div class="highlight"><pre><span></span>@startuml
+skin rose
+title Planet flowchart
+start
+
+:define some parameters;
+:initialize earth (and Jupiter);
+
+repeat
+  :calculate new position;
+  :calculate acceleration;
+  :calculate velocity in two dimensions;
+
+repeat while (simulation time is met) is (no)
+-&gt;yes;
+:figure plotting;
+stop
+</pre></div>
+</div>
+<h2 class="rubric" id="pseudocode">Pseudocode</h2>
+<div class="highlight-code notranslate"><div class="highlight"><pre><span></span>Define constants
+Define initial values
+	positions
+	velocity (balance of gravity and centrifugal force)
+(Allocate (book) space for long vectors	plan iteration)
+Iteration
+	Change of positions
+	Calc acc (gravity)
+	Calc new velocity
+Plot resulting ellipses
+Calculate orbit parameters
+Plot time series of parameter change
+</pre></div>
+</div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="what-is-git-and-what-is-a-git-repository">
+<h2>What is Git, and what is a Git repository?<a class="headerlink" href="#what-is-git-and-what-is-a-git-repository" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>Git is a version control system: can <strong>record/save snapshots</strong> and track the content of a folder as it changes over time.</p></li>
+<li><p>Every time we <strong>commit</strong> a snapshot, Git records a snapshot of the <strong>entire project</strong>, saves it, and assigns it a version.</p></li>
+<li><p>These snapshots are kept inside a sub-folder called <code class="docutils literal notranslate"><span class="pre">.git</span></code>.</p></li>
+<li><p>If we remove <code class="docutils literal notranslate"><span class="pre">.git</span></code>, we remove the repository and history (but keep the working directory!).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">.git</span></code> uses relative paths - you can move the whole thing somewhere else and it will still work</p></li>
+<li><p>Git doesn’t do anything unless you ask it to (it does not record anything automatically).</p></li>
+<li><p>Multiple interfaces to Git exist (command line, graphical interfaces, web interfaces).</p></li>
+</ul>
+<div class="admonition-concepts-in-git admonition">
+<p class="admonition-title">Concepts in Git</p>
+<ul class="simple">
+<li><p><strong>repository</strong>: The project, contains all data and history (commits, branches, tags).</p></li>
+<li><p><strong>add</strong>: Stage you files (collect what to be added to the git record — a kind of middle step)</p></li>
+<li><p><strong>commit</strong>: Snapshot of the project, gets a unique identifier (e.g. <code class="docutils literal notranslate"><span class="pre">c7f0e8bfc718be04525847fc7ac237f470add76e</span></code>).</p></li>
+<li><p><strong>cloning</strong>: Copying the whole repository to your laptop - the first time. It is not necessary to download each file one by one.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span></code> copies everything: all commits and all branches.</p></li>
+<li><p>Branches on the remote appear as (read-only) local branches with a prefix, e.g. <code class="docutils literal notranslate"><span class="pre">origin/main</span></code>.</p></li>
+<li><p>We synchronize commits between local and remote with <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">fetch</span></code>/<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">pull</span></code> and <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span></code>.</p></li>
+</ul>
+</div>
+</section>
+<section id="before-we-continue-we-need-to-configure-git">
+<h2>Before we continue we need to configure Git<a class="headerlink" href="#before-we-continue-we-need-to-configure-git" title="Permalink to this heading"></a></h2>
+<div class="admonition-prerequisites prerequisites admonition">
+<p class="admonition-title">Prerequisites</p>
+<ul class="simple">
+<li><p><strong>Git and GitHub should be configured prior to the course</strong>
+following <a class="reference external" href="https://uppmax.github.io/programming_formalisms_intro/setup.html">Setup</a>.</p>
+<ul>
+<li><p>Test: <code class="docutils literal notranslate"><span class="pre">ssh</span> <span class="pre">-T</span> <span class="pre">git&#64;github.com</span></code></p>
+<ul>
+<li><p>Output should be something like this: <code class="docutils literal notranslate"><span class="pre">Hi</span> <span class="pre">bclaremar!</span> <span class="pre">You've</span> <span class="pre">successfully</span> <span class="pre">authenticated,</span> <span class="pre">but</span> <span class="pre">GitHub</span> <span class="pre">does</span> <span class="pre">not</span> <span class="pre">provide</span> <span class="pre">shell</span> <span class="pre">access.</span></code></p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Being comfortable with the command line. No expertise is required, but the lesson will be mostly taken from the command line.</p></li>
+<li><p>Students should be familiar with using a <strong>text editor</strong> on their system.</p>
+<ul>
+<li><p>Emacs and Vim are excellent choices if you know how to use them</p></li>
+<li><p>but Nano or</p></li>
+<li><p>Notepad on Windows are sufficient.</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<ul class="simple">
+<li><p>Start your terminal of choice</p>
+<ul>
+<li><p>Terminal in Visual Studio code</p></li>
+<li><p>MAC terminal</p></li>
+<li><p>iTerm (Mac)</p></li>
+<li><p>Git BASH  (Windows)</p></li>
+<li><p>WSL (Windows subsystem Linux) environment in</p>
+<ul>
+<li><p>MobaxTerm</p></li>
+<li><p>Powershell</p></li>
+</ul>
+</li>
+<li><p>PowerShell</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<p>If you haven’t already configured Git, please follow the instructions in the
+<a class="reference external" href="https://uppmax.github.io/programming_formalisms_intro/setup.html#shell-and-git">installation instructions</a>.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>user.name<span class="w"> </span><span class="s2">&quot;&lt;Your Name&gt;&quot;</span>
+<span class="gp">$ </span>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>user.email<span class="w"> </span>&lt;your<span class="w"> </span>GitHub-connected<span class="w"> </span>email<span class="w"> </span>address&gt;
+<span class="gp">$ </span>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>core.editor<span class="w"> </span>nano
+</pre></div>
+</div>
+<p>or replace nano with another editor, like in Windows: <code class="docutils literal notranslate"><span class="pre">notepad</span></code>
+Verify with:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git<span class="w"> </span>config<span class="w"> </span>--list
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Also, test:</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ssh</span> <span class="pre">-T</span> <span class="pre">git&#64;github.com</span></code></p></li>
+<li><p>Output should be something like this:</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Hi</span> <span class="pre">bclaremar!</span> <span class="pre">You've</span> <span class="pre">successfully</span> <span class="pre">authenticated,</span> <span class="pre">but</span> <span class="pre">GitHub</span> <span class="pre">does</span> <span class="pre">not</span> <span class="pre">provide</span> <span class="pre">shell</span> <span class="pre">access.</span></code></p></li>
+</ul>
+</section>
+<section id="cloning-our-plane-repository-to-local">
+<h2>Cloning our Plane repository to local<a class="headerlink" href="#cloning-our-plane-repository-to-local" title="Permalink to this heading"></a></h2>
+<p>Now you and other people can clone this repository and contribute changes.</p>
+<div class="admonition-type-along type-along important admonition">
+<p class="admonition-title">Type-Along</p>
+<ul class="simple">
+<li><p>You may want to create a directory for this course. You can do it in the normal way or use your terminal, like this in a good place (like “Courses” if you have that)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">Courses</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mkdir</span> <span class="pre">Programming_formalisms</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">Programming_formalisms</span></code></p></li>
+</ul>
+</li>
+<li><p>In GitHub, locate the <strong>Code</strong> button, select <strong>SSH</strong> and click the <em>copy</em> symbol to the right</p></li>
+<li><p>Back in your terminal type <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span></code> followed by pasting the copied text.</p></li>
+<li><p>The result shall look something like this:</p></li>
+</ul>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git<span class="w"> </span>clone<span class="w"> </span>git@github.com:&lt;user&gt;/planet-&lt;user&gt;.git
+</pre></div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<ul class="simple">
+<li><p>Using the SSH makes it very straight-forward to upload your local changes back ot GitHub. Use HTTP if you clone repos that do not belong to you or your group.</p></li>
+</ul>
+</div>
+<ul class="simple">
+<li><p>This creates a directory called <code class="docutils literal notranslate"><span class="pre">planet-&lt;user&gt;</span></code> unless it already exists.</p></li>
+</ul>
+<p>What just happened?</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">cd</span></code> the new directory that was created</p></li>
+<li><p>list the files with <code class="docutils literal notranslate"><span class="pre">ls</span></code></p></li>
+<li><p><strong>Think of cloning as downloading the <code class="docutils literal notranslate"><span class="pre">.git</span></code> part to your computer</strong>.</p></li>
+<li><p>After downloading the <code class="docutils literal notranslate"><span class="pre">.git</span></code> part the branch pointed to by HEAD is automatically checked out.</p></li>
+</ul>
+</div>
+</section>
+<section id="working-on-github">
+<h2>Working on GitHub<a class="headerlink" href="#working-on-github" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>You can do basically the <strong>same work at GitHub as in your local git repo</strong></p></li>
+<li><p>The <strong>graphical view</strong> makes it easier to work with in everyday editing work at least.</p>
+<ul>
+<li><p>Depends on your own preferences of course.</p></li>
+</ul>
+</li>
+<li><p>Here your commit each file at a time with the “commit button”.</p>
+<ul>
+<li><p><strong>No staging</strong> that is.</p></li>
+<li><p>Be aware of that feature!</p></li>
+</ul>
+</li>
+<li><p><strong>GitHub Actions</strong> are workflows defined by you, like:</p>
+<ul>
+<li><p>for automatic testing after each commit (Used in the test lessons)</p></li>
+<li><p>for GitHub Pages, briefly covered in last session today or Extra reading: <a class="reference external" href="https://uppmax.github.io/programming_formalisms_intro/documentation_deeper.html">Documentation</a>.</p></li>
+</ul>
+</li>
+</ul>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://coderefinery.github.io/github-without-command-line/">Workshop on GitHub without command-line</a></p></li>
+</ul>
+</div>
+<div class="admonition-parts-to-be-covered admonition">
+<p class="admonition-title">Parts to be covered</p>
+<ul class="simple">
+<li><p>☑ Planning</p>
+<ul>
+<li><p>Pseudocode</p></li>
+<li><p>Unified Modelling Language</p></li>
+</ul>
+</li>
+<li><p>☐ Testing</p>
+<ul>
+<li><p>Different levels</p></li>
+<li><p>We don’t do this today!</p></li>
+</ul>
+</li>
+<li><p>☑ Source/version control</p>
+<ul>
+<li><p>Git</p>
+<ul>
+<li><p>We have a starting point!</p></li>
+</ul>
+</li>
+<li><p>GitHub as remote backup</p></li>
+</ul>
+</li>
+<li><p>☐ Collaboration</p>
+<ul>
+<li><p>GitHub</p></li>
+</ul>
+</li>
+<li><p>☑ Sharing</p>
+<ul>
+<li><p>☑ open science</p></li>
+<li><p>☐ citation</p></li>
+<li><p>☑ licensing</p></li>
+</ul>
+</li>
+<li><p>☐ Documentation</p></li>
+</ul>
+</div>
+<div class="admonition-keypoints keypoints admonition">
+<p class="admonition-title">Keypoints</p>
+<ul class="simple">
+<li><p>A repository can have one or multiple remotes (we will revisit these later).</p></li>
+<li><p>A remote (GitHub) in this case serves as a full backup of your work.</p></li>
+<li><p>Code development might be easier to develop in the local git repo since you can run and test locally in an easy way.</p></li>
+</ul>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="flowcharts.html" class="btn btn-neutral float-left" title="Planning phase" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="startup_code.html" class="btn btn-neutral float-right" title="Start with coding!" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, UPPMAX.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

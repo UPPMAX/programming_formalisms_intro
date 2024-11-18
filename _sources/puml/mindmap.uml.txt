@@ -1,0 +1,12 @@
+@startuml
+title
+{{mindmap
+* Debian
+** Ubuntu
+*** Linux Mint
+*** ...
+** LMDE
+** ...
+}}
+end title
+@enduml

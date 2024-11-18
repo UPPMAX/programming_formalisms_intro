@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>More about reproducibility &mdash; Programming formalism intro 0.1 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" type="text/css" />
+      <link rel="stylesheet" href="_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="_static/togglebutton.css" type="text/css" />
+      <link rel="stylesheet" href="_static/sphinx_lesson.css" type="text/css" />
+      <link rel="stylesheet" href="_static/sphinx_rtd_theme_ext_color_contrast.css" type="text/css" />
+      <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+        <script src="_static/clipboard.min.js"></script>
+        <script src="_static/copybutton.js"></script>
+        <script src="_static/minipres.js"></script>
+        <script>let toggleHintShow = 'Click to show';</script>
+        <script>let toggleHintHide = 'Click to hide';</script>
+        <script>let toggleOpenOnPrint = 'true';</script>
+        <script src="_static/togglebutton.js"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+        <script>mermaid.initialize({startOnLoad:true});</script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="More about sharing" href="sharing_deeper.html" />
+    <link rel="prev" title="More about collaboration" href="collab_deeper.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> Programming formalism intro
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Preparations:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="setup.html">Setup</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Theory lessons:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sdlc_tools.html">Software Development Lifecycle (SDLC) tools</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Project lessons:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="flowcharts.html">Planning phase</a></li>
+<li class="toctree-l1"><a class="reference internal" href="startup.html">Start the project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="startup_code.html">Start with coding!</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sourcecontrol.html">The iterations and Git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="deploy.html">Deploy and document for usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="collab.html">Collaboration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="summary.html">Summary</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Extra reading:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="SDLC_models.html">Software Development Lifecycle (SDLC) models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="UML_deeper.html">More about UML</a></li>
+<li class="toctree-l1"><a class="reference internal" href="git_deeper.html">More about git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="collab_deeper.html">More about collaboration</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">More about reproducibility</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#versioning-systems">Versioning systems</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#semantic-semver">Semantic (SemVer)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#calender-calver">Calender (CalVer)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#recording-dependencies">Recording dependencies</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#conda-anaconda-pip-virtualenv-pipenv-pyenv-poetry-requirements-txt">Conda, Anaconda, pip, Virtualenv, Pipenv, pyenv, Poetry, requirements.txt …</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#the-tools">The tools</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#course-advertisement">Course advertisement</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#recording-computational-steps">Recording computational steps</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#graphical-user-interface-gui">Graphical user interface (GUI)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#solution-2-manual-steps">Solution 2: Manual steps</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#solution-3-script">Solution 3: Script</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#solution-4-using-snakemake-or-other-workflow-manager">Solution 4: Using Snakemake or other workflow manager</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#containers">Containers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#reproducible-publications">Reproducible publications</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="sharing_deeper.html">More about sharing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="documentation_deeper.html">More about documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="deploy_deeper.html">More about deploying</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Reference:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="concepts.html">Concepts</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Programming formalism intro</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>More about reproducibility</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/UPPMAX/programming_formalisms_intro/blob/main/doc//doc/reproducible_deeper.md" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section class="tex2jax_ignore mathjax_ignore" id="more-about-reproducibility">
+<h1>More about reproducibility<a class="headerlink" href="#more-about-reproducibility" title="Permalink to this heading"></a></h1>
+<section id="versioning-systems">
+<h2>Versioning systems<a class="headerlink" href="#versioning-systems" title="Permalink to this heading"></a></h2>
+<section id="semantic-semver">
+<h3>Semantic (SemVer)<a class="headerlink" href="#semantic-semver" title="Permalink to this heading"></a></h3>
+<p>Given a version number MAJOR.MINOR.PATCH, increment the:</p>
+<ol class="arabic simple">
+<li><p>MAJOR version when you make incompatible API changes</p></li>
+<li><p>MINOR version when you add functionality in a backwards compatible manner</p></li>
+<li><p>PATCH version when you make backwards compatible bug fixes
+Additional labels for pre-release and build metadata are available as extensions to the MAJOR.MINOR.PATCH format.</p></li>
+</ol>
+<figure class="align-default" id="id1">
+<a class="reference internal image-reference" href="_images/SemVer.jpg"><img alt="Isolated tracks" src="_images/SemVer.jpg" style="width: 50%;" /></a>
+<figcaption>
+<p><span class="caption-text">&lt;https://nehckl0.medium.com/semver-and-calver-2-popular-software-versioning-schemes-96be80efe36</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
+<div class="legend">
+</div>
+</figcaption>
+</figure>
+</section>
+<section id="calender-calver">
+<h3>Calender (<a class="reference external" href="https://calver.org/">CalVer</a>)<a class="headerlink" href="#calender-calver" title="Permalink to this heading"></a></h3>
+<figure class="align-default" id="id2">
+<a class="reference internal image-reference" href="_images/CalVer.png"><img alt="Isolated tracks" src="_images/CalVer.png" style="width: 50%;" /></a>
+<figcaption>
+<p><span class="caption-text">&lt;https://nehckl0.medium.com/semver-and-calver-2-popular-software-versioning-schemes-96be80efe36</span><a class="headerlink" href="#id2" title="Permalink to this image"></a></p>
+<div class="legend">
+</div>
+</figcaption>
+</figure>
+</section>
+</section>
+<section id="recording-dependencies">
+<h2>Recording dependencies<a class="headerlink" href="#recording-dependencies" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p><strong>Reproducibility</strong>: We can control our code but how can we control dependencies?</p></li>
+<li><p><strong>10-year challenge</strong>: Try to build/run your own code that you have created 10 (or less) years ago. Will your code from today work in 5 years if you don’t change it?</p></li>
+<li><p><strong>Dependency hell</strong>: Different codes on the same environment can have conflicting dependencies.</p></li>
+</ul>
+<section id="conda-anaconda-pip-virtualenv-pipenv-pyenv-poetry-requirements-txt">
+<h3>Conda, Anaconda, pip, Virtualenv, Pipenv, pyenv, Poetry, requirements.txt …<a class="headerlink" href="#conda-anaconda-pip-virtualenv-pipenv-pyenv-poetry-requirements-txt" title="Permalink to this heading"></a></h3>
+<p><strong>These tools try to solve the following problems:</strong></p>
+<ul class="simple">
+<li><p><strong>Defining a specific set of dependencies</strong>, possibly with well defined versions</p></li>
+<li><p><strong>Installing those dependencies</strong> mostly automatically</p></li>
+<li><p><strong>Recording the versions</strong> for all dependencies</p></li>
+<li><p><strong>Isolated environments</strong></p></li>
+<li><p>On your computer for projects so they can use different software.</p></li>
+<li><p>Isolate environments on computers with many users (and allow self-installations)</p></li>
+<li><p>Using <strong>different Python/R versions</strong> per project??</p></li>
+<li><p>Provide tools and services to <strong>share packages</strong></p></li>
+</ul>
+</section>
+<section id="the-tools">
+<h3>The tools<a class="headerlink" href="#the-tools" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>Python</p>
+<ul>
+<li><p>PyPI
+-pip freeze &gt; requirements.txt</p></li>
+<li><p>Conda: any language, also compiled code and libraries.</p>
+<ul>
+<li><p>conda-forge is a GitHub organization containing repositories of conda recipes.</p></li>
+<li><p>Export the requirements into requirements.txt with conda list –export &gt; requirements.txt.</p></li>
+<li><p>Export the full environment using conda env export &gt; environment.yml, and compare the .yml file format to the .txt file format.</p></li>
+</ul>
+</li>
+<li><p>Virtualenv</p>
+<ul>
+<li><p>Pipenv</p></li>
+<li><p>Poetry</p></li>
+<li><p>Pyenv</p></li>
+<li><p>Mamba (faster conda)</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>R</p></li>
+<li><p>Packrat, jetpack, rsuite, renv, automagic, deplearning, devtools</p></li>
+<li><p>C/C+</p>
+<ul>
+<li><p>CMake</p></li>
+<li><p>Conan</p></li>
+<li><p>Conda</p></li>
+</ul>
+</li>
+<li><p>Fortran</p></li>
+<li><p>Fortran package manager</p></li>
+<li><p>Julia</p>
+<ul>
+<li><p>Pkg.jl</p>
+<ul>
+<li><p>designed around using isolated environments with independent sets of packages. Environments can either be local to a particular project or shared and selected by name.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="course-advertisement">
+<h3>Course advertisement<a class="headerlink" href="#course-advertisement" title="Permalink to this heading"></a></h3>
+<p><a class="reference external" href="https://aaltoscicomp.github.io/python-for-scicomp/">Python for scientific computing</a></p>
+</section>
+</section>
+<section id="recording-computational-steps">
+<h2>Recording computational steps<a class="headerlink" href="#recording-computational-steps" title="Permalink to this heading"></a></h2>
+<div class="admonition-questions questions admonition">
+<p class="admonition-title">Questions</p>
+<ul class="simple">
+<li><p>How can we create a reproducible workflow?</p></li>
+<li><p>When to use scientific workflow management systems.</p></li>
+</ul>
+</div>
+<div class="admonition-objectives objectives admonition">
+<p class="admonition-title">Objectives</p>
+<ul class="simple">
+<li><p>Discuss pros/cons of GUI vs. manual steps vs. scripted vs. workflow tools.</p></li>
+</ul>
+</div>
+<p><strong>4 ways (from CodeRefinery)</strong></p>
+<section id="graphical-user-interface-gui">
+<h3>Graphical user interface (GUI)<a class="headerlink" href="#graphical-user-interface-gui" title="Permalink to this heading"></a></h3>
+<p>Imagine we have programmed a GUI with a nice interface with icons where you can select scripts and input files by clicking:</p>
+<ol class="arabic simple">
+<li><p>Click on counting script</p></li>
+<li><p>Select book txt file</p></li>
+<li><p>Give a name for the dat file</p></li>
+<li><p>Click on a run symbol</p></li>
+<li><p>Click on plotting script</p></li>
+<li><p>Select book dat file</p></li>
+<li><p>Give a name for the image file</p></li>
+<li><p>Click on a run symbol</p></li>
+<li><p>…</p></li>
+<li><p>Go to next book …</p></li>
+<li><p>Click on counting script</p></li>
+<li><p>Select book txt file</p></li>
+<li><p>…</p></li>
+</ol>
+<p>Disclaimer: not all GUIs behave this way - there exist very good GUI solutions which enable
+reproducibility and automation.</p>
+</section>
+<hr class="docutils" />
+<section id="solution-2-manual-steps">
+<h3>Solution 2: Manual steps<a class="headerlink" href="#solution-2-manual-steps" title="Permalink to this heading"></a></h3>
+<p>It is not too much work for four files:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="hll"><span class="gp">$ </span>python<span class="w"> </span>source/wordcount.py<span class="w"> </span>data/abyss.txt<span class="w"> </span>processed_data/abyss.dat
+</span><span class="hll"><span class="gp">$ </span>python<span class="w"> </span>source/plotcount.py<span class="w"> </span>processed_data/abyss.dat<span class="w"> </span>processed_data/abyss.png
+</span>
+<span class="gp">$ </span>python<span class="w"> </span>source/wordcount.py<span class="w"> </span>data/isles.txt<span class="w"> </span>processed_data/isles.dat
+<span class="gp">$ </span>python<span class="w"> </span>source/plotcount.py<span class="w"> </span>processed_data/isles.dat<span class="w"> </span>processed_data/isles.png
+
+<span class="gp">$ </span>python<span class="w"> </span>source/wordcount.py<span class="w"> </span>data/last.txt<span class="w"> </span>processed_data/last.dat
+<span class="gp">$ </span>python<span class="w"> </span>source/plotcount.py<span class="w"> </span>processed_data/last.dat<span class="w"> </span>processed_data/last.png
+
+<span class="gp">$ </span>python<span class="w"> </span>source/wordcount.py<span class="w"> </span>data/sierra.txt<span class="w"> </span>processed_data/sierra.dat
+<span class="gp">$ </span>python<span class="w"> </span>source/plotcount.py<span class="w"> </span>processed_data/sierra.dat<span class="w"> </span>processed_data/sierra.png
+
+<span class="hll"><span class="gp">$ </span>python<span class="w"> </span>source/zipf_test.py<span class="w"> </span>processed_data/abyss.dat<span class="w"> </span>processed_data/isles.dat<span class="w"> </span>processed_data/last.dat<span class="w"> </span>processed_data/sierra.dat
+</span></pre></div>
+</div>
+<p>This is <strong>imperative style</strong>: first do this, then to that, then do that, finally do …</p>
+</section>
+<hr class="docutils" />
+<section id="solution-3-script">
+<h3>Solution 3: Script<a class="headerlink" href="#solution-3-script" title="Permalink to this heading"></a></h3>
+<p>Let’s express it more compactly with a shell script (Bash). Let’s call it script.sh:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env bash</span>
+
+<span class="c1"># loop over all books</span>
+<span class="k">for</span><span class="w"> </span>title<span class="w"> </span><span class="k">in</span><span class="w"> </span>abyss<span class="w"> </span>isles<span class="w"> </span>last<span class="w"> </span>sierra<span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">    </span>python<span class="w"> </span>source/wordcount.py<span class="w"> </span>data/<span class="si">${</span><span class="nv">title</span><span class="si">}</span>.txt<span class="w"> </span>processed_data/<span class="si">${</span><span class="nv">title</span><span class="si">}</span>.dat
+<span class="w">    </span>python<span class="w"> </span>source/plotcount.py<span class="w"> </span>processed_data/<span class="si">${</span><span class="nv">title</span><span class="si">}</span>.dat<span class="w"> </span>processed_data/<span class="si">${</span><span class="nv">title</span><span class="si">}</span>.png
+<span class="k">done</span>
+
+<span class="c1"># this could be done using variables but nevermind</span>
+python<span class="w"> </span>source/zipf_test.py<span class="w"> </span>processed_data/abyss.dat<span class="w"> </span>processed_data/isles.dat<span class="w"> </span>processed_data/last.dat<span class="w"> </span>processed_data/sierra.dat
+</pre></div>
+</div>
+<p>We can run it with:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">bash script.sh</span>
+</pre></div>
+</div>
+</section>
+<section id="solution-4-using-snakemake-or-other-workflow-manager">
+<h3>Solution 4: Using <a class="reference external" href="https://snakemake.readthedocs.io/en/stable/index.html">Snakemake</a> or other workflow manager<a class="headerlink" href="#solution-4-using-snakemake-or-other-workflow-manager" title="Permalink to this heading"></a></h3>
+<figure class="align-default" id="id3">
+<a class="reference internal image-reference" href="_images/snakemake_dag.png"><img alt="Isolated tracks" src="_images/snakemake_dag.png" style="width: 50%;" /></a>
+<figcaption>
+<p><span class="caption-text">Isolated tracks of work.</span><a class="headerlink" href="#id3" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<div class="admonition-discussion discussion attention admonition">
+<p class="admonition-title">Discussion</p>
+<p>Discuss the pros and cons of these different approaches. Which are reproducible? Which scale to hundreds of books and which can it be automated?</p>
+<div class="admonition-solution solution important dropdown admonition">
+<p class="admonition-title">Solution</p>
+<ul class="simple">
+<li><p>GUIs may or may not be reproducible.</p></li>
+<li><p>Some GUIs can be automated, many cannot.</p></li>
+<li><p>Typing the same series of commands for 100 similar inputs is tedious and error prone.</p></li>
+<li><p>Imperative scripts are reproducible and great for automation.</p></li>
+<li><p>Declarative workflows such as Snakemake are great for longer multi-step analyses.</p></li>
+<li><p>Declarative workflows are often easy to parallelize without you changing anything.</p></li>
+<li><p>With declarative workflows it is no problem to add/change things late in the project.</p></li>
+<li><p>Interesting modern alternative to Make/Snakemake: <a class="reference external" href="https://taskfile.dev">https://taskfile.dev</a></p></li>
+<li><p>Many <a class="reference external" href="https://github.com/common-workflow-language/common-workflow-language/wiki/Existing-Workflow-systems">specialized frameworks</a> exist.</p></li>
+</ul>
+</div>
+</div>
+<div class="admonition-learn-more admonition">
+<p class="admonition-title">Learn more</p>
+<p><a class="reference external" href="https://coderefinery.github.io/reproducible-research/workflow-management/">https://coderefinery.github.io/reproducible-research/workflow-management/</a>
+<a class="reference external" href="https://nbis-reproducible-research.readthedocs.io/en/course_2104/snakemake/">https://nbis-reproducible-research.readthedocs.io/en/course_2104/snakemake/</a></p>
+</div>
+</section>
+</section>
+<section id="containers">
+<h2>Containers<a class="headerlink" href="#containers" title="Permalink to this heading"></a></h2>
+<p>Popular container implementations:</p>
+<ul class="simple">
+<li><p>Docker</p></li>
+<li><p>Singularity (popular on high-performance computing systems)</p></li>
+<li><p>Apptainer (popular on high-performance computing systems, fork of Singularity)</p></li>
+<li><p>podman</p></li>
+</ul>
+<p>They are to some extent interoperable:</p>
+<ul class="simple">
+<li><p>podman is very close to Docker</p></li>
+<li><p>Docker images can be converted to Singularity/Apptainer images</p></li>
+<li><p>Singularity Python can convert Dockerfiles to Singularity definition files</p></li>
+</ul>
+<p>https://coderefinery.github.io/reproducible-research/environments</p>
+</section>
+<section id="reproducible-publications">
+<h2>Reproducible publications<a class="headerlink" href="#reproducible-publications" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>Git (overleaf, authorea), hackmd, manuscripts.io, google docs</p></li>
+<li><p>Scholarly output reproducible: rrtools, jupyter, binder, research compendia</p></li>
+<li><p>Reprohack</p></li>
+</ul>
+<div class="admonition-keypoints keypoints admonition">
+<p class="admonition-title">Keypoints</p>
+<ul class="simple">
+<li><p>Preserve the steps for re-generating published results.</p></li>
+<li><p>Hundreds of workflow management tools exist.</p></li>
+<li><p>Snakemake is a comparatively simple and lightweight option to create transferable and scalable data analyses.</p></li>
+<li><p>Sometimes a script is enough.</p></li>
+</ul>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="collab_deeper.html" class="btn btn-neutral float-left" title="More about collaboration" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="sharing_deeper.html" class="btn btn-neutral float-right" title="More about sharing" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, UPPMAX.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

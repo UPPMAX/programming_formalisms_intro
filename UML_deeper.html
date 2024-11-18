@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>More about UML &mdash; Programming formalism intro 0.1 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" type="text/css" />
+      <link rel="stylesheet" href="_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="_static/togglebutton.css" type="text/css" />
+      <link rel="stylesheet" href="_static/sphinx_lesson.css" type="text/css" />
+      <link rel="stylesheet" href="_static/sphinx_rtd_theme_ext_color_contrast.css" type="text/css" />
+      <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+        <script src="_static/clipboard.min.js"></script>
+        <script src="_static/copybutton.js"></script>
+        <script src="_static/minipres.js"></script>
+        <script>let toggleHintShow = 'Click to show';</script>
+        <script>let toggleHintHide = 'Click to hide';</script>
+        <script>let toggleOpenOnPrint = 'true';</script>
+        <script src="_static/togglebutton.js"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+        <script>mermaid.initialize({startOnLoad:true});</script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="More about git" href="git_deeper.html" />
+    <link rel="prev" title="Software Development Lifecycle (SDLC) models" href="SDLC_models.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> Programming formalism intro
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Preparations:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="setup.html">Setup</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Theory lessons:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sdlc_tools.html">Software Development Lifecycle (SDLC) tools</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Project lessons:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="flowcharts.html">Planning phase</a></li>
+<li class="toctree-l1"><a class="reference internal" href="startup.html">Start the project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="startup_code.html">Start with coding!</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sourcecontrol.html">The iterations and Git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="deploy.html">Deploy and document for usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="collab.html">Collaboration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="summary.html">Summary</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Extra reading:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="SDLC_models.html">Software Development Lifecycle (SDLC) models</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">More about UML</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#unified-modeling-language">Unified Modeling Language</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#building-blocks">Building blocks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#diagrams">Diagrams</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#class">Class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sequence">Sequence</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#activity">Activity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#syntax-for-algorithm-flowchart">Syntax for algorithm flowchart</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#other">Other</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#use-case">Use case</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#object">Object</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#component">Component</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#deployment">Deployment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#state">State</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#timing">Timing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#syntax">Syntax</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#test-yourself">Test yourself!</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="git_deeper.html">More about git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="collab_deeper.html">More about collaboration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reproducible_deeper.html">More about reproducibility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sharing_deeper.html">More about sharing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="documentation_deeper.html">More about documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="deploy_deeper.html">More about deploying</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Reference:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="concepts.html">Concepts</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Programming formalism intro</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>More about UML</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/UPPMAX/programming_formalisms_intro/blob/main/doc//doc/UML_deeper.md" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section class="tex2jax_ignore mathjax_ignore" id="more-about-uml">
+<h1>More about UML<a class="headerlink" href="#more-about-uml" title="Permalink to this heading"></a></h1>
+<section id="unified-modeling-language">
+<h2>Unified Modeling Language<a class="headerlink" href="#unified-modeling-language" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>UML is not a programming language. It’s a graphical notation for drawing diagrams to visualize object oriented systems.</p></li>
+<li><p>UML includes over a dozen different types of structural and behavioral diagrams.</p></li>
+<li><p>UML has been marketed for many contexts.</p></li>
+<li><p>Some problems (Wikipedia):</p>
+<ul>
+<li><p>It has been treated, at times, as a design silver bullet, which leads to problems.</p></li>
+<li><p>UML misuse includes overuse (designing every part of the system with it, which is unnecessary) and assuming that novices can design with it.</p></li>
+<li><p>It is considered a large language, with many constructs. Some people feel that the size of UML hinders learning (and therefore, using) it.</p></li>
+</ul>
+</li>
+</ul>
+<p>“These diagrams should be a quick, useful communication tool. A support system for your brain, not the other way around!”</p>
+<p>First iteration in planning can be paper or whiteboard
+Then there are benefits with digital tools</p>
+<section id="building-blocks">
+<h3>Building blocks<a class="headerlink" href="#building-blocks" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>Things</p>
+<ul>
+<li><p>Structural</p>
+<ul>
+<li><p>Class</p></li>
+<li><p>Interface</p></li>
+<li><p>collaboration</p></li>
+<li><p>use case</p></li>
+<li><p>component</p></li>
+<li><p>node</p></li>
+</ul>
+</li>
+<li><p>Behavioral (dynamic)</p>
+<ul>
+<li><p>interaction</p></li>
+<li><p>state machine</p></li>
+</ul>
+</li>
+<li><p>Grouping</p>
+<ul>
+<li><p>packaging</p></li>
+</ul>
+</li>
+<li><p>Annotational</p>
+<ul>
+<li><p>Note</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Relationships</p>
+<ul>
+<li><p>Dependency</p></li>
+<li><p>association</p></li>
+<li><p>generalization</p></li>
+<li><p>realization</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="diagrams">
+<h3>Diagrams<a class="headerlink" href="#diagrams" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>Structure</p>
+<ul>
+<li><p>Class</p></li>
+<li><p>Component</p></li>
+<li><p>Object</p></li>
+<li><p>Composite structure</p></li>
+<li><p>Package</p></li>
+<li><p>Deployment</p></li>
+</ul>
+</li>
+<li><p>Behavior</p>
+<ul>
+<li><p>Use case</p></li>
+<li><p>Activity</p></li>
+<li><p>State machine</p></li>
+<li><p>Interaction within/outside system</p>
+<ul>
+<li><p>Sequence</p></li>
+<li><p>Communication</p></li>
+<li><p>Timing</p></li>
+<li><p>Interaction overview</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="graphviz"><img src="_images/graphviz-d9ccb9e1fa8fe54902792f4a92c56dea43e5ecc2.png" alt="digraph{
+&quot;UML diagrams&quot;
+Structure, Behaviour
+&quot;UML diagrams&quot; -&gt; Structure
+&quot;UML diagrams&quot; -&gt; Behaviour
+Structure -&gt; Class, Component, Object, composite
+Behaviour -&gt; &quot;Use case&quot;, Activity, Interaction
+Interaction -&gt; Sequence, Communication, Timing, &quot;Interaction overview&quot;
+}" class="graphviz" /></div>
+</section>
+<section id="class">
+<h3>Class<a class="headerlink" href="#class" title="Permalink to this heading"></a></h3>
+<p>A diagram that shows the system classes and relationships between them.</p>
+<p class="plantuml">
+<img src="_images/plantuml-bec9316110d269105a524e63f8428de770e25b29.png" alt="&#64;startuml
+ class01 &lt;|-- class02
+ class03 *-- class04
+ class05 o-- class06
+
+ class01- class03 : knows &gt;
+ class class01 {
+    -var01 : Integer
+    Time : Date
+    #method01()
+    +get_var01()
+    {method}Without paranteces or Qualifiers
+ }
+ 
+ class class02 {
+    -var02 : Float
+    Time : Date
+    #method01()
+    +get_var02()
+    {method}Without paranteces or Qualifiers
+ }
+
+&#64;enduml
+"/>
+</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">@startuml</span>
+<span class="go"> class01 &lt;|-- class02</span>
+<span class="go"> class03 *-- class04</span>
+<span class="go"> class05 o-- class06</span>
+
+<span class="go"> class01- class03 : knows &gt;</span>
+<span class="go"> class class01 {</span>
+<span class="go">    -var01 : Integer</span>
+<span class="go">    Time : Date</span>
+<span class="gp">    #</span>method01<span class="o">()</span>
+<span class="go">    +get_var01()</span>
+<span class="go">    {method}Without paranteces or Qualifiers</span>
+<span class="go"> }</span>
+<span class="go"> </span>
+<span class="go"> class class02 {</span>
+<span class="go">    -var02 : Float</span>
+<span class="go">    Time : Date</span>
+<span class="gp">    #</span>method01<span class="o">()</span>
+<span class="go">    +get_var02()</span>
+<span class="go">    {method}Without paranteces or Qualifiers</span>
+<span class="go"> }</span>
+
+<span class="go">@enduml</span>
+</pre></div>
+</div>
+<p class="plantuml">
+<img src="_images/plantuml-7afb192db5fe061e1219357dfdd8f0d90c7a6fef.png" alt="&#64;startuml
+class Car
+
+Driver - Car : drives &gt;
+Car *- Wheel : have 4 &gt;
+Car -- Person : &lt; owns
+&#64;enduml"/>
+</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">@startuml</span>
+<span class="go">class Car</span>
+
+<span class="go">Driver - Car : drives &gt;</span>
+<span class="go">Car *- Wheel : have 4 &gt;</span>
+<span class="go">Car -- Person : &lt; owns</span>
+<span class="go">@enduml</span>
+</pre></div>
+</div>
+</section>
+<section id="sequence">
+<h3>Sequence<a class="headerlink" href="#sequence" title="Permalink to this heading"></a></h3>
+<p>A diagram that shows the existence of Objects over time, and the Messages that pass between those Objects over time to carry out some behavior.</p>
+<p class="plantuml">
+<img src="_images/plantuml-b52ca22777e45eb820f4f7ed9bbeae34f0fcbcb0.png" alt="&#64;startuml
+user -&gt; (use PlantUML)
+
+note left of user
+   Hello!   
+end note
+&#64;enduml"/>
+</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">   </span>
+<span class="go">@startuml</span>
+<span class="go">user -&gt; (use PlantUML)</span>
+
+<span class="go">note left of user</span>
+<span class="go">   Hello!   </span>
+<span class="go">end note</span>
+<span class="go">@enduml</span>
+</pre></div>
+</div>
+<p class="plantuml">
+<img src="_images/plantuml-adbe6ec6b8cb0e531827ae38174c98606f6d8ae1.png" alt="&#64;startuml
+Alice -&gt; Bob: Authentication Request
+Bob --&gt; Alice: Authentication Response
+
+Alice -&gt; Bob: Another authentication Request
+Alice &lt;-- Bob: Another authentication Response
+&#64;enduml
+"/>
+</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">@startuml</span>
+<span class="go">Alice -&gt; Bob: Authentication Request</span>
+<span class="go">Bob --&gt; Alice: Authentication Response</span>
+
+<span class="go">Alice -&gt; Bob: Another authentication Request</span>
+<span class="go">Alice &lt;-- Bob: Another authentication Response</span>
+<span class="go">@enduml</span>
+</pre></div>
+</div>
+<p class="plantuml">
+<img src="_images/plantuml-d6f8781377235521f6ca2582781eee7f5d6e43dd.png" alt="&#64;startuml
+participant User
+
+User -&gt; A: DoWork
+activate A
+
+A -&gt; B: &lt;&lt; createRequest &gt;&gt;
+activate B
+
+B -&gt; C: DoWork
+activate C
+C --&gt; B: WorkDone
+destroy C
+
+B --&gt; A: RequestCreated
+deactivate B
+
+A -&gt; User: Done
+deactivate A
+&#64;enduml"/>
+</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">@startuml</span>
+<span class="go">participant User</span>
+
+<span class="go">User -&gt; A: DoWork</span>
+<span class="go">activate A</span>
+
+<span class="go">A -&gt; B: &lt;&lt; createRequest &gt;&gt;</span>
+<span class="go">activate B</span>
+
+<span class="go">B -&gt; C: DoWork</span>
+<span class="go">activate C</span>
+<span class="go">C --&gt; B: WorkDone</span>
+<span class="go">destroy C</span>
+
+<span class="go">B --&gt; A: RequestCreated</span>
+<span class="go">deactivate B</span>
+
+<span class="go">A -&gt; User: Done</span>
+<span class="go">deactivate A</span>
+<span class="go">@enduml</span>
+</pre></div>
+</div>
+</section>
+<section id="activity">
+<h3>Activity<a class="headerlink" href="#activity" title="Permalink to this heading"></a></h3>
+<p>A flowchart that shows the process and its correlating decisions, including an <strong>algorithm</strong>  or a business process.</p>
+<p class="plantuml">
+<img src="_images/plantuml-bb220877d7a41c34ec34ad563026550b1c288cf6.png" alt="&#64;startuml
+start
+
+if (Graphviz installed?) then (yes)
+  :process all\ndiagrams;
+else (no)
+  :process only
+  __sequence__ and __activity__ diagrams;
+endif
+
+stop
+&#64;enduml
+"/>
+</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">@startuml</span>
+
+<span class="go">start</span>
+
+<span class="go">if (Graphviz installed?) then (yes)</span>
+<span class="go">  :process all\ndiagrams;</span>
+<span class="go">else (no)</span>
+<span class="go">  :process only</span>
+<span class="go">  __sequence__ and __activity__ diagrams;</span>
+<span class="go">endif</span>
+
+<span class="go">stop</span>
+
+<span class="go">@enduml</span>
+</pre></div>
+</div>
+</section>
+<section id="syntax-for-algorithm-flowchart">
+<h3>Syntax for algorithm flowchart<a class="headerlink" href="#syntax-for-algorithm-flowchart" title="Permalink to this heading"></a></h3>
+<p>Start and stop</p>
+<p class="plantuml">
+<img src="_images/plantuml-4cf31c226cadce6573920e0ad89727a6c3e109f6.png" alt="&#64;startuml
+start
+stop
+&#64;enduml"/>
+</p>
+<p class="plantuml">
+<img src="_images/plantuml-9b7b116dfebad07dc29dd44b14a111a496c3763b.png" alt="&#64;startuml
+start
+:Hello world;
+:This is defined on
+several **lines**;
+stop
+&#64;enduml"/>
+</p>
+<div class="admonition-what-s-this admonition">
+<p class="admonition-title">What’s this?</p>
+<p>Computation</p>
+<p>Input output</p>
+<p>Choice</p>
+<p>Direction of program flow
+Iterative or counting loop</p>
+</div>
+</section>
+<section id="other">
+<h3>Other<a class="headerlink" href="#other" title="Permalink to this heading"></a></h3>
+<section id="use-case">
+<h4>Use case<a class="headerlink" href="#use-case" title="Permalink to this heading"></a></h4>
+<p>A diagram that shows relations between Actors and Use Cases.</p>
+<p class="plantuml">
+<img src="_images/plantuml-04c69576cb62113ce1fb777a5ce2f41710234e50.png" alt="&#64;startuml
+left to right direction
+actor Guest as g
+package Professional {
+  actor Chef as c
+  actor &quot;Food Critic&quot; as fc
+}
+package Restaurant {
+  usecase &quot;Eat Food&quot; as UC1
+  usecase &quot;Pay for Food&quot; as UC2
+  usecase &quot;Drink&quot; as UC3
+  usecase &quot;Review&quot; as UC4
+}
+fc --&gt; UC4
+g --&gt; UC1
+g --&gt; UC2
+g --&gt; UC3
+&#64;enduml"/>
+</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">@startuml</span>
+<span class="go">left to right direction</span>
+<span class="go">actor Guest as g</span>
+<span class="go">package Professional {</span>
+<span class="go">  actor Chef as c</span>
+<span class="go">  actor &quot;Food Critic&quot; as fc</span>
+<span class="go">}</span>
+<span class="go">package Restaurant {</span>
+<span class="go">  usecase &quot;Eat Food&quot; as UC1</span>
+<span class="go">  usecase &quot;Pay for Food&quot; as UC2</span>
+<span class="go">  usecase &quot;Drink&quot; as UC3</span>
+<span class="go">  usecase &quot;Review&quot; as UC4</span>
+<span class="go">}</span>
+<span class="go">fc --&gt; UC4</span>
+<span class="go">g --&gt; UC1</span>
+<span class="go">g --&gt; UC2</span>
+<span class="go">g --&gt; UC3</span>
+<span class="go">@enduml</span>
+</pre></div>
+</div>
+</section>
+<section id="object">
+<h4>Object<a class="headerlink" href="#object" title="Permalink to this heading"></a></h4>
+<p>Object diagrams are derived from class diagrams so object diagrams are dependent upon class diagrams.</p>
+<p>Object diagrams represent an instance of a class diagram. The basic concepts are similar for class diagrams and object diagrams. Object diagrams also represent the static view of a system but this static view is a snapshot of the system at a particular moment.</p>
+<p class="plantuml">
+<img src="_images/plantuml-0b304e2e6df40afbf6f10adf7154f977622e3062.png" alt="&#64;startuml
+object Object01
+object Object02
+object Object03
+object Object04
+object Object05
+object Object06
+object Object07
+object Object08
+
+Object01 &lt;|-- Object02
+Object03 *-- Object04
+Object05 o-- &quot;4&quot; Object06
+Object07 .. Object08 : some labels
+&#64;enduml
+"/>
+</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">@startuml</span>
+<span class="go">object Object01</span>
+<span class="go">object Object02</span>
+<span class="go">object Object03</span>
+<span class="go">object Object04</span>
+<span class="go">object Object05</span>
+<span class="go">object Object06</span>
+<span class="go">object Object07</span>
+<span class="go">object Object08</span>
+
+<span class="go">Object01 &lt;|-- Object02</span>
+<span class="go">Object03 *-- Object04</span>
+<span class="go">Object05 o-- &quot;4&quot; Object06</span>
+<span class="go">Object07 .. Object08 : some labels</span>
+<span class="go">@enduml</span>
+</pre></div>
+</div>
+</section>
+<section id="component">
+<h4>Component<a class="headerlink" href="#component" title="Permalink to this heading"></a></h4>
+<p>A diagram that shows relations between various Components and Interfaces.</p>
+<p class="plantuml">
+<img src="_images/plantuml-45f11b1e4421001893e32276444253bc04c7fbcd.png" alt="&#64;startuml
+package &quot;Some Group&quot; {
+  HTTP - [First Component]
+  [Another Component]
+}
+
+node &quot;Other Groups&quot; {
+  FTP - [Second Component]
+  [First Component] --&gt; FTP
+}
+
+cloud {
+  [Example 1]
+}
+
+
+database &quot;MySql&quot; {
+  folder &quot;This is my folder&quot; {
+    [Folder 3]
+  }
+  frame &quot;Foo&quot; {
+    [Frame 4]
+  }
+}
+
+
+[Another Component] --&gt; [Example 1]
+[Example 1] --&gt; [Folder 3]
+[Folder 3] --&gt; [Frame 4]
+&#64;enduml
+"/>
+</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">@startuml</span>
+<span class="go">package &quot;Some Group&quot; {</span>
+<span class="go">  HTTP - [First Component]</span>
+<span class="go">  [Another Component]</span>
+<span class="go">}</span>
+
+<span class="go">node &quot;Other Groups&quot; {</span>
+<span class="go">  FTP - [Second Component]</span>
+<span class="go">  [First Component] --&gt; FTP</span>
+<span class="go">}</span>
+
+<span class="go">cloud {</span>
+<span class="go">  [Example 1]</span>
+<span class="go">}</span>
+</pre></div>
+</div>
+</section>
+<section id="deployment">
+<h4>Deployment<a class="headerlink" href="#deployment" title="Permalink to this heading"></a></h4>
+<p>A diagram that shows relations between various Processors.</p>
+<p>Deployment diagrams are used to visualize the topology of the physical components of a system, where the software components are deployed.</p>
+<p>Deployment diagrams are used to describe the static deployment view of a system. Deployment diagrams consist of nodes and their relationships.</p>
+<p class="plantuml">
+<img src="_images/plantuml-58ede6081949b0abb5cbf2e0c2df3af319585762.png" alt="&#64;startuml
+node foo
+foo --&gt; bar : normal
+foo --&gt; bar1 #line:red;line.bold;text:red  : red bold
+foo --&gt; bar2 #green;line.dashed;text:green : green dashed 
+foo --&gt; bar3 #blue;line.dotted;text:blue   : blue dotted
+&#64;enduml
+"/>
+</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">@startuml</span>
+<span class="go">node foo</span>
+<span class="go">foo --&gt; bar : normal</span>
+<span class="go">foo --&gt; bar1 #line:red;line.bold;text:red  : red bold</span>
+<span class="go">foo --&gt; bar2 #green;line.dashed;text:green : green dashed </span>
+<span class="go">foo --&gt; bar3 #blue;line.dotted;text:blue   : blue dotted</span>
+<span class="go">@enduml</span>
+</pre></div>
+</div>
+</section>
+<section id="state">
+<h4>State<a class="headerlink" href="#state" title="Permalink to this heading"></a></h4>
+<p>A diagram that shows States of a system or subsystem, Transitions between States, and the Events that cause the Transitions.</p>
+<p class="plantuml">
+<img src="_images/plantuml-0a08124e212d43e1b6389e31b85d47254b646144.png" alt="&#64;startuml
+scale 600 width
+
+[*] -&gt; State1
+State1 --&gt; State2 : Succeeded
+State1 --&gt; [*] : Aborted
+State2 --&gt; State3 : Succeeded
+State2 --&gt; [*] : Aborted
+state State3 {
+  state &quot;Accumulate Enough Data\nLong State Name&quot; as long1
+  long1 : Just a test
+  [*] --&gt; long1
+  long1 --&gt; long1 : New Data
+  long1 --&gt; ProcessData : Enough Data
+}
+State3 --&gt; State3 : Failed
+State3 --&gt; [*] : Succeeded / Save Result
+State3 --&gt; [*] : Aborted
+
+&#64;enduml
+"/>
+</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">@startuml</span>
+<span class="go">scale 600 width</span>
+
+<span class="go">[*] -&gt; State1</span>
+<span class="go">State1 --&gt; State2 : Succeeded</span>
+<span class="go">State1 --&gt; [*] : Aborted</span>
+<span class="go">State2 --&gt; State3 : Succeeded</span>
+<span class="go">State2 --&gt; [*] : Aborted</span>
+<span class="go">state State3 {</span>
+<span class="go">  state &quot;Accumulate Enough Data\nLong State Name&quot; as long1</span>
+<span class="go">  long1 : Just a test</span>
+<span class="go">  [*] --&gt; long1</span>
+<span class="go">  long1 --&gt; long1 : New Data</span>
+<span class="go">  long1 --&gt; ProcessData : Enough Data</span>
+<span class="go">}</span>
+<span class="go">State3 --&gt; State3 : Failed</span>
+<span class="go">State3 --&gt; [*] : Succeeded / Save Result</span>
+<span class="go">State3 --&gt; [*] : Aborted</span>
+
+<span class="go">@enduml</span>
+</pre></div>
+</div>
+</section>
+<section id="timing">
+<h4>Timing<a class="headerlink" href="#timing" title="Permalink to this heading"></a></h4>
+<p>show timing constraints of a system in a given time frame</p>
+<p class="plantuml">
+<img src="_images/plantuml-960ff98e08fa14fd55e5ba91ca8ad9738f948ada.png" alt="&#64;startuml
+robust &quot;DNS Resolver&quot; as DNS
+robust &quot;Web Browser&quot; as WB
+concise &quot;Web User&quot; as WU
+
+&#64;0
+WU is Idle
+WB is Idle
+DNS is Idle
+
+&#64;+100
+WU -&gt; WB : URL
+WU is Waiting
+WB is Processing
+
+&#64;+200
+WB is Waiting
+WB -&gt; DNS&#64;+50 : Resolve URL
+
+&#64;+100
+DNS is Processing
+
+&#64;+300
+DNS is Idle
+&#64;enduml
+"/>
+</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">@startuml</span>
+<span class="go">robust &quot;DNS Resolver&quot; as DNS</span>
+<span class="go">robust &quot;Web Browser&quot; as WB</span>
+<span class="go">concise &quot;Web User&quot; as WU</span>
+
+<span class="go">@0</span>
+<span class="go">WU is Idle</span>
+<span class="go">WB is Idle</span>
+<span class="go">DNS is Idle</span>
+
+<span class="go">@+100</span>
+<span class="go">WU -&gt; WB : URL</span>
+<span class="go">WU is Waiting</span>
+<span class="go">WB is Processing</span>
+
+<span class="go">@+200</span>
+<span class="go">WB is Waiting</span>
+<span class="go">WB -&gt; DNS@+50 : Resolve URL</span>
+
+<span class="go">@+100</span>
+<span class="go">DNS is Processing</span>
+
+<span class="go">@+300</span>
+<span class="go">DNS is Idle</span>
+<span class="go">@enduml</span>
+</pre></div>
+</div>
+</section>
+<section id="syntax">
+<h4>Syntax<a class="headerlink" href="#syntax" title="Permalink to this heading"></a></h4>
+<ul class="simple">
+<li><p>https://plantuml.com/</p></li>
+</ul>
+</section>
+<section id="test-yourself">
+<h4>Test yourself!<a class="headerlink" href="#test-yourself" title="Permalink to this heading"></a></h4>
+<ul class="simple">
+<li><p><a class="reference external" href="http://www.plantuml.com/plantuml/uml/SyfFKj2rKt3CoKnELR1Io4ZDoSa70000">PlantUML web server</a></p></li>
+<li><p>Look at the source files of this material.</p></li>
+</ul>
+</section>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="SDLC_models.html" class="btn btn-neutral float-left" title="Software Development Lifecycle (SDLC) models" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="git_deeper.html" class="btn btn-neutral float-right" title="More about git" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, UPPMAX.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

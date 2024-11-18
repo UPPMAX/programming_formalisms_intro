@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Software Development Lifecycle (SDLC) models &mdash; Programming formalism intro 0.1 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" type="text/css" />
+      <link rel="stylesheet" href="_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="_static/togglebutton.css" type="text/css" />
+      <link rel="stylesheet" href="_static/sphinx_lesson.css" type="text/css" />
+      <link rel="stylesheet" href="_static/sphinx_rtd_theme_ext_color_contrast.css" type="text/css" />
+      <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+        <script src="_static/clipboard.min.js"></script>
+        <script src="_static/copybutton.js"></script>
+        <script src="_static/minipres.js"></script>
+        <script>let toggleHintShow = 'Click to show';</script>
+        <script>let toggleHintHide = 'Click to hide';</script>
+        <script>let toggleOpenOnPrint = 'true';</script>
+        <script src="_static/togglebutton.js"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+        <script>mermaid.initialize({startOnLoad:true});</script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="More about UML" href="UML_deeper.html" />
+    <link rel="prev" title="Summary" href="summary.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> Programming formalism intro
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Preparations:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="setup.html">Setup</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Theory lessons:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sdlc_tools.html">Software Development Lifecycle (SDLC) tools</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Project lessons:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="flowcharts.html">Planning phase</a></li>
+<li class="toctree-l1"><a class="reference internal" href="startup.html">Start the project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="startup_code.html">Start with coding!</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sourcecontrol.html">The iterations and Git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="deploy.html">Deploy and document for usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="collab.html">Collaboration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="summary.html">Summary</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Extra reading:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Software Development Lifecycle (SDLC) models</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#take-aways-from-other-methods">Take aways from other methods</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#the-agile-manifest">The Agile manifest</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dynamic-system-development-method-dsdm">Dynamic system development method (DSDM)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#feature-driven-development-fdd">Feature-driven development (FDD)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#crystal-methods">Crystal methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#scrum-for-very-large-projects">Scrum (For very large projects)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#lean">Lean</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#kanban">Kanban</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#extreme-programming">Extreme Programming</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#pair-programming">Pair programming</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#test-driven-development">Test-driven development</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#spotify">Spotify</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#devops-development-operations">DevOps (Development Operations)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="UML_deeper.html">More about UML</a></li>
+<li class="toctree-l1"><a class="reference internal" href="git_deeper.html">More about git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="collab_deeper.html">More about collaboration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reproducible_deeper.html">More about reproducibility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sharing_deeper.html">More about sharing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="documentation_deeper.html">More about documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="deploy_deeper.html">More about deploying</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Reference:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="concepts.html">Concepts</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Programming formalism intro</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Software Development Lifecycle (SDLC) models</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/UPPMAX/programming_formalisms_intro/blob/main/doc//doc/SDLC_models.md" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section class="tex2jax_ignore mathjax_ignore" id="software-development-lifecycle-sdlc-models">
+<h1>Software Development Lifecycle (SDLC) models<a class="headerlink" href="#software-development-lifecycle-sdlc-models" title="Permalink to this heading"></a></h1>
+<section id="take-aways-from-other-methods">
+<h2>Take aways from other methods<a class="headerlink" href="#take-aways-from-other-methods" title="Permalink to this heading"></a></h2>
+<section id="the-agile-manifest">
+<h3><a class="reference external" href="https://agilemanifesto.org/">The Agile manifest</a><a class="headerlink" href="#the-agile-manifest" title="Permalink to this heading"></a></h3>
+<div class="admonition-values admonition">
+<p class="admonition-title">Values</p>
+<ul class="simple">
+<li><p><strong>Individuals and interactions</strong> over processes and tools</p></li>
+<li><p><strong>Working software</strong> over comprehensive documentation</p></li>
+<li><p><strong>Customer collaboration</strong> over contract negotiation</p></li>
+<li><p><strong>Responding to change</strong> over following a plan</p></li>
+</ul>
+</div>
+<p>Or:
+“Agile = characterized by the division of tasks into short phases of work and frequent re-assessment and adaptation of plans.”</p>
+<p><strong>Most of the following models are Agile…</strong></p>
+</section>
+<section id="dynamic-system-development-method-dsdm">
+<h3>Dynamic system development method (DSDM)<a class="headerlink" href="#dynamic-system-development-method-dsdm" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>Timeboxing</p></li>
+<li><p>MoSCoW prioritization:</p>
+<ul>
+<li><p>must-have</p></li>
+<li><p>should-have</p></li>
+<li><p>could-have</p></li>
+<li><p>and won’t-have, or will not have right now.</p>
+<ul>
+<li><p>Some companies also use the “W” in MoSCoW to mean “wish.”</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Iterative and incremental approach</p></li>
+</ul>
+</section>
+<section id="feature-driven-development-fdd">
+<h3>Feature-driven development (FDD)<a class="headerlink" href="#feature-driven-development-fdd" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>Feature teams</p></li>
+<li><p>Parallel development</p></li>
+<li><p>Tracking completion status (reporting, milestones, percentage completion)</p></li>
+</ul>
+</section>
+<section id="crystal-methods">
+<h3>Crystal methods<a class="headerlink" href="#crystal-methods" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>People-centric</p></li>
+<li><p>Frequent delivery</p></li>
+<li><p>No “one size fits all”</p></li>
+<li><p>Modern principles: automated tests, frequent integration</p></li>
+</ul>
+</section>
+<section id="scrum-for-very-large-projects">
+<h3>Scrum (For very large projects)<a class="headerlink" href="#scrum-for-very-large-projects" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>Business value-driven comprehensive framework</p></li>
+<li><p>Scrum roles</p>
+<ul>
+<li><p>Owner</p></li>
+<li><p>development team:</p></li>
+<li><p>testers</p></li>
+<li><p>documenters</p></li>
+<li><p>DB admins</p></li>
+<li><p>scrum master: agile coach, servant leader, removes barriers, coaches and convinces; does not manage</p></li>
+</ul>
+</li>
+<li><p>scrum workflow</p>
+<ul>
+<li><p>sprint planning-&gt;sprint-&gt;review-&gt;retrospective</p></li>
+</ul>
+</li>
+<li><p>Potentially shippable product increment each sprint</p></li>
+<li><p>Suitable for very large projects</p></li>
+</ul>
+<section id="lean">
+<h4>Lean<a class="headerlink" href="#lean" title="Permalink to this heading"></a></h4>
+<ul class="simple">
+<li><p><strong>Minimize waste</strong>, visualize production, look for bottlenecks, inefficiencies</p></li>
+<li><p><strong>Last responsible moment</strong>: wait ‘til we have enough facts</p>
+<ul>
+<li><p>not make decisions based on preset timelines.</p></li>
+</ul>
+</li>
+<li><p>Deliver as fast as possible: small iterations are easier to manage</p></li>
+</ul>
+</section>
+</section>
+<section id="kanban">
+<h3>Kanban<a class="headerlink" href="#kanban" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>Visualize your work, <strong>limit work in progress</strong></p></li>
+</ul>
+</section>
+<section id="extreme-programming">
+<h3>Extreme Programming<a class="headerlink" href="#extreme-programming" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.agilealliance.org/glossary/xp">https://www.agilealliance.org/glossary/xp</a></p></li>
+<li><p>Just In Time design</p></li>
+</ul>
+<div class="admonition-branching-and-merging-is-not-listed-as-a-core-xp-practice admonition">
+<p class="admonition-title">Branching and merging is not listed as a core XP practice</p>
+<ul class="simple">
+<li><p>is generally not a favorable practice in Agile approaches.</p></li>
+<li><p>Branching has the potential for creating technical debt if changes are not merged frequently.</p></li>
+<li><p>The risks an be somewhat mitigated by merging frequently.</p></li>
+<li><p>In any case, branching and merging .</p></li>
+</ul>
+</div>
+<section id="pair-programming">
+<h4>Pair programming<a class="headerlink" href="#pair-programming" title="Permalink to this heading"></a></h4>
+<ul class="simple">
+<li><p>Collaborate, continuous code inspection</p></li>
+<li><p>real-time development technique to increase algorithm implementation</p></li>
+</ul>
+</section>
+<section id="test-driven-development">
+<h4>Test-driven development<a class="headerlink" href="#test-driven-development" title="Permalink to this heading"></a></h4>
+<ul class="simple">
+<li><p>Write test</p></li>
+<li><p>Write function to fail test</p></li>
+<li><p>Write code to pass test</p></li>
+</ul>
+</section>
+</section>
+<section id="spotify">
+<h3>Spotify<a class="headerlink" href="#spotify" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>Culture</p>
+<ul>
+<li><p>Innovation: hackathons</p></li>
+<li><p>Learning from each other</p></li>
+<li><p>Failure-friendly culture</p></li>
+<li><p>(internal) code repositories, visible and open for other teams</p></li>
+<li><p>Minimize handoffs (help from other teams)</p></li>
+<li><p>Bureaucracy minimized</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="devops-development-operations">
+<h3>DevOps (Development Operations)<a class="headerlink" href="#devops-development-operations" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p><strong>Dev</strong>elopers and testers</p></li>
+<li><p><strong>Ops</strong> (operations): people working with release, servers, middleware, network, storage configs, monitoring techniques</p></li>
+<li><p>DevOps aims to extend fast and frequent software feature development approach to build an efficient delivery pipeline.</p></li>
+<li><p>Phases: development –&gt; test –&gt; stage –&gt; production</p>
+<ul>
+<li><p>development: unit testing (code)</p></li>
+<li><p>test: integration testing (User-interface, web server, app server, back-end)</p></li>
+<li><p>stage: user acceptance</p></li>
+<li><p>production</p></li>
+</ul>
+</li>
+<li><p><strong>Continuous</strong>…</p>
+<ul>
+<li><p><strong>Integration</strong>: Central repository</p>
+<ul>
+<li><p>development + test</p></li>
+</ul>
+</li>
+<li><p><strong>Development</strong>: Ensuring stable product after every release</p>
+<ul>
+<li><p>development + test + stage</p></li>
+</ul>
+</li>
+<li><p><strong>Deployment</strong>: automating updates to production</p>
+<ul>
+<li><p>development + test + stage + production</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>And more…</strong></p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="summary.html" class="btn btn-neutral float-left" title="Summary" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="UML_deeper.html" class="btn btn-neutral float-right" title="More about UML" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, UPPMAX.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

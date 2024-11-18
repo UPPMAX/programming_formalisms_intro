@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>More about sharing &mdash; Programming formalism intro 0.1 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" type="text/css" />
+      <link rel="stylesheet" href="_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="_static/togglebutton.css" type="text/css" />
+      <link rel="stylesheet" href="_static/sphinx_lesson.css" type="text/css" />
+      <link rel="stylesheet" href="_static/sphinx_rtd_theme_ext_color_contrast.css" type="text/css" />
+      <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+        <script src="_static/clipboard.min.js"></script>
+        <script src="_static/copybutton.js"></script>
+        <script src="_static/minipres.js"></script>
+        <script>let toggleHintShow = 'Click to show';</script>
+        <script>let toggleHintHide = 'Click to hide';</script>
+        <script>let toggleOpenOnPrint = 'true';</script>
+        <script src="_static/togglebutton.js"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+        <script>mermaid.initialize({startOnLoad:true});</script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="More about documentation" href="documentation_deeper.html" />
+    <link rel="prev" title="More about reproducibility" href="reproducible_deeper.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> Programming formalism intro
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Preparations:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="setup.html">Setup</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Theory lessons:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sdlc_tools.html">Software Development Lifecycle (SDLC) tools</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Project lessons:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="flowcharts.html">Planning phase</a></li>
+<li class="toctree-l1"><a class="reference internal" href="startup.html">Start the project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="startup_code.html">Start with coding!</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sourcecontrol.html">The iterations and Git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="deploy.html">Deploy and document for usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="collab.html">Collaboration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="summary.html">Summary</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Extra reading:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="SDLC_models.html">Software Development Lifecycle (SDLC) models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="UML_deeper.html">More about UML</a></li>
+<li class="toctree-l1"><a class="reference internal" href="git_deeper.html">More about git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="collab_deeper.html">More about collaboration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reproducible_deeper.html">More about reproducibility</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">More about sharing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#open-science">Open science</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#licensing">Licensing</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#copyright">Copyright</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#derivative-work-changing-remixing-covering">Derivative work: Changing, remixing, covering</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#if-you-build-on-something-you-form-a-derivative-work">If you build on something, you form a derivative work</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#licensing-and-ownership">Licensing and ownership</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#what-is-free-software">What is free software?</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#software-freedom-is-the-freedom-to">Software freedom is the freedom to …</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#typical-confusion">Typical confusion</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#taxonomy-of-software-licenses">Taxonomy of software licenses</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#creative-commons-licenses">Creative Commons licenses</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#rights">4 rights:</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#software-citation">Software Citation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="documentation_deeper.html">More about documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="deploy_deeper.html">More about deploying</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Reference:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="concepts.html">Concepts</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Programming formalism intro</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>More about sharing</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/UPPMAX/programming_formalisms_intro/blob/main/doc//doc/sharing_deeper.md" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section class="tex2jax_ignore mathjax_ignore" id="more-about-sharing">
+<h1>More about sharing<a class="headerlink" href="#more-about-sharing" title="Permalink to this heading"></a></h1>
+<section id="open-science">
+<h2>Open science<a class="headerlink" href="#open-science" title="Permalink to this heading"></a></h2>
+<p>The Open Science movement encourages researchers
+to share research output beyond the contents of a
+published academic article (and possibly supplementary information).</p>
+<figure class="align-default">
+<a class="reference internal image-reference" href="_images/Open_Science_Principles.png"><img alt="Research comic" src="_images/Open_Science_Principles.png" style="width: 90%;" /></a>
+</figure>
+<ul class="simple">
+<li><p><strong>Open-source license</strong> is a type of license for computer software and other products that allows the <strong>source code, blueprint or design to be used, modified and/or shared under defined terms and conditions</strong>.</p></li>
+</ul>
+<p>Arguments in favor <a class="reference external" href="https://en.wikipedia.org/wiki/Open_science">(from Wikipedia)</a>:</p>
+<ul class="simple">
+<li><p>Open access publication of research reports and data allows for rigorous peer-review</p></li>
+<li><p>Science is publicly funded so all results of the research should be publicly available</p></li>
+<li><p>Open Science will make science more reproducible and transparent</p></li>
+<li><p>Open Science has more impact</p></li>
+<li><p>Open Science will help answer uniquely complex questions</p></li>
+</ul>
+<p>Arguments against <a class="reference external" href="https://en.wikipedia.org/wiki/Open_science">(from Wikipedia)</a>:</p>
+<ul class="simple">
+<li><p>Too much unsorted information overwhelms scientists</p></li>
+<li><p>Potential misuse</p></li>
+<li><p>The public will misunderstand science data</p></li>
+<li><p>Increasing the scale of science will make verification of any discovery more difficult</p></li>
+<li><p>Low-quality science</p></li>
+</ul>
+<figure class="align-default" id="id1">
+<a class="reference internal image-reference" href="_images/36-data-research-cycle.jpg"><img alt="_images/36-data-research-cycle.jpg" src="_images/36-data-research-cycle.jpg" style="width: 100%;" /></a>
+<figcaption>
+<p><span class="caption-text">(This image was created by Scriberia for The Turing Way community and is used under a CC-BY licence. The image was obtained from https://zenodo.org/record/3332808.)</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<div class="admonition-read-more admonition">
+<p class="admonition-title">Read more</p>
+<h3 class="rubric" id="fair">FAIR</h3>
+<p><strong>“FAIR”</strong> is the current buzzword for data management. You may be asked about it in, for example, making data management plans for grants:</p>
+<ul class="simple">
+<li><p>Findable</p>
+<ul>
+<li><p>Will anyone else know that your data exists?</p></li>
+<li><p>Solutions: put it in a standard repository, or at least a description of the data. Get a digital object identifier (DOI).</p></li>
+</ul>
+</li>
+<li><p>Accessible</p>
+<ul>
+<li><p>Once someone knows that the data exists, can they get it?</p></li>
+<li><p>Usually solved by being in a repository, but for non-open data, may require more procedures.</p></li>
+</ul>
+</li>
+<li><p>Inter-operable</p>
+<ul>
+<li><p>Is your data in a format that can be used by others, like csv instead of PDF?</p></li>
+<li><p>Or better than csv. Example: 5-star open data</p></li>
+</ul>
+</li>
+<li><p>Reusable</p>
+<ul>
+<li><p>Is there a license allowing others to re-use?</p></li>
+</ul>
+</li>
+</ul>
+<h3 class="rubric" id="social-coding">Social coding</h3>
+<ul class="simple">
+<li><p>Our work depends on outputs from others. Research of others depends on our outputs.</p></li>
+<li><p>Whether you can share your output depends on how you obtained your input.</p></li>
+<li><p>A repository that is private today might become public one day.</p></li>
+<li><p>Sometimes “OTHERS” are you yourself in the future in a different group/job.</p></li>
+<li><p>Software licenses matter. And this is what we will discuss in the next episode.</p></li>
+</ul>
+</div>
+</section>
+<section id="licensing">
+<h2>Licensing<a class="headerlink" href="#licensing" title="Permalink to this heading"></a></h2>
+<p><a class="reference external" href="https://coderefinery.github.io/social-coding/software-licensing/">For more details</a></p>
+<section id="copyright">
+<h3>Copyright<a class="headerlink" href="#copyright" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>Protects creative expression</p></li>
+<li><p>Automatically created</p></li>
+<li><p><strong>Derivative works</strong> usually inherit copyright of the thing derived</p></li>
+<li><p>Time frame: essentially forever (lifetime + X years)</p></li>
+</ul>
+<p>When can you use:</p>
+<ul class="simple">
+<li><p>When there is a <strong>license</strong> saying you can</p></li>
+<li><p>Limited other cases (private use, fair use: context dependent)</p></li>
+<li><p>In practice: people do many things, but then can’t share their
+output if license does not allow it or is not clarified</p></li>
+</ul>
+<p><strong>When we write or use software then copyright, licenses, and derivative works are important concepts</strong></p>
+</section>
+<section id="derivative-work-changing-remixing-covering">
+<h3>Derivative work: Changing, remixing, covering<a class="headerlink" href="#derivative-work-changing-remixing-covering" title="Permalink to this heading"></a></h3>
+<figure class="align-default" id="id2">
+<a class="reference internal image-reference" href="_images/rubik.jpg"><img alt="Images of Bob Marley and Mona Lisa made out of Rubik cubes" src="_images/rubik.jpg" style="width: 60%;" /></a>
+<figcaption>
+<p><span class="caption-text">Images of Bob Marley and Mona Lisa made out of Rubik cubes.
+Is this derivative work? <a class="reference external" href="https://www.flickr.com/photos/dgriebeling/3851273590">“Distillery District 26”</a> CC-BY.</span><a class="headerlink" href="#id2" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="if-you-build-on-something-you-form-a-derivative-work">
+<h3>If you build on something, you form a derivative work<a class="headerlink" href="#if-you-build-on-something-you-form-a-derivative-work" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>The original creator may have rights to what you make</p></li>
+<li><p>The whole point of this talk is to make sure that <strong>you can make and publish derivative works</strong>
+and <strong>others can make and publish derivative works from you</strong></p></li>
+<li><p><strong>You cannot ignore licensing</strong>: default is “no one can make copies or derivative works”.</p></li>
+<li><p>License your code very early in the project: ideally develop publicly accessible open source code from day one.</p></li>
+<li><p>Start with a README.md and a LICENSE file.</p></li>
+<li><p>Use GitHub recommendation or/and <a class="reference external" href="https://choosealicense.com/">https://choosealicense.com/</a>.</p></li>
+</ul>
+</section>
+<section id="licensing-and-ownership">
+<h3>Licensing and ownership<a class="headerlink" href="#licensing-and-ownership" title="Permalink to this heading"></a></h3>
+<p><strong>Who can decide about or change a license?</strong></p>
+<ul class="simple">
+<li><p>The copyright holder if a separate “Contributor License Agreement” is signed. Otherwise
+copyright holder provided they secure express consent from all the contributors.</p></li>
+</ul>
+<p><strong>Who owns the copyright for software you write?</strong></p>
+<ul class="simple">
+<li><p><strong>Intellectual property depends on the country and the employer!</strong></p></li>
+<li><p>So-called works made for hire.</p></li>
+</ul>
+<p><strong>If you own your software:</strong></p>
+<ul class="simple">
+<li><p>You can change the license.</p></li>
+<li><p>You can dual-license (e.g. GPL for anyone, but you can pay for commercial non-GPL).</p></li>
+</ul>
+<p><strong>If you do not own your software, you can:</strong></p>
+<ul class="simple">
+<li><p>Request open-sourcing directly (preserves your rights!).</p></li>
+<li><p>Request a transfer of ownership (check with your university).</p></li>
+</ul>
+<p><strong>If you accept contributions (pull requests), you may not be the only owner anymore!</strong></p>
+<ul class="simple">
+<li><p>Clarify licensing strategy <strong>before</strong> - otherwise you won’t have
+all rights to your code.</p></li>
+</ul>
+</section>
+<section id="what-is-free-software">
+<h3>What is free software?<a class="headerlink" href="#what-is-free-software" title="Permalink to this heading"></a></h3>
+<section id="software-freedom-is-the-freedom-to">
+<h4>Software freedom is the freedom to …<a class="headerlink" href="#software-freedom-is-the-freedom-to" title="Permalink to this heading"></a></h4>
+<ul class="simple">
+<li><p>… run the software for <strong>any purpose</strong>: new applications</p></li>
+<li><p>… <strong>study</strong> how the software works and to adapt it to your needs: new applications, less reinventing wheels</p></li>
+<li><p>… <strong>redistribute</strong> copies of the software: more users, more citations</p></li>
+<li><p>… <strong>improve</strong> the software and distribute your improvements to the public: fix bugs, new science</p></li>
+</ul>
+</section>
+<section id="typical-confusion">
+<h4>Typical confusion<a class="headerlink" href="#typical-confusion" title="Permalink to this heading"></a></h4>
+<ul class="simple">
+<li><p>Free software does not mean that software is for free</p></li>
+<li><p>Open source license does not mean you need to share everything immediately (share main branch, put unpublished code on a fork)</p></li>
+<li><p>Open source does not mean public domain: software in the public domain has no owner</p></li>
+<li><p>Open source does not mean non-commercial: plenty of companies produce and support it</p></li>
+</ul>
+</section>
+</section>
+<section id="taxonomy-of-software-licenses">
+<h3>Taxonomy of software licenses<a class="headerlink" href="#taxonomy-of-software-licenses" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>Copyleft is the legal technique of granting certain freedoms over copies of copyrighted works with the requirement that the same rights be preserved in derivative works.</p></li>
+</ul>
+<p><strong>1. Custom/closed/proprietary</strong></p>
+<ul class="simple">
+<li><p>Derivative work typically not possible</p></li>
+</ul>
+<p><strong>2. Permissive (MIT, BSD, Apache)</strong></p>
+<ul class="simple">
+<li><p>Derivative work does not have to be shared</p></li>
+<li><p>Permissive: gives the public permission to use, modify, and share, without any condition for downstream licensing</p></li>
+<li><p>If the licenses of components are permissive, one may use any open license they want.</p></li>
+</ul>
+<figure class="align-default" id="id3">
+<img alt="Permissions, conditions, and limitations of the MIT license" src="_images/MIT.png" />
+<figcaption>
+<p><span class="caption-text">Example: Permissions, conditions, and limitations of the MIT license. Unchanged from <a class="reference external" href="https://choosealicense.com/">https://choosealicense.com/</a>.</span><a class="headerlink" href="#id3" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p><strong>3. Weak copyleft share-alike (LGPL, MPL)</strong></p>
+<ul class="simple">
+<li><p>Derivative work is free software but is limited to the component</p></li>
+</ul>
+<figure class="align-default" id="id4">
+<img alt="Permissions, conditions, and limitations of the LGPL license" src="_images/GNU_LGPL_v3.png" />
+<figcaption>
+<p><span class="caption-text">Example: Permissions, conditions, and limitations of the LGPL license. Unchanged from <a class="reference external" href="https://choosealicense.com/">https://choosealicense.com/</a>.</span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p><strong>4. Strong copyleft share-alike (GPL, AGPL)</strong></p>
+<ul class="simple">
+<li><p>Derivative work is free software and derivative work extends to the combined project</p></li>
+<li><p>If the licenses of components are strong copyleft, one must use the same license</p></li>
+</ul>
+<figure class="align-default" id="id5">
+<img alt="Permissions, conditions, and limitations of the GPL license" src="_images/GNU_GPL_v3.png" />
+<figcaption>
+<p><span class="caption-text">Example: Permissions, conditions, and limitations of the GPL license. Unchanged from <a class="reference external" href="https://choosealicense.com/">https://choosealicense.com/</a>.</span><a class="headerlink" href="#id5" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="creative-commons-licenses">
+<h3>Creative Commons licenses<a class="headerlink" href="#creative-commons-licenses" title="Permalink to this heading"></a></h3>
+<a class="reference internal image-reference" href="_images/Cc.logo.circle.svg.png"><img alt="Creative Commons" class="align-center" src="_images/Cc.logo.circle.svg.png" style="width: 100px;" /></a>
+<ul class="simple">
+<li><p>Creative Commons licenses give everyone a standardized way to grant the public permission to use their creative work under copyright law.</p></li>
+<li><p>From the reuser’s perspective, the presence of a Creative Commons license on a copyrighted work answers the question, “What can I do with this work?”
+<a class="reference external" href="https://creativecommons.org/about/cclicenses/">https://creativecommons.org/about/cclicenses/</a></p></li>
+<li><p>More often used for images and text.</p></li>
+<li><p>For software, Creative Commons includes three free licenses created by other institutions: the BSD License, the GNU LGPL, and the GNU GPL. See above.</p></li>
+</ul>
+<section id="rights">
+<h4>4 rights:<a class="headerlink" href="#rights" title="Permalink to this heading"></a></h4>
+<a class="reference internal image-reference" href="_images/Cc-by_new.svg.png"><img alt="CC-BY" class="align-center" src="_images/Cc-by_new.svg.png" style="width: 50px;" /></a>
+<ul class="simple">
+<li><p>BY – Attribution - Credit must be given to the creator</p>
+<ul>
+<li><p>User may copy, distribute, display, perform and make derivative works and remixes based on it only if they give the author or licensor the credits</p></li>
+</ul>
+</li>
+</ul>
+<a class="reference internal image-reference" href="_images/Cc-sa.svg.png"><img alt="CC-SA" class="align-center" src="_images/Cc-sa.svg.png" style="width: 50px;" /></a>
+<ul class="simple">
+<li><p>SA - Share alike - Allows remix culture</p>
+<ul>
+<li><p>distribute derivative works only under a license identical to (“not more restrictive than”) the license that governs the original work.(Share alike)</p></li>
+</ul>
+</li>
+</ul>
+<a class="reference internal image-reference" href="_images/113px-Cc-nc.svg.png"><img alt="CC-NC" class="align-center" src="_images/113px-Cc-nc.svg.png" style="width: 50px;" /></a>
+<ul class="simple">
+<li><p>NC - Non-commercial</p>
+<ul>
+<li><p>Licensees may copy, distribute, display, perform the work and make derivative works and remixes based on it only for non-commercial purposes.</p></li>
+</ul>
+</li>
+</ul>
+<a class="reference internal image-reference" href="_images/Cc-nd.svg.png"><img alt="CC-ND" class="align-center" src="_images/Cc-nd.svg.png" style="width: 50px;" /></a>
+<ul class="simple">
+<li><p>ND - No derivative work</p>
+<ul>
+<li><p>Licensees may copy, distribute, display and perform only verbatim copies of the work, not derivative works and remixes based on it. Since version 4.0, derivative works are allowed but must not be shared.</p></li>
+</ul>
+</li>
+</ul>
+<a class="reference internal image-reference" href="_images/225px-Cc-zero.svg.png"><img alt="CC0" class="align-center" src="_images/225px-Cc-zero.svg.png" style="width: 50px;" /></a>
+<ul class="simple">
+<li><p>CC0 (aka CC Zero) - No attribution required</p>
+<ul>
+<li><p>not recommended to release software into the public domain because it lacks a patent grant.</p></li>
+</ul>
+</li>
+</ul>
+<p>If you would like to learn more about licenses, check out our slide deck <a class="reference external" href="https://cicero.xyz/v3/remark/0.14.0/github.com/coderefinery/social-coding/main/licensing-and-cakes.md/">“Software licensing
+and open source explained with
+cakes”</a>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Also covered on the third day</p>
+</div>
+</section>
+</section>
+</section>
+<section id="software-citation">
+<h2>Software Citation<a class="headerlink" href="#software-citation" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>Think the same as for a scientific paper</p></li>
+</ul>
+<p><strong>Our practical recommendations</strong>:</p>
+<ul class="simple">
+<li><p>Get a <a class="reference external" href="https://en.wikipedia.org/wiki/Digital_object_identifier">DOI</a> using <a class="reference external" href="https://zenodo.org">Zenodo</a> or similar services.</p></li>
+<li><p>Open source license can’t demand citation, but it is required by science ethics anyway.</p></li>
+<li><p>Make it as easy as possible! Clearly say what you want cited.</p></li>
+<li><p>Make it easy for scripts and tools, use the <a class="reference external" href="https://citation-file-format.github.io">Citation File Format</a>.</p></li>
+<li><p><a class="reference external" href="https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-citation-files">GitHub now supports CITATION.cff files</a></p></li>
+</ul>
+<p>This is an example of a simple <code class="docutils literal notranslate"><span class="pre">CITATION.cff</span></code> file:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">cff-version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1.2.0</span>
+<span class="nt">message</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;If</span><span class="nv"> </span><span class="s">you</span><span class="nv"> </span><span class="s">use</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">software,</span><span class="nv"> </span><span class="s">please</span><span class="nv"> </span><span class="s">cite</span><span class="nv"> </span><span class="s">it</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">below.&quot;</span>
+<span class="nt">authors</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">family-names</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Druskat</span>
+<span class="w">    </span><span class="nt">given-names</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Stephan</span>
+<span class="w">    </span><span class="nt">orcid</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://orcid.org/0000-0003-4925-7248</span>
+<span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;My</span><span class="nv"> </span><span class="s">Research</span><span class="nv"> </span><span class="s">Software&quot;</span>
+<span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2.0.4</span>
+<span class="nt">doi</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10.5281/zenodo.1234</span>
+<span class="nt">date-released</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2021-08-11</span>
+</pre></div>
+</div>
+<p>Recommended format for software citation is to ensure the following information
+is provided as part of the reference <a class="reference external" href="https://f1000research.com/articles/9-1257/v2">Katz, Chue Hong, Clark, 2021</a>:</p>
+<ul class="simple">
+<li><p>Creator</p></li>
+<li><p>Title</p></li>
+<li><p>Publication venue</p></li>
+<li><p>Date</p></li>
+<li><p>Identifier</p></li>
+<li><p>Version</p></li>
+<li><p>Type</p></li>
+<li><p>Digital object identifiers (DOI) are the backbone of the academic reference and metrics system.</p></li>
+<li><p>CodeRefinery has an exercise to see how to make a GitHub repository citable by archiving it on the Zenodo archiving service. If you are interested,  have a look <a class="reference external" href="https://coderefinery.github.io/github-without-command-line/doi/#making-your-project-citable">here</a></p></li>
+</ul>
+<div class="admonition-keypoints keypoints admonition">
+<p class="admonition-title">Keypoints</p>
+<ul class="simple">
+<li><p>Share your code! Eventually others will probably use it anyway.</p></li>
+<li><p>Licence your software and do it early. Default is “no one can make copies or derivative works”.</p></li>
+<li><p>Get DOI or at least state how to cite your software</p></li>
+</ul>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="reproducible_deeper.html" class="btn btn-neutral float-left" title="More about reproducibility" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="documentation_deeper.html" class="btn btn-neutral float-right" title="More about documentation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, UPPMAX.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

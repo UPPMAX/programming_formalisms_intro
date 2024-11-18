@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Deploy and document for usage &mdash; Programming formalism intro 0.1 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" type="text/css" />
+      <link rel="stylesheet" href="_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="_static/togglebutton.css" type="text/css" />
+      <link rel="stylesheet" href="_static/sphinx_lesson.css" type="text/css" />
+      <link rel="stylesheet" href="_static/sphinx_rtd_theme_ext_color_contrast.css" type="text/css" />
+      <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+        <script src="_static/clipboard.min.js"></script>
+        <script src="_static/copybutton.js"></script>
+        <script src="_static/minipres.js"></script>
+        <script>let toggleHintShow = 'Click to show';</script>
+        <script>let toggleHintHide = 'Click to hide';</script>
+        <script>let toggleOpenOnPrint = 'true';</script>
+        <script src="_static/togglebutton.js"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+        <script>mermaid.initialize({startOnLoad:true});</script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Collaboration" href="collab.html" />
+    <link rel="prev" title="The iterations and Git" href="sourcecontrol.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> Programming formalism intro
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Preparations:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="setup.html">Setup</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Theory lessons:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sdlc_tools.html">Software Development Lifecycle (SDLC) tools</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Project lessons:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="flowcharts.html">Planning phase</a></li>
+<li class="toctree-l1"><a class="reference internal" href="startup.html">Start the project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="startup_code.html">Start with coding!</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sourcecontrol.html">The iterations and Git</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Deploy and document for usage</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#recording-dependencies">Recording dependencies</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#conda-anaconda-pip-virtualenv-pipenv-pyenv-poetry-requirements-txt">Conda, Anaconda, pip, Virtualenv, Pipenv, pyenv, Poetry, requirements.txt …</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#record-our-environment-for-other-users">Record our environment for other users</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#workflows">Workflows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#containers">Containers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#in-code-documentation">In-code documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#function-docstrings">Function docstrings</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#documentation-for-tutorials">Documentation for tutorials</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#html-static-site-generators">HTML static site generators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#deployment-on-servers">Deployment on servers</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#github-pages">GitHub pages</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#read-the-docs">Read the Docs</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#wiki-s">Wiki:s</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#optional-last-hands-on-your-documentation">(Optional) Last hands on your documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="collab.html">Collaboration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="summary.html">Summary</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Extra reading:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="SDLC_models.html">Software Development Lifecycle (SDLC) models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="UML_deeper.html">More about UML</a></li>
+<li class="toctree-l1"><a class="reference internal" href="git_deeper.html">More about git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="collab_deeper.html">More about collaboration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reproducible_deeper.html">More about reproducibility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sharing_deeper.html">More about sharing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="documentation_deeper.html">More about documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="deploy_deeper.html">More about deploying</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Reference:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="concepts.html">Concepts</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Programming formalism intro</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Deploy and document for usage</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/UPPMAX/programming_formalisms_intro/blob/main/doc//doc/deploy.md" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section class="tex2jax_ignore mathjax_ignore" id="deploy-and-document-for-usage">
+<h1>Deploy and document for usage<a class="headerlink" href="#deploy-and-document-for-usage" title="Permalink to this heading"></a></h1>
+<div class="admonition-objectives objectives admonition">
+<p class="admonition-title">Objectives</p>
+<ul class="simple">
+<li><p>We will prepare for use of your code</p></li>
+<li><p>Update the README</p></li>
+<li><p>Update a Doc Index</p></li>
+<li><p>Revisit licence</p></li>
+<li><p>But also…</p>
+<ul>
+<li><p>some theory of packages</p></li>
+<li><p>some theory of workflows</p></li>
+<li><p>some theory of containers</p></li>
+<li><p>some info about Tutorials/Reference/HowTo guides</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<ul class="simple">
+<li><p>Make your program or workflow work for others and yourself in the future.</p></li>
+<li><p>Let people understand how to use your program/tool</p></li>
+</ul>
+</div>
+<section id="recording-dependencies">
+<h2>Recording dependencies<a class="headerlink" href="#recording-dependencies" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p><strong>Reproducibility</strong>: We can control our code but how can we control dependencies?</p></li>
+<li><p><strong>10-year challenge</strong>: Try to build/run your own code that you have created 10 (or less) years ago. Will your code from today work in 5 years if you don’t change it?</p></li>
+<li><p><strong>Dependency hell</strong>: Different codes on the same environment can have conflicting dependencies.</p></li>
+</ul>
+<section id="conda-anaconda-pip-virtualenv-pipenv-pyenv-poetry-requirements-txt">
+<h3>Conda, Anaconda, pip, Virtualenv, Pipenv, pyenv, Poetry, requirements.txt …<a class="headerlink" href="#conda-anaconda-pip-virtualenv-pipenv-pyenv-poetry-requirements-txt" title="Permalink to this heading"></a></h3>
+<p><strong>These <em>Python-related</em> tools try to solve the following problems:</strong></p>
+<ul class="simple">
+<li><p><strong>Defining a specific set of dependencies</strong>, possibly with well-defined versions</p></li>
+<li><p><strong>Installing those dependencies</strong> mostly automatically</p></li>
+<li><p><strong>Recording the versions</strong> for all dependencies</p></li>
+<li><p><strong>Isolated environments</strong></p></li>
+<li><p>On your computer for projects so they can use different software.</p></li>
+<li><p>Isolate environments on computers with many users (and allow self-installations)</p></li>
+<li><p>Using <strong>different Python/R versions</strong> per project??</p></li>
+<li><p>Provide tools and services to <strong>share packages</strong></p></li>
+</ul>
+<p><a class="reference external" href="https://aaltoscicomp.github.io/python-for-scicomp/packaging/">Python packaging</a>.</p>
+<ul class="simple">
+<li><p>Make Python packages of your code.</p></li>
+<li><p><strong>Possibilities for other languages can be</strong></p>
+<ul>
+<li><p>C/C+</p>
+<ul>
+<li><p>CMake</p></li>
+<li><p>Conda</p></li>
+</ul>
+</li>
+<li><p>Fortran</p>
+<ul>
+<li><p>Fortran package manager</p></li>
+</ul>
+</li>
+<li><p>Julia</p>
+<ul>
+<li><p>Pkg.jl</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><a class="reference external" href="https://uppmax.github.io/programming_formalisms_intro/reproducible_deeper.html#recording-dependencies">More info</a></p></li>
+</ul>
+<p><a class="reference external" href="https://uppmax.github.io/programming_formalisms_intro/reproducible_deeper.html#the-tools">The tools</a></p>
+<p><strong>Course advertisement</strong>
+<a class="reference external" href="https://aaltoscicomp.github.io/python-for-scicomp/">Python for scientific computing</a></p>
+</section>
+<section id="record-our-environment-for-other-users">
+<h3>Record our environment for other users<a class="headerlink" href="#record-our-environment-for-other-users" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>We can make other users aware of the dependencies for our Python project.</p></li>
+<li><p>One can state those specifically as a list in a README</p></li>
+<li><p>Or, we can make a ready file (in python)</p></li>
+</ul>
+<div class="admonition-save-your-requirements-as-a-file type-along important admonition">
+<p class="admonition-title">Save your requirements as a file</p>
+<ul class="simple">
+<li><p>Save your requirements as a file that user can run to get the same dependencies as you</p></li>
+</ul>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>pip<span class="w"> </span>freeze<span class="w"> </span>&gt;<span class="w"> </span>requirements.txt
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Users can then install the same packages with:</p></li>
+</ul>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
+</pre></div>
+</div>
+<p><strong>TIP</strong> Inform about this in the last exercise (updating the README file)</p>
+</div>
+</section>
+</section>
+<section id="workflows">
+<h2>Workflows<a class="headerlink" href="#workflows" title="Permalink to this heading"></a></h2>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><strong>Learn more</strong>
+<a class="reference external" href="https://coderefinery.github.io/reproducible-research/workflow-management/">Workflow management by CodeRefinery</a>
+<a class="reference external" href="https://nbis-reproducible-research.readthedocs.io/en/course_2104/snakemake/">Snakemake by CodeRefinery</a></p>
+</div>
+</section>
+<section id="containers">
+<h2>Containers<a class="headerlink" href="#containers" title="Permalink to this heading"></a></h2>
+<p><strong>Popular container implementations:</strong></p>
+<ul class="simple">
+<li><p>Docker</p></li>
+<li><p>Singularity (popular on high-performance computing systems)</p></li>
+<li><p>Apptainer (popular on high-performance computing systems, fork of Singularity)</p></li>
+<li><p>Docker images can be converted to Singularity/Apptainer images</p></li>
+<li><p>Singularity Python can convert Docker files to Singularity definition files</p></li>
+<li><p><a class="reference external" href="https://coderefinery.github.io/reproducible-research/environments">Environments by CodeRefinery</a></p></li>
+<li><p><a class="reference external" href="https://uppmax.github.io/programming_formalisms_intro/reproducible_deeper.html#containers">Containers in the extra material</a></p></li>
+</ul>
+<div class="admonition-keypoints keypoints admonition">
+<p class="admonition-title">Keypoints</p>
+<p><strong>Make sure it works for other or you in the future!</strong></p>
+<ul class="simple">
+<li><p>Preserve the steps for re-generating published results.</p></li>
+<li><p>Hundreds of workflow management tools exist.</p></li>
+<li><p>Snakemake is a comparatively simple and lightweight option to create transferable and scalable data analyses.</p></li>
+<li><p>Sometimes a script is enough.</p></li>
+</ul>
+</div>
+</section>
+<section id="in-code-documentation">
+<h2>In-code documentation<a class="headerlink" href="#in-code-documentation" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>Comments, function docstrings, …</p></li>
+<li><p>Advantages</p>
+<ul>
+<li><p>Good for programmers</p></li>
+<li><p>Version controlled alongside code</p></li>
+<li><p>Can be used to auto-generate documentation for functions/classes</p></li>
+</ul>
+</li>
+<li><p>Disadvantage</p>
+<ul>
+<li><p>Probably not enough for users</p></li>
+</ul>
+</li>
+</ul>
+<div class="admonition-in-bo-s discussion attention admonition">
+<p class="admonition-title">In BO:s?</p>
+<p><strong>Comments examples</strong></p>
+<p>Let’s take a look at two example comments (comments in python start with <code class="docutils literal notranslate"><span class="pre">#</span></code>):</p>
+<p><strong>Comment A</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Now we check if temperature is larger then -50:</span>
+<span class="k">if</span> <span class="n">temperature</span> <span class="o">&gt;</span> <span class="o">-</span><span class="mi">50</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;do something&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>Comment B</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># We regard temperatures below -50 degrees as measurement errors</span>
+<span class="k">if</span> <span class="n">temperature</span> <span class="o">&gt;</span> <span class="o">-</span><span class="mi">50</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;do something&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Which of these comments is best? Can you explain why?</p>
+</div>
+<div class="admonition-solution solution important dropdown admonition">
+<p class="admonition-title">Solution</p>
+<ul class="simple">
+<li><p>Comment A describes <strong>what</strong> happens in this piece of code, whereas comment B describes <strong>why</strong> this piece of code is there, i.e. its <strong>purpose</strong>.</p></li>
+<li><p>Comments in the form of B are much more useful, comments of form A are redundant and we should avoid them.</p></li>
+</ul>
+</div>
+<p><strong>Why and not how</strong></p>
+<section id="function-docstrings">
+<h3>Function docstrings<a class="headerlink" href="#function-docstrings" title="Permalink to this heading"></a></h3>
+<p>A docstring is a structured comment associated to a segment of code (i.e. function or class)</p>
+<p>Good docstrings describe:</p>
+<ul class="simple">
+<li><p>What the function does</p></li>
+<li><p>What goes in (including the type of the input variables)</p></li>
+<li><p>What goes out (including the return type)</p></li>
+<li><p>Python example: help(<function name>)</p></li>
+</ul>
+<p><strong>Example</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">mean_temperature</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Get the mean temperature</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        data (pandas.DataFrame): A pandas dataframe with air temperature measurements.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        The mean air temperature (float)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">temperatures</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;Air temperature (degC)&#39;</span><span class="p">]</span>
+    <span class="k">return</span> <span class="nb">float</span><span class="p">(</span><span class="nb">sum</span><span class="p">(</span><span class="n">temperatures</span><span class="p">)</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">temperatures</span><span class="p">))</span>  
+  
+</pre></div>
+</div>
+<div class="admonition-optional-docstrings exercise important admonition">
+<p class="admonition-title">(Optional) Docstrings</p>
+<ul class="simple">
+<li><p>Try to make docstrings for the main program and some of the functions</p></li>
+<li><p>Test from a python console (after importing) with <code class="docutils literal notranslate"><span class="pre">help(eccentricity)</span></code> or similar</p></li>
+</ul>
+</div>
+</section>
+</section>
+<section id="documentation-for-tutorials">
+<h2>Documentation for tutorials<a class="headerlink" href="#documentation-for-tutorials" title="Permalink to this heading"></a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Documentation comes in different forms - what <em>is</em> documentation?</p>
+<ul class="simple">
+<li><p><strong>Tutorials</strong>: learning-oriented, allows the newcomer to get started</p></li>
+<li><p><strong>How-to guides</strong>: goal-oriented, shows how to solve a specific problem</p></li>
+<li><p><strong>Explanation</strong>: understanding-oriented, explains a concept</p></li>
+<li><p><strong>Reference</strong>: information-oriented, describes the machinery
+<strong>Not to forget</strong></p></li>
+<li><p>Project documentation:</p>
+<ul>
+<li><p>requirements: what is the goal of the software, risks, platforms
+the analysis: pseudocode and UML</p></li>
+<li><p>risk analysis</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<section id="html-static-site-generators">
+<h3>HTML static site generators<a class="headerlink" href="#html-static-site-generators" title="Permalink to this heading"></a></h3>
+<p>There are many tools that can turn RST or Markdown into beautiful HTML pages:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="http://sphinx-doc.org">Sphinx</a> <strong>← we will exercise this, this is how this lesson material is built</strong></p>
+<ul>
+<li><p>Generate HTML/PDF/LaTeX from RST and Markdown.</p></li>
+<li><p>Basically all Python projects use Sphinx but <strong>Sphinx is not limited to Python</strong></p></li>
+<li><p><a class="reference external" href="http://readthedocs.org">Read the docs</a>
+hosts public Sphinx documentation for free!</p></li>
+<li><p>Also hostable anywhere else, like GitHub pages. **← this is what we use for this lesson</p></li>
+<li><p>API documentation possible</p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="https://jekyllrb.com">Jekyll</a></p>
+<ul>
+<li><p>Generates HTML from Markdown.</p></li>
+<li><p>GitHub supports this without adding extra build steps.</p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="https://www.mkdocs.org/">MkDocs</a></p>
+<ul>
+<li><p>Example: <a class="reference external" href="https://uppmax.github.io/bianca_workshop/">Bianca course</a></p></li>
+</ul>
+</li>
+</ul>
+<p>There are many more …</p>
+</section>
+<section id="deployment-on-servers">
+<h3>Deployment on servers<a class="headerlink" href="#deployment-on-servers" title="Permalink to this heading"></a></h3>
+<p>GitHub, GitLab, and Bitbucket make it possible to serve HTML pages:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://pages.github.com">GitHub Pages</a> (GH-pages) ← this is what we and CR use for some course material</p></li>
+<li><p><a class="reference external" href="https://www.w3schools.com/git/git_remote_pages.asp?remote=bitbucket">Bitbucket Pages</a></p></li>
+<li><p><a class="reference external" href="https://pages.gitlab.io">GitLab Pages</a></p></li>
+<li><p><a class="reference external" href="http://readthedocs.org">Read the docs</a> ← this is what NBIS uses for some course material</p>
+<ul>
+<li><p>Example: <a class="reference external" href="https://nbis-reproducible-research.readthedocs.io/en/course_1803/git/">NBIS Introduction to Git</a></p></li>
+</ul>
+</li>
+</ul>
+<section id="github-pages">
+<h4>GitHub pages<a class="headerlink" href="#github-pages" title="Permalink to this heading"></a></h4>
+<ul class="simple">
+<li><p>Easiest. Everything is local to GitHub</p></li>
+<li><p>This lesson material</p></li>
+</ul>
+</section>
+<section id="read-the-docs">
+<h4>Read the Docs<a class="headerlink" href="#read-the-docs" title="Permalink to this heading"></a></h4>
+<ul class="simple">
+<li><p>Somewhat more possibilities, like having several versions of documentation to switch between.</p></li>
+</ul>
+</section>
+</section>
+<section id="wiki-s">
+<h3>Wiki:s<a class="headerlink" href="#wiki-s" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>Popular solutions (but many others exist):</p>
+<ul>
+<li><p><a class="reference external" href="https://www.mediawiki.org">MediaWiki</a></p></li>
+<li><p><a class="reference external" href="https://www.dokuwiki.org">Dokuwiki</a></p></li>
+<li><p>Also on GitHub!</p></li>
+<li><p>Typically needs to be hosted and maintained</p></li>
+</ul>
+</li>
+<li><p>Example with <a class="reference external" href="https://github.com/wrf-model/WRF/wiki">WRF weather model</a></p></li>
+</ul>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference external" href="https://coderefinery.github.io/documentation/">Documentaion by CodeRefinery</a></p>
+</div>
+</section>
+</section>
+<section id="optional-last-hands-on-your-documentation">
+<h2>(Optional) Last hands on your documentation<a class="headerlink" href="#optional-last-hands-on-your-documentation" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>Some inspiration <a class="reference external" href="https://github.com/yampelo/beagle">Beagle</a></p></li>
+</ul>
+<div class="admonition-a-little-more-about-licensing admonition">
+<p class="admonition-title">A little more about licensing</p>
+<p>Copyleft is the legal technique of granting certain freedoms over copies of copyrighted works with the requirement that the same rights be preserved in derivative works.</p>
+<ol class="arabic simple">
+<li><p>Custom/closed/proprietary</p></li>
+</ol>
+<ul class="simple">
+<li><p>Derivative work typically not possible</p></li>
+<li><p>Unusual in academics</p></li>
+</ul>
+<ol class="arabic simple" start="2">
+<li><p>Permissive (<strong>MIT</strong>, BSD, Apache)</p></li>
+</ol>
+<ul class="simple">
+<li><p>Derivative work does not have to be shared</p></li>
+</ul>
+<ol class="arabic simple" start="3">
+<li><p>Weak copyleft share-alike (<strong>LGPL</strong>, MPL)</p></li>
+</ol>
+<ul class="simple">
+<li><p>Derivative work is free software but is limited to the component</p></li>
+</ul>
+<ol class="arabic simple" start="4">
+<li><p>Strong copyleft share-alike (<strong>GPL</strong>, AGPL)</p></li>
+</ol>
+<ul class="simple">
+<li><p>Derivative work is free software and derivative work extends to the combined project</p></li>
+</ul>
+</div>
+<div class="admonition-citation-bullets admonition">
+<p class="admonition-title">Citation bullets</p>
+<ul class="simple">
+<li><p>Creator</p></li>
+<li><p>Title</p></li>
+<li><p>Publication venue</p></li>
+<li><p>Date</p></li>
+<li><p>Version</p></li>
+<li><p>Type</p></li>
+</ul>
+</div>
+<div class="admonition-git-github-repo admonition">
+<p class="admonition-title">Git/GitHub Repo</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>README.md
+     - with citation info
+License
+Figures
+    figure outputs
+Src 
+    License (here or in the 1st level)
+    Requirements.txt
+    python files
+Doc
+    index
+    planning documents
+</pre></div>
+</div>
+</div>
+<div class="admonition-parts-to-be-covered admonition">
+<p class="admonition-title">Parts to be covered</p>
+<ul class="simple">
+<li><p>☑ Planning</p>
+<ul>
+<li><p>Pseudocode</p></li>
+<li><p>Unified Modelling Language</p></li>
+</ul>
+</li>
+<li><p>☐ Testing</p>
+<ul>
+<li><p>We don’t do this today!</p></li>
+</ul>
+</li>
+<li><p>☑ Source/version control</p>
+<ul>
+<li><p>git history</p></li>
+<li><p>git branches</p></li>
+</ul>
+</li>
+<li><p>☐ Collaboration</p></li>
+<li><p>☑ Sharing</p>
+<ul>
+<li><p>☑ open science</p></li>
+<li><p>☑ citation</p></li>
+<li><p>☑ licensing</p></li>
+<li><p>☑ reproducible</p></li>
+</ul>
+</li>
+<li><p>☑ Documentation</p>
+<ul>
+<li><p>docstrings</p></li>
+<li><p>README</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="admonition-optional-update-your-documentation exercise important admonition">
+<p class="admonition-title">(Optional) Update your documentation</p>
+<ul class="simple">
+<li><p>You can now work in GitHub directly</p></li>
+<li><p>Do <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span></code> first from local command-line!</p></li>
+<li><p>Revisit your README and update it with info after all our commits</p>
+<ul>
+<li><p>About</p></li>
+<li><p>Installation</p>
+<ul>
+<li><p>Users should be able to install the required python packages with:
+<code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">-r</span> <span class="pre">requirements.txt</span></code> (depending on system <code class="docutils literal notranslate"><span class="pre">--user</span></code> may be added)</p></li>
+</ul>
+</li>
+<li><p>Citing</p></li>
+</ul>
+</li>
+<li><p>License</p></li>
+<li><p>Lastly, you may, if tme allows, update the doc/index.md file that should describe the content</p></li>
+<li><p>Do a <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">pull</span></code> to have the same version of your project repo locally!</p></li>
+</ul>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="sourcecontrol.html" class="btn btn-neutral float-left" title="The iterations and Git" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="collab.html" class="btn btn-neutral float-right" title="Collaboration" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, UPPMAX.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

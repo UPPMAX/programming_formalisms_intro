@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>More about collaboration &mdash; Programming formalism intro 0.1 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" type="text/css" />
+      <link rel="stylesheet" href="_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="_static/togglebutton.css" type="text/css" />
+      <link rel="stylesheet" href="_static/sphinx_lesson.css" type="text/css" />
+      <link rel="stylesheet" href="_static/sphinx_rtd_theme_ext_color_contrast.css" type="text/css" />
+      <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+        <script src="_static/clipboard.min.js"></script>
+        <script src="_static/copybutton.js"></script>
+        <script src="_static/minipres.js"></script>
+        <script>let toggleHintShow = 'Click to show';</script>
+        <script>let toggleHintHide = 'Click to hide';</script>
+        <script>let toggleOpenOnPrint = 'true';</script>
+        <script src="_static/togglebutton.js"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+        <script>mermaid.initialize({startOnLoad:true});</script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="More about reproducibility" href="reproducible_deeper.html" />
+    <link rel="prev" title="More about git" href="git_deeper.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> Programming formalism intro
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Preparations:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="setup.html">Setup</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Theory lessons:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sdlc_tools.html">Software Development Lifecycle (SDLC) tools</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Project lessons:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="flowcharts.html">Planning phase</a></li>
+<li class="toctree-l1"><a class="reference internal" href="startup.html">Start the project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="startup_code.html">Start with coding!</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sourcecontrol.html">The iterations and Git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="deploy.html">Deploy and document for usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="collab.html">Collaboration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="summary.html">Summary</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Extra reading:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="SDLC_models.html">Software Development Lifecycle (SDLC) models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="UML_deeper.html">More about UML</a></li>
+<li class="toctree-l1"><a class="reference internal" href="git_deeper.html">More about git</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">More about collaboration</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#centralized-workflow">Centralized workflow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#distributed-version-control-and-forking-workflow">Distributed version control and Forking workflow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#how-to-contribute-changes-to-somebody-elses-project">How to contribute changes to somebody else’s project</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#contributing-very-minor-changes">Contributing very minor changes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#if-you-observe-an-issue-and-have-an-idea-how-to-fix-it">If you observe an issue and have an idea how to fix it</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="reproducible_deeper.html">More about reproducibility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sharing_deeper.html">More about sharing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="documentation_deeper.html">More about documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="deploy_deeper.html">More about deploying</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Reference:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="concepts.html">Concepts</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Programming formalism intro</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>More about collaboration</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/UPPMAX/programming_formalisms_intro/blob/main/doc//doc/collab_deeper.md" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section class="tex2jax_ignore mathjax_ignore" id="more-about-collaboration">
+<h1>More about collaboration<a class="headerlink" href="#more-about-collaboration" title="Permalink to this heading"></a></h1>
+<p>Different types of remotes:</p>
+<ul class="simple">
+<li><p>If you have a server you can ssh to, you can use that as a remote.</p></li>
+<li><p><a class="reference external" href="https://github.com">GitHub</a> is a popular, closed-source commercial site.</p></li>
+<li><p><a class="reference external" href="https://about.gitlab.com">GitLab</a> is a popular, open-core
+commercial site.  Many universities have their own private GitLab servers
+set up.</p></li>
+<li><p><a class="reference external" href="https://bitbucket.org">Bitbucket</a> is yet another popular commercial site.</p></li>
+<li><p>Another option is <a class="reference external" href="https://notabug.org">NotABug</a></p></li>
+</ul>
+<section id="centralized-workflow">
+<h2>Centralized workflow<a class="headerlink" href="#centralized-workflow" title="Permalink to this heading"></a></h2>
+<figure class="align-default" id="id1">
+<a class="reference internal image-reference" href="_images/centralized.svg"><img alt="Centralized layout" src="_images/centralized.svg" width="50%" /></a>
+<figcaption>
+<p><span class="caption-text">Centralized layout. <strong>Red</strong> is the repository on GitHub.  <strong>Blue</strong> is
+where all contributors work on their own computers.</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<ul class="simple">
+<li><p>Centralized workflow is often used for remote collaborative work.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">origin</span></code> refers to where you cloned from (but you can relocate it).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">origin/mybranch</span></code> is a read-only pointer to branch <code class="docutils literal notranslate"><span class="pre">mybranch</span></code> on <code class="docutils literal notranslate"><span class="pre">origin</span></code>.</p></li>
+<li><p>These read-only pointers only move when you <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">fetch</span></code>/<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">pull</span></code> or <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span></code>.</p></li>
+</ul>
+</section>
+<section id="distributed-version-control-and-forking-workflow">
+<h2>Distributed version control and Forking workflow<a class="headerlink" href="#distributed-version-control-and-forking-workflow" title="Permalink to this heading"></a></h2>
+<figure class="align-default" id="id2">
+<a class="reference internal image-reference" href="_images/forking-overview.svg"><img alt="Centralized layout" src="_images/forking-overview.svg" width="50%" /></a>
+<figcaption>
+<p><span class="caption-text">Forking workflow.  <strong>Red</strong> is the central repository, where only
+owners have access.  <strong>Green</strong> are <em>forks</em> on Github (copy for a
+single user to work on).  <strong>Blue</strong> are local copies where contributors
+work on their own computer.</span><a class="headerlink" href="#id2" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>In the forking layout described above we work with <strong>multiple remotes</strong>,
+in this case <strong>two remotes</strong>: One remote refers to the “central” repository, and the other
+remote refers to the fork.</p>
+<ul class="simple">
+<li><p>Working with multiple remotes is not as scary as it might look.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">origin</span></code> is just an alias/placeholder.</p></li>
+<li><p>We can add and remove remotes.</p></li>
+<li><p>We can call these aliases/placeholders as we like.</p></li>
+<li><p>We typically synchronize/updates remotes via the local clone.</p></li>
+<li><p>To see all remotes use <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">remote</span> <span class="pre">-v</span></code>.</p></li>
+<li><p>If you are more than one person contributing to a project, consider using code review.</p></li>
+</ul>
+</section>
+<section id="how-to-contribute-changes-to-somebody-elses-project">
+<h2>How to contribute changes to somebody else’s project<a class="headerlink" href="#how-to-contribute-changes-to-somebody-elses-project" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>Avoid frustration and surprises by first discussing and then coding.</p></li>
+</ul>
+<section id="contributing-very-minor-changes">
+<h3>Contributing very minor changes<a class="headerlink" href="#contributing-very-minor-changes" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>Fork repository</p></li>
+<li><p>Create a branch</p></li>
+<li><p>Commit and push change</p></li>
+<li><p>File a pull request or merge request</p></li>
+</ul>
+</section>
+<section id="if-you-observe-an-issue-and-have-an-idea-how-to-fix-it">
+<h3>If you observe an issue and have an idea how to fix it<a class="headerlink" href="#if-you-observe-an-issue-and-have-an-idea-how-to-fix-it" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>Open an issue in the repository you wish to contribute to</p></li>
+<li><p>Describe the problem</p></li>
+<li><p>If you have a suggestion on how to fix it, describe your suggestion</p></li>
+<li><p>Possibly <strong>discuss and get feedback</strong></p></li>
+<li><p>If you are working on the fix, indicate it in the issue so that others know that somebody is working on it and who is working on it</p></li>
+<li><p>Submit your fix as pull request or merge request which references/closes the issue</p></li>
+</ul>
+<div class="admonition-keypoints keypoints admonition">
+<p class="admonition-title">Keypoints</p>
+<ul class="simple">
+<li><p>Communicate and discuss before coding massive changes.</p></li>
+<li><p><strong>Cross-reference discussions, proposals, and code changes</strong>.</p></li>
+</ul>
+</div>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="git_deeper.html" class="btn btn-neutral float-left" title="More about git" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="reproducible_deeper.html" class="btn btn-neutral float-right" title="More about reproducibility" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, UPPMAX.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

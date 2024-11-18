@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Programming formalisms — Introduction day &mdash; Programming formalism intro 0.1 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" type="text/css" />
+      <link rel="stylesheet" href="_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="_static/togglebutton.css" type="text/css" />
+      <link rel="stylesheet" href="_static/sphinx_lesson.css" type="text/css" />
+      <link rel="stylesheet" href="_static/sphinx_rtd_theme_ext_color_contrast.css" type="text/css" />
+      <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+        <script src="_static/clipboard.min.js"></script>
+        <script src="_static/copybutton.js"></script>
+        <script src="_static/minipres.js"></script>
+        <script>let toggleHintShow = 'Click to show';</script>
+        <script>let toggleHintHide = 'Click to hide';</script>
+        <script>let toggleOpenOnPrint = 'true';</script>
+        <script src="_static/togglebutton.js"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+        <script>mermaid.initialize({startOnLoad:true});</script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Setup" href="setup.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="#" class="icon icon-home"> Programming formalism intro
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Preparations:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="setup.html">Setup</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Theory lessons:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sdlc_tools.html">Software Development Lifecycle (SDLC) tools</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Project lessons:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="flowcharts.html">Planning phase</a></li>
+<li class="toctree-l1"><a class="reference internal" href="startup.html">Start the project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="startup_code.html">Start with coding!</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sourcecontrol.html">The iterations and Git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="deploy.html">Deploy and document for usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="collab.html">Collaboration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="summary.html">Summary</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Extra reading:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="SDLC_models.html">Software Development Lifecycle (SDLC) models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="UML_deeper.html">More about UML</a></li>
+<li class="toctree-l1"><a class="reference internal" href="git_deeper.html">More about git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="collab_deeper.html">More about collaboration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reproducible_deeper.html">More about reproducibility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sharing_deeper.html">More about sharing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="documentation_deeper.html">More about documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="deploy_deeper.html">More about deploying</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Reference:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="concepts.html">Concepts</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">Programming formalism intro</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="#" class="icon icon-home"></a> &raquo;</li>
+      <li>Programming formalisms — Introduction day</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/UPPMAX/programming_formalisms_intro/blob/main/doc//doc/index.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <dl class="simple">
+<dt><a class="reference external" href="https://uppmax.github.io/programming_formalisms_intro/index.html">Welcome page and syllabus</a></dt><dd><ul class="simple">
+<li><p>Also link at House symbol 🏠 at top of page</p></li>
+</ul>
+</dd>
+</dl>
+<section id="programming-formalisms-introduction-day">
+<h1>Programming formalisms — Introduction day<a class="headerlink" href="#programming-formalisms-introduction-day" title="Permalink to this heading"></a></h1>
+<div class="admonition-course-punchlines admonition">
+<p class="admonition-title">Course punchlines</p>
+<ul class="simple">
+<li><p>“Turning scripters into computer scientists”</p></li>
+<li><p>“Add theory to bolster already present practical skills”</p></li>
+</ul>
+</div>
+<div class="admonition-this-course-aims-to exercise important admonition">
+<p class="admonition-title">This course aims to</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt>give scientists</dt><dd><p>… with some experience in programming and scripting:</p>
+<ul>
+<li><p>an understanding of the underlying principles of software development, design, and programming.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>strengthen the understanding of:</dt><dd><ul>
+<li><p>more advanced programming concepts</p></li>
+<li><p>ability to produce more reusable scripts through modular programming</p></li>
+<li><p>enable a better understanding of how to evaluate a script or programs performance.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>encourage the use of software development tools, like:</dt><dd><ul>
+<li><p>Unified Model Language</p></li>
+<li><p>Git and Github</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p><strong>convince the benefits of sharing and social coding</strong></p></li>
+</ul>
+</div>
+<section id="your-background">
+<h2>Your background<a class="headerlink" href="#your-background" title="Permalink to this heading"></a></h2>
+<figure class="align-default">
+<a class="reference internal image-reference" href="_images/background.png"><img alt="spiral" src="_images/background.png" style="width: 100%;" /></a>
+</figure>
+</section>
+<section id="your-expectations">
+<h2>Your expectations<a class="headerlink" href="#your-expectations" title="Permalink to this heading"></a></h2>
+<figure class="align-default">
+<a class="reference internal image-reference" href="_images/expectations23dec.png"><img alt="spiral" src="_images/expectations23dec.png" style="width: 100%;" /></a>
+</figure>
+<div class="admonition-content-and-expectations admonition">
+<p class="admonition-title">Content and expectations</p>
+<ul>
+<li><p>We will cover an introduction to</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><strong>Algorithms and Data structures:    *Programming skills*, *Train logic*</strong></p></li>
+<li><dl class="simple">
+<dt>Programming Paradigms:    <em>Classical training</em>, <em>Big-picture architecture of programs</em></dt><dd><ul>
+<li><p>especially structured:    <em>Readable code</em></p></li>
+<li><p>functional programming:    <em>Modular development</em></p></li>
+<li><p>modular development:    <em>Modular development</em></p></li>
+<li><p>code reusability:    <em>Reusable code</em></p></li>
+<li><p>Object oriented programming:    <em>Modular development</em>, <em>Object-oriented programming</em></p></li>
+<li><p>testing:    <em>Best practices</em></p></li>
+<li><p>optimisation:    <em>Optimize</em></p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Reproducible research:</dt><dd><ul>
+<li><p>dependencies    <em>Package development</em>, <em>Make tools that other people can also benefit from</em></p></li>
+<li><p>documentation    <em>Readable code</em>, <em>Make tools that other people can also benefit from</em></p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Tools:</dt><dd><ul>
+<li><p>UML:    <em>Best practice</em></p></li>
+<li><p>git:    <em>Best practice</em></p></li>
+<li><p>github:   <em>Make tools that other people can also benefit from</em></p></li>
+<li><p>NBIS <em>best practices</em>: <a class="reference external" href="https://github.com/NBISweden/development-guidelines">https://github.com/NBISweden/development-guidelines</a></p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>The course modules will cover theory with bridging practical examples and applications to enhance the theoretical understanding of the principles.</p></li>
+</ul>
+</div>
+<div class="admonition-prerequisites prerequisites admonition">
+<p class="admonition-title">Prerequisites</p>
+<ul class="simple">
+<li><p>Python</p></li>
+<li><p>Git</p></li>
+<li><p>GitHub</p></li>
+<li><p>PlanUML</p></li>
+<li><p>💡 Visual Studio code can work as an integrated environment</p></li>
+<li><p>See the <a class="reference external" href="https://github.com/UPPMAX/programming_formalism/blob/main/setup.md">setup.md</a> file</p></li>
+</ul>
+</div>
+</section>
+<section id="some-practicals">
+<h2>Some practicals<a class="headerlink" href="#some-practicals" title="Permalink to this heading"></a></h2>
+<section id="zoom">
+<h3>ZOOM<a class="headerlink" href="#zoom" title="Permalink to this heading"></a></h3>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<ul>
+<li><p>The course is run over Zoom. You should have gotten an email with the links</p></li>
+<li><p>When you join the Zoom meeting, use your REAL NAME.</p></li>
+<li><p>Please MUTE your microphone when you are not speaking and</p>
+<ul class="simple">
+<li><p>use the “<strong>Raise hand</strong>” functionality under the “Participants” window during the lecture.</p></li>
+</ul>
+</li>
+<li><p>Behave politely!</p></li>
+<li><p>There will be breakout rooms used in the Zoom for some of the exercises.</p></li>
+<li><p>Use <strong>Zoom chat only</strong>:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>in breakout rooms</p></li>
+<li><p>for Zoom specific technical issues</p></li>
+<li><p><strong>otherwise use HackMD, see below</strong></p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div>
+</section>
+<section id="collaboration-document-hackmd">
+<h3>Collaboration document HackMD<a class="headerlink" href="#collaboration-document-hackmd" title="Permalink to this heading"></a></h3>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<ul>
+<li><p>Use the HackMD page for the workshop with your <strong>questions</strong>.</p></li>
+<li><p>&lt;<a class="reference external" href="https://hackmd.io/lPmOnlj4Qw6FSVgizuFJKg?both">https://hackmd.io/lPmOnlj4Qw6FSVgizuFJKg?both</a>&gt;</p></li>
+<li><p>Tell us directly if it is too fast or you need clarification.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Either a helper will answer the question or the helper will pose the question to the teacher.</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>Depending on how many helpers there are we’ll see how fast there are answers.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Some answers may come after the workshop.</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>Type in the left frame</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>“-” means new bullet and &lt;tab&gt; indents the level.</p></li>
+<li><p>don’t focus too much on the formatting if you are new to “Markdown” language!</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p><strong>Have a try with the Icebreaker question</strong></p></li>
+</ul>
+</div>
+<div class="admonition-icebreaker discussion attention admonition">
+<p class="admonition-title">Icebreaker</p>
+<ul class="simple">
+<li><p>What topic do you work with?</p></li>
+</ul>
+</div>
+</section>
+<section id="interctive-questions-discussion">
+<h3>Interctive questions/discussion<a class="headerlink" href="#interctive-questions-discussion" title="Permalink to this heading"></a></h3>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<ul class="simple">
+<li><p><strong>Menti:</strong></p></li>
+<li><p>&lt;<a class="reference external" href="https://www.menti.com/al15tk57h9md">https://www.menti.com/al15tk57h9md</a>&gt;</p></li>
+<li><p>&lt;<a class="reference external" href="https://www.menti.com">https://www.menti.com</a>&gt; with code valid the week: <cite>69 32 18 8</cite></p></li>
+</ul>
+</div>
+<div class="admonition-icebreaker discussion attention admonition">
+<p class="admonition-title">Icebreaker</p>
+<ul class="simple">
+<li><p>Which city do you work in?</p></li>
+</ul>
+</div>
+</section>
+</section>
+<section id="the-teachers">
+<h2>The teachers<a class="headerlink" href="#the-teachers" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>Lars Eklund (LE), <a class="reference external" href="mailto:lars&#46;eklund&#37;&#52;&#48;uppmax&#46;uu&#46;se">lars<span>&#46;</span>eklund<span>&#64;</span>uppmax<span>&#46;</span>uu<span>&#46;</span>se</a></p></li>
+<li><p>Björn Claremar (BC), <a class="reference external" href="mailto:bjorn&#46;claremar&#37;&#52;&#48;uppmax&#46;uu&#46;se">bjorn<span>&#46;</span>claremar<span>&#64;</span>uppmax<span>&#46;</span>uu<span>&#46;</span>se</a></p></li>
+<li><p>Jon Ander Novella (JN), <a class="reference external" href="mailto:jon&#46;novella&#37;&#52;&#48;nbis&#46;se">jon<span>&#46;</span>novella<span>&#64;</span>nbis<span>&#46;</span>se</a></p></li>
+<li><p>Richèl Bilderbeek (RB), <a class="reference external" href="mailto:richel&#46;bilderbeek&#37;&#52;&#48;uppmax&#46;uu&#46;se">richel<span>&#46;</span>bilderbeek<span>&#64;</span>uppmax<span>&#46;</span>uu<span>&#46;</span>se</a></p></li>
+<li><p>Marcus Lundberg (ML), <a class="reference external" href="mailto:marcus&#46;lundberg&#37;&#52;&#48;uppmax&#46;uu&#46;se">marcus<span>&#46;</span>lundberg<span>&#64;</span>uppmax<span>&#46;</span>uu<span>&#46;</span>se</a></p></li>
+</ul>
+</section>
+<section id="schedule">
+<h2>Schedule<a class="headerlink" href="#schedule" title="Permalink to this heading"></a></h2>
+<iframe src="https://uppmax.github.io/programming_formalisms/#schedule"height="600px" width="100%"></iframe><p><a class="reference external" href="https://uppmax.github.io/programming_formalisms/#schedule">https://uppmax.github.io/programming_formalisms/#schedule</a></p>
+</section>
+<section id="reflections-at-the-end-of-day">
+<h2>Reflections at the end of day<a class="headerlink" href="#reflections-at-the-end-of-day" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>Students will have the opportunity to give feedback to the teachers at the end of each day.</p></li>
+<li><p>A reflection session will be conducted in a similar fashion to an Agile Software Development retrospective meeting.</p></li>
+<li><p>It is important that all students and teachers involved in the lessons actively engage in this event.</p></li>
+</ul>
+</section>
+<section id="learning-outcomes">
+<h2>Learning outcomes<a class="headerlink" href="#learning-outcomes" title="Permalink to this heading"></a></h2>
+<div class="admonition-learning-outcomes-of-course admonition">
+<p class="admonition-title">Learning outcomes of course</p>
+<dl class="simple">
+<dt>The particpants shall …</dt><dd><ul class="simple">
+<li><p>have an introductory understanding of <strong>formal algorithms and Algorithm design</strong></p></li>
+<li><p>have an introductory understanding of <strong>Testing and test driven design</strong></p></li>
+<li><p>have an introductory understanding of <strong>source control</strong></p></li>
+<li><p>have an introduction to common <strong>concerns and practices in optimisation</strong> in development of software</p></li>
+<li><p>be familiar with <strong>common development practices</strong> and “best practices” of software development</p></li>
+<li><p>be familiar with the <strong>object-oriented paradigm</strong></p></li>
+<li><p>have an overview of <strong>other design and development paradigms</strong></p></li>
+<li><p>have a basic understanding of <strong>modular programming and modular design</strong></p></li>
+<li><p>have an understanding of the <strong>software life cycle</strong></p></li>
+<li><p>know some <strong>common data structures</strong> and how to utilise it in our design</p></li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">Preparations:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="setup.html">Setup</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="setup.html#shell-and-git">Shell and Git</a></li>
+<li class="toctree-l2"><a class="reference internal" href="setup.html#python">Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="setup.html#plantuml">PlantUML</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">Theory lessons:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#preliminary-schedule-1st-day">Preliminary schedule 1st day</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#what-is-software">What is software?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#different-types-of-scientific-software">Different types of Scientific software:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#software-development-life-cycle-sdlc">Software Development Life Cycle (SDLC)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#summary-of-introduction">Summary of Introduction</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="sdlc_tools.html">Software Development Lifecycle (SDLC) tools</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="sdlc_tools.html#the-waterfall-model">The waterfall model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sdlc_tools.html#include-iteration">Include iteration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sdlc_tools.html#take-aways-from-other-methods">Take aways from other methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sdlc_tools.html#the-tools-concepts-for-developing-a-programming-project">The tools/concepts for Developing a programming project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sdlc_tools.html#planning-analysis-and-design">Planning: Analysis and design</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sdlc_tools.html#testing">Testing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sdlc_tools.html#source-version-control-and-collaboration">Source/version control and collaboration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sdlc_tools.html#collaboration">Collaboration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sdlc_tools.html#reproducibility-and-sharing">Reproducibility and sharing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sdlc_tools.html#documentation">Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sdlc_tools.html#summary-of-sdlc-tools">Summary of SDLC tools</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">Project lessons:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="flowcharts.html">Planning phase</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="flowcharts.html#some-overview">Some overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="flowcharts.html#the-planet-project">The Planet project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="flowcharts.html#wrap-up">Wrap-up</a></li>
+<li class="toctree-l2"><a class="reference internal" href="flowcharts.html#summary">Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="startup.html">Start the project</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="startup.html#order-your-files">Order your files!</a></li>
+<li class="toctree-l2"><a class="reference internal" href="startup.html#start-with-a-new-github-project">Start with a new GitHub project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="startup.html#readme-files">README files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="startup.html#what-is-git-and-what-is-a-git-repository">What is Git, and what is a Git repository?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="startup.html#before-we-continue-we-need-to-configure-git">Before we continue we need to configure Git</a></li>
+<li class="toctree-l2"><a class="reference internal" href="startup.html#cloning-our-plane-repository-to-local">Cloning our Plane repository to local</a></li>
+<li class="toctree-l2"><a class="reference internal" href="startup.html#working-on-github">Working on GitHub</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="startup_code.html">Start with coding!</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="startup_code.html#start-code-but-be-aware-of-reproducibility">Start code but be aware of reproducibility</a></li>
+<li class="toctree-l2"><a class="reference internal" href="startup_code.html#create-a-virtual-python-environment-with-venv">Create a virtual python environment with <code class="docutils literal notranslate"><span class="pre">venv</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="startup_code.html#create-a-first-version-of-the-python-code">Create a first version of the python code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="startup_code.html#staging-files">Staging files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="startup_code.html#commit">Commit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="startup_code.html#make-the-code-a-part-of-the-git-record">Make the code a part of the git record</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="sourcecontrol.html">The iterations and Git</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="sourcecontrol.html#start-with-pushing-your-changes-in-the-local-git-to-github">Start with pushing your changes in the local Git to GitHub</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sourcecontrol.html#alternative-way-to-initialize-git">Alternative way to initialize Git</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sourcecontrol.html#make-the-next-iteration-of-the-planet-project">Make the next iteration of the planet project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sourcecontrol.html#git-diff">git diff</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sourcecontrol.html#stage-and-commit-the-changes">Stage and commit the changes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sourcecontrol.html#ignoring-files-and-paths-with-gitignore">Ignoring files and paths with .gitignore</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sourcecontrol.html#branching-and-merging">Branching and merging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sourcecontrol.html#lets-make-our-code-modular-test-in-branch">Let’s make our code modular (test in branch)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sourcecontrol.html#meanwhile">Meanwhile…</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sourcecontrol.html#merging">Merging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sourcecontrol.html#summary">Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="deploy.html">Deploy and document for usage</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="deploy.html#recording-dependencies">Recording dependencies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deploy.html#workflows">Workflows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deploy.html#containers">Containers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deploy.html#in-code-documentation">In-code documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deploy.html#documentation-for-tutorials">Documentation for tutorials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deploy.html#optional-last-hands-on-your-documentation">(Optional) Last hands on your documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="collab.html">Collaboration</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="collab.html#github">GitHub</a></li>
+<li class="toctree-l2"><a class="reference internal" href="collab.html#centralized-workflow">Centralized workflow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="collab.html#distributed-version-control-and-forking-workflow">Distributed version control and Forking workflow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="collab.html#how-to-contribute-changes-to-somebody-elses-project">How to contribute changes to somebody else’s project</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="summary.html">Summary</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="summary.html#the-development-cycle">The development cycle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="summary.html#planning-phase-with-pseudocode-and-uml">Planning phase with pseudocode and UML</a></li>
+<li class="toctree-l2"><a class="reference internal" href="summary.html#git-and-github">Git and Github</a></li>
+<li class="toctree-l2"><a class="reference internal" href="summary.html#reproducibility">Reproducibility</a></li>
+<li class="toctree-l2"><a class="reference internal" href="summary.html#documentation">Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="summary.html#coming-days">Coming days</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">Extra reading:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="SDLC_models.html">Software Development Lifecycle (SDLC) models</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="SDLC_models.html#take-aways-from-other-methods">Take aways from other methods</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="UML_deeper.html">More about UML</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="UML_deeper.html#unified-modeling-language">Unified Modeling Language</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="git_deeper.html">More about git</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="git_deeper.html#git">Git</a></li>
+<li class="toctree-l2"><a class="reference internal" href="git_deeper.html#type-along">Type-along</a></li>
+<li class="toctree-l2"><a class="reference internal" href="git_deeper.html#git-history-and-log">Git history and log</a></li>
+<li class="toctree-l2"><a class="reference internal" href="git_deeper.html#ignoring-files-and-paths-with-gitignore">Ignoring files and paths with .gitignore</a></li>
+<li class="toctree-l2"><a class="reference internal" href="git_deeper.html#graphical-user-interfaces">Graphical user interfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="git_deeper.html#branching-and-merging">Branching and merging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="git_deeper.html#working-remotely-and-sharing-github">Working remotely and sharing (github)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="git_deeper.html#pushing-our-formalisms-repository-to-github">Pushing our Formalisms repository to GitHub</a></li>
+<li class="toctree-l2"><a class="reference internal" href="git_deeper.html#cloning-a-repository">Cloning a repository</a></li>
+<li class="toctree-l2"><a class="reference internal" href="git_deeper.html#working-on-github">Working on GitHub</a></li>
+<li class="toctree-l2"><a class="reference internal" href="git_deeper.html#summary">Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="collab_deeper.html">More about collaboration</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="collab_deeper.html#centralized-workflow">Centralized workflow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="collab_deeper.html#distributed-version-control-and-forking-workflow">Distributed version control and Forking workflow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="collab_deeper.html#how-to-contribute-changes-to-somebody-elses-project">How to contribute changes to somebody else’s project</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="reproducible_deeper.html">More about reproducibility</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="reproducible_deeper.html#versioning-systems">Versioning systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reproducible_deeper.html#recording-dependencies">Recording dependencies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reproducible_deeper.html#recording-computational-steps">Recording computational steps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reproducible_deeper.html#containers">Containers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reproducible_deeper.html#reproducible-publications">Reproducible publications</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="sharing_deeper.html">More about sharing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="sharing_deeper.html#open-science">Open science</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sharing_deeper.html#licensing">Licensing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sharing_deeper.html#software-citation">Software Citation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="documentation_deeper.html">More about documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="documentation_deeper.html#restructuredtext-and-markdown">reStructuredText and Markdown</a></li>
+<li class="toctree-l2"><a class="reference internal" href="documentation_deeper.html#html-static-site-generators">HTML static site generators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="documentation_deeper.html#deployment">Deployment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="documentation_deeper.html#wikis">Wikis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="documentation_deeper.html#other-generators">Other generators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="documentation_deeper.html#demo-these-pages">Demo These pages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="documentation_deeper.html#summary">Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="deploy_deeper.html">More about deploying</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="deploy_deeper.html#containers">Containers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deploy_deeper.html#reproducible-publications">Reproducible publications</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">Reference:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="concepts.html">Concepts</a></li>
+</ul>
+</div>
+</section>
+</section>
+<section id="indices-and-tables">
+<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this heading"></a></h1>
+<ul class="simple">
+<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
+<li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
+<li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
+</ul>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="setup.html" class="btn btn-neutral float-right" title="Setup" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, UPPMAX.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

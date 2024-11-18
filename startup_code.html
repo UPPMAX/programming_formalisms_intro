@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Start with coding! &mdash; Programming formalism intro 0.1 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" type="text/css" />
+      <link rel="stylesheet" href="_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="_static/togglebutton.css" type="text/css" />
+      <link rel="stylesheet" href="_static/sphinx_lesson.css" type="text/css" />
+      <link rel="stylesheet" href="_static/sphinx_rtd_theme_ext_color_contrast.css" type="text/css" />
+      <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+        <script src="_static/clipboard.min.js"></script>
+        <script src="_static/copybutton.js"></script>
+        <script src="_static/minipres.js"></script>
+        <script>let toggleHintShow = 'Click to show';</script>
+        <script>let toggleHintHide = 'Click to hide';</script>
+        <script>let toggleOpenOnPrint = 'true';</script>
+        <script src="_static/togglebutton.js"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+        <script>mermaid.initialize({startOnLoad:true});</script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="The iterations and Git" href="sourcecontrol.html" />
+    <link rel="prev" title="Start the project" href="startup.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> Programming formalism intro
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Preparations:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="setup.html">Setup</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Theory lessons:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sdlc_tools.html">Software Development Lifecycle (SDLC) tools</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Project lessons:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="flowcharts.html">Planning phase</a></li>
+<li class="toctree-l1"><a class="reference internal" href="startup.html">Start the project</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Start with coding!</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#start-code-but-be-aware-of-reproducibility">Start code but be aware of reproducibility</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#create-a-virtual-python-environment-with-venv">Create a virtual python environment with <code class="docutils literal notranslate"><span class="pre">venv</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#create-a-first-version-of-the-python-code">Create a first version of the python code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#staging-files">Staging files</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#example">Example</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#commit">Commit</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">Example</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#make-the-code-a-part-of-the-git-record">Make the code a part of the git record</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="sourcecontrol.html">The iterations and Git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="deploy.html">Deploy and document for usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="collab.html">Collaboration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="summary.html">Summary</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Extra reading:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="SDLC_models.html">Software Development Lifecycle (SDLC) models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="UML_deeper.html">More about UML</a></li>
+<li class="toctree-l1"><a class="reference internal" href="git_deeper.html">More about git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="collab_deeper.html">More about collaboration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reproducible_deeper.html">More about reproducibility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sharing_deeper.html">More about sharing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="documentation_deeper.html">More about documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="deploy_deeper.html">More about deploying</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Reference:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="concepts.html">Concepts</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Programming formalism intro</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Start with coding!</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/UPPMAX/programming_formalisms_intro/blob/main/doc//doc/startup_code.md" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section class="tex2jax_ignore mathjax_ignore" id="start-with-coding">
+<h1>Start with coding!<a class="headerlink" href="#start-with-coding" title="Permalink to this heading"></a></h1>
+<section id="start-code-but-be-aware-of-reproducibility">
+<h2>Start code but be aware of reproducibility<a class="headerlink" href="#start-code-but-be-aware-of-reproducibility" title="Permalink to this heading"></a></h2>
+<div class="admonition-instructor-note instructor-note admonition-no-content admonition">
+<p class="admonition-title">Instructor note</p>
+</div>
+<div class="admonition-objectives objectives admonition">
+<p class="admonition-title">Objectives</p>
+<ul class="simple">
+<li><p>We will get started with the coding</p></li>
+<li><p>But also…</p>
+<ul>
+<li><p>think about dependencies and work in an isolated environment</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<ul class="simple">
+<li><p>For more background please confer</p>
+<ul>
+<li><p><a class="reference external" href="https://nbis-reproducible-research.readthedocs.io/en/course_2104">NBIS</a></p></li>
+<li><p><a class="reference external" href="https://coderefinery.github.io/reproducible-research/">CodeRefinery</a></p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="admonition-discuss-in-menti discussion attention admonition">
+<p class="admonition-title">Discuss in Menti</p>
+<p>Computer programs are expected to produce the same output for the same inputs. Is
+that true for research software?</p>
+<ul class="simple">
+<li><p>Have been through the opposite?</p></li>
+</ul>
+</div>
+</section>
+<section id="create-a-virtual-python-environment-with-venv">
+<h2>Create a virtual python environment with <code class="docutils literal notranslate"><span class="pre">venv</span></code><a class="headerlink" href="#create-a-virtual-python-environment-with-venv" title="Permalink to this heading"></a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>There are several ways to make an isolated environment where you get sure what is needed by other users.</p>
+<ul class="simple">
+<li><p>Conda is one way</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">virtualenv</span></code> is an external package that has to be installed explicitely</p>
+<ul>
+<li><p>uses pip to install within the isolated environment</p></li>
+</ul>
+</li>
+<li><p>We’ll use <code class="docutils literal notranslate"><span class="pre">venv</span></code>, which is standard library</p></li>
+</ul>
+</div>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<ul class="simple">
+<li><p>Start your terminal of choice</p>
+<ul>
+<li><p>Terminal in Visual Studio code</p></li>
+<li><p>MAC terminal</p></li>
+<li><p>iTerm (Mac)</p></li>
+<li><p>Git BASH  (Windows)</p></li>
+<li><p>WSL (Windows subsystem Linux) environment in</p>
+<ul>
+<li><p>MobaxTerm</p></li>
+<li><p>Powershell</p></li>
+</ul>
+</li>
+<li><p>PowerShell</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="admonition-type-along type-along important admonition">
+<p class="admonition-title">Type-Along</p>
+<ul class="simple">
+<li><p>Change working directory to where you have your local git repository</p></li>
+<li><p>We will need the python packages: <code class="docutils literal notranslate"><span class="pre">numpy</span></code> and <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code></p></li>
+<li><p>Let’s create an isolated environment with those packages and based on the python we have installed, like 3.8.X. It is assumed that no-one uses python-2.X.X!</p></li>
+<li><p>In the command-line, create and activate the environment <code class="docutils literal notranslate"><span class="pre">planet-project</span></code></p></li>
+</ul>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>python<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>planet-project
+<span class="gp">$ </span><span class="nb">source</span><span class="w"> </span>planet-project/bin/activate
+</pre></div>
+</div>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<ul class="simple">
+<li><p>In Windows, like from Git-bash, you activate instead with <code class="docutils literal notranslate"><span class="pre">source</span> <span class="pre">planet-project/Scripts/activate</span></code></p></li>
+</ul>
+</div>
+<ul class="simple">
+<li><p>Note that your prompt is changing to start with (planet-project) to show that you are within that environment.</p></li>
+<li><p>Now install the packages (leave out package versions so that <code class="docutils literal notranslate"><span class="pre">python-&lt;your-version&gt;</span></code> can choose by itself what suites)</p></li>
+</ul>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp gp-VirtualEnv">(planet-project)</span> <span class="gp">$ </span>pip<span class="w"> </span>install<span class="w"> </span>numpy<span class="w"> </span>matplotlib<span class="w">  </span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>We won’t deactivate the project environment now but for later, simply type <code class="docutils literal notranslate"><span class="pre">deactivate</span></code> in the console.</p>
+<ul>
+<li><p>That’s a good practice</p></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+<section id="create-a-first-version-of-the-python-code">
+<h2>Create a first version of the python code<a class="headerlink" href="#create-a-first-version-of-the-python-code" title="Permalink to this heading"></a></h2>
+<div class="admonition-type-along type-along important admonition">
+<p class="admonition-title">Type-Along</p>
+<ul class="simple">
+<li><p>Make a <code class="docutils literal notranslate"><span class="pre">code</span></code> directory for our python scripts (inside the git repo/directory)</p></li>
+<li><p>Make a <code class="docutils literal notranslate"><span class="pre">Figures</span></code> directory (note captial F) for output figures</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cd</span></code> into the <code class="docutils literal notranslate"><span class="pre">code</span></code> directory</p></li>
+<li><p>Use you favorite editor and create the file <code class="docutils literal notranslate"><span class="pre">planet.py</span></code></p></li>
+<li><p>Use the linear code below.</p>
+<ul>
+<li><p>It plots the approximate orbit of earth with some eccentricity, and the distance to the sun during 2 years.</p></li>
+<li><p>Later we will add Jupiter and make the program more modular!</p></li>
+</ul>
+</li>
+</ul>
+<div class="admonition-code solution important dropdown admonition">
+<p class="admonition-title">Code</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#planet</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span> 
+
+<span class="c1">#constants</span>
+<span class="n">G</span><span class="o">=</span><span class="mf">6.6743e-11</span>
+<span class="n">AU</span><span class="o">=</span><span class="mf">149.597871e9</span> <span class="c1"># 1 astronomical unit (AU) is the mean distance between sun and Earth</span>
+<span class="n">AU1</span><span class="o">=</span><span class="mf">150.8e9</span>
+<span class="n">mj</span><span class="o">=</span><span class="mf">5.97219e24</span>
+<span class="n">mJ</span><span class="o">=</span><span class="mf">1.899e27</span>
+<span class="n">M</span><span class="o">=</span><span class="mf">1.9891e30</span>
+<span class="n">day</span><span class="o">=</span><span class="mi">86400</span><span class="p">;</span>
+<span class="n">year</span><span class="o">=</span><span class="mi">31556926</span><span class="p">;</span>
+<span class="n">v0</span><span class="o">=</span><span class="n">AU</span><span class="o">*</span><span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="n">year</span><span class="p">;</span>
+<span class="n">Fg</span><span class="o">=</span><span class="n">G</span><span class="o">*</span><span class="n">M</span><span class="o">*</span><span class="n">mj</span><span class="o">/</span><span class="n">AU</span><span class="o">**</span><span class="mi">2</span>
+<span class="n">ag</span><span class="o">=</span><span class="n">Fg</span><span class="o">/</span><span class="n">mj</span>
+<span class="n">Fc</span><span class="o">=</span><span class="n">mj</span><span class="o">*</span><span class="n">v0</span><span class="o">**</span><span class="mi">2</span><span class="o">/</span><span class="n">AU</span>
+<span class="n">ac</span><span class="o">=</span><span class="n">Fc</span><span class="o">/</span><span class="n">mj</span>
+
+<span class="n">L</span><span class="o">=</span><span class="mi">2</span>
+
+<span class="n">x0</span><span class="o">=</span><span class="n">AU1</span><span class="p">;</span>
+<span class="n">y0</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+<span class="n">u0</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+<span class="n">x</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="mi">365</span><span class="o">*</span><span class="n">L</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">float</span><span class="p">);</span>
+<span class="n">y</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="mi">365</span><span class="o">*</span><span class="n">L</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">float</span><span class="p">);</span>
+
+<span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">=</span><span class="n">x0</span><span class="p">;</span>
+<span class="n">y</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">=</span><span class="n">y0</span><span class="p">;</span>
+<span class="n">u</span><span class="o">=</span><span class="n">u0</span><span class="p">;</span>
+<span class="n">v</span><span class="o">=</span><span class="n">v0</span><span class="p">;</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">365</span><span class="o">*</span><span class="n">L</span><span class="p">):</span>    
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+    <span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span><span class="n">day</span><span class="o">*</span><span class="n">u</span><span class="p">;</span>
+    <span class="n">y</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="n">y</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span><span class="n">day</span><span class="o">*</span><span class="n">v</span><span class="p">;</span>
+    <span class="n">ax</span><span class="o">=-</span><span class="n">G</span><span class="o">*</span><span class="n">M</span><span class="o">/</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">**</span><span class="mi">2</span><span class="o">+</span><span class="n">y</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">**</span><span class="p">[</span><span class="mi">3</span><span class="o">/</span><span class="mi">2</span><span class="p">])</span><span class="o">*</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+    <span class="n">ay</span><span class="o">=-</span><span class="n">G</span><span class="o">*</span><span class="n">M</span><span class="o">/</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">**</span><span class="mi">2</span><span class="o">+</span><span class="n">y</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">**</span><span class="p">[</span><span class="mi">3</span><span class="o">/</span><span class="mi">2</span><span class="p">])</span><span class="o">*</span><span class="n">y</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+    <span class="n">u</span><span class="o">=</span><span class="n">u</span><span class="o">+</span><span class="n">ax</span><span class="o">*</span><span class="n">day</span><span class="p">;</span>
+    <span class="n">v</span><span class="o">=</span><span class="n">v</span><span class="o">+</span><span class="n">ay</span><span class="o">*</span><span class="n">day</span><span class="p">;</span>
+
+<span class="n">rj</span><span class="o">=</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="o">+</span><span class="n">y</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">**</span><span class="mf">.5</span>
+<span class="n">a</span><span class="o">=</span><span class="nb">max</span><span class="p">(</span><span class="n">rj</span><span class="p">)</span>
+<span class="n">b</span><span class="o">=</span><span class="nb">min</span><span class="p">(</span><span class="n">rj</span><span class="p">)</span>
+<span class="n">e</span><span class="o">=</span><span class="mi">1</span><span class="o">-</span><span class="mi">2</span><span class="o">/</span><span class="p">(</span><span class="n">a</span><span class="o">/</span><span class="n">b</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">rel</span><span class="o">=</span><span class="p">(</span><span class="n">a</span><span class="o">/</span><span class="n">b</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+
+
+<span class="n">fig</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
+<span class="n">ax</span><span class="o">=</span><span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="s1">&#39;o&#39;</span><span class="p">)</span>
+<span class="c1">#axis equal</span>
+
+<span class="n">ax</span><span class="o">=</span><span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">365</span><span class="o">*</span><span class="mi">2</span><span class="p">),</span><span class="n">rj</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;../Figures/planet_earth.png&#39;</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">bbox_inches</span><span class="o">=</span><span class="s1">&#39;tight&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<ul class="simple">
+<li><p><strong>IF</strong> you want to, you can try to run it from the terminal. Run from <code class="docutils literal notranslate"><span class="pre">code</span></code> directory.</p></li>
+</ul>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>python<span class="w"> </span>planet.py
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>The figure can be viewed in the Figure directory</p></li>
+</ul>
+<figure class="align-default">
+<a class="with-border reference internal image-reference" href="_images/planet_earth.png"><img alt="_images/planet_earth.png" class="with-border" src="_images/planet_earth.png" style="width: 100%;" /></a>
+</figure>
+</div>
+</section>
+<section id="staging-files">
+<h2>Staging files<a class="headerlink" href="#staging-files" title="Permalink to this heading"></a></h2>
+<p>As mentioned above, in Git you can always check the status of files in your repository using
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">status</span></code>. It is always a safe command to run and in general a good idea to
+do when you are trying to figure out what to do next:</p>
+<section id="example">
+<h3>Example<a class="headerlink" href="#example" title="Permalink to this heading"></a></h3>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">On branch master</span>
+
+<span class="go">No commits yet</span>
+
+<span class="go">Untracked files:</span>
+<span class="go">  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)</span>
+<span class="go">        activity.puml</span>
+<span class="go">        class.puml</span>
+
+<span class="go">nothing added to commit but untracked files present (use &quot;git add&quot; to track)</span>
+</pre></div>
+</div>
+<p>The two files are untracked in the repository (directory). You want to <strong>add the files</strong> (focus the camera)
+to the list of files tracked by Git. Git does not track
+any files automatically and you need make a conscious decision to add a file. Let’s do what
+Git hints at and add the files:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git<span class="w"> </span>add<span class="w"> </span>.<span class="w">    </span><span class="c1"># &lt; -- &quot;.&quot; means all files</span>
+<span class="gp">$ </span>git<span class="w"> </span>status
+
+<span class="go">On branch master</span>
+
+<span class="go">Initial commit</span>
+
+<span class="go">Changes to be committed:</span>
+<span class="go">  (use &quot;git rm --cached &lt;file&gt;...&quot; to unstage)</span>
+
+<span class="go">        new file:   activity.puml</span>
+<span class="go">        new file:   class.puml</span>
+</pre></div>
+</div>
+<p>Now this change is <em>staged</em> and ready to be committed.</p>
+</section>
+</section>
+<section id="commit">
+<h2>Commit<a class="headerlink" href="#commit" title="Permalink to this heading"></a></h2>
+<section id="id1">
+<h3>Example<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h3>
+<p>Let us now commit the change to the repository:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;adding class and activity diagrams&quot;</span>
+
+<span class="go">[master (root-commit) 8adee34] adding class and activity diagrams</span>
+<span class="go"> 2 files changed, 26 insertions(+)</span>
+<span class="go"> create mode 100644 activity.puml</span>
+<span class="go"> create mode 100644 class.puml</span>
+</pre></div>
+</div>
+<p>Right after we query the status to get this useful command into our muscle memory:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git<span class="w"> </span>status
+
+<span class="go">On branch master</span>
+<span class="go">nothing to commit, working tree clean</span>
+</pre></div>
+</div>
+<p>What does the <code class="docutils literal notranslate"><span class="pre">-m</span></code> flag mean? Let us check the help page for that command:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git<span class="w"> </span><span class="nb">help</span><span class="w"> </span>commit
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>You should see a very long help page as the tool is very versatile (press q to quit).</p></li>
+<li><p>Do not worry about this now but keep in mind that you can always read the help files when in doubt.</p></li>
+<li><p>Searching online can also be useful, but choosing search terms to find relevant information takes some practice and discussions in some online threads may be confusing.</p></li>
+<li><p>Note that help pages also work when you don’t have a network connection!</p></li>
+</ul>
+</section>
+</section>
+<section id="make-the-code-a-part-of-the-git-record">
+<h2>Make the code a part of the git record<a class="headerlink" href="#make-the-code-a-part-of-the-git-record" title="Permalink to this heading"></a></h2>
+<div class="admonition-type-along type-along important admonition">
+<p class="admonition-title">Type-Along</p>
+<p><strong>Make your code part of git</strong></p>
+<ul class="simple">
+<li><p>Check the status.</p></li>
+<li><p>Add all files (<code class="docutils literal notranslate"><span class="pre">.</span></code>) to staging</p></li>
+</ul>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">   git status   </span>
+<span class="go">   git add .</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Check the status.</p></li>
+<li><p>The output should show the new changes since your work on GitHub</p></li>
+</ul>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">   git status</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Commit with the message “First commit of code”</p></li>
+</ul>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">   git commit -m &quot;First commit of code&quot;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Check the status</p></li>
+<li><p>The output should show “Nothing to commit</p></li>
+</ul>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">   git status</span>
+</pre></div>
+</div>
+</div>
+<div class="admonition-parts-to-be-covered admonition">
+<p class="admonition-title">Parts to be covered</p>
+<ul class="simple">
+<li><p>☑ Planning</p>
+<ul>
+<li><p>Pseudocode</p></li>
+<li><p>Unified Modelling Language</p></li>
+</ul>
+</li>
+<li><p>☐ Testing</p>
+<ul>
+<li><p>We don’t do this today!</p></li>
+</ul>
+</li>
+<li><p>☑ Source/version control</p>
+<ul>
+<li><p>We have a starting point with code</p></li>
+</ul>
+</li>
+<li><p>☑ Collaboration</p>
+<ul>
+<li><p>GitHub</p>
+<ul>
+<li><p>We have a starting point!</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>☑ Sharing</p>
+<ul>
+<li><p>☑ open science</p></li>
+<li><p>☐ citation</p></li>
+<li><p>☑ licensing</p></li>
+</ul>
+</li>
+<li><p>☐ Documentation</p></li>
+</ul>
+</div>
+<div class="admonition-keypoints keypoints admonition">
+<p class="admonition-title">Keypoints</p>
+<ul class="simple">
+<li><p>Comments should describe the why for your code not the what.</p></li>
+<li><p>Writing docstrings is an easy way to write documentation while you type code.</p></li>
+</ul>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="startup.html" class="btn btn-neutral float-left" title="Start the project" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="sourcecontrol.html" class="btn btn-neutral float-right" title="The iterations and Git" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, UPPMAX.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

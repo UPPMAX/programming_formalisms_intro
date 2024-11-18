@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Introduction &mdash; Programming formalism intro 0.1 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" type="text/css" />
+      <link rel="stylesheet" href="_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="_static/togglebutton.css" type="text/css" />
+      <link rel="stylesheet" href="_static/sphinx_lesson.css" type="text/css" />
+      <link rel="stylesheet" href="_static/sphinx_rtd_theme_ext_color_contrast.css" type="text/css" />
+      <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+        <script src="_static/clipboard.min.js"></script>
+        <script src="_static/copybutton.js"></script>
+        <script src="_static/minipres.js"></script>
+        <script>let toggleHintShow = 'Click to show';</script>
+        <script>let toggleHintHide = 'Click to hide';</script>
+        <script>let toggleOpenOnPrint = 'true';</script>
+        <script src="_static/togglebutton.js"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+        <script>mermaid.initialize({startOnLoad:true});</script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Software Development Lifecycle (SDLC) tools" href="sdlc_tools.html" />
+    <link rel="prev" title="Setup" href="setup.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> Programming formalism intro
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Preparations:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="setup.html">Setup</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Theory lessons:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Introduction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#preliminary-schedule-1st-day">Preliminary schedule 1st day</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#what-is-software">What is software?</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#some-software-concepts">Some software concepts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#outcome-of-a-program">Outcome of a Program</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#independent-modules">Independent modules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#functional-vs-object-oriented-programming">Functional vs. object-oriented programming</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#object-oriented-programming">Object oriented programming</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#functional-programming">Functional programming</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#different-types-of-scientific-software">Different types of Scientific software:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#software-development-life-cycle-sdlc">Software Development Life Cycle (SDLC)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#some-common-steps">Some common steps</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#agile-development">Agile development</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#summary-of-introduction">Summary of Introduction</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="sdlc_tools.html">Software Development Lifecycle (SDLC) tools</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Project lessons:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="flowcharts.html">Planning phase</a></li>
+<li class="toctree-l1"><a class="reference internal" href="startup.html">Start the project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="startup_code.html">Start with coding!</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sourcecontrol.html">The iterations and Git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="deploy.html">Deploy and document for usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="collab.html">Collaboration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="summary.html">Summary</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Extra reading:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="SDLC_models.html">Software Development Lifecycle (SDLC) models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="UML_deeper.html">More about UML</a></li>
+<li class="toctree-l1"><a class="reference internal" href="git_deeper.html">More about git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="collab_deeper.html">More about collaboration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reproducible_deeper.html">More about reproducibility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sharing_deeper.html">More about sharing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="documentation_deeper.html">More about documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="deploy_deeper.html">More about deploying</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Reference:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="concepts.html">Concepts</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Programming formalism intro</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Introduction</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/UPPMAX/programming_formalisms_intro/blob/main/doc//doc/intro.md" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section class="tex2jax_ignore mathjax_ignore" id="introduction">
+<h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading"></a></h1>
+<div class="admonition-questions questions admonition">
+<p class="admonition-title">Questions</p>
+<ul class="simple">
+<li><p>What is the Purpose of Formalism in Computer Science?</p></li>
+<li><p>What is software development life cycle</p></li>
+<li><p>There seem to be many concepts in this course. What do they mean?</p></li>
+</ul>
+</div>
+<div class="admonition-objectives objectives admonition">
+<p class="admonition-title">Objectives</p>
+<ul class="simple">
+<li><p>We’ll</p>
+<ul>
+<li><p>give an <strong>introduction</strong> to the week</p></li>
+<li><p>give some introduction to <strong>concepts</strong> used in the course</p></li>
+<li><p>give some introduction to handy <strong>tools for the software developer</strong></p></li>
+<li><p>try to <strong>set up the mindset</strong> to find the rest of the week interesting and useful!</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="admonition-instructor-note instructor-note admonition">
+<p class="admonition-title">Instructor note</p>
+<ul class="simple">
+<li><p>Theory</p></li>
+<li><p>Demos/type-alongs</p></li>
+<li><p>Exercise</p></li>
+</ul>
+</div>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<ol class="arabic simple">
+<li><p>We start with a more <strong>theoretical introduction</strong> covering the software and tools and mindsets for software development.</p></li>
+<li><p>The second part follows the development of a simple software <strong>project</strong>.</p></li>
+</ol>
+<ul class="simple">
+<li><p>The exercises and type-alongs are mostly based on copy-pasting code.</p></li>
+<li><p>So you don’t need to program yourself or understand the python syntax used.</p></li>
+<li><p>The important aspect is the <strong>workflow</strong>!</p></li>
+</ul>
+<ol class="arabic simple" start="3">
+<li><p><strong>Deeper material</strong> not covered in the lessons today can be found in the extra reading part.</p></li>
+</ol>
+</div>
+<section id="preliminary-schedule-1st-day">
+<h2>Preliminary schedule 1st day<a class="headerlink" href="#preliminary-schedule-1st-day" title="Permalink to this heading"></a></h2>
+<table class="colwidths-auto docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Topic</p></th>
+<th class="head"><p>Time</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Syllabus</p></td>
+<td><p>9.00</p></td>
+</tr>
+<tr class="row-odd"><td><p>Intro</p></td>
+<td><p>9.20</p></td>
+</tr>
+<tr class="row-even"><td><p>Coffee break (15 min)</p></td>
+<td><p>9.45</p></td>
+</tr>
+<tr class="row-odd"><td><p>SDLC tools</p></td>
+<td><p>10.00</p></td>
+</tr>
+<tr class="row-even"><td><p>Planning phase (incl. break)</p></td>
+<td><p>10.45</p></td>
+</tr>
+<tr class="row-odd"><td><p>Start the project</p></td>
+<td><p>11.15</p></td>
+</tr>
+<tr class="row-even"><td><p>Start with coding (begin)</p></td>
+<td><p>11.45</p></td>
+</tr>
+<tr class="row-odd"><td><p>LUNCH</p></td>
+<td><p>12.00</p></td>
+</tr>
+<tr class="row-even"><td><p>Start with coding (cont’d)</p></td>
+<td><p>13.00</p></td>
+</tr>
+<tr class="row-odd"><td><p>Iterations and Git (incl. break)</p></td>
+<td><p>13.30</p></td>
+</tr>
+<tr class="row-even"><td><p>Deploy and documentation</p></td>
+<td><p>14.30</p></td>
+</tr>
+<tr class="row-odd"><td><p>Coffee break</p></td>
+<td><p>15.00</p></td>
+</tr>
+<tr class="row-even"><td><p>(Collaboration)</p></td>
+<td><p>15.15</p></td>
+</tr>
+<tr class="row-odd"><td><p>Summary</p></td>
+<td><p>15.25</p></td>
+</tr>
+<tr class="row-even"><td><p>Reflection</p></td>
+<td><p>15.35</p></td>
+</tr>
+<tr class="row-odd"><td><p>END</p></td>
+<td><p>16.00</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="what-is-software">
+<h2>What is software?<a class="headerlink" href="#what-is-software" title="Permalink to this heading"></a></h2>
+<p><em>Wikipedia</em></p>
+<ul class="simple">
+<li><p>set of computer programs and associated documentation and data.</p></li>
+<li><p>This is in contrast to hardware, from which the system is built and which actually performs the work.</p></li>
+<li><p><strong>User-written software: End-user development</strong></p>
+<ul>
+<li><p>Users create this software themselves and <em>often overlook how important it may be to others</em>.</p></li>
+</ul>
+</li>
+</ul>
+<section id="some-software-concepts">
+<h3>Some software concepts<a class="headerlink" href="#some-software-concepts" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>program</p></li>
+<li><p>script (directly interpreted at run time)</p></li>
+<li><p>tool</p></li>
+<li><p>model</p></li>
+<li><p>application</p></li>
+</ul>
+<hr class="docutils" />
+<div class="admonition-scripting-vs-programming admonition">
+<p class="admonition-title">Scripting vs programming</p>
+<ul class="simple">
+<li><p><strong>Python</strong> is an <strong>interpreted language</strong>.</p>
+<ul>
+<li><p>Python uses an interpreter to translate and run its code. Hence Python is a <strong>scripting language</strong>.</p></li>
+</ul>
+</li>
+<li><p>Programs written in <strong>C++</strong> are <strong>compiled</strong> and then the compiled code runs to generate the output.</p>
+<ul>
+<li><p>Hence, C++ is  a <strong>programming language</strong> and not a scripting language, since scripting languages are directly interpreted at run time and no prior compilation of the code takes place.</p></li>
+</ul>
+</li>
+</ul>
+<hr class="docutils" />
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>We will not be very definite in the course in when to use scripting, program or tools</p>
+</div>
+</div>
+</section>
+<section id="outcome-of-a-program">
+<h3>Outcome of a Program<a class="headerlink" href="#outcome-of-a-program" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p><strong>Correct</strong></p>
+<ul>
+<li><p>and <em>flawless</em></p></li>
+</ul>
+</li>
+<li><p><strong>Efficient</strong></p>
+<ul>
+<li><p><em>Utilize</em> the computer system’s resources</p></li>
+</ul>
+</li>
+<li><p><strong>Reusable</strong></p>
+<ul>
+<li><p>Finished <em>components</em></p></li>
+<li><p>Lower <em>development</em> <em>costs</em></p></li>
+<li><p><em>Faster</em></p></li>
+<li><p>Higher <em>quality</em></p></li>
+<li><p><em>packaging</em> technology</p></li>
+</ul>
+</li>
+<li><p><strong>Changeable</strong></p>
+<ul>
+<li><p><em>Maintenance</em> cost</p>
+<ul>
+<li><p>Fix errors, bugs</p></li>
+<li><p>Adapt to <em>new requirements</em></p></li>
+<li><p>Independent <em>modules</em></p></li>
+<li><p>Encapsulation/<em>information hiding</em></p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="independent-modules">
+<h3>Independent modules<a class="headerlink" href="#independent-modules" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>Modular coding is really good!</p></li>
+<li><p>Object-oriented or functional programming, see below.</p></li>
+<li><p>Modularity could be within a program but also for a workflow.</p></li>
+</ul>
+<div class="admonition-workflow demo admonition">
+<p class="admonition-title">Workflow</p>
+<ul class="simple">
+<li><p>Here’s an example of a bash script taking care of runs with executable files.</p>
+<ul>
+<li><p><a class="reference external" href="https://github.com/UPPMAX/programming_formalisms_intro/blob/main/doc/wrf-workflow.md">A weather model workflow</a></p></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+<section id="functional-vs-object-oriented-programming">
+<h3>Functional vs. object-oriented programming<a class="headerlink" href="#functional-vs-object-oriented-programming" title="Permalink to this heading"></a></h3>
+<section id="object-oriented-programming">
+<h4>Object oriented programming<a class="headerlink" href="#object-oriented-programming" title="Permalink to this heading"></a></h4>
+<ul class="simple">
+<li><p>Object-oriented (OO) programming is</p>
+<ul>
+<li><p>a mindset of mimicking the real-world as:</p></li>
+<li><p>entities (<code class="docutils literal notranslate"><span class="pre">objects</span></code>) that are different</p></li>
+<li><p>or share attributes with each-other (within a <code class="docutils literal notranslate"><span class="pre">class</span></code>)</p></li>
+<li><p>info-hiding mindset…</p></li>
+</ul>
+</li>
+</ul>
+<p class="plantuml">
+<img src="_images/plantuml-5b769f0366b31babe6ee19c6962a68c77928d8e8.png" alt="&#64;startuml
+class Elevator{
+  direction : String
+  floor : Integer
+  
+  void goto_floor()
+  void stop()
+  void which_floor()
+}
+&#64;enduml"/>
+</p>
+<p class="plantuml">
+<img src="_images/plantuml-5ff4c87960606fc0143f547eabb9e7e7cbe5e997.png" alt="&#64;startuml
+object elevator1{
+direction=&quot;up&quot;
+floor=2
+}
+object elevator2{
+direction=&quot;rest&quot;
+floor=5
+}
+
+&#64;enduml
+"/>
+</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Object orientation (OO) in some programming languages</strong></p>
+<ul class="simple">
+<li><p>OO (built-in classes)</p>
+<ul>
+<li><p>C++</p></li>
+<li><p>Java</p></li>
+<li><p>Python</p></li>
+<li><p>Julia</p></li>
+</ul>
+</li>
+<li><p>OO features</p>
+<ul>
+<li><p>Fortran 2003-</p></li>
+<li><p>MATLAB</p></li>
+<li><p>Perl</p></li>
+<li><p>PHP</p></li>
+</ul>
+</li>
+<li><p>OO object-based (but not class-based)</p>
+<ul>
+<li><p>Javascript</p></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+<section id="functional-programming">
+<h4>Functional programming<a class="headerlink" href="#functional-programming" title="Permalink to this heading"></a></h4>
+<ul class="simple">
+<li><p>More classical as it is more focused on the algorithms</p></li>
+<li><p>Functions</p></li>
+<li><p>Modules: a way to <em>gather functions</em> with similar functionality</p></li>
+<li><p>Also to some extent info-hiding mindset</p></li>
+</ul>
+<div class="admonition-to-sum-up admonition">
+<p class="admonition-title">To sum up</p>
+<ul class="simple">
+<li><p>At its simplest, functional programming uses immutable data to tell the program exactly what to do.</p></li>
+<li><p>Object-oriented programming tells the program how to achieve results through objects altering the program’s state.</p></li>
+<li><p>Both paradigms can be used to create elegant code.</p></li>
+</ul>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<ul class="simple">
+<li><p>More on Tuesday: <a class="reference external" href="https://github.com/UPPMAX/programming_formalisms/blob/main/development_design/README.md#object-orientation">Object-orientation</a></p></li>
+<li><p>More on Tues: <a class="reference external" href="https://github.com/UPPMAX/programming_formalisms/blob/main/algorithms/algorithms_lecture.pdf">Algorithms</a></p></li>
+<li><p>More on Friday: <a class="reference external" href="https://github.com/UPPMAX/programming_formalisms/blob/main/development_design/Modular_Programming.pdf">Modular programming</a></p></li>
+</ul>
+</div>
+<div class="admonition-your-scripting-programming-background admonition">
+<p class="admonition-title">Your scripting/programming background</p>
+<figure class="align-default">
+<a class="reference internal image-reference" href="_images/language_dec23.png"><img alt="spiral" src="_images/language_dec23.png" style="width: 100%;" /></a>
+</figure>
+</div>
+</section>
+</section>
+</section>
+<section id="different-types-of-scientific-software">
+<h2>Different types of Scientific software:<a class="headerlink" href="#different-types-of-scientific-software" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>analysis of data</p>
+<ul>
+<li><p>statistics</p></li>
+<li><p>figures</p></li>
+<li><p>visualization</p></li>
+</ul>
+</li>
+<li><p>tools for process data</p>
+<ul>
+<li><p>refining data (formatting)</p></li>
+<li><p>bioinformatics</p></li>
+</ul>
+</li>
+<li><p>workflows</p></li>
+<li><p>modelling (mimic the reality)</p>
+<ul>
+<li><p>simulations time-varying bahaviour of a system</p></li>
+<li><p>mathematical models of relationships among variables in a system</p></li>
+</ul>
+</li>
+<li><p>decision assistance</p></li>
+</ul>
+<div class="admonition-discussion discussion attention admonition">
+<p class="admonition-title">Discussion</p>
+<p><strong>What do you develop for?</strong></p>
+<ul class="simple">
+<li><p>Use Menti</p></li>
+</ul>
+</div>
+<div class="admonition-exercise exercise important admonition">
+<p class="admonition-title">Exercise</p>
+<p><strong>Planet application</strong></p>
+<ul class="simple">
+<li><p>Make a program that simulates the Earth’s change of orbit due to the interaction with other planets-</p></li>
+<li><p>This was done in MATLAB with no thought of best practices, just trying to solve the problem!</p></li>
+</ul>
+<div class="admonition-code solution important dropdown admonition">
+<p class="admonition-title">Code</p>
+<div class="highlight-Matlab notranslate"><div class="highlight"><pre><span></span><span class="c">%planet</span>
+<span class="nb">clear</span><span class="w"> </span><span class="nb">all</span>
+<span class="nb">close</span><span class="w"> </span><span class="nb">all</span>
+<span class="c">%constants</span>
+<span class="n">G</span><span class="p">=</span><span class="mf">6.6743e-11</span>
+<span class="n">AU</span><span class="p">=</span><span class="mf">149.597871e9</span>
+<span class="n">AU1</span><span class="p">=</span><span class="mf">150.8e9</span>
+<span class="n">dJ</span><span class="p">=</span><span class="mf">5.203</span><span class="o">*</span><span class="n">AU</span>
+<span class="n">mj</span><span class="p">=</span><span class="mf">5.97219e24</span>
+<span class="n">mJ</span><span class="p">=</span><span class="mf">1.899e27</span>
+<span class="n">M</span><span class="p">=</span><span class="mf">1.9891e30</span>
+<span class="nb">day</span><span class="p">=</span><span class="mi">86400</span><span class="p">;</span>
+<span class="nb">year</span><span class="p">=</span><span class="mi">31556926</span><span class="p">;</span>
+
+<span class="c">%init</span>
+<span class="c">%Earth</span>
+<span class="n">v0</span><span class="p">=</span><span class="n">AU</span><span class="o">*</span><span class="mi">2</span><span class="o">*</span><span class="nb">pi</span><span class="o">/</span><span class="nb">year</span><span class="p">;</span>
+<span class="n">Fg</span><span class="p">=</span><span class="n">G</span><span class="o">*</span><span class="n">M</span><span class="o">*</span><span class="n">mj</span><span class="o">/</span><span class="n">AU</span>^<span class="mi">2</span>
+<span class="n">ag</span><span class="p">=</span><span class="n">Fg</span><span class="o">/</span><span class="n">mj</span>
+<span class="n">Fc</span><span class="p">=</span><span class="n">mj</span><span class="o">*</span><span class="n">v0</span>^<span class="mi">2</span><span class="o">/</span><span class="n">AU</span>
+<span class="n">ac</span><span class="p">=</span><span class="n">Fc</span><span class="o">/</span><span class="n">mj</span>
+
+<span class="c">%Jupiter</span>
+<span class="n">v0J</span><span class="p">=</span><span class="n">dJ</span><span class="o">*</span><span class="mi">2</span><span class="o">*</span><span class="nb">pi</span><span class="o">/</span><span class="p">(</span><span class="mf">11.86</span><span class="o">*</span><span class="nb">year</span><span class="p">);</span>
+<span class="n">FgJ</span><span class="p">=</span><span class="n">G</span><span class="o">*</span><span class="n">M</span><span class="o">*</span><span class="n">mJ</span><span class="o">/</span><span class="n">dJ</span>^<span class="mi">2</span>
+<span class="n">agJ</span><span class="p">=</span><span class="n">FgJ</span><span class="o">/</span><span class="n">mJ</span>
+<span class="n">FcJ</span><span class="p">=</span><span class="n">mJ</span><span class="o">*</span><span class="n">v0J</span>^<span class="mi">2</span><span class="o">/</span><span class="n">dJ</span>
+<span class="n">acJ</span><span class="p">=</span><span class="n">FcJ</span><span class="o">/</span><span class="n">mJ</span>
+
+<span class="n">L</span><span class="p">=</span><span class="mf">10e4</span><span class="p">;</span>
+<span class="c">%def</span>
+<span class="n">x</span><span class="p">=</span><span class="nb">zeros</span><span class="p">(</span><span class="mi">365</span><span class="o">*</span><span class="n">L</span><span class="p">,</span><span class="mi">1</span><span class="p">);</span>
+<span class="n">y</span><span class="p">=</span><span class="nb">zeros</span><span class="p">(</span><span class="mi">365</span><span class="o">*</span><span class="n">L</span><span class="p">,</span><span class="mi">1</span><span class="p">);</span>
+<span class="n">xJ</span><span class="p">=</span><span class="nb">zeros</span><span class="p">(</span><span class="mi">365</span><span class="o">*</span><span class="n">L</span><span class="p">,</span><span class="mi">1</span><span class="p">);</span>
+<span class="n">yJ</span><span class="p">=</span><span class="nb">zeros</span><span class="p">(</span><span class="mi">365</span><span class="o">*</span><span class="n">L</span><span class="p">,</span><span class="mi">1</span><span class="p">);</span>
+<span class="n">u</span><span class="p">=</span><span class="nb">zeros</span><span class="p">(</span><span class="mi">365</span><span class="o">*</span><span class="n">L</span><span class="p">,</span><span class="mi">1</span><span class="p">);</span>
+<span class="n">v</span><span class="p">=</span><span class="nb">zeros</span><span class="p">(</span><span class="mi">365</span><span class="o">*</span><span class="n">L</span><span class="p">,</span><span class="mi">1</span><span class="p">);</span>
+<span class="n">uJ</span><span class="p">=</span><span class="nb">zeros</span><span class="p">(</span><span class="mi">365</span><span class="o">*</span><span class="n">L</span><span class="p">,</span><span class="mi">1</span><span class="p">);</span>
+<span class="n">vJ</span><span class="p">=</span><span class="nb">zeros</span><span class="p">(</span><span class="mi">365</span><span class="o">*</span><span class="n">L</span><span class="p">,</span><span class="mi">1</span><span class="p">);</span>
+<span class="c">%init</span>
+<span class="n">x0</span><span class="p">=</span><span class="n">AU1</span><span class="p">;</span>
+<span class="n">y0</span><span class="p">=</span><span class="mi">0</span><span class="p">;</span>
+<span class="n">u0</span><span class="p">=</span><span class="mi">0</span><span class="p">;</span>
+<span class="n">x</span><span class="p">=</span><span class="n">x0</span><span class="p">;</span>
+<span class="n">y</span><span class="p">=</span><span class="n">y0</span><span class="p">;</span>
+<span class="n">u</span><span class="p">=</span><span class="n">u0</span><span class="p">;</span>
+<span class="n">v</span><span class="p">=</span><span class="n">v0</span><span class="p">;</span>
+<span class="n">x0J</span><span class="p">=</span><span class="n">dJ</span><span class="p">;</span>
+<span class="n">y0J</span><span class="p">=</span><span class="mi">0</span><span class="p">;</span>
+<span class="n">u0J</span><span class="p">=</span><span class="mi">0</span><span class="p">;</span>
+<span class="n">xJ</span><span class="p">=</span><span class="n">x0J</span><span class="p">;</span>
+<span class="n">yJ</span><span class="p">=</span><span class="n">y0J</span><span class="p">;</span>
+<span class="n">uJ</span><span class="p">=</span><span class="n">u0J</span><span class="p">;</span>
+<span class="n">vJ</span><span class="p">=</span><span class="n">v0J</span><span class="p">;</span>
+
+<span class="k">for</span><span class="w"> </span><span class="nb">i</span><span class="p">=</span><span class="mi">1</span><span class="p">:</span><span class="mi">365</span><span class="o">*</span><span class="n">L</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nb">rem</span><span class="p">(</span><span class="nb">i</span><span class="p">,</span><span class="mi">365</span><span class="o">*</span><span class="mi">1000</span><span class="p">)</span><span class="o">==</span><span class="mi">0</span>
+<span class="w">        </span><span class="nb">i</span><span class="o">/</span><span class="mi">365</span>
+<span class="w">    </span><span class="k">end</span>
+<span class="w">    </span><span class="n">x</span><span class="p">(</span><span class="nb">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)=</span><span class="n">x</span><span class="p">(</span><span class="nb">i</span><span class="p">)</span><span class="o">+</span><span class="nb">day</span><span class="o">*</span><span class="n">u</span><span class="p">(</span><span class="nb">i</span><span class="p">);</span>
+<span class="w">    </span><span class="n">y</span><span class="p">(</span><span class="nb">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)=</span><span class="n">y</span><span class="p">(</span><span class="nb">i</span><span class="p">)</span><span class="o">+</span><span class="nb">day</span><span class="o">*</span><span class="n">v</span><span class="p">(</span><span class="nb">i</span><span class="p">);</span>
+<span class="w">    </span><span class="n">xJ</span><span class="p">(</span><span class="nb">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)=</span><span class="n">xJ</span><span class="p">(</span><span class="nb">i</span><span class="p">)</span><span class="o">+</span><span class="nb">day</span><span class="o">*</span><span class="n">uJ</span><span class="p">(</span><span class="nb">i</span><span class="p">);</span>
+<span class="w">    </span><span class="n">yJ</span><span class="p">(</span><span class="nb">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)=</span><span class="n">yJ</span><span class="p">(</span><span class="nb">i</span><span class="p">)</span><span class="o">+</span><span class="nb">day</span><span class="o">*</span><span class="n">vJ</span><span class="p">(</span><span class="nb">i</span><span class="p">);</span>
+
+<span class="w">    </span><span class="n">ax</span><span class="p">=</span><span class="o">-</span><span class="n">G</span><span class="o">*</span><span class="n">M</span><span class="o">/</span><span class="nb">abs</span><span class="p">(</span><span class="n">x</span><span class="p">(</span><span class="nb">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>^<span class="mi">2</span><span class="o">+</span><span class="n">y</span><span class="p">(</span><span class="nb">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>^<span class="mi">2</span><span class="p">)</span>^<span class="p">(</span><span class="mi">3</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="n">x</span><span class="p">(</span><span class="nb">i</span><span class="o">+</span><span class="mi">1</span><span class="p">);</span>
+<span class="w">    </span><span class="n">ay</span><span class="p">=</span><span class="o">-</span><span class="n">G</span><span class="o">*</span><span class="n">M</span><span class="o">/</span><span class="nb">abs</span><span class="p">(</span><span class="n">x</span><span class="p">(</span><span class="nb">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>^<span class="mi">2</span><span class="o">+</span><span class="n">y</span><span class="p">(</span><span class="nb">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>^<span class="mi">2</span><span class="p">)</span>^<span class="p">(</span><span class="mi">3</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="n">y</span><span class="p">(</span><span class="nb">i</span><span class="o">+</span><span class="mi">1</span><span class="p">);</span>
+<span class="w">    </span><span class="n">dxJ</span><span class="p">=</span><span class="n">x</span><span class="p">(</span><span class="nb">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">-</span><span class="n">xJ</span><span class="p">(</span><span class="nb">i</span><span class="o">+</span><span class="mi">1</span><span class="p">);</span>
+<span class="w">    </span><span class="n">dyJ</span><span class="p">=</span><span class="n">y</span><span class="p">(</span><span class="nb">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">-</span><span class="n">yJ</span><span class="p">(</span><span class="nb">i</span><span class="o">+</span><span class="mi">1</span><span class="p">);</span>
+<span class="w">    </span><span class="n">axjJ</span><span class="p">=</span><span class="o">-</span><span class="n">G</span><span class="o">*</span><span class="n">mJ</span><span class="o">/</span><span class="nb">abs</span><span class="p">(</span><span class="n">dxJ</span>^<span class="mi">2</span><span class="o">+</span><span class="n">dyJ</span>^<span class="mi">2</span><span class="p">)</span>^<span class="p">(</span><span class="mi">3</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="n">dxJ</span><span class="p">;</span>
+<span class="w">    </span><span class="n">ayjJ</span><span class="p">=</span><span class="o">-</span><span class="n">G</span><span class="o">*</span><span class="n">mJ</span><span class="o">/</span><span class="nb">abs</span><span class="p">(</span><span class="n">dxJ</span>^<span class="mi">2</span><span class="o">+</span><span class="n">dyJ</span>^<span class="mi">2</span><span class="p">)</span>^<span class="p">(</span><span class="mi">3</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="n">dyJ</span><span class="p">;</span>
+<span class="w">    </span><span class="n">ax</span><span class="p">=</span><span class="n">ax</span><span class="o">+</span><span class="n">axjJ</span><span class="p">;</span>
+<span class="w">    </span><span class="n">ay</span><span class="p">=</span><span class="n">ay</span><span class="o">+</span><span class="n">ayjJ</span><span class="p">;</span>
+<span class="w">    </span><span class="n">u</span><span class="p">(</span><span class="nb">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)=</span><span class="n">u</span><span class="p">(</span><span class="nb">i</span><span class="p">)</span><span class="o">+</span><span class="n">ax</span><span class="o">*</span><span class="nb">day</span><span class="p">;</span>
+<span class="w">    </span><span class="n">v</span><span class="p">(</span><span class="nb">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)=</span><span class="n">v</span><span class="p">(</span><span class="nb">i</span><span class="p">)</span><span class="o">+</span><span class="n">ay</span><span class="o">*</span><span class="nb">day</span><span class="p">;</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="n">xJ</span><span class="p">(</span><span class="nb">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)=</span><span class="n">xJ</span><span class="p">(</span><span class="nb">i</span><span class="p">)</span><span class="o">+</span><span class="nb">day</span><span class="o">*</span><span class="n">uJ</span><span class="p">(</span><span class="nb">i</span><span class="p">);</span>
+<span class="w">    </span><span class="n">yJ</span><span class="p">(</span><span class="nb">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)=</span><span class="n">yJ</span><span class="p">(</span><span class="nb">i</span><span class="p">)</span><span class="o">+</span><span class="nb">day</span><span class="o">*</span><span class="n">vJ</span><span class="p">(</span><span class="nb">i</span><span class="p">);</span>
+<span class="w">    </span><span class="n">axJ</span><span class="p">=</span><span class="o">-</span><span class="n">G</span><span class="o">*</span><span class="n">M</span><span class="o">/</span><span class="nb">abs</span><span class="p">(</span><span class="n">xJ</span><span class="p">(</span><span class="nb">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>^<span class="mi">2</span><span class="o">+</span><span class="n">yJ</span><span class="p">(</span><span class="nb">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>^<span class="mi">2</span><span class="p">)</span>^<span class="p">(</span><span class="mi">3</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="n">xJ</span><span class="p">(</span><span class="nb">i</span><span class="o">+</span><span class="mi">1</span><span class="p">);</span>
+<span class="w">    </span><span class="n">ayJ</span><span class="p">=</span><span class="o">-</span><span class="n">G</span><span class="o">*</span><span class="n">M</span><span class="o">/</span><span class="nb">abs</span><span class="p">(</span><span class="n">xJ</span><span class="p">(</span><span class="nb">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>^<span class="mi">2</span><span class="o">+</span><span class="n">yJ</span><span class="p">(</span><span class="nb">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>^<span class="mi">2</span><span class="p">)</span>^<span class="p">(</span><span class="mi">3</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="n">yJ</span><span class="p">(</span><span class="nb">i</span><span class="o">+</span><span class="mi">1</span><span class="p">);</span>
+<span class="w">    </span><span class="n">uJ</span><span class="p">(</span><span class="nb">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)=</span><span class="n">uJ</span><span class="p">(</span><span class="nb">i</span><span class="p">)</span><span class="o">+</span><span class="n">axJ</span><span class="o">*</span><span class="nb">day</span><span class="p">;</span>
+<span class="w">    </span><span class="n">vJ</span><span class="p">(</span><span class="nb">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)=</span><span class="n">vJ</span><span class="p">(</span><span class="nb">i</span><span class="p">)</span><span class="o">+</span><span class="n">ayJ</span><span class="o">*</span><span class="nb">day</span><span class="p">;</span>
+
+<span class="k">end</span>
+
+<span class="nb">figure</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="nb">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+<span class="nb">hold</span><span class="w"> </span><span class="n">on</span>
+<span class="nb">plot</span><span class="p">(</span><span class="n">xJ</span><span class="p">,</span><span class="n">yJ</span><span class="p">)</span>
+<span class="nb">plot</span><span class="w"> </span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="s">&#39;o&#39;</span><span class="p">)</span>
+<span class="nb">axis</span><span class="w"> </span><span class="n">equal</span>
+
+
+<span class="n">rj</span><span class="p">=(</span><span class="n">x</span><span class="o">.^</span><span class="mi">2</span><span class="o">+</span><span class="n">y</span><span class="o">.^</span><span class="mi">2</span><span class="p">)</span><span class="o">.^</span><span class="mf">.5</span><span class="p">;</span>
+<span class="n">rJ</span><span class="p">=(</span><span class="n">x</span><span class="o">.^</span><span class="mi">2</span><span class="o">+</span><span class="n">y</span><span class="o">.^</span><span class="mi">2</span><span class="p">)</span><span class="o">.^</span><span class="mf">.5</span><span class="p">;</span>
+<span class="n">aJ</span><span class="p">=</span><span class="nb">max</span><span class="p">(</span><span class="n">rJ</span><span class="p">)</span>
+<span class="n">bJ</span><span class="p">=</span><span class="nb">min</span><span class="p">(</span><span class="n">rJ</span><span class="p">)</span>
+<span class="n">eJ</span><span class="p">=</span><span class="mi">1</span><span class="o">-</span><span class="mi">2</span><span class="o">/</span><span class="p">(</span><span class="n">aJ</span><span class="o">/</span><span class="n">bJ</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">relJ</span><span class="p">=(</span><span class="n">aJ</span><span class="o">/</span><span class="n">bJ</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="n">l</span><span class="p">=</span><span class="mi">1000</span><span class="p">;</span>
+<span class="k">for</span><span class="w"> </span><span class="nb">i</span><span class="p">=</span><span class="mi">1</span><span class="p">:</span><span class="n">L</span><span class="o">/</span><span class="n">l</span>
+<span class="w">    </span><span class="n">range</span><span class="p">=(</span><span class="nb">i</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">L</span><span class="o">+</span><span class="mi">1</span><span class="p">:</span><span class="nb">i</span><span class="o">*</span><span class="n">L</span><span class="p">;</span>
+<span class="w">    </span><span class="n">a</span><span class="p">=</span><span class="nb">max</span><span class="p">(</span><span class="n">rj</span><span class="p">(</span><span class="n">range</span><span class="p">));</span>
+<span class="w">    </span><span class="n">b</span><span class="p">=</span><span class="nb">min</span><span class="p">(</span><span class="n">rj</span><span class="p">(</span><span class="n">range</span><span class="p">));</span>
+<span class="w">    </span><span class="n">e</span><span class="p">(</span><span class="nb">i</span><span class="p">)=</span><span class="mi">1</span><span class="o">-</span><span class="mi">2</span><span class="o">/</span><span class="p">(</span><span class="n">a</span><span class="o">/</span><span class="n">b</span><span class="o">+</span><span class="mi">1</span><span class="p">);</span>
+<span class="w">    </span><span class="n">rel</span><span class="p">(</span><span class="nb">i</span><span class="p">)=(</span><span class="n">a</span><span class="o">/</span><span class="n">b</span><span class="o">-</span><span class="mi">1</span><span class="p">);</span>
+<span class="k">end</span>
+
+<span class="c">%return</span>
+
+<span class="nb">figure</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="nb">plot</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">L</span><span class="o">/</span><span class="n">l</span><span class="p">,</span><span class="n">e</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<ul class="simple">
+<li><p>What are the problems?</p></li>
+<li><p>Discuss!</p>
+<ul>
+<li><p><strong>Readability?</strong></p></li>
+<li><p><strong>Correct</strong>?</p></li>
+<li><p><strong>Efficient</strong>?</p></li>
+<li><p><strong>Reusable</strong>?</p></li>
+<li><p><strong>Changeable</strong>?</p></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+<section id="software-development-life-cycle-sdlc">
+<h2>Software Development Life Cycle (SDLC)<a class="headerlink" href="#software-development-life-cycle-sdlc" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>We need a workflow in our programming projects!</p></li>
+</ul>
+<section id="some-common-steps">
+<h3>Some common steps<a class="headerlink" href="#some-common-steps" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>Planning</p>
+<ul>
+<li><p>Analysis and design</p></li>
+</ul>
+</li>
+<li><p>Development</p>
+<ul>
+<li><p>Source control</p></li>
+<li><p>Algorithms</p></li>
+<li><p>In-code documentation</p></li>
+<li><p>Optimization</p>
+<ul>
+<li><p>Parallelism</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Test</p></li>
+<li><p>Development and maintenance</p>
+<ul>
+<li><p>Documentation</p></li>
+<li><p>Reproducibility and sharing</p></li>
+</ul>
+</li>
+</ul>
+<hr class="docutils" />
+<ul class="simple">
+<li><p>… and <strong>Iterations</strong></p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="agile-development">
+<h3>Agile development<a class="headerlink" href="#agile-development" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>Division of tasks into <strong>short phases of work</strong> and frequent <strong>re-assessment</strong> and adaptation of plans.</p></li>
+</ul>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>More about life cycles in next session and later this week</p>
+</div>
+</section>
+</section>
+<section id="summary-of-introduction">
+<h2>Summary of Introduction<a class="headerlink" href="#summary-of-introduction" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>Now after the overview you are ready to dig deeper in the topics and try it out yourself!</p></li>
+</ul>
+<div class="admonition-keypoints keypoints admonition">
+<p class="admonition-title">Keypoints</p>
+<ul class="simple">
+<li><p>A program shall be or have content/components that is:</p>
+<ul>
+<li><p>Correct</p></li>
+<li><p>Efficient</p></li>
+<li><p>Reusable</p></li>
+<li><p>Changeable</p></li>
+</ul>
+</li>
+<li><p>Software development is both series of steps:</p>
+<ol class="arabic simple">
+<li><p>Requirements</p></li>
+<li><p>Analysis and design</p></li>
+<li><p>Development</p></li>
+<li><p>Test</p></li>
+<li><p>Development and maintenance</p></li>
+</ol>
+</li>
+<li><p>… and iteration of these</p></li>
+</ul>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="setup.html" class="btn btn-neutral float-left" title="Setup" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="sdlc_tools.html" class="btn btn-neutral float-right" title="Software Development Lifecycle (SDLC) tools" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, UPPMAX.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>More about git &mdash; Programming formalism intro 0.1 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" type="text/css" />
+      <link rel="stylesheet" href="_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="_static/togglebutton.css" type="text/css" />
+      <link rel="stylesheet" href="_static/sphinx_lesson.css" type="text/css" />
+      <link rel="stylesheet" href="_static/sphinx_rtd_theme_ext_color_contrast.css" type="text/css" />
+      <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+        <script src="_static/clipboard.min.js"></script>
+        <script src="_static/copybutton.js"></script>
+        <script src="_static/minipres.js"></script>
+        <script>let toggleHintShow = 'Click to show';</script>
+        <script>let toggleHintHide = 'Click to hide';</script>
+        <script>let toggleOpenOnPrint = 'true';</script>
+        <script src="_static/togglebutton.js"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+        <script>mermaid.initialize({startOnLoad:true});</script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="More about collaboration" href="collab_deeper.html" />
+    <link rel="prev" title="More about UML" href="UML_deeper.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> Programming formalism intro
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Preparations:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="setup.html">Setup</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Theory lessons:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sdlc_tools.html">Software Development Lifecycle (SDLC) tools</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Project lessons:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="flowcharts.html">Planning phase</a></li>
+<li class="toctree-l1"><a class="reference internal" href="startup.html">Start the project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="startup_code.html">Start with coding!</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sourcecontrol.html">The iterations and Git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="deploy.html">Deploy and document for usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="collab.html">Collaboration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="summary.html">Summary</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Extra reading:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="SDLC_models.html">Software Development Lifecycle (SDLC) models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="UML_deeper.html">More about UML</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">More about git</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#git">Git</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#what-is-git-and-what-is-a-git-repository">What is Git, and what is a Git repository?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#recording-a-snapshot-with-git">Recording a snapshot with Git</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#before-we-start-we-need-to-configure-git">Before we start we need to configure Git</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#type-along">Type-along</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#create-repository">Create repository</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#check-status">Check status</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#git-everyday-steps">Git everyday steps</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#staging-files">Staging files</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#commit">Commit</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#exercise-optional">Exercise-optional</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#git-history-and-log">Git history and log</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#writing-useful-commit-messages">Writing useful commit messages</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#ignoring-files-and-paths-with-gitignore">Ignoring files and paths with .gitignore</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#graphical-user-interfaces">Graphical user interfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#branching-and-merging">Branching and merging</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#typical-workflows">Typical workflows</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#working-remotely-and-sharing-github">Working remotely and sharing (github)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#type-along-create-a-new-repository-on-github">Type-along: Create a new repository on GitHub</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#pushing-our-formalisms-repository-to-github">Pushing our Formalisms repository to GitHub</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#cloning-a-repository">Cloning a repository</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#working-on-github">Working on GitHub</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#summary">Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="collab_deeper.html">More about collaboration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reproducible_deeper.html">More about reproducibility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sharing_deeper.html">More about sharing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="documentation_deeper.html">More about documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="deploy_deeper.html">More about deploying</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Reference:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="concepts.html">Concepts</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Programming formalism intro</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>More about git</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/UPPMAX/programming_formalisms_intro/blob/main/doc//doc/git_deeper.md" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section class="tex2jax_ignore mathjax_ignore" id="more-about-git">
+<h1>More about git<a class="headerlink" href="#more-about-git" title="Permalink to this heading"></a></h1>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>This material is based on or inspired by the material from [NBIS](https://nbis-reproducible-research.readthedocs.io/en/course_2104/git/) and [CodeRefinery](https://coderefinery.github.io/git-intro/)
+
+```{note}
+- We will cover the most basic things with Git such that you can use it this week.
+- For deeper understanding and hands-on on branching etcetera, please confer the course material of [NBIS](https://nbis-reproducible-research.readthedocs.io/en/course_2104/git/) and [CodeRefinery](https://coderefinery.github.io/git-intro/).
+</pre></div>
+</div>
+<section id="git">
+<h2>Git<a class="headerlink" href="#git" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>We will start with our own repository.</p></li>
+<li><p>branching and merging (locally)</p></li>
+<li><p>and a brief introduction to pushing to remotes.</p></li>
+<li><p>In the separate collaborative Git lesson, we teach more use of remote repositories and good collaborative workflows.</p></li>
+</ul>
+<div class="admonition-prerequisites prerequisites admonition">
+<p class="admonition-title">Prerequisites</p>
+<ul class="simple">
+<li><p><strong>Git and GITHUB should be configured prior to the course</strong>
+following <a class="reference external" href="https://github.com/UPPMAX/programming_formalism/blob/main/setup.md">https://coderefinery.github.io/installation</a>).</p></li>
+<li><p>Being comfortable with the command line. No expertise is required,
+but the lesson will be mostly taken from the command line.</p></li>
+<li><p>Students should be familiar with using a <strong>text editor</strong> on their
+system. Emacs and Vim are excellent choices if you know how to use
+them but Nano or Notepad on Windows are sufficient.</p></li>
+</ul>
+</div>
+<section id="what-is-git-and-what-is-a-git-repository">
+<h3>What is Git, and what is a Git repository?<a class="headerlink" href="#what-is-git-and-what-is-a-git-repository" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>Git is a version control system: can <strong>record/save snapshots</strong> and track the content of a folder as it changes over time.</p></li>
+<li><p>Every time we <strong>commit</strong> a snapshot, Git records a snapshot of the <strong>entire project</strong>, saves it, and assigns it a version.</p></li>
+<li><p>These snapshots are kept inside a sub-folder called <code class="docutils literal notranslate"><span class="pre">.git</span></code>.</p></li>
+<li><p>If we remove <code class="docutils literal notranslate"><span class="pre">.git</span></code>, we remove the repository and history (but keep the working directory!).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">.git</span></code> uses relative paths - you can move the whole thing somewhere else and it will still work</p></li>
+<li><p>Git doesn’t do anything unless you ask it to (it does not record anything automatically).</p></li>
+<li><p>Multiple interfaces to Git exist (command line, graphical interfaces, web interfaces).</p></li>
+</ul>
+</section>
+<section id="recording-a-snapshot-with-git">
+<h3>Recording a snapshot with Git<a class="headerlink" href="#recording-a-snapshot-with-git" title="Permalink to this heading"></a></h3>
+<ul>
+<li><p>Git takes snapshots only if we request it.</p></li>
+<li><p>We will record changes always in two steps (we will later explain why this is a recommended practice).</p></li>
+<li><p>Example (we don’t need to type yet):</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git<span class="w"> </span>add<span class="w"> </span>somefile.txt
+<span class="gp">$ </span>git<span class="w"> </span>commit
+
+<span class="gp">$ </span>git<span class="w"> </span>add<span class="w"> </span>file.txt<span class="w"> </span>anotherfile.txt
+<span class="gp">$ </span>git<span class="w"> </span>commit
+</pre></div>
+</div>
+</li>
+<li><p>We first focus (<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span></code>, we “stage” the change), then shoot (<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">commit</span></code>):</p></li>
+</ul>
+</section>
+<section id="before-we-start-we-need-to-configure-git">
+<h3>Before we start we need to configure Git<a class="headerlink" href="#before-we-start-we-need-to-configure-git" title="Permalink to this heading"></a></h3>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<ul class="simple">
+<li><p>Start your terminal of choice</p>
+<ul>
+<li><p>MAC terminal</p></li>
+<li><p>iTerm</p></li>
+<li><p>WSL environment in</p>
+<ul>
+<li><p>MobaxTerm</p></li>
+<li><p>Visual Studio Code</p></li>
+</ul>
+</li>
+<li><p>Git BASH</p></li>
+<li><p>PowerShell</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<p>If you haven’t already configured Git, please follow the instructions in the
+<a class="reference external" href="https://coderefinery.github.io/installation/shell-and-git/#configuration">installation instructions</a>.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>user.name<span class="w"> </span><span class="s2">&quot;Your Name&quot;</span>
+<span class="gp">$ </span>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>user.email<span class="w"> </span>yourname@example.com
+<span class="gp">$ </span>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>core.editor<span class="w"> </span>nano
+</pre></div>
+</div>
+<p>Verify with:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git<span class="w"> </span>config<span class="w"> </span>--list
+</pre></div>
+</div>
+</section>
+</section>
+<section id="type-along">
+<h2>Type-along<a class="headerlink" href="#type-along" title="Permalink to this heading"></a></h2>
+<section id="create-repository">
+<h3>Create repository<a class="headerlink" href="#create-repository" title="Permalink to this heading"></a></h3>
+<p>We will create a repository (repo) called <code class="docutils literal notranslate"><span class="pre">Diagrams</span></code>.</p>
+<p>Be sure you are in a directory like “Programming_Formalisms” or similar (to have track of your work)</p>
+<p>One of the basic principles of Git is that it is <strong>easy to create repositories</strong>:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>mkdir<span class="w"> </span>Diagrams
+<span class="gp">$ </span><span class="nb">cd</span><span class="w"> </span>Diagrams
+<span class="gp">$ </span>git<span class="w"> </span>init
+</pre></div>
+</div>
+<p>That’s it! With <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">init</span></code> have now created an empty Git repository.</p>
+<section id="check-status">
+<h4>Check status<a class="headerlink" href="#check-status" title="Permalink to this heading"></a></h4>
+<p>We will use <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">status</span></code> a lot to check out what is going on:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git<span class="w"> </span>status
+
+<span class="go">On branch master</span>
+
+<span class="go">No commits yet</span>
+
+<span class="go">nothing to commit (create/copy files and use &quot;git add&quot; to track)</span>
+</pre></div>
+</div>
+<p>We will make sense of this information during this workshop.</p>
+<div class="admonition-a-new-repository-from-an-existing-project-on-own-computer-or-hpc-user-account admonition">
+<p class="admonition-title">A new repository from an existing project on own computer or HPC user account.</p>
+<ul class="simple">
+<li><p>Say you’ve got an existing project that you want to start tracking with git.</p>
+<ul>
+<li><p>Go into the directory containing the project.</p></li>
+<li><p>Type <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">init</span></code>.</p></li>
+<li><p>Type <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span></code> to add all of the relevant files.</p></li>
+<li><p>You’ll probably want to create a <code class="docutils literal notranslate"><span class="pre">.gitignore</span></code> file right away, to indicate all of the files you don’t want to track. Use <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span> <span class="pre">.gitignore</span></code>, too.</p></li>
+<li><p>Type <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">commit</span></code>.</p></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+</section>
+<section id="git-everyday-steps">
+<h3>Git everyday steps<a class="headerlink" href="#git-everyday-steps" title="Permalink to this heading"></a></h3>
+<p>Let us now <strong>create two files</strong>.</p>
+<p>One file is called <code class="docutils literal notranslate"><span class="pre">class.puml</span></code> and contains:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>@startuml
+<span class="w"> </span>class01<span class="w"> </span>&lt;<span class="p">|</span>--<span class="w"> </span>class02
+<span class="w"> </span>class03<span class="w"> </span>*--<span class="w"> </span>class04
+<span class="w"> </span>class05<span class="w"> </span>o--<span class="w"> </span>class06
+
+<span class="w"> </span>class01-<span class="w"> </span>class03<span class="w"> </span>:<span class="w"> </span>knows<span class="w"> </span>&gt;
+<span class="w"> </span>class<span class="w"> </span>class01<span class="w"> </span><span class="o">{</span>
+<span class="w">    </span>-var01<span class="w"> </span>:<span class="w"> </span>Integer
+<span class="w">    </span>Time<span class="w"> </span>:<span class="w"> </span>Date
+<span class="w">    </span><span class="c1">#method01()</span>
+<span class="w">    </span>+get_var01<span class="o">()</span>
+<span class="w">    </span><span class="o">{</span>method<span class="o">}</span>Without<span class="w"> </span>parentheses<span class="w"> </span>or<span class="w"> </span>Qualifiers
+<span class="w"> </span><span class="o">}</span>
+@enduml
+</pre></div>
+</div>
+<p>The second file is called <code class="docutils literal notranslate"><span class="pre">activity.puml</span></code> and contains:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>@startuml
+start
+
+<span class="k">if</span><span class="w"> </span><span class="o">(</span>Graphviz<span class="w"> </span>installed?<span class="o">)</span><span class="w"> </span><span class="k">then</span><span class="w"> </span><span class="o">(</span>yes<span class="o">)</span>
+<span class="w">  </span>:process<span class="w"> </span>all<span class="se">\n</span>diagrams<span class="p">;</span>
+<span class="k">else</span><span class="w"> </span><span class="o">(</span>no<span class="o">)</span>
+<span class="w">  </span>:process<span class="w"> </span>only
+<span class="w">  </span>__sequence__<span class="w"> </span>and<span class="w"> </span>__activity__<span class="w"> </span>diagrams<span class="p">;</span>
+endif
+
+stop
+@enduml
+</pre></div>
+</div>
+<section id="staging-files">
+<h4>Staging files<a class="headerlink" href="#staging-files" title="Permalink to this heading"></a></h4>
+<p>As mentioned above, in Git you can always check the status of files in your repository using
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">status</span></code>. It is always a safe command to run and in general a good idea to
+do when you are trying to figure out what to do next:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">On branch master</span>
+
+<span class="go">No commits yet</span>
+
+<span class="go">Untracked files:</span>
+<span class="go">  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)</span>
+<span class="go">        activity.puml</span>
+<span class="go">        class.puml</span>
+
+<span class="go">nothing added to commit but untracked files present (use &quot;git add&quot; to track)</span>
+</pre></div>
+</div>
+<p>The two files are untracked in the repository (directory). You want to <strong>add the files</strong> (focus the camera)
+to the list of files tracked by Git. Git does not track
+any files automatically and you need make a conscious decision to add a file. Let’s do what
+Git hints at and add the files:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git<span class="w"> </span>add<span class="w"> </span>.<span class="w">    </span><span class="c1"># &lt; -- &quot;.&quot; means all files</span>
+<span class="gp">$ </span>git<span class="w"> </span>status
+
+<span class="go">On branch master</span>
+
+<span class="go">Initial commit</span>
+
+<span class="go">Changes to be committed:</span>
+<span class="go">  (use &quot;git rm --cached &lt;file&gt;...&quot; to unstage)</span>
+
+<span class="go">        new file:   activity.puml</span>
+<span class="go">        new file:   class.puml</span>
+</pre></div>
+</div>
+<p>Now this change is <em>staged</em> and ready to be committed.</p>
+</section>
+<section id="commit">
+<h4>Commit<a class="headerlink" href="#commit" title="Permalink to this heading"></a></h4>
+<p>Let us now commit the change to the repository:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;adding class and activity diagrams&quot;</span>
+
+<span class="go">[master (root-commit) 8adee34] adding class and activity diagrams</span>
+<span class="go"> 2 files changed, 26 insertions(+)</span>
+<span class="go"> create mode 100644 activity.puml</span>
+<span class="go"> create mode 100644 class.puml</span>
+</pre></div>
+</div>
+<p>Right after we query the status to get this useful command into our muscle memory:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git<span class="w"> </span>status
+
+<span class="go">On branch master</span>
+<span class="go">nothing to commit, working tree clean</span>
+</pre></div>
+</div>
+<p>What does the <code class="docutils literal notranslate"><span class="pre">-m</span></code> flag mean? Let us check the help page for that command:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git<span class="w"> </span><span class="nb">help</span><span class="w"> </span>commit
+</pre></div>
+</div>
+<p>You should see a very long help page as the tool is very versatile (press q to quit).
+Do not worry about this now but keep in mind that you can always read the help files
+when in doubt. Searching online can also be useful, but choosing search terms
+to find relevant information takes some practice and discussions in some
+online threads may be confusing.
+Note that help pages also work when you don’t have a network connection!</p>
+</section>
+<section id="exercise-optional">
+<h4>Exercise-optional<a class="headerlink" href="#exercise-optional" title="Permalink to this heading"></a></h4>
+<div class="admonition-make-changes-10-min exercise important admonition">
+<p class="admonition-title">Make changes (10 min)</p>
+<p>Add the follwing lines before the line “&#64;enduml” to <code class="docutils literal notranslate"><span class="pre">class.puml</span></code>:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>class<span class="w"> </span>class02<span class="w"> </span><span class="o">{</span>
+<span class="w">   </span>-var02<span class="w"> </span>:<span class="w"> </span>Float
+<span class="w">   </span>Time<span class="w"> </span>:<span class="w"> </span>Date
+<span class="w">   </span><span class="c1">#method01()</span>
+<span class="w">   </span>+get_var02<span class="o">()</span>
+<span class="w">   </span><span class="o">{</span>method<span class="o">}</span>Without<span class="w"> </span>parentheses<span class="w"> </span>or<span class="w"> </span>Qualifiers
+<span class="o">}</span>
+
+<span class="w"> </span>When<span class="w"> </span>you<span class="w"> </span>are<span class="w"> </span><span class="k">done</span><span class="w"> </span>editing<span class="w"> </span>the<span class="w"> </span>files,<span class="w"> </span>try<span class="w"> </span><span class="sb">`</span>git<span class="w"> </span>diff<span class="sb">`</span>:
+
+<span class="w"> </span><span class="sb">```</span>console
+<span class="w"> </span>$<span class="w"> </span>git<span class="w"> </span>diff
+</pre></div>
+</div>
+<p>You will see (can you identify in there the two added lines?):</p>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gh">diff --git a/class.puml b/class.puml</span>
+<span class="gh">index 3b3fd07..2be3224 100644</span>
+<span class="gd">--- a/class.puml</span>
+<span class="gi">+++ b/class.puml</span>
+<span class="gu">@@ -11,4 +11,12 @@</span>
+<span class="w"> </span>    +get_var01()
+<span class="w"> </span>    {method}Without parentheses or Qualifiers
+<span class="w"> </span> }
+<span class="gi">+</span>
+<span class="gi">+ class class02 {</span>
+<span class="gi">+    -var02 : Float</span>
+<span class="gi">+    Time : Date</span>
+<span class="gi">+    #method01()</span>
+<span class="gi">+    +get_var02()</span>
+<span class="gi">+    {method}Without parentheses or Qualifiers</span>
+<span class="gi">+ }</span>
+<span class="w"> </span>@enduml
+
+Now first stage and then commit (what happens when we leave out the `-m` flag?):
+
+```console
+<span class="w"> </span> $ git add class.puml     # &lt;-- we can state exactly which file to stage as well
+<span class="w"> </span> $ git commit                   # &lt;-- we have left out -m &quot;...&quot;
+</pre></div>
+</div>
+<p>When you leave out the <code class="docutils literal notranslate"><span class="pre">-m</span></code> flag, Git should open an editor where you can edit
+your commit message. This message will be associated and stored with the
+changes you made. This message is your chance to explain what you’ve done and
+convince others (and your future self) that the changes you made were
+justified.  Write a message and save and close the file.</p>
+<p>When you are done committing the changes, experiment with these commands:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git<span class="w"> </span>log
+<span class="gp">$ </span>git<span class="w"> </span>log<span class="w"> </span>--stat
+<span class="gp">$ </span>git<span class="w"> </span>log<span class="w"> </span>--oneline
+</pre></div>
+</div>
+</div>
+</section>
+</section>
+</section>
+<section id="git-history-and-log">
+<h2>Git history and log<a class="headerlink" href="#git-history-and-log" title="Permalink to this heading"></a></h2>
+<p>If you haven’t yet, please try now <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">log</span></code>:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git<span class="w"> </span>log
+
+<span class="go">commit 4bb8b6fa66e5ea693a80e40cee3c3014163eb7ac (HEAD -&gt; master)</span>
+<span class="go">Author: bclaremar &lt;bjorn.claremar@uppmax.uu.se&gt;</span>
+<span class="go">Date:   Sat Oct 22 19:27:57 2022 +0200</span>
+
+<span class="go">    Added info for class02</span>
+
+<span class="go">commit 8adee34b35a8b1b1c1c41f4dce1b1e793030f669</span>
+<span class="go">Author: bclaremar &lt;bjorn.claremar@uppmax.uu.se&gt;</span>
+<span class="go">Date:   Fri Oct 21 23:37:31 2022 +0200</span>
+
+<span class="go">    adding class and activity diagrams</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>We can browse the development and access each state that we have committed.</p></li>
+<li><p>The long hashes uniquely label a state of the code.</p></li>
+<li><p>They are not just integers counting 1, 2, 3, 4, … (why?).</p></li>
+<li><p>Output is in reverse chronological order, i.e. <strong>newest commits on top</strong>.</p></li>
+<li><p>We will use them when comparing versions and when going back in time.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">log</span> <span class="pre">--oneline</span></code> only shows the first 7 characters of the commit hash and is good to get an overview.</p></li>
+<li><p>If the first characters of the hash are unique it is not necessary to type the entire hash.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">log</span> <span class="pre">--stat</span></code> is nice to show which files have been modified.</p></li>
+</ul>
+<section id="writing-useful-commit-messages">
+<h3>Writing useful commit messages<a class="headerlink" href="#writing-useful-commit-messages" title="Permalink to this heading"></a></h3>
+<p>Using <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">log</span> <span class="pre">--oneline</span></code> we understand that the first line of the commit message is very important.</p>
+<p>Good example:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>increase threshold alpha to 2.0
+
+the motivation for this change is
+to enable ...
+...
+this is based on a discussion in #123
+</pre></div>
+</div>
+<p>Convention: <strong>one line summarizing the commit, then one empty line,
+then paragraph(s) with more details in free form, if necessary</strong>.</p>
+<ul class="simple">
+<li><p><strong>Why something was changed is more important than what has changed.</strong></p></li>
+<li><p>Cross-reference to issues and discussions if possible/relevant.</p></li>
+<li><p>Bad commit messages: “fix”, “oops”, “save work”</p></li>
+<li><p>Bad examples: <a class="reference external" href="http://whatthecommit.com">http://whatthecommit.com</a></p></li>
+<li><p>Write commit messages in English that will be understood
+15 years from now by someone else than you. Or by your future you.</p></li>
+<li><p>Many projects start out as projects “just for me” and end up to be successful projects
+that are developed by 50 people over decades.</p></li>
+<li><p><a class="reference external" href="https://help.github.com/articles/creating-a-commit-with-multiple-authors/">Commits with multiple authors</a> are possible.</p></li>
+</ul>
+<p>Good references:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://fatbusinessman.com/2019/my-favourite-git-commit">“My favourite Git commit”</a></p></li>
+<li><p><a class="reference external" href="https://who-t.blogspot.com/2009/12/on-commit-messages.html">“On commit messages”</a></p></li>
+<li><p><a class="reference external" href="https://gist.github.com/julienbourdeau/e605e4b8b47da97c249a0f72598529c8">“How to Write a Git Commit Message”</a></p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>A great way to learn how to write commit messages and to get inspired by their
+style choices: <strong>browse repositories of codes that you use/like</strong>:</p>
+<p>Some examples (but there are so many good examples):</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/scipy/scipy/commits/main">SciPy</a></p></li>
+<li><p><a class="reference external" href="https://github.com/numpy/numpy/commits/main">NumPy</a></p></li>
+<li><p><a class="reference external" href="https://github.com/pandas-dev/pandas/commits/main">Pandas</a></p></li>
+<li><p><a class="reference external" href="https://github.com/JuliaLang/julia/commits/master">Julia</a></p></li>
+<li><p><a class="reference external" href="https://github.com/tidyverse/ggplot2/commits/main">ggplot2</a>,
+compare with their <a class="reference external" href="https://github.com/tidyverse/ggplot2/releases">release
+notes</a></p></li>
+<li><p><a class="reference external" href="https://github.com/pallets/flask/commits/main">Flask</a>,
+compare with their <a class="reference external" href="https://github.com/pallets/flask/blob/main/CHANGES.rst">release
+notes</a></p></li>
+</ul>
+<p>When designing commit message styles consider also these:</p>
+<ul class="simple">
+<li><p>How will you easily generate a changelog or release notes?</p></li>
+<li><p>During code review, you can help each other improving commit messages.</p></li>
+</ul>
+</div>
+<p>But remember: it is better to make any commit, than no commit. Especially in small projects.
+<strong>Let not the perfect be the enemy of the good enough</strong>.</p>
+</section>
+</section>
+<section id="ignoring-files-and-paths-with-gitignore">
+<span id="gitignore"></span><h2>Ignoring files and paths with .gitignore<a class="headerlink" href="#ignoring-files-and-paths-with-gitignore" title="Permalink to this heading"></a></h2>
+<div class="admonition-discussion discussion attention admonition">
+<p class="admonition-title">Discussion</p>
+<ul class="simple">
+<li><p>Should we add and track all files in a project?</p></li>
+<li><p>How about generated files?</p></li>
+<li><p>Why is it considered a bad idea to commit compiled binaries to version control?</p></li>
+<li><p>What types of generated files do you know?</p></li>
+</ul>
+</div>
+<p>Compiled and generated files are not
+committed to version control. There are many reasons for this:</p>
+<ul class="simple">
+<li><p>Your code could be run on different platforms.</p></li>
+<li><p>These files are automatically generated and thus do not contribute in any meaningful way.</p></li>
+<li><p>The number of changes to track per source code change can increase quickly.</p></li>
+<li><p>When tracking generated files you could see differences in the code although you haven’t touched the code.</p></li>
+</ul>
+<p>For this we use <code class="docutils literal notranslate"><span class="pre">.gitignore</span></code> files. Example:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1"># ignore compiled python 2 files</span>
+*.pyc
+<span class="c1"># ignore compiled python 3 files</span>
+__pycache__
+</pre></div>
+</div>
+<p>An example taken from the <a class="reference external" href="https://git-scm.com/docs/gitignore">official Git documentation</a>:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1"># ignore objects and archives, anywhere in the tree.</span>
+*.<span class="o">[</span>oa<span class="o">]</span>
+<span class="c1"># ignore generated html files,</span>
+*.html
+<span class="c1"># except foo.html which is maintained by hand</span>
+!foo.html
+<span class="c1"># ignore everything under build directory</span>
+build/
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">.gitignore</span></code> should be part of the repository because we want to make sure that all developers see the same behavior.</p></li>
+<li><p><strong>All files should be either tracked or ignored</strong>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">.gitignore</span></code> uses something called a
+<a class="reference external" href="https://en.wikipedia.org/wiki/Glob_(programming)">shell glob syntax</a> for
+determining file patterns to ignore. You can read more about the syntax in the
+<a class="reference external" href="https://git-scm.com/docs/gitignore">documentation</a>.</p></li>
+<li><p>You can have <code class="docutils literal notranslate"><span class="pre">.gitignore</span></code> files in lower level directories and they affect the paths
+relatively.</p></li>
+</ul>
+</section>
+<section id="graphical-user-interfaces">
+<h2>Graphical user interfaces<a class="headerlink" href="#graphical-user-interfaces" title="Permalink to this heading"></a></h2>
+<p>We have seen how to make commits directly via the GitHub website, and also via command line.
+But it is also possible to work from within a Git graphical user interface (GUI):</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://desktop.github.com">GitHub Desktop</a></p></li>
+<li><p><a class="reference external" href="https://www.sourcetreeapp.com">SourceTree</a></p></li>
+<li><p><a class="reference external" href="https://git-scm.com/downloads/guis">List of third-party GUIs</a></p></li>
+</ul>
+</section>
+<section id="branching-and-merging">
+<h2>Branching and merging<a class="headerlink" href="#branching-and-merging" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>A branch is a division unit of work, to be merged with other units of work.</p></li>
+<li><p>A tag is a pointer to a moment in the history of a project.</p></li>
+</ul>
+<figure class="align-default" id="id1">
+<a class="reference internal image-reference" href="_images/git-collaborative.svg"><img alt="Isolated tracks" src="_images/git-collaborative.svg" width="50%" /></a>
+<figcaption>
+<p><span class="caption-text">Isolated tracks of work.</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<section id="typical-workflows">
+<h3>Typical workflows<a class="headerlink" href="#typical-workflows" title="Permalink to this heading"></a></h3>
+<p>There are two typical workflows:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>new-feature<span class="w">  </span><span class="c1"># create branch, switch to it</span>
+<span class="gp">$ </span>git<span class="w"> </span>commit<span class="w">                   </span><span class="c1"># work, work, work, ..., and test</span>
+<span class="gp">$ </span>git<span class="w"> </span>checkout<span class="w"> </span>master<span class="w">          </span><span class="c1"># once feature is ready, switch to master</span>
+<span class="gp">$ </span>git<span class="w"> </span>merge<span class="w"> </span>new-feature<span class="w">        </span><span class="c1"># merge work to master</span>
+<span class="gp">$ </span>git<span class="w"> </span>branch<span class="w"> </span>-d<span class="w"> </span>new-feature<span class="w">    </span><span class="c1"># remove branch</span>
+</pre></div>
+</div>
+<p>Sometimes you have a wild idea which does not work.
+Or you want some throw-away branch for debugging:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>wild-idea<span class="w">    </span><span class="c1"># create branch, switch to it, work, work, work ...</span>
+<span class="gp">$ </span>git<span class="w"> </span>checkout<span class="w"> </span>master<span class="w">          </span><span class="c1"># realize it was a bad idea, back to master</span>
+<span class="gp">$ </span>git<span class="w"> </span>branch<span class="w"> </span>-D<span class="w"> </span>wild-idea<span class="w">      </span><span class="c1"># it is gone, off to a new idea</span>
+</pre></div>
+</div>
+<p>No problem: we worked on a branch, branch is deleted, <code class="docutils literal notranslate"><span class="pre">master</span></code> is clean.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><a class="reference external" href="https://coderefinery.github.io/git-intro/branches/">More about branches</a></p>
+</div>
+</section>
+</section>
+<section id="working-remotely-and-sharing-github">
+<h2>Working remotely and sharing (github)<a class="headerlink" href="#working-remotely-and-sharing-github" title="Permalink to this heading"></a></h2>
+<div class="admonition-discussion discussion attention admonition">
+<p class="admonition-title">Discussion</p>
+<ul class="simple">
+<li><p>What if the hard disk fails?</p></li>
+<li><p>What if somebody steals my laptop?</p></li>
+<li><p>How can we collaborate with others across the web?</p></li>
+</ul>
+</div>
+<p>You might use remotes to:</p>
+<ul class="simple">
+<li><p>Back up your own work.</p></li>
+<li><p>To collaborate with other people.</p></li>
+</ul>
+<p>There are different types of remotes:</p>
+<ul class="simple">
+<li><p>If you have a server you can ssh to, you can use that as a remote.</p></li>
+<li><p><a class="reference external" href="https://github.com">GitHub</a> is a popular, closed-source commercial site.</p></li>
+<li><p><a class="reference external" href="https://about.gitlab.com">GitLab</a> is a popular, open-core
+commercial site.  Many universities have their own private GitLab servers
+set up.</p></li>
+<li><p><a class="reference external" href="https://bitbucket.org">Bitbucket</a> is yet another popular commercial site.</p></li>
+<li><p>Another option is <a class="reference external" href="https://notabug.org">NotABug</a></p></li>
+<li><p>We also operate a <a class="reference external" href="https://coderefinery.org/repository/">Nordic
+research software repository
+platform</a>.
+This is GitLab, free for researchers and allows private,
+cross-university sharing.</p></li>
+</ul>
+<section id="type-along-create-a-new-repository-on-github">
+<h3>Type-along: Create a new repository on GitHub<a class="headerlink" href="#type-along-create-a-new-repository-on-github" title="Permalink to this heading"></a></h3>
+<p>For the rest of this page, we will make a new repository for our
+guacamole recipe on GitHub (<span class="xref std std-ref">here</span> we motivate why we demonstrate this
+with GitHub),
+send our code to it, and then see how
+others can get the code from it.</p>
+<p>Make sure that you are <strong>logged into GitHub</strong>.</p>
+<figure class="align-default" id="id2">
+<a class="with-border reference internal image-reference" href="_images/New_repo.png"><img alt="_images/New_repo.png" class="with-border" src="_images/New_repo.png" style="width: 60%;" /></a>
+<figcaption>
+<p><span class="caption-text">To create a repository we either click the green button “New” (top left corner).</span><a class="headerlink" href="#id2" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="id3">
+<a class="with-border reference internal image-reference" href="_images/new-top-right.png"><img alt="_images/new-top-right.png" class="with-border" src="_images/new-top-right.png" style="width: 60%;" /></a>
+<figcaption>
+<p><span class="caption-text">Or if you see your profile page, there is a “+” menu (top right corner).</span><a class="headerlink" href="#id3" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<hr class="docutils" />
+<p>On this page choose a project name.
+For the sake of this exercise <strong>do not select</strong>
+“Initialize this repository with a README” (what will happen if you do?):</p>
+<figure class="align-default">
+<a class="with-border reference internal image-reference" href="_images/New_repo_formalisms.png"><img alt="_images/New_repo_formalisms.png" class="with-border" src="_images/New_repo_formalisms.png" style="width: 100%;" /></a>
+</figure>
+<p>Once you click the green “Create repository”, you will see a page similar to:</p>
+<figure class="align-default">
+<a class="with-border reference internal image-reference" href="_images/push_existing.png"><img alt="_images/push_existing.png" class="with-border" src="_images/push_existing.png" style="width: 100%;" /></a>
+</figure>
+<p><strong>Don’t do anything yet</strong></p>
+<p>What this means is that we have now an empty project with either an HTTPS or an
+SSH address: click on the HTTPS and SSH buttons to see what happens.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="pushing-our-formalisms-repository-to-github">
+<h2>Pushing our Formalisms repository to GitHub<a class="headerlink" href="#pushing-our-formalisms-repository-to-github" title="Permalink to this heading"></a></h2>
+<p>To push changes to the project please <strong>select SSH</strong>.
+For this to work <a class="reference external" href="https://coderefinery.github.io/installation/ssh/">you will need your SSH keys configured</a>.</p>
+<p>We now want to try the second option that GitHub suggests:</p>
+<blockquote>
+<div><p><strong>… or push an existing repository from the command line</strong></p>
+</div></blockquote>
+<ol class="arabic simple">
+<li><p>Now go to your “Formalisms” repo on your computer.</p></li>
+<li><p>Check that you are in the right place with <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">status</span></code>.</p></li>
+<li><p>Copy paste the three lines to the terminal and execute those, in my case (<strong>you
+need to replace the “user” part and possibly also the repository name</strong>):</p></li>
+</ol>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git<span class="w"> </span>remote<span class="w"> </span>add<span class="w"> </span>origin<span class="w"> </span>git@github.com:&lt;user&gt;/Formalisms.git
+<span class="gp">$ </span>git<span class="w"> </span>branch<span class="w"> </span>-M<span class="w"> </span>main
+<span class="gp">$ </span>git<span class="w"> </span>push<span class="w"> </span>-u<span class="w"> </span>origin<span class="w"> </span>main
+</pre></div>
+</div>
+<p>The meaning of the above lines:</p>
+<ul class="simple">
+<li><p>Add a remote reference with the name “origin”</p></li>
+<li><p>Rename current branch to “main”</p></li>
+<li><p>Push branch “main” to “origin”</p></li>
+</ul>
+<p>You should now see something like:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (7/7), done.
+Writing objects: 100% (7/7), 846 bytes | 846.00 KiB/s, done.
+Total 7 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), done.
+To github.com:bclaremar/Formalisms.git
+ * [new branch]      main -&gt; main
+branch &#39;main&#39; set up to track &#39;origin/main&#39;.
+</pre></div>
+</div>
+<div class="warning dropdown admonition">
+<p class="admonition-title">If you get errors</p>
+<p>If you instead get something like the below, your SSH keys are not correctly configured.</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>git@github.com: Permission denied (publickey).
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+</pre></div>
+</div>
+<p>If <code class="docutils literal notranslate"><span class="pre">ssh</span> <span class="pre">-T</span> <span class="pre">git&#64;github.com</span></code> gives an error, this is the case.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent">Generating a new SSH key and adding it to the ssh-agent</a></p></li>
+<li><p>Approximate steps</p></li>
+</ul>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ssh-keygen -t ed25519 -C &quot;email address&quot;</span>
+<span class="go">eval &quot;$(ssh-agent -s)&quot;</span>
+<span class="go">ssh-add ~/.ssh/id_ed25519</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><a class="reference external" href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account">Adding a new SSH key to your GitHub account</a></p></li>
+<li><p>Hope you can <strong>fix this in Lunch Break</strong>. <strong>Follow the rest by listening for now.</strong></p></li>
+</ul>
+</div>
+<p><strong>Reload your GitHub project website and - taa-daa - your commits should now be
+online!</strong></p>
+<p>What just happened? <strong>Think of publishing a repository as uploading the <code class="docutils literal notranslate"><span class="pre">.git</span></code> part online</strong>.</p>
+</section>
+<hr class="docutils" />
+<section id="cloning-a-repository">
+<h2>Cloning a repository<a class="headerlink" href="#cloning-a-repository" title="Permalink to this heading"></a></h2>
+<p>Now other people can clone this repository and contribute changes.</p>
+<p>At this point only a brief demo - if you copy the SSH or HTTPS address, you can clone repositories like this
+(again adapt the “namespace/repository.git” part):</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git<span class="w"> </span>clone<span class="w"> </span>git@github.com:&lt;user&gt;/project.git
+</pre></div>
+</div>
+<p>This creates a directory called “project” unless it already exists. You can also specify the target directory
+on your computer:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git<span class="w"> </span>clone<span class="w"> </span>git@github.com:&lt;user&gt;/project.git<span class="w"> </span>myproject
+</pre></div>
+</div>
+<p>What just happened? <strong>Think of cloning as downloading the <code class="docutils literal notranslate"><span class="pre">.git</span></code> part to your
+computer</strong>. After downloading the <code class="docutils literal notranslate"><span class="pre">.git</span></code> part the branch pointed to by HEAD is
+automatically checked out.</p>
+<div class="admonition-keypoints keypoints admonition">
+<p class="admonition-title">Keypoints</p>
+<ul class="simple">
+<li><p>A repository can have one or multiple remotes (we will revisit these later).</p></li>
+<li><p>Local branches often track remote branches.</p></li>
+<li><p>A remote serves as a full backup of your work.</p></li>
+</ul>
+</div>
+</section>
+<section id="working-on-github">
+<h2>Working on GitHub<a class="headerlink" href="#working-on-github" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>You can do basically the same work at GitHub as in your local git repo</p></li>
+<li><p>The graphical view makes it easier to work with in everyday editing work at least.</p>
+<ul>
+<li><p>Depends on your own preferences of course.</p></li>
+</ul>
+</li>
+<li><p>Here your commit each file at a time with the “commit button”. No staging that is.</p></li>
+<li><p>GitHub Actions are workflows defined by you, like:</p>
+<ul>
+<li><p>for automatic testing after each commit (Used on Thursday)</p></li>
+<li><p>for GitHub Pages, briefly covered in last session today.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this heading"></a></h2>
+<p>Now we know how to save snapshots:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git<span class="w"> </span>add<span class="w"> </span>&lt;file<span class="o">(</span>s<span class="o">)</span>&gt;
+<span class="gp">$ </span>git<span class="w"> </span>commit
+</pre></div>
+</div>
+<p>And this is what we do as we program.</p>
+<p>Every state is then saved and later we will learn how to go back to these “checkpoints”
+and how to undo things.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git<span class="w"> </span>init<span class="w">    </span><span class="c1"># initialize new repository</span>
+<span class="gp">$ </span>git<span class="w"> </span>add<span class="w">     </span><span class="c1"># add files or stage file(s)</span>
+<span class="gp">$ </span>git<span class="w"> </span>commit<span class="w">  </span><span class="c1"># commit staged file(s)</span>
+<span class="gp">$ </span>git<span class="w"> </span>status<span class="w">  </span><span class="c1"># see what is going on</span>
+<span class="gp">$ </span>git<span class="w"> </span>log<span class="w">     </span><span class="c1"># see history</span>
+<span class="gp">$ </span>git<span class="w"> </span>diff<span class="w">    </span><span class="c1"># show unstaged/uncommitted modifications</span>
+<span class="gp">$ </span>git<span class="w"> </span>show<span class="w">    </span><span class="c1"># show the change for a specific commit</span>
+<span class="gp">$ </span>git<span class="w"> </span>mv<span class="w">      </span><span class="c1"># move tracked files</span>
+<span class="gp">$ </span>git<span class="w"> </span>rm<span class="w">      </span><span class="c1"># remove tracked files</span>
+</pre></div>
+</div>
+<p>Git is not ideal for large binary files
+(for this consider <a class="reference external" href="http://git-annex.branchable.com">http://git-annex.branchable.com</a>).</p>
+<div class="admonition-keypoints keypoints admonition">
+<p class="admonition-title">Keypoints</p>
+<ul class="simple">
+<li><p>Initializing a Git repository is simple: git init.</p></li>
+<li><p>Commits should be used to tell a story.</p></li>
+<li><p>Git uses the .git folder to store the snapshots.</p></li>
+<li><p>Don’t be afraid to stage and commit often. Better too often than not often enough.</p></li>
+<li><p>A branch is a division unit of work, to be merged with other units of work.</p></li>
+<li><p>A tag is a pointer to a moment in the history of a project.</p></li>
+<li><p>A repository can have one or multiple remotes (we will revisit these later).</p></li>
+<li><p>Local branches often track remote branches.</p></li>
+<li><p>A remote serves as a full backup of your work.</p></li>
+</ul>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="UML_deeper.html" class="btn btn-neutral float-left" title="More about UML" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="collab_deeper.html" class="btn btn-neutral float-right" title="More about collaboration" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, UPPMAX.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

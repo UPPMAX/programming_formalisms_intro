@@ -1,0 +1,982 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The iterations and Git &mdash; Programming formalism intro 0.1 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" type="text/css" />
+      <link rel="stylesheet" href="_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="_static/togglebutton.css" type="text/css" />
+      <link rel="stylesheet" href="_static/sphinx_lesson.css" type="text/css" />
+      <link rel="stylesheet" href="_static/sphinx_rtd_theme_ext_color_contrast.css" type="text/css" />
+      <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+        <script src="_static/clipboard.min.js"></script>
+        <script src="_static/copybutton.js"></script>
+        <script src="_static/minipres.js"></script>
+        <script>let toggleHintShow = 'Click to show';</script>
+        <script>let toggleHintHide = 'Click to hide';</script>
+        <script>let toggleOpenOnPrint = 'true';</script>
+        <script src="_static/togglebutton.js"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+        <script>mermaid.initialize({startOnLoad:true});</script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Deploy and document for usage" href="deploy.html" />
+    <link rel="prev" title="Start with coding!" href="startup_code.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> Programming formalism intro
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Preparations:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="setup.html">Setup</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Theory lessons:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sdlc_tools.html">Software Development Lifecycle (SDLC) tools</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Project lessons:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="flowcharts.html">Planning phase</a></li>
+<li class="toctree-l1"><a class="reference internal" href="startup.html">Start the project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="startup_code.html">Start with coding!</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">The iterations and Git</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#start-with-pushing-your-changes-in-the-local-git-to-github">Start with pushing your changes in the local Git to GitHub</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#alternative-way-to-initialize-git">Alternative way to initialize Git</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#make-the-next-iteration-of-the-planet-project">Make the next iteration of the planet project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#git-diff">git diff</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#stage-and-commit-the-changes">Stage and commit the changes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ignoring-files-and-paths-with-gitignore">Ignoring files and paths with .gitignore</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#branching-and-merging">Branching and merging</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#typical-workflows">Typical workflows</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#lets-make-our-code-modular-test-in-branch">Let’s make our code modular (test in branch)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#meanwhile">Meanwhile…</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#merging">Merging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#summary">Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="deploy.html">Deploy and document for usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="collab.html">Collaboration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="summary.html">Summary</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Extra reading:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="SDLC_models.html">Software Development Lifecycle (SDLC) models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="UML_deeper.html">More about UML</a></li>
+<li class="toctree-l1"><a class="reference internal" href="git_deeper.html">More about git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="collab_deeper.html">More about collaboration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reproducible_deeper.html">More about reproducibility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sharing_deeper.html">More about sharing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="documentation_deeper.html">More about documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="deploy_deeper.html">More about deploying</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Reference:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="concepts.html">Concepts</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Programming formalism intro</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>The iterations and Git</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/UPPMAX/programming_formalisms_intro/blob/main/doc//doc/sourcecontrol.md" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section class="tex2jax_ignore mathjax_ignore" id="the-iterations-and-git">
+<h1>The iterations and Git<a class="headerlink" href="#the-iterations-and-git" title="Permalink to this heading"></a></h1>
+<div class="admonition-questions questions admonition">
+<p class="admonition-title">Questions</p>
+<ul class="simple">
+<li><p>Why should you use source/version control?</p></li>
+</ul>
+</div>
+<div class="admonition-have-you-used-git-locally-in-your-own-work discussion attention admonition">
+<p class="admonition-title">Have you used Git (locally) in your own work?</p>
+<p>Answer in <strong>Menti</strong></p>
+</div>
+<div class="admonition-objectives objectives admonition">
+<p class="admonition-title">Objectives</p>
+<ul class="simple">
+<li><p>We will</p>
+<ul>
+<li><p>work with the basic commands in git</p></li>
+<li><p>go through branching and merging</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul class="simple">
+<li><p>We will cover the most basic things with Git such that you can use it this week.</p></li>
+<li><p>For deeper understanding and hands-on on branching etcetera, please confer the course material of <a class="reference external" href="https://nbis-reproducible-research.readthedocs.io/en/course_2104/git/">NBIS</a> and <a class="reference external" href="https://coderefinery.github.io/git-intro/">CodeRefinery</a>.</p></li>
+</ul>
+</div>
+<section id="start-with-pushing-your-changes-in-the-local-git-to-github">
+<h2>Start with pushing your changes in the local Git to GitHub<a class="headerlink" href="#start-with-pushing-your-changes-in-the-local-git-to-github" title="Permalink to this heading"></a></h2>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"> $ </span>git<span class="w"> </span>push
+</pre></div>
+</div>
+<p>You should now see something like:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (7/7), done.
+Writing objects: 100% (7/7), 846 bytes | 846.00 KiB/s, done.
+Total 7 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), done.
+To github.com:bclaremar/Formalisms.git
+ * [new branch]      main -&gt; main
+branch &#39;main&#39; set up to track &#39;origin/main&#39;.
+</pre></div>
+</div>
+<div class="warning dropdown admonition">
+<p class="admonition-title">If you get errors</p>
+<p>If you instead get something like the below, your SSH keys are not correctly configured.</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>git@github.com: Permission denied (publickey).
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+</pre></div>
+</div>
+<p>If <code class="docutils literal notranslate"><span class="pre">ssh</span> <span class="pre">-T</span> <span class="pre">git&#64;github.com</span></code> gives an error, this is the case.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent">Generating a new SSH key and adding it to the ssh-agent</a></p></li>
+<li><p>Approximate steps</p></li>
+</ul>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ssh-keygen -t ed25519 -C &quot;email address&quot;</span>
+<span class="go">eval &quot;$(ssh-agent -s)&quot;</span>
+<span class="go">ssh-add ~/.ssh/id_ed25519</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><a class="reference external" href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account">Adding a new SSH key to your GitHub account</a></p></li>
+<li><p>Hope you can <strong>fix this in Lunch Break</strong>. <strong>Follow the rest by listening for now.</strong></p></li>
+</ul>
+</div>
+<p><strong>Reload your GitHub project website and - taa-daa - your commits should now be
+online!</strong></p>
+<p>What just happened? <strong>Think of publishing a repository as uploading the <code class="docutils literal notranslate"><span class="pre">.git</span></code> part online</strong>.</p>
+</section>
+<hr class="docutils" />
+<section id="alternative-way-to-initialize-git">
+<h2>Alternative way to initialize Git<a class="headerlink" href="#alternative-way-to-initialize-git" title="Permalink to this heading"></a></h2>
+<div class="admonition-a-new-repository-from-an-existing-project-on-own-computer-or-hpc-user-account admonition">
+<p class="admonition-title">A new repository from an existing project on own computer or HPC user account.</p>
+<ul class="simple">
+<li><p>Say you’ve got an existing project that you want to start tracking with git.</p>
+<ul>
+<li><p>Go into the directory containing the project.</p></li>
+<li><p>Type <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">init</span></code>.</p></li>
+<li><p>Type <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span></code> to add all of the relevant files.</p></li>
+<li><p>You’ll probably want to create a <code class="docutils literal notranslate"><span class="pre">.gitignore</span></code> file right away, to indicate all of the files you don’t want to track. Use <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span> <span class="pre">.gitignore</span></code>, too.</p></li>
+<li><p>Type <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">commit</span></code>.</p></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+<section id="make-the-next-iteration-of-the-planet-project">
+<h2>Make the next iteration of the planet project<a class="headerlink" href="#make-the-next-iteration-of-the-planet-project" title="Permalink to this heading"></a></h2>
+<div class="admonition-type-along-add-jupiter exercise important admonition">
+<p class="admonition-title">Type-along: Add Jupiter</p>
+<ul class="simple">
+<li><p>We will add some lines to count with the effects from the gravity of Jupiter on Earth</p></li>
+</ul>
+<div class="admonition-code solution important dropdown admonition">
+<p class="admonition-title">Code</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
+<span class="c1">#planet with Jupiter</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span> 
+
+<span class="c1">#constants</span>
+<span class="n">G</span><span class="o">=</span><span class="mf">6.6743e-11</span>
+<span class="n">AU</span><span class="o">=</span><span class="mf">149.597871e9</span> <span class="c1"># 1 astronomical unit (AU) is the mean distance between sun and Earth</span>
+<span class="n">AU1</span><span class="o">=</span><span class="mf">150.8e9</span>
+<span class="n">dJ</span><span class="o">=</span><span class="mf">5.203</span><span class="o">*</span><span class="n">AU</span>
+<span class="n">mj</span><span class="o">=</span><span class="mf">5.97219e24</span>
+<span class="n">mJ</span><span class="o">=</span><span class="mf">1.899e27</span>
+<span class="n">M</span><span class="o">=</span><span class="mf">1.9891e30</span>
+<span class="n">day</span><span class="o">=</span><span class="mi">86400</span><span class="p">;</span>
+<span class="n">year</span><span class="o">=</span><span class="mi">31556926</span><span class="p">;</span>
+<span class="n">v0</span><span class="o">=</span><span class="n">AU</span><span class="o">*</span><span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="n">year</span><span class="p">;</span>
+
+<span class="c1">#Jupiter</span>
+<span class="n">v0J</span><span class="o">=</span><span class="n">dJ</span><span class="o">*</span><span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="p">(</span><span class="mf">11.86</span><span class="o">*</span><span class="n">year</span><span class="p">);</span>
+
+<span class="n">L</span><span class="o">=</span><span class="mi">50000</span>
+
+<span class="n">x0</span><span class="o">=</span><span class="n">AU1</span><span class="p">;</span>
+<span class="n">y0</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+<span class="n">u0</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+<span class="n">x</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="mi">365</span><span class="o">*</span><span class="n">L</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">float</span><span class="p">);</span>
+<span class="n">y</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="mi">365</span><span class="o">*</span><span class="n">L</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">float</span><span class="p">);</span>
+
+
+<span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">=</span><span class="n">x0</span><span class="p">;</span>
+<span class="n">y</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">=</span><span class="n">y0</span><span class="p">;</span>
+<span class="n">u</span><span class="o">=</span><span class="n">u0</span><span class="p">;</span>
+<span class="n">v</span><span class="o">=</span><span class="n">v0</span><span class="p">;</span>
+
+<span class="n">x0J</span><span class="o">=</span><span class="n">dJ</span><span class="p">;</span>
+<span class="n">y0J</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+<span class="n">u0J</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+<span class="n">xJ</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="mi">365</span><span class="o">*</span><span class="n">L</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">float</span><span class="p">);</span>
+<span class="n">yJ</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="mi">365</span><span class="o">*</span><span class="n">L</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">float</span><span class="p">);</span>
+<span class="n">xJ</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">=</span><span class="n">x0J</span><span class="p">;</span>
+<span class="n">yJ</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">=</span><span class="n">y0J</span><span class="p">;</span>
+<span class="n">uJ</span><span class="o">=</span><span class="n">u0J</span><span class="p">;</span>
+<span class="n">vJ</span><span class="o">=</span><span class="n">v0J</span><span class="p">;</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">365</span><span class="o">*</span><span class="n">L</span><span class="p">):</span>    
+    <span class="k">if</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">36500</span><span class="o">==</span><span class="mi">0</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="o">/</span><span class="mi">365</span><span class="p">)</span>
+
+    <span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span><span class="n">day</span><span class="o">*</span><span class="n">u</span><span class="p">;</span>
+    <span class="n">y</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="n">y</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span><span class="n">day</span><span class="o">*</span><span class="n">v</span><span class="p">;</span>
+    <span class="n">xJ</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="n">xJ</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span><span class="n">day</span><span class="o">*</span><span class="n">uJ</span><span class="p">;</span>
+    <span class="n">yJ</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="n">yJ</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span><span class="n">day</span><span class="o">*</span><span class="n">vJ</span><span class="p">;</span>
+    
+    <span class="n">axS</span><span class="o">=-</span><span class="n">G</span><span class="o">*</span><span class="n">M</span><span class="o">/</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">**</span><span class="mi">2</span><span class="o">+</span><span class="n">y</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">**</span><span class="p">[</span><span class="mi">3</span><span class="o">/</span><span class="mi">2</span><span class="p">])</span><span class="o">*</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+    <span class="n">ayS</span><span class="o">=-</span><span class="n">G</span><span class="o">*</span><span class="n">M</span><span class="o">/</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">**</span><span class="mi">2</span><span class="o">+</span><span class="n">y</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">**</span><span class="p">[</span><span class="mi">3</span><span class="o">/</span><span class="mi">2</span><span class="p">])</span><span class="o">*</span><span class="n">y</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+    <span class="n">dxJ</span><span class="o">=</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">-</span><span class="n">xJ</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+    <span class="n">dyJ</span><span class="o">=</span><span class="n">y</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">-</span><span class="n">yJ</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+    <span class="n">axEJ</span><span class="o">=-</span><span class="n">G</span><span class="o">*</span><span class="n">mJ</span><span class="o">/</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">dxJ</span><span class="o">**</span><span class="mi">2</span><span class="o">+</span><span class="n">dyJ</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">**</span><span class="p">[</span><span class="mi">3</span><span class="o">/</span><span class="mi">2</span><span class="p">])</span><span class="o">*</span><span class="n">dxJ</span><span class="p">;</span>
+    <span class="n">ayEJ</span><span class="o">=-</span><span class="n">G</span><span class="o">*</span><span class="n">mJ</span><span class="o">/</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">dxJ</span><span class="o">**</span><span class="mi">2</span><span class="o">+</span><span class="n">dyJ</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">**</span><span class="p">[</span><span class="mi">3</span><span class="o">/</span><span class="mi">2</span><span class="p">])</span><span class="o">*</span><span class="n">dyJ</span><span class="p">;</span>
+    <span class="n">ax</span><span class="o">=</span><span class="n">axS</span><span class="o">+</span><span class="n">axEJ</span><span class="p">;</span>
+    <span class="n">ay</span><span class="o">=</span><span class="n">ayS</span><span class="o">+</span><span class="n">ayEJ</span><span class="p">;</span>
+
+    <span class="n">u</span><span class="o">=</span><span class="n">u</span><span class="o">+</span><span class="n">ax</span><span class="o">*</span><span class="n">day</span><span class="p">;</span>
+    <span class="n">v</span><span class="o">=</span><span class="n">v</span><span class="o">+</span><span class="n">ay</span><span class="o">*</span><span class="n">day</span><span class="p">;</span>
+
+    <span class="n">axJ</span><span class="o">=-</span><span class="n">G</span><span class="o">*</span><span class="n">M</span><span class="o">/</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">xJ</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">**</span><span class="mi">2</span><span class="o">+</span><span class="n">yJ</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">**</span><span class="p">[</span><span class="mi">3</span><span class="o">/</span><span class="mi">2</span><span class="p">])</span><span class="o">*</span><span class="n">xJ</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+    <span class="n">ayJ</span><span class="o">=-</span><span class="n">G</span><span class="o">*</span><span class="n">M</span><span class="o">/</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">xJ</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">**</span><span class="mi">2</span><span class="o">+</span><span class="n">yJ</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">**</span><span class="p">[</span><span class="mi">3</span><span class="o">/</span><span class="mi">2</span><span class="p">])</span><span class="o">*</span><span class="n">yJ</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+    <span class="n">uJ</span><span class="o">=</span><span class="n">uJ</span><span class="o">+</span><span class="n">axJ</span><span class="o">*</span><span class="n">day</span><span class="p">;</span>
+    <span class="n">vJ</span><span class="o">=</span><span class="n">vJ</span><span class="o">+</span><span class="n">ayJ</span><span class="o">*</span><span class="n">day</span><span class="p">;</span>
+
+
+<span class="n">rj</span><span class="o">=</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="o">+</span><span class="n">y</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">**</span><span class="mf">.5</span>
+
+<span class="n">l</span><span class="o">=</span><span class="mi">1000</span><span class="p">;</span>
+<span class="n">e</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">L</span><span class="o">/</span><span class="n">l</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">float</span><span class="p">);</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="nb">int</span><span class="p">(</span><span class="n">L</span><span class="o">/</span><span class="n">l</span><span class="p">)):</span>
+    <span class="n">win</span><span class="o">=</span><span class="nb">range</span><span class="p">(</span><span class="n">i</span><span class="o">*</span><span class="n">l</span><span class="o">*</span><span class="mi">365</span><span class="p">,(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">l</span><span class="o">*</span><span class="mi">365</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">((</span><span class="n">win</span><span class="p">))</span>
+    <span class="n">a</span><span class="o">=</span><span class="nb">max</span><span class="p">(</span><span class="n">rj</span><span class="p">[</span><span class="n">win</span><span class="p">])</span>
+    <span class="n">b</span><span class="o">=</span><span class="nb">min</span><span class="p">(</span><span class="n">rj</span><span class="p">[</span><span class="n">win</span><span class="p">])</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">)</span>
+    <span class="n">e</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="mi">1</span><span class="o">-</span><span class="mi">2</span><span class="o">/</span><span class="p">(</span><span class="n">a</span><span class="o">/</span><span class="n">b</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="n">fig</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
+<span class="n">ax</span><span class="o">=</span><span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xJ</span><span class="p">,</span><span class="n">yJ</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="s1">&#39;o&#39;</span><span class="p">)</span>
+
+
+<span class="n">ax</span><span class="o">=</span><span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="nb">int</span><span class="p">(</span><span class="n">L</span><span class="o">/</span><span class="n">l</span><span class="p">)),</span><span class="n">e</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;../Figures/planet_earthJupiter.png&#39;</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">bbox_inches</span><span class="o">=</span><span class="s1">&#39;tight&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<ul class="simple">
+<li><p><strong>Do not run because we changed from 2 years simulation time to 5000 years!</strong></p></li>
+<li><p>The output should look like this at least.</p></li>
+</ul>
+<figure class="align-default">
+<a class="with-border reference internal image-reference" href="_images/planet_earthJupiter.png"><img alt="_images/planet_earthJupiter.png" class="with-border" src="_images/planet_earthJupiter.png" style="width: 100%;" /></a>
+</figure>
+<ul class="simple">
+<li><p>Do <strong>not</strong> stage (add) yet!</p></li>
+</ul>
+<p><strong>Discussion</strong></p>
+<ul class="simple">
+<li><p>That’s long code!</p></li>
+<li><p>Perhaps make modular?</p></li>
+<li><p>The orbits seems too elliptic in the plot. The axes should be equal!</p></li>
+<li><p>Let’s look at that in the next iteration!</p></li>
+</ul>
+</div>
+</section>
+<section id="git-diff">
+<h2>git diff<a class="headerlink" href="#git-diff" title="Permalink to this heading"></a></h2>
+<div class="admonition-type-along type-along important admonition">
+<p class="admonition-title">Type-Along</p>
+<ul class="simple">
+<li><p>When you are done editing the files, try <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">diff</span></code>:</p></li>
+</ul>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">  $ </span>git<span class="w"> </span>diff
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>You can use <em>arrows</em> or <em>enter</em> to scroll the output and quit with <code class="docutils literal notranslate"><span class="pre">q</span></code>.</p></li>
+<li><p>You will see some thing like this.</p></li>
+</ul>
+<div class="admonition-output-from-diff solution important dropdown admonition">
+<p class="admonition-title">Output from diff</p>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gh">diff --git a/planet.py b/planet.py</span>
+<span class="gh">index 60b8b20..8061461 100644</span>
+<span class="gd">--- a/planet.py</span>
+<span class="gi">+++ b/planet.py</span>
+<span class="gu">@@ -1,23 +1,24 @@</span>
+<span class="gd">-#planet</span>
+<span class="gi">+</span>
+<span class="gi">+#planet with Jupiter</span>
+<span class="w"> </span>import numpy as np
+<span class="w"> </span>import matplotlib.pyplot as plt
+
+<span class="w"> </span>#constants
+<span class="w"> </span>G=6.6743e-11
+<span class="w"> </span>AU=149.597871e9 # 1 astronomical unit (AU) is the mean distance between sun and Earth
+<span class="w"> </span>AU1=150.8e9
+<span class="gi">+dJ=5.203*AU</span>
+<span class="w"> </span>mj=5.97219e24
+<span class="w"> </span>mJ=1.899e27
+<span class="w"> </span>M=1.9891e30
+<span class="w"> </span>day=86400;
+<span class="w"> </span>year=31556926;
+<span class="w"> </span>v0=AU*2*np.pi/year;
+<span class="gd">-Fg=G*M*mj/AU**2</span>
+<span class="gd">-ag=Fg/mj</span>
+<span class="gd">-Fc=mj*v0**2/AU</span>
+<span class="gd">-ac=Fc/mj</span>
+
+<span class="gd">-L=2</span>
+<span class="gi">+#Jupiter</span>
+<span class="gi">+v0J=dJ*2*np.pi/(11.86*year);</span>
+<span class="gi">+</span>
+<span class="gi">+L=50000</span>
+
+<span class="w"> </span>x0=AU1;
+<span class="w"> </span>y0=0;
+<span class="gu">@@ -25,34 +26,69 @@ u0=0;</span>
+<span class="w"> </span>x=np.zeros(365*L, dtype=float);
+<span class="w"> </span>y=np.zeros(365*L, dtype=float);
+
+<span class="gi">+</span>
+<span class="w"> </span>x[0]=x0;
+<span class="w"> </span>y[0]=y0;
+<span class="w"> </span>u=u0;
+<span class="w"> </span>v=v0;
+
+<span class="gi">+x0J=dJ;</span>
+<span class="gi">+y0J=0;</span>
+<span class="gi">+u0J=0;</span>
+<span class="gi">+xJ=np.zeros(365*L, dtype=float);</span>
+<span class="gi">+yJ=np.zeros(365*L, dtype=float);</span>
+<span class="gi">+xJ[0]=x0J;</span>
+<span class="gi">+yJ[0]=y0J;</span>
+<span class="gi">+uJ=u0J;</span>
+<span class="gi">+vJ=v0J;</span>
+<span class="gi">+</span>
+<span class="w"> </span>for i in range(1,365*L):
+<span class="gd">-    print(i)</span>
+<span class="gi">+    if i % 36500==0:</span>
+<span class="gi">+        print(i/365)</span>
+<span class="gi">+</span>
+<span class="w"> </span>    x[i]=x[i-1]+day*u;
+<span class="w"> </span>    y[i]=y[i-1]+day*v;
+<span class="gd">-    ax=-G*M/(abs(x[i]**2+y[i]**2)**[3/2])*x[i];</span>
+<span class="gd">-    ay=-G*M/(abs(x[i]**2+y[i]**2)**[3/2])*y[i];</span>
+<span class="gi">+    xJ[i]=xJ[i-1]+day*uJ;</span>
+<span class="gi">+    yJ[i]=yJ[i-1]+day*vJ;</span>
+<span class="gi">+</span>
+<span class="gi">+    axS=-G*M/(abs(x[i]**2+y[i]**2)**[3/2])*x[i];</span>
+<span class="gi">+    ayS=-G*M/(abs(x[i]**2+y[i]**2)**[3/2])*y[i];</span>
+<span class="gi">+    dxJ=x[i]-xJ[i];</span>
+<span class="gi">+    dyJ=y[i]-yJ[i];</span>
+<span class="gi">+    axEJ=-G*mJ/(abs(dxJ**2+dyJ**2)**[3/2])*dxJ;</span>
+<span class="gi">+    ayEJ=-G*mJ/(abs(dxJ**2+dyJ**2)**[3/2])*dyJ;</span>
+<span class="gi">+    ax=axS+axEJ;</span>
+<span class="gi">+    ay=ayS+ayEJ;</span>
+<span class="gi">+</span>
+<span class="w"> </span>    u=u+ax*day;
+<span class="w"> </span>    v=v+ay*day;
+
+<span class="gi">+    axJ=-G*M/(abs(xJ[i]**2+yJ[i]**2)**[3/2])*xJ[i];</span>
+<span class="gi">+    ayJ=-G*M/(abs(xJ[i]**2+yJ[i]**2)**[3/2])*yJ[i];</span>
+<span class="gi">+    uJ=uJ+axJ*day;</span>
+<span class="gi">+    vJ=vJ+ayJ*day;</span>
+<span class="gi">+</span>
+<span class="gi">+</span>
+<span class="w"> </span>rj=(x**2+y**2)**.5
+<span class="gd">-a=max(rj)</span>
+<span class="gd">-b=min(rj)</span>
+<span class="gd">-e=1-2/(a/b+1)</span>
+<span class="gd">-rel=(a/b-1)</span>
+
+<span class="gi">+l=1000;</span>
+<span class="gi">+e=np.zeros(int(L/l), dtype=float);</span>
+<span class="gi">+for i in range(0,int(L/l)):</span>
+<span class="gi">+    win=range(i*l*365,(i+1)*l*365)</span>
+<span class="gi">+    print((win))</span>
+<span class="gi">+    a=max(rj[win])</span>
+<span class="gi">+    b=min(rj[win])</span>
+<span class="gi">+    print(a,b)</span>
+<span class="gi">+    e[i]=1-2/(a/b+1)</span>
+
+<span class="w"> </span>fig=plt.figure(1,figsize=(12,5))
+<span class="w"> </span>ax=fig.add_subplot(1,2,1)
+<span class="w"> </span>ax.plot(x,y)
+<span class="gi">+ax.plot(xJ,yJ)</span>
+<span class="w"> </span>ax.plot (0,0,&#39;o&#39;)
+<span class="gd">-#axis equal</span>
+<span class="gi">+</span>
+
+<span class="w"> </span>ax=fig.add_subplot(1,2,2)
+<span class="gd">-ax.plot(range(0,365*2),rj)</span>
+<span class="gi">+ax.plot(range(0,int(L/l)),e)</span>
+
+<span class="gd">-plt.savefig(&#39;../Figures/planet_earth.png&#39;, dpi=100, bbox_inches=&#39;tight&#39;)</span>
+<span class="gi">+plt.savefig(&#39;../Figures/planet_earthJupiter.png&#39;, dpi=100, bbox_inches=&#39;tight&#39;)</span>
+(END)
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="stage-and-commit-the-changes">
+<h2>Stage and commit the changes<a class="headerlink" href="#stage-and-commit-the-changes" title="Permalink to this heading"></a></h2>
+<div class="admonition-type-along type-along important admonition">
+<p class="admonition-title">Type-Along</p>
+<ul class="simple">
+<li><p>Now first stage and then commit (what happens when we leave out the <code class="docutils literal notranslate"><span class="pre">-m</span></code> flag?):</p></li>
+</ul>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">  $ </span>git<span class="w"> </span>add<span class="w"> </span>python.py<span class="w">     </span><span class="c1"># &lt;-- we can state exactly which file to stage as well</span>
+<span class="gp">  $ </span>git<span class="w"> </span>commit<span class="w">                   </span><span class="c1"># &lt;-- we have left out -m &quot;...&quot;</span>
+</pre></div>
+</div>
+<p>When you leave out the <code class="docutils literal notranslate"><span class="pre">-m</span></code> flag, Git should open an editor where you can edit
+your commit message. This message will be associated and stored with the
+changes you made. This message is your chance to explain what you’ve done and
+convince others (and your future self) that the changes you made were
+justified.  Write a message (like <code class="docutils literal notranslate"><span class="pre">added</span> <span class="pre">Jupiter</span></code> and save and close the file.</p>
+<p>When you are done committing the changes, experiment with these commands:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git<span class="w"> </span>log
+<span class="gp">$ </span>git<span class="w"> </span>log<span class="w"> </span>--stat
+<span class="gp">$ </span>git<span class="w"> </span>log<span class="w"> </span>--oneline
+</pre></div>
+</div>
+</div>
+</section>
+<section id="ignoring-files-and-paths-with-gitignore">
+<h2>Ignoring files and paths with .gitignore<a class="headerlink" href="#ignoring-files-and-paths-with-gitignore" title="Permalink to this heading"></a></h2>
+<p>Compiled and generated files are not
+committed to version control. There are many reasons for this:</p>
+<ul class="simple">
+<li><p>Your code could be run on different platforms.</p></li>
+<li><p>These files are automatically generated and thus do not contribute in any meaningful way.</p></li>
+<li><p>The number of changes to track per source code change can increase quickly.</p></li>
+<li><p>When tracking generated files you could see differences in the code although you haven’t touched the code.</p></li>
+</ul>
+<p>For this we use <code class="docutils literal notranslate"><span class="pre">.gitignore</span></code> files. Read more https://uppmax.github.io/programming_formalisms_intro/git_deeper.html</p>
+<ul class="simple">
+<li><p>Not important for our project right now.</p></li>
+<li><p><strong>But</strong>, we should had omitted the virtual environment, i.e. the directory <code class="docutils literal notranslate"><span class="pre">planet-project</span></code>.</p></li>
+</ul>
+</section>
+<section id="branching-and-merging">
+<h2>Branching and merging<a class="headerlink" href="#branching-and-merging" title="Permalink to this heading"></a></h2>
+<p>Software development is often not linear:</p>
+<ul class="simple">
+<li><p>We typically need at least one version of the code to “work” (to compile, to give expected results, …).</p></li>
+<li><p>At the same time we work on new features, often several features concurrently.
+Often they are unfinished.</p></li>
+<li><p>We need to be able to separate different lines of work really well.</p></li>
+</ul>
+<figure class="align-default" id="id1">
+<a class="reference internal image-reference" href="_images/git-collaborative.svg"><img alt="Isolated tracks" src="_images/git-collaborative.svg" width="50%" /></a>
+<figcaption>
+<p><span class="caption-text">Isolated tracks of work.</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>The strength of version control is that it permits the researcher to <strong>isolate
+different tracks of work</strong>, which can later be merged to create a composite
+version that contains all changes.</p>
+<ul class="simple">
+<li><p>We see branching points and merging points.</p></li>
+<li><p>Main line development is often called <code class="docutils literal notranslate"><span class="pre">master</span></code> or <code class="docutils literal notranslate"><span class="pre">main</span></code>.</p></li>
+<li><p>Other than this convention there is nothing special about <code class="docutils literal notranslate"><span class="pre">master</span></code> or <code class="docutils literal notranslate"><span class="pre">main</span></code>, it is just a branch.</p></li>
+<li><p>Commits form a directed acyclic graph (we have left out the arrows to avoid confusion about the time arrow).</p></li>
+</ul>
+<p>A group of commits that create a single narrative are called a <strong>branch</strong>.
+There are different branching strategies, but it is useful to think that a branch
+tells the story of a feature, e.g. “fast sequence extraction” or “Python interface” or “fixing bug in
+matrix inversion algorithm”.</p>
+<section id="typical-workflows">
+<h3>Typical workflows<a class="headerlink" href="#typical-workflows" title="Permalink to this heading"></a></h3>
+<p>One typical workflow:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>new-feature<span class="w">  </span><span class="c1"># create branch, switch to it</span>
+<span class="gp">$ </span>git<span class="w"> </span>commit<span class="w">                   </span><span class="c1"># work, work, work, ..., and test</span>
+<span class="gp">$ </span>git<span class="w"> </span>checkout<span class="w"> </span>master<span class="w">          </span><span class="c1"># once feature is ready, switch to master</span>
+<span class="gp">$ </span>git<span class="w"> </span>merge<span class="w"> </span>new-feature<span class="w">        </span><span class="c1"># merge work to master</span>
+<span class="gp">$ </span>git<span class="w"> </span>branch<span class="w"> </span>-d<span class="w"> </span>new-feature<span class="w">    </span><span class="c1"># remove branch</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><a class="reference external" href="https://coderefinery.github.io/git-intro/branches/">More about branches</a></p>
+</div>
+</section>
+</section>
+<section id="lets-make-our-code-modular-test-in-branch">
+<h2>Let’s make our code modular (test in branch)<a class="headerlink" href="#lets-make-our-code-modular-test-in-branch" title="Permalink to this heading"></a></h2>
+<div class="admonition-make-four-modules-10-15-minutes-in-bo exercise important admonition">
+<p class="admonition-title">Make four modules (10-15 minutes in BO)</p>
+<ul class="simple">
+<li><p>First make a branch called <code class="docutils literal notranslate"><span class="pre">modularity</span></code> and go to that branch</p></li>
+</ul>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>modularity<span class="w">    </span><span class="c1"># create branch, switch to it</span>
+<span class="gp">$ </span>git<span class="w"> </span>branch<span class="w">                    </span><span class="c1"># check that we are on the new branch</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>We can now do our changes</p></li>
+<li><p>We will make four files</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">planet_main.py</span></code>, containing an overview e.g. the main program</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">planet_data.py</span></code>, containing general constants, and planetary parameters</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">planet_iter.py</span></code>, containing the equation of motion for the planets</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">planet_functions.py</span></code>, containing eccentricity calculations and a plot function</p></li>
+</ul>
+</li>
+</ul>
+<div class="admonition-planet-main-py solution important dropdown admonition">
+<p class="admonition-title">planet_main.py</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#planet with Jupiter</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span>  <span class="nn">planet_functions</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span>  <span class="nn">planet_data</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span>  <span class="nn">planet_iter</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="n">L</span><span class="o">=</span><span class="mi">400</span> <span class="c1">#number of years to simulate</span>
+
+<span class="n">G</span><span class="p">,</span><span class="n">AU</span><span class="p">,</span><span class="n">M</span><span class="p">,</span><span class="n">day</span><span class="p">,</span><span class="n">year</span><span class="o">=</span><span class="n">general_constants</span><span class="p">()</span>
+
+<span class="c1"># Get the mass and the initial position of Earth</span>
+<span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">u</span><span class="p">,</span><span class="n">v</span><span class="p">,</span><span class="n">mj</span><span class="o">=</span><span class="n">init_Earth</span><span class="p">(</span><span class="n">AU</span><span class="p">,</span><span class="n">year</span><span class="p">,</span><span class="n">L</span><span class="p">)</span>
+
+<span class="c1"># Get the mass and the initial position of Jupiter</span>
+<span class="n">xJ</span><span class="p">,</span><span class="n">yJ</span><span class="p">,</span><span class="n">uJ</span><span class="p">,</span><span class="n">vJ</span><span class="p">,</span><span class="n">mJ</span><span class="o">=</span><span class="n">init_Jupiter</span><span class="p">(</span><span class="n">AU</span><span class="p">,</span><span class="n">year</span><span class="p">,</span><span class="n">L</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">365</span><span class="o">*</span><span class="n">L</span><span class="p">):</span>    
+    <span class="c1">#Counter for each 100 years</span>
+    <span class="k">if</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">36500</span><span class="o">==</span><span class="mi">0</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="o">/</span><span class="mi">365</span><span class="p">)</span>
+        
+    <span class="c1"># New positions of Earth</span>
+    <span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span><span class="n">day</span><span class="o">*</span><span class="n">u</span><span class="p">;</span>
+    <span class="n">y</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="n">y</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span><span class="n">day</span><span class="o">*</span><span class="n">v</span><span class="p">;</span>
+    
+    <span class="c1"># New positions of Jupiter</span>
+    <span class="n">xJ</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="n">xJ</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span><span class="n">day</span><span class="o">*</span><span class="n">uJ</span><span class="p">;</span>
+    <span class="n">yJ</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="n">yJ</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span><span class="n">day</span><span class="o">*</span><span class="n">vJ</span><span class="p">;</span>
+    
+    <span class="c1"># acceleration of Earth due to Sun</span>
+    <span class="n">axS</span><span class="p">,</span> <span class="n">ayS</span> <span class="o">=</span> <span class="n">acc_effect</span><span class="p">(</span><span class="n">G</span><span class="p">,</span><span class="n">M</span><span class="p">,</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="n">y</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>    
+        
+    <span class="c1"># acceleration of Earth due to Jupiter</span>
+    <span class="n">dxJ</span><span class="o">=</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">-</span><span class="n">xJ</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+    <span class="n">dyJ</span><span class="o">=</span><span class="n">y</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">-</span><span class="n">yJ</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+    <span class="n">axEJ</span><span class="p">,</span> <span class="n">ayEJ</span> <span class="o">=</span> <span class="n">acc_effect</span><span class="p">(</span><span class="n">G</span><span class="p">,</span><span class="n">mJ</span><span class="p">,</span><span class="n">dxJ</span><span class="p">,</span><span class="n">dyJ</span><span class="p">)</span>  
+    
+    <span class="c1"># net effect on velocity of Earth</span>
+    <span class="n">ax</span><span class="o">=</span><span class="n">axS</span><span class="o">+</span><span class="n">axEJ</span><span class="p">;</span>
+    <span class="n">ay</span><span class="o">=</span><span class="n">ayS</span><span class="o">+</span><span class="n">ayEJ</span><span class="p">;</span>
+    <span class="n">u</span><span class="o">=</span><span class="n">u</span><span class="o">+</span><span class="n">ax</span><span class="o">*</span><span class="n">day</span><span class="p">;</span>
+    <span class="n">v</span><span class="o">=</span><span class="n">v</span><span class="o">+</span><span class="n">ay</span><span class="o">*</span><span class="n">day</span><span class="p">;</span>
+
+    <span class="c1"># new velocity of Jupiter</span>
+    <span class="n">uJ</span><span class="p">,</span><span class="n">vJ</span> <span class="o">=</span> <span class="n">planet_motion</span><span class="p">(</span><span class="n">G</span><span class="p">,</span><span class="n">M</span><span class="p">,</span><span class="n">xJ</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="n">yJ</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="n">uJ</span><span class="p">,</span><span class="n">vJ</span><span class="p">,</span><span class="n">day</span><span class="p">)</span>
+
+    
+<span class="n">l</span><span class="o">=</span><span class="mi">100</span>
+<span class="n">e</span><span class="o">=</span><span class="n">eccentricity</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">L</span><span class="p">,</span><span class="n">l</span><span class="p">)</span>
+
+<span class="n">figure_orbit</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">xJ</span><span class="p">,</span><span class="n">yJ</span><span class="p">,</span><span class="n">e</span><span class="p">)</span>
+
+</pre></div>
+</div>
+</div>
+<div class="admonition-planet-data-py solution important dropdown admonition">
+<p class="admonition-title">planet_data.py</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="k">def</span> <span class="nf">general_constants</span><span class="p">():</span>
+<span class="c1">#  global G, M, AU, day, year</span>
+  <span class="n">G</span><span class="o">=</span><span class="mf">6.6743e-11</span>
+  <span class="n">AU</span><span class="o">=</span><span class="mf">149.597871e9</span>
+  <span class="n">M</span><span class="o">=</span><span class="mf">1.9891e30</span>
+  <span class="n">day</span><span class="o">=</span><span class="mi">86400</span><span class="p">;</span>
+  <span class="n">year</span><span class="o">=</span><span class="mi">31556926</span><span class="p">;</span>
+  
+  <span class="k">return</span> <span class="n">G</span><span class="p">,</span><span class="n">AU</span><span class="p">,</span><span class="n">M</span><span class="p">,</span><span class="n">day</span><span class="p">,</span><span class="n">year</span>
+
+<span class="k">def</span> <span class="nf">init_Earth</span><span class="p">(</span><span class="n">AU</span><span class="p">,</span><span class="n">year</span><span class="p">,</span><span class="n">L</span><span class="p">):</span>
+
+  <span class="n">mj</span><span class="o">=</span><span class="mf">5.97219e24</span>
+  <span class="n">AU1</span><span class="o">=</span><span class="mf">150.8e9</span>
+    
+  <span class="n">x0</span><span class="o">=</span><span class="n">AU1</span><span class="p">;</span>
+  <span class="n">v0</span><span class="o">=</span><span class="n">AU</span><span class="o">*</span><span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="n">year</span><span class="p">;</span>
+  <span class="n">y0</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+  <span class="n">u0</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+  <span class="n">x</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="mi">365</span><span class="o">*</span><span class="n">L</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">float</span><span class="p">);</span>
+  <span class="n">y</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="mi">365</span><span class="o">*</span><span class="n">L</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">float</span><span class="p">);</span>
+  <span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">=</span><span class="n">x0</span><span class="p">;</span>
+  <span class="n">y</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">=</span><span class="n">y0</span><span class="p">;</span>
+  <span class="n">u</span><span class="o">=</span><span class="n">u0</span><span class="p">;</span>
+  <span class="n">v</span><span class="o">=</span><span class="n">v0</span><span class="p">;</span>
+  
+  <span class="k">return</span> <span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">u</span><span class="p">,</span><span class="n">v</span><span class="p">,</span><span class="n">mj</span>
+
+<span class="k">def</span> <span class="nf">init_Jupiter</span><span class="p">(</span><span class="n">AU</span><span class="p">,</span><span class="n">year</span><span class="p">,</span><span class="n">L</span><span class="p">):</span>
+  <span class="n">dJ</span><span class="o">=</span><span class="mf">5.203</span><span class="o">*</span><span class="n">AU</span>
+  <span class="n">mJ</span><span class="o">=</span><span class="mf">1.899e27</span>
+  <span class="n">v0J</span><span class="o">=</span><span class="n">dJ</span><span class="o">*</span><span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="p">(</span><span class="mf">11.86</span><span class="o">*</span><span class="n">year</span><span class="p">);</span>
+
+  <span class="n">x0J</span><span class="o">=</span><span class="n">dJ</span><span class="p">;</span>
+  <span class="n">y0J</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+  <span class="n">u0J</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+  <span class="n">xJ</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="mi">365</span><span class="o">*</span><span class="n">L</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">float</span><span class="p">);</span>
+  <span class="n">yJ</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="mi">365</span><span class="o">*</span><span class="n">L</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">float</span><span class="p">);</span>
+  <span class="n">xJ</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">=</span><span class="n">x0J</span><span class="p">;</span>
+  <span class="n">yJ</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">=</span><span class="n">y0J</span><span class="p">;</span>
+  <span class="n">uJ</span><span class="o">=</span><span class="n">u0J</span><span class="p">;</span>
+  <span class="n">vJ</span><span class="o">=</span><span class="n">v0J</span><span class="p">;</span>
+  
+  <span class="k">return</span> <span class="n">xJ</span><span class="p">,</span><span class="n">yJ</span><span class="p">,</span><span class="n">uJ</span><span class="p">,</span><span class="n">vJ</span><span class="p">,</span><span class="n">mJ</span>
+
+</pre></div>
+</div>
+</div>
+<div class="admonition-planet-iter-py solution important dropdown admonition">
+<p class="admonition-title">planet_iter.py</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="k">def</span> <span class="nf">acc_effect</span><span class="p">(</span><span class="n">G</span><span class="p">,</span><span class="n">M</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">):</span>
+
+    <span class="n">ax</span><span class="o">=-</span><span class="n">G</span><span class="o">*</span><span class="n">M</span><span class="o">/</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="o">+</span><span class="n">y</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">**</span><span class="p">[</span><span class="mi">3</span><span class="o">/</span><span class="mi">2</span><span class="p">])</span><span class="o">*</span><span class="n">x</span><span class="p">;</span>
+    <span class="n">ay</span><span class="o">=-</span><span class="n">G</span><span class="o">*</span><span class="n">M</span><span class="o">/</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="o">+</span><span class="n">y</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">**</span><span class="p">[</span><span class="mi">3</span><span class="o">/</span><span class="mi">2</span><span class="p">])</span><span class="o">*</span><span class="n">y</span><span class="p">;</span>
+
+    <span class="k">return</span> <span class="n">ax</span><span class="p">,</span> <span class="n">ay</span>
+
+<span class="k">def</span> <span class="nf">planet_motion</span><span class="p">(</span><span class="n">G</span><span class="p">,</span><span class="n">M</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">u</span><span class="p">,</span><span class="n">v</span><span class="p">,</span><span class="n">day</span><span class="p">):</span>
+        
+    <span class="n">ax</span><span class="o">=-</span><span class="n">G</span><span class="o">*</span><span class="n">M</span><span class="o">/</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="o">+</span><span class="n">y</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">**</span><span class="p">[</span><span class="mi">3</span><span class="o">/</span><span class="mi">2</span><span class="p">])</span><span class="o">*</span><span class="n">x</span><span class="p">;</span>
+    <span class="n">ay</span><span class="o">=-</span><span class="n">G</span><span class="o">*</span><span class="n">M</span><span class="o">/</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="o">+</span><span class="n">y</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">**</span><span class="p">[</span><span class="mi">3</span><span class="o">/</span><span class="mi">2</span><span class="p">])</span><span class="o">*</span><span class="n">y</span><span class="p">;</span>
+    <span class="n">u</span><span class="o">=</span><span class="n">u</span><span class="o">+</span><span class="n">ax</span><span class="o">*</span><span class="n">day</span><span class="p">;</span>
+    <span class="n">v</span><span class="o">=</span><span class="n">v</span><span class="o">+</span><span class="n">ay</span><span class="o">*</span><span class="n">day</span><span class="p">;</span>
+    
+    <span class="k">return</span> <span class="n">u</span><span class="p">,</span> <span class="n">v</span>
+    
+</pre></div>
+</div>
+</div>
+<div class="admonition-planet-functions-py solution important dropdown admonition">
+<p class="admonition-title">planet_functions.py</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span> 
+
+<span class="k">def</span> <span class="nf">eccentricity</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">L</span><span class="p">,</span><span class="n">l</span><span class="p">):</span>
+
+  <span class="n">rj</span><span class="o">=</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="o">+</span><span class="n">y</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">**</span><span class="mf">.5</span>
+  <span class="n">e</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">L</span><span class="o">/</span><span class="n">l</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">float</span><span class="p">);</span>
+  <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="nb">int</span><span class="p">(</span><span class="n">L</span><span class="o">/</span><span class="n">l</span><span class="p">)):</span>
+    <span class="n">win</span><span class="o">=</span><span class="nb">range</span><span class="p">(</span><span class="n">i</span><span class="o">*</span><span class="n">l</span><span class="o">*</span><span class="mi">365</span><span class="p">,(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">l</span><span class="o">*</span><span class="mi">365</span><span class="p">)</span>
+    <span class="n">a</span><span class="o">=</span><span class="nb">max</span><span class="p">(</span><span class="n">rj</span><span class="p">[</span><span class="n">win</span><span class="p">])</span>
+    <span class="n">b</span><span class="o">=</span><span class="nb">min</span><span class="p">(</span><span class="n">rj</span><span class="p">[</span><span class="n">win</span><span class="p">])</span>
+    <span class="n">e</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="mi">1</span><span class="o">-</span><span class="mi">2</span><span class="o">/</span><span class="p">(</span><span class="n">a</span><span class="o">/</span><span class="n">b</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+  <span class="k">return</span> <span class="n">e</span>
+
+<span class="k">def</span> <span class="nf">figure_orbit</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">xJ</span><span class="p">,</span><span class="n">yJ</span><span class="p">,</span><span class="n">e</span><span class="p">):</span>
+
+  <span class="n">fig</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
+  <span class="n">ax</span><span class="o">=</span><span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+  <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+  <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xJ</span><span class="p">,</span><span class="n">yJ</span><span class="p">)</span>
+  <span class="n">ax</span><span class="o">.</span><span class="n">plot</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="s1">&#39;o&#39;</span><span class="p">)</span>
+  <span class="n">ax</span><span class="o">.</span><span class="n">set_aspect</span><span class="p">(</span><span class="s1">&#39;equal&#39;</span><span class="p">,</span> <span class="s1">&#39;box&#39;</span><span class="p">)</span>
+
+  <span class="n">ax</span><span class="o">=</span><span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+  <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">e</span><span class="p">)),</span><span class="n">e</span><span class="p">)</span>
+
+  <span class="n">figname</span><span class="o">=</span><span class="s1">&#39;../Figures/planet_earthJupiter2.png&#39;</span>
+
+  <span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="n">figname</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">bbox_inches</span><span class="o">=</span><span class="s1">&#39;tight&#39;</span><span class="p">)</span>
+
+</pre></div>
+</div>
+</div>
+<ul class="simple">
+<li><p>add and commit, possibly several times</p></li>
+</ul>
+</div>
+</section>
+<section id="meanwhile">
+<h2>Meanwhile…<a class="headerlink" href="#meanwhile" title="Permalink to this heading"></a></h2>
+<div class="admonition-type-along type-along important admonition">
+<p class="admonition-title">Type-Along</p>
+<p><strong>Back in main branch</strong></p>
+<ul class="simple">
+<li><p>We spotted some unnecessary <code class="docutils literal notranslate"><span class="pre">print</span></code> lines in the main branch code.</p></li>
+<li><p>Go to the main branch:</p></li>
+</ul>
+<div class="highlight-git notranslate"><div class="highlight"><pre><span></span>git checkout main
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Let’s remove the two print lines around row 80 in the second for-loop.</p></li>
+<li><p>add and commit</p></li>
+</ul>
+<div class="highlight-git notranslate"><div class="highlight"><pre><span></span>git add planet.py
+git commit -m &quot;rm print&quot;  
+</pre></div>
+</div>
+</div>
+<ul class="simple">
+<li><p>We can now check the history with a command that graphically tries to show the log with branches</p></li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p><strong>An important alias</strong></p>
+<p>We will now define an <em>alias</em> in Git, to be able to nicely visualize branch structure in the terminal without having to remember a long Git command.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>alias.graph<span class="w"> </span><span class="s2">&quot;log --all --graph --decorate --oneline&quot;</span>
+</pre></div>
+</div>
+<p>This will enable you to use <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">graph</span></code> for short</p>
+</div>
+<ul class="simple">
+<li><p>It will give you something like this:</p></li>
+</ul>
+<div class="highlight-git notranslate"><div class="highlight"><pre><span></span>  
+$ git graph
+* 413d0e3 (HEAD -&gt; master) rm printing output
+| * fc007d4 (modular) modular code
+|/
+* 5434395 add Jupiter
+* f3c1fb5 planet.py
+...
+</pre></div>
+</div>
+</section>
+<section id="merging">
+<h2>Merging<a class="headerlink" href="#merging" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>It turned out that our experiment with modularity was a good idea.</p></li>
+<li><p>Our goal now is to merge modularity into main.</p></li>
+</ul>
+<figure class="align-default" id="id2">
+<a class="reference internal image-reference" href="_images/git-collaborative.svg"><img alt="Isolated tracks" src="_images/git-collaborative.svg" width="50%" /></a>
+<figcaption>
+<p><span class="caption-text">Isolated tracks of work.</span><a class="headerlink" href="#id2" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<div class="admonition-merge-into-main exercise important admonition">
+<p class="admonition-title">Merge into main</p>
+<ul class="simple">
+<li><p>once all features are ready, switch to main</p></li>
+</ul>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git<span class="w"> </span>checkout<span class="w"> </span>main<span class="w">    </span><span class="c1"># switch to main branch</span>
+<span class="gp">$ </span>git<span class="w"> </span>branch<span class="w">           </span><span class="c1"># check that we are on main branch</span>
+<span class="gp">$ </span>git<span class="w"> </span>merge<span class="w">  </span>modularity<span class="w">          </span><span class="c1"># merge modularity into main</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>let’s now check the graphical view:</p></li>
+</ul>
+<div class="highlight-git notranslate"><div class="highlight"><pre><span></span>$ git graph
+*   dc3f83f (HEAD -&gt; main) modular
+|\
+| * fc007d4 (modularity) modular code
+* | 413d0e3 rm printing output
+|/
+* 5434395 add Jupiter
+* f3c1fb5 planet.py
+
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>push to GitHub</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span></code></p></li>
+</ul>
+</div>
+</section>
+<section id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>Now we know how to save snapshots:</p></li>
+</ul>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git<span class="w"> </span>add<span class="w"> </span>&lt;file<span class="o">(</span>s<span class="o">)</span>&gt;
+<span class="gp">$ </span>git<span class="w"> </span>commit
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>And that is what we do as we program.</p></li>
+<li><p>Other very useful commands are these:</p></li>
+</ul>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git<span class="w"> </span>init<span class="w">    </span><span class="c1"># initialize new repository</span>
+<span class="gp">$ </span>git<span class="w"> </span>add<span class="w">     </span><span class="c1"># add files or stage file(s)</span>
+<span class="gp">$ </span>git<span class="w"> </span>commit<span class="w">  </span><span class="c1"># commit staged file(s)</span>
+<span class="gp">$ </span>git<span class="w"> </span>status<span class="w">  </span><span class="c1"># see what is going on</span>
+<span class="gp">$ </span>git<span class="w"> </span>log<span class="w">     </span><span class="c1"># see history</span>
+<span class="gp">$ </span>git<span class="w"> </span>diff<span class="w">    </span><span class="c1"># show unstaged/uncommitted modifications</span>
+<span class="gp">$ </span>git<span class="w"> </span>show<span class="w">    </span><span class="c1"># show the change for a specific commit</span>
+<span class="gp">$ </span>git<span class="w"> </span>mv<span class="w">      </span><span class="c1"># move tracked files</span>
+<span class="gp">$ </span>git<span class="w"> </span>rm<span class="w">      </span><span class="c1"># remove tracked files</span>
+<span class="gp">$ </span>git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>wild-idea<span class="w">    </span><span class="c1"># create branch, switch to it, work, work, work ...</span>
+<span class="gp">$ </span>git<span class="w"> </span>checkout<span class="w"> </span>main<span class="w">          </span><span class="c1"># realize it was a bad idea, back to main/master</span>
+<span class="gp">$ </span>git<span class="w"> </span>branch<span class="w"> </span>-D<span class="w"> </span>wild-idea<span class="w">      </span><span class="c1"># it is gone, off to a new idea</span>
+<span class="gp">$ </span>git<span class="w"> </span>merge<span class="w"> </span>
+</pre></div>
+</div>
+<p><strong>Overview workflow</strong></p>
+<figure class="align-default">
+<a class="with-border reference internal image-reference" href="_images/git_branches.png"><img alt="_images/git_branches.png" class="with-border" src="_images/git_branches.png" style="width: 100%;" /></a>
+</figure>
+<div class="admonition-parts-to-be-covered admonition">
+<p class="admonition-title">Parts to be covered</p>
+<ul class="simple">
+<li><p>☑ Planning</p>
+<ul>
+<li><p>Pseudocode</p></li>
+<li><p>Unified Modelling Language</p></li>
+</ul>
+</li>
+<li><p>☐ Testing</p>
+<ul>
+<li><p>We don’t do this today!</p></li>
+</ul>
+</li>
+<li><p>☑ Source/version control</p>
+<ul>
+<li><p>We have a starting point with code</p></li>
+<li><p>git history</p></li>
+<li><p>git branches</p></li>
+<li><p>GitHub as remote backup</p></li>
+</ul>
+</li>
+<li><p>☐ Collaboration</p>
+<ul>
+<li><p>GitHub</p></li>
+</ul>
+</li>
+<li><p>☑ Sharing</p>
+<ul>
+<li><p>☑ open science</p></li>
+<li><p>☐ citation</p></li>
+<li><p>☑ licensing</p></li>
+</ul>
+</li>
+<li><p>☐ Documentation</p>
+<ul>
+<li><p><strong>docstrings</strong> should actually be <strong>implemented directly</strong>!!</p>
+<ul>
+<li><p><strong>we save that now for next sesson</strong></p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="admonition-keypoints keypoints admonition">
+<p class="admonition-title">Keypoints</p>
+<ul class="simple">
+<li><p>Initializing a Git repository is simple: <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">init</span></code>.</p></li>
+<li><p>Commits should be used to tell a story.</p></li>
+<li><p>Git uses the .git folder to store the snapshots.</p></li>
+<li><p>Don’t be afraid to stage and commit often. Better too often than not often enough.</p></li>
+<li><p>A branch is a division unit of work, to be merged with other units of work.</p></li>
+<li><p>A tag is a pointer to a moment in the history of a project.</p></li>
+<li><p>A repository can have one or multiple remotes (we will revisit these later).</p></li>
+<li><p>Local branches often track remote branches.</p></li>
+<li><p>A remote serves as a full backup of your work.</p></li>
+</ul>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="startup_code.html" class="btn btn-neutral float-left" title="Start with coding!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="deploy.html" class="btn btn-neutral float-right" title="Deploy and document for usage" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, UPPMAX.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

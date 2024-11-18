@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>More about documentation &mdash; Programming formalism intro 0.1 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" type="text/css" />
+      <link rel="stylesheet" href="_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="_static/togglebutton.css" type="text/css" />
+      <link rel="stylesheet" href="_static/sphinx_lesson.css" type="text/css" />
+      <link rel="stylesheet" href="_static/sphinx_rtd_theme_ext_color_contrast.css" type="text/css" />
+      <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+        <script src="_static/clipboard.min.js"></script>
+        <script src="_static/copybutton.js"></script>
+        <script src="_static/minipres.js"></script>
+        <script>let toggleHintShow = 'Click to show';</script>
+        <script>let toggleHintHide = 'Click to hide';</script>
+        <script>let toggleOpenOnPrint = 'true';</script>
+        <script src="_static/togglebutton.js"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+        <script>mermaid.initialize({startOnLoad:true});</script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="More about deploying" href="deploy_deeper.html" />
+    <link rel="prev" title="More about sharing" href="sharing_deeper.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> Programming formalism intro
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Preparations:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="setup.html">Setup</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Theory lessons:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sdlc_tools.html">Software Development Lifecycle (SDLC) tools</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Project lessons:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="flowcharts.html">Planning phase</a></li>
+<li class="toctree-l1"><a class="reference internal" href="startup.html">Start the project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="startup_code.html">Start with coding!</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sourcecontrol.html">The iterations and Git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="deploy.html">Deploy and document for usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="collab.html">Collaboration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="summary.html">Summary</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Extra reading:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="SDLC_models.html">Software Development Lifecycle (SDLC) models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="UML_deeper.html">More about UML</a></li>
+<li class="toctree-l1"><a class="reference internal" href="git_deeper.html">More about git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="collab_deeper.html">More about collaboration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reproducible_deeper.html">More about reproducibility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sharing_deeper.html">More about sharing</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">More about documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#restructuredtext-and-markdown">reStructuredText and Markdown</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#html-static-site-generators">HTML static site generators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#deployment">Deployment</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#github-pages">Github pages</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#read-the-docs">Read the Docs</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#wikis">Wikis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#other-generators">Other generators</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#latex-pdf">LaTeX/PDF</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#doxygen-c-c-java-etc">Doxygen (C, C++, Java etc…)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#for-fortran">For Fortran</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#for-julia">For Julia</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#for-markdown">For Markdown</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#demo-these-pages">Demo These pages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#summary">Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="deploy_deeper.html">More about deploying</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Reference:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="concepts.html">Concepts</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Programming formalism intro</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>More about documentation</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/UPPMAX/programming_formalisms_intro/blob/main/doc//doc/documentation_deeper.md" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section class="tex2jax_ignore mathjax_ignore" id="more-about-documentation">
+<h1>More about documentation<a class="headerlink" href="#more-about-documentation" title="Permalink to this heading"></a></h1>
+<section id="restructuredtext-and-markdown">
+<h2>reStructuredText and Markdown<a class="headerlink" href="#restructuredtext-and-markdown" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>Two of the most popular lightweight markup languages.</p></li>
+<li><p>reStructuredText (RST) has more features than Markdown but the choice is a matter of taste.</p></li>
+<li><p>Markdown convenient for smaller documents,
+but for larger and more complicated documents RST may be a better option.</p></li>
+<li><p>There are (unfortunately) <a class="reference external" href="https://github.com/jgm/CommonMark/wiki/Markdown-Flavors">many flavors of Markdown</a>.</p></li>
+</ul>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span><span class="gh"># This is a section in Markdown   This is a section in RST</span>
+                                  ========================
+
+<span class="gu">## This is a subsection           This is a subsection</span>
+                                  --------------------
+
+Nothing special needed for        Nothing special needed for
+a normal paragraph.               a normal paragraph.
+
+                                  ::
+
+    This is a code block          This is a code block
+
+
+<span class="gs">**Bold**</span> and <span class="ge">*emphasized*</span>.        <span class="gs">**Bold**</span> and <span class="ge">*emphasized*</span>.
+
+A list:                           A list:
+<span class="k">-</span><span class="w"> </span>this is an item                 - this is an item
+<span class="k">-</span><span class="w"> </span>another item                    - another item
+
+There is more: images,            There is more: images,
+tables, links, ...                tables, links, ...
+</pre></div>
+</div>
+<p>Experiment with Markdown:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="http://commonmark.org/help/">Learn Markdown in 60 seconds</a></p></li>
+<li><p><a class="reference external" href="http://dillinger.io">https://dillinger.io</a></p></li>
+<li><p><a class="reference external" href="https://stackedit.io">https://stackedit.io</a></p></li>
+</ul>
+<p>To convert between MD and RST (and many other formats):</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://pandoc.org/">Pandoc</a></p></li>
+</ul>
+</section>
+<section id="html-static-site-generators">
+<h2>HTML static site generators<a class="headerlink" href="#html-static-site-generators" title="Permalink to this heading"></a></h2>
+<p>There are many tools that can turn RST or Markdown into beautiful HTML pages:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="http://sphinx-doc.org">Sphinx</a> <strong>← we will exercise this, this is how this lesson material is built</strong></p>
+<ul>
+<li><p>Generate HTML/PDF/LaTeX from RST and Markdown.</p></li>
+<li><p>Basically all Python projects use Sphinx but <strong>Sphinx is not limited to Python</strong></p></li>
+<li><p><a class="reference external" href="http://readthedocs.org">Read the docs</a>
+hosts public Sphinx documentation for free!</p></li>
+<li><p>Also hostable anywhere else, like Github pages. **← this is what we use for this lesson</p></li>
+<li><p>API documentation possible</p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="https://jekyllrb.com">Jekyll</a></p>
+<ul>
+<li><p>Generates HTML from Markdown.</p></li>
+<li><p>GitHub supports this without adding extra build steps.</p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="https://pkgdown.r-lib.org/">pkgdown</a></p>
+<ul>
+<li><p>Popular in the R community</p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="https://www.mkdocs.org/">MkDocs</a></p></li>
+<li><p><a class="reference external" href="https://www.gitbook.com/">GitBook</a></p></li>
+<li><p><a class="reference external" href="https://gohugo.io">Hugo</a></p></li>
+<li><p><a class="reference external" href="https://hexo.io">Hexo</a></p></li>
+<li><p><a class="reference external" href="https://www.getzola.org/">Zola</a> <strong>← this is what CodeRefinery use for their project website and workshop websites</strong></p></li>
+</ul>
+<p>There are many more …</p>
+</section>
+<section id="deployment">
+<h2>Deployment<a class="headerlink" href="#deployment" title="Permalink to this heading"></a></h2>
+<p>GitHub, GitLab, and Bitbucket make it possible to serve HTML pages:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://pages.github.com">GitHub Pages</a> (GH-pages) ← this is what we and CR use for some course material</p></li>
+<li><p><a class="reference external" href="https://appfire.atlassian.net/wiki/spaces/PAGE/overview?homepageId=151420930">Bitbucket Pages</a></p></li>
+<li><p><a class="reference external" href="https://pages.gitlab.io">GitLab Pages</a></p></li>
+<li><p><a class="reference external" href="http://readthedocs.org">Read the docs</a> ← this is what NBIS use for some course material</p></li>
+</ul>
+<section id="github-pages">
+<h3>Github pages<a class="headerlink" href="#github-pages" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>Easiest. everything is local to GitHub</p></li>
+<li><p>This lesson material</p></li>
+</ul>
+</section>
+<section id="read-the-docs">
+<h3>Read the Docs<a class="headerlink" href="#read-the-docs" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>Somewhat more possibilities, like having several versions of documentation to switch between.</p></li>
+<li><p>Example</p></li>
+</ul>
+</section>
+</section>
+<section id="wikis">
+<h2>Wikis<a class="headerlink" href="#wikis" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>Popular solutions (but many others exist):</p>
+<ul>
+<li><p><a class="reference external" href="https://www.mediawiki.org">MediaWiki</a></p></li>
+<li><p><a class="reference external" href="https://www.dokuwiki.org">Dokuwiki</a></p></li>
+</ul>
+</li>
+<li><p>Advantage</p>
+<ul>
+<li><p>Barrier to write and edit is low</p></li>
+</ul>
+</li>
+<li><p>Disadvantages</p>
+<ul>
+<li><p>Typically disconnected from source code repository (<strong>reproducibility</strong>)</p></li>
+<li><p>Difficult to serve multiple versions</p></li>
+<li><p>Difficult to check out a specific old version</p></li>
+<li><p>Typically needs to be hosted and maintained</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="other-generators">
+<h2>Other generators<a class="headerlink" href="#other-generators" title="Permalink to this heading"></a></h2>
+<section id="latex-pdf">
+<h3>LaTeX/PDF<a class="headerlink" href="#latex-pdf" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>Advantage</p>
+<ul>
+<li><p>Popular and familiar in the physics and mathematics community</p></li>
+</ul>
+</li>
+<li><p>Disadvantages</p>
+<ul>
+<li><p>PDF format is not ideal for copy-paste ability of examples</p></li>
+<li><p>Possible, but not trivial to automate rebuilding documentation after every Git push</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="doxygen-c-c-java-etc">
+<h3>Doxygen (C, C++, Java etc…)<a class="headerlink" href="#doxygen-c-c-java-etc" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>Auto-generates API documentation</p></li>
+<li><p>Documented directly in the source code
+see <a class="reference external" href="https://github.com/doxygen/doxygen">Doxygen Github Repo</a></p></li>
+<li><p>Can be deployed to GiHub/GitLab/Bitbucket Pages</p></li>
+</ul>
+</section>
+<section id="for-fortran">
+<h3>For Fortran<a class="headerlink" href="#for-fortran" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/Fortran-FOSS-Programmers/ford">Fortran Documenter (FORD)</a></p></li>
+</ul>
+</section>
+<section id="for-julia">
+<h3>For Julia<a class="headerlink" href="#for-julia" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://franklinjl.org/">Franklin</a>: static site generator</p></li>
+<li><p><a class="reference external" href="https://juliadocs.github.io/Documenter.jl/stable/">Documenter.jl</a></p></li>
+</ul>
+</section>
+<section id="for-markdown">
+<h3>For Markdown<a class="headerlink" href="#for-markdown" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://quarto.org/">Quarto</a> converts markdown to websites, pdfs, eBooks and many other things</p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="demo-these-pages">
+<h2>Demo These pages<a class="headerlink" href="#demo-these-pages" title="Permalink to this heading"></a></h2>
+<div class="admonition-demo-git-repo-sphinx-github-github-actions-gh-pages exercise important admonition">
+<p class="admonition-title">Demo: Git repo -  Sphinx - GitHub - GitHub Actions - GH-pages</p>
+<ul class="simple">
+<li><p>We will go behind the scenes of this documentation.</p></li>
+<li><p>You can do this checkout whenever you want.</p></li>
+</ul>
+<p><strong>The basic steps are:</strong>
+(also presented <a class="reference external" href="https://coderefinery.github.io/documentation/sphinx/">here</a></p>
+<ul class="simple">
+<li><p>Start locally in repo with name describing the project</p></li>
+<li><p>You can generate Sphinx documentation in an existing code project (may be a git repo)</p></li>
+<li><p>Install python package: <code class="docutils literal notranslate"><span class="pre">sphinx</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sphinx-quickstart</span></code> to generate directories and files</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">index.rst</span></code> is first page and includes the Table of contents (TOC) to be seen in a menu and the *.md and/or *.rst files to make up your web pages.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">config.py</span></code>contains configurations like Sphinx extensions. (these python packages may have to be installed as well)</p></li>
+<li><p>You can build locally and view results in a web browser</p></li>
+</ul>
+<hr class="docutils" />
+<p><strong>To use GH-pages</strong></p>
+<ul class="simple">
+<li><p>push to the GitHub remote and continue working from there.</p></li>
+<li><p>Add the GitHub Action</p></li>
+<li><p>Create a new file at <code class="docutils literal notranslate"><span class="pre">.github/workflows/documentation.yaml</span></code></p></li>
+<li><p>Enable GitHub Pages:</p>
+<ul>
+<li><p>Go to <code class="docutils literal notranslate"><span class="pre">https://github.com/&lt;username&gt;/&lt;repo&gt;/settings/pages</span></code></p></li>
+<li><p>In the “Source” section, choose “gh-pages” in the dropdown menu and click save</p></li>
+</ul>
+</li>
+<li><p>That’s it! Your site should now be live on <a class="reference external" href="https://uppmax.github.io/programming_formalisms_intro/index.html">https://uppmax.github.io/programming_formalisms_intro/index.html</a>.</p></li>
+</ul>
+<p><strong>Every time you commit the GH Actions will render your source code to html and deploy it to your new web page!</strong></p>
+</div>
+<div class="admonition-read-more admonition">
+<p class="admonition-title">Read more</p>
+<p><a class="reference external" href="https://coderefinery.github.io/documentation/">CodeRefinery</a></p>
+</div>
+</section>
+<section id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this heading"></a></h2>
+<div class="admonition-keypoints keypoints admonition">
+<p class="admonition-title">Keypoints</p>
+<ul class="simple">
+<li><p>Think that everything is worth to be part of documentation (like Github directory tree)</p></li>
+<li><p>Document in code, answering why, not how.</p></li>
+<li><p>Make a README.txt for an overview of the software. Make use of Markdown on Github for easier formatting. It should include:</p>
+<ul>
+<li><p>Overview</p></li>
+<li><p>How to install and setup</p></li>
+<li><p>Quick setup</p></li>
+<li><p>Licensing and how to cite</p></li>
+</ul>
+</li>
+<li><p>Documentation should be tracked with the corresponding code in the same repository.</p></li>
+<li><p>Full documentation or tutorial</p>
+<ul>
+<li><p>Make use of Sphinx or MkDocs to render standard markup languages like markdown or reStructuredText to HTML.</p></li>
+</ul>
+</li>
+<li><p>Deploy wat GH-pages or ReadTheDocs or other.</p></li>
+</ul>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="sharing_deeper.html" class="btn btn-neutral float-left" title="More about sharing" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="deploy_deeper.html" class="btn btn-neutral float-right" title="More about deploying" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, UPPMAX.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
